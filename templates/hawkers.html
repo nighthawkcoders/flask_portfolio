@@ -11,15 +11,17 @@
 <!-- Setting up a block replacement to customize background to BIRDS -->
 {% block background %}
     <script src="{{ url_for('static', filename='three.r119.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='vanta.halo.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vanta.net.min.js') }}"></script>
     <script>
-        VANTA.HALO({
+        VANTA.NET({
             el: "body",
             mouseControls: true,
             touchControls: true,
             gyroControls: false,
             minHeight: 200.00,
-            minWidth: 200.00
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00
         })
     </script>
 {% endblock %}
