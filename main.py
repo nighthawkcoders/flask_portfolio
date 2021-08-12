@@ -5,20 +5,23 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 
-# connects default URL of server to render kangaroos.html
+# connects default URL to render index.html
 @app.route('/')
+def index():
+    return render_template("index.html")
+
+
+# connects /kangaroos path to render kangaroos.html
 @app.route('/kangaroos/')
 def kangaroos():
     return render_template("kangaroos.html")
 
 
-# connects /walruses path to render walruses.html
 @app.route('/walruses/')
 def walruses():
     return render_template("walruses.html")
 
 
-# connects /walruses path to render walruses.html
 @app.route('/hawkers/')
 def hawkers():
     return render_template("hawkers.html")

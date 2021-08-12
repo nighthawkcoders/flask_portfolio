@@ -1,145 +1,21 @@
-<!-- Custom file for standardizing Project Data
-This HTML is setup as as a Jinja2 layout, coders use layouts for:
- ... standardization of style
- ... setting expectations for data
- ... code reuse
--->
-<!DOCTYPE HTML>
-<html lang="en">
-
-{% set name = "Nighthawk Coding" %}
-{% set github = "https://github.com/nighthawkcoders" %}
-{% set twitter = "https://twitter.com/NighthawkCoding" %}
-{% set youtube = "https://www.youtube.com/channel/UClIKOsDS5dsfzFA3zveDT3Q?view_as=subscriber" %}
-
-<head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        html, body {
-            margin: 0;
-            height: 100%;
-            color: white;
-        }
-
-        h1{
-            font-size: 5em;
-        }
-
-        .fa{
-            font-size: 3em;
-            letter-spacing: 1em;
-            transition: all .2s;
-            color: white;
-        }
-
-        .fa:hover{
-            transform: translateY(10px);
-        }
-
-        .fa-youtube-play:hover{
-            color: #cc0000;
-        }
-
-        .fa-twitter:hover{
-            color: #1da1f2;
-        }
-
-        .fa-github:hover{
-            color: #000000;
-        }
-
-        .btn:link,
-        .btn:visited {
-            text-transform: uppercase;
-            text-decoration: none;
-            padding: 15px 40px;
-            display: inline-block;
-            border-radius: 100px;
-            transition: all .2s;
-            position: absolute;
-            color: white;
-            font-size: 2.5em;
-        }
-
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 20px 40px rgba(255, 255, 255, 0.2);
-        }
-
-        .btn:active {
-            transform: translateY(-1px);
-            box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2);
-        }
-    </style>
-
-    <title>{{ name }} | {{ project }} </title>
-
-</head>
-
-<body>
-    {% include "layouts/navbar.html" %}
-
-    <div class="container-fluid">
-          <div class="row justify-content-end" style="padding: 2%;">
-            <div class="col-2" style="text-align: right;">
-              {% block info %}
-              <!-- notice jinja style variables used in href's -->
-              <a><h5>{{name}}</h5></a>
-              <a href={{github}} target="_blank"><i class="fa fa-github"></i></a>
-              <a href={{youtube}} target="_blank"><i class="fa fa-youtube-play"></i></a>
-              <a href={{twitter}} target="_blank"><i class="fa fa-twitter"></i></a>
-              {% endblock %}
-            </div>
-          </div>
-
-          <div class="product" style="margin-top: 2%;">
-          <div class="row" style="padding: 10%; padding-top: 0%; padding-bottom: 5%;">
-
-              <div class="col-8" >
-                  <h1>{{ project }} Project</h1>
-              </div>
-
-          </div>
-
-          <div class="row" style="padding-left: 10%;">
-              <div class="col-3">
-                  <a href="{{ overview }}" class="btn">Overview</a>
-              </div>
-
-              <div class="col-3">
-                  <a href="{{ scrumboard }}" class="btn">Scrum Board</a>
-              </div>
-
-              <div class="col-3">
-                  <a href="{{ repo }}" class="btn">Repository</a>
-              </div>
-
-              <div class="col-3">
-                  <a href="{{ authors }}" class="btn">Authors</a>
-              </div>
-
-          </div>
-
-        </div>
+{% extends "layouts/base.html" %}
+<!-- Custom block for standardizing Project Data-->
+{% block links %}
+    <div class="col-3">
+        <a href="{{ overview }}" class="btn">Overview</a>
     </div>
-</body>
 
-{% block background %}
-    <script src="{{ url_for('static', filename='three.r119.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='vanta.birds.min.js') }}"></script>
-    <script>
-        VANTA.BIRDS({
-            el: "body",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 200.00,
-            minWidth: 200.00,
-            scale: 1.00,
-            scaleMobile: 1.00
-        })
-    </script>
+    <div class="col-3">
+        <a href="{{ scrumboard }}" class="btn">Scrum Board</a>
+    </div>
+
+    <div class="col-3">
+        <a href="{{ repo }}" class="btn">Repository</a>
+    </div>
+
+    <div class="col-3">
+        <a href="{{ authors }}" class="btn">Authors</a>
+    </div>
 {% endblock %}
 
 </html>
