@@ -15,3 +15,6 @@
 ### Jinja2 variables usage is to isolate data and allow redefinitions with templates
 ### The base.html uses combination of Bootstrap grid styling and custom CSS styling
 ### Main purpose of project is to embed href links to access project specifics
+## Project Management
+### .gitignore does not promote temporary or IntelliJ temporary files to Git
+### requirements.txt keeps track of packages used by your project, Tool -> Sync Python Requirements
