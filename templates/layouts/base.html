@@ -16,14 +16,34 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-        html, body {
+        :root{
+            --white: whitesmoke;
+            --black: black;
+            --grey: grey;
+        }
+
+        html, body{
             margin: 0;
             height: 100%;
-            color: white;
+            animation: fadein 2s;
+            -moz-animation: fadein 2s; /* Firefox */
+            -webkit-animation: fadein 2s; /* Safari and Chrome */
+            -o-animation: fadein 2s; /* Opera */
+            background-color: var(--grey);
+            color: var(--white);
+        }
+
+        .dark-mode {
+            background-color: var(--white);
+            color: var(--black);
         }
 
         h1{
             font-size: 5em;
+        }
+
+        a {
+            color: midnightblue;
         }
 
         .fa{
@@ -71,6 +91,11 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             transform: translateY(-1px);
             box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2);
         }
+
+        .row{
+            margin: auto;
+        }
+
     </style>
 
     <title>{{ name }} | {{ project }} </title>
