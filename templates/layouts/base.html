@@ -105,6 +105,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 <body>
 {% include "layouts/navbar.html" %}
 
+{% block body %}
 <div class="container-fluid">
     <div class="row justify-content-end" style="padding: 2%;">
         <div class="col-2" style="text-align: right;">
@@ -141,6 +142,8 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 
     </div>
 </div>
+{% endblock %}
+
 </body>
 
 {% block background %}
