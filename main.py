@@ -27,6 +27,11 @@ def hawkers():
     return render_template("hawkers.html")
 
 
+@app.route('/stub/')
+def stub():
+    return render_template("stub.html")
+
+
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)

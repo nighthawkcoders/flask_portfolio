@@ -8,10 +8,13 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
+            <!-- url_for is a Jinja2 pre-processor that finds route from function name (def) -->
             <a class="nav-link" href={{ url_for('index') }}>Portfolio</a>
             <a class="nav-link" href={{ url_for('kangaroos') }}>Kangaroos</a>
             <a class="nav-link" href={{ url_for('walruses') }}>Walruses</a>
             <a class="nav-link" href={{ url_for('hawkers') }}>Hawkers</a>
+            <!-- stub is shown using the name of the route -->
+            <a class="nav-link" href="/stub">Stub</a>
         </div>
     </div>
 </nav>
