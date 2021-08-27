@@ -2,12 +2,23 @@
 {% extends "layouts/base.html" %}
 
 <!- This variable sets name of browser tab  -->
-{% set project = "Stubby" %}
+{% set project = "Scholar's Weather" %}
 
 <!- This is a replacement block for Body in base.html -->
 {% block body %}
     <!- Try building a new body here ->
-    <p>Tech Talk 1 - Body Stub</p>
+    <style>
+        body {
+        background-color: #a7ecf2;
+        }
+
+        .titleOfHomePage {
+        color: red;
+        margin-left: 10px;
+        }
+
+    </style>
+<p class="titleOfHomePage">The Scholar's Weather Report</p>
 {% endblock %}
 
 <!- This is turning off birds background from base.html -->
