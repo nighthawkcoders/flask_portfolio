@@ -7,7 +7,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 <!DOCTYPE HTML>
 <html lang="en">
 
-{% set name = "Nighthawk Coding" %}
+{% set basename = "Nighthawk Coding" %}
 {% set github = "https://github.com/nighthawkcoders" %}
 {% set twitter = "https://twitter.com/NighthawkCoding" %}
 {% set youtube = "https://www.youtube.com/channel/UClIKOsDS5dsfzFA3zveDT3Q?view_as=subscriber" %}
@@ -98,7 +98,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 
     </style>
 
-    <title>{{ name }} | {{ project }} </title>
+    <title>{{ basename }} | {{ project }} </title>
 
 </head>
 
@@ -111,7 +111,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
         <div class="col-2" style="text-align: right;">
             {% block info %}
                 <!-- notice jinja style variables used in href's -->
-                <a><h5>{{name}}</h5></a>
+                <a><h5>{{basename}}</h5></a>
                 <a href={{github}} target="_blank"><i class="fa fa-github"></i></a>
                 <a href={{youtube}} target="_blank"><i class="fa fa-youtube-play"></i></a>
                 <a href={{twitter}} target="_blank"><i class="fa fa-twitter"></i></a>
