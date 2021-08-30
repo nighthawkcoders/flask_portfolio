@@ -1,0 +1,25 @@
+@app.route('/greet', methods=['GET', 'POST'])
+def greet():
+# submit button has been pushed
+if request.form:
+name = request.form.get("name")
+if len(name) != 0:  # input field has content
+return render_template("greet.html", name=name)
+# starting and empty input default
+return render_template("greet.html", name="World")
+11:38
+<div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
+    <div class="col-12">
+        <p>Hello, {{name}}!</p>
+    </div>
+    <div class="col-12">
+        <form action="/greet" id="greet" method="POST" >
+            <label for="name">Type a greeting name?</label>
+            <input name="name" id="name">
+            <input type="submit" value="Greetings!">
+        </form>
+    </div>
+    <div class="col-12">
+        <img src="/static/assets/PythonFlask.jpeg" style="height: 400px" >
+    </div>
+</div>
