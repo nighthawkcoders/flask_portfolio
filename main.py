@@ -41,6 +41,10 @@ def greet():
     # starting and empty input default
     return render_template("greet.html", name="World")
 
+@app.route('/minilabs/')
+def minilabs():
+    return render_template("minilabs.html")
+
 
 # runs the application on the development server
 if __name__ == "__main__":
