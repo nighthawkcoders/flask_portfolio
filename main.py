@@ -1,4 +1,5 @@
 # import "packages" from flask
+
 from flask import Flask, render_template, request
 
 # create a Flask instance
@@ -31,6 +32,10 @@ def hawkers():
 @app.route('/stub/')
 def stub():
     return render_template("stub.html")
+
+@app.route('/minilabs/')
+def video():
+    return render_template("minilabs.html")
 
 @app.route('/greet', methods=['GET', 'POST'])
 def greet():
