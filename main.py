@@ -27,10 +27,6 @@ def hawkers():
     return render_template("hawkers.html")
 
 
-@app.route('/stub/')
-def stub():
-    return render_template("stub.html")
-
 @app.route('/greet', methods=['GET', 'POST'])
 def greet():
     # submit button has been pushed
@@ -41,6 +37,9 @@ def greet():
     # starting and empty input default
     return render_template("greet.html", name="World")
 
+@app.route('/stub/')
+def stub():
+    return render_template("stub.html")
 
 # runs the application on the development server
 if __name__ == "__main__":
