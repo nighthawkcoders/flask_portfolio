@@ -41,6 +41,17 @@ def sonakshi():
     # starting and empty input default
     return render_template("sonakshi.html", name="World")
 
+@app.route('/saumya', methods=['GET', 'POST'])
+def saumya():
+    # submit button has been pushed
+    if request.form:
+        name = request.form.get("name")
+        if len(name) != 0:  # input field has content
+            return render_template("saumya.html", name=name)
+    # starting and empty input default
+    return render_template("saumya.html", name="World")
+
+
 @app.route('/minilabs/')
 def minilabs():
     return render_template("minilabs.html")
