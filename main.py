@@ -24,9 +24,9 @@ def walruses():
     return render_template("walruses.html")
 
 
-@app.route('/hawkers/')
-def hawkers():
-    return render_template("hawkers.html")
+@app.route('/Game/')
+def Game():
+    return render_template("Game.html")
 
 
 @app.route('/stub/')
