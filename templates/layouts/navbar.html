@@ -1,6 +1,14 @@
 <!-- Navigation Bar from bootstrap
 This HTML is setup as a fragment allowing it to be "included" by other HTML files via Jinja2
 -->
+<html>
+<head>
+    <link href="http://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="styesheet">
+    <script src="http://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="http://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+</head>
+
+<body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="https://csp.nighthawkcodingsociety.com/">{{basename}}</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -10,12 +18,27 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
         <div class="navbar-nav">
             <!-- url_for is a Jinja2 pre-processor that finds route from function name (def) -->
             <a class="nav-link" href={{ url_for('index') }}>Portfolio</a>
-            <a class="nav-link" href={{ url_for('aboutus') }}>About us!</a>
             <a class="nav-link" href={{ url_for('walruses') }}>Walruses</a>
             <a class="nav-link" href={{ url_for('hawkers') }}>Hawkers</a>
             <!-- stub is shown using the name of the route -->
             <a class="nav-link" href="/stub">Stub</a>
             <a class="nav-link" href="/minilabs">Minilabs!</a>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href={{ url_for('aboutus') }} data-bs-toggle="dropdown" aria-expanded="false" id="dropdownMenuButton1" type="button">
+                    About us!
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <a class="dropdown-item" href="#">Bria</a>
+                    <a class="dropdown-item" href="#">Riya</a>
+                    <a class="dropdown-item" href="#">Sreeja</a>
+                    <a class="dropdown-item" href="#">Valerie</a>
+                </div>
+            </li>
         </div>
     </div>
 </nav>
+
+
+
+</body>
+</html>
