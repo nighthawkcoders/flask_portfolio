@@ -28,10 +28,12 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                     About us!
                 </a>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                    <a class="dropdown-item" href="{{ url_for('bria') }}">Bria</a>
-                    <a class="dropdown-item" href="#">Riya</a>
-                    <a class="dropdown-item" href="#">Sreeja</a>
-                    <a class="dropdown-item" href="#">Valerie</a>
+                    <div id="cooldropdown" class="dropdown-content">
+                        <a class="dropdown-item" href="#">Bria</a>
+                        <a class="dropdown-item" href="#">Riya</a>
+                        <a class="dropdown-item" href="#">Sreeja</a>
+                        <a class="dropdown-item" href="/valerie">Valerie</a>
+                    </div>
                 </div>
             </li>
         </div>

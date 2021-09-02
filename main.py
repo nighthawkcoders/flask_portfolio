@@ -37,6 +37,10 @@ def stub():
 def video():
     return render_template("minilabs.html")
 
+@app.route('/valerie/')
+def valerie():
+    return render_template("valerie.html")
+
 @app.route('/greet', methods=['GET', 'POST'])
 def greet():
     # submit button has been pushed
