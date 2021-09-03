@@ -22,7 +22,7 @@ This week, Brian has recorded notes on PBL 1.2, 1.4. He used Google docs to perf
 #### Navigators - Derrick
 Derrick has provided the detailed information on the design of our website, how our team is progressing, and the extra material we have accomplished this week. README.md has provided a thorough explanation of how our navigation bar and bootstrap buttons work.
 
-### IDE management (things that happened beyond plan)
+## IDE management (things that happened beyond plan)
 We finished our tasks this week, but we decided to go further and design our website on Google Slides. Though, it may not be realistic because we only made a simplistic design that doesn't function with working buttons that leads you to other detailed ideas about our website. Nathan and Reinhardt has found out how the bootstrap and the navigation bar work so we are currently trying to design our website on IntelliJ.
 !![image](https://user-images.githubusercontent.com/89278326/131947167-4570d6fb-dc4d-425d-83c1-86443ad53c5c.png)
 
