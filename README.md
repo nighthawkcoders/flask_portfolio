@@ -28,3 +28,4 @@ Derrick has provided the detailed information on the design of our website, how 
 We finished our tasks this week, but we decided to go further and design our website on Google Slides. Though, it may not be realistic because we only made a simplistic design that doesn't function with working buttons that leads you to other detailed ideas about our website. Nathan and Reinhardt has found out how the bootstrap and the navigation bar work so we are currently trying to design our website on IntelliJ.
 ![image](https://user-images.githubusercontent.com/89278326/131947167-4570d6fb-dc4d-425d-83c1-86443ad53c5c.png)
 
+| Attempt | #1 | #2 | #3 | #4 | #5 | #6 | #7 | #8 | #9 | #10 | #11 | #12 | | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | | Seconds | 301 | 283 | 290 | 286 | 289 | 285 | 287 | 287 | 272 | 276 | 269 | 254 |
