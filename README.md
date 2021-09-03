@@ -11,13 +11,13 @@ Have a bar on top with the home button in the top left corner with "Guns", "Maps
 Under our bootstraps, we implemented different categories that match with the main category given. For example, there are bootstraps such as "Guns", "Maps", and "Agents".
 
 ## Implementation progress (August 13th, 2021)
-#### Scrum Master, Developer - Nathan
+#### Scrum Master, Developer - Nathan (5/5)
 Nathan has developed the abilities to write the Greet.html and designed our scrumboard so that each individual in the team has the chance to complete the task that they were given. Under each category, it provides every single character or weapon and the clips that are provided by them. It organizes our website so that the user doesn't always have to use the search bar in order to find what they want.
-#### Designer - Reinhardt 
+#### Designer - Reinhardt (5/5)
 Reinhardt has expanded his knowledge on the navigation bar and how it functions. Creating a navigation bar allows other users to create and develop categories that might be provided in it. It makes it easier to access detailed information or other websites.
-#### Technical Lead - Brian
+#### Technical Lead - Brian (5/5)
 This week, Brian has recorded notes on PBL 1.2, 1.4. He used Google docs to perform this task, writing down comprehensive information about what the videos talk about. 
-#### Navigators - Derrick
+#### Navigators - Derrick (5/5)
 Derrick has provided the detailed information on the design of our website, how our team is progressing, and the extra material we have accomplished this week. README.md has provided a thorough explanation of how our navigation bar and bootstrap buttons work.
 
 ## IDE management (things that happened beyond plan)
