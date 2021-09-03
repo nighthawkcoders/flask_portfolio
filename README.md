@@ -10,7 +10,7 @@ Have a bar on top with the home button in the top left corner with "Guns", "Maps
 ### Organize with Bootstrap menu
 Under our bootstraps, we implemented different categories that match with the main category given. For example, there are bootstraps such as "Guns", "Maps", and "Agents".
 
-## Implementation progress (August 13th, 2021)
+## Implementation progress 
 #### Scrum Master, Developer - Nathan (4/4)
 Nathan has developed the abilities to write the Greet.html and designed our scrumboard so that each individual in the team has the chance to complete the task that they were given. Under each category, it provides every single character or weapon and the clips that are provided by them. It organizes our website so that the user doesn't always have to use the search bar in order to find what they want.
 ##### Individual Task: https://docs.google.com/document/d/1kbqTPHBPopW567hsPzXEDwqgSuzY_J3mF5lNuN3aFi8/edit
