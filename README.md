@@ -25,7 +25,8 @@ Derrick has provided the detailed information on the design of our website, how 
 ##### Individual Task: https://docs.google.com/document/d/1bG6VP7soqFRvun5I5zoVUHboej5XmjlLgksAJhzeiMg/edit?usp=sharin
 ### Tangible Evidence:
 Nathan's tangible evidence: ![image](https://user-images.githubusercontent.com/89278326/132079639-72c2348d-e5e5-4c0e-9457-18ca27374a99.png)
-Reinhardt's tangible evidence: https://youtu.be/qYqdiA9bcVg
+Reinhardt's tangible evidence: https://youtu.be/qYqdiA9bcVg 
+
 Brian's tangible evidence: ![image](https://user-images.githubusercontent.com/89278326/132078853-bae362de-f8b5-4220-98e8-17e118a4f153.png)
 Derrick's tangible evidence: The README.md provided.
 ## IDE management (things that happened beyond plan)
