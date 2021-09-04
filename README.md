@@ -7,7 +7,7 @@ Starter code should be fun and practical.
 #### Add some color and fun using google images (books, library to create more realistic feel)
 #### Show some practical and useful links (links to book websites like Barnes and noble or Amazon)
 #### Show project specific links (hrefs) per page, especially tools to buy or see other book reviews
-
+Our project is a website that allows people book lists based on categories. Categories include Popular Now, Fiction, and Nonfiction. Filters are also on each page allowing users to easily find books based on their preferences. There is also an about tab, where viewers can learn about a brief description written by creators of the website. Questions can also be asked/answered under the questions tab, where contact information of creatures are also available. 
 ### Implementation progress (August 13th, 2021)
 #### Project entry point is main.py, this enables Flask Web App and provides capability to renders templates (HTML files)
 #### The main.py is the  Web Server Gateway Interface, essentially it contains a HTTP route and HTML file relationship.  The Python code constructs WSGI relationships for index, kangaroos, walruses, and hawkers.
