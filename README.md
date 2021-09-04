@@ -4,9 +4,9 @@ Runtime link: https://portfolio.nighthawkcodingsociety.com/
 Starter code should be fun and practical.
 ### Visual thoughts
 #### Organize with Bootstrap menu 
-#### Add some color and fun through VANTA Visuals (birds, halo, solar, net)
-#### Show some practical and fun links (hrefs) like Twitter, Git, Youtube
-#### Show project specific links (hrefs) per page
+#### Add some color and fun using google images (books, library to create more realistic feel)
+#### Show some practical and useful links (links to book websites like Barnes and noble or Amazon)
+#### Show project specific links (hrefs) per page, especially tools to buy or see other book reviews
 
 ### Implementation progress (August 13th, 2021)
 #### Project entry point is main.py, this enables Flask Web App and provides capability to renders templates (HTML files)
