@@ -17,15 +17,17 @@ Nathan has developed the abilities to write the Greet.html and designed our scru
 #### Designer - Reinhardt (4/4)
 Reinhardt has expanded his knowledge on the navigation bar and how it functions. Creating a navigation bar allows other users to create and develop categories that might be provided in it. It makes it easier to access detailed information or other websites.
 ##### Individual Task: https://docs.google.com/document/d/1LB6m0C5rvUzvJPi5M8gCQBzytX_AAMwAubm8-a038CY/edit
-##### Tangible evidence: https://youtu.be/qYqdiA9bcVg
 #### Technical Lead - Brian (4/4)
 This week, Brian has recorded notes on PBL 1.2, 1.4. He used Google docs to perform this task, writing down comprehensive information about what the videos talk about. 
 ##### Individual Task: https://docs.google.com/document/d/1LB6m0C5rvUzvJPi5M8gCQBzytX_AAMwAubm8-a038CY/edit
 #### Navigators - Derrick (4/4)
 Derrick has provided the detailed information on the design of our website, how our team is progressing, and the extra material we have accomplished this week. README.md has provided a thorough explanation of how our navigation bar and bootstrap buttons work.
-##### Individual Task: https://docs.google.com/document/d/1bG6VP7soqFRvun5I5zoVUHboej5XmjlLgksAJhzeiMg/edit?usp=sharing
-##### Tangible Evidence: This README.md provided.
-
+##### Individual Task: https://docs.google.com/document/d/1bG6VP7soqFRvun5I5zoVUHboej5XmjlLgksAJhzeiMg/edit?usp=sharin
+### Tangible Evidence:
+Nathan's tangible evidence: ![image](https://user-images.githubusercontent.com/89278326/132079639-72c2348d-e5e5-4c0e-9457-18ca27374a99.png)
+Reinhardt's tangible evidence: https://youtu.be/qYqdiA9bcVg
+Brian's tangible evidence: ![image](https://user-images.githubusercontent.com/89278326/132078853-bae362de-f8b5-4220-98e8-17e118a4f153.png)
+Derrick's tangible evidence: The README.md provided.
 ## IDE management (things that happened beyond plan)
 We finished our tasks this week, but we decided to go further and design our website on Google Slides. Though, it may not be realistic because we only made a simplistic design that doesn't function with working buttons that leads you to other detailed ideas about our website. Nathan and Reinhardt has found out how the bootstrap and the navigation bar work so we are currently trying to design our website on IntelliJ.
 ![image](https://user-images.githubusercontent.com/89278326/131947167-4570d6fb-dc4d-425d-83c1-86443ad53c5c.png)
