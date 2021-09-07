@@ -8,6 +8,10 @@ app = Flask(__name__)
 #zonk was here
 #bria was here lol xd
 # connects default URL to render index.html
+@app.route('/bria/')
+def bria():
+    return render_template("bria.html")
+
 @app.route('/')
 def index():
     return render_template("index.html")
