@@ -1,1 +1,3 @@
-	<h1>P3-Coders 1</h1>
+<p>P3- Coders (Yolanda Yang, Stanley Yan, Tianbin Liu, Justin Lemay
+
+<p>Week 3- sprint 3 progress.</p>
