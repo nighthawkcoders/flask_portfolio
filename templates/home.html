@@ -4,19 +4,37 @@
 <!-- Setting up variables to customize "project" details to be specific to kangaroos -->
 {% set project = "Home" %}
 
+{% block body %}
 
+    <html>
+    <head>
+        <style>
+            body {
+                background-color: lightblue;
+            }
+
+            h1 {
+                color: Black;
+                text-align: center;
+            }
+
+            p {
+                font-family: verdana;
+                font-size: 20px;
+            }
+        </style>
+    </head>
+    <body>
+
+    <h1>All Around The World</h1>
+    <p>Welcome to our website! Feel free to take a look around. Our goal is to bring you on a tour of the seven continents of the world, including tourist locations and famous food spots.</p>
+
+    </body>
+    </html>
+
+
+{% endblock %}
 <!-- Setting up a block replacement to customize background to RINGS -->
 {% block background %}
-    <script src="{{ url_for('static', filename='three.r119.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='vanta.halo.min.js') }}"></script>
-    <script>
-        VANTA.HALO({
-            el: "body",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 200.00,
-            minWidth: 200.00
-        })
-    </script>
+
 {% endblock %}
