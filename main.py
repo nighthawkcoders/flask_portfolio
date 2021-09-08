@@ -16,12 +16,6 @@ def index():
 def home():
     return render_template("home.html")
 
-
-@app.route('/continents/')
-def continents():
-    return render_template("continents.html")
-
-
 @app.route('/about/')
 def about():
     return render_template("about.html")
