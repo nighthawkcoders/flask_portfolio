@@ -11,20 +11,20 @@ def index():
     return render_template("index.html")
 
 
-# connects /kangaroos path to render kangaroos.html
-@app.route('/kangaroos/')
-def kangaroos():
-    return render_template("kangaroos.html")
+# connects /kangaroos path to render home.html
+@app.route('/home/')
+def home():
+    return render_template("home.html")
 
 
-@app.route('/walruses/')
-def walruses():
-    return render_template("walruses.html")
+@app.route('/continents/')
+def continents():
+    return render_template("continents.html")
 
 
-@app.route('/hawkers/')
-def hawkers():
-    return render_template("hawkers.html")
+@app.route('/about/')
+def about():
+    return render_template("about.html")
 
 
 @app.route('/stub/')
@@ -61,9 +61,9 @@ def kashish():
     # starting and empty input default
     return render_template("kashish.html", name="World")
 
-@app.route('/minilabs/')
-def minilabs():
-    return render_template("minilabs.html")
+@app.route('/concepts/')
+def concepts():
+    return render_template("concepts.html")
 
 
 # runs the application on the development server
