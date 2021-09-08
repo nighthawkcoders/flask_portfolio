@@ -8,21 +8,22 @@ app = Flask(__name__)
 #zonk was here
 #bria was here lol xd
 # connects default URL to render index.html
+
 @app.route('/bria/')
 def bria():
-    return render_template("aboutus/bria.html")
+    return render_template("bria.html")
 
 @app.route('/riya/')
 def riya():
-    return render_template("aboutus/riya.html")
-
-@app.route('/valerie/')
-def valerie():
-    return render_template("aboutus/valerie.html")
+    return render_template("riya.html")
 
 @app.route('/sreeja/')
 def sreeja():
-    return render_template("aboutus/sreeja.html")
+    return render_template("sreeja.html")
+
+@app.route('/valerie/')
+def valerie():
+    return render_template("valerie.html")
 
 @app.route('/')
 def index():
@@ -32,7 +33,7 @@ def index():
 # connects /kangaroos path to render aboutus.html
 @app.route('/aboutus/')
 def aboutus():
-    return render_template("aboutus/aboutus.html")
+    return render_template("aboutus.html")
 
 
 @app.route('/walruses/')
@@ -52,10 +53,6 @@ def stub():
 @app.route('/minilabs/')
 def video():
     return render_template("minilabs.html")
-
-@app.route('/valerie/')
-def valerie():
-    return render_template("valerie.html")
 
 @app.route('/greet', methods=['GET', 'POST'])
 def greet():
