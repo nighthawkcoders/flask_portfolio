@@ -1,11 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "layouts/base.html" %}
+
+{% set project = "Mini Labs!" %}
+
+{% block body %}
 <head>
     <meta charset="UTF-8">
     <title>Minilabs</title>
     <style>
         body {
-            background: white;
+            background: #000000;
         }
 
         .sneaky {
@@ -13,13 +16,13 @@
             top: 50%;
             position: relative;
             left: 40%;
-            border-bottom: 5px white;
+            border-bottom: 5px #000000;
             overflow: hidden;
             animation: animate 5s linear forwards;
         }
 
         .sneaky h1 {
-            color: white;
+            color: #000000;
         }
     </style>
 </head>
@@ -45,4 +48,8 @@
             <button>Answer</button>
         </div>
 </body>
-</html>
+{% endblock %}
+
+<!- This is turning off birds background from base.html -->
+{% block background %}
+{% endblock %}

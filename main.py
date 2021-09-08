@@ -8,6 +8,22 @@ app = Flask(__name__)
 #zonk was here
 #bria was here lol xd
 # connects default URL to render index.html
+@app.route('/bria/')
+def bria():
+    return render_template("aboutus/bria.html")
+
+@app.route('/riya/')
+def riya():
+    return render_template("aboutus/riya.html")
+
+@app.route('/valerie/')
+def valerie():
+    return render_template("aboutus/valerie.html")
+
+@app.route('/sreeja/')
+def sreeja():
+    return render_template("aboutus/sreeja.html")
+
 @app.route('/')
 def index():
     return render_template("index.html")
@@ -16,7 +32,7 @@ def index():
 # connects /kangaroos path to render aboutus.html
 @app.route('/aboutus/')
 def aboutus():
-    return render_template("aboutus.html")
+    return render_template("aboutus/aboutus.html")
 
 
 @app.route('/walruses/')
