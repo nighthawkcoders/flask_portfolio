@@ -23,3 +23,5 @@ Runtime link: https://portfolio.nighthawkcodingsociety.com/
 #### Testing of all current tangibles shows good progress
 #### no major errors so far, collaboration is going well
 
+### Sprint (3,4) Week Three Prototyping
+#### 9/7 
