@@ -16,10 +16,13 @@ def index():
 def kangaroos():
     return render_template("kangaroos.html")
 
-
 @app.route('/walruses/')
 def walruses():
     return render_template("walruses.html")
+
+@app.route('/binary/')
+def binary():
+    return render_template("binary.html")
 
 
 @app.route('/hawkers/')
