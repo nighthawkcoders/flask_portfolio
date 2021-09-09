@@ -1,0 +1,19 @@
+{% extends "layouts/project.html" %}
+{% set project = "greet" %}
+
+{% block body %}
+    <body style="background-color: #D2042D">
+    <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
+    <div class="col-12">
+        <p>Hello, I'm Brian Zhang, What's your name?</p>
+    </div>
+    <div class="col-12">
+        <form action="/greet" id="greet" method="POST" >
+            <label for="name">Type a greeting name?</label>
+            <input name="name" id="name">
+            <input type="submit" value="Greetings!">
+        </form>
+    </div>
+    <p>Hi Brian,my name is {{name}}!</p>
+{% endblock %}
+</body>
