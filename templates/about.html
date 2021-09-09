@@ -4,21 +4,47 @@
 <!-- Setting up variables to customize "project" details to be specific to walruses -->
 {% set project = "About" %}
 
+{% block body %}
+    <html>
+    <head>
+        <style>
+            body {
+                background-color: cornflowerblue;
+            }
 
-<!-- Setting up a block replacement to customize background to RINGS -->
+            h1 {
+                color: black;
+                text-align: center;
+            }
+
+            p {
+                color: black;
+                font-family: "Comic Sans MS";
+                font-size: 20px;
+            }
+        </style>
+    </head>
+
+    <h1>About Us</h1>
+    <p/> We are a group of high school students from Del Norte high school who have a passion for coding and designing websites.<p/>
+
+    <br />
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-2">
+                <img src="/static/assets/kashish.png" alt="Kashish's picture" style="width: 200px; height: 200px;">
+                <p style="text-align: center;"> Kashish Chopra </p>
+            </div>
+            <div class="col-sm-2">
+                <img src="/static/assets/sonakshi.png" alt="Sonakshi's picture" style="width: 200px; height: 200px;">
+                <p style="text-align: center;"> Sonakshi Bhalla </p>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
 {% block background %}
-    <script src="{{ url_for('static', filename='three.r119.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='vanta.rings.min.js') }}"></script>
-    <script>
-        VANTA.RINGS({
-            el: "body",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 200.00,
-            minWidth: 200.00,
-            scale: 1.00,
-            scaleMobile: 1.00
-        })
-    </script>
+
 {% endblock %}
