@@ -9,18 +9,18 @@
 {% set authors = "https://nighthawkcodingsociety.com/projectsearch/details/Hawkers%20Tweet" %}
 <!-- Setting up a block replacement to customize background to BIRDS -->
 {% block background %}
-<script src="{{ url_for('static', filename='') }}"></script>
-<script src="{{ url_for('static', filename='') }}"></script>
-<script>
-    VANTA.NET({
-        el: "body",
-        mouseControls: true,
-        touchControls: true,
-        gyroControls: false,
-        minHeight: 200.00,
-        minWidth: 200.00,
-        scale: 1.00,
-        scaleMobile: 1.00
-    })
-</script>
+    <script src="{{ url_for('static', filename='') }}"></script>
+    <script src="{{ url_for('static', filename='') }}"></script>
+    <script>
+        VANTA.NET({
+            el: "body",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00
+        })
+    </script>
 {% endblock %}
