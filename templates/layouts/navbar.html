@@ -1,20 +1,71 @@
-<!-- Navigation Bar from bootstrap
-This HTML is setup as a fragment allowing it to be "included" by other HTML files via Jinja2
--->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="https://csp.nighthawkcodingsociety.com/">{{basename}}</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <a class="navbar-brand" href="http://nighthawkcodingsociety.com/">
+        <img src="/static/assets/ncs_logo.png" width="50" height="50" class="d-inline-block align-center" alt="">
+
+        Nighthawk Coders
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-            <!-- url_for is a Jinja2 pre-processor that finds route from function name (def) -->
-            <a class="nav-link" href={{ url_for('index') }}>i</a>
-            <a class="nav-link" href={{ url_for('kangaroos') }}>ig</a>
-            <a class="nav-link" href={{ url_for('walruses') }}>ig</a>
-            <a class="nav-link" href={{ url_for('hawkers') }}>ig</a>
-            <!-- stub is shown using the name of the route -->
-            <a class="nav-link" href="/stub">ig</a>
+    <!-- Bootstrap menus -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <!--root menu -->
+            <li class="nav-item active">
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarModel" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    My Personal pages
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" style="color:skyblue" href="/greet">Greet/About Me</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarMaterials" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Given Examples
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/hawkers/">Hawkers</a>
+                    <a class="dropdown-item" href="/kangaroos">Kangaroos</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" style="color:blue" href="/walruses/"> Walruses</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarMaterials" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Mini Lab
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" style="color:blue" href="/binary/"> Binary MiniLab</a>
+                </div>
+            </li>
+        </ul>
+        <!-- Clock display -->
+        <div class="px-3">
+            <span id="clock"></span>
         </div>
+        <!-- Dark mode action -->
+        <div class="custom-control custom-switch">
+            <input type="checkbox" onclick="darkFunction()" class="custom-control-input" id="darkSwitch">
+            <label class="custom-control-label" for="darkSwitch"></label>
+        </div>
+        <!-- Navigation bar JavaScript support -->
+        <script>
+            // Dark Mode Toggle
+            function darkFunction() {
+                let element = document.body;
+                element.classList.toggle("dark-mode");
+            }
+            // Clock controller
+            let clockElement = document.getElementById('clock');
+            function clock() {
+                let date = new Date();
+                clockElement.textContent = date.toLocaleString();
+            }
+            // Clock refresh frequency
+            setInterval(clock, 1000);
+        </script>
     </div>
 </nav>
