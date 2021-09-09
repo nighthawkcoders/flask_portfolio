@@ -1,7 +1,13 @@
 ## [Flask Portfolio Starter](https://nighthawkcodingsociety.com/projectsearch/details/Flask%20Portfolio%20Starter)
 Runtime link: https://portfolio.nighthawkcodingsociety.com/
+### Sprint 2- Sep 10
+#### Prototyping for final design project
 
-### Beginning Ideas for Main Project 
+
+
+
+### Sprint 1- Sep 2
+#### Beginning Ideas for Main Project 
 #### -Travel Project with Dropdown menu for different continents
 #### -We want to add special tourist attractions and countries to visit on each continent page
 #### -The visual background will be a famous picture of the continent
