@@ -7,6 +7,7 @@ app = Flask(__name__)
 
 #zonk was here
 #bria was here lol xd
+#hi
 # connects default URL to render index.html
 
 @app.route('/bria/')
