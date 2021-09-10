@@ -2,22 +2,20 @@
 {% set project = "greet" %}
 
 {% block body %}
-<body style="background-color:powderblue;">
+<body style="background-color:deepskyblue;">
 <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
-    <div class="col-12">
-        <p style="font-size:30px">Hello My Name Is Reinhardt!</p>
-    </div>
-    <div class="col-12">
+    <div class="col-0">
         <form action="/greet" id="greet" method="POST" >
-            <label for="name" style="font-size:30px">Whats your name?</label>
+            <label for="name" style="font-size:30px; text-align:left; font-family: gilroy,serif;">Type a greeting name?</label>
             <input name="name" id="name">
             <input type="submit" value="Greetings!">
         </form>
     </div>
-    <p style="font-size:30px">Hello {{name}}! Nice to Meet you!</p>
-    <div class="col-12">
-        <a style="font-size:50px" style="color:mediumvioletred" href="https://github.com/Reinhardtlotter/flask_portfolio">GitHub Portfolio</a>
-        <br>
-        <a style="font-size:50px" style="color:lightpink" href="https://docs.google.com/document/d/13bldcvcK0Tj5fnoD3ZBt-I9W8JwUMvsLGsQxQLcwXgM/edit?usp=sharing">Google Docs Journal</a>
-        {% endblock %}
+    <p style="font-size:30px">Hello {{name}}!</p>
+
+        <div class = "col-0">
+            <img src=/static/Hello.gif">
+        </div>
+    {% endblock %}
+</div>
 </body>
