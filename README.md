@@ -6,6 +6,8 @@ P3 M223-Coders Yolanda Yang, Stanley Yan, Tianbin Liu, Justin Lemay
 
 Yolanda Yang (user yolandayangg) [Tasks](https://github.com/yolandayangg/flask_portfolio/issues) [Commits](https://github.com/yolandayangg/flask_portfolio/commits?author=yolandayangg) [Profile](https://github.com/yolandayangg)
 
-Tianbin Liu (user TianbinLiu) [Tasks](https://github.com/TianbinLiu/flask_portfolio/issues) [Commits](https://github.com/yolandayangg/flask_portfolio/commits?author=TianbinLiu) [Profile](https://github.com/TianbinLiu)
+Tianbin Liu (user TianbinLiu) [Tasks](https://github.com/TianbinLiu/flask_portfolio/issues) [Commits](https://github.com/TianbinLiu/flask_portfolio/commits?author=TianbinLiu) [Profile](https://github.com/TianbinLiu)
 
 Stanley Yan (user Stanley Yan) [Tasks](https://github.com/yolandayangg/flask_portfolio/issues?q=is%3Aclosed) [Commits](https://github.com/yolandayangg/flask_portfolio/commits/main) [Profile](https://github.com/Stanleyy03840)
+
+Justin Lemay (user TheRadRabbidRabbit) [Tasks](https://github.com/TianbinLiu/flask_portfolio/issues) [Commits](https://github.com/yolandayangg/flask_portfolio/commits?author=TheRadRabbidRabbit) [Profile](https://github.com/TheRadRabbidRabbit)
