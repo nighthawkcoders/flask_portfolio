@@ -32,24 +32,5 @@ https://docs.google.com/document/d/1RswJedH_RbVV_5PU1sm5s7TqzYHJ_yWxu3bevAXvGP4/
 | Week 1        | https://www.youtube.com/watch?v=xP6kSe0Aay4&t=5s             |
 
 
-```
-{
-  "firstName": "John",
-  "lastName": "Smith",
-  "age": 25
-}
-```
 
-Here's a sentence with a footnote. [^1]
-
-[^1]: This is the footnote.
-
-
-
-### My Great Heading {#custom-id}
-term
-: definition
-~~The world is flat.~~
-[x] Write the press release
-- [ ] Update the website
-- [ ] Contact the media
+![alt text](image.jpg)
