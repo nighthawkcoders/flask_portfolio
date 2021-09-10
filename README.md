@@ -1,18 +1,20 @@
 ## [Flask Portfolio Starter](https://nighthawkcodingsociety.com/projectsearch/details/Flask%20Portfolio%20Starter)
 Runtime link: https://portfolio.nighthawkcodingsociety.com/
 
+# Hackermen
 ## Contributors
 ---------------------------------------
+
+https://github.com/Reinhardtlotter/flask_portfolio/graphs/contributors
+
+Scrum Board: https://github.com/Reinhardtlotter/flask_portfolio/projects/1
+
 | Name             | Journal                                                                                                      |
 | ---------------- | ------------------------------------------------------------------------------------------------------------ |
 | Nathan Manangan  | [Journal](https://docs.google.com/document/d/1idJAvADCA999Sjsmv-bFHnBBsa4b5_uENYpmctUlBRE/edit?usp=sharing) |
 | Reinhardt Lotter | [Journal](https://docs.google.com/document/d/1RswJedH_RbVV_5PU1sm5s7TqzYHJ_yWxu3bevAXvGP4/edit?usp=sharing) |
 | Derrick Huang    | [Journal](https://docs.google.com/document/d/1idJAvADCA999Sjsmv-bFHnBBsa4b5_uENYpmctUlBRE/edit?usp=sharing) |
 | Brian Zhang      | [Journal](https://docs.google.com/document/d/1KV3UE5QOkHorjQMKIpeUL6d1Ptxy_qY4MGuTyJsKths/edit?usp=sharing) |
-
-Team name: Hackermen
-
-Scrum Board: https://github.com/Reinhardtlotter/flask_portfolio/projects/1
 
 ## Teammates
 ---------------------------------------
@@ -28,5 +30,6 @@ Scrum Board: https://github.com/Reinhardtlotter/flask_portfolio/projects/1
 ---------------------------------------
 | Week Number   | Assignment link                                              |
 | ------------- | -------------------------------------------------------------| 
+| Sprint 3,4    | Not accomplished                                             |
 | Sprint 2      | https://github.com/Reinhardtlotter/flask_portfolio/issues/18 | 
 | Sprint 1      | https://www.youtube.com/watch?v=xP6kSe0Aay4&t=5s             |
