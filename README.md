@@ -1,11 +1,8 @@
-<p>P3- Coders (Yolanda Yang, Stanley Yan, Tianbin Liu, Justin Lemay
+P3 M223-Coders Yolanda Yang, Stanley Yan, Tianbin Liu, Justin Lemay
 
-<p>Week 3-scrumboard https://github.com/yolandayangg/flask_portfolio/projects/1 
+[scrumboard week 3](https://github.com/yolandayangg/flask_portfolio/projects/1)
 
-</p>Pair share journal (Stanley, Yolanda and Tianbin) https://docs.google.com/document/d/1VqkTr3uP8m7yMC01Ngiqay7hRKexQC2j_Ss2TpSUAMQ/edit?usp=sharing 
+[Pair share journal-Stanley, Yolanda and Tianbin](https://docs.google.com/document/d/1VqkTr3uP8m7yMC01Ngiqay7hRKexQC2j_Ss2TpSUAMQ/edit?usp=sharing) 
 
-</p> tema google drive folder: https://drive.google.com/drive/u/1/folders/1U60VNuqGUXv9P_pBh6PY_wLx84LwKVRz
-
-</p> Yolanda Yang
-
-</p> Stanley Yan
+Yolanda Yang (user yolandayangg) [Tasks](https://github.com/yolandayangg/flask_portfolio/issues) [Commits](https://github.com/yolandayangg/flask_portfolio/commits?author=yolandayangg)
+ 
