@@ -4,6 +4,8 @@
 
 </p>Pair share journal (Stanley, Yolanda and Tianbin) https://docs.google.com/document/d/1VqkTr3uP8m7yMC01Ngiqay7hRKexQC2j_Ss2TpSUAMQ/edit?usp=sharing 
 
+</p> tema google drive folder: https://drive.google.com/drive/u/1/folders/1U60VNuqGUXv9P_pBh6PY_wLx84LwKVRz
+
 </p> Yolanda Yang
 
 </p> Stanley Yan
