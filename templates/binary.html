@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-{% extends "layouts/base.html" %}
+{% extends "layouts/project.html" %}
 
 <!-- Search for all the Hack: below for hack-a-thon and mini-lab requirements -->
 <!-- need to adjust Templates to start -->
@@ -8,14 +8,14 @@
            use HTML Input Form in Frontend, ie toward top of Page
            send initial value and updated values to form via Python render_template -->
 <!-- Hack: use 8 as default -->
-{% set BITS = 8 %}
+{% set BITS = 12 %}
 {% set MAX = ((2 ** BITS) - 1) %}
 
 <!-- Hack: Set bulbs and pass as variables via Python render_template
            add new images (ie PNGs) to project -->
 <!-- use your PNGs as default -->
-{% set imgBulbOn = "/static/assets/bulb_on.gif" %}
-{% set imgBulbOff = "/static/assets/bulb_off.png" %}
+{% set imgBulbOn = "/static/poggers.png" %}
+{% set imgBulbOff = "/static/sadge.png" %}
 {% set msgTurnOn = "Turn On" %}
 {% set msgTurnOff = "Turn Off" %}
 
@@ -114,7 +114,7 @@
 </script>
 {% endblock %}
 
-{% block content %}
+{% block body %}
 <h1 class="text-center">Binary Math with Conversions</h1>
 <div class="container">
     <div class="row justify-content-md-center">
