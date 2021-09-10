@@ -1,0 +1,19 @@
+<!-- Extending the predefined project layout -->
+{% extends "layouts/base.html" %}
+{% set project = "Wireframes" %}
+
+<!- This variable sets name of browser tab  -->
+{% set project = "Wireframes" %}
+
+<!- This is a replacement block for Body in base.html -->
+{% block body %}
+<div class="col-0" style="margin: 3% 5% 5%" name="imgbox" id="imgbox;>
+    <iframe width="1920" height="1080">
+    </iframe><br />
+
+    <img src="/static/Wireframe%20(2)%20Design-A-Thon.png" target="imgbox" width="280" height="380" style="float:left"></a>
+<img src="/static/Wireframe%20(1).png" target="imgbox" width="700" height="380" style= "margin:0% 5% 0%"></a>
+<img src="/static/Wireframe.png" target="imgbox" width="560" height="380" style="margin: 5% 0% 5%"></a>
+
+
+    {% endblock %}
