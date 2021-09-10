@@ -8,6 +8,6 @@ Yolanda Yang (user yolandayangg) [Tasks](https://github.com/yolandayangg/flask_p
 
 Tianbin Liu (user TianbinLiu) [Tasks](https://github.com/TianbinLiu/flask_portfolio/issues) [Commits](https://github.com/TianbinLiu/flask_portfolio/commits?author=TianbinLiu) [Profile](https://github.com/TianbinLiu)
 
-Stanley Yan (user Stanley Yan) [Tasks](https://github.com/yolandayangg/flask_portfolio/issues?q=is%3Aclosed) [Commits](https://github.com/yolandayangg/flask_portfolio/commits/main) [Profile](https://github.com/Stanleyy03840)
+Stanley Yan (user Stanley Yan) [Tasks](https://github.com/yolandayangg/flask_portfolio/issues/assigned/Stanleyy03840) [Commits](https://github.com/yolandayangg/flask_portfolio/commits?author=Stanleyy03840) [Profile](https://github.com/Stanleyy03840)
 
 Justin Lemay (user TheRadRabbidRabbit) [Tasks](https://github.com/TianbinLiu/flask_portfolio/issues) [Commits](https://github.com/yolandayangg/flask_portfolio/commits?author=TheRadRabbidRabbit) [Profile](https://github.com/TheRadRabbidRabbit)
