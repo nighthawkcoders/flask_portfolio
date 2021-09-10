@@ -4,7 +4,7 @@ P3 M223-Coders Yolanda Yang, Stanley Yan, Tianbin Liu, Justin Lemay
 
 [Pair share journal-Stanley, Yolanda and Tianbin](https://docs.google.com/document/d/1VqkTr3uP8m7yMC01Ngiqay7hRKexQC2j_Ss2TpSUAMQ/edit?usp=sharing) 
 
-Yolanda Yang (user yolandayangg) [Tasks](https://github.com/yolandayangg/flask_portfolio/issues) [Commits](https://github.com/yolandayangg/flask_portfolio/commits?author=yolandayangg) [Profile](https://github.com/yolandayangg)
+Yolanda Yang (user yolandayangg) [Tasks](https://github.com/yolandayangg/flask_portfolio/issues) [Commits](https://github.com/yolandayangg/flask_portfolio/commits?author=yolandayangg) [Profile](https://github.com/yolandayangg) [Scrumboard](https://github.com/yolandayangg/flask_portfolio/projects/1?card_filter_query=assignee%3A+assignee%3A)
 
 Tianbin Liu (user TianbinLiu) [Tasks](https://github.com/TianbinLiu/flask_portfolio/issues) [Commits](https://github.com/TianbinLiu/flask_portfolio/commits?author=TianbinLiu) [Profile](https://github.com/TianbinLiu)
 
