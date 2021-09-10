@@ -1,6 +1,9 @@
 ## [Flask Portfolio Starter](https://nighthawkcodingsociety.com/projectsearch/details/Flask%20Portfolio%20Starter)
 Runtime link: https://portfolio.nighthawkcodingsociety.com/
-| First Header  | Second Header | | ------------- | ------------- | | Content Cell  | Content Cell  | | Content Cell  | Content Cell  |
+| First Header  | Second Header |
+| ------------- | ------------- | 
+| Content Cell  | Content Cell  | 
+| Content Cell  | Content Cell  |
 
 ## Idea
 Valorant website where you can upload and like clips of other players.
