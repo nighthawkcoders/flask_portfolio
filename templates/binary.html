@@ -6,7 +6,7 @@
            use HTML Input Form in Frontend, ie toward top of Page
            send initial value and updated values to form via Python render_template -->
 <!-- Hack: use 8 as default -->
-{% set BITS = 12 %}
+{% set BITS = 8 %}
 {% set MAX = ((2 ** BITS) - 1) %}
 
 <!-- Hack: Set bulbs and pass as variables via Python render_template
@@ -38,6 +38,8 @@
             document.getElementById('hexadecimal').innerHTML = parseInt(binary, 2).toString(16);
             // DOM assignment to Decimal conversion
             document.getElementById('decimal').innerHTML = parseInt(binary, 2).toString(10);
+            String.fromCharCode(65)   // Returns "A"
+
             /* Hack: show ASCII printable character(s) for each 8 bits
              DOM assignment by converting decimal https://www.w3schools.com/jsref/jsref_fromcharcode.asplook
              below ASCII for more ideas of where to make changes
