@@ -1,7 +1,7 @@
 ## [Flask Portfolio Starter](https://nighthawkcodingsociety.com/projectsearch/details/Flask%20Portfolio%20Starter)
 Runtime link: https://portfolio.nighthawkcodingsociety.com/
 
-## Team
+## Contributors
 ---------------------------------------
 | Name             | Journal                                                                                                      |
 | ---------------- | ------------------------------------------------------------------------------------------------------------ |
@@ -18,10 +18,10 @@ https://docs.google.com/document/d/1RswJedH_RbVV_5PU1sm5s7TqzYHJ_yWxu3bevAXvGP4/
 ---------------------------------------
 | Name             | ID              | Scrumboard                                                                   | Commits  | Profile          |
 | ---------------- | --------------- | ---------------------------------------------------------------------------- | -------- | ---------------- |
-| Nathan Manangan  | ProRichyMan     | [Scrumboard](https://github.com/Reinhardtlotter/flask_portfolio/projects/1) | [Commits](https://github.com/Reinhardtlotter/flask_portfolio/commits?author=Reinhardtlotter)         | @ProRichyMan     |
-| Reinhardt Lotter | Reinhardtlotter | [Scrumboard](https://github.com/Reinhardtlotter/flask_portfolio/projects/1) | [Commits](https://github.com/Reinhardtlotter/flask_portfolio/commits?author=Reinhardtlotter)         | @Reinhardtlotter |
-| Derrick Huang    | Pitsco          | [Scrumboard](https://github.com/Reinhardtlotter/flask_portfolio/projects/1) | [Commits](https://github.com/Reinhardtlotter/flask_portfolio/commits?author=Pitsco)         | @Pitsco          |
-| Brian Zhang      | BrianZhang2016  | [Scrumboard](https://github.com/Reinhardtlotter/flask_portfolio/projects/1) | [Commits](https://github.com/Reinhardtlotter/flask_portfolio/commits?author=BrianZhang2016)          | @BrianZhang2016  |
+| Nathan Manangan  | ProRichyMan     | [Scrumboard](https://github.com/Reinhardtlotter/flask_portfolio/projects/1) | [Commits](https://github.com/Reinhardtlotter/flask_portfolio/commits?author=Reinhardtlotter)         | [@ProRichyMan](https://github.com/ProRichyMan)     |
+| Reinhardt Lotter | Reinhardtlotter | [Scrumboard](https://github.com/Reinhardtlotter/flask_portfolio/projects/1) | [Commits](https://github.com/Reinhardtlotter/flask_portfolio/commits?author=Reinhardtlotter)         | [@Reinhardtlotter](https://github.com/Reinhardtlotter) |
+| Derrick Huang    | Pitsco          | [Scrumboard](https://github.com/Reinhardtlotter/flask_portfolio/projects/1) | [Commits](https://github.com/Reinhardtlotter/flask_portfolio/commits?author=Pitsco)         | [@Pitsco](https://github.com/Pitsco)          |
+| Brian Zhang      | BrianZhang2016  | [Scrumboard](https://github.com/Reinhardtlotter/flask_portfolio/projects/1) | [Commits](https://github.com/Reinhardtlotter/flask_portfolio/commits?author=BrianZhang2016)          | [@BrianZhang2016](https://github.com/BrianZhang2016)  |
 
 
 ## Assignments
