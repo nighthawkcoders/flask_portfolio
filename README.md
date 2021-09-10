@@ -2,7 +2,7 @@
 ## Contributors
 ---------------------------------------
 
-Contributers: https://github.com/Reinhardtlotter/flask_portfolio/graphs/contributors
+Contributors: https://github.com/Reinhardtlotter/flask_portfolio/graphs/contributors
 
 Scrum Board: https://github.com/Reinhardtlotter/flask_portfolio/projects/1
 
