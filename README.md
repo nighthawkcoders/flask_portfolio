@@ -1,6 +1,6 @@
 P3 M223-Coders Yolanda Yang, Stanley Yan, Tianbin Liu, Justin Lemay
 
-[Insights](https://github.com/yolandayangg/flask_portfolio/pulse)
+[Insights](https://github.com/yolandayangg/flask_portfolio/pulse) [Activity](https://github.com/yolandayangg/flask_portfolio/graphs/contributors)
 
 [Pair share journal-Stanley, Yolanda and Tianbin](https://docs.google.com/document/d/1VqkTr3uP8m7yMC01Ngiqay7hRKexQC2j_Ss2TpSUAMQ/edit?usp=sharing) 
 
