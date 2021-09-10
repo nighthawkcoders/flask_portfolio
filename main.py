@@ -44,6 +44,14 @@ def greet():
     # starting and empty input default
     return render_template("greet.html", name="World")
 
+@app.route('/grid')
+def grid():
+    return render_template("grid.html")
+
+@app.route('/wireframes')
+def wireframes():
+    return render_template("wireframes.html")
+
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)
