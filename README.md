@@ -3,7 +3,6 @@ Runtime link: https://portfolio.nighthawkcodingsociety.com/
 
 ## Teammates
 ---------------------------------------
-
 | Name             | Profile          |
 | ---------------- | ---------------- |
 | Nathan Manangan  | @ProRichyMan     |
@@ -12,6 +11,8 @@ Runtime link: https://portfolio.nighthawkcodingsociety.com/
 | Brian Zhang      | @BrianZhang2016  |
 
 
+## Assignments
+---------------------------------------
 | Week Number   | Assignment link                                              |
 | ------------- | -------------------------------------------------------------| 
 | Week 2        | https://github.com/Reinhardtlotter/flask_portfolio/issues/18 | 
