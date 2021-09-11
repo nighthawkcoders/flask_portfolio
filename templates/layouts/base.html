@@ -7,7 +7,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 <!DOCTYPE HTML>
 <html lang="en">
 
-{% set basename = "Nighthawk Coding" %}
+{% set basename = "Hackermen" %}
 {% set github = "https://github.com/nighthawkcoders" %}
 {% set twitter = "https://twitter.com/NighthawkCoding" %}
 {% set youtube = "https://www.youtube.com/channel/UClIKOsDS5dsfzFA3zveDT3Q?view_as=subscriber" %}
@@ -133,8 +133,8 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
     <div class="product" style="margin-top: 2%;">
         <div class="row" style="padding: 10%; padding-top: 0%; padding-bottom: 5%;">
 
-            <div class="col-8" >
-                <h1>{{ project }} Project</h1>
+            <div class="col-8" style="font-size:35px">
+                <h1>{{ project }}</h1>
             </div>
 
         </div>
@@ -142,12 +142,9 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
         <div class="row" style="padding-left: 10%;">
             {% block links %}
             <div class="col-3">
-                <a href="{{ overview }}" class="btn">Overview</a>
+                <a href="{{ overview }}" class="btn">GITHUB</a>
             </div>
 
-            <div class="col-3">
-                <a href="{{ repo }}" class="btn">Repository</a>
-            </div>
             {% endblock %}
         </div>
 
