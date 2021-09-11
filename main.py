@@ -52,6 +52,9 @@ def grid():
 def wireframes():
     return render_template("wireframes.html")
 
+@app.route('/aboutme')
+def aboutme():
+    return render_template("aboutme.html")
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)
