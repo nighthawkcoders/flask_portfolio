@@ -2,10 +2,10 @@
 https://github.com/B-G101/Team-BRS
 https://github.com/B-G101/Team-BRS/projects/1
 ###Contributors:
-DistilledVinegar - Valerie\
-B-G101 - Bria\
-sreejavad - Sreeja\
-ranand2445 - Riya
+[DistilledVinegar - Valerie](https://github.com/DistilledVinegar) \
+ [B-G101 - Bria](https://github.com/B-G101) \
+ [sreejavad - Sreeja](https://github.com/SreejaVad) \
+ [ranand2445 - Riya](https://github.com/ranand2445)
 ##Pair Journals
 ## [Val and Sreeja](https://docs.google.com/document/d/1bEQV3v4W8SFTRdCUL4dlvi_KDL2U9QlT8kjz4BUet9w/edit?usp=sharing)
 ## [Riya and Bria](https://docs.google.com/document/d/1dfF7f6u1v5AF3MKQTq2_82rlR3a0Qe4P5md6iLnGroM/edit?usp=sharing)
