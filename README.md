@@ -20,6 +20,25 @@ https://github.com/B-G101/Team-BRS/projects/1
 ##Ideation:
 This minilab is all about guessing songs. Samples of songs from different genres will be played to participants, requiring them to select from a list of songs, one of which contains the correct answer. Different difficulties can be selected with various complicating factors, such as the nicheness of the artist, minor distortions to the song, or only shorter snippets being played. Alternatively, the auditory experience could be entirely foregone, and participants would have to guess the song and/or complete lyrics after only being given the lyrics in writing.
 
+
+## Sprint 2 Week 3 and 4
+## [Link that goes through website](https://docs.google.com/presentation/d/1LFJSLYCWe11_j0c1RDEH2Byjp7TBz1Q-XW0rxA1S-C8/edit#slide=id.gebe2a06820_0_76) 
+[Animation - Test musical knowledge](https://github.com/B-G101/Team-BRS/commit/ca323b6bc6a063ab4357d331fc4df54c7d8e8a22) \
+[Added buttons and multiple choice option in game for genre](https://github.com/B-G101/Team-BRS/commit/7728ba81b70f4ee8116a935e35fd590e6c9b1fb5) \
+[embeded content on the mini labs page and added table](https://github.com/B-G101/Team-BRS/commit/763ed355202175d54397dc8438d74da5fe51909c) \
+[added menu](https://github.com/B-G101/Team-BRS/commit/3d65b9d9d9654cc0f1b85f0fd002107023e24457) \
+[added the navigation bar to the minilabs.html tab](https://github.com/B-G101/Team-BRS/commit/0a89cdca6e8bc2fb221cd1425c865ac2ed796b70) \
+[embeds of brainwrite, etc](https://github.com/B-G101/Team-BRS/commit/dfc64dcd35fab8eeafb6b3134de336d82dbca80f) \
+[added instructions on block strip in game and removed background](https://github.com/B-G101/Team-BRS/commit/8c429998b85a81f483aadba3b6c2978e9f821ae1) \
+[added spookgoose and JS functionality when images are clicked](https://github.com/B-G101/Team-BRS/commit/83fab3c8ad073dda70d4277c51c4823f5852320c) 
+# Hackathon
+[Geese](https://github.com/B-G101/Team-BRS/commit/4a6ab44d20257513d35d23af83beddff35729ae2) \
+[Binary: hackathon images added](https://github.com/B-G101/Team-BRS/commit/b311842e5c68a322ae91b7ef28528444866c531c) \
+[Binary: lightbulb](https://github.com/B-G101/Team-BRS/commit/e48f5eef973a0e7e709f719a63928f2200f34a11) \
+[Binary: ASCII Added](https://github.com/B-G101/Team-BRS/commit/617cc2ea42ab255ce7c4edfb6bb451f2923b5023) 
+
+
+## Sprint 1 Week 1 and 2
 ## [Flask Portfolio Starter](https://nighthawkcodingsociety.com/projectsearch/details/Flask%20Portfolio%20Starter)
 Runtime link: https://portfolio.nighthawkcodingsociety.com/
 ### Idea
