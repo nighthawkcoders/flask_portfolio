@@ -55,6 +55,10 @@ def wireframes():
 @app.route('/aboutme')
 def aboutme():
     return render_template("aboutme.html")
+
+@app.route('/week3')
+def week3():
+    return render_template("week3.html")
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)
