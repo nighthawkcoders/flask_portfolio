@@ -27,6 +27,6 @@ Scrum Board: https://github.com/Reinhardtlotter/flask_portfolio/projects/1
 ---------------------------------------
 | Week Number   | Assignment link                                              |
 | ------------- | -------------------------------------------------------------| 
-| Sprint 3,4    | Not accomplished                                             |
+| Sprint 3,4    | https://www.youtube.com/watch?v=4PBT40bsTYw&list=PLqQJAW1jlFX_KScLv7LZFcHH2t_uYb4Vn&index=3                                         |
 | Sprint 2      | https://github.com/Reinhardtlotter/flask_portfolio/issues/18 | 
 | Sprint 1      | https://www.youtube.com/watch?v=xP6kSe0Aay4&t=5s             |
