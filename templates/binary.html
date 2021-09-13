@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+{% extends "layouts/base.html" %}
 <!-- Search for all the Hack: below for hack-a-thon and mini-lab requirements -->
 
 <!-- Hack: Build form to drive bit size dynamic updates
@@ -16,7 +16,7 @@
 {% set imgBulbOff = "/static/assets/goose.jpeg" %}
 {% set msgTurnOn = "Turn On" %}
 {% set msgTurnOff = "Turn Off" %}
-
+{% block body %}
 {% block meta %}
     <title>Binary page</title>
     <script>
@@ -166,4 +166,17 @@
 
         </div>
     </div>
+
+    <style>
+        #table {
+            color: white;
+
+
+        }
+
+    </style>
+{% endblock %}
+{% endblock %}
+
+{% block background %}
 {% endblock %}

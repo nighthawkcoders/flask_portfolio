@@ -2,12 +2,38 @@
 {% extends "layouts/base.html" %}
 
 <!-- Setting up variables to customize "project" details to be specific to index page -->
-{% set project = "Portfolio" %}
+{% set project = "Home" %}
 {% set overview = "https://nighthawkcodingsociety.com/projectsearch/details/Flask%20Portfolio%20Starter" %}
 {% set repo = "https://github.com/nighthawkcoders/flask_portfolio/" %}
 
 
+{% block body %}
+    </div>
 
+    <h1>Song Guesser</h1>
+    <div class="sneaky">
+        <audio controls>
+            <source src="/static/assets/MysterySong1.mp3" type="audio/mpeg">
+        </audio>
+        <h1>Guess the song! #1</h1>
+        <h3>note to team: we will need to trim this to only play ~20 sec snippets of songs</h3>
+        <h3>we can manually do this for every song, or find a way to automate it. either way ig.</h3>
+        <form>
+            <input type="radio" name="choice" value="Nine Inch Nails - Came Back Haunted"> Nine Inch Nails - Came Back Haunted
+            <a href="#">
+                <img id="spookgoose" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.ytimg.com%2Fvi%2F1CX0vpCM6Y0%2Fhqdefault.jpg&f=1&nofb=1" style="width:10%"/>
+                <script> var spookgoose = document.getElementById("spookgoose");
+                spookgoose.onclick = function(e) {
+                    window.alert("yeah");
+                }
+                </script>
+            </a><br>
+            <input type="radio" name="choice" value="James Atkinson - I Don't Believe"> James Atkinson - I Don't Believe <br>
+            <input type="radio" name="choice" value="3TEETH - Affluenza"> 3TEETH - Affluenza <br>
+            <input type="radio" name="choice" value="Gorb - Came Back"> Wrong <br>
+        </form>
+    </div>
+{% endblock %}
 {% block background %}
 {% endblock %}
 
