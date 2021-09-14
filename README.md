@@ -2,10 +2,10 @@
 ## [Scrum Board](https://github.com/sonakshibhalla/flask_portfolio/projects/1)
 ## [Commits by Contributor](https://github.com/sonakshibhalla/flask_portfolio/graphs/contributors)
 ## Table of Contents
-1. Contributors
-2. Pair Share Journals
-3. Project Ideation
-4. Sprint 1- Sep 2
+1. [Contributors](https://github.com/sonakshibhalla/flask_portfolio#contributors)
+2. [Pair Share Journals](https://github.com/sonakshibhalla/flask_portfolio#pair-share-journals)
+3. [Project Ideation](https://github.com/sonakshibhalla/flask_portfolio#project-ideation)
+4. [Sprint 1- Sep 2](https://github.com/sonakshibhalla/flask_portfolio#sprint-1--sep-2)
 
 ## Contributors
 | Name | GitHub Profile | Tasks | Scrum Board | Commits |
