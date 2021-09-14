@@ -8,7 +8,7 @@
            use HTML Input Form in Frontend, ie toward top of Page
            send initial value and updated values to form via Python render_template -->
 <!-- Hack: use 8 as default -->
-{% set BITS = 8 %}
+{#{% set BITS = 8 %}#}
 {% set MAX = ((2 ** BITS) - 1) %}
 
 <!-- Hack: Set bulbs and pass as variables via Python render_template
@@ -127,6 +127,7 @@
                         <th>Octal</th>
                         <th>Hexadecimal</th>
                         <th>Decimal</th>
+                        <th>ASCII</th>
                         <!-- Hack: display ASCII label for printable character(s)  -->
                         <th>Minus</th>
                     </tr>
@@ -136,6 +137,8 @@
                         <td id="octal">0</td>
                         <td id="hexadecimal">0</td>
                         <td id="decimal">0</td>
+                        <td id="ASCII">null</td>
+                        <td id="RGB">null</td>
                         <!-- Hack: display ASCII printable character(s)  -->
                         <td><button type="button" id="sub1" onclick="add(-1)">-1</button></td>
 
