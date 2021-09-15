@@ -14,6 +14,10 @@ app = Flask(__name__)
 def bria():
     return render_template("bria.html")
 
+@app.route('/game/play')
+def play():
+    return render_template("game/play.html")
+
 @app.route('/riya/')
 def riya():
     return render_template("riya.html")

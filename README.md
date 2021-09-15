@@ -6,10 +6,10 @@
 <table id="readmeinformation">
 
 <tr>
-<th>Contributors</th>
+<>Tasks</th>
+<th>th>Contributors</th>
 <th>Github ID/ Profile</th>
-<th>Tasks</th>
-<th>Scrum Board</th>
+<thScrum Board</th>
 <th>Commits</th>
 <th>Pair Journal</th>
 </tr>
@@ -23,7 +23,7 @@
 <a href="https://github.com/B-G101/Team-BRS/issues/assigned/B-G101" target="_blank">Tasks</a>
 </td>
 <td>
-<a href="https://github.com/B-G101/Team-BRS/projects/1?card_filter_query=assignee%3Ab-g101" target="_blank">Scrum Board
+<a href="https://github.com/B-G101/Team-BRS/projects/1?card_filter_query=assignee%3Ab-g101" target="_blank">Scrum Board</a>
 <td>
 <a href="https://github.com/B-G101/Team-BRS/commits?author=B-G101" target="_blank">Commits</a>
 </td>
