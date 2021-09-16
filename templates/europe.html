@@ -1,10 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<!-- Extending the project layout, as this file will do minor customizations -->
+{% extends "layouts/project.html" %}
 
-</body>
-</html>
+<!-- Setting up variables to customize "project" details to be specific to kangaroos -->
+{% set project = "Europe" %}
+
+{% block body %}
+
+    <html>
+    <head>
+        <style>
+            body {
+                background-image: url("https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F28%2F2016%2F01%2Fhallstadt-austria.jpg&q=85");
+            }
+
+            h1 {
+                color: white;
+                text-align: center;
+                font-size: xxx-large;
+            }
+
+
+        </style>
+    </head>
+    <body>
+
+    <h1>Europe</h1>
+
+    </body>
+    </html>
+
+
+{% endblock %}
+<!-- Setting up a block replacement to customize background to RINGS -->
+{% block background %}
+
+{% endblock %}

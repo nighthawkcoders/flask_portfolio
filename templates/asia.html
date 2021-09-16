@@ -1,10 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<!-- Extending the project layout, as this file will do minor customizations -->
+{% extends "layouts/project.html" %}
 
-</body>
-</html>
+<!-- Setting up variables to customize "project" details to be specific to kangaroos -->
+{% set project = "Asia" %}
+
+{% block body %}
+
+    <html>
+    <head>
+        <style>
+            body {
+                background-image: url("https://wallpaperaccess.com/full/447143.jpg");
+            }
+
+            h1 {
+                color: white;
+                text-align: center;
+                font-size: xxx-large;
+            }
+
+
+        </style>
+    </head>
+    <body>
+
+    <h1>Asia</h1>
+
+    </body>
+    </html>
+
+
+{% endblock %}
+<!-- Setting up a block replacement to customize background to RINGS -->
+{% block background %}
+
+{% endblock %}

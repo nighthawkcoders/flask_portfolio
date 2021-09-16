@@ -28,9 +28,9 @@ def northamerica():
 def southamerica():
     return render_template("southamerica.html")
 
-@app.route('/antartica/')
-def antartica():
-    return render_template("antartica.html")
+@app.route('/antarctica/')
+def antarctica():
+    return render_template("antarctica.html")
 
 @app.route('/europe/')
 def europe():
