@@ -12,7 +12,33 @@ def home():
 
 
 # connects /kangaroos path to render home.html
+@app.route('/asia/')
+def asia():
+    return render_template("asia.html")
 
+@app.route('/africa/')
+def africa():
+    return render_template("africa.html")
+
+@app.route('/northamerica/')
+def northamerica():
+    return render_template("northamerica.html")
+
+@app.route('/southamerica/')
+def southamerica():
+    return render_template("southamerica.html")
+
+@app.route('/antartica/')
+def antartica():
+    return render_template("antartica.html")
+
+@app.route('/europe/')
+def europe():
+    return render_template("europe.html")
+
+@app.route('/australia/')
+def australia():
+    return render_template("australia.html")
 
 @app.route('/about/')
 def about():
