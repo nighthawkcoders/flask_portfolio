@@ -1,5 +1,9 @@
 <!DOCTYPE html>
+{% extends "layouts/base.html" %}
 
+{% block background %}
+{% endblock %}
+{% set project = "binary" %}
 
 <!-- Search for all the Hack: below for hack-a-thon and mini-lab requirements -->
 <!-- need to adjust Templates to start -->
@@ -7,19 +11,21 @@
 <!-- Hack: Build form to drive bit size dynamic updates
            use HTML Input Form in Frontend, ie toward top of Page
            send initial value and updated values to form via Python render_template -->
-<!-- Hack: use 8 as default -->
-{#{% set BITS = 8 %}#}
+<!-- Hack: use 8 as default
+       Change to an input box-->
+
+{% set BITS = 16 %}
 {% set MAX = ((2 ** BITS) - 1) %}
 
 <!-- Hack: Set bulbs and pass as variables via Python render_template
            add new images (ie PNGs) to project -->
 <!-- use your PNGs as default -->
-{% set imgBulbOn = "/static/assets/bulb_on.gif" %}
+{% set imgBulbOn = "/static/assets/bulb_on.png" %}
 {% set imgBulbOff = "/static/assets/bulb_off.png" %}
 {% set msgTurnOn = "Turn On" %}
 {% set msgTurnOff = "Turn Off" %}
 
-{% block meta %}
+{% block body %}
     <title>Binary page</title>
     <script>
         const BITS = '{{ BITS }}'; let max = '{{ MAX }}'; let MAX = parseInt(max, 10);
@@ -44,6 +50,7 @@
              DOM assignment by converting decimal https://www.w3schools.com/jsref/jsref_fromcharcode.asp
              below ASCII for more ideas of where to make changes
              */
+            document.getElementById('ascii').innerHTML = parseInt(binary, 2).toString();
         }
 
         // algorithm to convert decimal to base using division and remainder
@@ -112,13 +119,11 @@
             }
         }
     </script>
-{% endblock %}
 
-{% block content %}
     <h1 class="text-center">Binary Math with Conversions</h1>
     <div class="container">
         <div class="row justify-content-md-center">
-
+            <!-- Table on page -->
             <div class="col-8">
                 <table class="table">
                     <tr id="table">
@@ -127,7 +132,7 @@
                         <th>Octal</th>
                         <th>Hexadecimal</th>
                         <th>Decimal</th>
-                        <th>ASCII</th>
+                        <th>Ascii</th>
                         <!-- Hack: display ASCII label for printable character(s)  -->
                         <th>Minus</th>
                     </tr>
@@ -137,8 +142,7 @@
                         <td id="octal">0</td>
                         <td id="hexadecimal">0</td>
                         <td id="decimal">0</td>
-                        <td id="ASCII">null</td>
-                        <td id="RGB">null</td>
+                        <td id="ascii">0</td>
                         <!-- Hack: display ASCII printable character(s)  -->
                         <td><button type="button" id="sub1" onclick="add(-1)">-1</button></td>
 
@@ -149,6 +153,7 @@
             <div class="col-12">
                 <table class="table">
                     <tr>
+                        <!-- for loop -->
                         {% for i in range(BITS) %}
                             <td><img class="img-responsive py-3" id="bulb{{i}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto">
                                 <button type="button" id="butt{{i}}" onclick="toggleBit('{{i}}')">{{ msgTurnOn }}</button>
@@ -157,7 +162,7 @@
                     </tr>
                     <tr>
                         {% for i in range(BITS) %}
-                            <td><input type='text' id='digit{{i}}' Value="0" size="1" readonly></td>
+                            <td><label for='digit{{i}}'></label><input type='text' id='digit{{i}}' Value="0" size="2" readonly></td>
                         {% endfor %}
                     </tr>
                 </table>
