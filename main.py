@@ -2,6 +2,8 @@
 from flask import Flask, render_template, request
 
 # create a Flask instance
+from algorithms.image import image_data
+
 app = Flask(__name__)
 
 
@@ -59,6 +61,11 @@ def aboutme():
 @app.route('/week3')
 def week3():
     return render_template("week3.html")
+
+@app.route('/rgb', methods=["GET", "POST"])
+def rgb():
+    return render_template("rgb.html", images=image_data())
+
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)
