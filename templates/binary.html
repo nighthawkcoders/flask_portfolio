@@ -29,13 +29,13 @@ add new images (ie PNGs) to project -->
 {% block body %}
     <title>Binary page</title>
     <script>
-        const BITS = '{{ BITS }}'; let max = '{{ MAX }}'; let MAX = parseInt(max, 10);
-        // return string with current value of each bit
-        function getBits() {
+            const BITS = '{{ BITS }}'; let max = '{{ MAX }}'; let MAX = parseInt(max, 10);
+            // return string with current value of each bit
+            function getBits() {
             let bits = "";
             for(let i = 0; i < BITS; i++) {
-                bits = bits + document.getElementById('digit' + i).value;
-            }
+            bits = bits + document.getElementById('digit' + i).value;
+        }
             return bits;
         }
         // setter for DOM values
@@ -123,9 +123,9 @@ add new images (ie PNGs) to project -->
 
     <h1 class="text-center">Binary Math with Conversions</h1>
     <form action="/binary" id="bits" method="POST" >
-        <label for="bits">Enter Bit Size</label>
+        <label for="bits">Enter Bit Number</label>
         <input name="bits">
-        <input type="submit" value="Go!">
+        <input type="submit" value="Submit!">
     </form>
 
     <div class="container">
