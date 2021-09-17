@@ -22,9 +22,14 @@ def kangaroos():
 def walruses():
     return render_template("walruses.html")
 
-@app.route('/binary/')
+@app.route('/binary', methods=['GET', 'POST'])
 def binary():
-    return render_template("binary.html")
+    if request.form:
+        bits = request.form.get("bits")
+        if len(bits) != 0:  # input field has content
+            return render_template("binary.html", bits=int(bits))
+        # starting and empty input default
+    return render_template("binary.html", bits=12)
 
 
 @app.route('/hawkers/')
