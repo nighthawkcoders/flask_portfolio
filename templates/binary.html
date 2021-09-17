@@ -8,8 +8,10 @@
            use HTML Input Form in Frontend, ie toward top of Page
            send initial value and updated values to form via Python render_template -->
 <!-- Hack: use 8 as default -->
-{% set BITS = 12 %}
+{% set BITS = bits %}
 {% set MAX = ((2 ** BITS) - 1) %}
+
+<!-- Hack: display ASCII printable character(s)  -->
 
 <!-- Hack: Set bulbs and pass as variables via Python render_template
            add new images (ie PNGs) to project -->
@@ -33,6 +35,8 @@
     }
     // setter for DOM values
     function setConversions(binary) {
+        const stringDec = parseInt(binary, 2).toString(10);
+        const dec = parseInt(stringDec);
         document.getElementById('binary').innerHTML = binary;
         // DOM assignment to Octal conversion
         document.getElementById('octal').innerHTML = parseInt(binary, 2).toString(8);
@@ -44,6 +48,7 @@
          DOM assignment by converting decimal https://www.w3schools.com/jsref/jsref_fromcharcode.asp
          below ASCII for more ideas of where to make changes
          */
+        document.getElementById('ascii').innerHTML = String.fromCharCode(dec);
     }
 
     // algorithm to convert decimal to base using division and remainder
@@ -159,7 +164,11 @@
                 </tr>
             </table>
         </div>
-
+        <form action="/binary" id="bits" method="POST" >
+            <label for="bits">Enter Bit Size</label>
+            <input name="bits">
+            <input type="submit" value="Go!">
+        </form>
     </div>
 </div>
 {% endblock %}
