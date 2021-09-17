@@ -82,9 +82,9 @@ def kashish():
     # starting and empty input default
     return render_template("kashish.html", name="World")
 
-@app.route('/concepts/')
-def concepts():
-    return render_template("concepts.html")
+@app.route('/insights/')
+def insights():
+    return render_template("insights.html")
 
 @app.route('/greet/')
 def greet():
