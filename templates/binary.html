@@ -51,7 +51,7 @@ add new images (ie PNGs) to project -->
             DOM assignment by converting decimal https://www.w3schools.com/jsref/jsref_fromcharcode.asp
             below ASCII for more ideas of where to make changes
             */
-            document.getElementById('ascii').innerHTML = parseInt(binary, 2).toString();
+            document.getElementById('ascii').innerHTML = String.fromCharCode(parseInt(binary, 2));
         }
 
         // algorithm to convert decimal to base using division and remainder
