@@ -4,8 +4,9 @@
 ## Table of Contents
 1. [Contributors](https://github.com/sonakshibhalla/flask_portfolio#contributors)
 2. [Pair Share Journals](https://github.com/sonakshibhalla/flask_portfolio#pair-share-journals)
-3. [Project Ideation](https://github.com/sonakshibhalla/flask_portfolio#project-ideation)
-4. [Sprint 1- Sep 2](https://github.com/sonakshibhalla/flask_portfolio#sprint-1--sep-2)
+3. [Sprint 3 Project Ideation](https://github.com/sonakshibhalla/flask_portfolio#sprint-3-project-ideation)
+4. [Sprint 2- Sep 10](https://github.com/sonakshibhalla/flask_portfolio#sprint-2--sep-10)
+5. [Sprint 1- Sep 2](https://github.com/sonakshibhalla/flask_portfolio#sprint-1--sep-2)
 
 ## Contributors
 | Name | GitHub Profile | Tasks | Scrum Board | Commits |
@@ -17,7 +18,19 @@
 ## Pair Share Journals
 ### [Saumya Journal](https://docs.google.com/document/d/1nkBoOvmQhoIScKwd0u3vV3TiDgj4mWT9NPqn355nj9U/edit)
 ### [Sonakshi and Kashish Journal](https://docs.google.com/document/d/1FW_b7zlKt8A3x_9Ah4Mo1ItCtjWvCrqs2BooDvLcs0w/edit)
-## Project Ideation
+## Sprint 3 Project Ideation
+### Design Progress
+#### Fixed the greet dropdown to add individual pictures
+#### also added favorite colors and hobbies
+#### continent pages are linked in the dropdown
+#### each page has its own scenic background picture
+### Binary and Technical Progress
+#### worked on Binary minilab and hack progress
+#### added binary form to input any size of bits
+#### green background color for binary page
+#### bulbs turn on and off with the corect pictures
+#### ascii printing works with all the other numbers
+## Sprint 2- Sep 10
 ### Travel Project Progress
 #### Created Home and About Pages using CSS Styling
 #### About page has pictures and names of each group member
@@ -32,7 +45,7 @@
 #### Work on Binary mini-lab to create the correct function with Jinja
 
 
-### Sprint 1- Sep 2
+### Sprint 1- Sep 10
 #### Beginning Ideas for Main Project 
 #### -Travel Project with Dropdown menu for different continents
 #### -We want to add special tourist attractions and countries to visit on each continent page
