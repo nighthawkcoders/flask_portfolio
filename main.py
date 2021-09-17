@@ -1,8 +1,15 @@
 # import "packages" from flask
 
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, url_for, redirect
+from flask_bootstrap import Bootstrap
+from flask_wtf import FlaskForm
+from wtforms import StringField, SubmitField
+from wtforms.validators import DataRequired
+from data import SONGS
+from modules import get_names, get_song, get_id
 
 # create a Flask instance
+
 app = Flask(__name__)
 
 #zonk was here
@@ -10,13 +17,50 @@ app = Flask(__name__)
 #hi
 # connects default URL to render index.html
 
+# Flask-WTF requires an enryption key - the string can be anything
+app.config['SECRET_KEY'] = 'C2HWGVoMGfNTBsrYQg8EcMrdTimkZfAb'
+
+# Flask-Bootstrap requires this line
+Bootstrap(app)
+
+# with Flask-WTF, each web form is represented by a class
+# "NameForm" can change; "(FlaskForm)" cannot
+# see the route for "/" and "index.html" to see how this is used
+class NameForm(FlaskForm):
+    name = StringField('Name your favorite songs', validators=[DataRequired()])
+    submit = SubmitField('Submit')
+
+
+# all Flask routes below
+
+@app.route('/game/easy', methods=['GET', 'POST'])
+def easy():
+    names = get_names(SONGS)
+    # you must tell the variable 'form' what you named the class, above
+    # 'form' is the variable name used in this template: index.html
+    form = NameForm()
+    message = ""
+    if form.validate_on_submit():
+        name = form.name.data
+        if name.lower() in names:
+            # empty the form field
+            form.name.data = ""
+            id = get_id(SONGS, name)
+            # redirect the browser to another route and template
+            return redirect( url_for('hard', id=id) )
+        else:
+            message = "That song is not in our database."
+    return render_template('game/easy.html', names=names, form=form, message=message)
+
+
+
 @app.route('/bria/')
 def bria():
     return render_template("bria.html")
 
-@app.route('/game/easy')
-def easy():
-    return render_template("game/easy.html")
+@app.route('/rgb/')
+def rgb():
+    return render_template("rgb.html")
 
 @app.route('/game/medium')
 def medium():
@@ -80,6 +124,8 @@ def greet():
             return render_template("stub.html", fname=fname)
         else:
             return render_template("stub.html", fname="World")
+
+
 
 
 
