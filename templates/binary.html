@@ -6,7 +6,7 @@
            use HTML Input Form in Frontend, ie toward top of Page
            send initial value and updated values to form via Python render_template -->
 <!-- Hack: use 8 as default -->
-{% set BITS = 8%}
+<!-- set BITS = 8 Bits are from form now-->
 {% set MAX = ((2 ** BITS) - 1) %}
 
 <!-- Hack: Set bulbs and pass as variables via Python render_template
@@ -19,6 +19,14 @@
 {% block body %}
 {% block meta %}
     <title>Binary page</title>
+    <style>
+    body{
+        color: antiquewhite;
+
+    }
+
+
+    </style>
     <script>
         const BITS = '{{ BITS }}'; let max = '{{ MAX }}'; let MAX = parseInt(max, 10);
         // return string with current value of each bit
@@ -38,13 +46,12 @@
             document.getElementById('hexadecimal').innerHTML = parseInt(binary, 2).toString(16);
             // DOM assignment to Decimal conversion
             document.getElementById('decimal').innerHTML = parseInt(binary, 2).toString(10);
-            String.fromCharCode(65)   // Returns "A"
 
             /* Hack: show ASCII printable character(s) for each 8 bits
-             DOM assignment by converting decimal https://www.w3schools.com/jsref/jsref_fromcharcode.asplook
+             DOM assignment by converting decimal https://www.w3schools.com/jsref/jsref_fromcharcode.asp
              below ASCII for more ideas of where to make changes
              */
-            document.getElementById('ascii').innerHTML = parseInt(binary, 2).toString(36);
+            document.getElementById('ascii').innerHTML = String.fromCharCode(parseInt(binary, 2));
 
         }
 
@@ -117,7 +124,18 @@
 {% endblock %}
 
 {% block content %}
-    <h1 class="text-center">Binary Math with Conversions</h1>
+    <h1 class="text-center">Binary Math with Conversions{{ BITS }}</h1>
+
+    <div class="col-12">
+        <form action="/binary/" id="binary" method="POST" >
+            <label for="bits">Enter Bits</label>
+            <input name="bits" id="bits">
+
+            <input type="submit" value="Set Bits">
+        </form>
+    </div>
+
+
     <div class="container">
         <div class="row justify-content-md-center">
 
