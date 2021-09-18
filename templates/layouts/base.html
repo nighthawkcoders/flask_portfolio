@@ -5,7 +5,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
  ... code reuse
 -->
 <!DOCTYPE HTML>
-<html lang="en">
+<div lang="en">
 
 {% set basename = "Guess the Song" %}
 {% set github = "https://github.com/nighthawkcoders" %}
@@ -28,6 +28,9 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             -moz-animation: fadein 2s; /* Firefox */
             -webkit-animation: fadein 2s; /* Safari and Chrome */
             -o-animation: fadein 2s; /* Opera */
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
             background-image: url("https://docs.google.com/drawings/d/e/2PACX-1vTO_J3FcXmm5G3sJBxKZXXmPYic7eUB0txINkuxq1u2aHUR6xJZooxjmDHOFkcbCBjdws6f1WU33F9H/pub?w=1440&h=1080");
             color: var(--white);
         }
@@ -116,6 +119,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             {% endblock %}
         </div>
 </div>
+</div>
 {% endblock %}
 
 </body>
@@ -135,6 +139,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             scaleMobile: 1.00
         })
     </script>
+    </div>
 {% endblock %}
 
 </html>

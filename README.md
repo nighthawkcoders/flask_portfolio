@@ -6,10 +6,10 @@
 <table id="readmeinformation">
 
 <tr>
-<>Tasks</th>
-<th>th>Contributors</th>
+<th>Tasks</th>
+<th>Contributors</th>
 <th>Github ID/ Profile</th>
-<thScrum Board</th>
+<th>Scrum Board</th>
 <th>Commits</th>
 <th>Pair Journal</th>
 </tr>
