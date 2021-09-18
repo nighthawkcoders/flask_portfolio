@@ -111,10 +111,6 @@ def stub():
 def video():
     return render_template("minilabs.html")
 
-@app.route('/binary/')
-def binary():
-    return render_template("binary.html")
-
 @app.route('/greet', methods=['GET', 'POST'])
 def greet():
     # submit button has been pushed
@@ -124,6 +120,16 @@ def greet():
             return render_template("stub.html", fname=fname)
         else:
             return render_template("stub.html", fname="World")
+
+@app.route('/binary/', methods=['GET', 'POST'])
+def binary():
+    # submit button has been pushed
+    if request.form:
+        bits = request.form.get("bits")
+        if len(bits) != 0:  # input field has content
+            return render_template("binary.html", BITS=int(bits))
+
+    return render_template("binary.html", BITS=8)
 
 
 
