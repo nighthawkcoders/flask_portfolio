@@ -89,6 +89,7 @@
 ##Ideation:
 This minilab is all about guessing songs. Samples of songs from different genres will be played to participants, requiring them to select from a list of songs, one of which contains the correct answer. Different difficulties can be selected with various complicating factors, such as the nicheness of the artist, minor distortions to the song, or only shorter snippets being played. Alternatively, the auditory experience could be entirely foregone, and participants would have to guess the song and/or complete lyrics after only being given the lyrics in writing.
 
+
 ***
 ## Sprint 2 Week 3 and 4
 ## [Link that goes through website](https://docs.google.com/presentation/d/1LFJSLYCWe11_j0c1RDEH2Byjp7TBz1Q-XW0rxA1S-C8/edit#slide=id.gebe2a06820_0_76) 
@@ -105,6 +106,15 @@ This minilab is all about guessing songs. Samples of songs from different genres
 [Binary: hackathon images added](https://github.com/B-G101/Team-BRS/commit/b311842e5c68a322ae91b7ef28528444866c531c) \
 [Binary: lightbulb](https://github.com/B-G101/Team-BRS/commit/e48f5eef973a0e7e709f719a63928f2200f34a11) \
 [Binary: ASCII Added](https://github.com/B-G101/Team-BRS/commit/617cc2ea42ab255ce7c4edfb6bb451f2923b5023) 
+# Week 4
+[Integrate more into about you page](https://github.com/B-G101/Team-BRS/commit/06c4bbcd81d37f8d848078d8c4f6f30dd44be963)
+[Added buttons and multiple choice option in game for genre](https://github.com/B-G101/Team-BRS/commit/7728ba81b70f4ee8116a935e35fd590e6c9b1fb5)
+[Game page have a button that when you click leads to another page](https://github.com/B-G101/Team-BRS/commit/435d416a1ab7bbc62b2671a2141a13dd70305ca1)
+[Adding in all links of songs that we want](https://github.com/B-G101/Team-BRS/blob/main/data.py)
+[Ensure that there is a design or research asset](https://github.com/B-G101/Team-BRS/tree/main/static/assets)
+[Gallery Strip](https://github.com/B-G101/Team-BRS/commit/7aa9f777045b59d3d4e3e5afcf330d032f08d564)
+[Make the database and the input/redirect featre for the game page](https://github.com/B-G101/Team-BRS/commit/3ff481f82cdc854dd50e2028097b8a9faade41ae)
+[Integrate the hackathon content](https://github.com/B-G101/Team-BRS/commit/34c93df0b2af3085522caca605fe0ac3f40ec9b8)
 
 ****
 ## Sprint 1 Week 1 and 2
