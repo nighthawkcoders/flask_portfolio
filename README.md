@@ -1,12 +1,6 @@
 # Team Name: N224-Coders
 ## [Scrum Board](https://github.com/sonakshibhalla/flask_portfolio/projects/1)
 ## [Commits by Contributor](https://github.com/sonakshibhalla/flask_portfolio/graphs/contributors)
-## Table of Contents
-1. [Contributors](https://github.com/sonakshibhalla/flask_portfolio#contributors)
-2. [Pair Share Journals](https://github.com/sonakshibhalla/flask_portfolio#pair-share-journals)
-3. [Sprint 3 Project Ideation](https://github.com/sonakshibhalla/flask_portfolio#sprint-3-project-ideation)
-4. [Sprint 2- Sep 10](https://github.com/sonakshibhalla/flask_portfolio#sprint-2--sep-10)
-5. [Sprint 1- Sep 2](https://github.com/sonakshibhalla/flask_portfolio#sprint-1--sep-2)
 
 ## Contributors
 | Name | GitHub Profile | Tasks | Scrum Board | Commits |
@@ -14,6 +8,13 @@
 | Sonakshi Bhalla | [@sonakshibhalla](https://github.com/sonakshibhalla) | [Tasks](https://github.com/sonakshibhalla/flask_portfolio/issues/assigned/sonakshibhalla) |[Scrum Board](https://github.com/sonakshibhalla/flask_portfolio/projects/1?card_filter_query=assignee%3Asonakshibhalla)| [Commits](https://github.com/sonakshibhalla/flask_portfolio/commits?author=sonakshibhalla)
 | Kashish Chopra | [@kashishchopraa](https://github.com/kashishchopraa) | [Tasks](https://github.com/sonakshibhalla/flask_portfolio/issues/assigned/kashishchopraa) | [Scrum Board](https://github.com/sonakshibhalla/flask_portfolio/projects/1?card_filter_query=assignee%3Akashishchopraa) | [Commits](https://github.com/sonakshibhalla/flask_portfolio/commits?author=kashishchopraa)
 | Saumya Palakodety| [@saumyapalk23](https://github.com/saumyapalk23) | [Tasks](https://github.com/sonakshibhalla/flask_portfolio/issues/assigned/saumyapalk23) |[Scrum Board](https://github.com/sonakshibhalla/flask_portfolio/projects/1?card_filter_query=assignee%3Asaumyapalk23) | [Commits](https://github.com/sonakshibhalla/flask_portfolio/commits?author=saumyapalk23)
+
+## Table of Contents
+1. [Contributors](https://github.com/sonakshibhalla/flask_portfolio#contributors)
+2. [Pair Share Journals](https://github.com/sonakshibhalla/flask_portfolio#pair-share-journals)
+3. [Sprint 3 Project Ideation](https://github.com/sonakshibhalla/flask_portfolio#sprint-3-project-ideation)
+4. [Sprint 2- Sep 10](https://github.com/sonakshibhalla/flask_portfolio#sprint-2--sep-10)
+5. [Sprint 1- Sep 2](https://github.com/sonakshibhalla/flask_portfolio#sprint-1--sep-2)
 
 ## Pair Share Journals
 ### [Saumya Journal](https://docs.google.com/document/d/1nkBoOvmQhoIScKwd0u3vV3TiDgj4mWT9NPqn355nj9U/edit)
