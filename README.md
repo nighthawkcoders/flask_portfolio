@@ -2,6 +2,11 @@
 ## [Scrum Board](https://github.com/sonakshibhalla/flask_portfolio/projects/1)
 ## [Commits by Contributor](https://github.com/sonakshibhalla/flask_portfolio/graphs/contributors)
 
+## Pair Share Journals
+### [Saumya Journal](https://docs.google.com/document/d/1nkBoOvmQhoIScKwd0u3vV3TiDgj4mWT9NPqn355nj9U/edit)
+### [Sonakshi and Kashish Journal](https://docs.google.com/document/d/1FW_b7zlKt8A3x_9Ah4Mo1ItCtjWvCrqs2BooDvLcs0w/edit)
+
+
 ## Contributors
 | Name | GitHub Profile | Tasks | Scrum Board | Commits |
 |:-----|:----------------------|:-----:|:-----------:|:-------:|
@@ -16,9 +21,6 @@
 4. [Sprint 2- Sep 10](https://github.com/sonakshibhalla/flask_portfolio#sprint-2--sep-10)
 5. [Sprint 1- Sep 2](https://github.com/sonakshibhalla/flask_portfolio#sprint-1--sep-2)
 
-## Pair Share Journals
-### [Saumya Journal](https://docs.google.com/document/d/1nkBoOvmQhoIScKwd0u3vV3TiDgj4mWT9NPqn355nj9U/edit)
-### [Sonakshi and Kashish Journal](https://docs.google.com/document/d/1FW_b7zlKt8A3x_9Ah4Mo1ItCtjWvCrqs2BooDvLcs0w/edit)
 ## Sprint 3 Project Ideation
 ### Design Progress
 #### Fixed the greet dropdown to add individual pictures
