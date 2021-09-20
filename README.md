@@ -15,11 +15,13 @@
 | Saumya Palakodety| [@saumyapalk23](https://github.com/saumyapalk23) | [Tasks](https://github.com/sonakshibhalla/flask_portfolio/issues/assigned/saumyapalk23) |[Scrum Board](https://github.com/sonakshibhalla/flask_portfolio/projects/1?card_filter_query=assignee%3Asaumyapalk23) | [Commits](https://github.com/sonakshibhalla/flask_portfolio/commits?author=saumyapalk23)
 
 ## Table of Contents
-1. [Contributors](https://github.com/sonakshibhalla/flask_portfolio#contributors)
-2. [Pair Share Journals](https://github.com/sonakshibhalla/flask_portfolio#pair-share-journals)
-3. [Sprint 3 Project Ideation](https://github.com/sonakshibhalla/flask_portfolio#sprint-3-project-ideation)
-4. [Sprint 2- Sep 10](https://github.com/sonakshibhalla/flask_portfolio#sprint-2--sep-10)
-5. [Sprint 1- Sep 2](https://github.com/sonakshibhalla/flask_portfolio#sprint-1--sep-2)
+- [Week 5]
+- [Week 4]
+- [Week 3]
+- [Week 2 Grading]
+- [Week 2]
+- [Ideation]
+
 
 ## Sprint 3 Project Ideation
 ### Design Progress
