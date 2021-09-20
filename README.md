@@ -18,7 +18,6 @@
 - [Week 5]
 - [Week 4]
 - [Week 3]
-- [Week 2 Grading]
 - [Week 2]
 - [Ideation]
 
