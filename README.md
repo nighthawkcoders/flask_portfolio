@@ -114,7 +114,16 @@ This minilab is all about guessing songs. Samples of songs from different genres
 [Ensure that there is a design or research asset](https://github.com/B-G101/Team-BRS/tree/main/static/assets) \
 [Gallery Strip](https://github.com/B-G101/Team-BRS/commit/7aa9f777045b59d3d4e3e5afcf330d032f08d564) \
 [Make the database and the input/redirect featre for the game page](https://github.com/B-G101/Team-BRS/commit/3ff481f82cdc854dd50e2028097b8a9faade41ae) \
-[Integrate the hackathon content](https://github.com/B-G101/Team-BRS/commit/34c93df0b2af3085522caca605fe0ac3f40ec9b8)
+[Integrate the hackathon content](https://github.com/B-G101/Team-BRS/commit/34c93df0b2af3085522caca605fe0ac3f40ec9b8) \
+[Binary: hackathon images added](https://github.com/B-G101/Team-BRS/commit/b311842e5c68a322ae91b7ef28528444866c531c) \
+[First hack task done](https://github.com/B-G101/Team-BRS/commit/34c93df0b2af3085522caca605fe0ac3f40ec9b8) \
+[100 songs](https://docs.google.com/document/d/1jkNGoIFWPeD5qYT43umnm6TXAB0oWiRpl4l-h-kLAuA/edit) \
+[Ensure there is a Design or Research asset](https://github.com/B-G101/Team-BRS/tree/main/static/assets) \
+[Animation - Test musical knowledge](https://github.com/B-G101/Team-BRS/commit/ca323b6bc6a063ab4357d331fc4df54c7d8e8a22) \
+[Val About me Page](https://github.com/B-G101/Team-BRS/commit/dfaee407e721c1d2a0e588752eb8c118c5b92da1) \
+[Bria About me Page](https://github.com/B-G101/Team-BRS/commit/06c4bbcd81d37f8d848078d8c4f6f30dd44be963) \
+[New Background Color Theme and Design](https://github.com/B-G101/Team-BRS/commit/a433aa17bfe523848599efae9307886bcc742bd1) \
+
 
 ****
 ## Sprint 1 Week 1 and 2
