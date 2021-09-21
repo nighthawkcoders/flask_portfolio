@@ -29,13 +29,13 @@ add new images (ie PNGs) to project -->
 {% block body %}
     <title>Binary page</title>
     <script>
-            const BITS = '{{ BITS }}'; let max = '{{ MAX }}'; let MAX = parseInt(max, 10);
-            // return string with current value of each bit
-            function getBits() {
+        const BITS = '{{ BITS }}'; let max = '{{ MAX }}'; let MAX = parseInt(max, 10);
+        // return string with current value of each bit
+        function getBits() {
             let bits = "";
             for(let i = 0; i < BITS; i++) {
-            bits = bits + document.getElementById('digit' + i).value;
-        }
+                bits = bits + document.getElementById('digit' + i).value;
+            }
             return bits;
         }
         // setter for DOM values
@@ -51,7 +51,7 @@ add new images (ie PNGs) to project -->
             DOM assignment by converting decimal https://www.w3schools.com/jsref/jsref_fromcharcode.asp
             below ASCII for more ideas of where to make changes
             */
-            document.getElementById('ascii').innerHTML = parseInt(binary, 2).toString();
+            document.getElementById('ascii').innerHTML = String.fromCharCode(parseInt(binary, 2));
         }
 
         // algorithm to convert decimal to base using division and remainder
@@ -181,7 +181,7 @@ add new images (ie PNGs) to project -->
     <head>
         <style>
             body {
-                background-color: yellowgreen;
+                background-color: cornflowerblue;
             }
         </style>
     </head>
