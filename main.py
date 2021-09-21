@@ -95,6 +95,10 @@ def insights():
 def greet():
     return render_template("greet.html")
 
+@app.route('/rgb/')
+def rgb():
+    return render_template("rgb.html")
+
 
 # runs the application on the development server
 if __name__ == "__main__":
