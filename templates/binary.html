@@ -12,8 +12,7 @@
 <!-- Hack: Set bulbs and pass as variables via Python render_template
            add new images (ie PNGs) to project -->
 <!-- use your PNGs as default -->
-{% set imgBulbOn = "/static/assets/goodgoose.jpeg" %}
-{% set imgBulbOff = "/static/assets/goose.jpeg" %}
+
 {% set msgTurnOn = "Turn On" %}
 {% set msgTurnOff = "Turn Off" %}
 {% block body %}
@@ -52,6 +51,7 @@
              below ASCII for more ideas of where to make changes
              */
             document.getElementById('ascii').innerHTML = String.fromCharCode(parseInt(binary, 2));
+            document.getElementById('RGB')
 
         }
 
@@ -124,16 +124,18 @@
 {% endblock %}
 
 {% block content %}
-    <h1 class="text-center">Binary Math with Conversions{{ BITS }}</h1>
+    <h1 class="text-center">Binary Math with Conversions</h1>
 
     <div class="col-12">
         <form action="/binary/" id="binary" method="POST" >
             <label for="bits">Enter Bits</label>
             <input name="bits" id="bits">
-
-            <input type="submit" value="Set Bits">
+            <input type="submit" value="Set Bits"><br>
+            <label for="pic">Music Notes</label>
+            <input type="radio" id="pic" name="pic" value="Music Notes">
         </form>
     </div>
+
 
 
     <div class="container">

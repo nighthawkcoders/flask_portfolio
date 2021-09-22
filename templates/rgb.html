@@ -1,5 +1,5 @@
+{% extends "layouts/base.html" %}
 
-{% block meta %}
     <script>
         // Hack: add java script function to toggle image from original to gray and back (toggle)
         //  document.getElementById("img<n>").src
@@ -7,10 +7,8 @@
         //  help: https://www.geeksforgeeks.org/how-to-change-the-src-attribute-of-an-img-element-in-javascript-jquery/
     </script>
     <title>RGB starter</title>
-{% endblock %}
+{% block body %}
 
-{% block content %}
-    <body>
     <h1 class="text-center">RGB values within an Image</h1>
     <div class="container">
         <div class="row justify-content-md-center">
@@ -54,7 +52,7 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    {% for row in image.data[:256+1] %}
+                                    {% for row in image.data[:256:+1] %}
                                         <tr>
                                             <td>{{loop.index}}</td>
                                             <td>{{row}}</td>
@@ -76,5 +74,6 @@
 
         </div>
     </div>
-    </body>
+
+{% block background %}
 {% endblock %}

@@ -1,37 +1,10 @@
-# import "packages" from flask
-
 from flask import Flask, render_template, request, url_for, redirect
-from flask_bootstrap import Bootstrap
-from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField
-from wtforms.validators import DataRequired
-from data import SONGS
-from modules import get_names, get_song, get_id
+import base64
+from image import image_data
 
-# create a Flask instance
-
-app = Flask(__name__)
-
-#zonk was here
-#bria was here lol xd
-#hi
-# connects default URL to render index.html
-
-# Flask-WTF requires an enryption key - the string can be anything
-app.config['SECRET_KEY'] = 'C2HWGVoMGfNTBsrYQg8EcMrdTimkZfAb'
-
-# Flask-Bootstrap requires this line
-Bootstrap(app)
-
-# with Flask-WTF, each web form is represented by a class
-# "NameForm" can change; "(FlaskForm)" cannot
-# see the route for "/" and "index.html" to see how this is used
-class NameForm(FlaskForm):
-    name = StringField('Name your favorite songs', validators=[DataRequired()])
-    submit = SubmitField('Submit')
-
-
-# all Flask routes below
+@app.route('/rgb/')
+def rgb():
+    return render_template("walruses.html", image=image_data())
 
 @app.route('/game/easy', methods=['GET', 'POST'])
 def easy():
@@ -52,15 +25,9 @@ def easy():
             message = "That song is not in our database."
     return render_template('game/easy.html', names=names, form=form, message=message)
 
-
-
 @app.route('/bria/')
 def bria():
     return render_template("bria.html")
-
-@app.route('/rgb/')
-def rgb():
-    return render_template("rgb.html")
 
 @app.route('/game/medium')
 def medium():
@@ -93,11 +60,6 @@ def aboutus():
     return render_template("aboutus.html")
 
 
-@app.route('/walruses/')
-def walruses():
-    return render_template("walruses.html")
-
-
 @app.route('/game/')
 def game():
     return render_template("game.html")
@@ -126,14 +88,16 @@ def binary():
     # submit button has been pushed
     if request.form:
         bits = request.form.get("bits")
-        if len(bits) != 0:  # input field has content
-            return render_template("binary.html", BITS=int(bits))
-
-    return render_template("binary.html", BITS=8)
-
-
-
-
+        pic = request.form.get("pic")
+        if pic == True:
+            print("hi")
+        if len(bits) != 0 and pic == True:  # input field has content
+            return render_template("binary.html", BITS=int(bits), imgBulbOn="/static/assets/harryalbum.jpg", imgBulbOff="static/assets/paris.jpg")
+        elif len(bits) != 0 and pic == False:
+            return render_template("binary.html", BITS=int(bits), imgBulbOn="/static/assets/goodgoose.jpeg", imgBulbOff="/static/assets/goose.jpeg")
+        elif pic == True:
+            return render_template("binary.html", BITS=8, imgBulbOn="/static/assets/harryalbum.jpg", imgBulbOff="static/assets/paris.jpg")
+    return render_template("binary.html", BITS=8, imgBulbOn="/static/assets/goodgoose.jpeg", imgBulbOff="/static/assets/goose.jpeg")
 
 
 # runs the application on the development server

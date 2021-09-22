@@ -18,11 +18,11 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
         <div class="navbar-nav">
             <!-- url_for is a Jinja2 pre-processor that finds route from function name (def) -->
             <a class="nav-link" href={{ url_for('index') }}>Home</a>
-            <a class="nav-link" href={{ url_for('walruses') }}>Walruses</a>
             <a class="nav-link" href={{ url_for('game') }}>Game</a>
             <!-- stub is shown using the name of the route -->
             <a class="nav-link" href="/stub">Stub</a>
             <a class="nav-link" href="/binary">Binary</a>
+            <a class="nav-link" href="/rgb">RGB</a>
             <a class="nav-link" href="/minilabs">Minilabs!</a>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href={{ url_for('aboutus') }} data-bs-toggle="dropdown" aria-expanded="false" id="dropdownMenuButton1" type="button">
