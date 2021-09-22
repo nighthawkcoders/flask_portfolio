@@ -25,8 +25,17 @@
 {% block meta %}
 <title>Binary page</title>
 <script>
-    const BITS = '{{ BITS }}'; let max = '{{ MAX }}'; let MAX = parseInt(max, 10);
-    // return string with current value of each bit
+    /* Below are JavaScript functions or Code Blocks */
+
+    // Global variables for Javascript sequence of code in <script> tags
+    const BITS = '{{ BITS }}'; // number of BITS (or Bulbs) displayed on screen
+    let max = '{{ MAX }}'; let MAX = parseInt(max, 10);  // MAX integer value of bits
+
+    /* This function reads digit<n> variables and creates a string of bits
+        parameter: <none>
+        returns: <string>, the current value of each bit (ie "1010001")
+     */
+    // get the binary string using values of bits
     function getBits() {
         let bits = "";
         for(let i = 0; i < BITS; i++) {
@@ -34,10 +43,13 @@
         }
         return bits;
     }
-    // setter for DOM values
+
+    /* This function sets or resets (setter function) the DOM values (conversions) from binary string.
+         parameter: <binary>, the current value of each bit (ie "1010001")
+         returns: <none>
+    */
+    // set the values of each conversion to match value of bits
     function setConversions(binary) {
-        const stringDec = parseInt(binary, 2).toString(10);
-        const dec = parseInt(stringDec);
         document.getElementById('binary').innerHTML = binary;
         // DOM assignment to Octal conversion
         document.getElementById('octal').innerHTML = parseInt(binary, 2).toString(8);
@@ -49,9 +61,13 @@
          DOM assignment by converting decimal https://www.w3schools.com/jsref/jsref_fromcharcode.asp
          below ASCII for more ideas of where to make changes
          */
-        document.getElementById('ascii').innerHTML = String.fromCharCode(dec);
     }
 
+    /* This function converts decimal number to selected base using decimal, base, quotient, remainder.
+         parameter: <decimal>, a whole number
+         parameter: <base>, 2 or 8 would work for binary or octal, it would need conversion table for base16 or base64
+         returns: <string>, a string representation of converted number
+     */
     // algorithm to convert decimal to base using division and remainder
     function decimal_2_base(decimal, base) {
         let conversion = "";
@@ -70,6 +86,10 @@
         return conversion;
     }
 
+    /* This function simulates the turning on and turning off of the Bulb
+         parameter: <i>, the DOM id of the specific Bulb as well as its related information
+         returns: <none>
+     */
     // toggle selected bit and recalculate
     function toggleBit(i) {
         //alert("Digit action: " + i );
@@ -90,6 +110,11 @@
         const binary = getBits();
         setConversions(binary);
     }
+
+    /* This function takes visual representation of screen bulbs and performs addition
+        parameter: <i>, the value to be added (+1 or -1 is implemented on screen)
+        returns: <none>
+    */
     // add is positive integer, subtract is negative integer
     function add(n) {
         let binary = getBits();
@@ -100,7 +125,7 @@
         } else  {     // MINUS
             decimal = 0 === decimal ? MAX : decimal += n; // OVERFLOW or MINUS
         }
-        // convert the result back to binary
+        // convert the result back to binary, using custom function
         binary = decimal_2_base(decimal, 2);
         // update conversions
         setConversions(binary);
@@ -133,7 +158,7 @@
                     <th>Octal</th>
                     <th>Hexadecimal</th>
                     <th>Decimal</th>
-                    <!-- Hack: display ASCII labels for printable character(s)  -->
+                    <!-- Hack: display ASCII label for printable character(s)  -->
                     <th>Minus</th>
                 </tr>
                 <tr>
