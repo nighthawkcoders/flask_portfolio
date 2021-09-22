@@ -1,6 +1,6 @@
 # import "packages" from flask
 from flask import Flask, render_template, request
-from algorithms.image import sonakshi_image_data
+from algorithms.image import sonakshi_image_data, kashish_image_data
 
 
 # create a Flask instance
@@ -93,6 +93,11 @@ def kashish():
 def sonakshirgb():
     junk = sonakshi_image_data()
     return render_template("sonakshirgb.html", images=junk )
+
+@app.route('/kashishrgb/', methods=['GET', 'POST'])
+def kashishrgb():
+    junk = kashish_image_data()
+    return render_template("kashishrgb.html", images=junk )
 
 @app.route('/insights/')
 def insights():
