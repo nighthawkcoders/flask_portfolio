@@ -1,7 +1,11 @@
 <!DOCTYPE html>
-{% extends "layout.html" %}
+{% extends "layouts/base.html" %}
 
-{% block meta %}
+{% block background %}
+{% endblock %}
+
+
+{% block body %}
     <script>
         // Hack: add java script function to toggle image from original to gray and back (toggle)
         //  document.getElementById("img<n>").src
@@ -9,10 +13,8 @@
         //  help: https://www.geeksforgeeks.org/how-to-change-the-src-attribute-of-an-img-element-in-javascript-jquery/
     </script>
     <title>RGB starter</title>
-{% endblock %}
 
-{% block content %}
-    <h1 class="text-center">RGB values within an Image</h1>
+    <h1 class="text-center"> Sonakshi's RGB values </h1>
     <div class="container">
         <div class="row justify-content-md-center">
             <table class="table">
@@ -77,4 +79,5 @@
 
         </div>
     </div>
+
 {% endblock %}

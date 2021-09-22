@@ -1,5 +1,7 @@
 # import "packages" from flask
 from flask import Flask, render_template, request
+from algorithms.image import sonakshi_image_data
+
 
 # create a Flask instance
 app = Flask(__name__)
@@ -9,6 +11,11 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     return render_template("home.html")
+
+@app.route('/rgb/')
+def rgb():
+    return render_template('sonakshirgb.html')
+
 
 
 # connects /kangaroos path to render home.html
@@ -86,6 +93,11 @@ def kashish():
             return render_template("kashish.html", name=name)
     # starting and empty input default
     return render_template("kashish.html", name="World")
+
+@app.route('/sonakshirgb/', methods=['GET', 'POST'])
+def sonakshirgb():
+    junk = sonakshi_image_data()
+    return render_template("sonakshirgb.html", images=junk )
 
 @app.route('/insights/')
 def insights():
