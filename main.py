@@ -1,6 +1,7 @@
 # import "packages" from flask
 from flask import Flask, render_template, request
-from algorithms.image import sonakshi_image_data, kashish_image_data
+from algorithms.image import sonakshi_image_data
+from algorithms.image import kashish_image_data
 
 
 # create a Flask instance
