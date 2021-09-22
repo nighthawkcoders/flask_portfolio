@@ -12,11 +12,6 @@ app = Flask(__name__)
 def home():
     return render_template("home.html")
 
-@app.route('/rgb/')
-def rgb():
-    return render_template('sonakshirgb.html')
-
-
 
 # connects /kangaroos path to render home.html
 @app.route('/asia/')
