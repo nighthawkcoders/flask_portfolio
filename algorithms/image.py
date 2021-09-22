@@ -65,10 +65,10 @@ def sonakshi_image_data(path="static/assets/sonakshiimages/", img_list=None):
 def kashish_image_data(path="static/assets/kashishimages/", img_list=None):
     if img_list is None:  # color_dict is defined with defaults
         img_list = [
-            {'source': "Apples", 'label': "Red", 'file': "red.png"},
-            {'source': "Blue", 'label': "Blue", 'file': "blue.png"},
-            {'source': "Green", 'label': "Green", 'file': "green.png"},
-            {'source': "Orange", 'label': "Orange", 'file': "orange.png"},
+            {'source': "Apples", 'label': "Apples", 'file': "apples.png"},
+            {'source': "Bananas", 'label': "Bananas", 'file': "bananas.png"},
+            {'source': "Oranges", 'label': "Oranges", 'file': "oranges.png"},
+            {'source': "Strawberries", 'label': "Strawberries", 'file': "strawberries.png"},
         ]
     # gather analysis data and meta data for each image, adding attributes to each row in table
     for img_dict in img_list:
