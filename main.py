@@ -22,7 +22,7 @@ def kangaroos():
 def walruses():
     return render_template("walruses.html")
 
-@app.route('/binary', methods=['GET', 'POST'])
+@app.route('/binary/', methods=['GET', 'POST'])
 def binary():
     if request.form:
         bits = request.form.get("bits")
