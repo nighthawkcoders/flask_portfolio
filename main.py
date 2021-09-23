@@ -99,6 +99,8 @@ def kashishrgb():
     junk = kashish_image_data()
     return render_template("kashishrgb.html", images=junk )
 
+
+
 @app.route('/insights/')
 def insights():
     return render_template("insights.html")
@@ -107,9 +109,7 @@ def insights():
 def greet():
     return render_template("greet.html")
 
-@app.route('/rgb/')
-def rgb():
-    return render_template("rgb.html")
+
 
 
 # runs the application on the development server

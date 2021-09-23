@@ -106,3 +106,5 @@ def kashish_image_data(path="static/assets/kashishimages/", img_list=None):
         img_reference.putdata(img_dict['gray_data'])
         img_dict['base64_GRAY'] = image_formatter(img_reference, img_dict['format'])
     return img_list  # list is returned with all the attributes for each image dictionary
+
+
