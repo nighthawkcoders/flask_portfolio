@@ -9,4 +9,4 @@ starter_bp = Blueprint('starter', __name__,
 
 @starter_bp.route('/rgb/')
 def rgb():
-    return render_template('walruses.html', images=image_data())
+    return render_template('rgb.html', images=image_data())

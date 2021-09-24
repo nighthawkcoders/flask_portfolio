@@ -1,10 +1,18 @@
 from flask import Flask, render_template, request, url_for, redirect
-import base64
 from image import image_data
+from pathlib import Path
+
+app = Flask(__name__)
 
 @app.route('/rgb/')
 def rgb():
-    return render_template("walruses.html", image=image_data())
+    return render_template('rgb.html', images=image_data(Path(app.root_path)))
+
+
+
+
+
+
 
 @app.route('/game/easy', methods=['GET', 'POST'])
 def easy():
