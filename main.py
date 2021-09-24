@@ -71,7 +71,7 @@ def week3():
 def rgb():
     return render_template("rgb.html", images=image_data())
 
-@app.route('/list', methods=["GET", "POST"])
+@app.route('/list')
 def list():
     return render_template("list.html")
 

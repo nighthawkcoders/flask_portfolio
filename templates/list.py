@@ -31,7 +31,7 @@ averageList = [23, 41, 90, 55, 71, 83]
 from functools import reduce
 
 def Average(lst):
-    return reduce(lambda a, b: a + b, lst) / len(lst)
+    return sum(lst) / len(lst)
 
 # Driver Code
 lst = [23, 41, 90, 55, 71, 83]
@@ -40,3 +40,5 @@ average = Average(lst)
 # Printing average of the list
 print("Average of the list =", round(average, 2))
 
+if __name__ == "__main__":
+    app.run(debug=True)
