@@ -80,11 +80,12 @@ https://www.youtube.com/watch?v=g5CSwQPwKAw&ab_channel=NatashaKapoor
 | At close of Sprint and each week update README with links to issues completed, it is HIGHLY suggested to use table to display Issues with highlighting descriptions.  Time box the week or sprint in README as a section declaring Sprint and dates as section Header. | Done |
 
 ### Screenshots
-![image](https://user-images.githubusercontent.com/70492417/133113453-693df054-91c7-42c0-a2e3-6a095fd17d25.png)
-![image](https://user-images.githubusercontent.com/45546576/133113755-66e952cf-a6c3-451a-bd72-674349675364.png)
-![image](https://user-images.githubusercontent.com/45546576/133114173-a59a8d4a-5fb7-43ec-8da8-c0a1e1a17c30.png)
-![image](https://user-images.githubusercontent.com/70492417/133113613-9c435b88-ce3a-4b83-8394-e2dc29485e47.png)
-![image](https://user-images.githubusercontent.com/45546576/133298255-2c3cb7ce-58f0-4fb3-997e-cd76281c3d6c.png)
+![im1](https://user-images.githubusercontent.com/89223433/135338042-f2831921-3c1a-4935-bbb3-f6545a2702e2.JPG)
+![im2](https://user-images.githubusercontent.com/89223433/135338067-9b83d580-c048-4172-8a65-31edd23b4599.JPG)
+![im3](https://user-images.githubusercontent.com/89223433/135338082-57981702-b7c6-4093-aa55-0cec04f51b26.JPG)
+![im4](https://user-images.githubusercontent.com/89223433/135338094-d630b80e-cda0-42e5-875c-e13a1dae4b8c.JPG)
+![im5](https://user-images.githubusercontent.com/89223433/135338108-2b11ed42-d749-4819-a042-9c58c3e8192c.JPG)
+![im5](https://user-images.githubusercontent.com/89223433/135337973-c7ab2747-e9ad-4536-8497-4e6d5adebe9a.JPG)
 
 
 ### Individual Journals
