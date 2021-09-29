@@ -16,11 +16,15 @@
 
 
 ## Table of Contents
+  - [Week 6](https://github.com/sonakshibhalla/flask_portfolio#week-6)
   - [Week 5](https://github.com/sonakshibhalla/flask_portfolio#week-5)
   - [Week 4](https://github.com/sonakshibhalla/flask_portfolio#week-4)
   - [Week 3](https://github.com/sonakshibhalla/flask_portfolio#week-3)
   - [Week 2](https://github.com/sonakshibhalla/flask_portfolio#week-2)
   - [Ideation](https://github.com/sonakshibhalla/flask_portfolio#ideation)
+
+## Week 6
+
 
 ## Week 5
 
