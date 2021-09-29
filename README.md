@@ -89,9 +89,58 @@
 ##Ideation:
 This minilab is all about guessing songs. Samples of songs from different genres will be played to participants, requiring them to select from a list of songs, one of which contains the correct answer. Different difficulties can be selected with various complicating factors, such as the nicheness of the artist, minor distortions to the song, or only shorter snippets being played. Alternatively, the auditory experience could be entirely foregone, and participants would have to guess the song and/or complete lyrics after only being given the lyrics in writing.
 
-
+HEY BRIA!! make sure to do table with jobs (for that specific week, people and commits - we need to do all weeks so maybe you can do the first three weeks, and then i can do the last three)
 ***
-## Sprint 2 Week 3 and 4
+
+## Sprint 3 Week 5 and 6
+<table id="sprint3">
+<tr>
+<tr>Week 5 and 6</tr>
+<th>Job</th>
+<th>Person Assigned</th>
+<th>Commits</th>
+</tr>
+
+<tr>
+<td>Scrum Master</td>
+<td>Riya</td>
+<td>
+<a href="https://github.com/B-G101/Team-BRS/projects/1" target="_blank">Link to Scrumboard with Issues</a><br>
+
+</td>
+</tr>
+
+<tr>
+<td>Pair Journal activities + greyscale, manipulating images</td>
+<td>Bria and Riya</td>
+<td>
+<a href="https://github.com/B-G101/Team-BRS/issues/71" target="_blank">Pair journal for this week with TPT activities</a><br>
+<a href="" target="_blank"></a><br>
+</td>
+</tr>
+
+<tr>
+<td>Pair Journal activities + New documentation, + Backend </td>
+<td>Sreeja and Val</td>
+<td><a href="https://github.com/B-G101/Team-BRS/issues/75" target="_blank">Pair journal for this week with TPT activities</a><br>
+<a href="" target="_blank"></a><br>
+</td>
+</tr>
+
+<tr>
+<td>Base RGB working and BAse 64 research</td>
+<td>Bria, Sreeja</td>
+<td>
+<a href="https://github.com/B-G101/Team-BRS/issues/73" target="_blank">RGB working!</a><br>
+<a href="https://github.com/B-G101/Team-BRS/issues/74" target="_blank">Base 64 Research</a><br>
+<a href="" target="_blank"></a><br>
+<a href="" target="_blank"></a><br>
+</td>
+</tr>
+</table>
+
+
+## Sprint 2 Week 3 and 4`
 <table id="sprint2wk3">
 <tr>
 <tr>Week 3: Prototype Layout</tr>
@@ -108,15 +157,21 @@ This minilab is all about guessing songs. Samples of songs from different genres
 <a href="https://github.com/B-G101/Team-BRS/commit/3d65b9d9d9654cc0f1b85f0fd002107023e24457" target="_blank">Added menu</a><br>
 <a href="https://github.com/B-G101/Team-BRS/commit/8c429998b85a81f483aadba3b6c2978e9f821ae1" target="_blank">added instructions on block strip in game and removed background</a><br>
 <a href="https://github.com/B-G101/Team-BRS/commit/83fab3c8ad073dda70d4277c51c4823f5852320c" target="_blank">added spookgoose and JS functionality when images are clicked</a><br>
+<a href="https://github.com/B-G101/Team-BRS/issues/44" target="_blank">new background design!</a><br>
+<a href="https://github.com/B-G101/Team-BRS/issues/48" target="_blank">gallery strip</a><br>
+<a href="https://github.com/B-G101/Team-BRS/issues/36" target="_blank">song bank and redirect feature!</a><br>
+
 </td>
 </tr>
 
 <tr>
 <td>Team Designer/Coder Pair</td>
-<td>Bria and Sreeja</td>
+<td>Val and Sreeja</td>
 <td><a href="https://github.com/B-G101/Team-BRS/commit/763ed355202175d54397dc8438d74da5fe51909c" target="_blank">Embeded content on the mini labs page and added table</a> <br>
 <a href="https://github.com/B-G101/Team-BRS/commit/dfc64dcd35fab8eeafb6b3134de336d82dbca80f" target="_blank">Embeds of the brainwrite, etc</a><br>
 <a href="https://github.com/B-G101/Team-BRS/commit/0a89cdca6e8bc2fb221cd1425c865ac2ed796b70" target="_blank">Edded the navigation bar to the minilabs.html tab</a><br>
+<a href="https://docs.google.com/document/d/1jkNGoIFWPeD5qYT43umnm6TXAB0oWiRpl4l-h-kLAuA/edit" target="_blank">100 songs list</a><br>
+
 </td>
 </tr>
 
@@ -132,23 +187,6 @@ This minilab is all about guessing songs. Samples of songs from different genres
 
 
 
-# Week 4
-[Integrate more into about you page](https://github.com/B-G101/Team-BRS/commit/06c4bbcd81d37f8d848078d8c4f6f30dd44be963) \
-[Added buttons and multiple choice option in game for genre](https://github.com/B-G101/Team-BRS/commit/7728ba81b70f4ee8116a935e35fd590e6c9b1fb5) \
-[Game page have a button that when you click leads to another page](https://github.com/B-G101/Team-BRS/commit/435d416a1ab7bbc62b2671a2141a13dd70305ca1) \
-[Adding in all links of songs that we want](https://github.com/B-G101/Team-BRS/blob/main/data.py) \
-[Ensure that there is a design or research asset](https://github.com/B-G101/Team-BRS/tree/main/static/assets) \
-[Gallery Strip](https://github.com/B-G101/Team-BRS/commit/7aa9f777045b59d3d4e3e5afcf330d032f08d564) \
-[Make the database and the input/redirect featre for the game page](https://github.com/B-G101/Team-BRS/commit/3ff481f82cdc854dd50e2028097b8a9faade41ae) \
-[Integrate the hackathon content](https://github.com/B-G101/Team-BRS/commit/34c93df0b2af3085522caca605fe0ac3f40ec9b8) \
-[Binary: hackathon images added](https://github.com/B-G101/Team-BRS/commit/b311842e5c68a322ae91b7ef28528444866c531c) \
-[First hack task done](https://github.com/B-G101/Team-BRS/commit/34c93df0b2af3085522caca605fe0ac3f40ec9b8) \
-[100 songs](https://docs.google.com/document/d/1jkNGoIFWPeD5qYT43umnm6TXAB0oWiRpl4l-h-kLAuA/edit) \
-[Ensure there is a Design or Research asset](https://github.com/B-G101/Team-BRS/tree/main/static/assets) \
-[Animation - Test musical knowledge](https://github.com/B-G101/Team-BRS/commit/ca323b6bc6a063ab4357d331fc4df54c7d8e8a22) \
-[Val About me Page](https://github.com/B-G101/Team-BRS/commit/dfaee407e721c1d2a0e588752eb8c118c5b92da1) \
-[Bria About me Page](https://github.com/B-G101/Team-BRS/commit/06c4bbcd81d37f8d848078d8c4f6f30dd44be963) \
-[New Background Color Theme and Design](https://github.com/B-G101/Team-BRS/commit/a433aa17bfe523848599efae9307886bcc742bd1) \
 
 ****
 ## Sprint 1 Week 1 and 2
