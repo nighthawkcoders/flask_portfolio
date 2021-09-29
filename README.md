@@ -45,13 +45,15 @@
 | Name | Requirment | Evidence | Grade |
 | --- | ---        | ---      | --- |
 | Saumya | Individual Technicals 2 point.  Code commits is required on something Technical. | [Ticket](hhttps://github.com/sonakshibhalla/flask_portfolio/projects/1#card-68302060) | 2/2 |
+
 | Sonakshi | Individual Technicals 2 point.  Code commits is required on something Technical. | [Ticket 1](https://github.com/sonakshibhalla/flask_portfolio/projects/1#card-67978503) and [Ticket 2](https://github.com/4disease/p1-donuts-new/projects/1#card-67978551) | 2/2 |
+
 |Kashish| Individual Technicals 2 point.  Code commits is required on something Technical. | [Ticket 1](https://github.com/sonakshibhalla/flask_portfolio/projects/1#card-68848759) and 
 
 
-| Saumya| Unit 4 and Journal is 5 points | [Individual Journals](https://docs.google.com/document/d/1nkBoOvmQhoIScKwd0u3vV3TiDgj4mWT9NPqn355nj9U/edit) | 5/5 |
-| Sonakshi | Unit 4 and Journal is 5 points | [Individual Journals](https://docs.google.com/document/d/1wRA3qRjr_MDbaYMJFIlbq7eTj1BEPuTDbeCiuxLi2k0/edit?usp=sharing) & [TT & TPT
-| Kashish| Unit 4 and Journal is 5 points | [Individual Journals](https://docs.google.com/document/d/1-Gur5UpvxVWESS-d0etmxSg4tIgoR0kHVmdZlPL_LWw/edit?usp=sharing) | 5/5 |
+| Saumya| [Individual Journals](https://docs.google.com/document/d/1nkBoOvmQhoIScKwd0u3vV3TiDgj4mWT9NPqn355nj9U/edit?usp=sharing) | 5/5 |
+| Sonakshi| [Individual Journals](link) & [TT & TPT
+| Kashish| Unit 4 and Journal is 5 points | [Individual Journals](link) | 5/5 |
 | Notes |(https://docs.google.com/document/d/1QwZR7rZCKQ_408GuY0SUCDS9y_yJ-nyMV44ZrVq_2t0/edit?usp=sharing)| 5/5 |
 | Kashish | Unit 4 and Journal is 5 points | [Individual Journals](https://docs.google.com/document/d/1nrmzM9ZZKpLgSpoci978MJ_qGaV5M3oZDaYvcKt0O_U/edit?usp=sharing) and [TT & TPT Notes](https://docs.google.com/document/d/16K6aheHJTJdytH5vH_9Q-GDjV7uvpKgQ-4cHytyWjlo/edit#bookmark=id.nqmd8yrm8gds) | 5/5 |
 | Saumya | Unit 4 and Journal is 5 points | [Individual Journals](https://docs.google.com/document/d/1W86g0bk3poXqshe1gM5snJrwr-bu23_7WzizjFT6P58/edit?usp=sharing) and [TT & TPT Notes](https://docs.google.com/document/d/16K6aheHJTJdytH5vH_9Q-GDjV7uvpKgQ-4cHytyWjlo/edit#bookmark=id.nqmd8yrm8gds) | 5/5 |
