@@ -8,10 +8,8 @@ Scrum Board: https://github.com/Reinhardtlotter/flask_portfolio/projects/1
 
 | Name             | Journal                                                                                                      |
 | ---------------- | ------------------------------------------------------------------------------------------------------------ |
-| Nathan Manangan  | [Journal](https://docs.google.com/document/d/1idJAvADCA999Sjsmv-bFHnBBsa4b5_uENYpmctUlBRE/edit?usp=sharing) |
-| Reinhardt Lotter | [Journal](https://docs.google.com/document/d/1RswJedH_RbVV_5PU1sm5s7TqzYHJ_yWxu3bevAXvGP4/edit?usp=sharing) |
-| Derrick Huang    | [Journal](https://docs.google.com/document/d/1idJAvADCA999Sjsmv-bFHnBBsa4b5_uENYpmctUlBRE/edit?usp=sharing) |
-| Brian Zhang      | [Journal](https://docs.google.com/document/d/1KV3UE5QOkHorjQMKIpeUL6d1Ptxy_qY4MGuTyJsKths/edit?usp=sharing) |
+| Nathan Manangan + Derrick Huang | [Journal](https://github.com/Reinhardtlotter/flask_portfolio/issues?q=is%3Aopen+is%3Aissue+label%3A%22Week+6%22) |
+| Reinhardt Lotter + Brian Zhang | [Journal](https://docs.google.com/document/d/1iEzHgbfWVNqOpFYsCOu6BfKV71yTtvkz7QME-QIYMnQ/edit) |
 
 ## Teammates
 ---------------------------------------
@@ -27,6 +25,8 @@ Scrum Board: https://github.com/Reinhardtlotter/flask_portfolio/projects/1
 ---------------------------------------
 | Week Number   | Assignment link                                              |
 | ------------- | -------------------------------------------------------------|
+| Sprint 5,6 (Week 6) | https://github.com/Reinhardtlotter/flask_portfolio/issues?q=is%3Aopen+is%3Aissue+label%3A%22Week+6%22 |
+| Sprint 5,6 (Week 5) | https://github.com/Reinhardtlotter/flask_portfolio/issues?q=is%3Aissue+is%3Aclosed+label%3A%22Week+5%22 |
 | Sprint 3,4 (Week 4) | https://youtu.be/mPBSY73ZTzA |
 | Sprint 3,4 (Week 3)    | https://www.youtube.com/watch?v=4PBT40bsTYw&list=PLqQJAW1jlFX_KScLv7LZFcHH2t_uYb4Vn&index=3                                         |
 | Sprint 2      | https://github.com/Reinhardtlotter/flask_portfolio/issues/18 | 
