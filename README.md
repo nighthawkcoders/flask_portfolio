@@ -85,7 +85,6 @@ https://www.youtube.com/watch?v=g5CSwQPwKAw&ab_channel=NatashaKapoor
 ![im3](https://user-images.githubusercontent.com/89223433/135338082-57981702-b7c6-4093-aa55-0cec04f51b26.JPG)
 ![im4](https://user-images.githubusercontent.com/89223433/135338094-d630b80e-cda0-42e5-875c-e13a1dae4b8c.JPG)
 ![im5](https://user-images.githubusercontent.com/89223433/135338108-2b11ed42-d749-4819-a042-9c58c3e8192c.JPG)
-![im5](https://user-images.githubusercontent.com/89223433/135337973-c7ab2747-e9ad-4536-8497-4e6d5adebe9a.JPG)
 
 
 ### Individual Journals
