@@ -25,6 +25,7 @@ def image_data(path="static/", img_list=None):  # path of static images is defau
             {'source': "Derrick's Face", 'label': "Derrick", 'file': "derrick.png"},
             {'source': "Brian's Face", 'label': "Brian", 'file': "brian.png"}
         ]
+
     # gather analysis data and meta data for each image, adding attributes to each row in table
     for img_dict in img_list:
         img_dict['path'] = '/' + path  # path for HTML access (frontend)
@@ -41,6 +42,7 @@ def image_data(path="static/", img_list=None):  # path of static images is defau
         img_dict['data'] = numpy.array(img_data)
         img_dict['hex_array'] = []
         img_dict['binary_array'] = []
+        img_dict['gray_data'] = []
         # 'data' is a list of RGB data, the list is traversed and hex and binary lists are calculated and formatted
         for pixel in img_dict['data']:
             # hexadecimal conversions
@@ -50,9 +52,7 @@ def image_data(path="static/", img_list=None):  # path of static images is defau
             # binary conversions
             bin_value = bin(pixel[0])[2:].zfill(8) + " " + bin(pixel[1])[2:].zfill(8) + " " + bin(pixel[2])[2:].zfill(8)
             img_dict['binary_array'].append(bin_value)
-        # create gray scale of image, ref: https://www.geeksforgeeks.org/convert-a-numpy-array-to-an-image/
-        img_dict['gray_data'] = []
-        for pixel in img_dict['data']:
+            # create gray scale of image, ref: https://www.geeksforgeeks.org/convert-a-numpy-array-to-an-image/
             average = (pixel[0] + pixel[1] + pixel[2]) // 3
             if len(pixel) > 3:
                 img_dict['gray_data'].append((average, average, average, pixel[3]))
@@ -60,41 +60,52 @@ def image_data(path="static/", img_list=None):  # path of static images is defau
                 img_dict['gray_data'].append((average, average, average))
         img_reference.putdata(img_dict['gray_data'])
         img_dict['base64_GRAY'] = image_formatter(img_reference, img_dict['format'])
+        img_dict['hex_array_GRAY'] = []
+        img_dict['binary_array_GRAY'] = []
+        # 'data' is a list of RGB data, the list is traversed and hex and binary lists are calculated and formatted
+        for pixel in img_dict['gray_data']:
+            # hexadecimal conversions
+            hex_value = hex(pixel[0])[-2:] + hex(pixel[1])[-2:] + hex(pixel[2])[-2:]
+            hex_value = hex_value.replace("x", "0")
+            img_dict['hex_array_GRAY'].append("#" + hex_value)
+            # binary conversions
+            bin_value = bin(pixel[0])[2:].zfill(8) + " " + bin(pixel[1])[2:].zfill(8) + " " + bin(pixel[2])[2:].zfill(8)
+            img_dict['binary_array_GRAY'].append(bin_value)
     return img_list  # list is returned with all the attributes for each image dictionary
 
 
-# run this as standalone tester to see data printed in terminal
+# # run this as standalone tester to see data printed in terminal
 # if __name__ == "__main__":
-#    local_path = "../static/"
-#    img_test = [
-#        {'source': "iconsdb.com", 'label': "Blue square", 'file': "blue.png"},
-#    ]
-#    items = image_data(local_path, img_test)  # path of local run
-#    for row in items:
-        # print some details about the image so you can validate that it looks like it is working
-        # meta data
-#        print("---- meta data -----")
-#        print(row['label'])
-#        print(row['format'])
-#        print(row['mode'])
-#        print(row['size'])
-#        # data
-#        print("----  data  -----")
-#        print(row['data'])
-#        print("----  gray data  -----")
-#        print(row['gray_data'])
-#        print("----  hex of data  -----")
-#        print(row['hex_array'])
-#        print("----  bin of data  -----")
-#        print(row['binary_array'])
-#        # base65
-#        print("----  base64  -----")
-#        print(row['base64'])
-#        # display image
-#        print("----  render and write in image  -----")
-#        filename = local_path + row['file']
-#        image_ref = Image.open(filename)
-#        draw = ImageDraw.Draw(image_ref)
-#        draw.text((0, 0), "Size is {0} X {1}".format(*row['size']))  # draw in image
-#        image_ref.show()
-# # print()
+#     local_path = "../static/img/"
+#     img_test = [
+#         {'source': "idk who this is lol", 'label': "Chinese person", 'file': "chinese.png"}
+#     ]
+#     items = image_data(local_path, img_test)  # path of local run
+#     for row in items:
+#         # print some details about the image so you can validate that it looks like it is working
+#         # meta data
+#         print("---- meta data -----")
+#         print(row['label'])
+#         print(row['format'])
+#         print(row['mode'])
+#         print(row['size'])
+#         # data
+#         print("----  data  -----")
+#         print(row['data'])
+#         print("----  gray data  -----")
+#         print(row['gray_data'])
+#         print("----  hex of data  -----")
+#         print(row['hex_array'])
+#         print("----  bin of data  -----")
+#         print(row['binary_array'])
+#         # base65
+#         print("----  base64  -----")
+#         print(row['base64'])
+#         # display image
+#         print("----  render and write in image  -----")
+#         filename = local_path + row['file']
+#         image_ref = Image.open(filename)
+#         draw = ImageDraw.Draw(image_ref)
+#         draw.text((0, 0), "Size is {0} X {1}".format(*row['size']))  # draw in image
+#         image_ref.show()
+# print()
