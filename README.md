@@ -92,20 +92,46 @@ This minilab is all about guessing songs. Samples of songs from different genres
 
 ***
 ## Sprint 2 Week 3 and 4
-## [Link that goes through website](https://docs.google.com/presentation/d/1LFJSLYCWe11_j0c1RDEH2Byjp7TBz1Q-XW0rxA1S-C8/edit#slide=id.gebe2a06820_0_76) 
-[Animation - Test musical knowledge](https://github.com/B-G101/Team-BRS/commit/ca323b6bc6a063ab4357d331fc4df54c7d8e8a22) \
-[Added buttons and multiple choice option in game for genre](https://github.com/B-G101/Team-BRS/commit/7728ba81b70f4ee8116a935e35fd590e6c9b1fb5) \
-[embeded content on the mini labs page and added table](https://github.com/B-G101/Team-BRS/commit/763ed355202175d54397dc8438d74da5fe51909c) \
-[added menu](https://github.com/B-G101/Team-BRS/commit/3d65b9d9d9654cc0f1b85f0fd002107023e24457) \
-[added the navigation bar to the minilabs.html tab](https://github.com/B-G101/Team-BRS/commit/0a89cdca6e8bc2fb221cd1425c865ac2ed796b70) \
-[embeds of brainwrite, etc](https://github.com/B-G101/Team-BRS/commit/dfc64dcd35fab8eeafb6b3134de336d82dbca80f) \
-[added instructions on block strip in game and removed background](https://github.com/B-G101/Team-BRS/commit/8c429998b85a81f483aadba3b6c2978e9f821ae1) \
-[added spookgoose and JS functionality when images are clicked](https://github.com/B-G101/Team-BRS/commit/83fab3c8ad073dda70d4277c51c4823f5852320c) 
-# Hackathon
-[Geese](https://github.com/B-G101/Team-BRS/commit/4a6ab44d20257513d35d23af83beddff35729ae2) \
-[Binary: hackathon images added](https://github.com/B-G101/Team-BRS/commit/b311842e5c68a322ae91b7ef28528444866c531c) \
-[Binary: lightbulb](https://github.com/B-G101/Team-BRS/commit/e48f5eef973a0e7e709f719a63928f2200f34a11) \
-[Binary: ASCII Added](https://github.com/B-G101/Team-BRS/commit/617cc2ea42ab255ce7c4edfb6bb451f2923b5023) 
+<table id="sprint2wk3">
+<tr>
+<tr>Week 3: Prototype Layout</tr>
+<th>Job</th>
+<th>Person Assigned</th>
+<th>Commits</th>
+</tr>
+
+<tr>
+<td>Team Designer/Coder Pair</td>
+<td>Bria and Riya</td>
+<td><a href="https://github.com/B-G101/Team-BRS/commit/ca323b6bc6a063ab4357d331fc4df54c7d8e8a22" target="_blank">Animation - Test musical knowledge</a><br>
+<a href="https://github.com/B-G101/Team-BRS/commit/7728ba81b70f4ee8116a935e35fd590e6c9b1fb5" target="_blank">Added buttons and multiple choice option in game for genre</a><br>
+<a href="https://github.com/B-G101/Team-BRS/commit/3d65b9d9d9654cc0f1b85f0fd002107023e24457" target="_blank">Added menu</a><br>
+<a href="https://github.com/B-G101/Team-BRS/commit/8c429998b85a81f483aadba3b6c2978e9f821ae1" target="_blank">added instructions on block strip in game and removed background</a><br>
+<a href="https://github.com/B-G101/Team-BRS/commit/83fab3c8ad073dda70d4277c51c4823f5852320c" target="_blank">added spookgoose and JS functionality when images are clicked</a><br>
+</td>
+</tr>
+
+<tr>
+<td>Team Designer/Coder Pair</td>
+<td>Bria and Sreeja</td>
+<td><a href="https://github.com/B-G101/Team-BRS/commit/763ed355202175d54397dc8438d74da5fe51909c" target="_blank">Embeded content on the mini labs page and added table</a> <br>
+<a href="https://github.com/B-G101/Team-BRS/commit/dfc64dcd35fab8eeafb6b3134de336d82dbca80f" target="_blank">Embeds of the brainwrite, etc</a><br>
+<a href="https://github.com/B-G101/Team-BRS/commit/0a89cdca6e8bc2fb221cd1425c865ac2ed796b70" target="_blank">Edded the navigation bar to the minilabs.html tab</a><br>
+</td>
+</tr>
+
+<td>Individual Coding</td>
+<td>Bria, Riya, Sreeja, Val</td>
+<td>
+<a href="https://github.com/B-G101/Team-BRS/commit/4a6ab44d20257513d35d23af83beddff35729ae2" target="_blank">Geese</a><br>
+<a href="https://github.com/B-G101/Team-BRS/commit/b311842e5c68a322ae91b7ef28528444866c531c" target="_blank">Binary: hackathon images added</a><br>
+<a href="https://github.com/B-G101/Team-BRS/commit/e48f5eef973a0e7e709f719a63928f2200f34a11" target="_blank">Binary: lightbulb</a><br>
+<a href="https://github.com/B-G101/Team-BRS/commit/617cc2ea42ab255ce7c4edfb6bb451f2923b5023" target="_blank">Binary: ASCII Added</a><br>
+</td>
+</table>
+
+
+
 # Week 4
 [Integrate more into about you page](https://github.com/B-G101/Team-BRS/commit/06c4bbcd81d37f8d848078d8c4f6f30dd44be963) \
 [Added buttons and multiple choice option in game for genre](https://github.com/B-G101/Team-BRS/commit/7728ba81b70f4ee8116a935e35fd590e6c9b1fb5) \
@@ -124,9 +150,57 @@ This minilab is all about guessing songs. Samples of songs from different genres
 [Bria About me Page](https://github.com/B-G101/Team-BRS/commit/06c4bbcd81d37f8d848078d8c4f6f30dd44be963) \
 [New Background Color Theme and Design](https://github.com/B-G101/Team-BRS/commit/a433aa17bfe523848599efae9307886bcc742bd1) \
 
-
 ****
 ## Sprint 1 Week 1 and 2
+<table id="sprint1">
+<tr>
+<tr>Week 1</tr>
+<th>Job</th>
+<th>Person Assigned</th>
+<th>Commits</th>
+</tr>
+
+<tr>
+<td>Scrum Master</td>
+<td>Riya</td>
+<td>
+<a href="https://github.com/B-G101/Team-BRS/projects/1" target="_blank">Link to Scrumboard with Issues</a><br>
+
+</td>
+</tr>
+
+<tr>
+<td>Designer</td>
+<td>Bria and Riya</td>
+<td>
+<a href="https://github.com/B-G101/Team-BRS/blob/main/templates/layouts/navbar.html" target="_blank">Renamed navbar options (about us, game, home project)</a><br>
+<a href="https://www.canva.com/design/DAEovTqHJS0/share/preview?token=6geSoh1OE_Vv9jNCp7Y_7A&role=EDITOR&utm_content=DAEovTqHJS0&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton" target="_blank">Wireframes</a><br>
+<a href="https://github.com/B-G101/Team-BRS/commit/710e4f970301af5446999ebd94355dea4b3e9914#diff-e8c62b1a71f9da4a53e478e371233bd4ad6ee6795a0f4cfe22a2679290b5ca04" target="_blank">Bootstrap Dropdowns in Navbar</a><br>
+<a href="" target="_blank"></a><br>
+</td>
+</tr>
+
+<tr>
+<td>Technical Lead</td>
+<td>Sreeja</td>
+<td><a href="https://docs.google.com/presentation/d/1JdbsrNy56_LlhaEoHKARunwih-D4eg0P8xcCvw_2Pu8/edit" target="_blank">TPT - Poway Restaurants Brainwrite</a><br>
+<a href="https://drive.google.com/drive/u/0/folders/1kUbOD2OBFKkSuBEbp6z6ofQ8mQUB_dXb" target="_blank">Shared Google Drive</a><br>
+<a href="https://docs.google.com/document/d/10k-rgAvYw5NwZQ6qmyqFF2FQG5dMLWA2DN_e5jcfuw0/edit" target="_blank">Brainwrite</a><br>
+<a href="" target="_blank"></a><br>
+</td>
+</tr>
+
+<tr>
+<td>Developers</td>
+<td>Bria and Valerie</td>
+<td>
+<a href="https://github.com/B-G101/Team-BRS/commit/81475730b412593fe4b9bb32b50baf8ea7f37682" target="_blank">Greet function integrated</a><br>
+<a href="https://github.com/B-G101/Team-BRS/blob/main/templates/minilabs.html" target="_blank">Video Journal Integration</a><br>
+<a href="" target="_blank"></a><br>
+<a href="" target="_blank"></a><br>
+</td>
+</tr>
+</table>
 
 
 
