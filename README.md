@@ -8,8 +8,8 @@ Scrum Board: https://github.com/Reinhardtlotter/flask_portfolio/projects/1
 
 | Name             | Journal                                                                                                      |
 | ---------------- | ------------------------------------------------------------------------------------------------------------ |
-| Nathan Manangan + Derrick Huang | [Journal](https://github.com/Reinhardtlotter/flask_portfolio/issues?q=is%3Aopen+is%3Aissue+label%3A%22Week+6%22) |
-| Reinhardt Lotter + Brian Zhang | [Journal](https://docs.google.com/document/d/1iEzHgbfWVNqOpFYsCOu6BfKV71yTtvkz7QME-QIYMnQ/edit) |
+| Nathan Manangan + Derrick Huang | [Journal](https://docs.google.com/document/d/1iEzHgbfWVNqOpFYsCOu6BfKV71yTtvkz7QME-QIYMnQ/edit) |
+| Reinhardt Lotter + Brian Zhang | [Journal](https://docs.google.com/document/d/1nQK3_Lvh3XT3Vwb-PrkNCrcTUAUlYSsifrXgkbSCXvw/edit) |
 
 ## Teammates
 ---------------------------------------
