@@ -5,9 +5,13 @@
     //  document.getElementById("img<n>").src
     //  document.getElementID("img_gray<n>").innerHTML
     //  help: https://www.geeksforgeeks.org/how-to-change-the-src-attribute-of-an-img-element-in-javascript-jquery/
+
+    function myFunction(){
+        document.getElementById("myimg").style.filter="grayscale(100%)";
+
+    }
 </script>
-document.getElementById("img<n>").src
-    //  document.getElementID("img_gray<n>").innerHTML
+
 <title>RGB starter</title>
 
 {% block body %}
@@ -36,14 +40,12 @@ document.getElementById("img<n>").src
                         <div>{{image.source}}</div>
                     </td>
                     <td>
-                        <img class="img-responsive py-3" id=img{{loop.index}} alt="" width="256" height="Auto" src="{{image.base64}}" >
-                        <!-- Hack: create button (btn{{loop.index}} to  call java script function
-                               pass index to allow you to toggle images with hidden id's
-                               {{image.base64}}  original image
-                               {{image.base64_GRAY}}  gray scale image
-                            -->
+                        <img class="img-responsive py-3" id="img{{ loop.index }}" alt="" width="256" height="Auto" src="{{ image.base64 }}">
+                        <button onclick="myFunction()">Try it</button><br>
+                        <img id="myimg" src="/static/assets/red-square-16.png" alt="redsquare" width="300" height="300"
                         <p hidden id="img_orig{{loop.index}}">{{image.base64}}</p>
                         <p hidden id="img_gray{{loop.index}}">{{image.base64_GRAY}}</p>
+
                     </td>
                     <td>
                         <div class="overflow-auto" style="height: 256px">
@@ -58,12 +60,12 @@ document.getElementById("img<n>").src
                                 </thead>
                                 <tbody>
                                 {% for row in image.data[:256:+1] %}
-                                    <tr>
+                                    <t..r>
                                         <td>{{loop.index}}</td>
                                         <td>{{row}}</td>
                                         <td>{{image.hex_array[loop.index - 1]}}</td>
                                         <td>{{image.binary_array[loop.index - 1]}}
-                                    </tr>
+                                    </t..r>
                                     {% if loop.index > 256 %}
                                         <tr><td>...</td><td>truncated</td><td>...</td><td>...</td></tr>
                                     {% endif %}
