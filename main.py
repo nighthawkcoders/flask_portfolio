@@ -2,7 +2,7 @@
 from pathlib import Path
 
 from flask import Flask, render_template, request
-from algorithms.image import drawhack, sonakshi_image_data, kashish_image_data
+from algorithms.image import sonakshi_image_data, kashish_image_data
 
 
 # create a Flask instance
@@ -93,32 +93,18 @@ def kashish():
 
 @app.route('/sonakshirgb/', methods=['GET', 'POST'])
 def sonakshirgb():
-    path = Path(app.root_path) / "static" / "assets" / "sonakshiimages"
-    return render_template('sonakshirgb.html', images=sonakshi_image_data(path))
-    char = sonakshi_image_data()
-    draw = drawhack()
-    colorList = []
-    grayList = []
-    for img in char:
-        colorList.append(img['base64'])
-        grayList.append(img['base64_GRAY'])
-    try:
-        if request.form:
-            option = request.form["option"]
-        if option == 'yes':
-            return render_template("sonakshirgb.html", images=draw)
-        elif option == 'no':
-            return render_template("sonakshirgb.html", images=char, colored=colorList, grayed=grayList)
-        else:
-            return render_template("sonakshirgb.html", images=char, colored=colorList, grayed=grayList)
-    except:
-        return render_template("sonakshirgb.html", images=char, colored=colorList, grayed=grayList)
+    return render_template('sonakshirgb.html', images=sonakshi_image_data)
 
 
 @app.route('/kashishrgb/', methods=['GET', 'POST'])
 def kashishrgb():
-    junk = kashish_image_data()
-    return render_template("kashishrgb.html", images=junk )
+    trash = kashish_image_data()
+    colorList = []
+    grayList = [] # pass in the lists from the image_data() function
+    for img in trash:
+        colorList.append(img['base64'])
+        grayList.append(img['base64_GRAY'])
+    return render_template("kashishrgb.html", images=trash, colored=colorList, grayed=grayList )
 
 
 
