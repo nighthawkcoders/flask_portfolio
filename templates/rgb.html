@@ -1,88 +1,103 @@
+<!DOCTYPE html>
 {% extends "layouts/base.html" %}
 
-<script>
-    // Hack: add java script function to toggle image from original to gray and back (toggle)
-    //  document.getElementById("img<n>").src
-    //  document.getElementID("img_gray<n>").innerHTML
-    //  help: https://www.geeksforgeeks.org/how-to-change-the-src-attribute-of-an-img-element-in-javascript-jquery/
+{% block meta %}
+    <script>
+        // Hack: add java script function to toggle image from original to gray and back (toggle)
+        //  document.getElementById("img<n>").src
+        //  document.getElementID("img_gray<n>").innerHTML
+        //  help: https://www.geeksforgeeks.org/how-to-change-the-src-attribute-of-an-img-element-in-javascript-jquery/
 
-    function myFunction(){
-        document.getElementById("myimg").style.filter="grayscale(100%)";
 
-    }
-</script>
+        function setImg(){
 
-<title>RGB starter</title>
+            if (document.getElementById("btn1").value == "Gray Scale" ) {
+               ;
+                document.getElementById("img1").src = document.getElementById("img_gray1").innerHTML;
+                document.getElementById("btn1").value = "Color";
+            }
+           else
+            {
+                document.getElementById("img1").src = document.getElementById("img_orig1").innerHTML;
+                document.getElementById("btn1").value = "Gray Scale";
 
-{% block body %}
+            }
+        }
 
-<h1 class="text-center">RGB values within an Image</h1>
 
-<div class="container">
-    <div class="row justify-content-md-center">
-        <table class="table">
-            <thead>
-            <tr>
-                <th>Meta Data</th>
-                <th>Image</th>
-                <th>Data</th>
-            </tr>
-            </thead>
 
-            <tbody>
-            {% for image in images %}
-                <tr>
-                    <td>
-                        <div>{{image.file}}</div>
-                        <div>{{image.format}}</div>
-                        <div>{{image.size}}</div>
-                        <div>{{image.label}}</div>
-                        <div>{{image.source}}</div>
-                    </td>
-                    <td>
-                        <img class="img-responsive py-3" id="img{{ loop.index }}" alt="" width="256" height="Auto" src="{{ image.base64 }}">
-                        <button onclick="myFunction()">Try it</button><br>
-                        <img id="myimg" src="/static/assets/red-square-16.png" alt="redsquare" width="300" height="300"
-                        <p hidden id="img_orig{{loop.index}}">{{image.base64}}</p>
-                        <p hidden id="img_gray{{loop.index}}">{{image.base64_GRAY}}</p>
-
-                    </td>
-                    <td>
-                        <div class="overflow-auto" style="height: 256px">
-                            <table class="table">
-                                <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>{{image.mode}}</th>
-                                    <th>Hex Code</th>
-                                    <th>Binary</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                {% for row in image.data[:256:+1] %}
-                                    <t..r>
-                                        <td>{{loop.index}}</td>
-                                        <td>{{row}}</td>
-                                        <td>{{image.hex_array[loop.index - 1]}}</td>
-                                        <td>{{image.binary_array[loop.index - 1]}}
-                                    </t..r>
-                                    {% if loop.index > 256 %}
-                                        <tr><td>...</td><td>truncated</td><td>...</td><td>...</td></tr>
-                                    {% endif %}
-                                {% endfor %}
-                                </tbody>
-                            </table>
-                        </div>
-                    </td>
-                </tr>
-            {% endfor %}
-            </tbody>
-        </table>
-
-    </div>
-</div>
-
-{% block background %}
+    </script>
+    <title>RGB starter</title>
 {% endblock %}
 
+{% block body %}
+    <h1 class="text-center">RGB values within an Image</h1>
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Meta Data</th>
+                    <th>Image</th>
+                    <th>Data</th>
+                </tr>
+                </thead>
+                <tbody>
+                <input type="button" value="Gray Scale" id="btn1" onclick="setImg()">
+                {% for image in images %}
+                    <tr>
+                        <td>
+                            <div>{{image.label}}</div>
+                            <div>{{image.source}}</div>
+                            <div>{{image.file}}</div>
+                            <div>{{image.format}}</div>
+                            <div>{{image.size}}</div>
+                        </td>
+                        <td>
+                            <img class="img-responsive py-3" id=img{{loop.index}} alt="" width="256" height="Auto" src="{{image.base64}}" >
+                            <!-- Hack: create button (btn{{loop.index}} to  call java script function
+                               pass index to allow you to toggle images with hidden id's
+                               {{image.base64}}  original image
+                               {{image.base64_GRAY}}  gray scale image
+                            -->
+                            <p hidden id="img_orig{{loop.index}}">{{image.base64}}</p>
+                            <p hidden id="img_gray{{loop.index}}">{{image.base64_GRAY}}</p>
+
+
+
+                        </td>
+                        <td>
+                            <div class="overflow-auto" style="height: 256px">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>{{image.mode}}</th>
+                                        <th>Hex Code</th>
+                                        <th>Binary</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for row in image.data[:256:1] %}
+                                        <tr>
+                                            <td>{{loop.index}}</td>
+                                            <td>{{row}}</td>
+                                            <td>{{image.hex_array[loop.index - 1]}}</td>
+                                            <td>{{image.binary_array[loop.index - 1]}}
+                                        </tr>
+                                        {% if loop.index > 256 %}
+                                            <tr><td>...</td><td>truncated</td><td>...</td><td>...</td></tr>
+                                        {% endif %}
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+
+        </div>
+    </div>
 {% endblock %}

@@ -31,8 +31,8 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: cover;
-            background-image: url("https://docs.google.com/drawings/d/e/2PACX-1vTO_J3FcXmm5G3sJBxKZXXmPYic7eUB0txINkuxq1u2aHUR6xJZooxjmDHOFkcbCBjdws6f1WU33F9H/pub?w=1440&h=1080");
             color: var(--white);
+            background-image: url("https://docs.google.com/drawings/d/e/2PACX-1vTO_J3FcXmm5G3sJBxKZXXmPYic7eUB0txINkuxq1u2aHUR6xJZooxjmDHOFkcbCBjdws6f1WU33F9H/pub?w=1440&h=1080");
         }
 
         .dark-mode {
@@ -100,6 +100,9 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
     </style>
 
     <title>{{ basename }} | {{ project }} </title>
+    {% block meta %}
+
+    {% endblock %}
 
 </head>
 
@@ -125,21 +128,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 </body>
 
 {% block background %}
-    <script src="{{ url_for('static', filename='three.r119.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='vanta.birds.min.js') }}"></script>
-    <script>
-        VANTA.BIRDS({
-            el: "body",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 200.00,
-            minWidth: 200.00,
-            scale: 1.00,
-            scaleMobile: 1.00
-        })
-    </script>
-    </div>
+
 {% endblock %}
 
 </html>
