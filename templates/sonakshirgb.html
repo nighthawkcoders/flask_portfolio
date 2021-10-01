@@ -4,17 +4,63 @@
 {% block background %}
 {% endblock %}
 
-
 {% block body %}
+
     <script>
+        var imageColor = 0; // 0 is color, 1 is gray
+        var grayscale = {{ grayed|safe }};  // passes in base64 urls in a list into javascript via jinja
+        var colorscale = {{ colored|safe }};
+
+        function toggleColors(array) {  // toggles color of each image in the document
+            for (var i = 1; i <= array.length; i++) {
+                let id = "img" + i; // for each image in the array, set the source (href) to the base64 version
+                setImg(id, array[i-1]);
+            }
+        }
+
+        function toggle() {  // calls toggleColors based on what the current color is
+            if (imageColor == 0) {
+                toggleColors(grayscale);
+                imageColor = 1;
+            } else {
+                toggleColors(colorscale);
+                imageColor = 0;
+            }
+        }
+
+        function setImg(img, base64) {
+            // add button and rotate image from original to gray and back (toggle)
+            document.getElementById(img).src = base64;  //change img src to inner html on <p> tag
+        }
+
         // Hack: add java script function to toggle image from original to gray and back (toggle)
         //  document.getElementById("img<n>").src
         //  document.getElementID("img_gray<n>").innerHTML
         //  help: https://www.geeksforgeeks.org/how-to-change-the-src-attribute-of-an-img-element-in-javascript-jquery/
     </script>
+
+
     <title>RGB starter</title>
 
     <h1 class="text-center"> Sonakshi's RGB values </h1>
+    <div class="container"></div>
+    <div class="row justify-content-md-center" style="text-align: center; width: 50%">
+        <div class="col align-self-start">
+            <p>Would you like to rotate the images?</p>
+            <form action="{{ url_for('sonakshirgb') }}" method="POST">
+                <input type="radio" id="yes" name="option" value="yes">
+                <label for="yes">Yes</label>
+                <input type="radio" id="no" name="option" value="no">
+                <label for="no">No</label>
+                <br>
+                <input type="submit">
+            </form>
+
+            <div class="col align-self-start">
+            <button onclick="toggle()">Toggle Colors</button>
+        </div>
+    </div>
+
     <div class="container">
         <div class="row justify-content-md-center">
             <table class="table">

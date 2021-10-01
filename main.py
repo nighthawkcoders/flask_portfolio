@@ -1,6 +1,8 @@
 # import "packages" from flask
+from pathlib import Path
+
 from flask import Flask, render_template, request
-from algorithms.image import sonakshi_image_data, kashish_image_data
+from algorithms.image import rotatehack, sonakshi_image_data, kashish_image_data
 
 
 # create a Flask instance
@@ -91,13 +93,35 @@ def kashish():
 
 @app.route('/sonakshirgb/', methods=['GET', 'POST'])
 def sonakshirgb():
-    junk = sonakshi_image_data()
-    return render_template("sonakshirgb.html", images=junk )
+    trash = sonakshi_image_data()
+    rotate = rotatehack
+    colorList = []
+    grayList = [] # pass in the lists from the image_data() function
+    for img in trash:
+        colorList.append(img['base64'])
+        grayList.append(img['base64_GRAY'])
+    try:
+        if request.form:
+            option = request.form["option"]
+        if option == 'yes':
+            return render_template("sonakshirgb.html", images=rotate)
+        elif option == 'no':
+            return render_template("sonakshirgb.html", images=trash, colored=colorList, grayed=grayList)
+        else:
+            return render_template("sonakshirgb.html", images=trash, colored=colorList, grayed=grayList)
+    except:
+        return render_template("sonakshirgb.html", images=trash, colored=colorList, grayed=grayList)
+
 
 @app.route('/kashishrgb/', methods=['GET', 'POST'])
 def kashishrgb():
-    junk = kashish_image_data()
-    return render_template("kashishrgb.html", images=junk )
+    trash = kashish_image_data()
+    colorList = []
+    grayList = [] # pass in the lists from the image_data() function
+    for img in trash:
+        colorList.append(img['base64'])
+        grayList.append(img['base64_GRAY'])
+    return render_template("kashishrgb.html", images=trash, colored=colorList, grayed=grayList )
 
 
 
