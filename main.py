@@ -93,7 +93,14 @@ def kashish():
 
 @app.route('/sonakshirgb/', methods=['GET', 'POST'])
 def sonakshirgb():
-    return render_template('sonakshirgb.html', images=sonakshi_image_data)
+    trash = sonakshi_image_data()
+    colorList = []
+    grayList = [] # pass in the lists from the image_data() function
+    for img in trash:
+        colorList.append(img['base64'])
+        grayList.append(img['base64_GRAY'])
+    return render_template("sonakshirgb.html", images=trash, colored=colorList, grayed=grayList )
+
 
 
 @app.route('/kashishrgb/', methods=['GET', 'POST'])
