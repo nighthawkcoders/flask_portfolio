@@ -1,4 +1,6 @@
 # import "packages" from flask
+from pathlib import Path
+
 from flask import Flask, render_template, request
 from algorithms.image import drawhack, sonakshi_image_data, kashish_image_data
 
@@ -91,6 +93,8 @@ def kashish():
 
 @app.route('/sonakshirgb/', methods=['GET', 'POST'])
 def sonakshirgb():
+    path = Path(app.root_path) / "static" / "assets" / "sonakshiimages"
+    return render_template('sonakshirgb.html', images=sonakshi_image_data(path))
     char = sonakshi_image_data()
     draw = drawhack()
     colorList = []
