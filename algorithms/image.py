@@ -1,7 +1,7 @@
 import base64
 from io import BytesIO
 import numpy
-from PIL import Image, ImageDraw
+from PIL import Image, ImageDraw, ImageFilter
 import re
 
 
@@ -48,6 +48,8 @@ def sonakshi_image_data(path="static/assets/sonakshiimages/", img_list=None):
         # Python Image Library operations
         img_reference = Image.open(file)  # PIL
         # HERE is commit for adding text into images
+        OriImage = img_reference
+        OriImage.filter(ImageFilter.BLUR)
         draw = ImageDraw.Draw(img_reference)
         draw.text((25, 25), "Writing on images!", fill=(500, 500, 500))  # draw in image
         img_data = img_reference.getdata()  # Reference https://www.geeksforgeeks.org/python-pil-image-getdata/
@@ -101,6 +103,8 @@ def kashish_image_data(path="static/assets/kashishimages/", img_list=None):
         # Python Image Library operations
         img_reference = Image.open(file)  # PIL
         # HERE is commit for adding text into images
+        OriImage = img_reference
+        OriImage.filter(ImageFilter.BLUR
         draw = ImageDraw.Draw(img_reference)
         draw.text((25, 25), "Writing on images!", fill=(500, 500, 500))  # draw in image
         img_data = img_reference.getdata()  # Reference https://www.geeksforgeeks.org/python-pil-image-getdata/
