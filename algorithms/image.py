@@ -1,7 +1,7 @@
 import base64
 from io import BytesIO
 import numpy
-from PIL import Image, ImageDraw, ImageFilter
+from PIL import Image, ImageDraw
 import re
 
 
@@ -32,6 +32,30 @@ def imgToBin(file):
         binValue = f.read(1)
     return binValue
 
+def rotatehack(path="static/assets/sonakshiimages/", img_list=None):
+    if img_list is None:  # color_dict is defined with defaults
+        img_list = [
+            {'source': "Blue", 'label': "Blue", 'file': "blue.png"},
+            {'source': "Green", 'label': "Green", 'file': "green.png"},
+            {'source': "Orange", 'label': "Orange", 'file': "orange.png"},
+            {'source': "Red", 'label': "Red", 'file': "red.png"},
+        ]
+    for img_dict in img_list:
+        img_dict['path'] = '/' + path  # path for HTML access (frontend)
+        file = path + img_dict['file']  # file with path for local access (backend)
+        # hack testing
+        img = Image.open(file)  # opens file to work
+        OriImage = img  # creates a copy of the file used
+        OriImage.transpose(Image.FLIP_LEFT_RIGHT)  # "draws" on the clean copy
+        OriImage.save(path + 'new' + img_dict['file'])  # saves clean copy as "new<file>.jpg"
+    # appending to img_list so the images can load on the html
+    img_list.clear()
+    img_list.append({'source': "Blue", 'label': "Blue", 'file': "newblue.png"},)
+    img_list.append({'source': "Green", 'label': "Green", 'file': "newgreen.png"},)
+    img_list.append({'source': "Orange", 'label': "Orange", 'file': "neworange.png"},)
+    img_list.append({'source': "Red", 'label': "Red", 'file': "newred.png"})
+
+
 
 def sonakshi_image_data(path="static/assets/sonakshiimages/", img_list=None):
     if img_list is None:  # color_dict is defined with defaults
@@ -48,8 +72,6 @@ def sonakshi_image_data(path="static/assets/sonakshiimages/", img_list=None):
         # Python Image Library operations
         img_reference = Image.open(file)  # PIL
         # HERE is commit for adding text into images
-        OriImage = img_reference
-        OriImage.filter(ImageFilter.BLUR)
         draw = ImageDraw.Draw(img_reference)
         draw.text((25, 25), "Writing on images!", fill=(500, 500, 500))  # draw in image
         img_data = img_reference.getdata()  # Reference https://www.geeksforgeeks.org/python-pil-image-getdata/
@@ -103,8 +125,6 @@ def kashish_image_data(path="static/assets/kashishimages/", img_list=None):
         # Python Image Library operations
         img_reference = Image.open(file)  # PIL
         # HERE is commit for adding text into images
-        OriImage = img_reference
-        OriImage.filter(ImageFilter.BLUR
         draw = ImageDraw.Draw(img_reference)
         draw.text((25, 25), "Writing on images!", fill=(500, 500, 500))  # draw in image
         img_data = img_reference.getdata()  # Reference https://www.geeksforgeeks.org/python-pil-image-getdata/
