@@ -88,8 +88,6 @@
 ***
 ##Ideation:
 This minilab is all about guessing songs. Samples of songs from different genres will be played to participants, requiring them to select from a list of songs, one of which contains the correct answer. Different difficulties can be selected with various complicating factors, such as the nicheness of the artist, minor distortions to the song, or only shorter snippets being played. Alternatively, the auditory experience could be entirely foregone, and participants would have to guess the song and/or complete lyrics after only being given the lyrics in writing.
-
-HEY BRIA!! make sure to do table with jobs (for that specific week, people and commits - we need to do all weeks so maybe you can do the first three weeks, and then i can do the last three)
 ***
 
 ## Sprint 3 Week 5 and 6
@@ -111,10 +109,12 @@ HEY BRIA!! make sure to do table with jobs (for that specific week, people and c
 </tr>
 
 <tr>
-<td>Pair Journal activities + greyscale, manipulating images</td>
+<td>Pair Journal activities + greyscale, manipulating images, text on images</td>
 <td>Bria and Riya</td>
 <td>
 <a href="https://github.com/B-G101/Team-BRS/issues/71" target="_blank">Pair journal for this week with TPT activities</a><br>
+<a href="https://github.com/B-G101/Team-BRS/commit/4218713df5d134991b2942de9598e1c02c2cb9dc" target="_blank">Working Grayscale OnClick</a><br>
+<a href="https://github.com/B-G101/Team-BRS/commit/385bae4149a09d6795b018a44f56110b9c61e681" target="_blank">Text Written on Image Plus Image Manipulation (Enhanced Filter)</a><br>
 <a href="" target="_blank"></a><br>
 </td>
 </tr>
@@ -123,12 +123,13 @@ HEY BRIA!! make sure to do table with jobs (for that specific week, people and c
 <td>Pair Journal activities + New documentation, + Backend </td>
 <td>Sreeja and Val</td>
 <td><a href="https://github.com/B-G101/Team-BRS/issues/75" target="_blank">Pair journal for this week with TPT activities</a><br>
-<a href="" target="_blank"></a><br>
+<a href="https://docs.google.com/presentation/d/1xNbn_2MFgy4ZbDfu_n0BtvNZC11MNksGr8CKIXHi8Hw/edit?usp=sharing" target="_blank">Documentation Assignment</a><br>
+<a href="https://github.com/B-G101/Team-BRS/commit/1e9d675e6224c84a5c62f39f4e273e58fccc8176" target="_blank">Val's Spongebob IP address Image manipulation</a><br>
 </td>
 </tr>
 
 <tr>
-<td>Base RGB working and BAse 64 research</td>
+<td>Base RGB working and Base64 research</td>
 <td>Bria, Sreeja</td>
 <td>
 <a href="https://github.com/B-G101/Team-BRS/issues/73" target="_blank">RGB working!</a><br>
