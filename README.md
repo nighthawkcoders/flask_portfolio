@@ -110,9 +110,9 @@ https://youtu.be/UPD-ODdUVYg
 
 | Name | Score | Evidence | Laptop plans |
 |  --- |  ---  |  ---     |  ---         |
-| Saumya | 7/7 | | will use personal laptop at home and school |
-| Sonakshi | 7/7 |  will use personal laptop at home and school |
-| Kashish | 7/7 | will use personal laptop at home and school |
+| Saumya | 7/7 | |will use personal laptop at home and school|
+| Sonakshi | 7/7 |will use personal laptop at home and school|
+| Kashish | 7/7 |will use personal laptop at home and school|
 
 
 ## Week 7
