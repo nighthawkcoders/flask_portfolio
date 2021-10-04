@@ -94,19 +94,18 @@ https://youtu.be/UPD-ODdUVYg
 
 | Requirement | Evidence |
 | ---        | ---      |
-| Scrum Master. Define tasks and place assignments to in-progress on the Scrum board.| [Scrum Board](https://github.com/4disease/p1-donuts-new/projects/1) |
+| Scrum Master. Define tasks and place assignments to in-progress on the Scrum board.| [Scrum Board](https://github.com/sonakshibhalla/flask_portfolio/projects/1) |
 | Designer. Wire Frame (at least three theme pages, team mini-labs, and about) | on our website page |
-| Technical Lead. Coordinate brain write session, after preliminary wire frames, make sure you capture technical complexities as an output of this exercise (input, saving data, comments, visual actions, animations, ...) | can be seen in the [issues](https://github.com/4disease/p1-donuts-new/issues) section |
-| Navigators. Capture or build highlight of Ideation in README.md, this allows ideas to persist with Project,  Make sure that work from Developers works to expectations (testing, suggestions for improvement) | [Ideation](https://github.com/4disease/p1-donuts-new#ideation) |
-| Developers. Bootstrap drop downs in navbar, start to form Wire Frame menu options.  Each menu option should have a Stub code page | Navbar finished [Ticket](https://github.com/4disease/p1-donuts-new/issues/3)|
-| Developers. Integration of Greet, Birds, Unit 1 functionality into a mini-lab page | [Ticket](https://github.com/4disease/p1-donuts-new/issues/2) |
-| Designer/Developer. 1 minute video integrated into About Us on Genesis ideas for project. | [Ticket](https://github.com/4disease/p1-donuts-new/issues/1) |
+| Technical Lead. Coordinate brain write session, after preliminary wire frames, make sure you capture technical complexities as an output of this exercise (input, saving data, comments, visual actions, animations, ...) | can be seen in the [issues](https://github.com/sonakshibhalla/flask_portfolio/issues) section |
+| Navigators. Capture or build highlight of Ideation in README.md, this allows ideas to persist with Project,  Make sure that work from Developers works to expectations (testing, suggestions for improvement) | [Ideation](https://github.com/sonakshibhalla/flask_portfolio#ideation) |
+| Developers. Bootstrap drop downs in navbar, start to form Wire Frame menu options.  Each menu option should have a Stub code page | Navbar finished [Ticket](https://github.com/sonakshibhalla/flask_portfolio#ideation)|
+| Developers. Integration of Greet, Birds, Unit 1 functionality into a mini-lab page | [Ticket](https://github.com/sonakshibhalla/flask_portfolio) |
+| Designer/Developer. 1 minute video integrated into About Us on Genesis ideas for project. | [Ticket](https://github.com/sonakshibhalla/flask_portfolio) |
 
 ### Individual PBL
 
-[Saumya's Journal](https://docs.google.com/document/d/1QwZR7rZCKQ_408GuY0SUCDS9y_yJ-nyMV44ZrVq_2t0/edit?usp=sharing)
-
-[Sonakshi and Kashish's Joural](https://docs.google.com/document/d/16K6aheHJTJdytH5vH_9Q-GDjV7uvpKgQ-4cHytyWjlo/edit?usp=sharing)
+[Saumya's Journal](https://docs.google.com/document/d/1nkBoOvmQhoIScKwd0u3vV3TiDgj4mWT9NPqn355nj9U/edit?usp=sharing)
+[Sonakshi and Kashish's Joural](https://docs.google.com/document/d/1FW_b7zlKt8A3x_9Ah4Mo1ItCtjWvCrqs2BooDvLcs0w/edit?usp=sharing)
 
 [Evidence of contributions](https://github.com/4disease/p1-donuts-new/graphs/contributors) and [scrum board](https://github.com/4disease/p1-donuts-new/projects/1)
 
