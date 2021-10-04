@@ -8,7 +8,7 @@
 
 
 ## Contributors
-| Name | GitHub Profile | Tasks | Scrum Board | Commits |
+| Name | GitHub Profile | Tasks | Scrum Board | s |
 |:-----|:----------------------|:-----:|:-----------:|:-------:|
 | Sonakshi Bhalla | [@sonakshibhalla](https://github.com/sonakshibhalla) | [Tasks](https://github.com/sonakshibhalla/flask_portfolio/issues/assigned/sonakshibhalla) |[Scrum Board](https://github.com/sonakshibhalla/flask_portfolio/projects/1?card_filter_query=assignee%3Asonakshibhalla)| [Commits](https://github.com/sonakshibhalla/flask_portfolio/commits?author=sonakshibhalla)
 | Kashish Chopra | [@kashishchopraa](https://github.com/kashishchopraa) | [Tasks](https://github.com/sonakshibhalla/flask_portfolio/issues/assigned/kashishchopraa) | [Scrum Board](https://github.com/sonakshibhalla/flask_portfolio/projects/1?card_filter_query=assignee%3Akashishchopraa) | [Commits](https://github.com/sonakshibhalla/flask_portfolio/commits?author=kashishchopraa)
@@ -107,7 +107,7 @@ https://youtu.be/UPD-ODdUVYg
 [Saumya's Journal](https://docs.google.com/document/d/1nkBoOvmQhoIScKwd0u3vV3TiDgj4mWT9NPqn355nj9U/edit?usp=sharing)
 [Sonakshi and Kashish's Joural](https://docs.google.com/document/d/1FW_b7zlKt8A3x_9Ah4Mo1ItCtjWvCrqs2BooDvLcs0w/edit?usp=sharing)
 
-[Evidence of contributions](https://github.com/4disease/p1-donuts-new/graphs/contributors) and [scrum board](https://github.com/4disease/p1-donuts-new/projects/1)
+[Evidence of contributions](https://github.com/sonakshibhalla/flask_portfolio/graphs/contributors) and [scrum board](https://github.com/sonakshibhalla/flask_portfolio/projects/1)
 
 | Name | Score | Evidence | Laptop plans |
 |  --- |  ---  |  ---     |  ---         |
@@ -130,21 +130,6 @@ As is visible, we have a cover page, with our FAQs, mini-labs, and About Us page
 
 ## Sprint 3,4 Video
 "https://youtu.be/4c6BQX599jw"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## Sprint 3 Project Ideation
 ### Design Progress
