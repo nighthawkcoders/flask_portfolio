@@ -25,15 +25,19 @@ def image_data(path=Path("static/img/"), images=None):  # path of static images 
             {'source': "Peter Carolin", 'label': "Blue Square", 'file': "blue-square-16.jpg"},
             {'source': "Peter Carolin", 'label': "Green Square", 'file': "green-square-16.png"},
             {'source': "Peter Carolin", 'label': "Red Square", 'file': "red-square-16.png"},
-            {'source': "Peter Carolin", 'label': "White Square", 'file': "white-square-16.png"}
+            {'source': "Peter Carolin", 'label': "White Square", 'file': "white-square-16.png"},
+            {'source': "Peter Carolin", 'label': "Music Square", 'file': "MusicPIL.jpg"}
         ]
     # gather analysis data and meta data for each image, adding attributes to each row in table
     for image in images:
         # File to open
-        filename = path / image['file']  # file with path
-
+        filename = path.joinpath(image['file'])
+        #filename = path / image['file']  # file with path
         # Image open return PIL image object
         img_object = Image.open(filename)
+        d1 = ImageDraw.Draw(img_object)
+        d1.text((28, 36), "Music Quote!", fill=(255, 0, 0))
+        img_object.show()
 
         # Python Image Library operations
         image['format'] = img_object.format
@@ -44,7 +48,7 @@ def image_data(path=Path("static/img/"), images=None):  # path of static images 
         # use open img_object!!!
         img_object = img_object.filter(ImageFilter.EDGE_ENHANCE)
         draw = ImageDraw.Draw(img_object)
-       # draw.text((1, 8), "Hello there", fill=(226, 184, 182))
+        # draw.text((1, 8), "Hello there", fill=(226, 184, 182))
 
         # Conversion of original Image to Base64, a string format that serves HTML nicely
         image['base64'] = image_formatter(img_object, image['format'])

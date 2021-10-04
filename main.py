@@ -6,7 +6,6 @@ app = Flask(__name__)
 
 @app.route('/rgb/')
 def rgb():
-    return render_template('rgb.html', images=image_data(Path(app.root_path)))
     path = Path(app.root_path) / "static" / "img"
     return render_template('rgb.html', images=image_data(path))
     #return render_template('rgb.html', images=image_data(Path(app.root_path)))
