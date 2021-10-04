@@ -16,6 +16,7 @@
 
 
 ## Table of Contents
+  - [Week 7](https://github.com/sonakshibhalla/flask_portfolio#week-6)
   - [Week 6](https://github.com/sonakshibhalla/flask_portfolio#week-6)
   - [Week 5](https://github.com/sonakshibhalla/flask_portfolio#week-5)
   - [Week 4](https://github.com/sonakshibhalla/flask_portfolio#week-4)
