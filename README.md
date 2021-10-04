@@ -89,6 +89,55 @@
 ##Ideation:
 This minilab is all about guessing songs. Samples of songs from different genres will be played to participants, requiring them to select from a list of songs, one of which contains the correct answer. Different difficulties can be selected with various complicating factors, such as the nicheness of the artist, minor distortions to the song, or only shorter snippets being played. Alternatively, the auditory experience could be entirely foregone, and participants would have to guess the song and/or complete lyrics after only being given the lyrics in writing.
 ***
+## Sprint 4 Week 7 and 8
+<table id="sprint3">
+<tr>
+<tr>Week 7 and 8</tr>
+<th>Job</th>
+<th>Person Assigned</th>
+<th>Commits</th>
+</tr>
+
+<tr>
+<td>Scrum Master, Unsigned Addition</td>
+<td>Riya</td>
+<td>
+<a href="https://github.com/B-G101/Team-BRS/projects/1" target="_blank">Link to Scrumboard with Issues</a><br>
+
+</td>
+</tr>
+
+<tr>
+<td>Pair Journal activities + Color codes </td>
+<td>Bria and Riya</td>
+<td>
+<a href="" target="_blank"></a><br>
+<a href="" target="_blank"></a><br>
+<a href="" target="_blank"></a><br>
+<a href="" target="_blank"></a><br>
+<a href="" target="_blank"></a><br>
+</td>
+</tr>
+
+<tr>
+<td>Pair Journal activities + Logic Gates </td>
+<td>Sreeja and Val</td>
+<a href="" target="_blank"></a><br>
+<a href="" target="_blank"></a><br>
+</td>
+</tr>
+
+<tr>
+<td>Multiply and Divide by 2</td>
+<td>Bria</td>
+<td>
+<a href="" target="_blank"></a><br>
+<a href="" target="_blank"></a><br>
+<a href="" target="_blank"></a><br>
+<a href="" target="_blank"></a><br>
+</td>
+</tr>
+</table>
 
 ## Sprint 3 Week 5 and 6
 <table id="sprint3">
