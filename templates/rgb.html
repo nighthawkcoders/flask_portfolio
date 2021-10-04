@@ -30,7 +30,23 @@
 {% block body %}
 <h1 class="text-center">RGB values within an Image</h1>
 <div class="container">
-  <button onclick="toggle()">GrayScale</button>
+  <style>
+    button {
+      background-color: pink;
+      width: 200px;
+      font-size: 20px;
+      padding: 10px;
+      border-radius: 5px;
+      border-color: hotpink;
+      color: white;
+      cursor: pointer;
+      position: absolute;
+      top: 11.5%;
+      right: 0.5%;
+
+    }
+  </style>
+  <button onclick="toggle()" style="background-color:pink; border-color:hotpink">GrayScale</button>
   <div class="row justify-content-md-center" id="colored">
     <table class="table">
       <thead>
