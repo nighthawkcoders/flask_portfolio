@@ -9,36 +9,34 @@
         //  help: https://www.geeksforgeeks.org/how-to-change-the-src-attribute-of-an-img-element-in-javascript-jquery/
 
 
-        function setImg(){
+        function setImg(index){
+          //  var imgId =  concat("img", index.toString());
+            if (document.getElementById("btn"+index).value == "Toggle Gray" ) {
+                // for each image in the image list, set its gray scale values
+                // img1, img2, img 3
+                document.getElementById("img" + index).src = document.getElementById("img_gray" + index).innerHTML;
+                document.getElementById("btn" + index).value = "Toggle Original";
 
-            if (document.getElementById("btn1").value == "Gray Scale" ) {
-               ;
-                document.getElementById("img1").src = document.getElementById("img_gray1").innerHTML;
-                document.getElementById("btn1").value = "Color";
-            }
-           else
-            {
-                document.getElementById("img1").src = document.getElementById("img_orig1").innerHTML;
-                document.getElementById("btn1").value = "Gray Scale";
-
-            }
-        }
-
-        function setInvert(){
-
-            if (document.getElementById("btn2").value == "Invert" ) {
-                ;
-                document.getElementById("img1").src = document.getElementById("img_invert1").innerHTML;
-                document.getElementById("btn2").value = "Regular";
-            }
-            else
-            {
-                document.getElementById("img1").src = document.getElementById("img_orig1").innerHTML;
-                document.getElementById("btn2").value = "Invert";
+            } else {
+                document.getElementById("img"+index).src = document.getElementById("img_orig"+index).innerHTML;
+                document.getElementById("btn"+index).value = "Toggle Gray";
 
             }
         }
 
+        function setInvert(index) {
+            if (index == 1 ){
+                if (document.getElementById("btn6").value == "Invert") {
+                    document.getElementById("img1").src = document.getElementById("img_invert1").innerHTML;
+                    document.getElementById("btn6").value = "Regular";
+                } else {
+                    document.getElementById("img1").src = document.getElementById("img_orig1").innerHTML;
+                    document.getElementById("btn6").value = "Invert";
+                }
+            } else {
+                alert ("Invert not supported for plain colors")
+            }
+        }
     </script>
     <title>RGB starter</title>
 {% endblock %}
@@ -56,7 +54,8 @@
                 </tr>
                 </thead>
                 <tbody>
-
+                <!-- iterate through the list of images in image.py - have 5 images, 1 scenery, 4 plain -->
+                <!-- Image 1 = Scenery, Image 2 = Blue, Image3  -->
                 {% for image in images %}
                     <tr>
                         <td>
@@ -68,8 +67,8 @@
                         </td>
                         <td>
                             <img class="img-responsive py-3" id=img{{loop.index}} alt="" width="256" height="Auto" src="{{image.base64}}" >
-                            <input type="button" value="Gray Scale" id="btn1" onclick="setImg()">
-                            <input type="button" value="Invert" id="btn2" onclick="setInvert()">
+                            <input type="button" value="Toggle Gray" id="btn{{ loop.index }}" onclick="setImg({{ loop.index }})">
+                            <input type="button" value="Invert" id="btn6"  onclick="setInvert({{ loop.index }})">
                             <!-- Hack: create button (btn{{loop.index}} to  call java script function
                                pass index to allow you to toggle images with hidden id's
                                {{image.base64}}  original image
@@ -78,8 +77,6 @@
                             <p hidden id="img_orig{{loop.index}}">{{image.base64}}</p>
                             <p hidden id="img_gray{{loop.index}}">{{image.base64_GRAY}}</p>
                             <p hidden id="img_invert{{loop.index}}">{{image.base64_INVERT}}</p>
-
-
 
                         </td>
                         <td>
