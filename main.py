@@ -6,6 +6,8 @@ app = Flask(__name__)
 
 app = Flask(__name__)
 
+app = Flask(__name__)
+
 @app.route('/rgb/')
 def rgb():
     path = Path(app.root_path) / "static" / "img"

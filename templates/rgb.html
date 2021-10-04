@@ -24,7 +24,20 @@
             }
         }
 
+        function setInvert(){
 
+            if (document.getElementById("btn2").value == "Invert" ) {
+                ;
+                document.getElementById("img1").src = document.getElementById("img_invert1").innerHTML;
+                document.getElementById("btn2").value = "Regular";
+            }
+            else
+            {
+                document.getElementById("img1").src = document.getElementById("img_orig1").innerHTML;
+                document.getElementById("btn2").value = "Invert";
+
+            }
+        }
 
     </script>
     <title>RGB starter</title>
@@ -43,7 +56,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                <input type="button" value="Gray Scale" id="btn1" onclick="setImg()">
+
                 {% for image in images %}
                     <tr>
                         <td>
@@ -55,6 +68,8 @@
                         </td>
                         <td>
                             <img class="img-responsive py-3" id=img{{loop.index}} alt="" width="256" height="Auto" src="{{image.base64}}" >
+                            <input type="button" value="Gray Scale" id="btn1" onclick="setImg()">
+                            <input type="button" value="Invert" id="btn2" onclick="setInvert()">
                             <!-- Hack: create button (btn{{loop.index}} to  call java script function
                                pass index to allow you to toggle images with hidden id's
                                {{image.base64}}  original image
@@ -62,6 +77,7 @@
                             -->
                             <p hidden id="img_orig{{loop.index}}">{{image.base64}}</p>
                             <p hidden id="img_gray{{loop.index}}">{{image.base64_GRAY}}</p>
+                            <p hidden id="img_invert{{loop.index}}">{{image.base64_INVERT}}</p>
 
 
 

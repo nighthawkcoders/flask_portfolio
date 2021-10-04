@@ -21,7 +21,12 @@ def image_formatter(img, img_type):
 def image_data(path=Path("static/img/"), images=None):  # path of static images is defaulted
     if images is None:  # color_dict is defined with defaults
         images = [
-            {'source': "Peter Carolin", 'label': "Lassen Volcano", 'file': "lassen-volcano-256.jpg"}
+            {'source': "Peter Carolin", 'label': "Lassen Volcano", 'file': "lassen-volcano-256.jpg"},
+            {'source': "Peter Carolin", 'label': "Black Square", 'file': "black-square-16.png"},
+            {'source': "Peter Carolin", 'label': "Blue Square", 'file': "blue-square-16.jpg"},
+            {'source': "Peter Carolin", 'label': "Green Square", 'file': "green-square-16.png"},
+            {'source': "Peter Carolin", 'label': "Red Square", 'file': "red-square-16.png"},
+            {'source': "Peter Carolin", 'label': "White Square", 'file': "white-square-16.png"}
         ]
     # gather analysis data and meta data for each image, adding attributes to each row in table
     for image in images:
@@ -38,6 +43,8 @@ def image_data(path=Path("static/img/"), images=None):  # path of static images 
 
         # Hacks here for images https://www.tutorialspoint.com/python_pillow/index.htm
         # use open img_object!!!
+        #img_object = img_object.filter(ImageFilter.BLUR)
+
 
         # Conversion of original Image to Base64, a string format that serves HTML nicely
         image['base64'] = image_formatter(img_object, image['format'])
@@ -48,6 +55,7 @@ def image_data(path=Path("static/img/"), images=None):  # path of static images 
         image['hex_array'] = []
         image['binary_array'] = []
         image['gray_data'] = []
+        image['invert_data'] = []
 
         # 'data' is a list of RGB data, the list is traversed and hex and binary lists are calculated and formatted
         for pixel in image['data']:
@@ -64,11 +72,22 @@ def image_data(path=Path("static/img/"), images=None):  # path of static images 
                 image['gray_data'].append((average, average, average, pixel[3]))
             else:
                 image['gray_data'].append((average, average, average))
+
+            # create invert of image
+            invert = (abs(70-pixel[0])+abs(70-pixel[1])+abs(70-pixel[2]))
+            if len(pixel) > 3:
+                image['invert_data'].append((invert, invert, invert, pixel[3]))
+            else:
+                image['invert_data'].append((invert, invert, invert))
         # end for loop for pixels
 
         # Conversion of modified Image to Base64
         img_object.putdata(image['gray_data'])
         image['base64_GRAY'] = image_formatter(img_object, image['format'])
+
+        img_object.putdata(image['invert_data'])
+        image['base64_INVERT'] = image_formatter(img_object, image['format'])
+
 
     # end for loop for images
     return images  # list is returned with all the attributes for each image in a dictionary
@@ -76,7 +95,7 @@ def image_data(path=Path("static/img/"), images=None):  # path of static images 
 
 # run this as standalone tester to see sample data printed in terminal
 if __name__ == "__main__":
-    local_path = Path("../starter/static/img/")
+    local_path = Path("../flask_portfolio/static/img/")
     images = image_data(local_path)  # path of local run
     for image in images:
         # print some details about the image so you can validate that it looks like it is working
@@ -98,16 +117,18 @@ if __name__ == "__main__":
         # base65
         print("----  base64  -----")
         print(image['base64'])
+        print (image['invert_data'])
 
         # do so things to image that are not in image_info
         filename = local_path / image['file']
         img_object = Image.open(filename)
 
         # mess with the image
-        img_object = img_object.transpose(Image.FLIP_TOP_BOTTOM)
-        img_object = img_object.filter(ImageFilter.GaussianBlur)
-        draw = ImageDraw.Draw(img_object)
-        draw.text((0, 0), "Size is {0} X {1}".format(*image['size']))  # draw in image
+        #img_object = img_object.transpose(Image.FLIP_TOP_BOTTOM)
+        #img_object = img_object.filter(ImageFilter.GaussianBlur)
+        img_object = img_object.filter(ImageFilter.BLUR)
+        #draw = ImageDraw.Draw(img_object)
+        #draw.text((0, 0), "Size is {0} X {1}".format(*image['size']))  # draw in image
 
         # open on desktop
         img_object.show()
