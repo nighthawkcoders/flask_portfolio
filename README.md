@@ -16,7 +16,7 @@
 
 
 ## Table of Contents
-  - [Week 7](https://github.com/sonakshibhalla/flask_portfolio#week-6)
+  - [Week 7](https://github.com/sonakshibhalla/flask_portfolio#week-7)
   - [Week 6](https://github.com/sonakshibhalla/flask_portfolio#week-6)
   - [Week 5](https://github.com/sonakshibhalla/flask_portfolio#week-5)
   - [Week 4](https://github.com/sonakshibhalla/flask_portfolio#week-4)
@@ -51,23 +51,11 @@
 ### Individual Scoring
 | Name | Requirment | Evidence | Grade |
 | --- | ---        | ---      | --- |
-| Saumya | Individual Technicals 2 point.  Code commits is required on something Technical. | [Ticket](hhttps://github.com/sonakshibhalla/flask_portfolio/projects/1#card-68302060) | 2/2 |
-
-| Sonakshi | Individual Technicals 2 point.  Code commits is required on something Technical. | [Ticket 1](https://github.com/sonakshibhalla/flask_portfolio/projects/1#card-67978503) and [Ticket 2](https://github.com/4disease/p1-donuts-new/projects/1#card-67978551) | 2/2 |
-
-|Kashish| Individual Technicals 2 point.  Code commits is required on something Technical. | [Ticket 1](https://github.com/sonakshibhalla/flask_portfolio/projects/1#card-68848759) and 
-
-
-| Saumya| [Individual Journals](https://docs.google.com/document/d/1nkBoOvmQhoIScKwd0u3vV3TiDgj4mWT9NPqn355nj9U/edit?usp=sharing) | 5/5 |
-| Sonakshi| [Individual Journals](link) & [TT & TPT
-| Kashish| Unit 4 and Journal is 5 points | [Individual Journals](link) | 5/5 |
-| Notes |(https://docs.google.com/document/d/1QwZR7rZCKQ_408GuY0SUCDS9y_yJ-nyMV44ZrVq_2t0/edit?usp=sharing)| 5/5 |
-| Kashish | Unit 4 and Journal is 5 points | [Individual Journals](https://docs.google.com/document/d/1nrmzM9ZZKpLgSpoci978MJ_qGaV5M3oZDaYvcKt0O_U/edit?usp=sharing) and [TT & TPT Notes](https://docs.google.com/document/d/16K6aheHJTJdytH5vH_9Q-GDjV7uvpKgQ-4cHytyWjlo/edit#bookmark=id.nqmd8yrm8gds) | 5/5 |
-| Saumya | Unit 4 and Journal is 5 points | [Individual Journals](https://docs.google.com/document/d/1W86g0bk3poXqshe1gM5snJrwr-bu23_7WzizjFT6P58/edit?usp=sharing) and [TT & TPT Notes](https://docs.google.com/document/d/16K6aheHJTJdytH5vH_9Q-GDjV7uvpKgQ-4cHytyWjlo/edit#bookmark=id.nqmd8yrm8gds) | 5/5 |
-| Sonakshi | Unit 4 and Journal is 5 points | Individual Journals | -/5 |
-
-### Overview Video 
-https://www.youtube.com/watch?v=g5CSwQPwKAw&ab_channel=NatashaKapoor
+| Saumya | 2/2
+|Sonakshi | 2/2
+|Kashish | 2/2
+### Tech Talk Video
+https://youtu.be/UPD-ODdUVYg
 
 ## Week 3
 ### Team PBL
@@ -124,9 +112,9 @@ https://www.youtube.com/watch?v=g5CSwQPwKAw&ab_channel=NatashaKapoor
 
 | Name | Score | Evidence | Laptop plans |
 |  --- |  ---  |  ---     |  ---         |
-| Saumya | 7/7 | [Individual page](https://github.com/4disease/p1-donuts-new/blob/master/src/main/resources/templates/minilabs/sam.html), [Unit 2 Journal]()| will use personal laptop at home and school |
-| Sonakshi | 7/7 | [Individual page](https://github.com/4disease/p1-donuts-new/blob/master/src/main/resources/templates/minilabs/natasha.html), [Unit 2 Journal]()| will use personal laptop at home and school |
-| Kashish | 7/7 | [Individual page](https://github.com/4disease/p1-donuts-new/blob/master/src/main/resources/templates/minilabs/kira.html), [Unit 2 Journal]| will use personal laptop at home and school |
+| Saumya | 7/7 | | will use personal laptop at home and school |
+| Sonakshi | 7/7 |  will use personal laptop at home and school |
+| Kashish | 7/7 | will use personal laptop at home and school |
 
 
 ## Week 7
@@ -141,8 +129,8 @@ https://www.youtube.com/watch?v=g5CSwQPwKAw&ab_channel=NatashaKapoor
 OWe had our design brainstorming session today talking about the design ideas for our website. Our group finalized a traveling design for our website which includes all of the seven continents and popular tourist destinations at those locations. Some of these tourist destinations include high rated restaurants, the seven wonders of the world, historical must-sees, and even locations to relax. The information to follow is all visible at this link with our wireframe: Wireframe for App - Coders
 As is visible, we have a cover page, with our FAQs, mini-labs, and About Us page. All of these buttons lead us to different screens with the corresponding information. We plan to have a “scroll more” button that gives options for traveling, one of which is the seven continents. We plan to have a drop down menu labeled ‘Continents’ and we would have the seven continents drop down from that bar. Once you click on a certain continent, the website will direct you to the options listed above. There will be a contact us section of the website where users can reach us if they have any questions regarding their trip. From there, you can plan your perfect trip to one of the wonderful seven continents!
 
-## Intro Video
-"https://youtu.be/UPD-ODdUVYg"
+## Sprint 3,4 Video
+"https://youtu.be/4c6BQX599jw"
 
 
 
