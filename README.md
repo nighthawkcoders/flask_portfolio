@@ -114,6 +114,7 @@ This minilab is all about guessing songs. Samples of songs from different genres
 <td>
 <a href="https://github.com/B-G101/Team-BRS/issues/71" target="_blank">Pair journal for this week with TPT activities</a><br>
 <a href="https://github.com/B-G101/Team-BRS/commit/4218713df5d134991b2942de9598e1c02c2cb9dc" target="_blank">Working Grayscale OnClick</a><br>
+<a href="https://github.com/B-G101/Team-BRS/commit/9a956a36094cd9bb64375cebd4f58ba61188d63e" target="_blank">Greyscale fully fixed + Invert fixed</a><br>
 <a href="https://github.com/B-G101/Team-BRS/commit/385bae4149a09d6795b018a44f56110b9c61e681" target="_blank">Text Written on Image Plus Image Manipulation (Enhanced Filter)</a><br>
 <a href="" target="_blank"></a><br>
 </td>
