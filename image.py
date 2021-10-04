@@ -18,7 +18,7 @@ def image_formatter(img, img_type):
 
 
 # color_data prepares a series of images for data analysis
-def image_data(path=Path("static/img/"), images=None):  # path of static images is defaulted
+def image_data(path=Path("flask_portfolio/static/img/"), images=None):  # path of static images is defaulted
     if images is None:  # color_dict is defined with defaults
         images = [
             {'source': "Peter Carolin", 'label': "Lassen Volcano", 'file': "lassen-volcano-256.jpg"},
@@ -36,8 +36,8 @@ def image_data(path=Path("static/img/"), images=None):  # path of static images 
         # Image open return PIL image object
         img_object = Image.open(filename)
         d1 = ImageDraw.Draw(img_object)
-        d1.text((28, 36), "Music Quote!", fill=(255, 0, 0))
-        img_object.show()
+        d1.text((28, 36), "Music Quote!", fill=(226, 184, 182))
+        #img_object.show()
 
         # Python Image Library operations
         image['format'] = img_object.format
@@ -48,7 +48,7 @@ def image_data(path=Path("static/img/"), images=None):  # path of static images 
         # use open img_object!!!
         img_object = img_object.filter(ImageFilter.EDGE_ENHANCE)
         draw = ImageDraw.Draw(img_object)
-        # draw.text((1, 8), "Hello there", fill=(226, 184, 182))
+        #draw.text((1, 8), "Hello there", fill=(226, 184, 182))
 
         # Conversion of original Image to Base64, a string format that serves HTML nicely
         image['base64'] = image_formatter(img_object, image['format'])
@@ -130,9 +130,9 @@ if __name__ == "__main__":
         # mess with the image
         #img_object = img_object.transpose(Image.FLIP_TOP_BOTTOM)
         #img_object = img_object.filter(ImageFilter.GaussianBlur)
-        img_object = img_object.filter(ImageFilter.BLUR)
-        draw = ImageDraw.Draw(img_object)
-        draw.text((30, 20), "Hello there", fill=(226, 184, 182))  # draw in image
+        #img_object = img_object.filter(ImageFilter.BLUR)
+        #draw = ImageDraw.Draw(img_object)
+        #draw.text((30, 20), "Hello there", fill=(226, 184, 182))  # draw in image
 
         # open on desktop
         img_object.show()
