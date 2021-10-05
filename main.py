@@ -2,7 +2,7 @@
 from pathlib import Path
 
 from flask import Flask, render_template, request
-from algorithms.image import rotatehack, sonakshi_image_data, kashish_image_data
+from algorithms.image import rotatehack, sonakshi_image_data, kashish_image_data, saumya_image_data
 
 
 # create a Flask instance
@@ -123,6 +123,15 @@ def kashishrgb():
         grayList.append(img['base64_GRAY'])
     return render_template("kashishrgb.html", images=trash, colored=colorList, grayed=grayList )
 
+@app.route('/saumyargb/', methods=['GET', 'POST'])
+def saumyargb():
+    trash = saumya_image_data()
+    colorList = []
+    grayList = [] # pass in the lists from the image_data() function
+    for img in trash:
+        colorList.append(img['base64'])
+        grayList.append(img['base64_GRAY'])
+    return render_template("saumyargb.html", images=trash, colored=colorList, grayed=grayList )
 
 
 @app.route('/insights/')
