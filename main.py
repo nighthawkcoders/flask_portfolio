@@ -75,6 +75,11 @@ def rgb():
 def list():
     return render_template("list.html")
 
+@app.route('/colorcodes')
+def colorcodes():
+    return render_template("colorcodes.html")
+
+
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)
