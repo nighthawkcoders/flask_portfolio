@@ -24,6 +24,9 @@
   - [Week 2](https://github.com/sonakshibhalla/flask_portfolio#week-2)
   - [Ideation](https://github.com/sonakshibhalla/flask_portfolio#ideation)
 ## Week 7
+### Ideation
+#### This week was a completely technical week working on the RGB minilab
+#### We created the toggle functions, RGB, and rotate images
 
 
 ## Week 6
