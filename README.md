@@ -158,7 +158,7 @@ This minilab is all about guessing songs. Samples of songs from different genres
 </tr>
 
 <tr>
-<td>Pair Journal activities + greyscale, manipulating images, text on images</td>
+<td>Pair Journal activities + greyscale, manipulating images</td>
 <td>Bria and Riya</td>
 <td>
 <a href="https://github.com/B-G101/Team-BRS/issues/71" target="_blank">Pair journal for this week with TPT activities</a><br>
@@ -170,11 +170,13 @@ This minilab is all about guessing songs. Samples of songs from different genres
 </tr>
 
 <tr>
-<td>Pair Journal activities + New documentation, + Backend </td>
+<td>Pair Journal activities + New documentation, + Backend, text on images, Big O notation notes</td>
 <td>Sreeja and Val</td>
 <td><a href="https://github.com/B-G101/Team-BRS/issues/75" target="_blank">Pair journal for this week with TPT activities</a><br>
 <a href="https://docs.google.com/presentation/d/1xNbn_2MFgy4ZbDfu_n0BtvNZC11MNksGr8CKIXHi8Hw/edit?usp=sharing" target="_blank">Documentation Assignment</a><br>
 <a href="https://github.com/B-G101/Team-BRS/commit/1e9d675e6224c84a5c62f39f4e273e58fccc8176" target="_blank">Val's Spongebob IP address Image manipulation</a><br>
+<a href="https://github.com/B-G101/Team-BRS/commit/247618d228f56bafb7ef3729442851c8c8465dcb" target="_blank">Python Pillow</a><br>
+<a href="https://docs.google.com/document/d/1lwvv6OTp7R6eN3u1v5iJ5WW8DPo_MDC5s-2QKd1iJ_A/edit" target="_blank">Big O Notation Notes</a><br>
 </td>
 </tr>
 
