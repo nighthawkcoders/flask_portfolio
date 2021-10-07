@@ -73,7 +73,9 @@ def sonakshi_image_data(path="static/assets/sonakshiimages/", img_list=None):
         img_reference = Image.open(file)  # PIL
         # HERE is commit for adding text into images
         draw = ImageDraw.Draw(img_reference)
-        draw.text((25, 25), "Writing on images!", fill=(500, 500, 500))  # draw in image
+        draw.text((25, 25), "Writing on images!", fill=(500, 500, 500))
+        hori_flippedImage = img_reference.transpose(Image.FLIP_LEFT_RIGHT)
+        hori_flippedImage.save(file)# draw in image
         img_data = img_reference.getdata()  # Reference https://www.geeksforgeeks.org/python-pil-image-getdata/
         img_dict['format'] = img_reference.format
         img_dict['mode'] = img_reference.mode
