@@ -91,6 +91,7 @@ add new images (ie PNGs) to project -->
 // Binary numbers
             const binary = getBits();
             setConversions(binary);
+
         }
         // add is positive integer, subtract is negative integer
         function add(n) {
@@ -102,6 +103,9 @@ add new images (ie PNGs) to project -->
             } else { // MINUS
                 decimal = 0 === decimal ? MAX : decimal += n; // OVERFLOW or MINUS
             }
+
+
+
 // convert the result back to binary
             binary = decimal_2_base(decimal, 2);
 // update conversions
@@ -119,6 +123,65 @@ add new images (ie PNGs) to project -->
                 }
             }
         }
+        function multiply(n) {
+            let binary = getBits();
+// convert to decimal and do math
+            let decimal = parseInt(binary, 2);
+            if (n > 0) { // PLUS
+                decimal = MAX === decimal ? 0 : decimal *= n; // OVERFLOW or PLUS
+            } else { // MINUS
+                decimal = 0 === decimal ? MAX : decimal *= n; // OVERFLOW or MINUS
+            }
+
+
+
+// convert the result back to binary
+            binary = decimal_2_base(decimal, 2);
+// update conversions
+            setConversions(binary);
+// update bits
+            for (let i = 0; i < binary.length; i++) {
+                let digit = binary.substr(i, 1);
+                document.getElementById('digit' + i).value = digit;
+                if (digit === "1") {
+                    document.getElementById('bulb' + i).src = "{{ imgBulbOn }}";
+                    document.getElementById('butt' + i).innerHTML = "{{ msgTurnOff }}";
+                } else {
+                    document.getElementById('bulb' + i).src = "{{ imgBulbOff }}";
+                    document.getElementById('butt' + i).innerHTML = "{{ msgTurnOn }}";
+                }
+            }
+        }
+        function divide(n) {
+            let binary = getBits();
+// convert to decimal and do math
+            let decimal = parseInt(binary, 2);
+            if (n > 0) { // PLUS
+                decimal = MAX === decimal ? 0 : decimal /= n; // OVERFLOW or PLUS
+            } else { // MINUS
+                decimal = 0 === decimal ? MAX : decimal /= n; // OVERFLOW or MINUS
+            }
+
+
+
+// convert the result back to binary
+            binary = decimal_2_base(decimal, 2);
+// update conversions
+            setConversions(binary);
+// update bits
+            for (let i = 0; i < binary.length; i++) {
+                let digit = binary.substr(i, 1);
+                document.getElementById('digit' + i).value = digit;
+                if (digit === "1") {
+                    document.getElementById('bulb' + i).src = "{{ imgBulbOn }}";
+                    document.getElementById('butt' + i).innerHTML = "{{ msgTurnOff }}";
+                } else {
+                    document.getElementById('bulb' + i).src = "{{ imgBulbOff }}";
+                    document.getElementById('butt' + i).innerHTML = "{{ msgTurnOn }}";
+                }
+            }
+        }
+
     </script>
 
     <h1 class="text-center">Binary Math with Conversions</h1>
@@ -134,6 +197,7 @@ add new images (ie PNGs) to project -->
             <div class="col-8">
                 <table class="table">
                     <tr id="table">
+                        <th>Shift Left (*2)</th>
                         <th>Plus</th>
                         <th>Binary</th>
                         <th>Octal</th>
@@ -142,16 +206,22 @@ add new images (ie PNGs) to project -->
                         <th>Ascii</th>
                         <!-- Hack: display ASCII label for printable character(s) -->
                         <th>Minus</th>
+                        <th>Shift Right (/2)</th>
+
                     </tr>
                     <tr>
+                        <td ><button type="button" id="mul1" onclick = "multiply(2)"><<</button></td>
                         <td><button type="button" id="add1" onclick="add(1)">+1</button></td>
                         <td id="binary">00000000</td>
                         <td id="octal">0</td>
                         <td id="hexadecimal">0</td>
                         <td id="decimal">0</td>
                         <td id="ascii">0</td>
+
                         <!-- Hack: display ASCII printable character(s) -->
                         <td><button type="button" id="sub1" onclick="add(-1)">-1</button></td>
+                        <td ><button type="button" id="div1" onclick = "divide(2)">>><//2</button></td>
+
                     </tr>
                 </table>
             </div>
