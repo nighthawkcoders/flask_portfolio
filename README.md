@@ -8,7 +8,7 @@
 
 
 ## Contributors
-| Name | GitHub Profile | Tasks | Scrum Board | Commits |
+| Name | GitHub Profile | Tasks | Scrum Board | s |
 |:-----|:----------------------|:-----:|:-----------:|:-------:|
 | Sonakshi Bhalla | [@sonakshibhalla](https://github.com/sonakshibhalla) | [Tasks](https://github.com/sonakshibhalla/flask_portfolio/issues/assigned/sonakshibhalla) |[Scrum Board](https://github.com/sonakshibhalla/flask_portfolio/projects/1?card_filter_query=assignee%3Asonakshibhalla)| [Commits](https://github.com/sonakshibhalla/flask_portfolio/commits?author=sonakshibhalla)
 | Kashish Chopra | [@kashishchopraa](https://github.com/kashishchopraa) | [Tasks](https://github.com/sonakshibhalla/flask_portfolio/issues/assigned/kashishchopraa) | [Scrum Board](https://github.com/sonakshibhalla/flask_portfolio/projects/1?card_filter_query=assignee%3Akashishchopraa) | [Commits](https://github.com/sonakshibhalla/flask_portfolio/commits?author=kashishchopraa)
@@ -16,12 +16,18 @@
 
 
 ## Table of Contents
+  - [Week 7](https://github.com/sonakshibhalla/flask_portfolio#week-7)
   - [Week 6](https://github.com/sonakshibhalla/flask_portfolio#week-6)
   - [Week 5](https://github.com/sonakshibhalla/flask_portfolio#week-5)
   - [Week 4](https://github.com/sonakshibhalla/flask_portfolio#week-4)
   - [Week 3](https://github.com/sonakshibhalla/flask_portfolio#week-3)
   - [Week 2](https://github.com/sonakshibhalla/flask_portfolio#week-2)
   - [Ideation](https://github.com/sonakshibhalla/flask_portfolio#ideation)
+## Week 7
+### Ideation
+#### This week was a completely technical week working on the RGB minilab
+#### We created the toggle functions, RGB, and rotate images
+
 
 ## Week 6
 
@@ -48,31 +54,18 @@
 ### Individual Scoring
 | Name | Requirment | Evidence | Grade |
 | --- | ---        | ---      | --- |
-| Saumya | Individual Technicals 2 point.  Code commits is required on something Technical. | [Ticket](hhttps://github.com/sonakshibhalla/flask_portfolio/projects/1#card-68302060) | 2/2 |
-
-| Sonakshi | Individual Technicals 2 point.  Code commits is required on something Technical. | [Ticket 1](https://github.com/sonakshibhalla/flask_portfolio/projects/1#card-67978503) and [Ticket 2](https://github.com/4disease/p1-donuts-new/projects/1#card-67978551) | 2/2 |
-
-|Kashish| Individual Technicals 2 point.  Code commits is required on something Technical. | [Ticket 1](https://github.com/sonakshibhalla/flask_portfolio/projects/1#card-68848759) and 
-
-
-| Saumya| [Individual Journals](https://docs.google.com/document/d/1nkBoOvmQhoIScKwd0u3vV3TiDgj4mWT9NPqn355nj9U/edit?usp=sharing) | 5/5 |
-| Sonakshi| [Individual Journals](link) & [TT & TPT
-| Kashish| Unit 4 and Journal is 5 points | [Individual Journals](link) | 5/5 |
-| Notes |(https://docs.google.com/document/d/1QwZR7rZCKQ_408GuY0SUCDS9y_yJ-nyMV44ZrVq_2t0/edit?usp=sharing)| 5/5 |
-| Kashish | Unit 4 and Journal is 5 points | [Individual Journals](https://docs.google.com/document/d/1nrmzM9ZZKpLgSpoci978MJ_qGaV5M3oZDaYvcKt0O_U/edit?usp=sharing) and [TT & TPT Notes](https://docs.google.com/document/d/16K6aheHJTJdytH5vH_9Q-GDjV7uvpKgQ-4cHytyWjlo/edit#bookmark=id.nqmd8yrm8gds) | 5/5 |
-| Saumya | Unit 4 and Journal is 5 points | [Individual Journals](https://docs.google.com/document/d/1W86g0bk3poXqshe1gM5snJrwr-bu23_7WzizjFT6P58/edit?usp=sharing) and [TT & TPT Notes](https://docs.google.com/document/d/16K6aheHJTJdytH5vH_9Q-GDjV7uvpKgQ-4cHytyWjlo/edit#bookmark=id.nqmd8yrm8gds) | 5/5 |
-| Sonakshi | Unit 4 and Journal is 5 points | Individual Journals | -/5 |
-
-### Overview Video 
-https://www.youtube.com/watch?v=g5CSwQPwKAw&ab_channel=NatashaKapoor
+| Saumya | 2/2
+|Sonakshi | 2/2
+|Kashish | 2/2
+### Tech Talk Video
+https://youtu.be/UPD-ODdUVYg
 
 ## Week 3
 ### Team PBL
-| Requirment | Evidence |
+| Requirement | Evidence |
 | ---        | ---      |
-| Pair Design / HTML.  Transfer design to layout.  Much of this could simply be converting Ideas to HTML.  Objective is to get your own STYLE, COLORS, FONTS; NAVIGATION into the site.  Establish your VIBE or Groove.  Try a couple of prototype experiments and get feedback from similar pair in Crossover. | [Layout Ticket](https://github.com/4disease/p1-donuts-new/issues/16) and [Main Page Ticket](https://github.com/4disease/p1-donuts-new/issues/6) & [Screenshot](https://github.com/4disease/p1-donuts-new#screeshots)|
-|Pair Prototyping / Thymeleaf.  Try using Class objects in Thymeleaf.    Most simple Class would be to use String methods (Links to an external site.) and Number methods, (Links to an external site.) more complex is to use your own defined Class include Images or other Media.   Objective is to produce a 3 by 3 grid using Bootstrap Grids, Bootstrap Tables, Bootstrap Cards.  Try to incorporate into Project or consider as Mini Lab depending on your design.  Try changing 3 x 3 to 4 x 4 or other orientation would be showing ability to manage page dynamically.| [Ticket](https://github.com/4disease/p1-donuts-new/issues/18) & [Screenshot](https://github.com/4disease/p1-donuts-new#screeshots) |
-| TPT2 MiniLab | [Ticket](https://github.com/4disease/p1-donuts-new/issues/15) & [Screenshot](https://github.com/4disease/p1-donuts-new#screeshots) | 
+| Pair Design / HTML.  Transfer design to layout.  Much of this could simply be converting Ideas to HTML.  Objective is to get your own STYLE, COLORS, FONTS; NAVIGATION into the site.  Establish your VIBE or Groove.  Try a couple of prototype experiments and get feedback from similar pair in Crossover. | [Layout Ticket] [Main Page Ticket](https://github.com/sonakshibhalla/flask_portfolio) & [Screenshot]
+|Pair Prototyping / Thymeleaf.  Try using Class objects in Thymeleaf.    Most simple Class would be to use String methods (Links to an external site.) and Number methods, (Links to an external site.) more complex is to use your own defined Class include Images or other Media.   Objective is to produce a 3 by 3 grid using Bootstrap Grids, Bootstrap Tables, Bootstrap Cards.  Try to incorporate into Project or consider as Mini Lab depending on your design.  Try changing 3 x 3 to 4 x 4 or other orientation would be showing ability to manage page dynamically. 
 
 
 ### Scrum Team Management
@@ -103,58 +96,35 @@ https://www.youtube.com/watch?v=g5CSwQPwKAw&ab_channel=NatashaKapoor
 
 | Requirement | Evidence |
 | ---        | ---      |
-| Scrum Master. Define tasks and place assignments to in-progress on the Scrum board.| [Scrum Board](https://github.com/4disease/p1-donuts-new/projects/1) |
+| Scrum Master. Define tasks and place assignments to in-progress on the Scrum board.| [Scrum Board](https://github.com/sonakshibhalla/flask_portfolio/projects/1) |
 | Designer. Wire Frame (at least three theme pages, team mini-labs, and about) | on our website page |
-| Technical Lead. Coordinate brain write session, after preliminary wire frames, make sure you capture technical complexities as an output of this exercise (input, saving data, comments, visual actions, animations, ...) | can be seen in the [issues](https://github.com/4disease/p1-donuts-new/issues) section |
-| Navigators. Capture or build highlight of Ideation in README.md, this allows ideas to persist with Project,  Make sure that work from Developers works to expectations (testing, suggestions for improvement) | [Ideation](https://github.com/4disease/p1-donuts-new#ideation) |
-| Developers. Bootstrap drop downs in navbar, start to form Wire Frame menu options.  Each menu option should have a Stub code page | Navbar finished [Ticket](https://github.com/4disease/p1-donuts-new/issues/3)|
-| Developers. Integration of Greet, Birds, Unit 1 functionality into a mini-lab page | [Ticket](https://github.com/4disease/p1-donuts-new/issues/2) |
-| Designer/Developer. 1 minute video integrated into About Us on Genesis ideas for project. | [Ticket](https://github.com/4disease/p1-donuts-new/issues/1) |
+| Technical Lead. Coordinate brain write session, after preliminary wire frames, make sure you capture technical complexities as an output of this exercise (input, saving data, comments, visual actions, animations, ...) | can be seen in the [issues](https://github.com/sonakshibhalla/flask_portfolio/issues) section |
+| Navigators. Capture or build highlight of Ideation in README.md, this allows ideas to persist with Project,  Make sure that work from Developers works to expectations (testing, suggestions for improvement) | [Ideation](https://github.com/sonakshibhalla/flask_portfolio#ideation) |
+| Developers. Bootstrap drop downs in navbar, start to form Wire Frame menu options.  Each menu option should have a Stub code page | Navbar finished [Ticket](https://github.com/sonakshibhalla/flask_portfolio#ideation)|
+| Developers. Integration of Greet, Birds, Unit 1 functionality into a mini-lab page | [Ticket](https://github.com/sonakshibhalla/flask_portfolio) |
+| Designer/Developer. 1 minute video integrated into About Us on Genesis ideas for project. | [Ticket](https://github.com/sonakshibhalla/flask_portfolio) |
 
 ### Individual PBL
 
-[Saumya's Journal](https://docs.google.com/document/d/1QwZR7rZCKQ_408GuY0SUCDS9y_yJ-nyMV44ZrVq_2t0/edit?usp=sharing)
+[Saumya's Journal](https://docs.google.com/document/d/1nkBoOvmQhoIScKwd0u3vV3TiDgj4mWT9NPqn355nj9U/edit?usp=sharing)
+[Sonakshi and Kashish's Joural](https://docs.google.com/document/d/1FW_b7zlKt8A3x_9Ah4Mo1ItCtjWvCrqs2BooDvLcs0w/edit?usp=sharing)
 
-[Sonakshi and Kashish's Joural](https://docs.google.com/document/d/16K6aheHJTJdytH5vH_9Q-GDjV7uvpKgQ-4cHytyWjlo/edit?usp=sharing)
-
-[Evidence of contributions](https://github.com/4disease/p1-donuts-new/graphs/contributors) and [scrum board](https://github.com/4disease/p1-donuts-new/projects/1)
+[Evidence of contributions](https://github.com/sonakshibhalla/flask_portfolio/graphs/contributors) and [scrum board](https://github.com/sonakshibhalla/flask_portfolio/projects/1)
 
 | Name | Score | Evidence | Laptop plans |
 |  --- |  ---  |  ---     |  ---         |
-| Saumya | 7/7 | [Individual page](https://github.com/4disease/p1-donuts-new/blob/master/src/main/resources/templates/minilabs/sam.html), [Unit 2 Journal]()| will use personal laptop at home and school |
-| Sonakshi | 7/7 | [Individual page](https://github.com/4disease/p1-donuts-new/blob/master/src/main/resources/templates/minilabs/natasha.html), [Unit 2 Journal]()| will use personal laptop at home and school |
-| Kashish | 7/7 | [Individual page](https://github.com/4disease/p1-donuts-new/blob/master/src/main/resources/templates/minilabs/kira.html), [Unit 2 Journal]| will use personal laptop at home and school |
+| Saumya | 7/7 | |will use personal laptop at home and school|
+| Sonakshi | 7/7 |will use personal laptop at home and school|
+| Kashish | 7/7 |will use personal laptop at home and school|
 
 
-## Week 7
-### Modeling
-| Name | Requirement | Evidence | Grade |
-| ---  | ---         | ---      | ---   |
-| Saumya | View/Frontend improvements<br>Control improvements<br>Model improvements | Ticket<br>Ticket<br>Ticket | -/1<br>-/1<br>-/3 |
-| Sonakshi | View/Frontend improvements<br>Control improvements<br>Model improvements | Ticket<br>Ticket<br>Ticket | -/1<br>-/1<br>-/3 |
-| Kashish | View/Frontend improvements<br>Control improvements<br>Model improvements | Ticket<br>Ticket<br>Ticket | -/1<br>-/1<br>-/3 |
 
 ## Ideation/Brainwrite
 OWe had our design brainstorming session today talking about the design ideas for our website. Our group finalized a traveling design for our website which includes all of the seven continents and popular tourist destinations at those locations. Some of these tourist destinations include high rated restaurants, the seven wonders of the world, historical must-sees, and even locations to relax. The information to follow is all visible at this link with our wireframe: Wireframe for App - Coders
 As is visible, we have a cover page, with our FAQs, mini-labs, and About Us page. All of these buttons lead us to different screens with the corresponding information. We plan to have a “scroll more” button that gives options for traveling, one of which is the seven continents. We plan to have a drop down menu labeled ‘Continents’ and we would have the seven continents drop down from that bar. Once you click on a certain continent, the website will direct you to the options listed above. There will be a contact us section of the website where users can reach us if they have any questions regarding their trip. From there, you can plan your perfect trip to one of the wonderful seven continents!
 
-## Intro Video
-"https://youtu.be/UPD-ODdUVYg"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+## Sprint 3,4 Video
+"https://youtu.be/4c6BQX599jw"
 
 ## Sprint 3 Project Ideation
 ### Design Progress
