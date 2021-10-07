@@ -99,14 +99,13 @@ This minilab is all about guessing songs. Samples of songs from different genres
 </tr>
 
 <tr>
-<td>Scrum Master, Unsigned Addition</td>
+<td>Scrum Master, ASCII to unicode </td>
 <td>Riya</td>
 <td>
 <a href="https://github.com/B-G101/Team-BRS/projects/1" target="_blank">Link to Scrumboard with Issues</a><br>
 
 </td>
 </tr>
-
 <tr>
 <td>Pair Journal activities + Color codes </td>
 <td>Bria and Riya</td>
