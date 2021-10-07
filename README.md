@@ -24,6 +24,9 @@
   - [Week 2](https://github.com/sonakshibhalla/flask_portfolio#week-2)
   - [Ideation](https://github.com/sonakshibhalla/flask_portfolio#ideation)
 ## Week 7
+### Ideation
+#### This week was a completely technical week working on the RGB minilab
+#### We created the toggle functions, RGB, and rotate images
 
 
 ## Week 6
@@ -115,13 +118,6 @@ https://youtu.be/UPD-ODdUVYg
 | Kashish | 7/7 |will use personal laptop at home and school|
 
 
-## Week 7
-### Modeling
-| Name | Requirement | Evidence | Grade |
-| ---  | ---         | ---      | ---   |
-| Saumya | View/Frontend improvements<br>Control improvements<br>Model improvements | Ticket<br>Ticket<br>Ticket | -/1<br>-/1<br>-/3 |
-| Sonakshi | View/Frontend improvements<br>Control improvements<br>Model improvements | Ticket<br>Ticket<br>Ticket | -/1<br>-/1<br>-/3 |
-| Kashish | View/Frontend improvements<br>Control improvements<br>Model improvements | Ticket<br>Ticket<br>Ticket | -/1<br>-/1<br>-/3 |
 
 ## Ideation/Brainwrite
 OWe had our design brainstorming session today talking about the design ideas for our website. Our group finalized a traveling design for our website which includes all of the seven continents and popular tourist destinations at those locations. Some of these tourist destinations include high rated restaurants, the seven wonders of the world, historical must-sees, and even locations to relax. The information to follow is all visible at this link with our wireframe: Wireframe for App - Coders
