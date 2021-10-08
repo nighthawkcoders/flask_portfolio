@@ -1,0 +1,154 @@
+{% extends "layouts/base.html" %}
+{% set project = "Logic Gates" %}
+
+
+{% block background %}
+{% endblock %}
+
+{% block body %}
+<style>
+    html, body{
+        background-color: deepskyblue;
+    }
+    h1 {
+        font-family: "Bebas Neue";
+        font-size: 80px;
+        text-align: center;
+    }
+    p {
+        font-family: "Cutive Mono";
+        font-size: 20px;
+    }
+    label {
+        font-family: "Cutive Mono";
+        font-size: 20px;
+    }
+    th {
+        font-family: "Cutive Mono";
+        font-weight: 900;
+        font-size: 25px
+    }
+    input {
+        width: 15px;
+        height: 15px;
+    }
+    table {
+        width: 50%;
+        text-align: center;
+        margin-left: auto;
+        margin-right:auto;
+        padding: 2px
+    }
+</style>
+<script>
+    function logic() {
+        var Atoggled = document.getElementById("A").checked
+        var Btoggled = document.getElementById("B").checked
+        if ( Atoggled && Btoggled ) { // AND bitwise
+            document.getElementById("AND-result").innerHTML = "1"; // AND
+            document.getElementById("NAND-result").innerHTML = "0"; // NAND
+        } else {
+            document.getElementById("AND-result").innerHTML = "0"; // AND
+            document.getElementById("NAND-result").innerHTML = "1"; // NAND
+        }
+        if ( Atoggled || Btoggled ) { // OR bitwise
+            document.getElementById("OR-result").innerHTML = "1"; // OR
+            document.getElementById("NOR-result").innerHTML = "0"; // NOR
+        } else {
+            document.getElementById("OR-result").innerHTML = "0"; // OR
+            document.getElementById("NOR-result").innerHTML = "1"; // NOR
+        }
+        if ( Atoggled ^ Btoggled ) { // XOR bitwise
+            document.getElementById("XOR-result").innerHTML = "1"; // XOR
+            document.getElementById("XNOR-result").innerHTML = "0"; // XNOR
+        } else {
+            document.getElementById("XOR-result").innerHTML = "0"; // XOR
+            document.getElementById("XNOR-result").innerHTML = "1"; // XNOR
+        }
+        if ( Atoggled ) {
+            document.getElementById("ABUFFER-result").innerHTML = "1"; // BUFFER
+            document.getElementById("ANOT-result").innerHTML = "0"; // NOT
+        } else {
+            document.getElementById("ABUFFER-result").innerHTML = "0"; // XOR
+            document.getElementById("ANOT-result").innerHTML = "1"; // NOT
+        }
+        if ( Btoggled ) {
+            document.getElementById("BBUFFER-result").innerHTML = "1"; // BUFFER
+            document.getElementById("BNOT-result").innerHTML = "0"; // NOT
+        } else {
+            document.getElementById("BBUFFER-result").innerHTML = "0"; // XOR
+            document.getElementById("BNOT-result").innerHTML = "1"; // NOT
+        }
+    }
+</script>
+<div style="text-align: center">
+    <br>
+    <h1>Logic Gates</h1>
+    <input type="checkbox" id="A" name="optionA" value="A" onclick="logic(this)">
+    <label for="optionA">A</label>
+    <input type="checkbox" id="B" name="optionB" value="B" onclick="logic(this)">
+    <label for="optionA">B</label>
+    <p style="font-size: 12px">Checked = 1 Unchecked = 0</p>
+
+    <table>
+        <style>
+            table{
+                width:40%;
+                length:40%;
+            }
+        </style>
+        <tr>
+            <th>SYMBOL</th>
+            <th>LOGIC GATE</th>
+            <th>RESULT</th>
+        </tr>
+        <tr id="AND">
+            <td><img src="/static/unnamed.png"></td>
+            <td><p>AND</p></td>
+            <td id="AND-result">0</td>
+        </tr>
+
+        <tr id="NAND">
+            <td><img src="/static/download-1.png"></td>
+            <td><p>NAND</p></td>
+            <td id="NAND-result">1</td>
+        </tr>
+
+        <tr id="OR">
+            <td><img src="/static/logic-gate-or-us.png"></td>
+            <td><p>OR</p></td>
+            <td id="OR-result">0</td>
+        </tr>
+
+        <tr id="NOR">
+            <td><img src="/static/Logic-gate-nor-us.png"></td>
+            <td><p>NOR</p></td>
+            <td id="NOR-result">1</td>
+        </tr>
+
+        <tr id="XOR">
+            <td><img src="/static/download.png"></td>
+            <td><p>XOR</p></td>
+            <td id="XOR-result">0</td>
+        </tr>
+
+        <tr id="XNOR">
+            <td><img src="/static/Logic-gate-xnor-us.png"></td>
+            <td><p>XNOR</p></td>
+            <td id="XNOR-result">0</td>
+        </tr>
+
+        <tr id="ABUFFER">
+            <td><img src="/static/download%20(7).png"></td>
+            <td><p>A BUFFER</p></td>
+            <td id="ABUFFER-result">0</td>
+        </tr>
+
+        <tr id="ANOT">
+            <td><img src="/static/download%20(8).png"></td>
+            <td><p>A NOT</p></td>
+            <td id="ANOT-result">1</td>
+        </tr>
+    </table>
+</div>
+{% endblock %}
