@@ -91,17 +91,7 @@ def kashish():
     # starting and empty input default
     return render_template("kashish.html", name="World")
 
-@app.route('/sonakshirgb/', methods=['GET', 'POST'])
-def sonakshirgb():
 
-
-
-@app.route('/kashishrgb/', methods=['GET', 'POST'])
-def kashishrgb():
-
-
-@app.route('/saumyargb/', methods=['GET', 'POST'])
-def saumyargb():
 
 
 @app.route('/insights/')
