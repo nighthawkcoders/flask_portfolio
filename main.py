@@ -102,6 +102,10 @@ def insights():
 def greet():
     return render_template("greet.html")
 
+@app.route('/color/')
+def color():
+    return render_template("color.html")
+
 
 
 
