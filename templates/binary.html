@@ -249,12 +249,42 @@
                     {% endfor %}
                 </tr>
             </table>
+            <script>
+                /* Unsigned Addition */
+            </script>
+            <div class="col-12">
+                <table class="table">
+                    <tr>
+                        {% for i in range(BITS) %}
+                            <td><img class="img-responsive py-3" id="bulb{{i}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto">
+                                <button type="button" id="butt{{i}}" onclick="toggleBit('{{i}}')">{{ msgTurnOn }}</button>
+                            </td>
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        {% for i in range(BITS) %}
+                            <td><input type='text' id='digit{{i}}' Value="0" size="1" readonly></td>
+                        {% endfor %}
+                    </tr>
+                </table>
+            </div>
+
+            <div class="col-12">
+                <table class="table">
+                    <tr>
+                        {% for i in range(BITS) %}
+                            <td><img class="img-responsive py-3" id="bulb{{i}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto">
+                                <button type="button" id="butt{{i}}" onclick="toggleBit('{{i}}')">{{ msgTurnOn }}</button>
+                            </td>
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        {% for i in range(BITS) %}
+                            <td><input type='text' id='digit{{i}}' Value="0" size="1" readonly></td>
+                        {% endfor %}
+                    </tr>
+                </table>
+            </div>
         </div>
-        <form action="/binary" id="bits" method="POST" >
-            <label for="bits">Enter Bit Size</label>
-            <input name="bits">
-            <input type="submit" value="Go!">
-        </form>
-    </div>
 </div>
 {% endblock %}
