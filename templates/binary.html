@@ -43,6 +43,20 @@
         }
         return bits;
     }
+    function getBits2() {
+        let bits = "";
+        for(let i = 0; i < BITS; i++) {
+            bits = bits + document.getElementById('digit2' + i).value;
+        }
+        return bits;
+    }
+    function getBits3() {
+        let bits = "";
+        for(let i = 0; i < BITS; i++) {
+            bits = bits + document.getElementById('digit3' + i).value;
+        }
+        return bits;
+    }
 
     /* This function sets or resets (setter function) the DOM values (conversions) from binary string.
          parameter: <binary>, the current value of each bit (ie "1010001")
@@ -252,40 +266,125 @@
             </table>
             <script>
                 /* Unsigned Addition */
+                function setConversions2(binary2) {
+                    document.getElementById('binary2').innerHTML=binary2;
+                    document.getElementById('decimal2').innerHTML=parseInt(binary2, 2).toString(10);
+                }
+                function setConversions3(binary3) {
+                    document.getElementById('binary3').innerHTML=binary3;
+                    document.getElementById('decimal3').innerHTML=parseInt(binary3, 2).toString(10);
+                }
+                function setConversionsbinarySum(binary2, binary3) {
+                    binvalue2 = binary2;
+                    binvalue3 = binary3;
+                    document.getElementById('binarysum').innerHTML = sumBinary(binvalue2,binvalue3);
+                }
+                function sumBinary(binvalue2,binvalue3) {
+                    binlen2 = binvalue2.length;
+                    binlen3 = binvalue3.length;
+                    max = Math.max(binlen2, binlen3);
+                    result = '';
+                    carry = 0;
+                    value = 0;
+                    for (var i = 0; i < max; i++) {
+                        value = Number(binvalue2[binlen3 - 1 - i] || 0) + Number(binvalue2[binlen3 - 1 - i] || 0) + carry;
+                        carry = Math.floor(value / 2);
+                        result = (value % 2) + result;
+                    }
+                    return result;
+                }
+                function toggleBit2(i) {
+                    //alert("Digit action: " + i );
+                    const dig = document.getElementById('digit2' + i);
+                    const image = document.getElementById('bulb2' + i);
+                    const butt = document.getElementById('butt2' + i);
+                    // Change digit and visual
+                    if (image.src.match("{{ imgBulbOn }}")) {
+                        dig.value = 0;
+                        image.src = "{{ imgBulbOff }}";
+                        butt.innerHTML = "{{ msgTurnOn }}";
+                    } else {
+                        dig.value = 1;
+                        image.src = "{{ imgBulbOn }}";
+                        butt.innerHTML = "{{ msgTurnOff }}";
+                    }
+                    // Binary numbers
+                    const binary2 = getBits2();
+                    setConversions2(binary2);
+                }
+                function toggleBit3(i) {
+                    //alert("Digit action: " + i );
+                    const dig = document.getElementById('digit3' + i);
+                    const image = document.getElementById('bulb3' + i);
+                    const butt = document.getElementById('butt3' + i);
+                    // Change digit and visual
+                    if (image.src.match("{{ imgBulbOn }}")) {
+                        dig.value = 0;
+                        image.src = "{{ imgBulbOff }}";
+                        butt.innerHTML = "{{ msgTurnOn }}";
+                    } else {
+                        dig.value = 1;
+                        image.src = "{{ imgBulbOn }}";
+                        butt.innerHTML = "{{ msgTurnOff }}";
+                    }
+                    // Binary numbers
+                    const binary3 = getBits3();
+                    setConversions3(binary3);
+                }
+                function decimalSum() {
+                    const binary2 = getBits2();
+                    const binary3 = getBits3();
+                    function setConversionsSum(binary2, binary3) {
+                    }
+
+                }
+                function binarySum() {
+                    const binary2 = getBits2();
+                    const binary3 = getBits3();
+                    setConversionsbinarySum(binary2, binary3);
+                }
+            </script>
+            <script>
+                /* Row 2 */
             </script>
             <div class="col-12">
                 <table class="table">
                     <tr>
-                        {% for i in range(BITS) %}
+                        {% for i in range(BITS, 2*BITS) %}
                             <td><img class="img-responsive py-3" id="bulb{{i}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto">
                                 <button type="button" id="butt{{i}}" onclick="toggleBit('{{i}}')">{{ msgTurnOn }}</button>
                             </td>
                         {% endfor %}
                     </tr>
                     <tr>
-                        {% for i in range(BITS) %}
+                        {% for i in range(BITS, 2*BITS) %}
                             <td><input type='text' id='digit{{i}}' Value="0" size="1" readonly></td>
                         {% endfor %}
                     </tr>
                 </table>
             </div>
 
+
+            <script>
+                /* Row 3 */
+            </script>
+
             <div class="col-12">
                 <table class="table">
                     <tr>
-                        {% for i in range(BITS) %}
+                        {% for i in range(2*BITS, 3*BITS) %}
                             <td><img class="img-responsive py-3" id="bulb{{i}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto">
                                 <button type="button" id="butt{{i}}" onclick="toggleBit('{{i}}')">{{ msgTurnOn }}</button>
                             </td>
                         {% endfor %}
                     </tr>
                     <tr>
-                        {% for i in range(BITS) %}
+                        {% for i in range(2*BITS, 3*BITS) %}
                             <td><input type='text' id='digit{{i}}' Value="0" size="1" readonly></td>
                         {% endfor %}
                     </tr>
                 </table>
             </div>
         </div>
-</div>
+    </div>
 {% endblock %}
