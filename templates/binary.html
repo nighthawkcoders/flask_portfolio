@@ -33,11 +33,8 @@ add new images (ie PNGs) to project -->
         // return string with current value of each bit
         function getBits(n) {
             let bits = "";
-            digitn = "digit" + n;
-            bulbn = "bulb" + n;
-            buttonn = "button" + n;
             for(let i = 0; i < BITS; i++) {
-                bits = bits + document.getElementById(digitn + i).value;
+                bits = bits + document.getElementById('digit' + i).value;
             }
             return bits;
         }
