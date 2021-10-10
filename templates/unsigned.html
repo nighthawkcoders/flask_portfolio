@@ -33,7 +33,7 @@ add new images (ie PNGs) to project -->
         // return string with current value of each bit
         function getBits(n) {
             let bits = "";
-            digitn = "digit" + n;
+            digitn  = "digit" + n;
             bulbn = "bulb" + n;
             buttonn = "button" + n;
             for(let i = 0; i < BITS; i++) {
@@ -120,10 +120,10 @@ add new images (ie PNGs) to project -->
                 document.getElementById('digit' + i).value = digit;
                 if (digit === "1") {
                     document.getElementById('bulb' + i).src = "{{ imgBulbOn }}";
-                    document.getElementById('butt' + i).innerHTML = "{{ msgTurnOff }}";
+                    document.getElementById('button' + i).innerHTML = "{{ msgTurnOff }}";
                 } else {
                     document.getElementById('bulb' + i).src = "{{ imgBulbOff }}";
-                    document.getElementById('butt' + i).innerHTML = "{{ msgTurnOn }}";
+                    document.getElementById('button' + i).innerHTML = "{{ msgTurnOn }}";
                 }
             }
         }
@@ -149,10 +149,10 @@ add new images (ie PNGs) to project -->
                 document.getElementById('digit' + i).value = digit;
                 if (digit === "1") {
                     document.getElementById('bulb' + i).src = "{{ imgBulbOn }}";
-                    document.getElementById('butt' + i).innerHTML = "{{ msgTurnOff }}";
+                    document.getElementById('button' + i).innerHTML = "{{ msgTurnOff }}";
                 } else {
                     document.getElementById('bulb' + i).src = "{{ imgBulbOff }}";
-                    document.getElementById('butt' + i).innerHTML = "{{ msgTurnOn }}";
+                    document.getElementById('button' + i).innerHTML = "{{ msgTurnOn }}";
                 }
             }
         }
@@ -171,17 +171,17 @@ add new images (ie PNGs) to project -->
 // convert the result back to binary
             binary = decimal_2_base(decimal, 2);
 // update conversions
-            setConversions(binary, binary+8);
+            setConversions(binary);
 // update bits
             for (let i = 0; i < binary.length; i++) {
                 let digit = binary.substr(i, 1);
                 document.getElementById('digit' + i).value = digit;
                 if (digit === "1") {
                     document.getElementById('bulb' + i).src = "{{ imgBulbOn }}";
-                    document.getElementById('butt' + i).innerHTML = "{{ msgTurnOff }}";
+                    document.getElementById('button' + i).innerHTML = "{{ msgTurnOff }}";
                 } else {
                     document.getElementById('bulb' + i).src = "{{ imgBulbOff }}";
-                    document.getElementById('butt' + i).innerHTML = "{{ msgTurnOn }}";
+                    document.getElementById('button' + i).innerHTML = "{{ msgTurnOn }}";
                 }
             }
         }
@@ -233,75 +233,45 @@ add new images (ie PNGs) to project -->
                     </tr>
                 </table>
 
-                <table class="table">
-                    <tr id="table2">
-                        <th>Shift Left (*2)</th>
-                        <th>Plus</th>
-                        <th>Binary</th>
-                        <th>Octal</th>
-                        <th>Hexadecimal</th>
-                        <th>Decimal</th>
-                        <th>Ascii</th>
-                        <!-- Hack: display ASCII label for printable character(s) -->
-                        <th>Minus</th>
-                        <th>Shift Right (/2)</th>
-
-                    </tr>
-                    <tr>
-                        <td ><button type="button" id="mul1 +8" onclick = "multiply(2)"><<</button></td>
-                        <td><button type="button" id="add1 +8" onclick="add(1)">+1</button></td>
-                        <td id="binary +8">00000000</td>
-                        <td id="octal +8">0</td>
-                        <td id="hexadecimal +8" >0</td>
-                        <td id="decimal +8">0</td>
-                        <td id="ascii +8">0</td>
-
-                        <!-- Hack: display ASCII printable character(s) -->
-                        <td><button type="button" id="sub1 +8" onclick="add(-1)">-1</button></td>
-                        <td ><button type="button" id="div1 +8" onclick = "divide(2)">>><//2</button></td>
-
-                    </tr>
-                </table>
-
             </div>
-            </div>
-
-
-
-            <div class="col-12">
-                <table class="table">
-                    <tr>
-                        <!-- for loop -->
-                        {% for i in range(BITS) %}
-                            <td><img class="img-responsive py-3" id="bulb1{{i}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto">
-                                <button type="button" id="button1{{i}}" onclick="toggleBit('{{i}}',1, digit1, bulb1, button1)">{{ msgTurnOn }}</button>
-                            </td>
-                        {% endfor %}
-                    </tr>
-                    <tr>
-                        {% for i in range(BITS) %}
-                            <td><label for='digit1{{i}}'></label><input type='text' id='digit1{{i}}' Value="0" size="2" readonly></td>
-                        {% endfor %}
-                    </tr>
-
-                    <tr>
-                        <!-- for loop -->
-                        {% for i in range(BITS) %}
-                            <td><img class="img-responsive py-3" id="bulb{{i}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto">
-                                <button type="button" id="butt{{j}}+8" onclick="toggleBit('{{j}}')">{{ msgTurnOn }}</button>
-                            </td>
-                        {% endfor %}
-                    </tr>
-                    <tr>
-                        {% for j in range(BITS) %}
-                            <td><label for='digit{{j}}+8'></label><input type='text' id='digit{{j}}+8' Value="0" size="2" readonly></td>
-                        {% endfor %}
-                    <tr>
-
-                </table>
-            </div>
-
         </div>
+
+
+
+        <div class="col-12">
+            <table class="table">
+                <tr>
+                    <!-- for loop -->
+                    {% for i in range(BITS) %}
+                        <td><img class="img-responsive py-3" id="bulb1{{i}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto">
+                            <button type="button" id="button1{{i}}" onclick="toggleBit('{{i}}',1, digit1, bulb1, button1)">{{ msgTurnOn }}</button>
+                        </td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    {% for i in range(BITS) %}
+                        <td><label for='digit1{{i}}'></label><input type='text' id='digit1{{i}}' Value="0" size="2" readonly></td>
+                    {% endfor %}
+                </tr>
+
+                <tr>
+                    <!-- for loop -->
+                    {% for i in range(BITS) %}
+                        <td><img class="img-responsive py-3" id="bulb2{{i}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto">
+                            <button type="button" id="button2{{i}}" onclick="toggleBit('{{i}}', 2, digit2, bulb2, button2)">{{ msgTurnOn }}</button>
+                        </td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    {% for i in range(BITS) %}
+                        <td><label for='digit2{{i}}'></label><input type='text' id='digit2{{i}}' Value="0" size="2" readonly></td>
+                    {% endfor %}
+                <tr>
+
+            </table>
+        </div>
+
+    </div>
     </div>
 
     <html>
