@@ -1,14 +1,14 @@
 def orGate(a,b):
-    if a==True or b==True:
-        return True
-    else:
-        return False
-    
+	if a==True or b==True:
+		return True
+	else:
+		return False
+
 def andGate(a,b):
-    if a==True and b==True:
-        return True
-    else:
-        return False
+	if a==True and b==True:
+		return True
+	else:
+		return False
 
 def notGate(a):
 	return not a
@@ -34,26 +34,25 @@ def oneBit(a, b, c=False):
 	return (sum, carry)
 
 def decToBin(dec):
-    dec = int(dec)
-    bitlen = 0
-    while dec >= 2**bitlen:
-        bitlen += 1 #determine bitlength in binary
+	dec = int(dec)
+	bitlen = 0
+	while dec >= 2**bitlen:
+		bitlen += 1 #determine bitlength in binary
 
-    byte1=[]*bitlen #create an empty bus
-        
-    while bitlen > 0:
-        if dec - 2^bitlen > 0:
-            bitlen -= 1
-            dec -= 2**bitlen
-            byte1.append(True)
-            print(dec)
-        else:
-            bitlen -= 1
-            dec -= 2**bitlen
-            byte1.append(False)
-            print(dec)
-            
-    return byte1
+	byte1=[] #create an empty bus
+
+	while bitlen > 0: #do this for every bit
+		if dec - 2**(bitlen-1) >= 0:
+			dec = dec - 2**(bitlen-1)
+			byte1.append(True)
+			bitlen -= 1
+			print(dec)
+		else:
+			byte1.append(False)
+			bitlen -= 1
+			print(dec)
+
+	return byte1
 
 print("Enter your first number in base-10.")
 num1 = input()
@@ -80,8 +79,8 @@ while len(byte2) != bitness:
 
 
 for count, b in enumerate(byte1):
-	n = -abs(count + 1)
-	byte3.append(oneBit(byte1[n], byte2[n], carry))
+	n = -abs(count + 1)  #Determine which BIT we're working with
+	byte3.append(oneBit(byte1[n], byte2[n], carry)) #Append to byte 3 the result of a One-bit operation
 
 print("Byte 3:")
 
