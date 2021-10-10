@@ -8,14 +8,17 @@
 
 
 ## Contributors
-| Name | GitHub Profile | Tasks | Scrum Board | s |
+| Name | GitHub Profile | Tasks | Scrum Board | Commits |
 |:-----|:----------------------|:-----:|:-----------:|:-------:|
 | Sonakshi Bhalla | [@sonakshibhalla](https://github.com/sonakshibhalla) | [Tasks](https://github.com/sonakshibhalla/flask_portfolio/issues/assigned/sonakshibhalla) |[Scrum Board](https://github.com/sonakshibhalla/flask_portfolio/projects/1?card_filter_query=assignee%3Asonakshibhalla)| [Commits](https://github.com/sonakshibhalla/flask_portfolio/commits?author=sonakshibhalla)
 | Kashish Chopra | [@kashishchopraa](https://github.com/kashishchopraa) | [Tasks](https://github.com/sonakshibhalla/flask_portfolio/issues/assigned/kashishchopraa) | [Scrum Board](https://github.com/sonakshibhalla/flask_portfolio/projects/1?card_filter_query=assignee%3Akashishchopraa) | [Commits](https://github.com/sonakshibhalla/flask_portfolio/commits?author=kashishchopraa)
 | Saumya Palakodety| [@saumyapalk23](https://github.com/saumyapalk23) | [Tasks](https://github.com/sonakshibhalla/flask_portfolio/issues/assigned/saumyapalk23) |[Scrum Board](https://github.com/sonakshibhalla/flask_portfolio/projects/1?card_filter_query=assignee%3Asaumyapalk23) | [Commits](https://github.com/sonakshibhalla/flask_portfolio/commits?author=saumyapalk23)
 
 
+
+
 ## Table of Contents
+  - [Week 8](https://github.com/sonakshibhalla/flask_portfolio#week-7)
   - [Week 7](https://github.com/sonakshibhalla/flask_portfolio#week-7)
   - [Week 6](https://github.com/sonakshibhalla/flask_portfolio#week-6)
   - [Week 5](https://github.com/sonakshibhalla/flask_portfolio#week-5)
@@ -23,13 +26,27 @@
   - [Week 3](https://github.com/sonakshibhalla/flask_portfolio#week-3)
   - [Week 2](https://github.com/sonakshibhalla/flask_portfolio#week-2)
   - [Ideation](https://github.com/sonakshibhalla/flask_portfolio#ideation)
+
+## Week 8
+## ReadMe Video:
+
+
+
+
 ## Week 7
+## Finalized ReadMe + Binary Logic Gates Lab in preparation for monday
 ### Ideation
 #### This week was a completely technical week working on the RGB minilab
 #### We created the toggle functions, RGB, and rotate images
 
 
 ## Week 6
+### Individual Scoring
+| Name | Unit 5 Journal | TT & TPT Notes | Grade |
+| ---  | ---            | ---            | ---   |
+| Sonakshi| Journal | Notes | 2/2 |
+| Saumya | Journal | Notes | 2/2 |
+| Kashish | Journal | Notes | 2/2 |
 
 
 ## Week 5
@@ -37,9 +54,9 @@
 ### Individual Scoring
 | Name | Unit 5 Journal | TT & TPT Notes | Grade |
 | ---  | ---            | ---            | ---   |
-| Sonakshi| Journal | Notes | -/5 |
-| Saumya | Journal | Notes | -/5 |
-| Kashish | Journal | Notes | -/5 |
+| Sonakshi| Journal | Notes | 2/2 |
+| Saumya | Journal | Notes | 2/2 |
+| Kashish | Journal | Notes | 2/2 |
 
 ## Week 4
 ### Team Scoring
@@ -47,9 +64,6 @@
 | ---        | ---      | --- |
 | Team and Scrum Master Planning by Wednesday  |[Scrum Board](https://github.com/sonakshibhalla/flask_portfolio/projects/1) | 1/1 |
 | Team Technicals 2 points.  Evaluation is on how Planning and individual Issues compliment the entire project. | [Scrum Board (https://github.com/sonakshibhalla/flask_portfolio/projects/1) | 2/2 |
-
-## Tech Talk Video
-"https://youtu.be/4c6BQX599jw"
 
 ### Individual Scoring
 | Name | Requirment | Evidence | Grade |
