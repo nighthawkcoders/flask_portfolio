@@ -24,12 +24,19 @@
   - [Week 2](https://github.com/sonakshibhalla/flask_portfolio#week-2)
   - [Ideation](https://github.com/sonakshibhalla/flask_portfolio#ideation)
 ## Week 7
+##Finalized ReadMe + Binary Logic Gates Lab in preperation for monday
 ### Ideation
 #### This week was a completely technical week working on the RGB minilab
 #### We created the toggle functions, RGB, and rotate images
 
 
 ## Week 6
+### Individual Scoring
+| Name | Unit 5 Journal | TT & TPT Notes | Grade |
+| ---  | ---            | ---            | ---   |
+| Sonakshi| Journal | Notes | 2/2 |
+| Saumya | Journal | Notes | 2/2 |
+| Kashish | Journal | Notes | 2/2 |
 
 
 ## Week 5
@@ -37,9 +44,9 @@
 ### Individual Scoring
 | Name | Unit 5 Journal | TT & TPT Notes | Grade |
 | ---  | ---            | ---            | ---   |
-| Sonakshi| Journal | Notes | -/5 |
-| Saumya | Journal | Notes | -/5 |
-| Kashish | Journal | Notes | -/5 |
+| Sonakshi| Journal | Notes | 2/2 |
+| Saumya | Journal | Notes | 2/2 |
+| Kashish | Journal | Notes | 2/2 |
 
 ## Week 4
 ### Team Scoring
