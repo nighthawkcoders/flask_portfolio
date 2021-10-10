@@ -15,7 +15,10 @@
 | Saumya Palakodety| [@saumyapalk23](https://github.com/saumyapalk23) | [Tasks](https://github.com/sonakshibhalla/flask_portfolio/issues/assigned/saumyapalk23) |[Scrum Board](https://github.com/sonakshibhalla/flask_portfolio/projects/1?card_filter_query=assignee%3Asaumyapalk23) | [Commits](https://github.com/sonakshibhalla/flask_portfolio/commits?author=saumyapalk23)
 
 
+
+
 ## Table of Contents
+  - [Week 8](https://github.com/sonakshibhalla/flask_portfolio#week-7)
   - [Week 7](https://github.com/sonakshibhalla/flask_portfolio#week-7)
   - [Week 6](https://github.com/sonakshibhalla/flask_portfolio#week-6)
   - [Week 5](https://github.com/sonakshibhalla/flask_portfolio#week-5)
@@ -23,6 +26,13 @@
   - [Week 3](https://github.com/sonakshibhalla/flask_portfolio#week-3)
   - [Week 2](https://github.com/sonakshibhalla/flask_portfolio#week-2)
   - [Ideation](https://github.com/sonakshibhalla/flask_portfolio#ideation)
+
+## Week 8
+## ReadMe Video:
+
+
+
+
 ## Week 7
 ## Finalized ReadMe + Binary Logic Gates Lab in preparation for monday
 ### Ideation
@@ -54,9 +64,6 @@
 | ---        | ---      | --- |
 | Team and Scrum Master Planning by Wednesday  |[Scrum Board](https://github.com/sonakshibhalla/flask_portfolio/projects/1) | 1/1 |
 | Team Technicals 2 points.  Evaluation is on how Planning and individual Issues compliment the entire project. | [Scrum Board (https://github.com/sonakshibhalla/flask_portfolio/projects/1) | 2/2 |
-
-## Tech Talk Video
-"https://youtu.be/4c6BQX599jw"
 
 ### Individual Scoring
 | Name | Requirment | Evidence | Grade |
