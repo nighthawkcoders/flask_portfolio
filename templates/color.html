@@ -200,20 +200,6 @@
 {% block body %}
 <h1 class="text-center">Color Codes</h1>
 <div class="col-12">
-    <table class="table">
-        <div>
-            {% for i in range(BITS) %}
-            {%  if i % 8 == 8 %}
-            <td>
-                {%  endif %}
-            <td><input type="text" id='digit{{ i }}' Value="8" size ="1" readonly></td>
-            <td><img class="img-responsive py-3" id="bulb{{i}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto">
-                <button type="button" id="butt{{i}}" onclick="toggleBit('{{i}}')">{{ msgTurnOn }}</button>
-            </td>
-            {% if i + 1 % 8 ==0 or i== BITS %}
-            </tr>
-            {% endif %}
-            {% endfor %}`
         </div>
     </table>
 </div>
@@ -226,7 +212,7 @@
                 <tr>
                     {% for i in range(7, -1, -1) %} {# we just want 8 bits per row #}
                     <td style="width:100px">
-                        <button style="width:100px; background-color: #000000; color: white;"
+                        <button style="width:100px; background-color: #E6E6FA; color: black;"
                                 type="button" value="0"
                                 id="butt-{{color}}-{{i}}"
                                 onclick="toggleButBit('{{ color }}', '{{i}}')">
@@ -247,58 +233,4 @@
     <p id="rgb-val" class="text-center">#000000</p>
 </div>
 <!----------------------------------------RGB above---------------------------------------------------------->
-<div class="col-12">
-    <div class="row">
-        <table class="table">
-            <div>
-                {% for i in range(BITS) %} {# we just want 8 bits per row #}
-                {% if i % 8 == 0 %} {# this is a modulo operation where if the index is divisible by 8 then a table row gets created and if the index + 1 is divisible by 8 then the table row is ended #}
-                <tr>
-                    {% endif %}
-                    <td><img class="img-responsive py-3" id="bulb1{{i}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto"> {# this sets the default image to off and creates the id for the image #}
-                        <button type="button" id="butt1{{i}}" onclick="toggleBit('{{i}}', 'bulb1', 'butt1', 'digit1')">{{ msgTurnOn }}</button>
-                        <input type='text' id='digit1{{i}}' Value="0" size="1" readonly></td>{# this sets the default message to off and calls the function "toggleBit" on the click of the button which is found in the javascript #}
-                    </td>
-                    {% if i + 1 % 8 == 0 or i == BITS %} {# this is the modulo operation for the end row #}
-                    var c = 0xff03c0; // 16712640
-                    var components = {
-                    r: (c & 0xff0000) >> 16,
-                    g: (c & 0x00ff00) >> 8,
-                    b: (c & 0x0000ff)
-                    };
-                </tr>
-                {% endif %}
-                {% endfor %}
-            </div>
-        </table>
-    </div>
-</div>
-
-<div class="col-12">
-    <div class="row">
-        <table class="table">
-            <div>
-                {% for i in range(BITS) %} {# we just want 8 bits per row #}
-                {% if i % 8 == 0 %} {# this is a modulo operation where if the index is divisible by 8 then a table row gets created and if the index + 1 is divisible by 8 then the table row is ended #}
-                <tr>
-                    {% endif %}
-                    <td><img class="img-responsive py-3" id="bulb2{{i}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto"> {# this sets the default image to off and creates the id for the image #}
-                        <button type="button" id="butt2{{i}}" onclick="toggleBit('{{i}}', 'bulb2', 'butt2', 'digit2')">{{ msgTurnOn }}</button>
-                        <input type='text' id='digit2{{i}}' Value="0" size="1" readonly></td>{# this sets the default message to off and calls the function "toggleBit" on the click of the button which is found in the javascript #}
-                    </td>
-                    {% if i + 1 % 8 == 0 or i == BITS %} {# this is the modulo operation for the end row #}
-                    var c = 0xff03c0; // 16712640
-                    var components = {
-                    r: (c & 0xff0000) >> 16,
-                    g: (c & 0x00ff00) >> 8,
-                    b: (c & 0x0000ff)
-                    };
-                </tr>
-                {% endif %}
-                {% endfor %}
-            </div>
-        </table>
-    </div>
-</div>
-</div>
 {% endblock %}
