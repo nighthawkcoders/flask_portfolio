@@ -15,8 +15,8 @@ DONE<!-- Hack: use 8 as default
 Change to an input box-->
 
 
-{% set BITS = 7 %}
-{% set MAX = ((2 ** 7) - 1) %}
+{% set BITS = 8 %}
+{% set MAX = ((2 ** 8) - 1) %}
 
 DONE <!-- Hack: Set bulbs and pass as variables via Python render_template
 add new images (ie PNGs) to project -->
@@ -29,14 +29,14 @@ add new images (ie PNGs) to project -->
 {% block body %}
 <title>Binary page</title>
 <script>
-    const 7 = '{{ 7 }}'; let max = '{{ MAX }}'; let MAX = parseInt(max, 10);
+    const 8 = '{{ 8 }}'; let max = '{{ MAX }}'; let MAX = parseInt(max, 10);
     // return string with current value of each bit
-    function get7() {
+    function get8() {
         let bits = "";
-        for(let i = 0; i < 7; i++) {
-            7 = 7 + document.getElementById('digit' + i).value;
+        for(let i = 0; i < 8; i++) {
+            8 = 8 + document.getElementById('digit' + i).value;
         }
-        return 7;
+        return 8;
     }
     // setter for DOM values
     function setConversions(binary) {
@@ -47,7 +47,8 @@ add new images (ie PNGs) to project -->
         document.getElementById('hexadecimal').innerHTML = parseInt(binary, 2).toString(16);
 // DOM assignment to Decimal conversion
         document.getElementById('decimal').innerHTML = parseInt(binary, 2).toString(10);
-        /* Hack: show ASCII printable character(s) for each 8 7
+        /* Hack: show ASCII printable character(s) for each 8 8
+
         DOM assignment by converting decimal https://www.w3schools.com/jsref/jsref_fromcharcode.asp
         below ASCII for more ideas of where to make changes
         */
@@ -65,7 +66,7 @@ add new images (ie PNGs) to project -->
         } while (decimal > 0); // why while at the end?
 // loop to pad with zeros
         if (base === 2) { // only pad for binary conversions
-            for (let i = 0; conversion.length < 7; i++) {
+            for (let i = 0; conversion.length < 8; i++) {
                 conversion = "0" + conversion;
             }
         }
@@ -78,23 +79,15 @@ add new images (ie PNGs) to project -->
         const dig = document.getElementById('digit' + i);
         const image = document.getElementById('bulb' + i);
         const butt = document.getElementById('butt' + i);
-// Change digit and visual
-        if (image.src.match("{{ On }}")) {
-            dig.value = 0;
-            image.src = "{{ Off }}";
-            butt.innerHTML = "{{ msgTurnOn }}";
-        } else {
-            dig.value = 1;
-            image.src = "{{ On }}";
-            butt.innerHTML = "{{ Off }}";
+//
         }
 // Binary numbers
-        const binary = get7();
+        const binary = get8();
         setConversions(binary);
     }
     // add is positive integer, subtract is negative integer
     function add(n) {
-        let binary = get7();
+        let binary = get8();
 // convert to decimal and do math
         let decimal = parseInt(binary, 2);
         if (n > 0) { // PLUS
@@ -106,7 +99,7 @@ add new images (ie PNGs) to project -->
         binary = decimal_2_base(decimal, 2);
 // update conversions
         setConversions(binary);
-// update 7
+// update 8
         for (let i = 0; i < binary.length; i++) {
             let digit = binary.substr(i, 1);
             document.getElementById('digit' + i).value = digit;
@@ -128,14 +121,14 @@ add new images (ie PNGs) to project -->
             <table class="table">
                 <tr>
                     <!-- for loop -->
-                    {% for i in range(7) %}
+                    {% for i in range(8) %}
                     <td><img class="img-responsive py-3" id="bulb{{i}}" src="{{ Off }}" alt="" width="40" height="Auto">
                         <button type="button" id="butt{{i}}" onclick="toggleBit('{{i}}')">{{ msgTurnOn }}</button>
                     </td>
                     {% endfor %}
                 </tr>
                 <tr>
-                    {% for i in range(7) %}
+                    {% for i in range(8) %}
                     <td><label for='digit{{i}}'></label><input type='text' id='digit{{i}}' Value="0" size="2" readonly></td>
                     {% endfor %}
                 </tr>
@@ -145,14 +138,14 @@ add new images (ie PNGs) to project -->
     <table class="table">
         <tr>
             <!-- for loop -->
-            {% for i in range(7) %}
+            {% for i in range(8 ) %}
             <td><img class="img-responsive py-3" id="bulb{{i}}" src="{{ Off }}" alt="" width="40" height="Auto">
                 <button type="button" id="butt{{i}}" onclick="toggleBit('{{i}}')">{{ msgTurnOn }}</button>
             </td>
             {% endfor %}
         </tr>
         <tr>
-            {% for i in range(7) %}
+            {% for i in range(8) %}
             <td><label for='digit{{i}}'></label><input type='text' id='digit{{i}}' Value="0" size="2" readonly></td>
             {% endfor %}
         </tr>
@@ -162,14 +155,14 @@ add new images (ie PNGs) to project -->
     <table class="table">
         <tr>
             <!-- for loop -->
-            {% for i in range(7) %}
+            {% for i in range(8) %}
             <td><img class="img-responsive py-3" id="bulb{{i}}" src="{{ Off }}" alt="" width="40" height="Auto">
                 <button type="button" id="butt{{i}}" onclick="toggleBit('{{i}}')">{{ msgTurnOn }}</button>
             </td>
             {% endfor %}
         </tr>
         <tr>
-            {% for i in range(7) %}
+            {% for i in range(8) %}
             <td><label for='digit{{i}}'></label><input type='text' id='digit{{i}}' Value="0" size="2" readonly></td>
             {% endfor %}
         </tr>
