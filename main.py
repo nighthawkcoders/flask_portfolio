@@ -124,7 +124,7 @@ def color():
 
 @app.route('/logic gates/')
 def logicgates():
-    return render_template("logic gates.html")
+    return render_template("logicgates.html")
 
 
 

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>logicgates</title>
+  <!DOCTYPE html>
+  {% extends "layouts/base.html" %}
+
+  {% set imageList = ["Screen Shot 2021-10-06 at 11.50.23 AM.png", "Screen Shot 2021-10-06 at 11.50.30 AM.png", "Screen Shot 2021-10-06 at 11.50.39 AM.png", "Screen Shot 2021-10-06 at 11.50.49 Am.png", "Screen Shot 2021-10-06 at 11.51.05 AM.png", "Screen Shot 2021-10-06 at 11.51.16 AM.png"]  %}
+  {% set textList = ["And Gate", "Nand Gate", "Or Gate", "Nor Gate", "Xor Gate", "Inverter for A (Not Gate)"] %}
+  {% set result = ["0", "1", "0", "1", "0", "1"]  %}
+  {% set gate = ["and1", "nand1", "or1", "nor1", "xor1", "not1"] %}
+  {% set textGate = ["and", "nand", "or", "nor", "xor", "not"] %}
+
+
+  {% block meta %}
+  <script>
+    function logicgate(){
+
+      // if a and b then set inner html to be 1 if true also do value
+      const x = document.getElementById("checkbox1")
+      const y = document.getElementById("checkbox2")
+      if (x.checked && y.checked){ // if x is checked and y is checked
+        document.getElementById("and").innerHTML = "1";
+      }
+      else { // if none or one are checked
+        document.getElementById("and").innerHTML = "0";
+      }
+      if (!(x.checked && y.checked)){ // if not and (if none or one are checked)
+        document.getElementById("nand").innerHTML = "1";
+      }
+      else { // if and
+        document.getElementById("nand").innerHTML = "0";
+      }
+      if (x.checked || y.checked){ // if x or y is checked
+        document.getElementById("or").innerHTML = "1";
+      }
+      else { // if none are checked
+        document.getElementById("or").innerHTML = "0";
+      }
+      if (!(x.checked || y.checked)){ // if not or (if none are checked)
+        document.getElementById("nor").innerHTML = "1";
+      }
+      else { // if one or both are checked
+        document.getElementById("nor").innerHTML = "0";
+      }
+      if ( ( x.checked && !y.checked ) || ( !x.checked && y.checked ) ){ // if xor (if one is checked but not both)
+        document.getElementById("xor").innerHTML = "1";
+      }
+      else { // if none or both are checked
+        document.getElementById("xor").innerHTML = "0";
+      }
+      if (!x.checked){
+        document.getElementById("not").innerHTML = "1";
+      }
+      else {
+        document.getElementById("not").innerHTML = "0";
+      }
+    }
+  </script>
+  {% endblock %}
+
+
+
+
+  {% block body %}
+  <h1 class="text-center">Logic Gates</h1>
+  <div class="dark1border" style="text-align: center; margin: 0px 30px 10px 30px;border-top-width: 0.5px; border-bottom-width: 0.5px; border-top-style: dashed; border-bottom-style: dashed;"></div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-3">
+        <h2 class="text-left">Inputs</h2>
+        <form name="form" method="POST">
+          <label>
+            <input type="checkbox" name="a" class="inline checkbox" id="checkbox1" value="unchecked">
+          </label>
+
+          <label>
+            <input type="checkbox" name="b" class="incline checkbox" id="checkbox2" value="unchecked">
+          </label>
+
+          <input type="button" onclick="logicgate()" value="Submit">
+        </form>
+      </div>
+      <div class="col-9">
+        <h2 class="text-left">Logic Gates</h2>
+        <table>
+          <tr>
+            <th>Symbol</th>
+            <th>logicGate</th>
+            <th>Result</th>
+          </tr>
+          {% for item in imageList %}
+          <tr>
+            <td class="col-3">
+              <img class="img-responsive py-3" id="{{ gate[loop.index0] }}" alt="" width="256" height="Auto" src="/static/assets/{{ item }}" >
+            </td>
+            <td class="col-3"> {{ textList[loop.index0] }}</td>
+            <td id="{{ textGate[loop.index0] }}" class="col-3">{{ result[loop.index0] }}</td>
+          </tr>
+          {% endfor %}
+        </table>
+      </div>
+    </div>
+  </div>
+  {% endblock %}
+</head>
+<body>
+
+</body>
