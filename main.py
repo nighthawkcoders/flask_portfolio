@@ -57,9 +57,20 @@ def binary():
         # starting and empty input default
     return render_template("binary.html", bits=8)
 
+
+
 @app.route('/stub/')
 def stub():
     return render_template("stub.html")
+
+@app.route("/addition", methods=['GET','POST'])
+def addition():
+    if request.form:
+        bits = request.form.get("bits")
+        if len(bits) != 0:  # input field has content
+            return render_template("addition.html", bits=int(bits))
+        # starting and empty input default
+    return render_template("addition.html", bits=8)
 
 @app.route('/sonakshi', methods=['GET', 'POST'])
 def sonakshi():

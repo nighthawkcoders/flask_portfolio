@@ -101,6 +101,30 @@ add new images (ie PNGs) to project -->
             setConversions(binary);
 
         }
+
+        function toggleBit2(i) {
+//alert("Digit action: " + i );
+            const dig = document.getElementById('digit' + i);
+            const image = document.getElementById('bulb' + i);
+            const butt = document.getElementById('butt' + i);
+// Change digit and visual
+            if (image.src.match("{{ imgBulbOn }}")) {
+                dig.value = 0;
+                image.src = "{{ imgBulbOff }}";
+                butt.innerHTML = "{{ msgTurnOn }}";
+            } else {
+                dig.value = 1;
+                image.src = "{{ imgBulbOn }}";
+                butt.innerHTML = "{{ msgTurnOff }}";
+            }
+
+// Binary numbers
+            const binary = getBits();
+            setConversions(binary);
+
+        }
+
+
         // add is positive integer, subtract is negative integer
         function add(n) {
             let binary = getBits();
@@ -158,6 +182,7 @@ add new images (ie PNGs) to project -->
                 }
             }
         }
+
         function divide(n) {
             let binary = getBits();
 // convert to decimal and do math
@@ -260,14 +285,14 @@ add new images (ie PNGs) to project -->
                 <tr>
                     <!-- for loop -->
                     {% for j in range(BITS) %}
-                        <td><img class="img-responsive py-3" id="bulb{{j}}+8" src="{{ imgBulbOff }}" alt="" width="40" height="Auto">
-                            <button type="button" id="butt{{j}}+8" onclick="toggleBit('{{j}}+8')">{{ msgTurnOn }}</button>
+                        <td><img class="img-responsive py-3" id="bulb{{j}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto">
+                            <button type="button" id="butt{{j}}" onclick="toggleBit2('{{j}}')">{{ msgTurnOn }}</button>
                         </td>
                     {% endfor %}
                 </tr>
                 <tr>
                     {% for j in range(BITS) %}
-                        <td><label for='digit{{j}}+8'></label><input type='text' id='digit{{j}}+8' Value="0" size="2" readonly></td>
+                        <td><label for='digit{{j}}'></label><input type='text' id='digit{{j}}' Value="0" size="2" readonly></td>
                     {% endfor %}
                 <tr>
 
