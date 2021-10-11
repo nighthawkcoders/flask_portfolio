@@ -345,42 +345,58 @@
                 }
             </script>
             <hr style="background-color: white">
-            <p style="font-size:50px; margin-left:37.5%; margin-right:30%;">Color Codes</p>
+            <p style="font-size:40px; margin-left:35%; margin-right:30%;">Unsigned Addition</p>
             <hr style="background-color: white">
 
             <!-- Creates all of the toggleable bits and two bytes. Also creates the sum byte at the bottom -->
             {% for j in range(3) %}
 
             {% if j == 0 %}
+            <style>
+                .sumBit {
+                    color: black;
+                    height: 2em;
+                    font-size: 1em;
+                    border:2px;
+                    border-style: solid;
+                    border-color: black;
+                    text-align: center;
+                    background-color: white;
+                    margin-left: 1%;
+                }
+            </style>
             <div class="row container-fluid">
                 {% else %}
-                <div class="row container-fluid mt-5">
+                <div class="row container-fluid mt-2">
+
                     {% endif %}
 
-                    {% if j == 2 %}  <!-- i have no clue how to format jinja but we're gonna do it like this... looks super ugly still -->
-
+                    {% if j == 2 %}
+                    <p style="color:black; font-size:20px; margin:1%">Result</p>
                     <div class="col-sm-1"></div>
                     {% for i in range(1, 10) %}
-                    <p class="col-sm-1 sumBit" id="sumBit{{i}}">0</p>
+                    <p class="col-sm sumBit" id="sumBit{{i}}" style="margin:1%">0</p>
                     {% endfor %}
                     <div class="col-sm"></div>
-
+                    <br>
+                    <br>
+                    <br>
+                    <br>
                     {% else %}
-
-                    <button class="col-sm-1 operatorButton" onclick="changeRow('{{j}}', 'multiply')">x2</button>
+                    <p style="color:black; font-size:20px; margin:auto">Rows</p>
                     <div class="col-sm-1"></div>
                     {% for i in range(1, 9) %}
-                    <button class="col-sm-1" id="bit{{j}}{{i}}" onclick="toggleSwitch('bit{{j}}{{i}}')">0</button>
+                    <button class="col-sm-1" id="bit{{j}}{{i}}" style="margin:1%" onclick="toggleSwitch('bit{{j}}{{i}}')">0</button>
                     {% endfor %}
-                    <button class="col-sm-1 offset-sm-1 operatorButton" onclick="changeRow('{{j}}', 'divide')">÷2</button>
 
                     {% endif %}
                 </div>
 
                 {% endfor %}
+                <br>
             <div class="center">
                 <!-- Table showing values -->
-                <table width="25%">
+                <table width="25%" style="margin:auto; border-color:white; border-top: 1px solid #ffffff;border-bottom:1px solid #ffffff;border-left: 1px solid #ffffff; border-right: 1px solid #ffffff">
                     <tr>
                         <th>Row 1</th>
                         <th>Row 2</th>
@@ -393,10 +409,9 @@
                     </tr>
                 </table>
             </div>
+                <br>
+                <br>
 
-            <div class="center mt-5">
-                <button class="operatorButton" onclick="reset()">Reset</button>
-            </div>
     <script>
 
         function toggleSwitch (id) {     // toggles button between on and off
@@ -409,21 +424,6 @@
 
             addRows();
 
-        }
-
-        function reset () {   // function to reset all buttons back to off
-            for (var j = 0; j < 2; j++) {
-                for (var i = 1; i <= 8; i++) {
-                    setBit("bit" + j + i, 0);
-                }
-            }
-
-            for (var i = 1; i <= 9; i++) {  // resets results too
-                const element = document.getElementById("sumBit" + i);
-                element.innerHTML = "0";
-            }
-
-            calculateAllRows();
         }
 
         function setBit(id, number) { // sets the bit directly
@@ -441,29 +441,6 @@
 
         function changeRow (row, operator) { // function that multiplies/divides the row by 2
             let bitArr = returnRow(row);
-
-            if (operator == "divide") {
-                if (bitArr[7] == 1)
-                    return; // check if last bit is 1 (if i divide that it wont be an integer)
-
-                for (var i = 7; i >= 0; i--) {
-                    if (i == 0) {
-                        bitArr[0] = 0; // edgecase for leftmost bit
-                    } else {
-                        bitArr[i] = bitArr[i-1]; // push every bit to the right
-                    }
-                }
-            } else {
-                if (bitArr[0] == 1)
-                    return; // check if first bit is 1 (if i multiply im gonna overflow)
-                for (var i = 0; i < 8; i++) {
-                    if (i == 7) {
-                        bitArr[7] = 0; // edgecase for rightmost bit
-                    } else {
-                        bitArr[i] = bitArr[i+1]; // push every bit to the left
-                    }
-                }
-            }
 
             for (var i = 1; i <= 8; i++) {  // set bits according to the new bitArr values
                 if (bitArr[i-1] == 1) {
@@ -551,4 +528,7 @@
         window.onload = reset();  // init buttons
 
     </script>
+            </div>
+            <br>
+            <br>
 {% endblock %}
