@@ -78,16 +78,15 @@ def binary():
     # submit button has been pushed
     if request.form:
         bits = request.form.get("bits")
-        pic = request.form.get("pic")
-        if pic == True:
-            print("hi")
-        if len(bits) != 0 and pic == True:  # input field has content
-            return render_template("binary.html", BITS=int(bits), imgBulbOn="/static/assets/harryalbum.jpg", imgBulbOff="static/assets/paris.jpg")
-        elif len(bits) != 0 and pic == False:
-            return render_template("binary.html", BITS=int(bits), imgBulbOn="/static/assets/goodgoose.jpeg", imgBulbOff="/static/assets/goose.jpeg")
-        elif pic == True:
-            return render_template("binary.html", BITS=8, imgBulbOn="/static/assets/harryalbum.jpg", imgBulbOff="static/assets/paris.jpg")
-    return render_template("binary.html", BITS=8, imgBulbOn="/static/assets/goodgoose.jpeg", imgBulbOff="/static/assets/goose.jpeg")
+        if len(bits) != 0:  # input field has content
+            return render_template("binary.html", BITS=int(bits))
+    return render_template("binary.html", BITS=8)
+
+@app.route('/binary/colorcode/')
+def colorcode():
+    return render_template("binary/colorcode.html")
+
+
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)
