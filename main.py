@@ -113,9 +113,14 @@ def insights():
 def greet():
     return render_template("greet.html")
 
-@app.route('/color/')
+@app.route('/color/', methods=['GET', 'POST'])
 def color():
-    return render_template("color.html")
+    BITS=8
+    imgBulbOn = "static/assets/openbook.jpg"
+    if request.form:
+        BITS = int(request.form.get("BITS"))
+        imgBulbOn = request.form['lightOn']
+    return render_template("color.html", imgBulbOn=imgBulbOn, BITS=BITS)
 
 
 
