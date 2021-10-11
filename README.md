@@ -38,11 +38,18 @@
 ### Ideation
 #### This week was a completely technical week working on the RGB minilab
 #### We created the toggle functions, RGB, and rotate images
+## review ticket
+| Name | Journal | TT & TPT Notes | Grade |
+| ---  | ---            | ---            | ---   |
+| Sonakshi| Journal | Notes | 2/2 |
+| Saumya | Journal | Notes | 2/2 |
+| Kashish | Journal | Notes | 2/2 |
+
 
 
 ## Week 6
 ### Individual Scoring
-| Name | Unit 5 Journal | TT & TPT Notes | Grade |
+| Name | Journal | TT & TPT Notes | Grade |
 | ---  | ---            | ---            | ---   |
 | Sonakshi| Journal | Notes | 2/2 |
 | Saumya | Journal | Notes | 2/2 |
@@ -78,7 +85,7 @@ https://youtu.be/UPD-ODdUVYg
 ### Team PBL
 | Requirement | Evidence |
 | ---        | ---      |
-| Pair Design / HTML.  Transfer design to layout.  Much of this could simply be converting Ideas to HTML.  Objective is to get your own STYLE, COLORS, FONTS; NAVIGATION into the site.  Establish your VIBE or Groove.  Try a couple of prototype experiments and get feedback from similar pair in Crossover. | [Layout Ticket] [Main Page Ticket](https://github.com/sonakshibhalla/flask_portfolio) & [Screenshot]
+| Pair Design / HTML.  Transfer design to layout.  Much of this could simply be converting Ideas to HTML.  Objective is to get your own STYLE, COLORS, FONTS; NAVIGATION into the site.  Establish your VIBE or Groove.  Try a couple of prototype experiments and get feedback from similar pair in Crossover. | [Layout ] [Main Page Ticket](https://github.com/sonakshibhalla/flask_portfolio) & [Screenshot]
 |Pair Prototyping / Thymeleaf.  Try using Class objects in Thymeleaf.    Most simple Class would be to use String methods (Links to an external site.) and Number methods, (Links to an external site.) more complex is to use your own defined Class include Images or other Media.   Objective is to produce a 3 by 3 grid using Bootstrap Grids, Bootstrap Tables, Bootstrap Cards.  Try to incorporate into Project or consider as Mini Lab depending on your design.  Try changing 3 x 3 to 4 x 4 or other orientation would be showing ability to manage page dynamically. 
 
 
