@@ -122,6 +122,10 @@ def color():
         imgBulbOn = request.form['lightOn']
     return render_template("color.html", imgBulbOn=imgBulbOn, BITS=BITS)
 
+@app.route('/logic gates/')
+def logicgates():
+    return render_template("logic gates.html")
+
 
 
 
