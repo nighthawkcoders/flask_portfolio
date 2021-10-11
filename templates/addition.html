@@ -31,7 +31,7 @@ add new images (ie PNGs) to project -->
     <script>
         const BITS = '{{ BITS }}'; let max = '{{ MAX }}'; let MAX = parseInt(max, 10);
         // return string with current value of each bit
-        function getBits(n) {
+        function getBits() {
             let bits = "";
             for(let i = 0; i < BITS; i++) {
                 bits = bits + document.getElementById('digit' + i).value;
@@ -55,6 +55,8 @@ add new images (ie PNGs) to project -->
             */
             document.getElementById('ascii').innerHTML = String.fromCharCode(parseInt(binary, 2));
             document.getElementById('unicode').innerHTML = String.fromCharCode(parseInt(binary, 2)).toString(10);
+            document.getElementById('unsigned').innerHTML
+
             {#ucode = String.fromCharCode(parseInt(binary,2));#}
             {##}
             {#document.getElementById('ascii').innerHTML = ucode;#}
@@ -183,15 +185,7 @@ add new images (ie PNGs) to project -->
             }
         }
 
-        function divide(n) {
-            let binary = getBits();
-// convert to decimal and do math
-            let decimal = parseInt(binary, 2);
-            if (n > 0) { // PLUS
-                decimal = MAX === decimal ? 0 : decimal /= n; // OVERFLOW or PLUS
-            } else { // MINUS
-                decimal = 0 === decimal ? MAX : decimal /= n; // OVERFLOW or MINUS
-            }
+
 
 
 
@@ -214,6 +208,36 @@ add new images (ie PNGs) to project -->
             }
         }
 
+        function unsignedAddition(){
+        }
+        let binary1 = getBits('digit');
+        let decimal1 = parseInt( binary1,2);
+        let binary2 = getBits('digit');
+        let decimal2 = parseInt(binary2,2);
+        decimal3 = decimal1 + decimal2;
+        return decimal3;
+        }
+
+        function signedAddition(bitsString){
+            let sign = 0;
+            if (bitsString[0] === "0"){
+                sign = parseInt(bitsString, 2)
+            }
+            else{
+                let flipped = ""
+                for(let i = 0; i < bitsString.length; i++){
+                    if (bitsString[i] === '1'){
+                        flipped += "0"
+                    }
+                    else {
+                        flipped += "1"
+                    }
+                }
+                sign = parseInt(flipped, 2);
+                sign += 1;
+                sign *= -1;
+            }
+            return sign;
     </script>
 
 
@@ -233,31 +257,20 @@ add new images (ie PNGs) to project -->
             <div class="col-8">
                 <table class="table">
                     <tr id="table">
-                        <th>Shift Left (*2)</th>
-                        <th>Plus</th>
                         <th>Binary</th>
-                        <th>Octal</th>
-                        <th>Hexadecimal</th>
-                        <th>Decimal</th>
-                        <th>Ascii</th>
-                        <th>Unicode</th>
+                        <th>Unsigned Sum</th>
                         <!-- Hack: display ASCII label for printable character(s) -->
-                        <th>Minus</th>
-                        <th>Shift Right (/2)</th>
+
 
                     </tr>
                     <tr>
-                        <td ><button type="button" id="mul1" onclick = "multiply(2)"><<</button></td>
-                        <td><button type="button" id="add1" onclick="add(1)">+1</button></td>
+
                         <td id="binary">00000000</td>
-                        <td id="octal">0</td>
-                        <td id="hexadecimal">0</td>
-                        <td id="decimal">0</td>
-                        <td id="ascii">0</td>
-                        <td id="unicode">0</td>
+                        <td id="unsigned"> 000000 </td>
+                        <td><button type="button" id="unsigned" onclick="unsignedAddition() ">Unsigned Addition</button></td>
+
                         <!-- Hack: display ASCII printable character(s) -->
-                        <td><button type="button" id="sub1" onclick="add(-1)">-1</button></td>
-                        <td ><button type="button" id="div1" onclick = "divide(2)">>><//2</button></td>
+
 
                     </tr>
                 </table>
