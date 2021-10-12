@@ -110,17 +110,52 @@
             }
         }
 
-        function addBits(){
-            let bin1 = getBits('digit');
-            let dec1 = parseInt(bin1,2);
-            let bin2 = getBits('digit2');
-            let dec2 = parseInt(bin2,2);
-            decimal3 = dec1 + dec2;
-            if (decimal3 > 255){
-                    decimal3 = 0
-
+        function signedAddition(bitsString){
+            let sign = 0;
+            if (bitsString[0] === "0"){
+                sign = parseInt(bitsString, 2)
             }
-            binary = decimal_2_base(decimal3, 2);
+            else{
+                let flip = ""
+                for(let i = 0; i < bitsString.length; i++){
+                    if (bitsString[i] === '1'){
+                        flip += "0"
+                    }
+                    else {
+                        flip += "1"
+                    }
+                }
+                sign = parseInt(flip, 2);
+                sign += 1;
+                sign *= -1;
+            }
+            return sign;
+        }
+        function addBits() {
+            let bin1 = getBits('digit');
+            let dec1 = signedAddition(bin1);
+            let bin2 = getBits('digit2');
+            let dec2 = signedAddition(bin2);
+            let binary = ""
+            decimal3 = dec1 + dec2;
+
+            if (decimal3 > 0) {
+                binary = decimal_2_base(decimal3, 2);
+
+            } else if (decimal3 < 0) {
+                alert(decimal3)
+                decimal3 *= -1;
+                decimal3 -= 1;
+
+                for (let i = 0; i < 8; i++) {
+                    if ((decimal3 & (2 ** i)) > 0 ) {
+                        binary = "0" + binary;
+                    } else {
+                        binary = "1" + binary;
+                    }
+
+                }
+            }
             for (let i = 0; i < binary.length; i++) {
                 let digit = binary.substr(i, 1);
                 document.getElementById('digit3' + i).value = digit;
@@ -132,13 +167,11 @@
             }
         }
 
-
-
     </script>
 {% endblock %}
 
 {% block body %}
-    <h1 class="text-center">Binary-Unsigned</h1>
+    <h1 class="text-center">Binary-Signed</h1>
     <div class="container">
         <div class="container">
             <div class="row justify-content-md-center">
@@ -157,16 +190,16 @@
                     </table>
                 </div>
             </div>
-        <div class="col-12">
-            <table class="table">
-                <tr>
-                    {% for i in range(BITS) %} {# we just want 8 bits per row #}
-                        <td><img class="img-responsive py-3" id="bulb{{i}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto">
-                            <button type="button" id="butt{{i}}" onclick="toggleBit('{{i}}', 'bulb', 'butt', 'digit')">{{ msgTurnOn }}</button>
-                            <input type='text' id='digit{{i}}' Value="0" size="1" readonly></td>
-                    {% endfor %}
-                </tr>
-            </table>
+            <div class="col-12">
+                <table class="table">
+                    <tr>
+                        {% for i in range(BITS) %} {# we just want 8 bits per row #}
+                            <td><img class="img-responsive py-3" id="bulb{{i}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto">
+                                <button type="button" id="butt{{i}}" onclick="toggleBit('{{i}}', 'bulb', 'butt', 'digit')">{{ msgTurnOn }}</button>
+                                <input type='text' id='digit{{i}}' Value="0" size="1" readonly></td>
+                        {% endfor %}
+                    </tr>
+                </table>
             </div>
             <table class="table">
                 <tr>

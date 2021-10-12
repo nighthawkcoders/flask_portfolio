@@ -58,7 +58,7 @@
         }
         return conversion;
     }
-    function updateBit(number, bitPosition, bitValue) {
+    function changeBit(number, bitPosition, bitValue) {
         console.log(number);
         console.log(bitPosition);
         console.log(bitValue);
@@ -66,7 +66,7 @@
         const clearMask = ~(1 << bitPosition);
         return (number & clearMask) | (bitValue << bitPosition);
     }
-    function updateColorPane() {
+    function changecolor() {
         const valueCtrlRed = document.getElementById('val-' + 0);
         const valueCtrlGreen = document.getElementById('val-' + 1);
         const valueCtrlBlue = document.getElementById('val-' + 2);
@@ -107,7 +107,7 @@
 
         console.log('bit after: ' + bit);
 
-        value = updateBit(value, col, bit)
+        value = changeBit(value, col, bit)
 
         console.log('Value: ' + value);
         console.log('Bit:' + bit);
@@ -120,7 +120,7 @@
         buttonCtrl.innerHTML = bit;
         (bit ? buttonCtrl.style.background='#FFFFFF' : buttonCtrl.style.background='#000000');
         (bit ? buttonCtrl.style.color='#000000' : buttonCtrl.style.color='#FFFFFF');
-        updateColorPane();
+        changecolor();
     }
     // toggle selected bit and recalculate
     function toggleBit(i) {
@@ -156,7 +156,7 @@
         binary = decimal_2_base(decimal, 2);
         // update conversions
         setConversions(binary);
-        // update bits
+        // change bits
         for (let i = 0; i < binary.length; i++) {
             let digit = binary.substr(i, 1);
             document.getElementById('digit' + i).value = digit;
@@ -182,7 +182,7 @@
         binary = decimal_2_base(decimal, 2);
         // update conversions
         setConversions(binary);
-        // update bits
+        // change bits
         for (let i = 0; i < binary.length; i++) {
             let digit = binary.substr(i, 1);
             document.getElementById('digit' + i).value = digit;
