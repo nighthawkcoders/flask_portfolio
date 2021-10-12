@@ -29,7 +29,11 @@
 
 ## Week 8
 ## ReadMe Video:
-
+### Ideation
+#### This week we had different tasks to do
+#### Our team split up the technical work with 2 tasks each
+#### Had some trouble with signed addition and logic gates
+#### Crossover team grading - links are review ticket
 
 
 
