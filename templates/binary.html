@@ -164,19 +164,21 @@ add new images (ie PNGs) to project -->
                 decimal = 0 === decimal ? MAX : decimal *= n; // OVERFLOW or MINUS
             }
 
-function addBins (n1, n2)
-    bin1 = getBitds (n1);
-    bin2 = getBits(n2);
-    decSum = parseInt(bin1, 2) +parseInt (bin2, 2);
-    binSum = Number(decSum).toString(2)
-    binSum =  binSum.padStart(0, "0");
-    for (let i= 0, i < BITS; i++
+        function addBins(n1, n2); {
+            }
+            bin1 = getBits (n1);
+            bin2 = getBits(n2);
+            decSum = parseInt(bin1, 2) +parseInt (bin2, 2);
+            binSum = Number(decSum).toString(2)
+            binSum =  binSum.padStart(0, "0");
+
+            for (let i= 0, i < BITS; i++
             {
                 document.getElementById('digit3' + i).value = binSum.substr(i, 1);
             }
-            document.getElementByIs('decVal1').innerHTML = "Decimal Value 1: " + parseInt(bin1,2;
-            document.getElementByIs('decVal2').innerHTML = "Decimal Value 2: " + parseInt(bin1,2;
-        })
+            document.getElementByIs('decVal1').innerHTML = "Decimal Value 1: " + parseInt(bin1,2);
+            document.getElementByIs('decVal2').innerHTML = "Decimal Value 2: " + parseInt(bin1,2);
+        }
 // convert the result back to binary
             binary = decimal_2_base(decimal, 2);
 // update conversions
