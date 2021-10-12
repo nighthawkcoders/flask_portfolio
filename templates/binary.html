@@ -1,23 +1,17 @@
 <!DOCTYPE html>
 {% extends "layouts/base.html" %}
-
 {% block background %}
 {% endblock %}
 {% set project = "binary" %}
-
 <!-- Search for all the Hack: below for hack-a-thon and mini-lab requirements -->
 <!-- need to adjust Templates to start -->
-
 DONE<!-- Hack: Build form to drive bit size dynamic updates
 use HTML Input Form in Frontend, ie toward top of Page
 send initial value and updated values to form via Python render_template -->
 DONE<!-- Hack: use 8 as default
 Change to an input box-->
-
-
 {% set BITS = bits %}
 {% set MAX = ((2 ** BITS) - 1) %}
-
 DONE <!-- Hack: Set bulbs and pass as variables via Python render_template
 add new images (ie PNGs) to project -->
 <!-- use your PNGs as default -->
@@ -25,7 +19,6 @@ add new images (ie PNGs) to project -->
 {% set imgBulbOff = "/static/assets/bulb_off.png" %}
 {% set msgTurnOn = "Turn On" %}
 {% set msgTurnOff = "Turn Off" %}
-
 {% block body %}
     <title>Binary page</title>
     <script>
@@ -34,12 +27,10 @@ add new images (ie PNGs) to project -->
         function getBits(n) {
             let bits = "";
             for(let i = 0; i < BITS; i++) {
-                let digit = 'digit'+n;
-                bits = bits + document.getElementById(digit + i).value;
+                bits = bits + document.getElementById('digit' + i).value;
             }
             return bits;
         }
-
         // setter for DOM values
         function setConversions(binary) {
             document.getElementById('binary').innerHTML = binary;
@@ -54,13 +45,15 @@ add new images (ie PNGs) to project -->
             DOM assignment by converting decimal https://www.w3schools.com/jsref/jsref_fromcharcode.asp
             below ASCII for more ideas of where to make changes
             */
-            document.getElementById('ascii').innerHTML = String.fromCharCode(parseInt(binary, 2));
-            document.getElementById('unicode').innerHTML = String.fromCharCode(parseInt(binary, 2)).toString(10);
+            ucode = String.fromCharCode(parseInt(binary,2));
+
+            document.getElementById('ascii').innerHTML = ucode;
+            {#document.getElementById('ascii').innerHTML = String.fromCharCode(parseInt(binary, 2));#}
+            {#document.getElementById('unicode').innerHTML = String.fromCharCode(parseInt(binary, 2)).toString(10);#}
             {#ucode = String.fromCharCode(parseInt(binary,2));#}
             {##}
             {#document.getElementById('ascii').innerHTML = ucode;#}
         }
-
         // algorithm to convert decimal to base using division and remainder
         function decimal_2_base(decimal, base) {
             let conversion = "";
@@ -78,14 +71,12 @@ add new images (ie PNGs) to project -->
             }
             return conversion;
         }
-
-
         // toggle selected bit and recalculate
-        function toggleBit(i,n,bulbn,buttn,digitn) {
+        function toggleBit(i) {
 //alert("Digit action: " + i );
-            const dig = document.getElementById('digitn' + i);
-            const image = document.getElementById('bulbn' + i);
-            const butt = document.getElementById('buttn' + i);
+            const dig = document.getElementById('digit' + i);
+            const image = document.getElementById('bulb' + i);
+            const butt = document.getElementById('butt' + i);
 // Change digit and visual
             if (image.src.match("{{ imgBulbOn }}")) {
                 dig.value = 0;
@@ -96,7 +87,6 @@ add new images (ie PNGs) to project -->
                 image.src = "{{ imgBulbOn }}";
                 butt.innerHTML = "{{ msgTurnOff }}";
             }
-
 // Binary numbers
             const binary = getBits();
             setConversions(binary);
@@ -136,7 +126,6 @@ add new images (ie PNGs) to project -->
             } else { // MINUS
                 decimal = 0 === decimal ? MAX : decimal += n; // OVERFLOW or MINUS
             }
-
 // convert the result back to binary
             binary = decimal_2_base(decimal, 2);
 // update conversions
@@ -163,20 +152,6 @@ add new images (ie PNGs) to project -->
             } else { // MINUS
                 decimal = 0 === decimal ? MAX : decimal *= n; // OVERFLOW or MINUS
             }
-
-function addBins (n1, n2)
-    bin1 = getBitds (n1);
-    bin2 = getBits(n2);
-    decSum = parseInt(bin1, 2) +parseInt (bin2, 2);
-    binSum = Number(decSum).toString(2)
-    binSum =  binSum.padStart(0, "0");
-    for (let i= 0, i < BITS; i++
-            {
-                document.getElementById('digit3' + i).value = binSum.substr(i, 1);
-            }
-            document.getElementByIs('decVal1').innerHTML = "Decimal Value 1: " + parseInt(bin1,2;
-            document.getElementByIs('decVal2').innerHTML = "Decimal Value 2: " + parseInt(bin1,2;
-        })
 // convert the result back to binary
             binary = decimal_2_base(decimal, 2);
 // update conversions
@@ -204,14 +179,10 @@ function addBins (n1, n2)
             } else { // MINUS
                 decimal = 0 === decimal ? MAX : decimal /= n; // OVERFLOW or MINUS
             }
-
-
-
 // convert the result back to binary
             binary = decimal_2_base(decimal, 2);
 // update conversions
             setConversions(binary, binary+8);
-
 // update bits
             for (let i = 0; i < binary.length; i++) {
                 let digit = binary.substr(i, 1);
@@ -225,20 +196,13 @@ function addBins (n1, n2)
                 }
             }
         }
-
     </script>
-
-
-
-
-
     <h1 class="text-center">Binary Math with Conversions</h1>
     <form action="/binary" id="bits" method="POST" >
         <label for="bits">Enter Bit Number</label>
         <input name="bits">
         <input type="submit" value="Submit!">
     </form>
-
     <div class="container">
         <div class="row justify-content-md-center">
             <!-- Table on page -->
@@ -251,12 +215,10 @@ function addBins (n1, n2)
                         <th>Octal</th>
                         <th>Hexadecimal</th>
                         <th>Decimal</th>
-                        <th>Ascii</th>
-                        <th>Unicode</th>
+                        <th>Ascii/Unicode</th>
                         <!-- Hack: display ASCII label for printable character(s) -->
                         <th>Minus</th>
                         <th>Shift Right (/2)</th>
-
                     </tr>
                     <tr>
                         <td ><button type="button" id="mul1" onclick = "multiply(2)"><<</button></td>
@@ -266,18 +228,14 @@ function addBins (n1, n2)
                         <td id="hexadecimal">0</td>
                         <td id="decimal">0</td>
                         <td id="ascii">0</td>
-                        <td id="unicode">0</td>
+{#                        <td id="unicode">0</td>#}
                         <!-- Hack: display ASCII printable character(s) -->
                         <td><button type="button" id="sub1" onclick="add(-1)">-1</button></td>
                         <td ><button type="button" id="div1" onclick = "divide(2)">>><//2</button></td>
-
                     </tr>
                 </table>
             </div>
         </div>
-
-
-
         <div class="col-12">
             <table class="table">
                 <tr>
@@ -293,39 +251,10 @@ function addBins (n1, n2)
                         <td><label for='digit{{i}}'></label><input type='text' id='digit{{i}}' Value="0" size="2" readonly></td>
                     {% endfor %}
                 </tr>
-
-                <tr>
-                    <!-- for loop -->
-                    {% for j in range(BITS) %}
-                        <td><img class="img-responsive py-3" id="bulb{{j}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto">
-                            <button type="button" id="butt{{j}}" onclick="toggleBit2('{{j}}')">{{ msgTurnOn }}</button>
-                        </td>
-                    {% endfor %}
-                </tr>
-                <tr>
-                    {% for j in range(BITS) %}
-                        <td><label for='digit{{j}}'></label><input type='text' id='digit{{j}}' Value="0" size="2" readonly></td>
-                    {% endfor %}
-                <tr>
-                <tr>
-                    <!-- for loop -->
-                    {% for j in range(BITS) %}
-                        <td><img class="img-responsive py-3" id="bulb{{j}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto">
-                            <button type="button" id="butt{{j}}" onclick="toggleBit2('{{j}}')">{{ msgTurnOn }}</button>
-                        </td>
-                    {% endfor %}
-                </tr>
-                <tr>
-                    {% for j in range(BITS) %}
-                        <td><label for='digit{{j}}'></label><input type='text' id='digit{{j}}' Value="0" size="2" readonly></td>
-                    {% endfor %}
-                <tr>
             </table>
         </div>
-
     </div>
     </div>
-
     <html>
     <head>
         <style>
@@ -335,9 +264,6 @@ function addBins (n1, n2)
         </style>
     </head>
     <body>
-
-
     </body>
     </html>
-
 {% endblock %}
