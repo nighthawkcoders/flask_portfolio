@@ -84,6 +84,10 @@ def colorcodes():
 def logicgates():
     return render_template("logicgates.html")
 
+@app.route('/binary2')
+def binary2():
+    return render_template("binary2.html")
+
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)

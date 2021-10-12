@@ -1,4 +1,4 @@
-from PIL import Image, ImageDraw
+from PIL import Image, ImageDraw, ImageFilter
 import numpy
 import base64
 from io import BytesIO
@@ -38,6 +38,19 @@ def image_data(path="static/", img_list=None):  # path of static images is defau
         img_dict['size'] = img_reference.size
         # Conversion of original Image to Base64, a string format that serves HTML nicely
         img_dict['base64'] = image_formatter(img_reference, img_dict['format'])
+
+        blur_image = img_reference.filter(ImageFilter.GaussianBlur(5))
+        img_dict['base64_BLUR'] = image_formatter(blur_image, img_dict['format'])
+        img_dict['blur_data'] = numpy.array(blur_image.getdata())
+
+        text_image = ImageDraw.Draw(img_reference)
+        text_image.text((0,0), "EPIC GAMERS", fill=(255, 0, 0))
+        img_reference.save(file)
+        img_dict['base64_TEXT'] = image_formatter(img_reference, img_dict['format'])
+        img_dict['text_data'] = numpy.array(img_reference.getdata())
+        # text_image.show()
+        # text_image.save("static/assets/images/temp.jpg")
+
         # Numpy is used to allow easy access to data of image, python list
         img_dict['data'] = numpy.array(img_data)
         img_dict['hex_array'] = []
@@ -63,6 +76,18 @@ def image_data(path="static/", img_list=None):  # path of static images is defau
         img_dict['hex_array_GRAY'] = []
         img_dict['binary_array_GRAY'] = []
         # 'data' is a list of RGB data, the list is traversed and hex and binary lists are calculated and formatted
+        img_dict['hex_array_BLUR'] = []
+        img_dict['binary_array_BLUR'] = []
+
+        for pixel in img_dict['blur_data']:
+            # hexadecimal conversions
+            hex_value = hex(pixel[0])[-2:] + hex(pixel[1])[-2:] + hex(pixel[2])[-2:]
+            hex_value = hex_value.replace("x", "0")
+            img_dict['hex_array_BLUR'].append("#" + hex_value)
+            # binary conversions
+            bin_value = bin(pixel[0])[2:].zfill(8) + " " + bin(pixel[1])[2:].zfill(8) + " " + bin(pixel[2])[2:].zfill(8)
+            img_dict['binary_array_BLUR'].append(bin_value)
+
         for pixel in img_dict['gray_data']:
             # hexadecimal conversions
             hex_value = hex(pixel[0])[-2:] + hex(pixel[1])[-2:] + hex(pixel[2])[-2:]
@@ -71,6 +96,18 @@ def image_data(path="static/", img_list=None):  # path of static images is defau
             # binary conversions
             bin_value = bin(pixel[0])[2:].zfill(8) + " " + bin(pixel[1])[2:].zfill(8) + " " + bin(pixel[2])[2:].zfill(8)
             img_dict['binary_array_GRAY'].append(bin_value)
+
+            img_dict['hex_array_TEXT'] = []
+            img_dict['binary_array_TEXT'] = []
+        for pixel in img_dict['text_data']:
+            # hexadecimal conversions
+            hex_value = hex(pixel[0])[-2:] + hex(pixel[1])[-2:] + hex(pixel[2])[-2:]
+            hex_value = hex_value.replace("x", "0")
+            img_dict['hex_array_TEXT'].append("#" + hex_value)
+            # binary conversions
+            bin_value = bin(pixel[0])[2:].zfill(8) + " " + bin(pixel[1])[2:].zfill(8) + " " + bin(pixel[2])[2:].zfill(8)
+            img_dict['binary_array_TEXT'].append(bin_value)
+
     return img_list  # list is returned with all the attributes for each image dictionary
 
 

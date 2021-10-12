@@ -1,0 +1,300 @@
+<!-- Extending the predefined project layout -->
+{% extends "layouts/base.html" %}
+{% block body %}
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+
+  <!-- Common style for site -->
+  <style>
+    html, body{
+      margin: 0;
+      height: 100%;
+      animation: fadein 2s;
+      -moz-animation: fadein 2s; /* Firefox */
+      -webkit-animation: fadein 2s; /* Safari and Chrome */
+      -o-animation: fadein 2s; /* Opera */
+      background-color: deepskyblue;
+      color: black;
+      font-family: "Comic Sans MS", sans-serif;
+    }
+
+    .dark-mode {
+      background-color: black;
+      color: white;
+    }
+
+    h1{
+      font-size: 3em;
+      color:white;
+    }
+
+    a {
+      color: midnightblue;
+    }
+    .button {
+      background-color: pink;
+      border: hotpink;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+    }
+
+    *{
+
+    }
+  </style>
+
+  <!-- Use this block for page specific meta data -->
+
+  <title>Binary page</title>
+  <script>
+    const BITS = '8'; let MAX = parseInt(127, 10); let MIN = parseInt(-128, 10)
+    // return string with current value of each bit
+    function getBits0() {
+      let bits0 = "";
+      for(let i = 0; i < BITS; i++) {
+        bits0 = bits0 + document.getElementById('digit0' + i).value;
+      }
+      return bits0;
+    }
+
+    function getBits1() {
+      let bits1 = "";
+      for(let i = 0; i < BITS; i++) {
+        bits1 = bits1 + document.getElementById('digit1' + i).value;
+      }
+      return bits1;
+    }
+
+    // setter for DOM values
+    function setConversions0(binary) {
+      const decimal = parseInt(binary, 2) - document.getElementById('digit00').value*256
+      // DOM assignment to Decimal conversion
+      document.getElementById('decimal0').innerHTML = decimal.toString(10)
+    }
+
+    function setConversions1(binary) {
+      const decimal = parseInt(binary, 2) - document.getElementById('digit10').value*256
+      // DOM assignment to Decimal conversion
+      document.getElementById('decimal1').innerHTML = decimal.toString(10)
+    }
+
+    function addDecimal() {
+      result = (parseInt(getBits0(), 2) - document.getElementById('digit00').value*256) + (parseInt(getBits1(), 2) - document.getElementById('digit10').value*256)
+      if ((-128 > result) || (result > 127)) {
+        document.getElementById('result').innerHTML = result.toString() + ", overflow"
+      }
+      else {
+        document.getElementById('result').innerHTML = result
+      }
+    }
+
+    // toggle selected bit and recalculate
+    function toggleBit0(i) {
+      //alert("Digit action: " + i );
+      const dig0 = document.getElementById('digit0' + i);
+      const image0 = document.getElementById('bulb0' + i);
+      const butt0 = document.getElementById('butt0' + i);
+      // Change digit and visual
+      if (image0.src.match("/static/poggers.png")) {
+        dig0.value = 0;
+        image0.src = "/static/sadge.png";
+        butt0.innerHTML = "Turn On";
+      } else {
+        dig0.value = 1;
+        image0.src = "/static/poggers.png";
+        butt0.innerHTML = "Turn Off";
+      }
+      // Binary numbers
+      const binary0 = getBits0();
+      setConversions0(binary0);
+      addDecimal();
+    }
+
+    function toggleBit1(i) {
+      //alert("Digit action: " + i );
+      const dig1 = document.getElementById('digit1' + i);
+      const image1 = document.getElementById('bulb1' + i);
+      const butt1 = document.getElementById('butt1' + i);
+      // Change digit and visual
+      if (image1.src.match("/static/poggers.png")) {
+        dig1.value = 0;
+        image1.src = "/static/sadge.png";
+        butt1.innerHTML = "Turn On";
+      } else {
+        dig1.value = 1;
+        image1.src = "/static/poggers.png";
+        butt1.innerHTML = "Turn Off";
+      }
+      // Binary numbers
+      const binary1 = getBits1();
+      setConversions1(binary1);
+      addDecimal();
+    }
+
+
+    // add is positive integer, subtract is negative integer
+  </script>
+
+
+</head>
+
+
+<body>
+
+<!-- CONTENT Block, utilize this block for page specific content -->
+
+<br>
+<br>
+
+<h1 class="text-center">Signed Addition</h1>
+<div class="container">
+  <div class="row justify-content-md-center">
+    <div class="col-12">
+      <table class="table">
+        <tr>
+          <!--  <td id="binary">00000000</td> -->
+
+          <td style="color:white">Row 1</td>
+
+          <td><img class="img-responsive py-3" id="bulb00" src="/static/sadge.png" alt="" width="80" height="Auto">
+            <button class="button" id="butt00" onclick="toggleBit0('0')">Turn On</button>
+          </td>
+
+          <td><img class="img-responsive py-3" id="bulb01" src="/static/sadge.png" alt="" width="80" height="Auto">
+            <button class="button" id="butt01" onclick="toggleBit0('1')">Turn On</button>
+          </td>
+
+          <td><img class="img-responsive py-3" id="bulb02" src="/static/sadge.png" alt="" width="80" height="Auto">
+            <button class="button" id="butt02" onclick="toggleBit0('2')">Turn On</button>
+          </td>
+
+          <td><img class="img-responsive py-3" id="bulb03" src="/static/sadge.png" alt="" width="80" height="Auto">
+            <button class="button" id="butt03" onclick="toggleBit0('3')">Turn On</button>
+          </td>
+
+          <td><img class="img-responsive py-3" id="bulb04" src="/static/sadge.png" alt="" width="80" height="Auto">
+            <button class="button" id="butt04" onclick="toggleBit0('4')">Turn On</button>
+          </td>
+
+          <td><img class="img-responsive py-3" id="bulb05" src="/static/sadge.png" alt="" width="80" height="Auto">
+            <button class="button" id="butt05" onclick="toggleBit0('5')">Turn On</button>
+          </td>
+
+          <td><img class="img-responsive py-3" id="bulb06" src="/static/sadge.png" alt="" width="80" height="Auto">
+            <button class="button" id="butt06" onclick="toggleBit0('6')">Turn On</button>
+          </td>
+
+          <td><img class="img-responsive py-3" id="bulb07" src="/static/sadge.png" alt="" width="80" height="Auto">
+            <button class="button" id="butt07" onclick="toggleBit0('7')">Turn On</button>
+          </td>
+        <tr>
+          <td></td>
+
+          <td><input type='text' id='digit00' Value="0" size="1" readonly></td>
+
+          <td><input type='text' id='digit01' Value="0" size="1" readonly></td>
+
+          <td><input type='text' id='digit02' Value="0" size="1" readonly></td>
+
+          <td><input type='text' id='digit03' Value="0" size="1" readonly></td>
+
+          <td><input type='text' id='digit04' Value="0" size="1" readonly></td>
+
+          <td><input type='text' id='digit05' Value="0" size="1" readonly></td>
+
+          <td><input type='text' id='digit06' Value="0" size="1" readonly></td>
+
+          <td><input type='text' id='digit07' Value="0" size="1" readonly></td>
+
+        </tr>
+      </table>
+
+      <h1 style="margin-left:50%">+</h1>
+
+      <table class="table">
+        <tr>
+          <!-- <td id="banary">00000000</td> -->
+
+          <td style="color:white">Row 2</td>
+
+          <td><img class="img-responsive py-3" id="bulb10" src="/static/sadge.png" alt="" width="80" height="Auto">
+            <button class="button" id="butt10" onclick="toggleBit1('0')">Turn On</button>
+          </td>
+
+          <td><img class="img-responsive py-3" id="bulb11" src="/static/sadge.png" alt="" width="80" height="Auto">
+            <button class="button" id="butt11" onclick="toggleBit1('1')">Turn On</button>
+          </td>
+
+          <td><img class="img-responsive py-3" id="bulb12" src="/static/sadge.png" alt="" width="80" height="Auto">
+            <button class="button" id="butt12" onclick="toggleBit1('2')">Turn On</button>
+          </td>
+
+          <td><img class="img-responsive py-3" id="bulb13" src="/static/sadge.png" alt="" width="80" height="Auto">
+            <button class="button" id="butt13" onclick="toggleBit1('3')">Turn On</button>
+          </td>
+
+          <td><img class="img-responsive py-3" id="bulb14" src="/static/sadge.png" alt="" width="80" height="Auto">
+            <button class="button" id="butt14" onclick="toggleBit1('4')">Turn On</button>
+          </td>
+
+          <td><img class="img-responsive py-3" id="bulb15" src="/static/sadge.png" alt="" width="80" height="Auto">
+            <button class="button" id="butt15" onclick="toggleBit1('5')">Turn On</button>
+          </td>
+
+          <td><img class="img-responsive py-3" id="bulb16" src="/static/sadge.png" alt="" width="80" height="Auto">
+            <button class="button" id="butt16" onclick="toggleBit1('6')">Turn On</button>
+          </td>
+
+          <td><img class="img-responsive py-3" id="bulb17" src="/static/sadge.png" alt="" width="80" height="Auto">
+            <button class="button" id="butt17" onclick="toggleBit1('7')">Turn On</button>
+        </tr>
+        <tr>
+          <td></td>
+
+          <td><input type='text' id='digit10' Value="0" size="1" readonly></td>
+
+          <td><input type='text' id='digit11' Value="0" size="1" readonly></td>
+
+          <td><input type='text' id='digit12' Value="0" size="1" readonly></td>
+
+          <td><input type='text' id='digit13' Value="0" size="1" readonly></td>
+
+          <td><input type='text' id='digit14' Value="0" size="1" readonly></td>
+
+          <td><input type='text' id='digit15' Value="0" size="1" readonly></td>
+
+          <td><input type='text' id='digit16' Value="0" size="1" readonly></td>
+
+          <td><input type='text' id='digit17' Value="0" size="1" readonly></td>
+        </tr>
+      </table>
+
+      <h1 style="margin-left:50%">=</h1>
+
+      <table width="25%" style="margin:auto; border-color:white; border-top: 1px solid #ffffff;border-bottom:1px solid #ffffff;border-left: 1px solid #ffffff; border-right: 1px solid #ffffff; color: white">
+      <tr>
+        <th>Row 1</th>
+        <th>Row 2</th>
+        <th>Result</th>
+      </tr>
+      <tr>
+        <td id="decimal0">0</td>
+        <td id="decimal1">0</td>
+        <td id="result">0</td>
+      </tr>
+    </table>
+      <br>
+      <br>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

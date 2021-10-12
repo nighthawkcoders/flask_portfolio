@@ -22,6 +22,17 @@
       $('#colored').show()
       imageType = 0;
     }
+    function textimage() {
+      if (imageType == 0) {
+        $('#colored').hide()
+        $('#textimage').show()
+        imageType = 1;
+      } else {
+        $('#textimage').hide()
+        $('#colored').show()
+        imageType = 0;
+      }
+    }
   }
 </script>
 <title>RGB starter</title>
@@ -43,7 +54,6 @@
       position: absolute;
       top: 11.5%;
       right: 0.5%;
-
     }
   </style>
   <button onclick="toggle()" style="background-color:pink; border-color:hotpink">GrayScale</button>
@@ -60,7 +70,7 @@
       {% for image in images %}
       <tr>
         <td>
-          <div>{{image.file}}</div>
+          <div class="top-left">{{image.file}}</div>
           <div>{{image.format}}</div>
           <div>{{image.size}}</div>
           <div>{{image.label}}</div>
@@ -117,7 +127,7 @@
       {% for image in images %}
       <tr>
         <td>
-          <div>{{image.file}}</div>
+          <div class="top-left">{{image.file}}</div>
           <div>{{image.format}}</div>
           <div>{{image.size}}</div>
           <div>{{image.label}}</div>
@@ -162,9 +172,69 @@
   </div> <!-- end gray -->
 </div>
 
+<div class="row justify-content-md-center" id="textimage">
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Meta Data</th>
+      <th>Image</th>
+      <th>Data</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for image in images %}
+    <tr>
+      <td>
+        <div class="top-left">{{image.file}}</div>
+        <div>{{image.format}}</div>
+        <div>{{image.size}}</div>
+        <div>{{image.label}}</div>
+        <div>{{image.source}}</div>
+      </td>
+      <td>
+        <img class="img-responsive py-3" id=img{{loop.index}} alt="" width="256" height="Auto" src="{{image.base64_TEXT}}" >
+        <p hidden id="img_text{{loop.index}}">{{image.base64_TEXT}}</p>
+      </td>
+      <td>
+        <div class="overflow-auto" style="height: 256px">
+          <table class="table">
+            <thead>
+            <tr>
+              <th>#</th>
+              <th>{{image.mode}}</th>
+              <th>Hex Code</th>
+              <th>Binary</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for row in image.text_data[:256+1] %}
+            <tr>
+              <td>{{loop.index}}</td>
+              <td>{{row}}</td>
+              <td>{{image.hex_array_TEXT[loop.index - 1]}}</td>
+              <td>{{image.binary_array_TEXT[loop.index - 1]}}
+            </tr>
+            {% if loop.index > 256 %}
+            <tr><td>...</td><td>truncated</td><td>...</td><td>...</td></tr>
+            {% endif %}
+            {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+
+</div> <!-- end textimage -->
+
+</div>
+
 <script>
   $( document ).ready(function() {
     $('#grayscale').hide()
+    $('#textimage').hide()
   });
 </script>
 {% endblock %}
