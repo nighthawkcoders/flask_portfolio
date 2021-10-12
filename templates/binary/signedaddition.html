@@ -39,7 +39,7 @@
             bits = bits + document.getElementById('digit' + i).value;
         }
         // Check the left most digit value and make bits signed or not.
-        if((document.getElementById('digit' + 0).value) == 1)
+        if(bits.charAt(0) === "1")
         {
             bits = "-" + bits.slice(1);
         }
