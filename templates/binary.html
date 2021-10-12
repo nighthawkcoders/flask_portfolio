@@ -42,6 +42,7 @@
         }
         // setter for DOM values
         function setConversions(binary) {
+
             document.getElementById('binary').innerHTML = binary;
             // DOM assignment to Octal conversion
             document.getElementById('octal').innerHTML = parseInt(binary, 2).toString(8);
@@ -54,9 +55,19 @@
              DOM assignment by converting decimal https://www.w3schools.com/jsref/jsref_fromcharcode.asp
              below ASCII for more ideas of where to make changes
              */
-            document.getElementById('ascii').innerHTML = String.fromCharCode(parseInt(binary, 2));
-            document.getElementById('RGB')
+            var intVal = parseInt(binary,2);
+            // print ascii only if number is  < 128 as ascii is 7 bits
+            // else print - Not Applicable - NA
+            if (intVal < 128) {
+                document.getElementById("ascii").innerHTML =  String.fromCharCode(parseInt(binary,2));
+            } else {
+                document.getElementById("ascii").innerHTML = "NA";
+            }
 
+            // DOM assignment to unicode conversion
+            document.getElementById('utf').innerHTML =  String.fromCharCode(parseInt(binary,2));
+            // DOM assignment to unicode conversion
+            document.getElementById('RGB');
         }
 
         // algorithm to convert decimal to base using division and remainder
@@ -182,6 +193,7 @@
                         <th>Hexadecimal</th>
                         <th>Decimal</th>
                         <th>Ascii</th>
+                        <th>UTF</th>
                         <!-- Hack: display ASCII label for printable character(s)  -->
                         <th>Minus</th>
                         <th>Divide</th>
@@ -194,6 +206,7 @@
                         <td id="hexadecimal">0</td>
                         <td id="decimal">0</td>
                         <td id="ascii">0</td>
+                        <td id="utf">0</td>
                         <!-- Hack: display ASCII printable character(s)  -->
                         <td><button type="button" id="sub1" onclick="add(-1)">-1</button></td>
                         <td><button type="button" id="shiftright" onclick="shift(-1)">>></button></td>

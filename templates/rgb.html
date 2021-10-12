@@ -69,6 +69,7 @@
                             <img class="img-responsive py-3" id=img{{loop.index}} alt="" width="256" height="Auto" src="{{image.base64}}" >
                             <input type="button" value="Toggle Gray" id="btn{{ loop.index }}" onclick="setImg({{ loop.index }})">
                             <input type="button" value="Invert" id="btn6"  onclick="setInvert({{ loop.index }})">
+                            <input type="button" value="Invert" id="btn6"  onclick="setInvert({{ loop.index }})">
                             <!-- Hack: create button (btn{{loop.index}} to  call java script function
                                pass index to allow you to toggle images with hidden id's
                                {{image.base64}}  original image
