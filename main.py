@@ -72,6 +72,15 @@ def addition():
         # starting and empty input default
     return render_template("addition.html", bits=8)
 
+@app.route("/signed", methods=['GET','POST'])
+def signed():
+    if request.form:
+        bits = request.form.get("bits")
+        if len(bits) != 0:  # input field has content
+            return render_template("signed.html", bits=int(bits))
+        # starting and empty input default
+    return render_template("signed.html", bits=8)
+
 @app.route('/sonakshi', methods=['GET', 'POST'])
 def sonakshi():
     # submit button has been pushed
