@@ -107,13 +107,12 @@ This minilab is all about guessing songs. Samples of songs from different genres
 </td>
 </tr>
 <tr>
-<td>Pair Journal activities + Color codes </td>
+<td>Pair Journal activities + Color Code </td>
 <td>Bria and Riya</td>
 <td>
-<a href="" target="_blank"></a><br>
-<a href="" target="_blank"></a><br>
-<a href="" target="_blank"></a><br>
-<a href="" target="_blank"></a><br>
+<a href="https://github.com/B-G101/Team-BRS/issues/96" target="_blank">Bria and Riya Pair Journal</a><br>
+<a href="https://github.com/B-G101/Team-BRS/issues/94" target="_blank">beginnings of color code working</a><br>
+<a href="https://github.com/B-G101/Team-BRS/issues/91" target="_blank">Unicode</a><br>
 <a href="" target="_blank"></a><br>
 </td>
 </tr>
@@ -121,7 +120,11 @@ This minilab is all about guessing songs. Samples of songs from different genres
 <tr>
 <td>Pair Journal activities + Logic Gates </td>
 <td>Sreeja and Val</td>
-<a href="" target="_blank"></a><br>
+<td>
+<a href="https://github.com/B-G101/Team-BRS/issues/97" target="_blank">Valerie & Sreeja Pair Journal</a><br>
+<a href="https://github.com/B-G101/Team-BRS/issues/95" target="_blank">Signed Addition</a><br>
+<a href="https://github.com/B-G101/Team-BRS/issues/93" target="_blank">Unsigned Addition</a><br>
+<a href="https://github.com/B-G101/Team-BRS/issues/92" target="_blank">Logic Gates</a><br>
 <a href="" target="_blank"></a><br>
 </td>
 </tr>
@@ -130,7 +133,7 @@ This minilab is all about guessing songs. Samples of songs from different genres
 <td>Multiply and Divide by 2</td>
 <td>Bria</td>
 <td>
-<a href="" target="_blank"></a><br>
+<a href="https://github.com/B-G101/Team-BRS/issues/90" target="_blank">Shift Done</a><br>
 <a href="" target="_blank"></a><br>
 <a href="" target="_blank"></a><br>
 <a href="" target="_blank"></a><br>

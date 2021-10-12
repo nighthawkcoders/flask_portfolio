@@ -51,24 +51,13 @@
             // DOM assignment to Decimal conversion
             document.getElementById('decimal').innerHTML = parseInt(binary, 2).toString(10);
 
-            /* Hack: show ASCII printable character(s) for each 8 bits
-             DOM assignment by converting decimal https://www.w3schools.com/jsref/jsref_fromcharcode.asp
-             below ASCII for more ideas of where to make changes
-             */
-            var intVal = parseInt(binary,2);
-            // print ascii only if number is  < 128 as ascii is 7 bits
-            // else print - Not Applicable - NA
-            if (intVal < 128) {
-                document.getElementById("ascii").innerHTML =  String.fromCharCode(parseInt(binary,2));
-            } else {
-                document.getElementById("ascii").innerHTML = "NA";
-            }
-
-            // DOM assignment to unicode conversion
-            document.getElementById('utf').innerHTML =  String.fromCharCode(parseInt(binary,2));
-            // DOM assignment to unicode conversion
-            document.getElementById('RGB');
-        }
+        /* Hack: show ASCII printable character(s) for each 8 bits
+         DOM assignment by converting decimal https://www.w3schools.com/jsref/jsref_fromcharcode.asp
+         below ASCII for more ideas of where to make changes
+         */
+        document.getElementById('ascii').innerHTML = String.fromCharCode(parseInt(binary, 2));
+        document.getElementById('RGB')
+    }
 
         // algorithm to convert decimal to base using division and remainder
         function decimal_2_base(decimal, base) {
