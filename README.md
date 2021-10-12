@@ -111,7 +111,8 @@ This minilab is all about guessing songs. Samples of songs from different genres
 <td>Bria and Riya</td>
 <td>
 <a href="https://github.com/B-G101/Team-BRS/issues/96" target="_blank">Bria and Riya Pair Journal</a><br>
-<a href="https://github.com/B-G101/Team-BRS/issues/94" target="_blank">beginnings of color code working</a><br>
+<a href="https://github.com/B-G101/Team-BRS/issues/94" target="_blank">beginnings of cc working</a><br>
+<a href="https://github.com/B-G101/Team-BRS/commit/92a9d01c1c7d8eb65a63e9528e7d1521b169c63b" target="_blank">color code working!</a><br>
 <a href="https://github.com/B-G101/Team-BRS/issues/91" target="_blank">Unicode</a><br>
 <a href="" target="_blank"></a><br>
 </td>
