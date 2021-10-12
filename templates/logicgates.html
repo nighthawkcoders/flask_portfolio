@@ -18,43 +18,43 @@
     function logicgate() {
 
 
-      const x = document.getElementById("checkbox1")
-      const y = document.getElementById("checkbox2")
-      if (x.checked && y.checked){ // if x is checked and y is checked
-        document.getElementById("and").innerHTML = "1";
+      const c = document.getElementById("checkbox1")
+      const u = document.getElementById("checkbox2")
+      if (c.checked && u.checked){ // if c is checked and u is checked
+        document.getElementById("and.png").innerHTML = "1";
       }
       else { // if none or one are checked
-        document.getElementById("and").innerHTML = "0";
+        document.getElementById("and.png").innerHTML = "0";
       }
-      if (!(x.checked && y.checked)){ // if not and (if none or one are checked)
-        document.getElementById("nand").innerHTML = "1";
+      if (!(c.checked && u.checked)){ // if not and (if none or one are checked)
+        document.getElementById("nand.png").innerHTML = "1";
       }
       else { // if and
-        document.getElementById("nand").innerHTML = "0";
+        document.getElementById("nand.png").innerHTML = "0";
       }
-      if (x.checked || y.checked){ // if x or y is checked
-        document.getElementById("or").innerHTML = "1";
+      if (c.checked || u.checked){ // if x or y is checked
+        document.getElementById("or.png").innerHTML = "1";
       }
       else { // if none are checked
-        document.getElementById("or").innerHTML = "0";
+        document.getElementById("or.png").innerHTML = "0";
       }
-      if (!(x.checked || y.checked)){ // if not or (if none are checked)
-        document.getElementById("nor").innerHTML = "1";
+      if (!(c.checked || u.checked)){ // if not or (if none are checked)
+        document.getElementById("nor.png").innerHTML = "1";
       }
       else { // if one or both are checked
-        document.getElementById("nor").innerHTML = "0";
+        document.getElementById("nor.png").innerHTML = "0";
       }
-      if ( ( x.checked && !y.checked ) || ( !x.checked && y.checked ) ){ // if xor (if one is checked but not both)
-        document.getElementById("xor").innerHTML = "1";
+      if ( ( c.checked && !u.checked ) || ( !c.checked && u.checked ) ){ // if xor (if one is checked but not both)
+        document.getElementById("xor.png").innerHTML = "1";
       }
       else { // if none or both are checked
-        document.getElementById("xor").innerHTML = "0";
+        document.getElementById("xor.png").innerHTML = "0";
       }
-      if (!x.checked){
-        document.getElementById("not").innerHTML = "1";
+      if (!c.checked){
+        document.getElementById("not.png").innerHTML = "1";
       }
       else {
-        document.getElementById("not").innerHTML = "0";
+        document.getElementById("not.png").innerHTML = "0";
       }
     }
   </script>
@@ -70,6 +70,7 @@
     <div class="row">
       <div class="col-3">
         <h2 class="text-left">Inputs</h2>
+        <h2 class="text-left">Checked and Unchecked</h2>
         <form name="form" method="POST">
           <label>
             <input type="checkbox" name="a" class="inline checkbox" id="checkbox1" value="unchecked">
@@ -86,9 +87,8 @@
         <h2 class="text-left">Logic Gates</h2>
         <table>
           <tr>
-            <th>Symbol</th>
-            <th>logicGate</th>
-            <th>Result</th>
+            <th>Logic Gates</th>
+            <th>Outputs</th>
           </tr>
           {% for item in imageList %}
           <tr>
