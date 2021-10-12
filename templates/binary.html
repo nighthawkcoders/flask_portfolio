@@ -31,11 +31,10 @@ add new images (ie PNGs) to project -->
     <script>
         const BITS = '{{ BITS }}'; let max = '{{ MAX }}'; let MAX = parseInt(max, 10);
         // return string with current value of each bit
-        function getBits(n) {
+        function getBits(digitn) {
             let bits = "";
             for(let i = 0; i < BITS; i++) {
-                let digit = 'digit'+n;
-                bits = bits + document.getElementById(digit + i).value;
+                bits = bits + document.getElementById(digitn + i).value;
             }
             return bits;
         }
@@ -56,9 +55,6 @@ add new images (ie PNGs) to project -->
             */
             document.getElementById('ascii').innerHTML = String.fromCharCode(parseInt(binary, 2));
             document.getElementById('unicode').innerHTML = String.fromCharCode(parseInt(binary, 2)).toString(10);
-            {#ucode = String.fromCharCode(parseInt(binary,2));#}
-            {##}
-            {#document.getElementById('ascii').innerHTML = ucode;#}
         }
 
         // algorithm to convert decimal to base using division and remainder
@@ -81,11 +77,11 @@ add new images (ie PNGs) to project -->
 
 
         // toggle selected bit and recalculate
-        function toggleBit(i,n,bulbn,buttn,digitn) {
+        function toggleBit(i,bulbn, digitn, buttn) {
 //alert("Digit action: " + i );
-            const dig = document.getElementById('digitn' + i);
-            const image = document.getElementById('bulbn' + i);
-            const butt = document.getElementById('buttn' + i);
+            const dig = document.getElementById(digitn + i);
+            const image = document.getElementById(bulbn + i);
+            const butt = document.getElementById(buttn + i);
 // Change digit and visual
             if (image.src.match("{{ imgBulbOn }}")) {
                 dig.value = 0;
@@ -98,29 +94,7 @@ add new images (ie PNGs) to project -->
             }
 
 // Binary numbers
-            const binary = getBits();
-            setConversions(binary);
-
-        }
-
-        function toggleBit2(i) {
-//alert("Digit action: " + i );
-            const dig = document.getElementById('digit' + i);
-            const image = document.getElementById('bulb' + i);
-            const butt = document.getElementById('butt' + i);
-// Change digit and visual
-            if (image.src.match("{{ imgBulbOn }}")) {
-                dig.value = 0;
-                image.src = "{{ imgBulbOff }}";
-                butt.innerHTML = "{{ msgTurnOn }}";
-            } else {
-                dig.value = 1;
-                image.src = "{{ imgBulbOn }}";
-                butt.innerHTML = "{{ msgTurnOff }}";
-            }
-
-// Binary numbers
-            const binary = getBits();
+            const binary = getBits(digitn);
             setConversions(binary);
 
         }
@@ -164,21 +138,6 @@ add new images (ie PNGs) to project -->
                 decimal = 0 === decimal ? MAX : decimal *= n; // OVERFLOW or MINUS
             }
 
-        function addBins(n1, n2); {
-            }
-            bin1 = getBits (n1);
-            bin2 = getBits(n2);
-            decSum = parseInt(bin1, 2) +parseInt (bin2, 2);
-            binSum = Number(decSum).toString(2)
-            binSum =  binSum.padStart(0, "0");
-
-            for (let i= 0, i < BITS; i++
-            {
-                document.getElementById('digit3' + i).value = binSum.substr(i, 1);
-            }
-            document.getElementByIs('decVal1').innerHTML = "Decimal Value 1: " + parseInt(bin1,2);
-            document.getElementByIs('decVal2').innerHTML = "Decimal Value 2: " + parseInt(bin1,2);
-        }
 // convert the result back to binary
             binary = decimal_2_base(decimal, 2);
 // update conversions
@@ -206,8 +165,6 @@ add new images (ie PNGs) to project -->
             } else { // MINUS
                 decimal = 0 === decimal ? MAX : decimal /= n; // OVERFLOW or MINUS
             }
-
-
 
 // convert the result back to binary
             binary = decimal_2_base(decimal, 2);
@@ -286,7 +243,7 @@ add new images (ie PNGs) to project -->
                     <!-- for loop -->
                     {% for i in range(BITS) %}
                         <td><img class="img-responsive py-3" id="bulb{{i}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto">
-                            <button type="button" id="butt{{i}}" onclick="toggleBit('{{i}}')">{{ msgTurnOn }}</button>
+                            <button type="button" id="butt{{i}}" onclick="toggleBit('{{i}}', 'bulb', 'butt', 'digit' )">{{ msgTurnOn }}</button>
                         </td>
                     {% endfor %}
                 </tr>
@@ -296,32 +253,6 @@ add new images (ie PNGs) to project -->
                     {% endfor %}
                 </tr>
 
-                <tr>
-                    <!-- for loop -->
-                    {% for j in range(BITS) %}
-                        <td><img class="img-responsive py-3" id="bulb{{j}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto">
-                            <button type="button" id="butt{{j}}" onclick="toggleBit2('{{j}}')">{{ msgTurnOn }}</button>
-                        </td>
-                    {% endfor %}
-                </tr>
-                <tr>
-                    {% for j in range(BITS) %}
-                        <td><label for='digit{{j}}'></label><input type='text' id='digit{{j}}' Value="0" size="2" readonly></td>
-                    {% endfor %}
-                <tr>
-                <tr>
-                    <!-- for loop -->
-                    {% for j in range(BITS) %}
-                        <td><img class="img-responsive py-3" id="bulb{{j}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto">
-                            <button type="button" id="butt{{j}}" onclick="toggleBit2('{{j}}')">{{ msgTurnOn }}</button>
-                        </td>
-                    {% endfor %}
-                </tr>
-                <tr>
-                    {% for j in range(BITS) %}
-                        <td><label for='digit{{j}}'></label><input type='text' id='digit{{j}}' Value="0" size="2" readonly></td>
-                    {% endfor %}
-                <tr>
             </table>
         </div>
 

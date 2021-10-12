@@ -6,7 +6,7 @@
   <!DOCTYPE html>
   {% extends "layouts/base.html" %}
 
-  {% set imageList = ["Screen Shot 2021-10-06 at 11.50.23 AM.png", "Screen Shot 2021-10-06 at 11.50.30 AM.png", "Screen Shot 2021-10-06 at 11.50.39 AM.png", "Screen Shot 2021-10-06 at 11.50.49 Am.png", "Screen Shot 2021-10-06 at 11.51.05 AM.png", "Screen Shot 2021-10-06 at 11.51.16 AM.png"]  %}
+  {% set imageList = ["/static/assets/and.png", "/static/assets/nand.png", "/static/assets/or.png", "/static/assets/nor.png", "/static/assets/xor.png", "/static/assets/inverter.png"]  %}
   {% set textList = ["And Gate", "Nand Gate", "Or Gate", "Nor Gate", "Xor Gate", "Inverter for A (Not Gate)"] %}
   {% set result = ["0", "1", "0", "1", "0", "1"]  %}
   {% set gate = ["and1", "nand1", "or1", "nor1", "xor1", "not1"] %}
@@ -17,7 +17,7 @@
   <script>
     function logicgate(){
 
-      // if a and b then set inner html to be 1 if true also do value
+
       const x = document.getElementById("checkbox1")
       const y = document.getElementById("checkbox2")
       if (x.checked && y.checked){ // if x is checked and y is checked
