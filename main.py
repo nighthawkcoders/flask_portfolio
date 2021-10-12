@@ -86,6 +86,9 @@ def binary():
 def colorcode():
     return render_template("binary/colorcode.html")
 
+@app.route('/binary/signedaddition/')
+def signedaddition():
+    return render_template("binary/signedaddition.html")
 
 # runs the application on the development server
 if __name__ == "__main__":

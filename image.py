@@ -36,7 +36,7 @@ def image_data(path=Path("flask_portfolio/static/img/"), images=None):  # path o
         # Image open return PIL image object
         img_object = Image.open(filename)
         d1 = ImageDraw.Draw(img_object)
-        d1.text((28, 36), "Music Quote!", fill=(226, 184, 182))
+        d1.text((20, 20), "Music Mania!", fill=(226, 184, 182))
         #img_object.show()
 
         # Python Image Library operations
