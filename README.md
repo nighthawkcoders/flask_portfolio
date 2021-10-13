@@ -34,7 +34,14 @@ Scrum Board: https://github.com/Reinhardtlotter/flask_portfolio/projects/1
 | Sprint 2      | https://github.com/Reinhardtlotter/flask_portfolio/issues/18 | 
 | Sprint 1      | https://www.youtube.com/watch?v=xP6kSe0Aay4&t=5s             |
 
-### September 3rd
+
+### Week 2
+| Roles   | About Assignment | 
+| ------------- | -------------------------------------------------------------|
+- Make a wireframe of the website and a full project mockup afterwards Changed the names of the website to "DNHS Women's Health Awareness" and the names of the pages to reflect what we want the page to look like 
+Created greet pages and customized them
+
+### Week 1
 | Roles   | About Assignment | 
 | ------------- | -------------------------------------------------------------|
 | Designer | Wire Frames | 
