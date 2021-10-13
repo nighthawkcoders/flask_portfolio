@@ -23,6 +23,7 @@ Scrum Board: https://github.com/Reinhardtlotter/flask_portfolio/projects/1
 
 ## Assignments
 ---------------------------------------
+### General Overview
 | Week Number   | Assignment link                                              |
 | ------------- | -------------------------------------------------------------|
 | Sprint 7,8 (Week 7) | https://youtu.be/WzsgEr9UKu4 + https://github.com/Reinhardtlotter/flask_portfolio/issues/48 |
@@ -32,3 +33,8 @@ Scrum Board: https://github.com/Reinhardtlotter/flask_portfolio/projects/1
 | Sprint 3,4 (Week 3)    | https://www.youtube.com/watch?v=4PBT40bsTYw&list=PLqQJAW1jlFX_KScLv7LZFcHH2t_uYb4Vn&index=3                                         |
 | Sprint 2      | https://github.com/Reinhardtlotter/flask_portfolio/issues/18 | 
 | Sprint 1      | https://www.youtube.com/watch?v=xP6kSe0Aay4&t=5s             |
+
+| Septmber 3rd   | Assignment link                                              |
+| ------------- | -------------------------------------------------------------|
+| Sprint 7,8 (Week 7) | https://youtu.be/WzsgEr9UKu4 + https://github.com/Reinhardtlotter/flask_portfolio/issues/48 |
+
