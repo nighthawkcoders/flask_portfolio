@@ -88,6 +88,10 @@ def logicgates():
 def binary2():
     return render_template("binary2.html")
 
+@app.route('/val')
+def val():
+    return render_template("val.html")
+
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)

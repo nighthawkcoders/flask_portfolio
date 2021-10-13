@@ -88,3 +88,6 @@ print("Names of people: ")
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+    student_list = ['pam','rob','joe','greg','bob','amy','matt']
+    print(student_list[2:5])
