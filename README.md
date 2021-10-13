@@ -90,6 +90,7 @@
 This minilab is all about guessing songs. Samples of songs from different genres will be played to participants, requiring them to select from a list of songs, one of which contains the correct answer. Different difficulties can be selected with various complicating factors, such as the nicheness of the artist, minor distortions to the song, or only shorter snippets being played. Alternatively, the auditory experience could be entirely foregone, and participants would have to guess the song and/or complete lyrics after only being given the lyrics in writing.
 ***
 ## Sprint 4 Week 7 and 8
+
 <table id="sprint3">
 <tr>
 <tr>Week 7 and 8</tr>
@@ -101,8 +102,12 @@ This minilab is all about guessing songs. Samples of songs from different genres
 <tr>
 <td>Scrum Master, ASCII to unicode </td>
 <td>Riya</td>
+<a href="https://drive.google.com/drive/u/0/my-drive">Week 7 Review Video</a><br>
+<a href="https://github.com/B-G101/Team-BRSV/issues/2">Week 7 Review Ticket </a><br>
+
 <td>
 <a href="https://github.com/B-G101/Team-BRS/projects/1" target="_blank">Link to Scrumboard with Issues</a><br>
+<a href="" target="_blank">Link to Scrumboard with Issues</a><br>
 
 </td>
 </tr>
