@@ -30,16 +30,21 @@ Scrum Board: https://github.com/Reinhardtlotter/flask_portfolio/projects/1
 | Sprint 5,6 (Week 6) | https://github.com/Reinhardtlotter/flask_portfolio/issues?q=is%3Aopen+is%3Aissue+label%3A%22Week+6%22 |
 | Sprint 5,6 (Week 5) | https://github.com/Reinhardtlotter/flask_portfolio/issues?q=is%3Aissue+is%3Aclosed+label%3A%22Week+5%22 |
 | Sprint 3,4 (Week 4) | https://youtu.be/mPBSY73ZTzA |
-| Sprint 3,4 (Week 3)    | https://www.youtube.com/watch?v=4PBT40bsTYw&list=PLqQJAW1jlFX_KScLv7LZFcHH2t_uYb4Vn&index=3  |
-| Sprint 2      | https://github.com/Reinhardtlotter/flask_portfolio/issues/18 | 
-| Sprint 1      | https://www.youtube.com/watch?v=xP6kSe0Aay4&t=5s             |
+| Sprint 3,4 (Week 3) | https://www.youtube.com/watch?v=4PBT40bsTYw&list=PLqQJAW1jlFX_KScLv7LZFcHH2t_uYb4Vn&index=3  |
+| Sprint 2 (Week 2)   | https://github.com/Reinhardtlotter/flask_portfolio/issues/18 | 
+| Sprint 1 (Week 1)   | https://www.youtube.com/watch?v=xP6kSe0Aay4&t=5s             |
 
+
+### Week 3
+- Learned about binary and made a page with binary math and conversions (insert our own images into the binary code)
+- Make sure the binary math is accurate and working
+- Update README.md
 
 ### Week 2
-| Roles   | About Assignment | 
-| ------------- | -------------------------------------------------------------|
-- Make a wireframe of the website and a full project mockup afterwards Changed the names of the website to "DNHS Women's Health Awareness" and the names of the pages to reflect what we want the page to look like 
-Created greet pages and customized them
+- Make a wireframe of the website 
+- Get the Navbar working and test it out with stub
+- Created greet pages and try to customize the website
+- Update README.md
 
 ### Week 1
 | Roles   | About Assignment | 
