@@ -34,7 +34,8 @@ Scrum Board: https://github.com/Reinhardtlotter/flask_portfolio/projects/1
 | Sprint 2      | https://github.com/Reinhardtlotter/flask_portfolio/issues/18 | 
 | Sprint 1      | https://www.youtube.com/watch?v=xP6kSe0Aay4&t=5s             |
 
-| Septmber 3rd   | About Assignment | 
+### September 3rd
+| Roles   | About Assignment | 
 | ------------- | -------------------------------------------------------------|
 | Designer | Wire Frames | 
 | Technical Lead | Coordinate brain write session and make sure you capture technical complexities as an output of this exercise |
