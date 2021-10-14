@@ -34,6 +34,24 @@ Scrum Board: https://github.com/Reinhardtlotter/flask_portfolio/projects/1
 | Sprint 2 (Week 2)   | https://github.com/Reinhardtlotter/flask_portfolio/issues/18 | 
 | Sprint 1 (Week 1)   | https://www.youtube.com/watch?v=xP6kSe0Aay4&t=5s             |
 
+### Week 7
+| Members | Jobs | Ticket |
+| ------------- | -------------------------------------------------------------| - |
+| Nathan | Unsigned binary addition | [Ticket](https://github.com/Reinhardtlotter/flask_portfolio/issues/41) | 
+| Reinhardt | Color code | [Ticket](https://github.com/Reinhardtlotter/flask_portfolio/issues/40) |
+| Derrick | ASCII and logic gates | [Ticket](https://github.com/Reinhardtlotter/flask_portfolio/issues/44)  [Ticket](https://github.com/Reinhardtlotter/flask_portfolio/issues/42) |
+| Brian | base lab, converting decimal to base 2, 8, 64 and signed addition | [Ticket](https://github.com/Reinhardtlotter/flask_portfolio/issues/43) |
+
+### Week 5 & 6
+| Members | Ticket |
+| ------------- | -------------------------------------------------------------|
+| Nathan | [Ticket](https://github.com/Reinhardtlotter/flask_portfolio/issues/24) | 
+| Reinhardt | [Ticket](https://github.com/Reinhardtlotter/flask_portfolio/issues/24) |
+| Derrick | [Ticket](https://github.com/Reinhardtlotter/flask_portfolio/issues/35) |
+| Brian | [Ticket](https://github.com/Reinhardtlotter/flask_portfolio/issues/38) |
+
+### Week 4
+TPT, 3/3 for everyone
 
 ### Week 3
 - Learned about binary and made a page with binary math and conversions (insert our own images into the binary code)
