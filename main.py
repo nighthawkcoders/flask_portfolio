@@ -92,6 +92,10 @@ def binary2():
 def val():
     return render_template("val.html")
 
+@app.route('/controllers')
+def controllers():
+    return render_template("controllers.html")
+
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)
