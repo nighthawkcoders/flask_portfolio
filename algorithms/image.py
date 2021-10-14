@@ -44,7 +44,7 @@ def image_data(path="static/", img_list=None):  # path of static images is defau
         img_dict['blur_data'] = numpy.array(blur_image.getdata())
 
         text_image = ImageDraw.Draw(img_reference)
-        text_image.text((0,0), "EPIC GAMERS", fill=(255, 0, 0))
+        text_image.text((0,0), "", fill=(255, 0, 0))
         img_reference.save(file)
         img_dict['base64_TEXT'] = image_formatter(img_reference, img_dict['format'])
         img_dict['text_data'] = numpy.array(img_reference.getdata())

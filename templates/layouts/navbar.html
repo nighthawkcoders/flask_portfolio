@@ -25,30 +25,5 @@
                 </div>
             </li>
         </ul>
-        <!-- Clock display -->
-        <div class="px-3">
-            <span id="clock"></span>
-        </div>
-        <!-- Dark mode action -->
-        <div class="custom-control custom-switch">
-            <input type="checkbox" onclick="darkFunction()" class="custom-control-input" id="darkSwitch">
-            <label class="custom-control-label" for="darkSwitch"></label>
-        </div>
-        <!-- Navigation bar JavaScript support -->
-        <script>
-            // Dark Mode Toggle
-            function darkFunction() {
-                let element = document.body;
-                element.classList.toggle("dark-mode");
-            }
-            // Clock controller
-            let clockElement = document.getElementById('clock');
-            function clock() {
-                let date = new Date();
-                clockElement.textContent = date.toLocaleString();
-            }
-            // Clock refresh frequency
-            setInterval(clock, 1000);
-        </script>
     </div>
 </nav>

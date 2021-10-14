@@ -1,10 +1,48 @@
 <!DOCTYPE html>
+{% extends "layouts/base.html" %}
+{% set project = "ValorantClips.com" %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>ValorantClips.com</title>
 </head>
-<body>
+{% block body %}
+<br>
+<nav class="navbar navbar-expand-lg navbar-light bg-danger">
+    <a class="navbar-brand" href="/val">
+        <img src="/static/valorant.png" width="50" height="50" class="d-inline-block align-center" alt="">
 
+           Valorant Clips
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Bootstrap menus -->
+    <style>
+        a{
+            color:white;
+        }
+    </style>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <!--root menu -->
+            <li class="nav-item active">
+                <a class="nav-link" href="/val">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarModel" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Pages
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/controllers">Controllers</a>
+                    <a class="dropdown-item" href="/duelists">Duelists</a>
+                    <a class="dropdown-item" href="/initiators">Initiators</a>
+                    <a class="dropdown-item" href="/sentinels">Sentinels</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
 </body>
+{% endblock %}
 </html>
