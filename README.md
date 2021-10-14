@@ -35,9 +35,9 @@ Scrum Board: https://github.com/Reinhardtlotter/flask_portfolio/projects/1
 | Sprint 1 (Week 1)   | https://www.youtube.com/watch?v=xP6kSe0Aay4&t=5s             |
 
 ### Week 1
-| Members | | About Assignment | Ticket |
-| ------------- | -------------------------------------------------------------|
-| Nathan | Time boxed README + minilab grid	Reaching out to team members and assign individual technical tasks,add ASCII converting element to the math mini-lab from the week prior along	Mahima's Ticket Gray	Add ASCII converting element to the math mini-lab from the week prior, JS DOM	Gray's Ticket Gabe	Finish greet page | 
+| Members | About Assignment | Ticket |
+| ------------- | -------------------------------------------------------------| ------------- |
+| Nathan | Time boxed README + minilab grid	Reaching out to team members and assign individual technical tasks,add ASCII converting element to the math mini-lab from the week prior along	Mahima's Ticket Gray	Add ASCII converting element to the math mini-lab from the week prior, JS DOM	Gray's Ticket GabeFinish greet page | 
 | Reinhardt | eaching out to team members and assign individual technical tasks,add ASCII converting element to the math mini-lab from the week prior along |
 | Derrick | Capture or build highlight of Ideation in README.md Developers works to expectations (testing, suggestions for improvement) |
 | Brian | Ensure there is a Design or Research asset for prototyping work, Build a video showing design and runtime of prototype(s), Row/Column designs for wireframes and images ( with Derrick ), Ensure that you have evidence of work, a.k.a. tangibles, commits  | https://github.com/Reinhardtlotter/flask_portfolio/issues/22 |
