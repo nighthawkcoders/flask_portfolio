@@ -36,10 +36,10 @@ Scrum Board: https://github.com/Reinhardtlotter/flask_portfolio/projects/1
 
 ### Week 7
 | Members | Jobs | Ticket |
-| ------------- | -------------------------------------------------------------|
+| ------------- | -------------------------------------------------------------| - |
 | Nathan | Unsigned binary addition | [Ticket](https://github.com/Reinhardtlotter/flask_portfolio/issues/41) | 
 | Reinhardt | Color code | [Ticket](https://github.com/Reinhardtlotter/flask_portfolio/issues/40) |
-| Derrick | ASCII and logic gates | [Ticket](https://github.com/Reinhardtlotter/flask_portfolio/issues/44) [Ticket](https://github.com/Reinhardtlotter/flask_portfolio/issues/42) |
+| Derrick | ASCII and logic gates | [Ticket](https://github.com/Reinhardtlotter/flask_portfolio/issues/44)  [Ticket](https://github.com/Reinhardtlotter/flask_portfolio/issues/42) |
 | Brian | base lab, converting decimal to base 2, 8, 64 and signed addition | [Ticket](https://github.com/Reinhardtlotter/flask_portfolio/issues/43) |
 
 ### Week 5 & 6
