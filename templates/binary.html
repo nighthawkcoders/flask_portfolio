@@ -215,34 +215,34 @@
 {% endblock %}
 
 {% block body %}
-<h1 class="text-center">Binary Math Conversions</h1>
+<h1 class="text-center" style="color:red">Binary Math Conversions</h1>
 <div class="container">
     <div class="row justify-content-md-center">
 
         <div class="col-8">
             <table class="table">
                 <tr id="table">
-                    <th>Left</th>
-                    <th>Plus</th>
-                    <th>Binary</th>
-                    <th>Octal</th>
-                    <th>Hexadecimal</th>
-                    <th>Decimal</th>
+                    <th style="color:red">Left</th>
+                    <th style="color:red">Plus</th>
+                    <th style="color:red">Binary</th>
+                    <th style="color:red">Octal</th>
+                    <th style="color:red">Hexadecimal</th>
+                    <th style="color:red">Decimal</th>
                     <!-- Hack: display ASCII label for printable character(s)  -->
-                    <th>ASCII</th>
-                    <th>Unicode</th>
-                    <th>Minus</th>
-                    <th>Right</th>
+                    <th style="color:red">ASCII</th>
+                    <th style="color:red">Unicode</th>
+                    <th style="color:red">Minus</th>
+                    <th style="color:red">Right</th>
                 </tr>
                 <tr>
                     <td><button type="button" id="multiply2" onclick="times(2)">X2</button></td>
                     <td><button type="button" id="add1" onclick="add(1)">+1</button></td>
-                    <td id="binary">00000000</td>
-                    <td id="octal">0</td>
-                    <td id="hexadecimal">0</td>
-                    <td id="decimal">0</td>
-                    <td id="ascii">0</td>
-                    <td id="unicode">U+0000</td>
+                    <td id="binary" style="color:red">00000000</td>
+                    <td id="octal" style="color:red">0</td>
+                    <td id="hexadecimal" style="color:red">0</td>
+                    <td id="decimal" style="color:red">0</td>
+                    <td id="ascii" style="color:red">0</td>
+                    <td id="unicode" style="color:red">U+0000</td>
                     <!-- Hack: display ASCII printable character(s)  -->
                     <td><button type="button" id="sub1" onclick="add(-1)">-1</button></td>
                     <td><button type="button" id="divide2" onclick="divide(2)">÷2</button></td>
@@ -347,7 +347,7 @@
                 }
             </script>
             <hr style="background-color: white">
-            <p style="font-size:40px; margin-left:35%; margin-right:30%;">Unsigned Addition</p>
+            <p style="font-size:40px; margin-left:35%; margin-right:30%; color:red">Unsigned Addition</p>
             <hr style="background-color: white">
 
             <!-- Creates all of the toggleable bits and two bytes. Also creates the sum byte at the bottom -->
@@ -361,9 +361,9 @@
                     font-size: 1em;
                     border:2px;
                     border-style: solid;
-                    border-color: hotpink;
+                    border-color: darkred;
                     text-align: center;
-                    background-color: pink;
+                    background-color: red;
                     margin-left: 1%;
                 }
             </style>
