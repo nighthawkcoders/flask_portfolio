@@ -1,50 +1,141 @@
 <!-- Extending the project layout, as this file will do minor customizations -->
-{% extends "layouts/base.html" %}
+{% extends "layouts/project.html" %}
 
-<!-- Setting up variables to customize "project" details to be specific to index page -->
-{% set project = "Home" %}
-{% set overview = "https://nighthawkcodingsociety.com/projectsearch/details/Flask%20Portfolio%20Starter" %}
-{% set repo = "https://github.com/nighthawkcoders/flask_portfolio/" %}
+<!-- Setting up variables to customize "project" details to be specific to hawkers -->
+{% set project = "Game" %}
+{% set overview = "https://hawkers.nighthawkcodingsociety.com/aboutus" %}
+{% set scrumboard = "https://github.com/noyah81/p2ducks/projects/1" %}
+{% set repo = "https://github.com/noyah81/p2ducks" %}
+{% set authors = "https://nighthawkcodingsociety.com/projectsearch/details/Hawkers%20Tweet" %}
 
-
+<!-- Setting up a block replacement to customize background to BIRDS -->
 {% block body %}
+
+    <div class="w3-container">
+        <h1 class="w3-center w3-animate-top">Test your musical knowledge!</h1>
     </div>
 
-    <h1>Song Guesser</h1>
-    <div class="sneaky">
-        <audio controls>
-            <source src="/static/assets/MysterySong1.mp3" type="audio/mpeg">
-        </audio>
-        <h1>Guess the song! #1</h1>
-        <h3>note to team: we will need to trim this to only play ~20 sec snippets of songs</h3>
-        <h3>we can manually do this for every song, or find a way to automate it. either way ig.</h3>
-        <form>
-            <input type="radio" name="choice" value="Nine Inch Nails - Came Back Haunted"> Nine Inch Nails - Came Back Haunted
-            <a href="#">
-                <img id="spookgoose" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.ytimg.com%2Fvi%2F1CX0vpCM6Y0%2Fhqdefault.jpg&f=1&nofb=1" style="width:10%"/>
-                <script> var spookgoose = document.getElementById("spookgoose");
-                spookgoose.onclick = function(e) {
-                    window.alert("yeah");
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>W3.CSS</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <html>
+        <head>
+            <style>
+                div.gallery {
+                    margin: 5px;
+                    border: 1px solid #ccc;
+                    float: left;
+                    width: 180px;
                 }
-                </script>
-            </a><br>
-            <input type="radio" name="choice" value="James Atkinson - I Don't Believe"> James Atkinson - I Don't Believe <br>
-            <input type="radio" name="choice" value="3TEETH - Affluenza"> 3TEETH - Affluenza <br>
-            <input type="radio" name="choice" value="Gorb - Came Back"> Wrong <br>
-        </form>
+
+                div.gallery:hover {
+                    border: 1px solid #777;
+                }
+
+                div.gallery img {
+                    width: 100%;
+                    height: auto;
+                }
+
+                div.desc {
+                    padding: 15px;
+                    text-align: center;
+                }
+            </style>
+        </head>
+    <body>
+
+    <div class="gallery">
+        <a target="_blank" href="/static/assets/tayloralbum.jpg">
+            <img src="/static/assets/tayloralbum.jpg" alt="Cinque Terre" width="600" height="400">
+        </a>
     </div>
+
+    <div class="gallery">
+        <a target="_blank" href="/static/assets/harryalbum.jpg">
+            <img src="/static/assets/harryalbum.jpg" alt="Forest" width="600" height="400">
+        </a>
+    </div>
+
+    <div class="gallery">
+        <a target="_blank" href="/static/assets/paris.jpg">
+            <img src="/static/assets/paris.jpg" alt="Northern Lights" width="600" height="400">
+        </a>
+    </div>
+
+    <div class="gallery">
+        <a target="_blank" href="/static/assets/download.jpg">
+            <img src="/static/assets/download.jpg" alt="Mountains" width="600" height="400">
+        </a>
+    </div>
+
+    <div class="gallery">
+        <a target="_blank" href="/static/assets/billiealbum.jpg">
+            <img src="/static/assets/billiealbum.jpg" alt="Mountains" width="600" height="400">
+        </a>
+    </div>
+
+    <div class="gallery">
+        <a target="_blank" href="/static/assets/kaynealbum.png">
+            <img src="/static/assets/kaynealbum.png" alt="Mountains" width="600" height="400">
+        </a>
+    </div>
+
+    <div class="gallery">
+        <a target="_blank" href="/static/assets/bcbc.jpg">
+            <img src="/static/assets/bcbc.jpg" alt="Mountains" width="600" height="400">
+        </a>
+    </div>
+
+    </body>
+    </html>
+
+    </head>
+    <body>
+    <div class="w3-container w3-sand">
+        <h2>Instructions</h2>
+        <p>Welcome to the song association game! This is the page where we give you all the directions on how to play this fantabulous musical game that rapid fire tests your musical knowledge! First, select a genre (countyr, pop, or rap). Then cick your game mode (easy - 25 sec, medium - 15 sec, hard - 8 sec) After that click ready, and you have to finish the lyric of the song given. You can keep playing until you run out of songs, but be careful! Your progress doesnt get saved so if you ae happy with you score, screnshot it and share it with some friends :) </p>
+    </div>
+
+
 
     <style>
-        body{
+        .button {
+            background-color: rosybrown; /* Green */
+            border: none;
+            color: white;
             text-align: center;
-
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            transition-duration: 0.2s;
         }
 
+        .button1 {padding: 14px 40px; width: 32%}
+        .button2 {padding: 14px 40px; width: 34%}
+        .button3 {padding: 14px 40px; width: 32%}
+
+        .button:hover {
+            background-color: white;
+            color: black;
+        }
 
     </style>
+    <a class="button button1" href="/game/easy">Easy (25 sec)</a>
+    <a class="button button2" href="/game/medium">Medium (15 sec)</a>
+    <a class="button button3" href="/game/hard">Hard (8 sec)</a>
+
+
+    <form>
+
+    </form>
+
 {% endblock %}
+
 {% block background %}
 {% endblock %}
-
-
-</div>

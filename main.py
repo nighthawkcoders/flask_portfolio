@@ -55,9 +55,9 @@ def index():
 @app.route('/aboutus/')
 def aboutus():
     return render_template("aboutus.html")
-@app.route('/game/')
-def game():
-    return render_template("game.html")
+@app.route('/favorites/')
+def favorites():
+    return render_template("Favorites.html")
 @app.route('/Lifechangingsongs/')
 def lifechangingSongs():
     return render_template("LifechangingSongs.html")

@@ -76,7 +76,7 @@ def aboutus():
 
 @app.route('/game/')
 def game():
-    return render_template("game.html")
+    return render_template("Favorites.html")
 
 
 @app.route('/stub/')
