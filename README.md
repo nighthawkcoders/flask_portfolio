@@ -28,8 +28,13 @@
   - [Ideation](https://github.com/sonakshibhalla/flask_portfolio#ideation)
 
 ## Week 8
-## ReadMe Video:
-
+## ReadMe Video: [Video Link](https://youtu.be/t73uThJl1J0)
+### Ideation
+#### This week we had different tasks to do
+#### Our team split up the technical work with 2 tasks each
+#### Had some trouble with signed addition and logic gates
+#### Crossover team grading - links are review ticket
+#### Sonakshi- Unsigned and Signed Addition, Saumya - Unicode and Bulb Shift, Kashish - Logic Gate and Color Codes
 
 
 
