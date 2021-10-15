@@ -96,6 +96,18 @@ def val():
 def controllers():
     return render_template("controllers.html")
 
+@app.route('/duelists')
+def duelists():
+    return render_template("duelists.html")
+
+@app.route('/initiators')
+def initiators():
+    return render_template("initiators.html")
+
+@app.route('/sentinels')
+def sentinels():
+    return render_template("sentinels.html")
+
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)
