@@ -108,6 +108,10 @@ def initiators():
 def sentinels():
     return render_template("sentinels.html")
 
+@app.route('/comments')
+def comments():
+    return render_template("comments.html")
+
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)
