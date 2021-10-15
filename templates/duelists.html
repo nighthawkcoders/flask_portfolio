@@ -1,10 +1,89 @@
-<!DOCTYPE html>
+<!-- Extending the predefined project layout -->
+{% extends "layouts/base.html" %}
+{% set project = "Duelists" %}
+
+<!- This variable sets name of browser tab  -->
+{% set project = "About Us" %}
+<!DOCTYPE HTML>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Duelists</title>
-</head>
-<body>
-<p>po</p>
-</body>
-</html>
+<!- This is a replacement block for Body in base.html -->
+{% block body %}
+    <body style="background-color: red">
+    <div class="col-0" style="margin: 3% 5% 2%" name="imgbox" id="imgbox;>
+    <iframe width="1920" height="1080">
+    </iframe><br />
+    <table class="table">
+        <thead>
+        <tr>
+            <div class="content_img">
+                <img src='/static/![](../static/valorant/agents/phoenix.png)' width='150%' height='200%' style="margin: 0% 0% 0%">
+                <div>Phoenix:<br>Naturally, he has an ultimate that suits his name as he can activate it, fight and die, and then come back to life where he originally activated it. </div>
+            </div>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <div class="content_img">
+                <img src="![](../static/jett.png)" width='150%' height='200%' style="margin: 0% 0% 0%">
+                <div>Jett:<br>She doesn't provide much utility outside of a smoke grenade but she can dash to engage/disengage or get up to high positions with her boost jump. </div>
+            </div>
+        </tr>
+        <tr>
+            <div class="content_img">
+                <img src='/static/![](../static/valorant/agents/reyna.png)' width='150%' height='200%' style="margin: 0% 0% 0%">
+                <div>Reyna:<br>She can inflict Nearsight on her enemies, heal herself, turn intangible, and even turn invisible. </div>
+            </div>
+        </tr>
+        <tr>
+            <div class="content_img">
+                <img src='/static/![](../static/valorant/agents/raze.png)' width='150%' height='200%' style="margin: 0% 0% 0%">
+                <div>Raze:<br>Her kit has everything from a remote detonated grenade and a cluster bomb to a rocket launcher and even an exploding Roomba-like robot. </div>
+            </div>
+        </tr>
+        <tr>
+            <div class="content_img">
+                <img src='/static/![](../static/valorant/agents/yoru.png))' width='150%' height='200%' style="margin: 0% 0% 0%">
+                <div>Yoru:<br>He’s a contender for having one of the highest skill caps due to his unique abilities that rely on having knowledge of the map, the flow of a match, and where opponents are likely to be. </div>
+            </div>
+        </tr>
+        </tbody>
+    </table>
+    <style>/* Parent Container */
+    .content_img{
+        position: static;
+        width: 14%;
+        height: 20%;
+        float: left;
+        margin-right: 11%;
+    }
+
+    /* Child Text Container */
+    .content_img div{
+        position: top;
+        bottom: 0;
+        right: 0;
+        background: black;
+        color: white;
+        margin-bottom: 5px;
+        font-family: "Comic Sans MS";
+        opacity: 0;
+        visibility: hidden;
+        -webkit-transition: visibility 0s, opacity 0.5s linear;
+        transition: visibility 0s, opacity 0.5s linear;
+    }
+
+    /* Hover on Parent Container */
+    .content_img:hover{
+        cursor: pointer;
+    }
+
+    .content_img:hover div{
+        width: 100%;
+        padding: 8px 15px;
+        visibility: visible;
+        opacity: 0.7;
+    }</style>
+    </body>
+    </html>
+
+{% endblock %}
