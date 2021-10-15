@@ -19,14 +19,11 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
             <!-- url_for is a Jinja2 pre-processor that finds route from function name (def) -->
             <a class="nav-link" href={{ url_for('index') }}>Home</a>
             <a class="nav-link" href={{ url_for('game') }}>Game</a>
+            <a class="nav-link" href={{ url_for('lifechangingSongs') }}>Lifechanging Songs!</a>
+
             <!-- stub is shown using the name of the route -->
-            <a class="nav-link" href="/stub">Stub</a>
-            <a class="nav-link" href="/binary">Binary</a>
-            <a class="nav-link" href="/rgb">RGB</a>
-            <a class="nav-link" href="/minilabs">Minilabs!</a>
-            <a class="nav-link" href="/binary/colorcode">Color Code</a>
-            <a class="nav-link" href="/binary/signedaddition">Signed Addition</a>
             <li class="nav-item dropdown">
+
                 <a class="nav-link dropdown-toggle" href={{ url_for('aboutus') }} data-bs-toggle="dropdown" aria-expanded="false" id="dropdownMenuButton1" type="button">
                     About us!
                 </a>
@@ -36,7 +33,21 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                     <a class="dropdown-item" href="/sreeja">Sreeja</a>
                     <a class="dropdown-item" href="/valerie">Valerie</a>
                 </div>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href={{ url_for('technicals') }} data-bs-toggle="dropdown" aria-expanded="false" id="dropdownMenuButton2" type="button">
+                    Technicals!
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                    <a class="dropdown-item" href="/stub">Stub</a>
+                    <a class="dropdown-item" href="/binary">Binary</a>
+                    <a class="dropdown-item" href="/rgb">RGB</a>
+                    <a class="dropdown-item" href="/minilabs">Minilabs!</a>
+                    <a class="dropdown-item" href="/binary/colorcode">Color Code!</a>
+                    <a class="dropdown-item" href="/binary/signedaddition">Signed Addition</a>
+                </div>
             </li>
+
         </div>
     </div>
 </nav>

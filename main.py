@@ -58,6 +58,12 @@ def aboutus():
 @app.route('/game/')
 def game():
     return render_template("game.html")
+@app.route('/Lifechangingsongs/')
+def lifechangingSongs():
+    return render_template("LifechangingSongs.html")
+@app.route('/Technicals/')
+def technicals():
+    return render_template("Technicals.html")
 @app.route('/stub/')
 def stub():
     return render_template("stub.html")
