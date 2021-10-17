@@ -2,7 +2,7 @@
 This HTML is setup as a fragment allowing it to be "included" by other HTML files via Jinja2
 -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="https://csp.nighthawkcodingsociety.com/">{{basename}}</a>
+        <a class="navbar-brand" href="http://127.0.0.1:5000/">All Around The World</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -10,14 +10,15 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
         <div class="navbar-nav">
             <!-- url_for is a Jinja2 pre-processor that finds route from function name (def) -->
             <a class="nav-link" href={{ url_for('home') }}>Home</a>
-            <a class="nav-link" href={{ url_for('binary') }}>Binary</a>
-            <a class="nav-link" href={{ url_for('addition') }}>Addition</a>
-            <a class="nav-link" href={{ url_for('signed') }}>Signed</a>
+{#            <a class="nav-link" href={{ url_for('binary') }}>Binary</a>#}
+{#            <a class="nav-link" href={{ url_for('addition') }}>Addition</a>#}
+{#            <a class="nav-link" href={{ url_for('signed') }}>Signed</a>#}
             <a class="nav-link" href={{ url_for('about') }}>About</a>
             <a class="nav-link" href={{ url_for('insights') }}>Insights</a>
             <a class="nav-link" href="/stub">Stub</a>
-            <a class="nav-link" href={{ url_for('color') }}>Color Codes</a>
-            <a class="nav-link" href={{ url_for('logicgates') }}>Logic Gates</a>
+            <a class="nav-link" href={{ url_for('africaparagraph') }}>Africa Para</a>
+            {#            <a class="nav-link" href={{ url_for('color') }}>Color Codes</a>#}
+{#            <a class="nav-link" href={{ url_for('logicgates') }}>Logic Gates</a>#}
 
 
 

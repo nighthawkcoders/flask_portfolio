@@ -29,102 +29,97 @@
     <input type="checkbox" id=b name="input" value=1>
     <label for=b>b</label><br>
     <button type="submit" id="results" onclick="output()">Submit</button>
+    <blockquote>
 
-        <tr>
-            <th>Symbol</th>
-            <th>Logic Gate</th>
-            <th>Result</th>
-        </tr>
+    </blockquote>
+    </tr>
 
-        <script>
-            function output() {
-                let input1 = document.getElementById("a").checked;
-                let input2 = document.getElementById("b").checked;
-                let andResult = input1 && input2;
-                let nandResult = !(input1 && input2);
-                let orResult = input1 || input2;
-                let norResult = !(input1 || input2);
-                let xorResult = input1 !== input2;
+    <script>
+        function output() {
+            let input1 = document.getElementById("a").checked;
+            let input2 = document.getElementById("b").checked;
+            let andResult = input1 && input2;
+            let nandResult = !(input1 && input2);
+            let orResult = input1 || input2;
+            let norResult = !(input1 || input2);
+            let xorResult = input1 !== input2;
 
-                if (andResult) {
-                    document.getElementById("andGate").innerHTML = andResult;
-                } else {
-                    document.getElementById("andGate").innerHTML = andResult;
-                }
-                if (nandResult) {
-                    document.getElementById("nandGate").innerHTML = nandResult;
-                } else {
-                    document.getElementById("nandGate").innerHTML = nandResult;
-                }
-
-                if (orResult) {
-                    document.getElementById("orGate").innerHTML = orResult;
-                } else {
-                    document.getElementById("orGate").innerHTML = orResult;
-                }
-
-                if (norResult) {
-                    document.getElementById("norGate").innerHTML = norResult;
-                } else {
-                    document.getElementById("norGate").innerHTML = norResult;
-                }
-
-                if (xorResult) {
-                    document.getElementById("xorGate").innerHTML = xorResult;
-                } else {
-                    document.getElementById("xorGate").innerHTML = xorResult;
-                }
-
+            if (andResult) {
+                document.getElementById("andGate").innerHTML = andResult;
+            } else {
+                document.getElementById("andGate").innerHTML = andResult;
+            }
+            if (nandResult) {
+                document.getElementById("nandGate").innerHTML = nandResult;
+            } else {
+                document.getElementById("nandGate").innerHTML = nandResult;
             }
 
-        </script>
+            if (orResult) {
+                document.getElementById("orGate").innerHTML = orResult;
+            } else {
+                document.getElementById("orGate").innerHTML = orResult;
+            }
+
+            if (norResult) {
+                document.getElementById("norGate").innerHTML = norResult;
+            } else {
+                document.getElementById("norGate").innerHTML = norResult;
+            }
+
+            if (xorResult) {
+                document.getElementById("xorGate").innerHTML = xorResult;
+            } else {
+                document.getElementById("xorGate").innerHTML = xorResult;
+            }
+
+        }
+
+    </script>
+    <tr>
+        <td><img src="/static/assets/gateimgs/andgate.jpg"/></td>
+        <td>And Gate</td>
+        <td id="andGate">  </td>
+    </tr>
     <blockquote>
+
     </blockquote>
+    <div>
+
+    </div>
 
     <tr>
-            <td><img src="/static/assets/gateimgs/andgate.jpg"/></td>
-            <td>And Gate</td>
-            <td id="andGate"> 0 </td>
-        </tr>
-<div>
-
-</div>
+        <td><img src="/static/assets/gateimgs/nandgate.jpg"/></td>
+        <td>Nand Gate</td>
+        <td id="nandGate"> </td>
+    </tr>
     <blockquote>
 
     </blockquote>
-        <tr>
-            <td><img src="/static/assets/gateimgs/nandgate.jpg"/></td>
-            <td>Nand Gate</td>
-            <td id="nandGate"> 0 </td>
-        </tr>
+    <tr>
+        <td><img src="/static/assets/gateimgs/orgate.jpg"/></td>
+        <td>Or Gate</td>
+        <td id="orGate">  </td>
+    </tr>
+<blockquote>
+
+</blockquote>
+    <tr>
+        <td><img src="/static/assets/gateimgs/norgate.jpg"/></td>
+        <td>Nor Gate</td>
+        <td id="norGate">  </td>
+    </tr>
     <blockquote>
 
     </blockquote>
-        <tr>
-            <td><img src="/static/assets/gateimgs/orgate.jpg"/></td>
-            <td>Or Gate</td>
-            <td id="orGate"> 0 </td>
-        </tr>
-    <blockquote>
+    <tr>
+        <td><img src="/static/assets/gateimgs/xoorgate.jpg"/></td>
+        <td>Xor Gate</td>
+        <td id="xorGate"> </td>
 
-    </blockquote>
-        <tr>
-            <td><img src="/static/assets/gateimgs/norgate.jpg"/></td>
-            <td>Nor Gate</td>
-            <td id="norGate"> 0 </td>
-        </tr>
-    <blockquote>
-
-    </blockquote>
-        <tr>
-            <td><img src="/static/assets/gateimgs/xoorgate.jpg"/></td>
-            <td>Xor Gate</td>
-            <td id="xorGate"> 0 </td>
-            <blockquote>
-
-            </blockquote>
-          </tr>
+    </tr>
     </table>
     </body>
     </html>
 {% endblock %}
+

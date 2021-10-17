@@ -1,37 +1,265 @@
-<!-- Extending the project layout, as this file will do minor customizations -->
-{% extends "layouts/project.html" %}
 
-<!-- Setting up variables to customize "project" details to be specific to kangaroos -->
-{% set project = "Africa" %}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            position: relative;
+        }
+        #section1 {padding-top:50px;height:800px;color: #fff; background-color: #1E88E5; background-image: url("https://i2-prod.mirror.co.uk/incoming/article17477723.ece/ALTERNATES/s1200b/0_Elephant-walking-at-sunset-in-the-Okavango-Delta.jpg");
+        }
 
-{% block body %}
+        h1 {
+            color: white;
+            text-align: center;
+            font-size: xxx-large;}
+        #section2 {padding-top:50px;height:800px;color: #fff; background-color: #184d09;}
+        #section3 {padding-top:50px;height:800px;color: #fff; background-color: #184d09;}
+        #section4 {padding-top:50px;height:800px;color: #fff; background-color: #184d09;}
+        #section5 {padding-top:50px;height:800px;color: #fff; background-color: #184d09;}
 
-    <html>
-    <head>
-        <style>
-            body {
-                background-image: url("https://i2-prod.mirror.co.uk/incoming/article17477723.ece/ALTERNATES/s1200b/0_Elephant-walking-at-sunset-in-the-Okavango-Delta.jpg");
-            }
+    </style>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
 
-            h1 {
-                color: white;
-                text-align: center;
-                font-size: xxx-large;
-            }
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://127.0.0.1:5000/">All Around The World</a>
+        </div>
+        <div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <blockquote></blockquote>
+                    <li><a href="#section1">Welcome to Africa!</a></li>
+                    <li><a href="#section2">Notable Locations</a></li>
+                    <li><a href="#section3">Cuisine and Community</a></li>
+                    <li><a href="#section4">Accommodations</a></li>
+                    <li><a href="#section5">Read:</a></li>
 
 
-        </style>
-    </head>
-    <body>
+                </ul>
+                </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
 
-    <h1>Africa</h1>
+<div id="section1" class="container-fluid">
+    <blockquote></blockquote>
+    <blockquote></blockquote>
+    <h1>Welcome to Africa!</h1>
 
-    </body>
-    </html>
+    <style>
+        body {
+        h1 {
+            color: white;
+            text-align: center;
+            font-size: xx-small;}
+    </style>
+</div>
+
+<blockquote>
+
+</blockquote>
+<blockquote>
+
+</blockquote>
+<blockquote>
+
+</blockquote>
+
+<div id="section2" class="container-fluid">
+    <blockquote>
+
+    </blockquote>
+    <blockquote>
+
+    </blockquote>
+    <blockquote>
+
+    </blockquote>
+    <h1>Notable Locations</h1>
+        What are some notable locations in Africa? Well, given that there are so many countries, here is a brief rundown.
+    <h3><p class="text-left">Zanzibar, known for its beautiful beaches, is a fantastic place to visit in
+            Africa.It is often a quiet and calming destination and allows for relaxation.
+        Victoria Falls, known for its breathtaking view, is between Zambia and Zimbabwe.
+        It's almost twice as deep as the Niagara Falls, and it's an incredible sight.
+        Tanzania, known for it's iconic safari, is a continental treasure.
+        It's filled with various animals and often a tourist destination.
+        Serengeti National Park, known for the up-close interactions with many animals,
+        is also a very well-known African safari.
+        Cairo, known for its bustling city vibe, has so much to offer. Everywhere you
+        turn is something worth seeing, with the Pyramids of Giza to the Nile River.
+        Mauritius, known for its subtle yet gorgeousness, is a large appeal to tourists
+        because of it's beauty and general experience. There are many luxurious resorts
+        as well as great architecture and cuisine.
+        Cape Town, known for its many hiking trails, is a constant for tourists. There is a lot to sightsee
+        with dramatic scenery and remarkable beaches.
+        Kruger National Park is known for its occupation with many animals. It's very popular.
+        Masai Mara National Reserve is known for its home to many wild beasts, including cheetahs,
+        elephants, lions, wildebeests, hippos and many more. It's a stunning safari that
+        has a lot to offer.
+        Seychelles is a archipelago of fifteen islands in the Indian Ocean, a very relaxing and tranquil environment.
+        Marrakech is a historic Moroccan city, filled with spices, textiles, and architecture from the past.
+        Madagascar is known for its name as well as it's pristine condition; the landscape is unspoiled and many
+        animals are visible to visitors.
+        Malawi is a rather small location in Africa but is nevertheless  gorgeous because of its landscape,
+        diverse wildlife,and many amiable people.
+        Botswana is known for its naturesque environment, is filled with animals, and is a very adventurous
+        visit.
+        Luxor is a staple because while in Egypt, it is still very much so connected to Africa, and is never
+        overlooked. It has historical precedent and is always a fun visit.</h3></p>
+    <blockquote></blockquote>
+    <blockquote></blockquote>
+
+    <blockquote>
+
+    <div id="section3" class="container-fluid">
+        <blockquote>
+
+        </blockquote>
+        <blockquote>
+
+        </blockquote>
+        <blockquote>
+
+        </blockquote>
+    <h1>Cuisine and Community </h1>
+        <h2>Listed below are some great websites for popular cuisine: </h2>
+        <a href="https://www.tasteatlas.com/100-most-popular-foods-in-africa" >
+                    <div class="vertical-center">
+                        <button>Some Fantastic Food Recommendations</button>
+                    </div>
+            <a href="https://www.cnn.com/travel/article/africa-food-dishes/index.html" >
+                <div class="vertical-center">
+                    <button>15 Great Dishes!</button>
+                </div>
+                <a href="https://www.okayafrica.com/african-countries-best-food-dishes-cuisine/" >
+                    <div class="vertical-center">
+                        <button>50 of the best African Foods</button>
+                    </div>
+                    <a href="https://www.africanvibes.com/african-foods/" >
+                        <div class="vertical-center">
+                            <button> 13 of the most popular cuisines in Africa</button>
+                        </div>
+                        <a href="https://businesschief.eu/top10/top-10-restaurants-africa" >
+                            <div class="vertical-center">
+                                <button>Top African Restaurants!</button>
+                            </div>
+                            <div>
+
+                                <blockquote>
+
+                                </blockquote>
+                                <blockquote>
+
+                                </blockquote>
+                                <blockquote>
+
+                                </blockquote>
+                                <blockquote>
+
+                                </blockquote>
+                                <blockquote>
+
+                                </blockquote>
+                                <blockquote>
+
+                                </blockquote>
+          </div>
+                        <div>
 
 
-{% endblock %}
-<!-- Setting up a block replacement to customize background to RINGS -->
-{% block background %}
+                        </div>
 
-{% endblock %}
+<div id="section4" class="container-fluid">
+    <blockquote>
+
+    </blockquote>
+    <blockquote>
+
+    </blockquote>
+    <blockquote>
+
+    </blockquote>
+    <a href="#section4" >
+        <div class="vertical-center">
+            <button>                  </button>
+        </div>
+        <h1>Accommodations</h1>
+    <h3>Below are some great websites to research for living accommodations across the African continent!</h3>
+    <blockquote></blockquote>
+    <a href="https://www.travelandleisure.com/worlds-best/resort-hotels-in-africa" >
+        <div class="vertical-center">
+            <button>Top Hotels of Africa!</button>
+        </div>
+        <a href="https://www.cntraveler.com/gallery/best-hotels-africa-middle-east-gold-list" >
+            <div class="vertical-center">
+                <button>Best Hotels of Africa and the Middle East</button>
+            </div>
+            <a href="https://www.go2africa.com/african-travel-blog/africas-top-10-ultra-luxurious-hotel-suites" >
+                <div class="vertical-center">
+                    <button>Top 10 Luxurious Suites of Africa</button>
+                </div>
+                <a href="https://www.tripadvisor.com/TravelersChoice-Hotels-cTop-g6" >
+                    <div class="vertical-center">
+                        <button>Top 25 Hotels in Africa</button>
+                    </div>
+                    <a href="https://www.thetravel.com/best-hotels-africa/" >
+                        <div class="vertical-center">
+                            <button>10 of the Best Living Accommodations in Africa</button>
+                        </div>
+
+</div>
+                            <div id="section4" class="container-fluid">
+                                <a href="#section5" >
+                                    <div class="vertical-center">
+                                        <button>                  </button>
+                                    </div>
+<div id="section5" class="container-fluid">
+    <blockquote>
+
+    </blockquote>
+    <h1>Read More:</h1>
+    <h3>Want to learn moore about African heritage and history? Go to many historical sites.</h3>
+    <a href="https://www.travelawaits.com/2563263/historical-sites-africa/" >
+        <div class="vertical-center">
+            <button>8 Amazing Historical Sites To Experience In Africa</button>
+        </div>
+        <a href="https://blog.musement.com/us/spectacular-historic-sites-in-africa/" >
+            <div class="vertical-center">
+                <button>10 Spectacular African Historical Sites</button>
+            </div>
+            <a href="https://www.travelawaits.com/2563263/historical-sites-africa/" >
+                <div class="vertical-center">
+                    <button>African Landmarks</button>
+                </div>
+                <a href="https://www.africa.com/ten-must-visit-african-museums/" >
+                    <div class="vertical-center">
+                        <button>10 Must-See Museums</button>
+                    </div>
+</div>
+
+{#    <blockquote></blockquote>#}
+
+</div>
+
+</body>
+</html>
+
+
+

@@ -24,6 +24,10 @@ def asia():
 def africa():
     return render_template("africa.html")
 
+@app.route('/africaparagraph/')
+def africaparagraph():
+    return render_template("africaparagraph.html")
+
 @app.route('/northamerica/')
 def northamerica():
     return render_template("northamerica.html")
