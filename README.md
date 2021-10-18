@@ -18,7 +18,7 @@
 
 
 ## Table of Contents
-  - [Week 8](https://github.com/sonakshibhalla/flask_portfolio#week-7)
+  - [Week 8](https://github.com/sonakshibhalla/flask_portfolio#week-8)
   - [Week 7](https://github.com/sonakshibhalla/flask_portfolio#week-7)
   - [Week 6](https://github.com/sonakshibhalla/flask_portfolio#week-6)
   - [Week 5](https://github.com/sonakshibhalla/flask_portfolio#week-5)
@@ -28,6 +28,16 @@
   - [Ideation](https://github.com/sonakshibhalla/flask_portfolio#ideation)
 
 ## Week 8
+### Presentation: PBL Design
+#### Basic Design Idea is Travel Website with Continents, Images, and Links
+#### Also has home page and common FAQs
+#### each person worked on two continent pages and one technical feature
+#### This week, we added three technical features to the website
+#### Saumya- [Bootstrap Navbar Work and Buttons to FAQs](https://github.com/sonakshibhalla/flask_portfolio/commit/3a4b77f9987f1d25a32d178d4099a8e6f2cf8490)
+#### Sonakshi- [Continent Pages and Draw Text on Images](https://github.com/sonakshibhalla/flask_portfolio/commit/8783c98d561fb8975dc0f6b3538724205df222e8)
+#### Kashish- [Continent Pages and Toggle Images](https://github.com/sonakshibhalla/flask_portfolio/commit/1117067f3a7a8acd6e1bb8976c39aa40c2e2dc3d)
+
+## Week 7
 ## ReadMe Video: [Video Link](https://youtu.be/t73uThJl1J0)
 ### Ideation
 #### This week we had different tasks to do
@@ -44,7 +54,7 @@
 
 
 
-## Week 7
+## Week 6
 ## Finalized ReadMe + Binary Logic Gates Lab in preparation for monday
 ### Ideation
 #### This week was a completely technical week working on the RGB minilab
@@ -58,7 +68,7 @@
 
 
 
-## Week 6
+## Week 5
 ### Individual Scoring
 | Name | Journal | TT & TPT Notes | Grade |
 | ---  | ---            | ---            | ---   |
@@ -67,7 +77,7 @@
 | Kashish | Journal | Notes | 2/2 |
 
 
-## Week 5
+## Week 4
 
 ### Individual Scoring
 | Name | Unit 5 Journal | TT & TPT Notes | Grade |
@@ -76,7 +86,7 @@
 | Saumya | Journal | Notes | 2/2 |
 | Kashish | Journal | Notes | 2/2 |
 
-## Week 4
+## Week 3
 ### Team Scoring
 | Requirment | Evidence | Grade |
 | ---        | ---      | --- |
@@ -92,7 +102,7 @@
 ### Tech Talk Video
 https://youtu.be/UPD-ODdUVYg
 
-## Week 3
+## Week 2
 ### Team PBL
 | Requirement | Evidence |
 | ---        | ---      |
