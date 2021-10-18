@@ -1,37 +1,360 @@
-<!-- Extending the project layout, as this file will do minor customizations -->
-{% extends "layouts/project.html" %}
 
-<!-- Setting up variables to customize "project" details to be specific to kangaroos -->
-{% set project = "Europe" %}
+<!DOCTYPE html>
 
-{% block body %}
 
-    <html>
+
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            position: relative;
+        }
+        #section1 {padding-top:50px;height:800px;color: #fff; background-color: cornflowerblue; background-image: url("https://wallpaperaccess.com/full/236207.jpg");
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            font-size: xxx-large;}
+        #section2 {padding-top:50px;height:800px;color: #fff; background-color: cornflowerblue;}
+        #section3 {padding-top:50px;height:800px;color: #fff; background-color: cornflowerblue;}
+        #section4 {padding-top:50px;height:800px;color: #fff; background-color: cornflowerblue;}
+        #section5 {padding-top:50px;height:800px;color: #fff; background-color: cornflowerblue;}
+
+    </style>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://127.0.0.1:5000/">All Around The World</a>
+        </div>
+        <div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <blockquote></blockquote>
+                    <li><a href="#section1">Welcome to Europe!</a></li>
+                    <li><a href="#section2">Notable Locations</a></li>
+                    <li><a href="#section3">Cuisine and Community</a></li>
+                    <li><a href="#section4">Accommodations</a></li>
+                    <li><a href="#section5">Read More:</a></li>
+
+
+                </ul>
+                </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div id="section1" class="container-fluid">
+    <blockquote></blockquote>
+    <blockquote></blockquote>
+    <h1>Welcome to Europe!</h1>
+
+    <style>
+        body {
+        h1 {
+            color: white;
+            text-align: center;
+            font-size: xx-small;}
+    </style>
+</div>
+
+<blockquote>
+
+</blockquote>
+<blockquote>
+
+</blockquote>
+<blockquote>
+
+</blockquote>
+
+<div id="section2" class="container-fluid">
+    <blockquote>
+
+    </blockquote>
+    <blockquote>
+
+    </blockquote>
+    <blockquote>
+
+    </blockquote>
+    <h1>Notable Locations</h1>
+    What are some notable locations in Europe? Here is a brief rundown.
+    <h3><p class="text-left">
+      Starting out with England, there are many famous sights in London and the countryside. For example, there is the Big Ben tower in London, the London eye, which is a famous ferris wheel, and Stonehenge, a historical formation of rocks. Moving onto France, the Eiffel tower is one of the most popular tourist destinations, the Louvre is a famous art museum for historical European paintings, and the South of France is known for its amazing branch. Next is Italy, where there are multiple fun cities and things to explore. In Rome, there is the Colosseum, Florence has the duomo; and Pisa houses the infamous Tower of Pisa.  Spain has the Sagrada Familia in Barcelona and other tourist locations in Madrid. Barcelona has very famous beaches, known for their synthetic sand and breathtaking water. There is also other countries in Europe such as Greece and Turkey, which have notable locations like the Hagia Sofia and the popular Greek island of Santorini. Lastly, Germany and Austria are countries in middle Europe with many tourist destinations and popular festivals.    </h3></p>
     <head>
         <style>
-            body {
-                background-image: url("https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F28%2F2016%2F01%2Fhallstadt-austria.jpg&q=85");
+            .gfg {
+                margin: 3%;
+                position: relative;
             }
 
-            h1 {
-                color: white;
-                text-align: center;
-                font-size: xxx-large;
+            .first-txt {
+                position: absolute;
+                top: 17px;
+                left: 50px;
             }
-
-
         </style>
     </head>
+
     <body>
-
-    <h1>Europe</h1>
-
+    <div class="gfg">
+        <img src="https://images.unsplash.com/photo-1547619292-b592f993106f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZWlmZmVsJTIwdG93ZXIlMkMlMjBwYXJpcyUyQyUyMGZyYW5jZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80" width="300" height="300">
+        <h3 class="first-txt">
+            Eiffel Tower
+        </h3>
+    </div>
     </body>
-    </html>
+
+    <style>
+        .gfg {
+            margin: 3%;
+            position: relative;
+        }
+
+        .first-txt {
+            position: absolute;
+            top: 17px;
+            left: 50px;
+        }
+    </style>
+
+    <body>
+    <div class="gfg">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Colosseo_2020.jpg/1200px-Colosseo_2020.jpg" width="300" height="300">
+        <h3 class="first-txt">
+            Colosseum
+        </h3>
+    </div>
+    </body>
+
+    <blockquote></blockquote>
+    <blockquote></blockquote>
 
 
-{% endblock %}
-<!-- Setting up a block replacement to customize background to RINGS -->
-{% block background %}
+    <blockquote>
 
-{% endblock %}
+
+
+        <div id="section3" class="container-fluid">
+            <blockquote>
+
+            </blockquote>
+            <blockquote>
+
+            </blockquote>
+            <blockquote>
+
+            </blockquote>
+            <h1>Cuisine and Community </h1>
+            <h3>Listed below are some great websites for popular cuisine: </h3>
+            <head>
+                <style>
+                    .gfg {
+                        margin: 3%;
+                        position: relative;
+                    }
+
+                    .first-txt {
+                        position: absolute;
+                        top: 17px;
+                        left: 50px;
+                    }
+                </style>
+            </head>
+
+            <body>
+            <div class="gfg">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn30EX-OjbmWS5lLqCdBAsoP9XuRUA7GxzpQ&usqp=CAU" width="300" height="300">
+                <h3 class="first-txt">
+                    Pasta Carbonara
+                </h3>
+            </div>
+            </body>
+            <a href="https://insanelygoodrecipes.com/european-recipes/" >
+                <div class="vertical-center">
+                    <button>25 Traditional European Recipes</button>
+                </div>
+                <a href="https://www.walksofitaly.com/blog/food-and-wine/the-16-most-iconic-foods-to-eat-in-italy" >
+                    <div class="vertical-center">
+                        <button>The 16 Most Iconic Dishes to Eat in Italy</button>
+                    </div>
+                    <a href="https://www.oliverstravels.com/blog/top-5-restaurants-in-south-of-france/" >
+                        <div class="vertical-center">
+                            <button>Top 5 Restaurants in the South of France</button>
+                        </div>
+                        <a href="https://mygerman.recipes/" >
+                            <div class="vertical-center">
+                                <button> Cook Like a German</button>
+                            </div>
+                            <a href="https://www.thespruceeats.com/european-food-4162598" >
+                                <div class="vertical-center">
+                                    <button>European Food & Recipes</button>
+                                </div>
+                                <div>
+
+                                    <blockquote>
+
+                                    </blockquote>
+                                    <blockquote>
+
+                                    </blockquote>
+                                    <blockquote>
+
+                                    </blockquote>
+                                    <blockquote>
+
+                                    </blockquote>
+                                    <blockquote>
+
+                                    </blockquote>
+                                    <blockquote>
+
+                                    </blockquote>
+                                </div>
+                                <div>
+
+
+                                </div>
+
+                                <div id="section4" class="container-fluid">
+                                    <blockquote>
+
+                                    </blockquote>
+                                    <blockquote>
+
+                                    </blockquote>
+                                    <blockquote>
+
+                                    </blockquote>
+                                    <a href="#section4" >
+                                        <div class="vertical-center">
+                                            <button>                  </button>
+                                        </div>
+                                        <h1>Accommodations</h1>
+                                        <h3>Below are some great websites to research for living accommodations across the European continent!</h3>
+                                        <head>
+                                            <style>
+                                                .gfg {
+                                                    margin: 3%;
+                                                    position: relative;
+                                                }
+
+                                                .first-txt {
+                                                    position: absolute;
+                                                    top: 17px;
+                                                    left: 50px;
+                                                }
+                                            </style>
+                                        </head>
+
+                                        <body>
+                                        <div class="gfg">
+                                            <img src="https://afar-production.imgix.net/uploads/images/afar_post_headers/images/Mn6MVdRSM1/original_MACR1402.jpg?auto=compress,format&fit=crop&crop=top&lossless=true&w=1600&h=700" width="300" height="300">
+                                            <h3 class="first-txt">
+                                                European Hotel
+                                            </h3>
+                                        </div>
+                                        </body>
+
+                                        <blockquote></blockquote>
+                                        <a href="https://travel.usnews.com/Hotels/Europe/" >
+                                            <div class="vertical-center">
+                                                <button>Best Hotels of Europe</button>
+                                            </div>
+                                            <a href="https://www.jetsetter.com/magazine/oceanfront-hotels-in-europe/" >
+                                                <div class="vertical-center">
+                                                    <button>11 Most Stunning Waterfront Hotels In Europe</button>
+                                                </div>
+                                                <a href="https://about-france.com/tourism/hostels.htm" >
+                                                    <div class="vertical-center">
+                                                        <button>Hostel Accomodation In France</button>
+                                                    </div>
+                                                    <a href="https://theluxurytravelexpert.com/2018/02/26/top-10-best-luxury-hotels-germany/" >
+                                                        <div class="vertical-center">
+                                                            <button>Top 10: Best Luxury In Germany</button>
+                                                        </div>
+                                                        <a href="https://www.hostelworld.com/hostels/europe" >
+                                                            <div class="vertical-center">
+                                                                <button>Hostels in Europe</button>
+                                                            </div>
+
+                                </div>
+                                <div id="section4" class="container-fluid">
+                                    <a href="#section5" >
+                                        <div class="vertical-center">
+                                            <button>                  </button>
+                                        </div>
+                                        <div id="section5" class="container-fluid">
+                                            <blockquote>
+
+                                            </blockquote>
+                                            <h1>Read More:</h1>
+                                            <h3>Want to learn moore about European heritage and history? Go to many historical sites.</h3>
+                                            <head>
+                                                <style>
+                                                    .gfg {
+                                                        margin: 3%;
+                                                        position: relative;
+                                                    }
+
+                                                    .first-txt {
+                                                        position: absolute;
+                                                        top: 17px;
+                                                        left: 50px;
+                                                    }
+                                                </style>
+                                            </head>
+
+                                            <body>
+                                            <div class="gfg">
+                                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnI6Hspb0XRb5ZvvJ-CHJzsY0AmSeDaUR3kg&usqp=CAU" width="300" height="300">
+                                                <h3 class="first-txt">
+                                                    Parthenon, Greece
+                                                </h3>
+                                            </div>
+                                            </body>
+                                            <a href="https://www.airtransat.com/experiencetransat/8-historical-sites-in-europe-so-significant-you-cant-miss-them/" >
+                                                <div class="vertical-center">
+                                                    <button>7 Historical Sites In Europe So Significant You Can't Miss Them</button>
+                                                </div>
+                                                <a href="https://www.thoughtco.com/summary-of-italian-history-1221657" >
+                                                    <div class="vertical-center">
+                                                        <button>A Brief Look at Italy's History of Division</button>
+                                                    </div>
+                                                    <a href="https://www.destguides.com/en/itineraries/most-famous-landmarks-in-europe" >
+                                                        <div class="vertical-center">
+                                                            <button>46 Most Famous Landmarks In Europe You Must Visit</button>
+                                                        </div>
+                                                        <a href="https://www.getours.com/expert-travel-advice/sightseeing/the-best-museums-in-europe" >
+                                                            <div class="vertical-center">
+                                                                <button>The Best Museums In Europe</button>
+                                                            </div>
+                                        </div>
+
+                                        {#    <blockquote></blockquote>#}
+
+                                </div>
+
+</body>
+</html>
+
+
+

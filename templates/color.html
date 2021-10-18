@@ -1,17 +1,11 @@
 <!DOCTYPE html>
 {% extends "layouts/base.html" %}
-<!-- Search for all the Hack: below for hack-a-thon and mini-lab requirements -->
-<!-- Hack: Build form to drive bit size dynamic updates
-           use HTML Input Form in Frontend, ie toward top of Page
-           send initial value and updated values to form via Python render_template -->
-<!-- Hack: use 8 as default -->
+
+
 {#% set BITS = 8 %#}
 {% set MAX = ((2 ** BITS) - 1) %}
-<!-- Hack: Set bulbs and pass as variables via Python render_template
-           add new images (ie PNGs) to project -->
-<!-- use your PNGs as default -->
-{#% set imgBulbOn = "/static/assets/openbook.jpg" %#}
-{% set imgBulbOff = "/static/assets/closedbook.jpg" %}
+
+{% set imgBulbOff = "/static/assets/]" %}
 {% set msgTurnOn = "Turn On" %}
 {% set msgTurnOff = "Turn Off" %}
 {% block meta %}
@@ -85,7 +79,7 @@
             + ('0' + Number(green).toString(16)).slice(-2)
             + ('0' + Number(blue).toString(16)).slice(-2);
     }
-    function toggleButBit(row, col) {
+    function toggle1Bit(row, col) {
         console.log('row: ' + row + ', col: ' + col);
         const valueCtrl = document.getElementById('val-' + row);
 
@@ -208,14 +202,14 @@
         <table class="table">
             <h2 class="text-right">Color Chart</h2>
             <div>
-                {% for color in range(3) %} {# we just want 3 rows for Red Green Blue #}
+                {% for color in range(3) %}
                 <tr>
-                    {% for i in range(7, -1, -1) %} {# we just want 8 bits per row #}
+                    {% for i in range(7, -1, -1) %}
                     <td style="width:100px">
                         <button style="width:100px; background-color: #E6E6FA; color: black;"
                                 type="button" value="0"
                                 id="butt-{{color}}-{{i}}"
-                                onclick="toggleButBit('{{ color }}', '{{i}}')">
+                                onclick="toggle1Bit('{{ color }}', '{{i}}')">
                             0
                         </button>
                     </td>
@@ -232,5 +226,5 @@
 <div class="col-12">
     <p id="rgb-val" class="text-center">#000000</p>
 </div>
-<!----------------------------------------RGB above---------------------------------------------------------->
+
 {% endblock %}
