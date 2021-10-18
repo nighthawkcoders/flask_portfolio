@@ -37,10 +37,10 @@ Scrum Board: https://github.com/Reinhardtlotter/flask_portfolio/projects/1
 ### Week 7
 | Members | Jobs | Ticket |
 | ------------- | -------------------------------------------------------------| - |
-| Nathan | Like Button + NavBar | [Like Button](https://github.com/Reinhardtlotter/flask_portfolio/issues/51) + [Navbar](https://github.com/Reinhardtlotter/flask_portfolio/issues/53)| 
-| Reinhardt | Like Button + Agents | [Like Button](https://github.com/Reinhardtlotter/flask_portfolio/issues/51) + [Agents](https://github.com/Reinhardtlotter/flask_portfolio/issues/54) |
-| Derrick | NavBar + Maps | [NavBar](https://github.com/Reinhardtlotter/flask_portfolio/issues/44) + [Maps](https://github.com/Reinhardtlotter/flask_portfolio/issues/65) |
-| Brian | Agents | [Agents](https://github.com/Reinhardtlotter/flask_portfolio/issues/54) |
+| Nathan | Functioning Like Function + NavBar | [Like Button](https://github.com/Reinhardtlotter/flask_portfolio/issues/51) + [Navbar](https://github.com/Reinhardtlotter/flask_portfolio/issues/53)| 
+| Reinhardt | Functioning Like Function + New agent html describing about agents | [Like Button](https://github.com/Reinhardtlotter/flask_portfolio/issues/51) + [Agents](https://github.com/Reinhardtlotter/flask_portfolio/issues/54) |
+| Derrick | NavBar, implementing our new html with Agents and Maps + Creation of Maps html for the different types of maps | [NavBar](https://github.com/Reinhardtlotter/flask_portfolio/issues/44) + [Maps](https://github.com/Reinhardtlotter/flask_portfolio/issues/65) |
+| Brian | New agent html describing about agents | [Agents](https://github.com/Reinhardtlotter/flask_portfolio/issues/54) |
 
 ### Week 7
 | Members | Jobs | Ticket |
