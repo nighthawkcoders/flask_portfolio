@@ -1,37 +1,218 @@
-<!-- Extending the project layout, as this file will do minor customizations -->
-{% extends "layouts/project.html" %}
+<
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            position: relative;
+        }
+        #section1 {padding-top:50px;height:800px;color: #fff; background-color: #1E88E5; background-image: url("https://m.media-amazon.com/images/I/81ce40Dn3jL._AC_SL1500_.jpg");
+        }
 
-<!-- Setting up variables to customize "project" details to be specific to kangaroos -->
-{% set project = "Australia" %}
+        h1 {
+            color: white;
+            text-align: center;
+            font-size: xxx-large;}
+        #section2 {padding-top:50px;height:800px;color: #fff; background-color: #E6E6FA;}
+        #section3 {padding-top:50px;height:800px;color: #fff; background-color: #E6E6FA;}
+        #section4 {padding-top:50px;height:800px;color: #fff; background-color: #E6E6FA;}
+        #section5 {padding-top:50px;height:800px;color: #fff; background-color: #E6E6FA;}
 
-{% block body %}
+    </style>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
 
-    <html>
-    <head>
-        <style>
-            body {
-                background-image: url("https://m.media-amazon.com/images/I/81ce40Dn3jL._AC_SL1500_.jpg");
-            }
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
 
-            h1 {
-                color: white;
-                text-align: center;
-                font-size: xxx-large;
-            }
-
-
-        </style>
-    </head>
-    <body>
-
-    <h1>Australia</h1>
-
-    </body>
-    </html>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://127.0.0.1:5000/">All Around The World</a>
+        </div>
+        <div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <blockquote></blockquote>
+                    <li><a href="#section1">Welcome to Australia!</a></li>
+                    <li><a href="#section2">Notable Locations</a></li>
+                    <li><a href="#section3">Cuisine and Community</a></li>
+                    <li><a href="#section4">Accommodations</a></li>
+                    <li><a href="#section5">Read:</a></li>
 
 
-{% endblock %}
-<!-- Setting up a block replacement to customize background to RINGS -->
-{% block background %}
+                </ul>
+                </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
 
-{% endblock %}
+<div id="section1" class="container-fluid">
+    <blockquote></blockquote>
+    <blockquote></blockquote>
+    <h1>Welcome to Australia!</h1>
+
+    <style>
+        body {
+        h1 {
+            color: white;
+            text-align: center;
+            font-size: xx-small;}
+    </style>
+</div>
+
+<blockquote>
+
+</blockquote>
+<blockquote>
+
+</blockquote>
+<blockquote>
+
+</blockquote>
+
+<div id="section2" class="container-fluid">
+    <blockquote>
+
+    </blockquote>
+    <blockquote>
+
+    </blockquote>
+    <blockquote>
+
+    </blockquote>
+    <h1>Notable Locations</h1>
+    What are some notable locations in Australia? Well, given that there are so many countries, here is a brief rundown.
+    <h3><p class="text-left">Zanzibar, known for its beautiful beaches, is a fantastic place to visit in
+        Sydney Opera House: It is a building that is shaped like huge shells and is surrounded by water. It
+        is an architectural icon and it is also bordered by the Royal Botanic Gardens
+        Great Varrier Reef: It is one of the largest living structures on the planet. It is so big you can
+        even see it from outer space. It is perfect to explore for those that love to dive and snorkel
+        Blue Mountains National Park: It is a hiker's paradise and it is the most popular day trip to go on
+        from Sydney. It has over 664,000 acres of wilderness
+        Bondi Beach: It is only 15 minutes by car and is one of the world's most famous beaches. It hosts one
+        of the oldest surf life saving clubs in the world.
+        Daintree National Park: It is known for its' green beauty. It has natural features and they hold great
+        spritual significance. It is one of the few places in the world where two of the planet's richest ecosystems
+        diverge
+        Kakadu National Park: It is the second largest national park in the world. You can also go on cruises or
+        hikes to explore the park's ecosystems.
+        Great Ocean Road: It is one of the world's top scenic drives. It is about 300 kilometers along the coast
+        of Australia and the sea cliffs.
+        Broome: The main attraction is Cable Beach. It is one of the best beaches in Australia and riding camels
+        at sunset is one of the most popular things to do there
+        Horizontal Falls & the Kimberley Region: It has lots of sea cliffs and pearl farms to visit. There are also
+        a lot of deserts
+        </h3></p>
+    <blockquote></blockquote>
+    <blockquote></blockquote>
+
+    <blockquote>
+
+        <div id="section3" class="container-fluid">
+            <blockquote>
+
+            </blockquote>
+            <blockquote>
+
+            </blockquote>
+            <blockquote>
+
+            </blockquote>
+            <h1>Cuisine and Community </h1>
+            <h2>Listed below are some great websites for popular cuisine: </h2>
+            <a href="https://www.australia.com/en/things-to-do/food-and-drinks/best-restaurants-in-australia.html" >
+                <div class="vertical-center">
+                    <button>Food & Drink Places in Australia</button>
+                </div>
+                <a href="https://blog.yelp.com/news/yelps-top-100-places-to-eat-in-australia-for-2016/" >
+                    <div class="vertical-center">
+                        <button>Yelp's Top 100 Places to Eat !</button>
+                    </div>
+                    <a href="https://vacationidea.com/vacation-ideas/must-try-restaurants-in-australia.html" >
+                        <div class="vertical-center">
+                            <button>Must Try in Australia!</button>
+                        </div>
+                        <a href="https://www.2foodtrippers.com/best-places-to-eat-in-sydney-australia/" >
+                            <div class="vertical-center">
+                                <button> Best Places in Sydney </button>
+                            </div>
+                            <a href="https://www.businessinsider.com.au/the-10-best-restaurants-in-australia-2016-9" >
+                                <div class="vertical-center">
+                                    <button>Top 10 Restaurants in Australia!</button>
+                                <div>
+                                </div>
+
+                                <div id="section4" class="container-fluid">
+                                    <a href="#section4" >
+                                        <div class="vertical-center">
+                                            <button>                  </button>
+                                        </div>
+                                        <h1>Accommodations</h1>
+                                        <h3>Below are some great websites to research for living accommodations across the African continent!</h3>
+                                        <blockquote></blockquote>
+                                        <a href="https://www.touropia.com/best-places-to-stay-in-australia/" >
+                                            <div class="vertical-center">
+                                                <button>Best Places to Stay in Africa!</button>
+                                            </div>
+                                            <a href="https://www.thebrokebackpacker.com/where-to-stay-in-australia/" >
+                                                <div class="vertical-center">
+                                                    <button>Where to Stay in Australia</button>
+                                                </div>
+                                                <a href="https://www.tripadvisor.com/Hotels-g255055-Australia-Hotels.html" >
+                                                    <div class="vertical-center">
+                                                        <button>Hotels in Australia</button>
+                                                    </div>
+                                                    <a href="https://www.smartertravel.com/stay-australia-lodging-tips/6" >
+                                                        <div class="vertical-center">
+                                                            <button>Lodging Areas in Australia</button>
+                                                        </div>
+                                                        <a href="https://www.thehotelguru.com/en-us/best-hotels-in/australia" >
+                                                            <div class="vertical-center">
+                                                                <button>Best Hotels to Stay in Australia</button>
+                                                            </div>
+
+                                </div>
+                                <div id="section4" class="container-fluid">
+                                    <a href="#section5" >
+                                        <div class="vertical-center">
+                                            <button>                  </button>
+                                        </div>
+                                        <div id="section5" class="container-fluid">
+                                            <h1>Read More:</h1>
+                                            <h3>Want to learn moore about African heritage and history? Go to many historical sites.</h3>
+                                            <a href="https://theculturetrip.com/pacific/australia/articles/11-historical-sites-to-see-in-australia/" >
+                                                <div class="vertical-center">
+                                                    <button>Amazing Historical Sites To Experience In Australia</button>
+                                                </div>
+                                                <a href="https://www.thrillophilia.com/historical-places-in-australia" >
+                                                    <div class="vertical-center">
+                                                        <button>20 Spectacular Australian Historical Sites</button>
+                                                    </div>
+                                                    <a href="https://travel2next.com/australian-landmarks/" >
+                                                        <div class="vertical-center">
+                                                            <button>Australian Landmarks</button>
+                                                        </div>
+                                                        <a href="https://theculturetrip.com/pacific/australia/articles/the-10-best-museums-in-australia/" >
+                                                            <div class="vertical-center">
+                                                                <button>10 Must-See Museums</button>
+                                                            </div>
+                                        </div>
+
+                                </div>
+</body>
+</html>
+
+
+
