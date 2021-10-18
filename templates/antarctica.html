@@ -1,37 +1,141 @@
-<!-- Extending the project layout, as this file will do minor customizations -->
-{% extends "layouts/project.html" %}
 
-<!-- Setting up variables to customize "project" details to be specific to kangaroos -->
-{% set project = "NorthAmerica" %}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            position: relative;
+        }
+        #section1 {padding-top:50px;height:800px;color: #fff; background-color: #1E88E5; background-image: url("https://media.cntraveler.com/photos/58a5d89287666e798dbdb573/master/pass/antarctica-scotia-sea-chinstrap-penguins-GettyImages-126249208.jpg");
+        }
 
-{% block body %}
+        h1 {
+            color: white;
+            text-align: center;
+            font-size: xxx-large;}
+        #section2 {padding-top:50px;height:800px;color: #fff; background-color: #E6E6FA;}
+        #section3 {padding-top:50px;height:800px;color: #fff; background-color: #E6E6FA;}
+        #section4 {padding-top:50px;height:800px;color: #fff; background-color: #E6E6FA;}
+        #section5 {padding-top:50px;height:800px;color: #fff; background-color: #E6E6FA;}
 
-    <html>
-    <head>
-        <style>
-            body {
-                background-image: url("https://media.cntraveler.com/photos/58a5d89287666e798dbdb573/master/pass/antarctica-scotia-sea-chinstrap-penguins-GettyImages-126249208.jpg");
-            }
+    </style>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
 
-            h1 {
-                color: white;
-                text-align: center;
-                font-size: xxx-large;
-            }
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://127.0.0.1:5000/">All Around The World</a>
+        </div>
+        <div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <blockquote></blockquote>
+                    <li><a href="#section1">Welcome to Antartica</a></li>
+                    <li><a href="#section2">Notable Locations</a></li>
+                    <li><a href="#section3">Cuisine and Community</a></li>
+                    <li><a href="#section4">Accommodations</a></li>
+                    <li><a href="#section5">Read:</a></li>
 
 
-        </style>
-    </head>
-    <body>
+                </ul>
+                </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
 
-    <h1>Antarctica</h1>
+<div id="section1" class="container-fluid">
+    <blockquote></blockquote>
+    <blockquote></blockquote>
+    <h1>Welcome to Antartica!</h1>
 
-    </body>
-    </html>
+    <style>
+        body {
+        h1 {
+            color: white;
+            text-align: center;
+            font-size: xx-small;}
+    </style>
+</div>
 
 
-{% endblock %}
-<!-- Setting up a block replacement to customize background to RINGS -->
-{% block background %}
+<div id="section2" class="container-fluid">
 
-{% endblock %}
+    </blockquote>
+    <h1>Notable Locations</h1>
+    What are some notable locations in Antartica? Well, given that there are so many countries, here is a brief rundown.
+    <h3><p class="text-left">
+        South Shetland Islands: It is one of the most visited sites in Antarctica. The island is completely
+        covered in ice and is home to some of the most incredible fjords and glaciers.
+        Antartic Peninsula: It is home to a large array of polar wildlife.  Tourists visit the peninsula for
+        the breathtaking scenery with a combination of expansive skies, towering glaciers
+        Drake Passage: Tourists visiting the place need to be aware of the churning caused in the stomach due
+        to the waves, gales and excitement.</h3></p>
+
+    <blockquote>
+
+        <div id="section3" class="container-fluid">
+            <h1>Cuisine and Community </h1>
+            <h2>Listed below are some great websites for popular cuisine: </h2>
+            <a href="https://www.foodandwine.com/news/antarcticas-tiny-isolated-five-star-restaurant" >
+                <div class="vertical-center">
+                    <button>The Only 5 Star in Antartica</button>
+                </div>
+                <a href="https://www.youtube.com/watch?v=pzlA9HDNwBs" >
+                    <div class="vertical-center">
+                        <button>What to Eat in Antartica!</button>
+
+                                </div>
+
+                                <div id="section4" class="container-fluid">
+
+                                    </blockquote>
+                                    <a href="#section4" >
+                                        <div class="vertical-center">
+                                            <button>                  </button>
+                                        </div>
+                                        <h1>Accommodations</h1>
+                                        <h3>Below are some great websites to research for living accommodations across the African continent!</h3>
+                                        <blockquote></blockquote>
+                                        <a href="https://landedtravel.com/destinations/antarctic-hotel-lodging-guide/" >
+                                            <div class="vertical-center">
+                                                <button>Top Hotels of Antartica!</button>
+                                            </div>
+                                </div>
+                                <div id="section4" class="container-fluid">
+                                    <a href="#section5" >
+                                        <div class="vertical-center">
+                                            <button>                  </button>
+                                        </div>
+                                        <div id="section5" class="container-fluid">
+                                            <blockquote>
+
+                                            </blockquote>
+                                            <h1>Read More:</h1>
+                                            <h3>Want to learn moore about African heritage and history? Go to many historical sites.</h3>
+                                            <a href="https://www.wondermondo.com/wonders-of-antarctica-2/" >
+                                                <div class="vertical-center">
+                                                    <button>Wonders of Antartica!</button>
+                                                </div>
+                                        </div>
+
+                                        {#    <blockquote></blockquote>#}
+
+                                </div>
+
+</body>
+</html>
