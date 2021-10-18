@@ -88,9 +88,14 @@ def logicgates():
 def binary2():
     return render_template("binary2.html")
 
-@app.route('/val')
+@app.route('/val', methods=['GET', 'POST'])
 def val():
-    return render_template("val.html")
+    if request.form:
+        bits = request.form.get("bits")
+        if len(bits) != 0:  # input field has content
+            return render_template("val.html", bits=int(bits))
+        # starting and empty input default
+    return render_template("val.html", bits=12)
 
 @app.route('/controllers')
 def controllers():

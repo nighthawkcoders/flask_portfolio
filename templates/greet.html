@@ -1,8 +1,16 @@
-{% extends "layouts/project.html" %}
+{% extends "layouts/base.html" %}
 {% set project = "greet" %}
 
 {% block body %}
-<body style="background-color:deepskyblue;">
+<body>
+<style>
+    label{
+        color:red;
+    }
+    p{
+        color:red;
+    }
+</style>
 <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
     <div class="col-0">
         <form action="/greet" id="greet" method="POST" >

@@ -1,13 +1,88 @@
 <!DOCTYPE html>
 {% extends "layouts/base.html" %}
 {% set project = "ValorantClips.com" %}
+{% set BITS = bits %}
+{% set likeButton = "/static/like.png" %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>ValorantClips.com</title>
 </head>
 {% block body %}
+<style>
+    a:link {
+        color: white;
+        background-color: transparent;
+        text-decoration: none;
+    }
 
-</body>
+    a:visited {
+        color: white;
+        background-color: transparent;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: white;
+        background-color: transparent;
+        text-decoration: underline;
+    }
+
+    a:active {
+        color: white;
+        background-color: transparent;
+        text-decoration: underline;
+    }
+</style>
+<a style="margin-left:40%; margin-right:0%; font-size:250%">VALORANT CLIPS</a>
+<hr style="color:red; border-color:red">
+<div class="container" style="margin-left: 0%; margin-right: 0%; margin-top: 0%; margin-bottom: 0%">
+    <div class="table" style="margin-top:2%;margin-left:10% ;margin-right:10% ; border-color:white; border-top: 1px solid #ffffff;border-bottom:1px solid #ffffff;border-left: 1px solid #ffffff; border-right: 1px solid #ffffff; color: white">
+        <tr>Latest Valorant Patch Notes:</tr>
+        <br>
+        <a href="https://playvalorant.com/en-us/news/game-updates/valorant-patch-notes-3-07/">https://playvalorant.com/en-us/news/game-updates/valorant-patch-notes-3-07/</a>
+    </div>
+</div>
+<div class="container" style="margin-left: 0%; margin-right: 0%; margin-top: 0%; margin-bottom: 0%">
+    <div class="row" style="margin: 2% 5% 3%" width="40%";>
+        <div class="col" style="margin:auto">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/c4UMkZb_6D0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="col" style="margin-top: 1%; font-size: 200%">
+            <a style="color:red">*** CLIP OF THE DAY ***</a>
+            <br>
+            <a style="color:red">Submission of: </a>
+            <a href="https://twitter.com/dapr?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">@darp</a>
+            <br>
+            <a style="color:red">Description: </a>
+            <br>
+            <a style="color:white; font-size: 75%">A clip of Valorant pro player, dapr, getting knifed during a tournament match against Cloud 9 Blue.</a>
+        </div>
+    </div>
+    <div class="row" style="margin: 2% 5% 0%">
+        <script>
+            const BITS = '{{ BITS }}'; // number of BITS (or Bulbs) displayed on screen
+            let max = '{{ MAX }}'; let MAX = parseInt(max, 10);  // MAX integer value of bits
+
+            function getBits() {
+                let bits = "";
+                for(let i = 0; i < BITS; i++) {
+                    bits = bits + document.getElementById('digit' + i).value;
+                }
+                return bits;
+            }
+        </script>
+        <form action="/val" id="bits" method="POST" >
+            <label for="bits">How many likes would you give this post?</label>
+            <input name="bits">
+            <input type="submit" value="Go!">
+        </form>
+    </div>
+    <div class="row" style="margin: 0% 5% 3%">
+            {% for i in range(BITS) %}
+            <img class="img-responsive py-3" id="bulb{{i}}" src="{{ likeButton }}" alt="" width="100" height="Auto">
+            {% endfor %}
+    </div>
+</div>
 {% endblock %}
 </html>
