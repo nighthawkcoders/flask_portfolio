@@ -19,7 +19,7 @@
     <thead>
     <tr>
         <div class="content_img">
-            <img src="../static/valorant/maps/ascent.png" width='150%' height='200%' style="margin: 0% 0% 0%">
+            <img src="../static/valorant/maps/ascent.png" width='100%' height='100%' style="margin: 0% 0% 0%">
             <div>Ascent</div>
         </div>
     </tr>
@@ -27,37 +27,39 @@
     <tbody>
     <tr>
         <div class="content_img">
-            <img src="../static/valorant/maps/bind.png" width='150%' height='200%' style="margin: 0% 0% 0%">
+            <img src="../static/valorant/maps/bind.png" width='100%' height='100%' style="margin: 0% 0% 0%">
             <div>Bind</div>
         </div>
     </tr>
     <tr>
         <div class="content_img">
-            <img src="../static/valorant/maps/breeze.png" width='150%' height='200%' style="margin: 0% 0% 0%">
+            <img src="../static/valorant/maps/breeze.png" width='100%' height='100%' style="margin: 0% 0% 0%">
             <div>Breeze</div>
         </div>
     </tr>
     <tr>
         <div class="content_img">
-            <img src="../static/valorant/maps/fracture.png" width='150%' height='200%' style="margin: 0% 0% 0%">
+            <img src="../static/valorant/maps/fracture.png" width='100%' height='100%' style="margin: 0% 0% 0%">
             <div>Fracture</div>
         </div>
     </tr>
     <tr>
         <div class="content_img">
-            <img src="../static/valorant/maps/haven.png" width='150%' height='200%' style="margin: 0% 0% 0%">
+            <img src="../static/valorant/maps/haven.png" width='100%' height='100%' style="margin: 0% 0% 0%">
             <div>Haven</div>
         </div>
     </tr>
+    <br>
+    <br>
     <tr>
         <div class="content_img">
-            <img src="../static/valorant/maps/icebox.png" width='150%' height='200%' style="margin: 0% 0% 0%">
+            <img src="../static/valorant/maps/icebox.png" width='100%' height='100%' style="margin: 0% 0% 0%">
             <div>Icebox</div>
         </div>
     </tr>
     <tr>
         <div class="content_img">
-            <img src="../static/valorant/maps/split.png" width='150%' height='200%' style="margin: 0% 0% 0%">
+            <img src="../static/valorant/maps/split.png" width='100%' height='100%' style="margin: 0% 0% 0%">
             <div>Split</div>
         </div>
     </tr>
@@ -65,22 +67,23 @@
 </table>
 <style>/* Parent Container */
 .content_img{
-    position: static;
-    width: 14%;
-    height: 20%;
+    position: relative;
+    width: 200px;
+    height: 200px;
     float: left;
-    margin-right: 11%;
+    margin-right: 10px;
+    margin-top: 10px;
 }
 
 /* Child Text Container */
 .content_img div{
-    position: top;
+    position: absolute;
     bottom: 0;
     right: 0;
     background: black;
     color: white;
     margin-bottom: 5px;
-    font-family: "Comic Sans MS";
+    font-family: sans-serif;
     opacity: 0;
     visibility: hidden;
     -webkit-transition: visibility 0s, opacity 0.5s linear;
@@ -93,10 +96,11 @@
 }
 
 .content_img:hover div{
-    width: 100%;
+    width: 150px;
     padding: 8px 15px;
     visibility: visible;
     opacity: 0.7;
+}
 }</style>
 </body>
 {% endblock %}
