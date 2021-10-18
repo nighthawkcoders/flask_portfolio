@@ -12,8 +12,8 @@
 <a style="margin-left:40%; margin-right:0%; font-size:250%">VALORANT CLIPS</a>
 <hr style="color:red; border-color:red">
 <div class="container" style="margin-left: 0%; margin-right: 0%; margin-top: 0%; margin-bottom: 0%">
-    <div class="table" style="margin-top:2%;margin-left:10% ;margin-right:10% ; border-color:white; border-top: 1px solid #ffffff;border-bottom:1px solid #ffffff;border-left: 1px solid #ffffff; border-right: 1px solid #ffffff; color: white">
-        <tr>Latest Valorant Patch Notes:</tr>
+    <div class="table" style="margin-top:2%;margin-left:10% ;margin-right:10% ; border-color:white; border-top: 1px solid #ffffff;border-bottom:1px solid #ffffff;border-left: 1px solid #ffffff; border-right: 1px solid #ffffff; color: red">
+        <tr style="color:red">Latest Valorant Patch Notes:</tr>
         <br>
         <a href="https://playvalorant.com/en-us/news/game-updates/valorant-patch-notes-3-07/" style="color:white">https://playvalorant.com/en-us/news/game-updates/valorant-patch-notes-3-07/</a>
     </div>
@@ -50,10 +50,10 @@
         <form action="/val" id="bits" method="POST" >
             <label for="bits">How many likes would you give this post?</label>
             <input name="bits">
-            <input type="submit" value="Go!">
+            <input type="submit" value="Like">
         </form>
     </div>
-    <div class="row" style="margin: 0% 5% 3%">
+    <div class="row" style="margin: 0% 5% 3%; width:125%">
             {% for i in range(BITS) %}
             <img class="img-responsive py-3" id="bulb{{i}}" src="{{ likeButton }}" alt="" width="100" height="Auto">
             {% endfor %}
