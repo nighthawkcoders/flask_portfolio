@@ -39,24 +39,39 @@
 {% endblock %}
 
 {% block body %}
-<h1 class="text-center">RGB values within an Image</h1>
+<h1 class="text-center" style="color:red">RGB values within an Image</h1>
 <div class="container">
   <style>
     button {
-      background-color: pink;
+      background-color: red;
       width: 200px;
       font-size: 20px;
       padding: 10px;
       border-radius: 5px;
-      border-color: hotpink;
-      color: white;
+      border-color: darkred;
+      color: black;
       cursor: pointer;
       position: absolute;
       top: 11.5%;
       right: 0.5%;
     }
+    table {
+      color:red;
+    }
+    tr {
+      color:red;
+    }
+    thead {
+      color:red;
+    }
+    td {
+      color:red;
+    }
+    table {
+      color:red;
+    }
   </style>
-  <button onclick="toggle()" style="background-color:pink; border-color:hotpink">GrayScale</button>
+  <button onclick="toggle()" style="background-color:red; border-color:darkred">GrayScale</button>
   <div class="row justify-content-md-center" id="colored">
     <table class="table">
       <thead>
