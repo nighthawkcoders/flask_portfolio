@@ -37,6 +37,14 @@ Scrum Board: https://github.com/Reinhardtlotter/flask_portfolio/projects/1
 ### Week 7
 | Members | Jobs | Ticket |
 | ------------- | -------------------------------------------------------------| - |
+| Nathan | Like Button + NavBar | [Like Button](https://github.com/Reinhardtlotter/flask_portfolio/issues/51) + [Navbar](https://github.com/Reinhardtlotter/flask_portfolio/issues/53)| 
+| Reinhardt | Like Button + Agents | [Like Button](https://github.com/Reinhardtlotter/flask_portfolio/issues/51) + [Agents](https://github.com/Reinhardtlotter/flask_portfolio/issues/54) |
+| Derrick | NavBar + Maps | [NavBar](https://github.com/Reinhardtlotter/flask_portfolio/issues/44) + [Maps](https://github.com/Reinhardtlotter/flask_portfolio/issues/65) |
+| Brian | Agents | [Agents](https://github.com/Reinhardtlotter/flask_portfolio/issues/54) |
+
+### Week 7
+| Members | Jobs | Ticket |
+| ------------- | -------------------------------------------------------------| - |
 | Nathan | Unsigned binary addition | [Ticket](https://github.com/Reinhardtlotter/flask_portfolio/issues/41) | 
 | Reinhardt | Color code | [Ticket](https://github.com/Reinhardtlotter/flask_portfolio/issues/40) |
 | Derrick | ASCII and logic gates | [Ticket](https://github.com/Reinhardtlotter/flask_portfolio/issues/44)  [Ticket](https://github.com/Reinhardtlotter/flask_portfolio/issues/42) |
