@@ -35,6 +35,12 @@
 #### Had some trouble with signed addition and logic gates
 #### Crossover team grading - links are review ticket
 #### Sonakshi- Unsigned and Signed Addition, Saumya - Unicode and Bulb Shift, Kashish - Logic Gate and Color Codes
+## review ticket
+| Name | Journal | TT & TPT Notes | Grade |
+| ---  | ---            | ---            | ---   |
+| Sonakshi| Journal | Notes | 2/2 |
+| Saumya | Journal | Notes | 2/2 |
+| Kashish | Journal | Notes | 2/2 |
 
 
 
