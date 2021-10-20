@@ -34,6 +34,14 @@ Scrum Board: https://github.com/Reinhardtlotter/flask_portfolio/projects/1
 | Sprint 2 (Week 2)   | https://github.com/Reinhardtlotter/flask_portfolio/issues/18 | 
 | Sprint 1 (Week 1)   | https://www.youtube.com/watch?v=xP6kSe0Aay4&t=5s             |
 
+### Week 8
+| Members | Jobs | Ticket |
+| ------------- | -------------------------------------------------------------| - |
+| Nathan | Functioning Like Function + 	NavBar, implementing our new html with Agents and Maps | [Like Button](https://github.com/Reinhardtlotter/flask_portfolio/issues/51) + [Navbar](https://github.com/Reinhardtlotter/flask_portfolio/issues/53)| 
+| Reinhardt | Functioning Like Function + New agent html describing about agents | [Like Button](https://github.com/Reinhardtlotter/flask_portfolio/issues/51) + [Agents](https://github.com/Reinhardtlotter/flask_portfolio/issues/54) |
+| Derrick | NavBar, implementing our new html with Agents and Maps + Creation of Maps html for the different types of maps | [NavBar](https://github.com/Reinhardtlotter/flask_portfolio/issues/44) + [Maps](https://github.com/Reinhardtlotter/flask_portfolio/issues/65) |
+| Brian | New agent html describing about agents | [Agents](https://github.com/Reinhardtlotter/flask_portfolio/issues/54) |
+
 ### Week 7
 | Members | Jobs | Ticket |
 | ------------- | -------------------------------------------------------------| - |
