@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<!-- Extending the predefined project layout -->
+{% extends "layouts/base.html" %}
+{% set project = "Controllers" %}
+
+<!- This variable sets name of browser tab  -->
+{% set project = "KDR" %}
+<html lang="en">
+<!- This is a replacement block for Body in base.html -->
+{% block body %}
+<head>
+    <meta charset="UTF-8">
+    <title>KDR Calculator</title>
+</head>
+<body>
+<div class="col-0">
+    <form method="POST">
+        <label for="kills" style="font-size:30px; text-align:left; font-family: gilroy,serif;">How many kills did you have?</label>
+        <input type="number" name="kills" id="kills">
+        <br>
+        <label for="deaths" style="font-size:30px; text-align:left; font-family: gilroy,serif;">How many deaths did you have?</label>
+        <input type="number" name="deaths" id="deaths">
+        <input type="submit" value="Enter">
+    </form>
+</div>
+<h1>Your KDR is:{{kdrval}}</h1>
+<h1>{{goodplayer}}</h1>
+</body>
+</html>
+
+{% endblock %}

@@ -113,9 +113,27 @@ def initiators():
 def sentinels():
     return render_template("sentinels.html")
 
-@app.route('/comments')
-def comments():
-    return render_template("comments.html")
+@app.route('/kdr', methods=['GET', 'POST'])
+def kdr():
+    kd_ratio = 0
+    great_player = False
+    urgood = "Let's see if your good"
+    if request.form:
+        kills = request.form.get("kills")
+        deaths = request.form.get("deaths")
+        if deaths is not None :
+            kd_ratio = int(kills)/int(deaths)
+            if kd_ratio >= 1:
+                great_player = True
+            else:
+                great_player = False
+            if great_player == True:
+                urgood=("You're a great player!!")
+            else:
+                urgood=("You suck. Be better")
+        else:
+            print("do nothing")
+    return render_template("kdr.html", kdrval = kd_ratio, gpstatus = great_player, goodplayer=urgood)
 
 @app.route('/maps')
 def maps():
