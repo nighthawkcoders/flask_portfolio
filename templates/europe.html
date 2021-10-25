@@ -1,23 +1,25 @@
 
 <!DOCTYPE html>
-
 <html>
 <body>
 
-<h2>JavaScript Variables</h2>
+<h2>JavaScript if</h2>
 
-<p>Create a variable, assign a value to it, and display it:</p>
+<p>Display "Good day!" or "Good Evening!"</p>
 
 <p id="demo"></p>
-<p id="demo1"></p>
 
 <script>
-    var Continent = "Europe", number = "1/7";
-    document.getElementById("demo").innerHTML = Continent;
-    document.getElementById("demo1").innerHTML = number;
+    if (new Date().getHours() < 18) {
+        document.getElementById("demo").innerHTML = "Good Morning!";
+    }
+    else {
+        document.getElementById("demo").innerHTML = "Good Evening!";
+    }
 </script>
 
 </body>
+
 </html>
 
 
