@@ -38,7 +38,7 @@ Scrum Board: https://github.com/Reinhardtlotter/flask_portfolio/projects/1
 | Members | Videos | Issues | Scores (Averaged) |
 | ------------- | -------------------------------------------------------------| - | - |
 | Nathan | https://www.loom.com/share/9ece533495da484cbea0fa3d67a3a60d | https://github.com/Reinhardtlotter/flask_portfolio/issues/71 | 5.8/6 |
-| Reinhardt | https://youtu.be/wiKwX-lN4Lw | https://github.com/Reinhardtlotter/flask_portfolio/issues/69 | N/A |
+| Reinhardt | https://youtu.be/wiKwX-lN4Lw | https://github.com/Reinhardtlotter/flask_portfolio/issues/69 | 5.67/8 |
 | Derrick | https://youtu.be/Vpr9TApOyuE | https://github.com/Reinhardtlotter/flask_portfolio/issues/72 | 5.5/6 |
 | Brian | https://youtu.be/rIHFrh2XBZY | https://github.com/Reinhardtlotter/flask_portfolio/issues/70 | 5.58/6 |
 
