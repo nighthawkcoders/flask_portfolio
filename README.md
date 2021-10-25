@@ -34,8 +34,7 @@
 | ---  | ---            | ---            | ---   |
 | Sonakshi| https://youtu.be/vQHL1oZ-y0k | 
 | Saumya | https://youtu.be/_H7fbdAYsw8  |
-| Kashish | https://www.google.com/url?q=https://drive.google.com/file/d/1xMKTHRHLyF2rPd-TmFq4vX9SpMt706qq/view?usp%3Dsharing&sa=D&source=hangouts&ust=1635225288094000&usg=AOvVaw1kOBoacuO0DPu4W6HZX3lG  | Sonakshi Grade- 5.5/6 Three Positive Items: Color code was explained thoroughly with connection to technical topics, toggle code had strong if statement that was learned from minilabs, animation was good representation of CSS topics. Improvement: could connect to Collegeboard more by explaining numbers or specific named topics
-
+| Kashish | https://www.google.com/url?q=https://drive.google.com/file/d/1xMKTHRHLyF2rPd-TmFq4vX9SpMt706qq/view?usp%3Dsharing&sa=D&source=hangouts&ust=1635225288094000&usg=AOvVaw1kOBoacuO0DPu4W6HZX3lG  | 
 
 ## Week 8
 ### Presentation: PBL Design
