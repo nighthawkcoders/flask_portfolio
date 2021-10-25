@@ -30,11 +30,11 @@
 
 ## Week 9
 ## review ticket
-| Name | Videos | Comments | Peer Scores |
+| Name | Videos |  | Peer Scores |
 | ---  | ---            | ---            | ---   |
-| Sonakshi|  |  | |
-| Saumya | https://youtu.be/B5g_NXhHoxo |  |  |
-| Kashish |  |  |  |
+| Sonakshi|  |
+| Saumya | https://youtu.be/B5g_NXhHoxo   |
+| Kashish |   |
 ## Peer Scores Average: 
 
 ## Week 8
