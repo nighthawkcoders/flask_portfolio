@@ -34,6 +34,15 @@ Scrum Board: https://github.com/Reinhardtlotter/flask_portfolio/projects/1
 | Sprint 2 (Week 2)   | https://github.com/Reinhardtlotter/flask_portfolio/issues/18 | 
 | Sprint 1 (Week 1)   | https://www.youtube.com/watch?v=xP6kSe0Aay4&t=5s             |
 
+### Week 9
+| Members | Videos | Tickets (Issues) | Scores (Averaged) |
+| ------------- | -------------------------------------------------------------| - |
+| Nathan | https://www.loom.com/share/9ece533495da484cbea0fa3d67a3a60d | https://github.com/Reinhardtlotter/flask_portfolio/issues/71 | 5.8/6 |
+| Reinhardt | https://youtu.be/wiKwX-lN4Lw | https://github.com/Reinhardtlotter/flask_portfolio/issues/69 | N/A |
+| Derrick | https://youtu.be/Vpr9TApOyuE | https://github.com/Reinhardtlotter/flask_portfolio/issues/72 | 5.5/6 |
+| Brian | https://youtu.be/rIHFrh2XBZY | https://github.com/Reinhardtlotter/flask_portfolio/issues/70 | 5.58/6 |
+
+
 ### Week 8
 | Members | Jobs | Ticket |
 | ------------- | -------------------------------------------------------------| - |
