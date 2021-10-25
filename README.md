@@ -18,6 +18,7 @@
 
 
 ## Table of Contents
+  - [Week 9](https://github.com/sonakshibhalla/flask_portfolio#week-9)
   - [Week 8](https://github.com/sonakshibhalla/flask_portfolio#week-8)
   - [Week 7](https://github.com/sonakshibhalla/flask_portfolio#week-7)
   - [Week 6](https://github.com/sonakshibhalla/flask_portfolio#week-6)
@@ -26,6 +27,14 @@
   - [Week 3](https://github.com/sonakshibhalla/flask_portfolio#week-3)
   - [Week 2](https://github.com/sonakshibhalla/flask_portfolio#week-2)
   - [Ideation](https://github.com/sonakshibhalla/flask_portfolio#ideation)
+
+## Week 9
+## review ticket
+| Name | Videos | Comments | Scores |
+| ---  | ---            | ---            | ---   |
+| Sonakshi|  |  | |
+| Saumya | https://youtu.be/B5g_NXhHoxo |  |  |
+| Kashish |  |  |  |
 
 ## Week 8
 ### Presentation: PBL Design
