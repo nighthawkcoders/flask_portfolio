@@ -30,11 +30,12 @@
 
 ## Week 9
 ## review ticket
-| Name | Videos | Comments | Scores |
+| Name | Videos | Comments | Peer Scores |
 | ---  | ---            | ---            | ---   |
 | Sonakshi|  |  | |
 | Saumya | https://youtu.be/B5g_NXhHoxo |  |  |
 | Kashish |  |  |  |
+## Peer Scores Average: 
 
 ## Week 8
 ### Presentation: PBL Design
