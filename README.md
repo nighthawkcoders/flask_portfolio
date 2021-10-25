@@ -29,11 +29,13 @@
   - [Ideation](https://github.com/sonakshibhalla/flask_portfolio#ideation)
 
 ## Week 9
-## review ticket
+## INDIVIDUAL FINAL PART 1: Review ticket
 | Name | Video | Peer Scores (averaged) | 
 | ---  | ---            | ---            | ---   |
 | Sonakshi| https://youtu.be/vQHL1oZ-y0k |5.5/6|
+
 | Saumya | https://youtu.be/_H7fbdAYsw8 |5.5/6|
+
 | Kashish | https://www.google.com/url?q=https://drive.google.com/file/d/1xMKTHRHLyF2rPd-TmFq4vX9SpMt706qq/view?usp%3Dsharing&sa=D&source=hangouts&ust=1635225288094000&usg=AOvVaw1kOBoacuO0DPu4W6HZX3lG | 5.375/6 |
 
 
