@@ -36,7 +36,7 @@ Scrum Board: https://github.com/Reinhardtlotter/flask_portfolio/projects/1
 
 ### Week 9
 | Members | Videos | Tickets (Issues) | Scores (Averaged) |
-| ------------- | -------------------------------------------------------------| - |
+| ------------- | -------------------------------------------------------------| - | - |
 | Nathan | https://www.loom.com/share/9ece533495da484cbea0fa3d67a3a60d | https://github.com/Reinhardtlotter/flask_portfolio/issues/71 | 5.8/6 |
 | Reinhardt | https://youtu.be/wiKwX-lN4Lw | https://github.com/Reinhardtlotter/flask_portfolio/issues/69 | N/A |
 | Derrick | https://youtu.be/Vpr9TApOyuE | https://github.com/Reinhardtlotter/flask_portfolio/issues/72 | 5.5/6 |
