@@ -30,12 +30,17 @@
 
 ## Week 9
 ## review ticket
-| Name | Videos |  | Peer Scores |
+| Name | Videos | Peer Scores |
 | ---  | ---            | ---            | ---   |
-| Sonakshi|  |
+| Sonakshi| https://youtu.be/vQHL1oZ-y0k | 
+| Kashish |https://www.google.com/url?q=https://drive.google.com/file/d/1xMKTHRHLyF2rPd-TmFq4vX9SpMt706qq/view?usp%3Dsharing&sa=D&source=hangouts&ust=1635225288094000&usg=AOvVaw1kOBoacuO0DPu4W6HZX3lG| 
+
 | Saumya | https://youtu.be/_H7fbdAYsw8  |
-| Kashish | https://www.google.com/url?q=https://drive.google.com/file/d/1xMKTHRHLyF2rPd-TmFq4vX9SpMt706qq/view?usp%3Dsharing&sa=D&source=hangouts&ust=1635225288094000&usg=AOvVaw1kOBoacuO0DPu4W6HZX3lG  |
-## Peer Scores Average: 
+
+## Peer Grade 
+### Saumya-
+### Kashish-
+### Sonakshi- 
 
 ## Week 8
 ### Presentation: PBL Design
