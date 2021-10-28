@@ -41,12 +41,6 @@
 
 | Kashish | https://www.google.com/url?q=https://drive.google.com/file/d/1xMKTHRHLyF2rPd-TmFq4vX9SpMt706qq/view?usp%3Dsharing&sa=D&source=hangouts&ust=1635225288094000&usg=AOvVaw1kOBoacuO0DPu4W6HZX3lG | 5.375/6 |
 
-
-## Peer Grade 
-### Saumya-
-### Kashish-
-### Sonakshi- 
-
 ## Week 8
 ### Presentation: PBL Design
 #### Basic Design Idea is Travel Website with Continents, Images, and Links
