@@ -1,5 +1,6 @@
 # import "packages" from flask
-from flask import Flask, render_template, request
+from flask import Flask, render_template,json, request
+import requests
 
 # create a Flask instance
 from algorithms.image import image_data
@@ -139,9 +140,20 @@ def kdr():
 def maps():
     return render_template("maps.html")
 
-@app.route('/maps')
-def maps():
-    return render_template("maps.html")
+@app.route('/weapons')
+def weapons():
+    url = "https://valorant-weapons.p.rapidapi.com/Sidearms"
+
+    headers = {
+        'x-rapidapi-host': "valorant-weapons.p.rapidapi.com",
+        'x-rapidapi-key': "8369759d57msh8fa2295ad3d60ccp1b48eajsn37d90ec37799"
+    }
+
+    response = requests.request("GET", url, headers=headers)
+    output = json.loads(response.txt)
+
+    print(response.text)
+    return render_template("weapons.html")
 
 # runs the application on the development server
 if __name__ == "__main__":
