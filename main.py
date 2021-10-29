@@ -139,6 +139,10 @@ def kdr():
 def maps():
     return render_template("maps.html")
 
+@app.route('/maps')
+def maps():
+    return render_template("maps.html")
+
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)
