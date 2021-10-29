@@ -150,10 +150,10 @@ def weapons():
     }
 
     response = requests.request("GET", url, headers=headers)
-    output = json.loads(response.txt)
+    output = json.loads(response.text)
 
     print(response.text)
-    return render_template("weapons.html")
+    return render_template("weapons.html",x=output)
 
 # runs the application on the development server
 if __name__ == "__main__":
