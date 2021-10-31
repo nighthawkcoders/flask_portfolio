@@ -3,7 +3,7 @@ from pathlib import Path
 
 from flask import Flask, render_template, request
 from algorithms.image import rotatehack, sonakshi_image_data, kashish_image_data, saumya_image_data
-
+import requests
 
 # create a Flask instance
 app = Flask(__name__)
@@ -114,7 +114,6 @@ def kashish():
 
 
 
-
 @app.route('/insights/')
 def insights():
     return render_template("insights.html")
@@ -136,8 +135,73 @@ def color():
 def logicgates():
     return render_template("logicgates.html")
 
+@app.route('/sevenwonders/')
+def sevenwonders():
+    return render_template("sevenwonders.html")
 
 
+
+@app.route('/covid', methods=['GET', 'POST'])
+def covid():
+        url = "https://corona-virus-world-and-india-data.p.rapidapi.com/api"
+        headers = {
+            'x-rapidapi-key': "dec069b877msh0d9d0827664078cp1a18fajsn2afac35ae063",
+            'x-rapidapi-host': "corona-virus-world-and-india-data.p.rapidapi.com"
+        }
+
+        response = requests.request("GET", url, headers=headers)
+
+        """
+        # uncomment this code to test from terminal
+        world = response.json().get('world_total')
+        countries = response.json().get('countries_stat')
+        print(world['total_cases'])
+        for country in countries:
+            print(country["country_name"])
+        """
+        # return response.text
+        return render_template("covid.html", stats=response.json())
+
+
+
+@app.route('/flightapi', methods=['GET', 'POST'])
+def flightapi(place: str = "china"):
+
+    # import requests
+
+    url = "https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/autosuggest/v1.0/US/USD/en-US/"
+
+    querystring = {"query": "san diego"}
+
+    headers = {
+        'x-rapidapi-host': "skyscanner-skyscanner-flight-search-v1.p.rapidapi.com",
+        'x-rapidapi-key': "8d571b2f72msh44f8fd48e083624p19cce1jsnfb1e373c1716"
+    }
+
+    response = requests.request("GET", url, headers=headers, params=querystring)
+
+    # return(response.text)
+    return render_template("flightapi.html", stats=response.json())
+
+
+# @app.route('/flightdata', methods=['GET', 'POST'])
+# def flightdata():
+#
+# # import requests
+#
+#     url = "https://weatherbit-v1-mashape.p.rapidapi.com/current"
+#
+#     querystring = {"lon":"38.5","lat":"-78.5"}
+#
+#     headers = {
+#         'x-rapidapi-host': "weatherbit-v1-mashape.p.rapidapi.com",
+#         'x-rapidapi-key': "8d571b2f72msh44f8fd48e083624p19cce1jsnfb1e373c1716"
+#     }
+#
+#     response = requests.request("GET", url, headers=headers, params=querystring)
+# # return (response.text)
+#
+#     return render_template("flightdata.html", stats=response.json())
 
 # runs the application on the development server
 if __name__ == "__main__":
