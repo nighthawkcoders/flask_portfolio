@@ -184,24 +184,41 @@ def flightapi(place: str = "china"):
     return render_template("flightapi.html", stats=response.json())
 
 
-# @app.route('/flightdata', methods=['GET', 'POST'])
-# def flightdata():
-#
-# # import requests
-#
-#     url = "https://weatherbit-v1-mashape.p.rapidapi.com/current"
-#
-#     querystring = {"lon":"38.5","lat":"-78.5"}
-#
-#     headers = {
-#         'x-rapidapi-host': "weatherbit-v1-mashape.p.rapidapi.com",
-#         'x-rapidapi-key': "8d571b2f72msh44f8fd48e083624p19cce1jsnfb1e373c1716"
-#     }
-#
-#     response = requests.request("GET", url, headers=headers, params=querystring)
-# # return (response.text)
-#
-#     return render_template("flightdata.html", stats=response.json())
+
+@app.route('/flightdata', methods=['GET', 'POST'])
+def flightdata():
+
+# import requests
+
+    url = "https://weatherbit-v1-mashape.p.rapidapi.com/current"
+
+    querystring = {"lon":"117.1611","lat":"32.7157"}
+
+    headers = {
+        'x-rapidapi-host': "weatherbit-v1-mashape.p.rapidapi.com",
+        'x-rapidapi-key': "8d571b2f72msh44f8fd48e083624p19cce1jsnfb1e373c1716"
+    }
+
+    response = requests.request("GET", url, headers=headers, params=querystring)
+    return (response.text)
+
+    return render_template("flightdata.html", stats=response.json())
+
+
+@app.route('/accommodationsapi', methods=['GET', 'POST'])
+def accommodationsapi():
+
+    url = "https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/reference/v1.0/countries/en-US"
+
+    headers = {
+        'x-rapidapi-host': "skyscanner-skyscanner-flight-search-v1.p.rapidapi.com",
+        'x-rapidapi-key': "8d571b2f72msh44f8fd48e083624p19cce1jsnfb1e373c1716"
+    }
+
+    response = requests.request("GET", url, headers=headers)
+
+    # return(response.text)
+    return render_template("listofcountriesapi.html", stats=response.json())
 
 # runs the application on the development server
 if __name__ == "__main__":
