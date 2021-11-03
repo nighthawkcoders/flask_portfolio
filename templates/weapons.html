@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+{% extends "layouts/base.html" %}
+{% set project = Weapons %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,10 +11,94 @@
 </head>
 <style>
 </style>
+{% block body %}
 <body>
-<p>Select a Weapon:</p>
-<select class="form-control" id="name">
-    <option>Select a Weapon</option>
+<p style="margin-left:4%; margin-top:2.5%">Select a Weapon:</p>
+<select class="form-control" id="name" style="margin-left:4%; margin-top:2.5%; width:50%" name="ad_select" onchange=getResponse()>
+    <option value="">Select a Weapon</option>
 </select>
+<p id="list"></p>
 </body>
+<script>
+    var select = document.getElementById("name");
+    var response1 = `Cost:{{x['weapons'][0]['cost']}}
+Fire Type:{{x['weapons'][0]['fire_type']}}
+Penetration:{{x['weapons'][0]['penetration']}}
+Magazine:{{x['weapons'][0]['magazine']}}`;
+    var response2 = `Cost:{{x['weapons'][1]['cost']}}
+Fire Type:{{x['weapons'][1]['fire_type']}}
+Penetration:{{x['weapons'][1]['penetration']}}
+Magazine:{{x['weapons'][1]['magazine']}}`;
+    var response3 = `Cost:{{x['weapons'][2]['cost']}}
+Fire Type:{{x['weapons'][2]['fire_type']}}
+Penetration:{{x['weapons'][2]['penetration']}}
+Magazine:{{x['weapons'][2]['magazine']}}`;
+    var response4 = `Cost:{{x['weapons'][3]['cost']}}
+Fire Type:{{x['weapons'][3]['fire_type']}}
+Penetration:{{x['weapons'][3]['penetration']}}
+Magazine:{{x['weapons'][3]['magazine']}}`;
+    var response5 = `Cost:{{x['weapons'][4]['cost']}}
+Fire Type:{{x['weapons'][4]['fire_type']}}
+Penetration:{{x['weapons'][4]['penetration']}}
+Magazine:{{x['weapons'][4]['magazine']}}`;
+
+    var days = ["Classic", "Shorty", "Ghost", "Frenzy", "Sheriff"];
+
+    for (var i = 0; i < days.length; i++) {
+        var opt = days[i];
+        var el = document.createElement("option");
+        el.textContent = opt;
+        el.value = opt;
+        select.appendChild(el);
+    }
+
+    function getResponse(element) {
+        var e = document.getElementById("name");
+        var strUser = e.options[e.selectedIndex].value;
+        if (strUser == 'Classic') {
+            alert(response1)
+        } else if (strUser == 'Shorty'){
+            alert(response2);
+        } else if (strUser == 'Ghost'){
+            alert(response3);
+        } else if (strUser == 'Frenzy'){
+            alert(response4);
+        } else if (strUser == 'Sheriff'){
+            alert(response5);
+        }
+    }
+</script>
+<br>
+<br>
+<br>
+<div class="table">
+    <div class="row">
+        <div class="col">
+            <div class="content_img">
+                <img src="../static/Classic.png" width='100%' height='80%' style="margin: 0% 0% 0%">
+            </div>
+        </div>
+        <div class="col">
+            <div class="content_img">
+                <img src="../static/Shorty.png" width='120%' height='100%' style="margin: 0% 0% 0%">
+            </div>
+        </div>
+        <div class="col">
+            <div class="content_img">
+                <img src="../static/Ghost.png" width='120%' height='100%' style="margin: 0% 0% 0%">
+            </div>
+        </div>
+        <div class="col">
+            <div class="content_img">
+                <img src="../static/Frenzy.png" width='100%' height='80%' style="margin: 0% 10% 0%">
+            </div>
+        </div>
+        <div class="col">
+            <div class="content_img">
+                <img src="../static/Sheriff.png" width='120%' height='100%' style="margin: 0% -12% 0%">
+            </div>
+        </div>
+    </div>
+</div>
 </html>
+{% endblock %}
