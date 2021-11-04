@@ -1,18 +1,10 @@
 <!DOCTYPE html>
 
-
-{% extends "layouts/base.html" %}
-
-
-{% set imgBulbOff = "/static/assets/]" %}
-{% set msgTurnOn = "Turn On" %}
-{% set msgTurnOff = "Turn Off" %}
-{% block meta %}
-    <title>Binary page</title>
-
     <html xmlns="http://www.w3.org/1999/html">
-    <head>
-        <title>Bootstrap Example</title>
+
+
+
+    <title>Bootstrap Example</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -29,15 +21,12 @@
                 color: white;
                 text-align: center;
                 font-size: xxx-large;}
-            #section2 {padding-top:50px;height:800px;color: #fff; background-color: #E6E6FA;}
-            #section3 {padding-top:50px;height:800px;color: #fff; background-color: #E6E6FA;}
-            #section4 {padding-top:50px;height:800px;color: #fff; background-color: #E6E6FA;}
-            #section5 {padding-top:50px;height:800px;color: #fff; background-color: #E6E6FA;}
 
         </style>
 
 
     </head>
+
     <body data-spy="scroll" data-target=".navbar" data-offset="50">
 
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -75,6 +64,7 @@
         <blockquote></blockquote>
         <h1>Welcome to Antartica!</h1>
 
+
         <style>
             body {
             h1 {
@@ -86,6 +76,7 @@
 
 
     <div id="section2" class="container-fluid">
+
 
         </blockquote>
         <h1>Notable Locations</h1>
@@ -101,6 +92,21 @@
         <blockquote>
 
             <div id="section3" class="container-fluid">
+                <script>
+                    // Function to change webpage background color
+                    function changeBodyBg(color){
+                        document.body.style.background = color;
+                    }
+
+                    // Function to change heading background color
+                    function changeHeadingBg(color){
+                        document.getElementById("heading").style.background = color;
+                    }
+                </script>
+                <button type="button" onclick="changeBodyBg('yellow');">Yellow</button>
+                <button type="button" onclick="changeBodyBg('lime');">Lime</button>
+                <button type="button" onclick="changeBodyBg('orange');">Orange</button>
+
                 <h1>Cuisine and Community </h1>
                 <h2>Listed below are some great websites for popular cuisine: </h2>
                 <a href="https://www.foodandwine.com/news/antarcticas-tiny-isolated-five-star-restaurant" >
@@ -153,4 +159,3 @@
     </html
 
 
-{% endblock %}
