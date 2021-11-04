@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+{% extends "layouts/base.html" %}
+
+{% block body %}
+
+{% set data = stats.data %}
+
+    <head>
+        <style>
+            body, html {
+                background-color: rosybrown;
+            }
+        </style>
+    </head>
+    <div class="center-block" style="margin: 2% 5% 5%; font-family: gilroy,serif;">
+        <!-- Title -->
+        <div class="col-12" style="text-align: center;">
+            <h1><strong>Flight RESTapi from rapidapi.com</strong></h1>
+            <form action={{url_for('flightdata')}}>
+                <button>Refresh!</button>
+            </form>
+        </div>
+
+        <div class="col-12">
+            {#            <p>Hello, {{places}}!</p>#}
+        </div>
+{#        <div class="col-12">#}
+{#            <p>Hello, {{name}}!</p>#}
+{#        </div>#}
+{##}
+{#        <div class="col-12">#}
+{#            <form action="/flightapi" id="greet" method="POST" >#}
+{#                <label for="name">Type a greeting name?</label>#}
+{#                <input name="name" id="name">#}
+{#                <input type="submit" value="Greetings!">#}
+{#            </form>#}
+{#        </div>#}
+
+        {#        <p>{{ stats.Places }}</p>#}
+        <!-- Sequence -->
+        <div class="col-12" style="text-align: left; ">
+            <table style="margin: 2%">
+                    <tr>
+                        <th>Timezone</th>
+{#                        <th>Country Code</th>#}
+                        <th>State Code</th>
+                        <th>City Name</th>
+                        <th>Windspeed</th>
+                        <th>Sunset</th>
+                        <th>Snow</th>
+                        <th>Precipitation</th>
+                        <th>Wind Direction</th>
+                        <th>Sunrise</th>
+                        <th>Weather</th>
+                        <th>Latitude</th>
+{#                        <th>Wind Icon</th>#}
+                        <th>Description</th>
+                        <th>Datetime</th>
+                        <th>Temperature</th>
+                    </tr>
+        <div class="col-12" style="text-align: left; ">
+              <table style="margin: 2%">
+                    {% for properties in data %}
+
+                      <tr>
+{#                        <td> {{properties.rh}} </td>#}
+{#                        <td> {{properties.pod}} </td>#}
+{#                        <td> {{properties.lon}} </td>#}
+{#                        <td> {{properties.pres}} </td>#}
+                        <td> {{properties.timezone}} </td>
+{#                        <td> {{properties.ob_time}} </td>#}
+{#                        <td> {{properties.country_code}} </td>#}
+{#                        <td> {{properties.clouds}} </td>#}
+{#                        <td> {{properties.ts}} </td>#}
+{#                        <td> {{properties.solar_rad}} </td>#}
+                        <td> {{properties.state_code}} </td>
+                        <td> {{properties.city_name}} </td>
+                        <td> {{properties.wind_spd}} </td>
+{#                        <td> {{properties.wind_cdir_full}} </td>#}
+{#                        <td> {{properties.wind_cdir}} </td>#}
+{#                        <td> {{properties.slp}} </td>#}
+{#                        <td> {{properties.vis}} </td>#}
+{#                        <td> {{properties.h_angle}} </td>#}
+                        <td> {{properties.sunset}} </td>
+{#                        <td> {{properties.dni}} </td>#}
+{#                        <td> {{properties.dewpt}} </td>#}
+                        <td> {{properties.snow}} </td>
+{#                        <td> {{properties.uv}} </td>#}
+                        <td> {{properties.precip}} </td>
+                        <td> {{properties.wind_dir}} </td>
+                        <td> {{properties.sunrise}} </td>
+{#                        <td> {{properties.ghi}} </td>#}
+{#                        <td> {{properties.dhi}} </td>#}
+{#                        <td> {{properties.aqi}} </td>#}
+                        <td> {{properties.lat}} </td>
+                        <td> {{properties.weather}} </td>
+{#                        <td> {{properties.wind_icon}} </td>#}
+{#                        <td> {{properties.code}} </td>#}
+                        <td> {{properties.description}} </td>
+                        <td> {{properties.datetime}} </td>
+                        <td> {{properties.temp}} </td>
+{#                        <td> {{properties.station}} </td>#}
+{#                        <td> {{properties.elev_angle}} </td>#}
+{#                        <td> {{properties.app_temp}} </td>#}
+{#                        <td> {{properties.count}} </td>#}
+                    </tr>
+                   {% endfor %}
+            </table>
+{#        table, td, th {#}
+        {#border: 1px solid var(--dblue);#}
+{#        }#}
+{#        td, th {#}
+{#            text-align:left;#}
+{#        }#}
+    </style>
+    </div>
+
+{% endblock %}

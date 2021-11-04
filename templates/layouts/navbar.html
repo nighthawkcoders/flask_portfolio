@@ -3,6 +3,8 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
 -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="http://127.0.0.1:5000/">All Around The World</a>
+    <img class="animated-gif" src="http://gifimgs.com/res/1021/6179adb63a1a8806593935.gif"</img>
+
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -14,7 +16,11 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
 {#            <a class="nav-link" href={{ url_for('addition') }}>Addition</a>#}
 {#            <a class="nav-link" href={{ url_for('signed') }}>Signed</a>#}
             <a class="nav-link" href={{ url_for('about') }}>About</a>
+{#            <a class="nav-link" href={{ url_for('covid') }}>Covid</a>#}
+            <a class="nav-link" href={{ url_for('timezoneapi') }}>Current Weather Data/Timezone API</a>
+            <a class="nav-link" href={{ url_for('newapi') }}>Historical Weather API</a>
             <a class="nav-link" href={{ url_for('insights') }}>Insights</a>
+{#            <a class="nav-link" href={{ url_for('sevenwonders') }}>7 Wonders of the World</a>#}
             <a class="nav-link" href="/stub">Stub</a>
             {#            <a class="nav-link" href={{ url_for('color') }}>Color Codes</a>#}
 {#            <a class="nav-link" href={{ url_for('logicgates') }}>Logic Gates</a>#}
@@ -85,6 +91,42 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                             <a href="http://127.0.0.1:5000/australia" >
                                 <button type="button" class="btn btn-info">Australia</button>
                             </a>
+
+
+
+
+{#                        <div class="dropdown">#}
+{#                            <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">7 Wonders of the World#}
+{#                                <span class="caret"></span></button>#}
+{#                            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">#}
+{#                                <li role="presentation"><a role="menuitem" tabindex="-1"#}
+{#                                    <a href="http://127.0.0.1:5000/asia" >#}
+{#                                        <button type="button" class="btn btn-info">Great Pyramid of Giza</button>#}
+{#                                    </a>#}
+{#                                <li role="presentation"><a role="menuitem" tabindex="-1"#}
+{#                                    <a href="http://127.0.0.1:5000/africa" >#}
+{#                                        <button type="button" class="btn btn-info">Gardens of Babylon</button>#}
+{#                                    </a>#}
+{#                                <li role="presentation"><a role="menuitem" tabindex="-1"#}
+{#                                    <a href="http://127.0.0.1:5000/northamerica" >#}
+{#                                        <button type="button" class="btn btn-info">Colossus of Rhodes Memorial</button>#}
+{#                                    </a>#}
+{#                                <li role="presentation"><a role="menuitem" tabindex="-1"#}
+{#                                    <a href="http://127.0.0.1:5000/southamerica" >#}
+{#                                        <button type="button" class="btn btn-info">Lighthouse of Alexandria</button>#}
+{#                                    </a>#}
+{#                                <li role="presentation"><a role="menuitem" tabindex="-1"#}
+{#                                    <a href="http://127.0.0.1:5000/antarctica" >#}
+{#                                        <button type="button" class="btn btn-info">Temple of Artemis</button>#}
+{#                                    </a>#}
+{#                                <li role="presentation"><a role="menuitem" tabindex="-1"#}
+{#                                    <a href="http://127.0.0.1:5000/europe" >#}
+{#                                        <button type="button" class="btn btn-info">Statue of Zeus at Olympia</button>#}
+{#                                    </a>#}
+{#                                <li role="presentation"><a role="menuitem" tabindex="-1"#}
+{#                                    <a href="http://127.0.0.1:5000/australia" >#}
+{#                                        <button type="button" class="btn btn-info">Mausoleum at Halicarnassus</button>#}
+{#                                    </a>#}
 
             <!-- stub is shown using the name of the route -->
     </div>
