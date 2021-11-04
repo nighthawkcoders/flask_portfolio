@@ -149,15 +149,17 @@ def weapons():
         'x-rapidapi-key': "8369759d57msh8fa2295ad3d60ccp1b48eajsn37d90ec37799"
     }
 
-@app.route('/slider')
-def slider():
-    return render_template("slider.html")
-
     response = requests.request("GET", url, headers=headers)
     output = json.loads(response.text)
 
     print(response.text)
     return render_template("weapons.html",x=output)
+
+
+@app.route('/sliderss')
+def sliderss():
+    return render_template("sliderss.html")
+
 
 # runs the application on the development server
 if __name__ == "__main__":
