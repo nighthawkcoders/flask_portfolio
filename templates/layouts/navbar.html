@@ -11,13 +11,13 @@
         .dropbtn {
             background-color: white;
             color: black;
-            padding: 16px;
+            padding: 0px 65px 0px 23px;
             font-size: 16px;
             border: none;
         }
-        .dropdown-content {
+        .dropdown-content.epic {
             display: none;
-            position: static;
+            position: absolute;
             background-color: lightcoral;
             min-width: 160px;
             box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -29,7 +29,7 @@
             text-decoration: none;
             display: block;
         }
-        .dropdown:hover .dropdown-content {display: inline-block;}
+        .dropdown:hover .dropdown-content.epic {display: inline-block;}
     </style>
     <!-- Bootstrap menus -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -54,12 +54,12 @@
                 <div class="dropdown-menu multi-level" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="/val">Main Page</a>
                     <div class="dropdown">
-                        <button class="dropbtn">Agents</button>
-                        <div class="dropdown-content">
-                            <a href="/controllers">Controllers</a>
-                            <a href="/duelists">Duelists</a>
-                            <a href="sentinels">Sentinels</a>
-                            <a href="/initiators">Initiators</a>
+                        <button class="dropbtn" id="agents">Agents</button>
+                        <div class="dropdown-content epic">
+                            <a href="/controllers" id="agents">Controllers</a>
+                            <a href="/duelists" id="agents">Duelists</a>
+                            <a href="sentinels" id="agents">Sentinels</a>
+                            <a href="/initiators" id="agents">Initiators</a>
                         </div>
                     </div>
                     <a class="dropdown-item" href="/maps">Maps</a>
