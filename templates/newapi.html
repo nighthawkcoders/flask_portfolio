@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+{% extends "layouts/base.html" %}
+
+{% block body %}
+    {% set data = stats.list %}
+
+    <head>
+        <style>
+            body, html {
+                background-color: rosybrown;
+            }
+        </style>
+    </head>
+    <body>
+    <div class="center-block" style="margin: 2% 5% 5%; font-family: gilroy,serif;">
+        <!-- Title -->
+        <div class="col-12" style="text-align: center;">
+            <h1><strong>Historical Weather Data from rapidapi.com</strong></h1>
+            <form action={{url_for('timezoneapi')}}>
+                <button>Refresh!</button>
+            </form>
+        </div>
+
+        {#        <div class="col-12">#}
+        {#            <p>Hello, {{places}}!</p>#}
+        {#        </div>#}
+        {#        <div class="col-12">#}
+        {#            <p>Hello, {{name}}!</p>#}
+        {#        </div>#}
+        {##}
+        {#        <div class="col-12">#}
+        {#            <form action="/flightapi" id="greet" method="POST" >#}
+        {#                <label for="name">Type a greeting name?</label>#}
+        {#                <input name="name" id="name">#}
+        {#                <input type="submit" value="Greetings!">#}
+        {#            </form>#}
+        {#        </div>#}
+
+        {#        <p>{{ stats.Places }}</p>#}
+        <!-- Sequence -->
+        <div class="col-20" style="text-align: left; ">
+            <table class="table">
+                <tbody>
+                <thead>
+                <tr>
+                    <th>dt</th>
+                    <th>Humidity</th>
+                    <th>Pressure</th>
+                    <th>Averages</th>
+                    <th>Wind Speed</th>
+            </thead>
+                <tbody>
+                <tr>
+                    <div class="col-12" style="text-align: left; ">
+                        {% for info in data %}
+                            <tr>
+                                <td> {{info.dt}} </td>
+                                <td> {{info.humidity}} </td>
+                                <td> {{info.pressure}} </td>
+                                <td> {{info.temp}} </td>
+                                <td> {{info.average}} </td>
+                                <td> {{info.average_max}} </td>
+                                <td> {{info.average_min}} </td>
+                                <td> {{info.record_max}} </td>
+                                <td> {{info.record_min}} </td>
+                                <td> {{info.wind_speed}} </td>
+                            </tr>
+                        {% endfor %}
+            </table>
+        </div>
+
+    </div>
+    <style>
+        table, td, th {
+        {#border: 1px solid var(--dblue);#}
+        }
+        td, th {
+            text-align:left;
+        }
+    </style>
+    </div>
+
+{% endblock %}

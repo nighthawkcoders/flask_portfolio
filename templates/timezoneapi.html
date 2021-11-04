@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+{% extends "layouts/base.html" %}
+
+{% block body %}
+{% set Data = stats.data %}
+
+    <head>
+        <style>
+            body, html {
+                background-color: rosybrown;
+            }
+        </style>
+    </head>
+    <body>
+    <div class="center-block" style="margin: 2% 5% 5%; font-family: gilroy,serif;">
+        <!-- Title -->
+        <div class="col-12" style="text-align: center;">
+            <h1><strong>Current Weather Data from rapidapi.com</strong></h1>
+            <form action={{url_for('timezoneapi')}}>
+                <button>Refresh!</button>
+            </form>
+        </div>
+
+{#        <div class="col-12">#}
+            {#            <p>Hello, {{places}}!</p>#}
+{#        </div>#}
+{#        <div class="col-12">#}
+{#            <p>Hello, {{name}}!</p>#}
+{#        </div>#}
+{##}
+{#        <div class="col-12">#}
+{#            <form action="/flightapi" id="greet" method="POST" >#}
+{#                <label for="name">Type a greeting name?</label>#}
+{#                <input name="name" id="name">#}
+{#                <input type="submit" value="Greetings!">#}
+{#            </form>#}
+{#        </div>#}
+
+        {#        <p>{{ stats.Places }}</p>#}
+        <!-- Sequence -->
+        <div class="col-20" style="text-align: left; ">
+            <table class="table">
+            <tbody>
+                <thead>
+                <tr>
+                    <th>Timezone  </th>
+                    <th>Country Code  </th>
+{#                    <th>Clouds</th>#}
+                    <th>City Name  </th>
+                    <th>Wind Speed  </th>
+                    <th>State Code</th>
+                    <th>Sunset  </th>
+                    <th>Dew</th>
+                    <th>Snow</th>
+                    <th>Precipitation  </th>
+                    <th>Wind Direction  </th>
+                    <th>Sunrise  </th>
+                    <th>Latitude  </th>
+                    <th>Weather</th>
+{#                    <th>Description</th>#}
+                    <th>Datetime</th>
+                    <th>Temperature</th>
+                </thead>
+                <tbody>
+                <tr>
+                    <div class="col-12" style="text-align: left; ">
+                            {% for info in Data %}
+                                <tr>
+{#                                    <td> {{info.rh}} </td>#}
+{#                                    <td> {{info.pod}} </td>#}
+{#                                    <td> {{info.lon}} </td>#}
+{#                                    <td> {{info.pres}} </td>#}
+                                    <td> {{info.timezone}} </td>
+                                    <td> {{info.country_code}} </td>
+                                    <td> {{info.city_name}} </td>
+                                    <td> {{info.wind_spd}} </td>
+                                    <td> {{info.state_code}} </td>
+                                    <td> {{info.sunset}} </td>
+                                    <td> {{info.dewpt}} </td>
+                                    <td> {{info.snow}} </td>
+                                    <td> {{info.precip}} </td>
+                                    <td> {{info.wind_dir}} </td>
+                                    <td> {{info.sunrise}} </td>
+                                    <td> {{info.lat}} </td>
+                                    <td> {{info.weather}} </td>
+{#                                    <td> {{info.description}} </td>#}
+                                    <td> {{info.datetime}} </td>
+                                    <td> {{info.temp}} </td>
+
+                                    {# <td> {{info.ob_time}} </td>#}
+{#                                    <td> {{info.country_code}} </td>#}
+{#                                    <td> {{info.clouds}} </td>#}
+{#                                    <td> {{info.ts}} </td>#}
+{#                                    <td> {{info.solar_rad}} </td>#}
+{#                                    <td> {{info.city_name}} </td>#}
+{#                                    <td> {{info.wind_spd}} </td>#}
+{#                                    <td> {{info.wind_cdir_full}} </td>#}
+{#                                    <td> {{info.wind_cdir}} </td>#}
+{#                                    <td> {{info.slp}} </td>#}
+{#                                    <td> {{info.vis}} </td>#}
+{#                                    <td> {{info.h_angle}} </td>#}
+{#                                    <td> {{info.sunset}} </td>#}
+{#                                    <td> {{info.dni}} </td>#}
+{#                                    <td> {{info.uv}} </td>#}
+{#                                    <td> {{info.precip}} </td>#}
+{#                                    <td> {{info.wind_dir}} </td>#}
+{#                                    <td> {{info.sunrise}} </td>#}
+{#                                    <td> {{info.ghi}} </td>#}
+{#                                    <td> {{info.dhi}} </td>#}
+{#                                    <td> {{info.aqi}} </td>#}
+{#                                    <td> {{info.lat}} </td>#}
+{#                                    <td> {{info.station}} </td>#}
+{#                                    <td> {{info.elev_angle}} </td>#}
+{#                                    <td> {{info.app_temp}} </td>#}
+{#                                    <td> {{info.count}} </td>#}
+                                </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+
+        </div>
+        <style>
+            table, td, th {
+            {#border: 1px solid var(--dblue);#}
+            }
+            td, th {
+                text-align:left;
+            }
+        </style>
+    </div>
+
+{% endblock %}

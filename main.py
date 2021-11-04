@@ -143,52 +143,30 @@ def sevenwonders():
 
 @app.route('/covid', methods=['GET', 'POST'])
 def covid():
-        url = "https://corona-virus-world-and-india-data.p.rapidapi.com/api"
-        headers = {
-            'x-rapidapi-key': "dec069b877msh0d9d0827664078cp1a18fajsn2afac35ae063",
-            'x-rapidapi-host': "corona-virus-world-and-india-data.p.rapidapi.com"
-        }
-
-        response = requests.request("GET", url, headers=headers)
-
-        """
-        # uncomment this code to test from terminal
-        world = response.json().get('world_total')
-        countries = response.json().get('countries_stat')
-        print(world['total_cases'])
-        for country in countries:
-            print(country["country_name"])
-        """
-        # return response.text
-        return render_template("covid.html", stats=response.json())
-
-
-
-@app.route('/flightapi', methods=['GET', 'POST'])
-def flightapi(place: str = "china"):
-
-    # import requests
-
-    url = "https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/autosuggest/v1.0/US/USD/en-US/"
-
-    querystring = {"query": "san diego"}
-
+    url = "https://corona-virus-world-and-india-data.p.rapidapi.com/api"
     headers = {
-        'x-rapidapi-host': "skyscanner-skyscanner-flight-search-v1.p.rapidapi.com",
-        'x-rapidapi-key': "8d571b2f72msh44f8fd48e083624p19cce1jsnfb1e373c1716"
+        'x-rapidapi-key': "dec069b877msh0d9d0827664078cp1a18fajsn2afac35ae063",
+        'x-rapidapi-host': "corona-virus-world-and-india-data.p.rapidapi.com"
     }
 
-    response = requests.request("GET", url, headers=headers, params=querystring)
+    response = requests.request("GET", url, headers=headers)
 
-    # return(response.text)
-    return render_template("flightapi.html", stats=response.json())
+    """
+    # uncomment this code to test from terminal
+    world = response.json().get('world_total')
+    countries = response.json().get('countries_stat')
+    print(world['total_cases'])
+    for country in countries:
+        print(country["country_name"])
+    """
+    # return response.text
+    return render_template("covid.html", stats=response.json())
 
 
+@app.route('/timezoneapi', methods=['GET', 'POST'])
+def timezoneapi():
 
-@app.route('/flightdata', methods=['GET', 'POST'])
-def flightdata():
-
-# import requests
+    # import requests
 
     url = "https://weatherbit-v1-mashape.p.rapidapi.com/current"
 
@@ -200,25 +178,28 @@ def flightdata():
     }
 
     response = requests.request("GET", url, headers=headers, params=querystring)
-    return (response.text)
+    # return (response.text)
 
-    return render_template("flightdata.html", stats=response.json())
+    return render_template("timezoneapi.html", stats=response.json())
 
 
-@app.route('/accommodationsapi', methods=['GET', 'POST'])
-def accommodationsapi():
+@app.route('/newapi', methods=['GET', 'POST'])
+def newapi():
 
-    url = "https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/reference/v1.0/countries/en-US"
+    url = "https://community-open-weather-map.p.rapidapi.com/climate/month"
+
+    querystring = {"q":"San Diego"}
 
     headers = {
-        'x-rapidapi-host': "skyscanner-skyscanner-flight-search-v1.p.rapidapi.com",
+        'x-rapidapi-host': "community-open-weather-map.p.rapidapi.com",
         'x-rapidapi-key': "8d571b2f72msh44f8fd48e083624p19cce1jsnfb1e373c1716"
     }
 
-    response = requests.request("GET", url, headers=headers)
+    response = requests.request("GET", url, headers=headers, params=querystring)
 
     # return(response.text)
-    return render_template("listofcountriesapi.html", stats=response.json())
+
+    return render_template("newapi.html", stats=response.json())
 
 # runs the application on the development server
 if __name__ == "__main__":
