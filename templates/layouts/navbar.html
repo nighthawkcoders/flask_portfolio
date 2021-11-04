@@ -7,6 +7,30 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
+    <style>
+        .dropbtn {
+            background-color: white;
+            color: black;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+        }
+        .dropdown-content {
+            display: none;
+            position: static;
+            background-color: lightcoral;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown:hover .dropdown-content {display: inline-block;}
+    </style>
     <!-- Bootstrap menus -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
@@ -27,12 +51,17 @@
                 <a class="nav-link dropdown-toggle" href="#" id="navbarModel" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Valorant Pages
                 </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <div class="dropdown-menu multi-level" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="/val">Main Page</a>
-                    <a class="dropdown-item" href="/controllers">Controllers</a>
-                    <a class="dropdown-item" href="/duelists">Duelists</a>
-                    <a class="dropdown-item" href="/sentinels">Sentinels</a>
-                    <a class="dropdown-item" href="/initiators">Initiators</a>
+                    <div class="dropdown">
+                        <button class="dropbtn">Agents</button>
+                        <div class="dropdown-content">
+                            <a href="/controllers">Controllers</a>
+                            <a href="/duelists">Duelists</a>
+                            <a href="sentinels">Sentinels</a>
+                            <a href="/initiators">Initiators</a>
+                        </div>
+                    </div>
                     <a class="dropdown-item" href="/maps">Maps</a>
                     <a class="dropdown-item" href="/kdr">KDR Calculator</a>
                     <a class="dropdown-item" href="/weapons">Weapons</a>
