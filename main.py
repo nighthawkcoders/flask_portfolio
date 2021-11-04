@@ -149,6 +149,10 @@ def weapons():
         'x-rapidapi-key': "8369759d57msh8fa2295ad3d60ccp1b48eajsn37d90ec37799"
     }
 
+@app.route('/slider')
+def slider():
+    return render_template("slider.html")
+
     response = requests.request("GET", url, headers=headers)
     output = json.loads(response.text)
 
