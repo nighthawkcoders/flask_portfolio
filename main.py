@@ -148,6 +148,12 @@ def weapons():
         'x-rapidapi-host': "valorant-weapons.p.rapidapi.com",
         'x-rapidapi-key': "8369759d57msh8fa2295ad3d60ccp1b48eajsn37d90ec37799"
     }
+    response = requests.request("GET", url, headers=headers)
+    output = json.loads(response.text)
+
+    print(response.text)
+    return render_template("weapons.html",x=output)
+
 
 @app.route('/slider')
 def slider():
