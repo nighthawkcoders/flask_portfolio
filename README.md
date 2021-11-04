@@ -18,6 +18,8 @@
 
 
 ## Table of Contents
+  - [Week 11](https://github.com/sonakshibhalla/flask_portfolio#week-11)
+  - [Week 10](https://github.com/sonakshibhalla/flask_portfolio#week-10)
   - [Week 9](https://github.com/sonakshibhalla/flask_portfolio#week-9)
   - [Week 8](https://github.com/sonakshibhalla/flask_portfolio#week-8)
   - [Week 7](https://github.com/sonakshibhalla/flask_portfolio#week-7)
@@ -27,6 +29,22 @@
   - [Week 3](https://github.com/sonakshibhalla/flask_portfolio#week-3)
   - [Week 2](https://github.com/sonakshibhalla/flask_portfolio#week-2)
   - [Ideation](https://github.com/sonakshibhalla/flask_portfolio#ideation)
+
+
+## Week 11
+## TPT (5.1/5.2)
+## Finishing PBL, getting ready for N@TM
+
+## Week 10
+##wrapping up presentations
+##4.1 and 4.2 notes
+| Name | Journal | TT & TPT Notes | Grade |
+| ---  | ---            | ---            | ---   |
+| Sonakshi| Journal | Notes | 2/2 |
+| Saumya | Journal | Notes | 2/2 |
+| Kashish | Journal | Notes | 2/2 |
+
+
 
 ## Week 9
 ## INDIVIDUAL FINAL PART 1: Review ticket
