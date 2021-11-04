@@ -1,7 +1,14 @@
 <!DOCTYPE html>
-{% extends "layout.html" %}
+{% extends "layouts/base.html" %}
 
-{% block content %}
+{% block background %}
+{% endblock %}
+{% set project = "covid" %}
+
+{% block body %}
+    <title>COVID-19 API</title>
+    <html lang="en">
+
     {% set world = stats.world_total %}
     {% set countries = stats.countries_stat %}
 
@@ -9,13 +16,13 @@
         <!-- Title -->
         <div class="col-12" style="text-align: center;">
             <h1><strong>COVID-19 RESTapi from rapidapi.com</strong></h1>
-            <form action={{url_for('starter.covid19')}}>
+            <form action={{url_for('.covid')}}>
                 <button>Refresh!</button>
             </form>
         </div>
 
         <!-- Sequence -->
-        <div class="col-12" style="text-align: left; ">
+        <div class="col-12" style="text-align: left;">
             <table style="margin: 2%">
                 <tr>
                     <th>Time</th>
@@ -71,11 +78,11 @@
     </div>
     <style>
         table, td, th {
-            border: 1px solid var(--dblue);
+        <!--border: 1px solid var(--dblue);-->
         }
         td, th {
             text-align:left;
+            text-color:white;
         }
     </style>
-
 {% endblock %}
