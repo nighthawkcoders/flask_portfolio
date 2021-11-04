@@ -36,8 +36,8 @@
 ## Finishing PBL, getting ready for N@TM
 
 ## Week 10
-##wrapping up presentations
-##4.1 and 4.2 notes
+## wrapping up presentations
+## 4.1 and 4.2 notes
 | Name | Journal | TT & TPT Notes | Grade |
 | ---  | ---            | ---            | ---   |
 | Sonakshi| Journal | Notes | 2/2 |
