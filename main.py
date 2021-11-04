@@ -162,9 +162,9 @@ def weapons():
     return render_template("weapons.html",x=output)
 
 
-@app.route('/sliderss')
-def sliderss():
-    return render_template("sliderss.html")
+@app.route('/slider')
+def slider():
+    return render_template("slider.html")
 
 
 # runs the application on the development server
