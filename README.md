@@ -25,6 +25,7 @@ Scrum Board: https://github.com/Reinhardtlotter/flask_portfolio/projects/1
 
 ## Current Functions
 | Function | Contributor(s)|
+| ------------- | -------------------------------------------------------------|
 | Main Page (Like Button) | Nathan |
 | | |
 | | |
