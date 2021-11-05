@@ -2,7 +2,7 @@
 ## [Scrum Board](https://github.com/sonakshibhalla/flask_portfolio/projects/1)
 ## [Commits by Contributor](https://github.com/sonakshibhalla/flask_portfolio/graphs/contributors)
 ## [Our Project]
-## Our project is an app to id with traveling. In our website, users can interact with API's, and informative pages that help them understand the optimal traveling period, the best places to go, and the best things to eat. Our group is looking to create many new developments that improve both the frontend and backend of our app. More things such as easier and cleaner sites, API abilities, and fun activities are on the horizon. 
+## Our project is an app to aid with traveling. In our website, users can interact with API's, and informative pages that help them understand the optimal traveling period, the best places to go, and the best things to eat. Our group is looking to create many new developments that improve both the frontend and backend of our app. More things such as easier and cleaner sites, API abilities, and fun activities are on the horizon. 
 
 
 
