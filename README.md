@@ -20,8 +20,11 @@ Scrum Board: https://github.com/Reinhardtlotter/flask_portfolio/projects/1
 | Derrick Huang    | Pitsco          | [Scrumboard](https://github.com/Reinhardtlotter/flask_portfolio/projects/1?card_filter_query=assignee%3Apitsco) | [Issue](https://github.com/Reinhardtlotter/flask_portfolio/issues?q=assignee%3APitsco+is%3Aopen) | [Commits](https://github.com/Reinhardtlotter/flask_portfolio/commits?author=Pitsco)         | [@Pitsco](https://github.com/Pitsco)          |
 | Brian Zhang      | BrianZhang2016  | [Scrumboard](https://github.com/Reinhardtlotter/flask_portfolio/projects/1?card_filter_query=assignee%3Abrianzhang2016) | [Issue](https://github.com/Reinhardtlotter/flask_portfolio/issues?q=assignee%3ABrianZhang2016+is%3Aopen) | [Commits](https://github.com/Reinhardtlotter/flask_portfolio/commits?author=BrianZhang2016)          | [@BrianZhang2016](https://github.com/BrianZhang2016)  |
 
-## Purpose
+## Purpose of Project
 #### Our project is a social media site for Valorant clips. We had originally intended to add a function for uploading videos, uploading comments, and having a like button, similar to other social media sites like Youtube and Reddit. However, at our current stage we cannot currently do that, so we instead created an informational site that has the potential to be molded into the site we envisioned. It’s purpose is to have a site specific for Valorant clips, so we can have a community that revolves around a game that we all enjoy.
+
+## Purpose of README
+#### To organize and highlight our projects through weekly sprints that connect to our PBL. This is shown through commits, tangibles and videos which are organized by the week to showcase work.
 
 ## Current Functions
 | Function | Contributor(s)|
