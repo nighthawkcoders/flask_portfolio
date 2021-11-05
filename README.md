@@ -27,13 +27,12 @@ Scrum Board: https://github.com/Reinhardtlotter/flask_portfolio/projects/1
 | Function | Contributor(s)|
 | ------------- | -------------------------------------------------------------|
 | Main Page (Like Button) | Nathan |
-| | |
-| | |
-| | | 
-| | |
-| | |
-| | |
-| | |
+| Agent Pages | Reinhardt + Brian |
+| Map Page | Derrick |
+| Map Sliders | Derrick | 
+| KDR Calculator | Reinhardt |
+| Navbar Extension for Agents | Brian |
+| Weapons API | Nathan |
 
 ## Assignments
 ---------------------------------------
