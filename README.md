@@ -20,6 +20,8 @@ Scrum Board: https://github.com/Reinhardtlotter/flask_portfolio/projects/1
 | Derrick Huang    | Pitsco          | [Scrumboard](https://github.com/Reinhardtlotter/flask_portfolio/projects/1?card_filter_query=assignee%3Apitsco) | [Issue](https://github.com/Reinhardtlotter/flask_portfolio/issues?q=assignee%3APitsco+is%3Aopen) | [Commits](https://github.com/Reinhardtlotter/flask_portfolio/commits?author=Pitsco)         | [@Pitsco](https://github.com/Pitsco)          |
 | Brian Zhang      | BrianZhang2016  | [Scrumboard](https://github.com/Reinhardtlotter/flask_portfolio/projects/1?card_filter_query=assignee%3Abrianzhang2016) | [Issue](https://github.com/Reinhardtlotter/flask_portfolio/issues?q=assignee%3ABrianZhang2016+is%3Aopen) | [Commits](https://github.com/Reinhardtlotter/flask_portfolio/commits?author=BrianZhang2016)          | [@BrianZhang2016](https://github.com/BrianZhang2016)  |
 
+## Purpose
+#### Reinhardt
 
 ## Assignments
 ---------------------------------------
