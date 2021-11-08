@@ -1,19 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="utf-8" />
-    <title>JavaScript change background image</title>
-    <script>
-        // The function below will change the background image
-        function changeBackgroundImage() {
-            document.body.style.backgroundImage = "url('/static/assets/japan.png')";
-            document.body.style.backgroundRepeat = "no-repeat";
-            document.body.style.backgroundSize = "cover";
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            padding: 25px;
+            background-color: white;
+            color: black;
+            font-size: 25px;
         }
-    </script>
+
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+    </style>
 </head>
 <body>
-<h1>Click the button to change the background image:</h1>
-<button onclick="changeBackgroundImage();">Change</button>
+
+<h2>Toggle Dark/Light Mode</h2>
+<p>Click the button to toggle between dark and light mode for this page.</p>
+
+<button onclick="myFunction()">Toggle dark mode</button>
+
+<script>
+    function myFunction() {
+        var element = document.body;
+        element.classList.toggle("dark-mode");
+    }
+</script>
+
 </body>
 </html>
