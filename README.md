@@ -1,6 +1,10 @@
 # Team Name: N224-Coders
 ## [Scrum Board](https://github.com/sonakshibhalla/flask_portfolio/projects/1)
 ## [Commits by Contributor](https://github.com/sonakshibhalla/flask_portfolio/graphs/contributors)
+## [Our Project]
+## Our project is an app to aid with traveling. In our website, users can interact with API's, and informative pages that help them understand the optimal traveling period, the best places to go, and the best things to eat. Our group is looking to create many new developments that improve both the frontend and backend of our app. More things such as easier and cleaner sites, API abilities, and fun activities are on the horizon. 
+
+
 
 ## Pair Share Journals
 ### [Saumya's Journal](https://docs.google.com/document/d/1nkBoOvmQhoIScKwd0u3vV3TiDgj4mWT9NPqn355nj9U/edit)
