@@ -58,7 +58,7 @@ Finishing PBL, getting ready for N@TM, Presentations
 ## Week 9
 ## INDIVIDUAL FINAL PART 1: Review ticket
 | Name | Video | Peer Scores (averaged) | 
-| ---  | ---            | ---            | ---   |
+| ---  | ---   | ---   |
 
 
 
