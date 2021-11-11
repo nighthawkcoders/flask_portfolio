@@ -40,7 +40,7 @@ Scrum Board: https://github.com/Reinhardtlotter/flask_portfolio/projects/1
 ## Assignments
 ---------------------------------------
 ### General Overview
-| Week Number   | Assignment link                                              |
+| Week Number | Assignment link                                              |
 | ------------- | -------------------------------------------------------------|
 | Sprint 7,8 (Week 7) | https://youtu.be/WzsgEr9UKu4 + https://github.com/Reinhardtlotter/flask_portfolio/issues/48 |
 | Sprint 5,6 (Week 6) | https://github.com/Reinhardtlotter/flask_portfolio/issues?q=is%3Aopen+is%3Aissue+label%3A%22Week+6%22 |
@@ -51,8 +51,7 @@ Scrum Board: https://github.com/Reinhardtlotter/flask_portfolio/projects/1
 | Sprint 1 (Week 1)   | https://www.youtube.com/watch?v=xP6kSe0Aay4&t=5s             |
 
 ### Pictures and Final Reflections:
-| hello |
-| [Pictures](https://docs.google.com/presentation/d/1DXyZsegbQB6vir-2MbcfKr7gZ5EWCXkAMCpvIO_YjCw/edit?usp=sharing) | [Responses](https://docs.google.com/document/d/1uMZrCATtKnG0FwekuTPJnkOQYUYD4iFGNhxUU-aaoVk/edit?usp=sharing) |
+[Pictures](https://docs.google.com/presentation/d/1DXyZsegbQB6vir-2MbcfKr7gZ5EWCXkAMCpvIO_YjCw/edit?usp=sharing)  [Responses](https://docs.google.com/document/d/1uMZrCATtKnG0FwekuTPJnkOQYUYD4iFGNhxUU-aaoVk/edit?usp=sharing) 
 
 ### Week 9
 | Members | Videos | Issues | Scores (Averaged) |
