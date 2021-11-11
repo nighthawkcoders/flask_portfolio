@@ -39,6 +39,22 @@ Our project is an app to aid with traveling. In our website, users can interact 
   - [Week 2](https://github.com/sonakshibhalla/flask_portfolio#week-2)
   - [Ideation](https://github.com/sonakshibhalla/flask_portfolio#ideation)
 
+## Week 12, N@TM Timebox
+Visuals/Tangibles
+
+![image](![image](https://user-images.githubusercontent.com/89223433/141240863-b83d21c4-1afb-4bfd-86f8-b7accd9507de.png))
+<br>
+Image of Dia de los Muertos art
+<br>
+
+![image](![image](https://user-images.githubusercontent.com/89223433/141240898-835c8637-f192-42dc-bfdd-8bab47a7d92d.png))
+<br>
+AP Studio Art/Advanced Drawing and Painting
+<br>
+![image](![image](https://user-images.githubusercontent.com/89223433/141240924-cfd67a10-cd2d-465d-81ae-9bc35a788efe.png))
+<br>
+Us presenting, making changes
+
 
 ## Week 11/Finals
 TPT (5.1/5.2)
