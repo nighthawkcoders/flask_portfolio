@@ -55,6 +55,12 @@ AP Studio Art/Advanced Drawing and Painting
 <br>
 Us presenting, making changes
 
+### Retrospective Reflections
+Links to GeekBot responses for each person: 
+[Saumya] (https://cs-p-hq.slack.com/archives/C02B8CSPSJJ/p1636414613013700)
+[Sonakshi] (https://cs-p-hq.slack.com/archives/C02B8CSPSJJ/p1636403437007400) 
+[Kashish] (https://cs-p-hq.slack.com/archives/C02B8CSPSJJ/p1636403632008100)
+
 
 ## Week 11
 Finals
