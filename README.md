@@ -51,6 +51,7 @@ Scrum Board: https://github.com/Reinhardtlotter/flask_portfolio/projects/1
 | Sprint 1 (Week 1)   | https://www.youtube.com/watch?v=xP6kSe0Aay4&t=5s             |
 
 ### Pictures and Final Reflections:
+| hello |
 | [Pictures](https://docs.google.com/presentation/d/1DXyZsegbQB6vir-2MbcfKr7gZ5EWCXkAMCpvIO_YjCw/edit?usp=sharing) | [Responses](https://docs.google.com/document/d/1uMZrCATtKnG0FwekuTPJnkOQYUYD4iFGNhxUU-aaoVk/edit?usp=sharing) |
 
 ### Week 9
