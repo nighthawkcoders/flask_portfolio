@@ -49,7 +49,9 @@ Scrum Board: https://github.com/Reinhardtlotter/flask_portfolio/projects/1
 | Sprint 3,4 (Week 3) | https://www.youtube.com/watch?v=4PBT40bsTYw&list=PLqQJAW1jlFX_KScLv7LZFcHH2t_uYb4Vn&index=3  |
 | Sprint 2 (Week 2)   | https://github.com/Reinhardtlotter/flask_portfolio/issues/18 | 
 | Sprint 1 (Week 1)   | https://www.youtube.com/watch?v=xP6kSe0Aay4&t=5s             |
-
+### Pictures and Final Reflections:
+| Pictures | Responses |
+| [Pictures](https://docs.google.com/presentation/d/1DXyZsegbQB6vir-2MbcfKr7gZ5EWCXkAMCpvIO_YjCw/edit?usp=sharing) | [Responses](https://docs.google.com/document/d/1uMZrCATtKnG0FwekuTPJnkOQYUYD4iFGNhxUU-aaoVk/edit?usp=sharing)
 ### Week 9
 | Members | Videos | Issues | Scores (Averaged) |
 | ------------- | -------------------------------------------------------------| - | - |
