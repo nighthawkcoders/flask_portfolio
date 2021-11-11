@@ -40,9 +40,9 @@ Our project is an app to aid with traveling. In our website, users can interact 
   - [Ideation](https://github.com/sonakshibhalla/flask_portfolio#ideation)
 
 
-## Week 11
-## TPT (5.1/5.2)
-## Finishing PBL, getting ready for N@TM
+## Week 11/Finals
+TPT (5.1/5.2)
+Finishing PBL, getting ready for N@TM, Presentations
 
 ## Week 10
 ## wrapping up presentations
@@ -64,9 +64,10 @@ Our project is an app to aid with traveling. In our website, users can interact 
 
 | Sonakshi| https://youtu.be/vQHL1oZ-y0k |5.5/6|
 
-| Saumya | https://youtu.be/_H7fbdAYsw8 |5.5/6|
-
 | Kashish | https://www.google.com/url?q=https://drive.google.com/file/d/1xMKTHRHLyF2rPd-TmFq4vX9SpMt706qq/view?usp%3Dsharing&sa=D&source=hangouts&ust=1635225288094000&usg=AOvVaw1kOBoacuO0DPu4W6HZX3lG | 5.375/6 |
+
+
+| Saumya | https://youtu.be/_H7fbdAYsw8 |5.5/6|
 
 ## Week 8
 ### Presentation: PBL Design
