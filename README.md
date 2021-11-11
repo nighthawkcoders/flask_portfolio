@@ -42,6 +42,8 @@ Scrum Board: https://github.com/Reinhardtlotter/flask_portfolio/projects/1
 ### General Overview
 | Week Number | Assignment link                                              |
 | ------------- | -------------------------------------------------------------|
+| Sprint 9 (Week 9) | https://github.com/Reinhardtlotter/flask_portfolio/labels/Week%209 |
+| Sprint 8 (Week 8) | https://github.com/Reinhardtlotter/flask_portfolio/labels/Week%208 |
 | Sprint 7,8 (Week 7) | https://youtu.be/WzsgEr9UKu4 + https://github.com/Reinhardtlotter/flask_portfolio/issues/48 |
 | Sprint 5,6 (Week 6) | https://github.com/Reinhardtlotter/flask_portfolio/issues?q=is%3Aopen+is%3Aissue+label%3A%22Week+6%22 |
 | Sprint 5,6 (Week 5) | https://github.com/Reinhardtlotter/flask_portfolio/issues?q=is%3Aissue+is%3Aclosed+label%3A%22Week+5%22 |
