@@ -27,7 +27,7 @@ Our project is an app to aid with traveling. In our website, users can interact 
 
 
 ## Table of Contents
-  - [Week 11](https://github.com/sonakshibhalla/flask_portfolio#week-11/Finals)
+  - [Week 11](https://github.com/sonakshibhalla/flask_portfolio#week-11)
   - [Week 10](https://github.com/sonakshibhalla/flask_portfolio#week-10)
   - [Week 9](https://github.com/sonakshibhalla/flask_portfolio#week-9)
   - [Week 8](https://github.com/sonakshibhalla/flask_portfolio#week-8)
@@ -56,7 +56,8 @@ AP Studio Art/Advanced Drawing and Painting
 Us presenting, making changes
 
 
-## Week 11/Finals
+## Week 11
+Finals
 TPT (5.1/5.2)
 Finishing PBL, getting ready for N@TM, Presentations
 
