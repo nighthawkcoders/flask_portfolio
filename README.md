@@ -6,12 +6,12 @@
 ## Purpose of README
 #### To organize and highlight our projects through weekly sprints that connect to our PBL. This is shown through commits, tangibles and videos which are organized by the week to showcase work.
 
-## Pictures of us
+## Picture of us
 ![Photo on 11-12-21 at 11 25 AM](https://user-images.githubusercontent.com/89236893/141523648-69c6ed44-5edb-475b-bfeb-5a5c0c934081.jpg)
 
 
 ## Table of Contents
-
+- [Week 9](https://github.com/Reinhardtlotter/flask_portfolio/edit/main/README.md#week9)
 
 ## Contributors
 ---------------------------------------
