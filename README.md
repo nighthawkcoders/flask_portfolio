@@ -53,6 +53,9 @@ AP Studio Art/Advanced Drawing and Painting
 <br>
 ![image](https://user-images.githubusercontent.com/89223433/141240924-cfd67a10-cd2d-465d-81ae-9bc35a788efe.png)
 <br>
+
+[image](https://user-images.githubusercontent.com/89223433/141522524-480de133-9215-438d-8d08-382c87a13521.png)
+<br>
 Us presenting, making changes
 
 ### Retrospective Reflections
