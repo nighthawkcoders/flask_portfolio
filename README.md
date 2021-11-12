@@ -37,10 +37,13 @@ Scrum Board: https://github.com/Reinhardtlotter/flask_portfolio/projects/1
 | Navbar Extension for Agents | Brian |
 | Weapons API | Nathan |
 
+## Pictures of us
+
+
 ## Assignments
 ---------------------------------------
-### General Overview
-| Week Number | Assignment link                                              |
+### Sprint Overview
+| Week Number | Issue List                                              |
 | ------------- | -------------------------------------------------------------|
 | Sprint 9 (Week 9) | https://github.com/Reinhardtlotter/flask_portfolio/labels/Week%209 |
 | Sprint 8 (Week 8) | https://github.com/Reinhardtlotter/flask_portfolio/labels/Week%208 |
