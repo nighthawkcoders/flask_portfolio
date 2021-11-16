@@ -29,9 +29,9 @@ def hawkers():
     return render_template("hawkers.html")
 
 
-@app.route('/stub/')
-def stub():
-    return render_template("stub.html")
+@app.route('/adi/')
+def adi():
+    return render_template("adi.html")
 
 @app.route('/rohan', methods=['GET', 'POST'])
 def rohan():
