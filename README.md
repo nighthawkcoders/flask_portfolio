@@ -1,282 +1,85 @@
-# N224-Coders
-## [Scrum Board](https://github.com/sonakshibhalla/flask_portfolio/projects/1)
-## [Commits by Contributor](https://github.com/sonakshibhalla/flask_portfolio/graphs/contributors)
-## [Our Project]
-> Learn more about the world!
-
-## Ideation
-The overall idea of our project is a traveling aid. Any user can communicate with the websit and recieve statistics about locations, including weather, temperature, and more. We can teach people about popular locations.
-
-## Purpose
-Our project is an app to aid with traveling. In our website, users can interact with API's, and informative pages that help them understand the optimal traveling period, the best places to go, and the best things to eat. Our group is looking to create many new developments that improve both the frontend and backend of our app. More things such as easier and cleaner sites, API abilities, and fun activities are on the horizon. 
+# (Website Idea) 
+## N225 Turtles
+  <td><a href="https://github.com/sonakshibhalla/tri2turtles/projects/2">Turtles Scrum Board</a></td>  
+  <br>
+  <td><a href="https://github.com/sonakshibhalla/tri2turtles/graphs/contributors">Contributors Tab</a></td>
+  <br>
 
 
-## Pair Share Journals
-### [Saumya's Journal](https://docs.google.com/document/d/1nkBoOvmQhoIScKwd0u3vV3TiDgj4mWT9NPqn355nj9U/edit)
-### [Sonakshi and Kashish's Journal](https://docs.google.com/document/d/1FW_b7zlKt8A3x_9Ah4Mo1ItCtjWvCrqs2BooDvLcs0w/edit)
+### Website Description
 
-
-## Contributors
-| Name | GitHub Profile | Tasks | Scrum Board | Commits |
-|:-----|:----------------------|:-----:|:-----------:|:-------:|
-| Sonakshi Bhalla | [@sonakshibhalla](https://github.com/sonakshibhalla) | [Tasks](https://github.com/sonakshibhalla/flask_portfolio/issues/assigned/sonakshibhalla) |[Scrum Board](https://github.com/sonakshibhalla/flask_portfolio/projects/1?card_filter_query=assignee%3Asonakshibhalla)| [Commits](https://github.com/sonakshibhalla/flask_portfolio/commits?author=sonakshibhalla)
-| Kashish Chopra | [@kashishchopraa](https://github.com/kashishchopraa) | [Tasks](https://github.com/sonakshibhalla/flask_portfolio/issues/assigned/kashishchopraa) | [Scrum Board](https://github.com/sonakshibhalla/flask_portfolio/projects/1?card_filter_query=assignee%3Akashishchopraa) | [Commits](https://github.com/sonakshibhalla/flask_portfolio/commits?author=kashishchopraa)
-| Saumya Palakodety| [@saumyapalk23](https://github.com/saumyapalk23) | [Tasks](https://github.com/sonakshibhalla/flask_portfolio/issues/assigned/saumyapalk23) |[Scrum Board](https://github.com/sonakshibhalla/flask_portfolio/projects/1?card_filter_query=assignee%3Asaumyapalk23) | [Commits](https://github.com/sonakshibhalla/flask_portfolio/commits?author=saumyapalk23)
+<br>
+<table>
+  <tr>
+    <th> </th>
+    <th>Sonakshi Bhalla</th>
+    <th>Shreya Ahuja</th>
+    <th>Linda Liu</th>
+    <th>Khushi Bagri</th>
+  </tr>
+  <tr>
+    <td>GitHub Username</td>
+    <td>sonakshibhalla</td>
+    <td>shreya-ahujaa</td>
+    <td>LindaLiu1202</td>
+    <td>KhushiB24</td>
+  </tr>
+  <tr>
+    <td>Tasks</td>
+    <td><a href=>Katie's Tasks</a></td>
+    <td><a href=>Shreya's Tasks</a></td>
+    <td><a href=>Linda's Tasks</a></td>
+    <td><a href=>Khushi's Tasks</a></td>
+   <tr>
+    <td>Commits</td>
+    <td><a href=>Sonakshi's Commits</a></td>
+    <td><a href=>Shreya's Commits</a></td>
+    <td><a href=>Linda's Commits</a></td>
+    <td><a href=>Khushi's Commits</a></td>
+  </tr>
+   <tr>
+    <td>Scrum Board</td>
+     <td><a href=>Scrum Board</a> </td>
+     <td><a href=>Scrum Board</a> </td>
+     <td><a href=>Scrum Board</a> </td>
+     <td><a href=>Scrum Board</a> </td>
+  </tr>
+   <tr>
+    <td>Profile</td>
+    <td><a href=>Sonakshi's Profile</a></td>
+    <td><a href=>Shreya's Profile</a></td>
+    <td><a href=>Linda's Profile</a></td>
+    <td><a href=>Khushi's Profile</a></td>
+  </tr>
+    <tr>
+    <td>Pair Share Journals</td>
+    <td><a href="">Shreya and Sonakshi's Pair Share Journal</a></td>
+    <td><a href="">Shreya and Sonakshi's Pair Share Journal</a></td>
+    <td><a href="">Linda and Khushi's Pair Share Journal</a></td>
+    <td><a href="">Linda and Khushi's Pair Share Journal</a></td>
+  </tr>
+   <tr>
+    <td>Individual Journals</td>
+    <td><a href="">Sonakshi's Journal</a></td>
+    <td><a href="">Shreya's Journal</a></td>
+    <td><a href="">Linda's Journal</a></td>
+    <td><a href="">Khushi's Journal</a></td>
+   <tr> 
+</table>
 
 
 
 
 ## Table of Contents
-  - [Week 11](https://github.com/sonakshibhalla/flask_portfolio#week-11)
-  - [Week 10](https://github.com/sonakshibhalla/flask_portfolio#week-10)
-  - [Week 9](https://github.com/sonakshibhalla/flask_portfolio#week-9)
-  - [Week 8](https://github.com/sonakshibhalla/flask_portfolio#week-8)
-  - [Week 7](https://github.com/sonakshibhalla/flask_portfolio#week-7)
-  - [Week 6](https://github.com/sonakshibhalla/flask_portfolio#week-6)
-  - [Week 5](https://github.com/sonakshibhalla/flask_portfolio#week-5)
-  - [Week 4](https://github.com/sonakshibhalla/flask_portfolio#week-4)
-  - [Week 3](https://github.com/sonakshibhalla/flask_portfolio#week-3)
-  - [Week 2](https://github.com/sonakshibhalla/flask_portfolio#week-2)
-  - [Ideation](https://github.com/sonakshibhalla/flask_portfolio#ideation)
 
-## Week 12, N@TM Timebox
-Visuals/Tangibles
-
-![image](https://user-images.githubusercontent.com/89223433/141240863-b83d21c4-1afb-4bfd-86f8-b7accd9507de.png)
-<br>
-Image of Dia de los Muertos art
 <br>
 
-![image](https://user-images.githubusercontent.com/89223433/141240898-835c8637-f192-42dc-bfdd-8bab47a7d92d.png)
+## Week 0: Due 11/19
 <br>
-AP Studio Art/Advanced Drawing and Painting
-<br>
-![image](https://user-images.githubusercontent.com/89223433/141240924-cfd67a10-cd2d-465d-81ae-9bc35a788efe.png)
-<br>
-![image](https://user-images.githubusercontent.com/89223433/141522524-480de133-9215-438d-8d08-382c87a13521.png)
-<br>
-Us presenting, making changes
 
-### Retrospective Reflections
-Links to GeekBot responses for each person: 
-[Saumya](https://cs-p-hq.slack.com/archives/C02B8CSPSJJ/p1636414613013700)
-[Sonakshi](https://cs-p-hq.slack.com/archives/C02B8CSPSJJ/p1636403437007400) 
-[Kashish](https://cs-p-hq.slack.com/archives/C02B8CSPSJJ/p1636403632008100)
-
-
-## Week 11
-Finals
-TPT (5.1/5.2)
-Finishing PBL, getting ready for N@TM, Presentations
-
-## Week 10
-## wrapping up presentations
-## 4.1 and 4.2 notes
-| Name | Journal | TT & TPT Notes | Grade |
-| ---  | ---            | ---            | ---   |
-| Sonakshi| Journal | Notes | 2/2 |
-| Saumya | Journal | Notes | 2/2 |
-| Kashish | Journal | Notes | 2/2 |
-
-
-
-## Week 9
-## INDIVIDUAL FINAL PART 1: Review ticket
-| Name | Video | Peer Scores (averaged) | 
-| ---  | ---   | ---   |
-| Sonakshi| https://youtu.be/vQHL1oZ-y0k |5.5/6|
-| Saumya | https://youtu.be/_H7fbdAYsw8 |5.5/6|
-| Kashish | https://www.google.com/url?q=https://drive.google.com/file/d/1xMKTHRHLyF2rPd-TmFq4vX9SpMt706qq/view?usp%3Dsharing&sa=D&source=hangouts&ust=1635225288094000&usg=AOvVaw1kOBoacuO0DPu4W6HZX3lG | 5.375/6 |
-
-
-## Week 8
-### Presentation: PBL Design
-#### Basic Design Idea is Travel Website with Continents, Images, and Links
-#### Also has home page and common FAQs
-#### each person worked on two continent pages and one technical feature
-#### This week, we added three technical features to the website
-#### Saumya- [Bootstrap Navbar Work and Buttons to FAQs](https://github.com/sonakshibhalla/flask_portfolio/commit/3a4b77f9987f1d25a32d178d4099a8e6f2cf8490)
-#### Sonakshi- [Continent Pages and Draw Text on Images](https://github.com/sonakshibhalla/flask_portfolio/commit/8783c98d561fb8975dc0f6b3538724205df222e8)
-#### Kashish- [Continent Pages and Toggle Images](https://github.com/sonakshibhalla/flask_portfolio/commit/1117067f3a7a8acd6e1bb8976c39aa40c2e2dc3d)
-
-## Week 7
-## ReadMe Video: [Video Link](https://youtu.be/t73uThJl1J0)
-### Ideation
-#### This week we had different tasks to do
-#### Our team split up the technical work with 2 tasks each
-#### Had some trouble with signed addition and logic gates
-#### Crossover team grading - links are review ticket
-#### Sonakshi- Unsigned and Signed Addition, Saumya - Unicode and Bulb Shift, Kashish - Logic Gate and Color Codes
-## review ticket
-| Name | Journal | TT & TPT Notes | Grade |
-| ---  | ---            | ---            | ---   |
-| Sonakshi| Journal | Notes | 2/2 |
-| Saumya | Journal | Notes | 2/2 |
-| Kashish | Journal | Notes | 2/2 |
-
-
-
-## Week 6
-## Finalized ReadMe + Binary Logic Gates Lab in preparation for monday
-### Ideation
-#### This week was a completely technical week working on the RGB minilab
-#### We created the toggle functions, RGB, and rotate images
-## review ticket
-| Name | Journal | TT & TPT Notes | Grade |
-| ---  | ---            | ---            | ---   |
-| Sonakshi| Journal | Notes | 2/2 |
-| Saumya | Journal | Notes | 2/2 |
-| Kashish | Journal | Notes | 2/2 |
-
-
-
-## Week 5
-### Individual Scoring
-| Name | Journal | TT & TPT Notes | Grade |
-| ---  | ---            | ---            | ---   |
-| Sonakshi| Journal | Notes | 2/2 |
-| Saumya | Journal | Notes | 2/2 |
-| Kashish | Journal | Notes | 2/2 |
-
-
-## Week 4
-
-### Individual Scoring
-| Name | Unit 5 Journal | TT & TPT Notes | Grade |
-| ---  | ---            | ---            | ---   |
-| Sonakshi| Journal | Notes | 2/2 |
-| Saumya | Journal | Notes | 2/2 |
-| Kashish | Journal | Notes | 2/2 |
-
-## Week 3
-### Team Scoring
-| Requirment | Evidence | Grade |
-| ---        | ---      | --- |
-| Team and Scrum Master Planning by Wednesday  |[Scrum Board](https://github.com/sonakshibhalla/flask_portfolio/projects/1) | 1/1 |
-| Team Technicals 2 points.  Evaluation is on how Planning and individual Issues compliment the entire project. | [Scrum Board (https://github.com/sonakshibhalla/flask_portfolio/projects/1) | 2/2 |
-
-### Individual Scoring
-| Name | Requirment | Evidence | Grade |
-| --- | ---        | ---      | --- |
-| Saumya | 2/2
-|Sonakshi | 2/2
-|Kashish | 2/2
-### Tech Talk Video
-https://youtu.be/UPD-ODdUVYg
-
-## Week 2
-### Team PBL
-| Requirement | Evidence |
-| ---        | ---      |
-| Pair Design / HTML.  Transfer design to layout.  Much of this could simply be converting Ideas to HTML.  Objective is to get your own STYLE, COLORS, FONTS; NAVIGATION into the site.  Establish your VIBE or Groove.  Try a couple of prototype experiments and get feedback from similar pair in Crossover. | [Layout ] [Main Page Ticket](https://github.com/sonakshibhalla/flask_portfolio) & [Screenshot]
-|Pair Prototyping / Thymeleaf.  Try using Class objects in Thymeleaf.    Most simple Class would be to use String methods (Links to an external site.) and Number methods, (Links to an external site.) more complex is to use your own defined Class include Images or other Media.   Objective is to produce a 3 by 3 grid using Bootstrap Grids, Bootstrap Tables, Bootstrap Cards.  Try to incorporate into Project or consider as Mini Lab depending on your design.  Try changing 3 x 3 to 4 x 4 or other orientation would be showing ability to manage page dynamically. 
-
-
-### Scrum Team Management
-| Requirement | Evidence |
-| ---        | ---      |
-| Review Canvas requirements.  Additionally, create requirements you want to complement this assignment to ensure your success. | [Calendar Page](https://github.com/4disease/p1-donuts-new/issues/4), [Chat Bot](https://github.com/4disease/p1-donuts-new/issues/17), and [Tasks Page](https://github.com/4disease/p1-donuts-new/projects/1#card-68535342)|
-| Make Issues and assign to individuals or pairs, place Issues in appropriate Column as you progress. | [Scrum Board](https://github.com/4disease/p1-donuts-new/projects/1) |
-| As you move Issues into review, individuals link Tangible assets to add to the Issue.  Those assigned to issue are required to add comments that highlight anything Scrum master should report to Teacher.  Videos or previews prior to 1 v 1 event are HIGHLY encoraged. | [Scrum Board Review](https://github.com/4disease/p1-donuts-new/projects/1#column-15776348) |
-| At close of Sprint and each week update README with links to issues completed, it is HIGHLY suggested to use table to display Issues with highlighting descriptions.  Time box the week or sprint in README as a section declaring Sprint and dates as section Header. | Done |
-
-### Screenshots
-![im1](https://user-images.githubusercontent.com/89223433/135338042-f2831921-3c1a-4935-bbb3-f6545a2702e2.JPG)
-![im2](https://user-images.githubusercontent.com/89223433/135338067-9b83d580-c048-4172-8a65-31edd23b4599.JPG)
-![im3](https://user-images.githubusercontent.com/89223433/135338082-57981702-b7c6-4093-aa55-0cec04f51b26.JPG)
-![im4](https://user-images.githubusercontent.com/89223433/135338094-d630b80e-cda0-42e5-875c-e13a1dae4b8c.JPG)
-![im5](https://user-images.githubusercontent.com/89223433/135338108-2b11ed42-d749-4819-a042-9c58c3e8192c.JPG)
-
-
-### Individual Journals
-[Saumya](https://docs.google.com/document/d/1ZNDZvucqu6cIj-rZo1GJwSH_VwAaeIdEBF9du9tJNeI/edit?usp=sharing)
-
-[Kashish](https://docs.google.com/document/d/1nrmzM9ZZKpLgSpoci978MJ_qGaV5M3oZDaYvcKt0O_U/edit?usp=sharing)
-
-[Sonakshi](https://padlet.com/adhithinmurthy07/qpjul2mieejnr1d6)
-
-## Week 2
-### Team PBL Points: 3/3
-
-| Requirement | Evidence |
-| ---        | ---      |
-| Scrum Master. Define tasks and place assignments to in-progress on the Scrum board.| [Scrum Board](https://github.com/sonakshibhalla/flask_portfolio/projects/1) |
-| Designer. Wire Frame (at least three theme pages, team mini-labs, and about) | on our website page |
-| Technical Lead. Coordinate brain write session, after preliminary wire frames, make sure you capture technical complexities as an output of this exercise (input, saving data, comments, visual actions, animations, ...) | can be seen in the [issues](https://github.com/sonakshibhalla/flask_portfolio/issues) section |
-| Navigators. Capture or build highlight of Ideation in README.md, this allows ideas to persist with Project,  Make sure that work from Developers works to expectations (testing, suggestions for improvement) | [Ideation](https://github.com/sonakshibhalla/flask_portfolio#ideation) |
-| Developers. Bootstrap drop downs in navbar, start to form Wire Frame menu options.  Each menu option should have a Stub code page | Navbar finished [Ticket](https://github.com/sonakshibhalla/flask_portfolio#ideation)|
-| Developers. Integration of Greet, Birds, Unit 1 functionality into a mini-lab page | [Ticket](https://github.com/sonakshibhalla/flask_portfolio) |
-| Designer/Developer. 1 minute video integrated into About Us on Genesis ideas for project. | [Ticket](https://github.com/sonakshibhalla/flask_portfolio) |
-
-### Individual PBL
-
-[Saumya's Journal](https://docs.google.com/document/d/1nkBoOvmQhoIScKwd0u3vV3TiDgj4mWT9NPqn355nj9U/edit?usp=sharing)
-[Sonakshi and Kashish's Joural](https://docs.google.com/document/d/1FW_b7zlKt8A3x_9Ah4Mo1ItCtjWvCrqs2BooDvLcs0w/edit?usp=sharing)
-
-[Evidence of contributions](https://github.com/sonakshibhalla/flask_portfolio/graphs/contributors) and [scrum board](https://github.com/sonakshibhalla/flask_portfolio/projects/1)
-
-| Name | Score | Evidence | Laptop plans |
-|  --- |  ---  |  ---     |  ---         |
-| Saumya | 7/7 | |will use personal laptop at home and school|
-| Sonakshi | 7/7 |will use personal laptop at home and school|
-| Kashish | 7/7 |will use personal laptop at home and school|
-
-
-
-## Ideation/Brainwrite
-OWe had our design brainstorming session today talking about the design ideas for our website. Our group finalized a traveling design for our website which includes all of the seven continents and popular tourist destinations at those locations. Some of these tourist destinations include high rated restaurants, the seven wonders of the world, historical must-sees, and even locations to relax. The information to follow is all visible at this link with our wireframe: Wireframe for App - Coders
-As is visible, we have a cover page, with our FAQs, mini-labs, and About Us page. All of these buttons lead us to different screens with the corresponding information. We plan to have a “scroll more” button that gives options for traveling, one of which is the seven continents. We plan to have a drop down menu labeled ‘Continents’ and we would have the seven continents drop down from that bar. Once you click on a certain continent, the website will direct you to the options listed above. There will be a contact us section of the website where users can reach us if they have any questions regarding their trip. From there, you can plan your perfect trip to one of the wonderful seven continents!
-
-## Sprint 3,4 Video
-"https://youtu.be/4c6BQX599jw"
-
-## Sprint 3 Project Ideation
-### Design Progress
-#### Fixed the greet dropdown to add individual pictures
-#### also added favorite colors and hobbies
-#### continent pages are linked in the dropdown
-#### each page has its own scenic background picture
-### Binary and Technical Progress
-#### worked on Binary minilab and hack progress
-#### added binary form to input any size of bits
-#### green background color for binary page
-#### bulbs turn on and off with the corect pictures
-#### ascii printing works with all the other numbers
-## Sprint 2- Sep 10
-### Travel Project Progress
-#### Created Home and About Pages using CSS Styling
-#### About page has pictures and names of each group member
-#### Created a Background Image for the home page
-#### Continent dropdown created with names for all 7 continents
-#### Minilabs tile page with links to brainwrite, TPT, and Video
-#### have initial binary page created
-
-### Next Steps
-#### Work on Greet functionality as a dropdown button for each member
-#### Continue with CSS styling and coloring the pages
-#### Work on Binary mini-lab to create the correct function with Jinja
-
-
-### Sprint 1- Sep 10
-#### Beginning Ideas for Main Project 
-#### -Travel Project with Dropdown menu for different continents
-#### -We want to add special tourist attractions and countries to visit on each continent page
-#### -The visual background will be a famous picture of the continent
-#### -Interesting Links and Videos
-#### -About Us page with each team member's photo and description
-#### -Mini Labs throughout the trimester with fun, interactive element as well
-
-### Technical Progress
-#### We are working with Boostrap navbar currently to figure out the code for a dropdown menu
-#### Developers are working with Stub Pages to experiment regarding Minilabs
-#### Wireframing is done for theme pages and About Us page
-#### Video 0 link has been added as a separate navbar page
-#### Scrum board is all set to standards and ideas are moving forward
-
-### Room for Improvement/Next Steps
-#### Next steps are to work with dropdown menus and decide how to add text,images, links, etc. to our website
-#### Developers need to continue in Github working with HTML and understanding FrontEnd Code
-#### Designer should communicate ideas with team to add in the ReadME and scrum board
-#### Testing of all current tangibles shows good progress
-#### no major errors so far, collaboration is going well
-
+| Name | Requirement | Evidence | Grade | Total Score |
+| ---  | ---         | ---      | ---   | --- |
+| Sonakshi Bhalla |  | | | 
+| Shreya Ahuja | PBL Requirements<br>Extra Credit<br> Units 3.7 and 3.8 |<a href="https://github.com/katiehickman/m224_seals/issues/3">Ticket</a><br><a href="https://github.com/katiehickman/m224_seals/issues/5">Ticket</a><br><a href="https://github.com/katiehickman/flask_portfolio/issues/64">Ticket</a> | 4.5/5<br>0.25/0.25<br>3/3|
+| Linda Liu | PBL Requirements<br>Extra Credit<br> Units 3.7 and 3.8 |<a href="https://github.com/katiehickman/m224_seals/issues/3">Ticket</a><br><a href="https://github.com/katiehickman/m224_seals/issues/5">Ticket</a><br><a href="https://github.com/katiehickman/m224_seals/issues/1">Ticket</a> | 4.5/5<br>0.25/0.25<br>3/3|
+| Khushi Bagri | PBL Requirements<br>Extra Credit<br> Units 3.7 and 3.8 |<a href="https://github.com/katiehickman/m224_seals/issues/3">Ticket</a><br><a href="https://github.com/katiehickman/m224_seals/issues/5">Ticket</a><br><a href="https://github.com/katiehickman/m224_seals/issues/1">Ticket</a> | 4.5/5<br>0.25/0.25<br>3/3|
