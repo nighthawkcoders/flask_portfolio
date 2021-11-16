@@ -1,10 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Rohan Page</title>
-</head>
-<body>
+{% extends "layouts/base.html" %}
+{% set project = "Rohan" %}
+{% block body %}
+    <p style="text-align: center; font-size: 60px; font-weight: 600">
+        Rohan Gaikwad<br />
+        Home Page
+    </p>
+    <div
+            class="container; center-block"
+            style="margin: 2% 5% 5%; text-align: center; font-family: gilroy, serif"
+    >
+        <div class="col-0">
+            <p>Hello, {{name1}}!</p>
+        </div>
+        <div class="col-0">
+            <form action="/rohan" id="greet" method="POST">
+                <label for="name">WUSYANAME?</label>
+                <input name="name" id="name" />
+                <input type="submit" value="press da button!" />
+            </form>
+        </div>
+        <p align="center">
+            <iframe
+                    width="1000"
+                    height="500"
+                    src=""
+            ></iframe>
+        </p>
+    </div>
+{% endblock %}
 
-</body>
-</html>
+<!- This is turning off birds background from base.html -->
+{% block background %}
+    <script src="{{ url_for('static', filename='three.r119.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vanta.halo.min.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.waves.min.js"></script>
+    <script>
+        VANTA.WAVES({
+            el: "body", // element selector string or DOM object reference
+            color: 0xdc143c,
+            waveHeight: 20,
+            shininess: 50,
+            waveSpeed: 1.5,
+            zoom: 0.75,
+        });
+    </script>
+{% endblock %}
