@@ -41,6 +41,10 @@ def adi():
 def brian():
     return render_template("brian.html")
 
+@app.route('/divya/')
+def divya():
+    return render_template("divya.html")
+
 @app.route('/rohan', methods=['GET', 'POST'])
 def rohan():
     if request.form:
