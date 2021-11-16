@@ -33,6 +33,10 @@ def hawkers():
 def adi():
     return render_template("adi.html")
 
+@app.route('/brian/')
+def brian():
+    return render_template("brian.html")
+
 @app.route('/rohan', methods=['GET', 'POST'])
 def rohan():
     if request.form:
