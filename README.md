@@ -80,6 +80,6 @@
 | Name | Requirement | Evidence | Grade | Total Score |
 | ---  | ---         | ---      | ---   | --- |
 | Sonakshi Bhalla |  | | | 
-| Shreya Ahuja | PBL Requirements<br>Extra Credit<br> Units 3.7 and 3.8 |<a href="https://github.com/katiehickman/m224_seals/issues/3">Ticket</a><br><a href="https://github.com/katiehickman/m224_seals/issues/5">Ticket</a><br><a href="https://github.com/katiehickman/flask_portfolio/issues/64">Ticket</a> | 4.5/5<br>0.25/0.25<br>3/3|
-| Linda Liu | PBL Requirements<br>Extra Credit<br> Units 3.7 and 3.8 |<a href="https://github.com/katiehickman/m224_seals/issues/3">Ticket</a><br><a href="https://github.com/katiehickman/m224_seals/issues/5">Ticket</a><br><a href="https://github.com/katiehickman/m224_seals/issues/1">Ticket</a> | 4.5/5<br>0.25/0.25<br>3/3|
-| Khushi Bagri | PBL Requirements<br>Extra Credit<br> Units 3.7 and 3.8 |<a href="https://github.com/katiehickman/m224_seals/issues/3">Ticket</a><br><a href="https://github.com/katiehickman/m224_seals/issues/5">Ticket</a><br><a href="https://github.com/katiehickman/m224_seals/issues/1">Ticket</a> | 4.5/5<br>0.25/0.25<br>3/3|
+| Shreya Ahuja |  | | | 
+| Linda Liu |  | | | 
+| Khushi Bagri | | | | 
