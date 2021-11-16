@@ -27,9 +27,9 @@ def hawkers():
     return render_template("hawkers.html")
 
 
-@app.route('/stub/')
-def stub():
-    return render_template("stub.html")
+@app.route('/adi/')
+def adi():
+    return render_template("adi.html")
 
 
 # runs the application on the development server
