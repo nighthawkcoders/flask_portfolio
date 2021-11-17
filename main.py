@@ -28,7 +28,7 @@ def walruses():
 def hawkers():
     return render_template("hawkers.html")
 
-@app.route('/jason/')
+@app.route('/jason/', methods=['GET', 'POST'])
 def jason():
     return render_template("jason.html")
 

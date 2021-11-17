@@ -1,11 +1,36 @@
 {% extends "layouts/base.html" %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Jason's Page</title>
-</head>
-<body>
 
-</body>
-</html>
+<!- This variable sets name of browser tab  -->
+{% set project = "Jason" %}
+
+<!- This is a replacement block for Body in base.html -->
+{% block body %}
+    <!- Try building a new body here ->
+    <p> </p>
+{% endblock %}
+
+
+<!- This is turning off birds background from base.html -->
+{% block background %}
+<script src="three.r119.min.js"></script>
+<script src="vanta.fog.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
+<script>
+    VANTA.FOG({
+        el: "body",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        highlightColor: 0xff00cb,
+        midtoneColor: 0x7f337f,
+        lowlightColor: 0x8d0cc8,
+        baseColor: 0xaa96d7,
+        speed: 2.80,
+        zoom: 2.70
+    });
+</script>
+
+{% endblock %}
