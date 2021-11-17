@@ -1,0 +1,38 @@
+<!-- Extending the project layout, as this file will do minor customizations -->
+{% extends "layouts/project.html" %}
+
+<!-- Setting up variables to customize "project" details to be specific to walruses -->
+{% set project = "Home" %}
+
+{% block body %}
+
+    <html>
+    <head>
+        <style>
+            body {
+              background-image: url('/static/background.jpeg');
+            }
+
+            h1 {
+                color: black;
+                text-align: center;
+                font-family: "Baskerville";
+                font-size: 70px;
+            }
+
+
+        </style>
+
+    </head>
+
+    <h1>Student Resources</h1>
+
+    <br />
+
+
+
+{% endblock %}
+
+{% block background %}</html>
+
+{% endblock %}

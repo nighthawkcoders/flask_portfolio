@@ -6,29 +6,12 @@
 
 <!- This is a replacement block for Body in base.html -->
 {% block body %}
-    <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
-
-        <div class="col-12">
-            <p>Hello, {{name}}!</p>
-        </div>
-
-        <div class="col-12">
-            <form action="/sonakshi" id="greet" method="POST" >
-                <label for="name">Type a greeting name?</label>
-                <input name="name" id="name">
-                <input type="submit" value="Greetings!">
-            </form>
-        </div>
-
-        <div class="col-12">
-            <img src="/static/assets/PythonFlask.jpeg" style="height: 400px" >
-        </div>
 
     <html>
     <head>
         <style>
             body {
-                background-color: palevioletred;
+                background-image: url("https://wallpaperaccess.com/full/438941.jpg");
             }
 
             h1 {
@@ -36,29 +19,47 @@
                 text-align: center;
             }
 
+            p {
+                color: black;
+                text-align: center;
+                font-size: 20px;
+            }
         </style>
 
     </head>
 
     <h1>Sonakshi</h1>
-    <br />
+    <p> Hi! My name is Sonakshi. I am 16 years old and a senior at Del Norte High School. I love to play tennis and enjoy going to the beach. </p>
+
+    <body>
 
     <div class="container">
-    <div class="row">
-    <div class="col-sm-2">
-        <img src="/static/assets/sonakshi.png" alt="Sonakshi's picture" style="width: 200px; height: 200px;">
-        <p style="text-align: center;"> Sonakshi Bhalla </p>
-    </div>
-    <div class="col-sm-2">
-        <img src="/static/assets/tennis.png" alt="Tennis Ball" style="width: 200px; height: 200px;">
-        <p style="text-align: center;"> Sonakshi's Hobbies </p>
+        <div class="row">
 
+            <div class="col-sm-1">
+
+    <img id="myImage" onclick="changeImage()" src="/static/assets/sonakshi.png" width="250" height="250">
+
+
+    <script>
+        function changeImage() {
+            var image = document.getElementById('myImage');
+            if (image.src.match("/static/assets/sonakshi.png")) {
+                image.src = "/static/mask.JPG";
+            } else {
+                image.src = "/static/assets/sonakshi.png";
+            }
+        }
+    </script>
+                <img src="/static/assets/tennis.png" alt="Tennis Ball" style="width: 200px; height: 200px;">
+                <p style="text-align: center;"> Sonakshi's Hobbies </p>
+
+    </body>
 
 
 {% endblock %}
 
 
-<!- This is turning off birds background from base.html -->
 {% block background %}
 {% endblock %}
 
