@@ -7,33 +7,42 @@
 <!- This is a replacement block for Body in base.html -->
 {% block body %}
     <body style="background-color:powderblue;">
-    <p style="text-align: center; font-size: 100px; font-weight: 600; color: midnightblue">
+    <h1 style="text-align: center; color: midnightblue">
         Adi Khandelwal Home Page
-    </p>
+    </h1>
+
+    <br>
+    <input type="button" onClick="changeimage()" value="Change Image"/>
+    <img src="https://www.iconsdb.com/icons/preview/white/square-xxl.png" id="image0" width="900" height="750" hidden="hidden">
+    <br>
     <div
             class="center-block"
-            style="margin: 2% 5% 5%; text-align: center; font-family: gilroy, serif"
-    >
-        <div class="col-12">
-            <p style="color: midnightblue">What's Up, {{nick}}!</p>
-
-        </div>
-        <div class="col-12" style="color: midnightblue">
-            <form action="/adi" id="greet" method="POST">
-                <label for="name">Enter an input</label>
-                <input name="name" id="name" />
-                <input type="submit" value="ENTER" />
-            </form>
-        </div>
+            style="margin: 2% 5% 5%; text-align: center; font-family: gilroy, serif">
     </div>
     <p align="center">
-        <iframe
-                width="1000"
-                height="500"
-                src="https://docs.google.com/document/d/1caGFdefkHrh74c3f_iuIx26mDD3QnP0FDM9cpS8BYFM/edit?usp=sharing"
-        ></iframe>
+<!--        <iframe-->
+<!--                width="1000"-->
+<!--                height="600"-->
+<!--                src="https://docs.google.com/document/d/1caGFdefkHrh74c3f_iuIx26mDD3QnP0FDM9cpS8BYFM/edit?usp=sharing"-->
+<!--        ></iframe>-->
     </p>
 {% endblock %}
+<script>
+    function changeimage() {
+        const images = ["https://m.media-amazon.com/images/I/81dIEAgoytL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/515kAp4XiRL._AC_SL1000_.jpg",
+            "https://m.media-amazon.com/images/I/91oKfKVZjHL._AC_SL1500_.jpg",
+            "https://www.lego.com/cdn/cs/set/assets/blt892f38a4fd55edeb/75257.jpg?fit=bounds&format=jpg&quality=80&width=1500&height=1500&dpr=1",
+            "https://m.media-amazon.com/images/I/71aYQI5JwBL._AC_SL1500_.jpg"
+        ];
+        for(i=0;i<images.length;i++){
+            image='image'+i;
+            document.getElementById(image).src=images[i];
+            document.getElementById(image).hidden = false;
+        }
+    }
+</script>
+
 
 <!- This is turning off birds background from base.html -->
 {% block background %}
