@@ -8,15 +8,18 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 <html lang="en">
 
 {% set basename = "Nighthawk Coding" %}
+{% set github = "https://github.com/nighthawkcoders" %}
+{% set twitter = "https://twitter.com/NighthawkCoding" %}
+{% set youtube = "https://www.youtube.com/channel/UClIKOsDS5dsfzFA3zveDT3Q?view_as=subscriber" %}
 
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         :root{
-            --white: whitesmoke;
-            --black: black;
-            --grey: grey;
+            --white: #fed2b9;
+            --black: #ceb680;
+            --grey: #64483f;
         }
 
         html, body{
@@ -50,6 +53,22 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             color: white;
         }
 
+        .fa:hover{
+            transform: translateY(10px);
+        }
+
+        .fa-youtube-play:hover{
+            color: #cc0000;
+        }
+
+        .fa-twitter:hover{
+            color: #1da1f2;
+        }
+
+        .fa-github:hover{
+            color: #000000;
+        }
+
         .btn:link,
         .btn:visited {
             text-transform: uppercase;
@@ -76,10 +95,23 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
         .row{
             margin: auto;
         }
+        .sidenav {
+            height: 100%;
+            top: 7.75%;
+            width: 200px;
+            position: fixed;
+            background-color: #1da1f2;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
 
     </style>
 
     <title>{{ basename }} | {{ project }} </title>
+    <div class="sidenav">
+        <p>this is working :D</p>
+        <a href="stub.html">stub</a>
+    </div>
 
 </head>
 
@@ -87,7 +119,20 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 {% include "layouts/navbar.html" %}
 
 {% block body %}
+
+
 <div class="container-fluid">
+    <div class="row justify-content-end" style="padding: 2%;">
+        <div class="col-2" style="text-align: right;">
+            {% block info %}
+                <!-- notice jinja style variables used in href's -->
+                <a><h5>{{basename}}</h5></a>
+                <a href={{github}} target="_blank"><i class="fa fa-github"></i></a>
+                <a href={{youtube}} target="_blank"><i class="fa fa-youtube-play"></i></a>
+                <a href={{twitter}} target="_blank"><i class="fa fa-twitter"></i></a>
+            {% endblock %}
+        </div>
+    </div>
 
     <div class="product" style="margin-top: 2%;">
         <div class="row" style="padding: 10%; padding-top: 0%; padding-bottom: 5%;">
@@ -115,5 +160,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 {% endblock %}
 
 </body>
+
+
 
 </html>
