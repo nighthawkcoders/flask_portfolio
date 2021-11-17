@@ -28,7 +28,6 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
         }
 
         html, body{
-            margin: 0;
             height: 100%;
             animation: fadein 2s;
             -moz-animation: fadein 2s; /* Firefox */
@@ -36,7 +35,10 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             -o-animation: fadein 2s; /* Opera */
             background-color: var(--grey);
             color: var(--white);
+            z-index: 5;
         }
+
+
 
         .dark-mode {
             background-color: var(--white);
@@ -100,7 +102,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
         .row{
             margin: auto;
         }
-        .sidenav {
+        sidenav {
             height: 100%;
             top: 7.75%;
             width: 200px;
@@ -108,15 +110,19 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             background-color: #1da1f2;
             overflow-x: hidden;
             padding-top: 20px;
+            z-index: 0;
+            alignment: left;
         }
 
     </style>
 
     <title>{{ basename }} | {{ project }} </title>
-    <div class="sidenav">
-        <p>this is working :D</p>
-        <a href="stub.html">stub</a>
-    </div>
+
+    <sidenav>
+        <a href="/leah/">Leah</a>
+        <br>
+        <a href="/evan/">Evan</a>
+    </sidenav>
 
 </head>
 
@@ -124,8 +130,6 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 {% include "layouts/navbar.html" %}
 
 {% block body %}
-
-
 <div class="container-fluid">
     <div class="row justify-content-end" style="padding: 2%;">
         <div class="col-2" style="text-align: right;">

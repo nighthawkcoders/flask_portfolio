@@ -31,6 +31,14 @@ def hawkers():
 def stub():
     return render_template("stub.html")
 
+@app.route('/leah/')
+def leah():
+    return render_template("leah.html")
+
+@app.route('/evan/')
+def evan():
+    return render_template("evan.html")
+
 
 # runs the application on the development server
 if __name__ == "__main__":
