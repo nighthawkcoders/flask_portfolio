@@ -1,14 +1,38 @@
-
 <!-- Extending the predefined project layout -->
 {% extends "layouts/base.html" %}
 
 <!- This variable sets name of browser tab  -->
-{% set project = "Adi is awesome" %}
+{% set project = "Adi is Awesome" %}
 
 <!- This is a replacement block for Body in base.html -->
 {% block body %}
-    <!- Try building a new body here ->
-    <h1>ADI TEST COMMIT</h1>
+    <body style="background-color:powderblue;">
+    <p style="text-align: center; font-size: 100px; font-weight: 600; color: midnightblue">
+        Adi Khandelwal Home Page
+    </p>
+    <div
+            class="center-block"
+            style="margin: 2% 5% 5%; text-align: center; font-family: gilroy, serif"
+    >
+        <div class="col-12">
+            <p style="color: midnightblue">What's Up, {{nick}}!</p>
+
+        </div>
+        <div class="col-12" style="color: midnightblue">
+            <form action="/adi" id="greet" method="POST">
+                <label for="name">Enter an input</label>
+                <input name="name" id="name" />
+                <input type="submit" value="ENTER" />
+            </form>
+        </div>
+    </div>
+    <p align="center">
+        <iframe
+                width="1000"
+                height="500"
+                src="https://docs.google.com/document/d/1caGFdefkHrh74c3f_iuIx26mDD3QnP0FDM9cpS8BYFM/edit?usp=sharing"
+        ></iframe>
+    </p>
 {% endblock %}
 
 <!- This is turning off birds background from base.html -->
