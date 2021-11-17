@@ -1,14 +1,15 @@
 {% extends "layouts/base.html" %}
 {% set project = "Rohan" %}
 {% block body %}
-    <p style="text-align: center; font-size: 60px; font-weight: 600">
-        Rohan Gaikwad<br />
-        Home Page
-    </p>
+{#{% set imgMaskOn = "/static/bulb_on.gif" %} {% set imgMaskOff =#}
+{#"/static/bulb_off.png" %} {% set msgTurnOn = "Turn On" %} {% set msgTurnOff =#}
+{#"Turn Off" %} {% block meta %}#}
+    <h1 style="text-align: center">
+        Rohan Gaikwad Home Page
+    </h1>
     <div
             class="container; center-block"
-            style="margin: 2% 5% 5%; text-align: center; font-family: gilroy, serif"
-    >
+            style="margin: 2% 5% 5%; text-align: center; font-family: gilroy, serif">
         <div class="col-0">
             <p>Hello, {{name1}}!</p>
         </div>
@@ -28,8 +29,6 @@
         </p>
     </div>
 {% endblock %}
-
-<!- This is turning off birds background from base.html -->
 {% block background %}
     <script src="{{ url_for('static', filename='three.r119.min.js') }}"></script>
     <script src="{{ url_for('static', filename='vanta.halo.min.js') }}"></script>
