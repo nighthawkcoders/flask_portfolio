@@ -73,6 +73,7 @@ Our website is a website full of helpful resources for students. It will help st
 
 
 ## Table of Contents
+- <a href="https://github.com/sonakshibhalla/tri2turtles/blob/main/README.md#week-0-due-1119">Week 0</a>
 
 <br>
 
