@@ -1,4 +1,4 @@
-# (Website Idea) 
+# Helpful Resources for Students
 ## N225 Turtles
   <td><a href="https://github.com/sonakshibhalla/tri2turtles/projects/2">Turtles Scrum Board</a></td>  
   <br>
