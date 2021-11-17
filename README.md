@@ -61,7 +61,7 @@
   </tr>
    <tr>
     <td>Individual Journals</td>
-    <td><a href="">Sonakshi's Journal</a></td>
+    <td><a href="https://docs.google.com/document/d/1tzKxrktNmIau5yW4qIBZ5nULiQ-DUNyJaQTLDgQ4XXU/edit">Sonakshi's Journal</a></td>
     <td><a href="https://docs.google.com/document/d/1kiNPT2VoJIwpsf-8tR-1t58_ihXYbHytcyO2m-8JxU0/edit?usp=sharing">Shreya's Journal</a></td>
     <td><a href="">Linda's Journal</a></td>
     <td><a href="">Khushi's Journal</a></td>
