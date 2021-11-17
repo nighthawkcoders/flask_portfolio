@@ -1,25 +1,100 @@
-## [Flask Portfolio Starter](https://nighthawkcodingsociety.com/projectsearch/details/Flask%20Portfolio%20Starter)
-Runtime link: https://portfolio.nighthawkcodingsociety.com/
-### Idea
-Starter code should be fun and practical.
-### Visual thoughts
-#### Organize with Bootstrap menu 
-#### Add some color and fun through VANTA Visuals (birds, halo, solar, net)
-#### Show some practical and fun links (hrefs) like Twitter, Git, Youtube
-#### Show project specific links (hrefs) per page
+# Team Owls: Website
+### AP CSP P4: Team Owls
+---
+## [Scrum Board](https://github.com/PranaviInukurti/flask_portfolio/projects/1)
+## [Insights with Contributors and Commits](https://github.com/PranaviInukurti/flask_portfolio/graphs/contributors)
+## [Daily Journal - Saathvika and Alice](https://docs.google.com/document/d/1mfrMqXhbkRceC4fq3nXZMLD8jo5IjC2mwAsvpqjQX94/edit?usp=sharing) 
+## [Daily Journal - Pranavi and Samaya](https://docs.google.com/document/d/1PGcv6fkv8A5Y1uzuN-iLSGm9CKhdWEL_fQRZyGv9ymI/edit?usp=sharing) 
+--- 
+###   <h2 id="contributers">Contributors</h2>
+| Name | GitHub ID and Profile | Tickets | Scrum Board | Commits |
+|:----:|:----------------------|:-----:|:-----------:|:-------:|
+| Saathvika Ajith | [@Saathvika-Ajith](https://github.com/Saathvika-Ajith) | [Tickets]() | [Scrum Board](https://github.com/PranaviInukurti/flask_portfolio/projects/1) | [Commits]()
+| Pranavi Inukurti | [@PranaviInukurti](https://github.com/PranaviInukurti) | [Tickets]() |[Scrum Board](https://github.com/PranaviInukurti/flask_portfolio/projects/1) | [Commits]()
+| Alice Tang | [@tangalice](https://github.com/tangalice) | [Tickets]() |[Scrum Board](https://github.com/PranaviInukurti/flask_portfolio/projects/1) | [Commits]()
+| Samaya Sankuratri | [@samayass](https://github.com/samayass) | [Tickets]() |[Scrum Board](https://github.com/PranaviInukurti/flask_portfolio/projects/1) | [Commits]()
 
-### Implementation progress (August 13th, 2021)
-#### Project entry point is main.py, this enables Flask Web App and provides capability to renders templates (HTML files)
-#### The main.py is the  Web Server Gateway Interface, essentially it contains a HTTP route and HTML file relationship.  The Python code constructs WSGI relationships for index, kangaroos, walruses, and hawkers.
-#### The project structure contains many directories and files.  The template directory (containing html files) and static directory (containing js files) are common standards for HTML coding.  Static files can be pictures and videos, in this project they are mostly javascript backgrounds.
-#### WSGI templates: index.html, kangaroos.html, ... are aligned with routes in main.py.
-#### Other templates support WSGI templates.  The base.html template contains common Head, Style, Body, Script definitions.  WSGI templates often "include" or "extend" these templates.  This is a way to reuse code.
-#### The VANTA javascript statics (backgrounds) are shown and defaulted in base.html (birds), but are block replaced as needed in other templates (solar, net, ...)
-#### The Bootstrap Navbar code is in navbar.html. The base.html code includes navbar.html.  The WSGI html files extend base.html files.  This is a process of management and correlation to optimize code management.  For instance, if the menu changes discovery of navbar.html is easy, one change reflects on all WSGI html files. 
-#### Jinja2 variables usage is to isolate data and allow redefinitions of attributes in templates.  Observe "{% set variable = %}" syntax for definition and "{{ variable }}" for reference.
-#### The base.html uses combination of Bootstrap grid styling and custom CSS styling.  Grid styling in observe with the "<Col-3>" markers.  A Bootstrap Grid has a width of 12, thus four "Col-3" markers could fit on a Grid row.
-#### A key purpose of this project is to embed links to other content.  The "href=" definition embeds hyperlinks into the rendered HTML.  The base.html file shows usage of "href={{github}}", the "{{github}}" is a Jinja2 variable.  Jinja2 variables are pre-processed by Python, a variable swap with value, before being sent to the browser.
+---
+## Table of Contents
+1. [Sprint 11 - Draft N@tM Final](#Sprint6)
+2. [Sprint 9,10 - Individual Finals](#Sprint5)
+3. [Sprint 7,8 - Logic Gates](#Sprint4)
+4. [Sprint 5,6 - Prototyping](#Sprint3)
+5. [Sprints 3,4 - Prototyping](#Sprint2)
+6. [Sprints 1,2 - Innovation](#Sprint1)
+7. [Sprint 0 - Introduction](#Sprint0)
+---
 
-### IDE management (things that happened beyond plan)
-#### Recall on ".gitignore" solution to the pains of temporary files.  Start a ".gitignore" and avoid promoting temporary files to Git, for instance IDE xml files.
-#### A project needs to establish a "requirements.txt" to keep track of Python packages used by the project.  This help in other IDEs and Deployment.  IntelliJ has menu Tool -> Sync Python Requirements to start file. 
+###   <h2 id="Sprint6">Sprint 11</h2>
+#### <h3> Week 11 </h3>
+- Scrum Board
+  - https://github.com/sarayu-pr11/Team-Colors/projects/1?card_filter_query=milestone%3A%22sprint+9%2C10+week+10+and+11%22
+  
+- Team Scoring
+
+| Name | Requirement | Evidence | Grade |
+|:----:|:-----------:|:--------:|:-----:|
+| Saathvika Ajith |Integrate API|https://github.com/sarayu-pr11/Team-Colors/issues/64|3/3|
+| Sarayu Pochimireddy |Interactive Course Calculator|https://github.com/sarayu-pr11/Team-Colors/issues/70|3/3|
+| Pranavi Inukurti |Interactive School Map|https://github.com/sarayu-pr11/Team-Colors/issues/71|3/3|
+| Saathvika Ajith |Work on Website|https://github.com/sarayu-pr11/flask_portfolio/issues/44|2/2|
+| Sarayu Pochimireddy |Work on Website|https://github.com/sarayu-pr11/flask_portfolio/issues/44|2/2|
+| Pranavi Inukurti |Work on Website|https://github.com/sarayu-pr11/flask_portfolio/issues/44|2/2|
+
+- Individual Scoring
+
+| Name | Journal with TT & TPT Notes | Grade |
+|:----:|:---------------------------:|:-----:|
+| Saathvika Ajith | https://docs.google.com/document/d/1aB6TsPf0lRSEx4cQRl--_8EPWaObHeHZDB2GYMo9ias/edit?usp=sharing | 5/5 |
+| Sarayu Pochimireddy | https://docs.google.com/document/d/1aB6TsPf0lRSEx4cQRl--_8EPWaObHeHZDB2GYMo9ias/edit?usp=sharing | 5/5 |
+| Pranavi Inukurti | https://docs.google.com/document/d/1aB6TsPf0lRSEx4cQRl--_8EPWaObHeHZDB2GYMo9ias/edit?usp=sharing | 5/5 |
+
+
+###   <h2 id="Sprint5">Sprint 9,10</h2>
+#### <h3> Week 10 </h3>
+- Scrum Board
+  - https://github.com/sarayu-pr11/Team-Colors/projects/1?card_filter_query=milestone%3A%22sprint+9%2C10+week+10+and+11%22
+  
+- Team Scoring
+
+| Name | Requirement | Evidence | Grade |
+|:----:|:-----------:|:--------:|:-----:|
+| Saathvika Ajith |Integrate API|https://github.com/sarayu-pr11/Team-Colors/issues/64|3/3|
+| Sarayu Pochimireddy |Interactive Course Calculator|https://github.com/sarayu-pr11/Team-Colors/issues/70|3/3|
+| Pranavi Inukurti |Interactive School Map|https://github.com/sarayu-pr11/Team-Colors/issues/71|3/3|
+| Saathvika Ajith |Work on Website|https://github.com/sarayu-pr11/flask_portfolio/issues/44|2/2|
+| Sarayu Pochimireddy |Work on Website|https://github.com/sarayu-pr11/flask_portfolio/issues/44|2/2|
+| Pranavi Inukurti |Work on Website|https://github.com/sarayu-pr11/flask_portfolio/issues/44|2/2|
+
+- Individual Scoring
+
+| Name | Journal with TT & TPT Notes | Grade |
+|:----:|:---------------------------:|:-----:|
+| Saathvika Ajith | https://docs.google.com/document/d/1aB6TsPf0lRSEx4cQRl--_8EPWaObHeHZDB2GYMo9ias/edit?usp=sharing | 5/5 |
+| Sarayu Pochimireddy | https://docs.google.com/document/d/1aB6TsPf0lRSEx4cQRl--_8EPWaObHeHZDB2GYMo9ias/edit?usp=sharing | 5/5 |
+| Pranavi Inukurti | https://docs.google.com/document/d/1aB6TsPf0lRSEx4cQRl--_8EPWaObHeHZDB2GYMo9ias/edit?usp=sharing | 5/5 |
+
+
+#### <h3> Week 9 </h3>
+- Scrum Board
+  - https://github.com/sarayu-pr11/Team-Colors/projects/1?card_filter_query=milestone%3A%22sprint+9%2C10+week+9+-+individual+final+video+%28part+1%29%22
+  
+- Team Scoring
+
+| Name | Requirement | Evidence | Grade |
+|:----:|:-----------:|:--------:|:-----:|
+| Saathvika Ajith |Individual Presentation|https://www.loom.com/share/14e8266918c24facab1f8d8c9a5a3e82|6/6|
+| Sarayu Pochimireddy |Individual Presentation|https://www.loom.com/share/6237c9ccba8043fbbe1c0db38c6406c4|6/6|
+| Pranavi Inukurti |Individual Presentation|https://www.loom.com/share/5800d13288a64344b839874eef885d3e|6/6|
+| Saathvika Ajith |Work on Website|https://github.com/sarayu-pr11/flask_portfolio/issues/44|2/2|
+| Sarayu Pochimireddy |Work on Website|https://github.com/sarayu-pr11/flask_portfolio/issues/44|2/2|
+| Pranavi Inukurti |Work on Website|https://github.com/sarayu-pr11/flask_portfolio/issues/44|2/2|
+
+- Individual Scoring
+
+| Name | Journal with TT & TPT Notes | Grade |
+|:----:|:---------------------------:|:-----:|
+| Saathvika Ajith | https://docs.google.com/document/d/1aB6TsPf0lRSEx4cQRl--_8EPWaObHeHZDB2GYMo9ias/edit?usp=sharing | 5/5 |
+| Sarayu Pochimireddy | https://docs.google.com/document/d/1aB6TsPf0lRSEx4cQRl--_8EPWaObHeHZDB2GYMo9ias/edit?usp=sharing | 5/5 |
+| Pranavi Inukurti | https://docs.google.com/document/d/1aB6TsPf0lRSEx4cQRl--_8EPWaObHeHZDB2GYMo9ias/edit?usp=sharing | 5/5 |
+
