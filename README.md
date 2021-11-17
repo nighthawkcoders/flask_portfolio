@@ -56,14 +56,14 @@
     <td>Pair Share Journals</td>
     <td><a href="https://docs.google.com/document/d/19XB2QXhh55YSZJ4m368AKi0JUGVT9s94BOA-rs2YWdQ/edit?usp=sharing">Shreya and Sonakshi's Pair Share Journal</a></td>
     <td><a href="https://docs.google.com/document/d/19XB2QXhh55YSZJ4m368AKi0JUGVT9s94BOA-rs2YWdQ/edit?usp=sharing">Shreya and Sonakshi's Pair Share Journal</a></td>
-    <td><a href="">Linda and Khushi's Pair Share Journal</a></td>
-    <td><a href="">Linda and Khushi's Pair Share Journal</a></td>
+    <td><a href="https://docs.google.com/document/d/1ADyls7G7nSNeCyXoheMb-1PMnYpm7z96dyg9RLofUFo/edit?usp=sharing">Linda and Khushi's Pair Share Journal</a></td>
+    <td><a href="https://docs.google.com/document/d/1ADyls7G7nSNeCyXoheMb-1PMnYpm7z96dyg9RLofUFo/edit?usp=sharing">Linda and Khushi's Pair Share Journal</a></td>
   </tr>
    <tr>
     <td>Individual Journals</td>
     <td><a href="https://docs.google.com/document/d/1tzKxrktNmIau5yW4qIBZ5nULiQ-DUNyJaQTLDgQ4XXU/edit">Sonakshi's Journal</a></td>
     <td><a href="https://docs.google.com/document/d/1kiNPT2VoJIwpsf-8tR-1t58_ihXYbHytcyO2m-8JxU0/edit?usp=sharing">Shreya's Journal</a></td>
-    <td><a href="">Linda's Journal</a></td>
+    <td><a href="https://docs.google.com/document/d/1sZS-mU7SGq6S9c94T5OciGrEQYjoQMeJLd6lv3WhqoY/edit?usp=sharing">Linda's Journal</a></td>
     <td><a href="">Khushi's Journal</a></td>
    <tr> 
 </table>
