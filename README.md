@@ -30,8 +30,8 @@ Scrum Board:
 | ---------------- | --------------- | ---------------------------------------------------------------------------- | ------ |----------- | ---------------- |
 | Nathan Manangan  | ProRichyMan     | [Scrumboard]() | [Issue]() | [Commits]()| [@ProRichyMan]()|
 | Reem | __ | [Scrumboard]() | [Issue]() | [Commits]()| [@]()|
-| __    | __          | [Scrumboard]() | [Issue]() | [Commits]()| [@]()|
-| __      | __  | [Scrumboard]() | [Issue]() | [Commits]()| [@]()|
+| James Lee  | __          | [Scrumboard]() | [Issue]() | [Commits]()| [@]()|
+| Jacob Rozenkrants     | __  | [Scrumboard]() | [Issue]() | [Commits]()| [@]()|
 | __      | __  | [Scrumboard]() | [Issue]() | [Commits]()| [@]()|
 
 ## Current Functions
