@@ -1,35 +1,16 @@
 # import "packages" from flask
 from flask import Flask, render_template
+from algorithms.connor import c_image
+from pathlib import Path
 
 # create a Flask instance
 app = Flask(__name__)
 
 
-# connects default URL to render index.html
-@app.route('/')
-def index():
-    return render_template("index.html")
-
-
-# connects /kangaroos path to render kangaroos.html
-@app.route('/kangaroos/')
-def kangaroos():
-    return render_template("kangaroos.html")
-
-
-@app.route('/walruses/')
-def walruses():
-    return render_template("walruses.html")
-
-
-@app.route('/hawkers/')
-def hawkers():
-    return render_template("hawkers.html")
-
-
-@app.route('/stub/')
-def stub():
-    return render_template("stub.html")
+@app.route('/connor/')
+def connor():
+    path = Path(app.root_path) / "static" / "assets"
+    return render_template('connor.html', images=c_image(path))
 
 
 # runs the application on the development server
