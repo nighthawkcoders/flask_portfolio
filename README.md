@@ -1,12 +1,13 @@
 # Helpful Resources for Students
+
+## Website Description
+
 ## N225 Turtles
   <td><a href="https://github.com/sonakshibhalla/tri2turtles/projects/2">Turtles Scrum Board</a></td>  
   <br>
   <td><a href="https://github.com/sonakshibhalla/tri2turtles/graphs/contributors">Contributors Tab</a></td>
   <br>
 
-
-### Website Description
 
 <br>
 <table>
@@ -26,42 +27,42 @@
   </tr>
   <tr>
     <td>Tasks</td>
-    <td><a href=>Katie's Tasks</a></td>
-    <td><a href=>Shreya's Tasks</a></td>
-    <td><a href=>Linda's Tasks</a></td>
-    <td><a href=>Khushi's Tasks</a></td>
+    <td><a href=https://github.com/sonakshibhalla/tri2turtles/issues?q=assignee%3Asonakshibhalla>Sonakshi's Tasks</a></td>
+    <td><a href=https://github.com/sonakshibhalla/tri2turtles/issues?q=assignee%3Ashreya-ahujaa>Shreya's Tasks</a></td>
+    <td><a href=https://github.com/sonakshibhalla/tri2turtles/issues?q=assignee%3ALindaLiu1202>Linda's Tasks</a></td>
+    <td><a href=https://github.com/sonakshibhalla/tri2turtles/issues?q=assignee%3AKhushiB24>Khushi's Tasks</a></td>
    <tr>
     <td>Commits</td>
-    <td><a href=>Sonakshi's Commits</a></td>
-    <td><a href=>Shreya's Commits</a></td>
-    <td><a href=>Linda's Commits</a></td>
-    <td><a href=>Khushi's Commits</a></td>
+    <td><a href=https://github.com/sonakshibhalla/tri2turtles/commits?author=sonakshibhalla>Sonakshi's Commits</a></td>
+    <td><a href=https://github.com/sonakshibhalla/tri2turtles/commits?author=shreya-ahujaa>Shreya's Commits</a></td>
+    <td><a href=https://github.com/sonakshibhalla/tri2turtles/commits?author=LindaLiu1202>Linda's Commits</a></td>
+    <td><a href=https://github.com/sonakshibhalla/tri2turtles/commits?author=KhushiB24>Khushi's Commits</a></td>
   </tr>
    <tr>
     <td>Scrum Board</td>
-     <td><a href=>Scrum Board</a> </td>
-     <td><a href=>Scrum Board</a> </td>
-     <td><a href=>Scrum Board</a> </td>
-     <td><a href=>Scrum Board</a> </td>
+     <td><a href=https://github.com/sonakshibhalla/tri2turtles/projects/1?card_filter_query=assignee%3Ashreya-ahujaa>Scrum Board</a> </td>
+     <td><a href=https://github.com/sonakshibhalla/tri2turtles/projects/1?card_filter_query=assignee%3Asonakshibhalla>Scrum Board</a> </td>
+     <td><a href=https://github.com/sonakshibhalla/tri2turtles/projects/1?card_filter_query=assignee%3ALindaLiu1202>Scrum Board</a> </td>
+     <td><a href=https://github.com/sonakshibhalla/tri2turtles/projects/1?card_filter_query=assignee%3AKhushiB24>Scrum Board</a> </td>
   </tr>
    <tr>
     <td>Profile</td>
-    <td><a href=>Sonakshi's Profile</a></td>
-    <td><a href=>Shreya's Profile</a></td>
-    <td><a href=>Linda's Profile</a></td>
-    <td><a href=>Khushi's Profile</a></td>
+    <td><a href=https://github.com/sonakshibhalla>Sonakshi's Profile</a></td>
+    <td><a href=https://github.com/shreya-ahujaa>Shreya's Profile</a></td>
+    <td><a href=https://github.com/LindaLiu1202>Linda's Profile</a></td>
+    <td><a href=https://github.com/KhushiB24>Khushi's Profile</a></td>
   </tr>
     <tr>
     <td>Pair Share Journals</td>
-    <td><a href="">Shreya and Sonakshi's Pair Share Journal</a></td>
-    <td><a href="">Shreya and Sonakshi's Pair Share Journal</a></td>
+    <td><a href="https://docs.google.com/document/d/19XB2QXhh55YSZJ4m368AKi0JUGVT9s94BOA-rs2YWdQ/edit?usp=sharing">Shreya and Sonakshi's Pair Share Journal</a></td>
+    <td><a href="https://docs.google.com/document/d/19XB2QXhh55YSZJ4m368AKi0JUGVT9s94BOA-rs2YWdQ/edit?usp=sharing">Shreya and Sonakshi's Pair Share Journal</a></td>
     <td><a href="">Linda and Khushi's Pair Share Journal</a></td>
     <td><a href="">Linda and Khushi's Pair Share Journal</a></td>
   </tr>
    <tr>
     <td>Individual Journals</td>
     <td><a href="">Sonakshi's Journal</a></td>
-    <td><a href="">Shreya's Journal</a></td>
+    <td><a href="https://docs.google.com/document/d/1kiNPT2VoJIwpsf-8tR-1t58_ihXYbHytcyO2m-8JxU0/edit?usp=sharing">Shreya's Journal</a></td>
     <td><a href="">Linda's Journal</a></td>
     <td><a href="">Khushi's Journal</a></td>
    <tr> 
@@ -79,7 +80,7 @@
 
 | Name | Requirement | Evidence | Grade | Total Score |
 | ---  | ---         | ---      | ---   | --- |
-| Sonakshi Bhalla |  | | | 
-| Shreya Ahuja |  | | | 
-| Linda Liu |  | | | 
-| Khushi Bagri | | | | 
+| Sonakshi Bhalla | Individual Pages and API<br>About Us<br>CB Notes & Quizzes| Ticket<br>Ticket<br>Ticket | | /5
+| Shreya Ahuja |Individual Pages and API<br>About Us<br>CB Notes & Quizzes  | Ticket<br>Ticket<br>Ticket| | /5
+| Linda Liu |Individual Pages and API<br>About Us<br>CB Notes & Quizzes |Ticket<br>Ticket<br>Ticket| | /5
+| Khushi Bagri | Individual Pages and API<br>About Us<br>CB Notes & Quizzes| Ticket<br>Ticket<br>Ticket| | /5
