@@ -108,6 +108,10 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
     </style>
 
     <title>{{ basename }} | {{ project }} </title>
+    <div class="sidenav">
+        <p>this is working :D</p>
+        <a href="stub.html">stub</a>
+    </div>
 
 </head>
 
@@ -115,9 +119,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 {% include "layouts/navbar.html" %}
 
 {% block body %}
-    <div class="sidenav">
-        <p>this is working :D</p>
-    </div>
+
 
 <div class="container-fluid">
     <div class="row justify-content-end" style="padding: 2%;">
