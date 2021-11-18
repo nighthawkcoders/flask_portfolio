@@ -1,0 +1,33 @@
+<!-- Extending the predefined project layout -->
+{% extends "layouts/base.html" %}
+
+<!- This variable sets name of browser tab  -->
+{% set project = "Stubby" %}
+
+<!- This is a replacement block for Body in base.html -->
+{% block body %}
+
+<!- Try building a new body here ->
+<div class="center-block" style="margin: 2% 5% 5%; text-align:left;">
+
+    <div class="container-fluid">
+        <div class="row justify-content-end">
+            <div class="col-8">
+            </div>
+            <div class="col-8">
+                <p>Hello, <span id="name">{{name1}}</span>!</p>
+            </div>
+        </div>
+        <div class="col-8">
+            <form action="/khushi/" id="greet" method="POST" >
+                <label for="name">Type a greeting name?</label>
+                <input name="name" id="name1">
+                <input type="submit" value="Greetings!" onclick= "(function (){document.getElementById('name').innerText=document.getElementById('name1').value})();return false;">
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block background %}
+{% endblock %}

@@ -16,9 +16,47 @@ def home():
 
 
 # connects /kangaroos path to render home.html
+@app.route('/asia/')
+def asia():
+    return render_template("asia.html")
+
+@app.route('/africa/')
+def africa():
+    return render_template("africa.html")
 
 
+@app.route('/northamerica/')
+def northamerica():
+    return render_template("northamerica.html")
 
+@app.route('/southamerica/')
+def southamerica():
+    return render_template("southamerica.html")
+
+@app.route('/antarctica/')
+def antarctica():
+    return render_template("antarctica.html")
+
+@app.route('/europe/')
+def europe():
+    return render_template("europe.html")
+
+@app.route('/australia/')
+def australia():
+    return render_template("australia.html")
+
+@app.route('/about/')
+def about():
+    return render_template("about.html")
+
+@app.route("/binary", methods=['GET','POST'])
+def binary():
+    if request.form:
+        bits = request.form.get("bits")
+        if len(bits) != 0:  # input field has content
+            return render_template("binary.html", bits=int(bits))
+        # starting and empty input default
+    return render_template("binary.html", bits=8)
 
 
 
@@ -26,14 +64,86 @@ def home():
 def stub():
     return render_template("stub.html")
 
+@app.route("/addition", methods=['GET','POST'])
+def addition():
+    if request.form:
+        bits = request.form.get("bits")
+        if len(bits) != 0:  # input field has content
+            return render_template("addition.html", bits=int(bits))
+        # starting and empty input default
+    return render_template("addition.html", bits=8)
 
+@app.route("/signed", methods=['GET','POST'])
+def signed():
+    if request.form:
+        bits = request.form.get("bits")
+        if len(bits) != 0:  # input field has content
+            return render_template("signed.html", bits=int(bits))
+        # starting and empty input default
+    return render_template("signed.html", bits=8)
 
-
-
-@app.route('/sonakshi')
+@app.route('/sonakshi', methods=['GET', 'POST'])
 def sonakshi():
-    return render_template("sonakshi.html")
+    # submit button has been pushed
+    if request.form:
+        name = request.form.get("name")
+        if len(name) != 0:  # input field has content
+            return render_template("sonakshi.html", name=name)
+    # starting and empty input default
+    return render_template("sonakshi.html", name="World")
 
+@app.route('/saumya', methods=['GET', 'POST'])
+def saumya():
+    # submit button has been pushed
+    if request.form:
+        name = request.form.get("name")
+        if len(name) != 0:  # input field has content
+            return render_template("saumya.html", name=name)
+    # starting and empty input default
+    return render_template("saumya.html", name="World")
+
+@app.route('/kashish', methods=['GET', 'POST'])
+def kashish():
+    # submit button has been pushed
+    if request.form:
+        name = request.form.get("name")
+        if len(name) != 0:  # input field has content
+            return render_template("kashish.html", name=name)
+    # starting and empty input default
+    return render_template("kashish.html", name="World")
+
+@app.route('/khushi', methods=['GET', 'POST'])
+def khushi():
+    # submit button has been pushed
+    if request.form:
+        name = request.form.get("name")
+        if len(name) != 0:  # input field has content
+            return render_template("khushi.html", name=name)
+    # starting and empty input default
+    return render_template("khushi.html", name="World")
+
+
+
+@app.route('/insights/')
+def insights():
+    return render_template("insights.html")
+
+@app.route('/greet/')
+def greet():
+    return render_template("greet.html")
+
+@app.route('/color/', methods=['GET', 'POST'])
+def color():
+    BITS=8
+    imgBulbOn = "static/assets/openbook.jpg"
+    if request.form:
+        BITS = int(request.form.get("BITS"))
+        imgBulbOn = request.form['lightOn']
+    return render_template("color.html", imgBulbOn=imgBulbOn, BITS=BITS)
+
+@app.route('/logic gates/')
+def logicgates():
+    return render_template("logicgates.html")
 
 @app.route('/genius', methods=['GET', 'POST'])
 def genius():
@@ -50,9 +160,31 @@ def genius():
 
     return render_template("newapi.html", stats=response.json())
 
+@app.route('/sevenwonders/')
+def sevenwonders():
+    return render_template("sevenwonders.html")
+
+    response = requests.request("GET", url, headers=headers)
+
+    """
+    # uncomment this code to test from terminal
+    world = response.json().get('world_total')
+    countries = response.json().get('countries_stat')
+    print(world['total_cases'])
+    for country in countries:
+        print(country["country_name"])
+    """
+    # return response.text
+    return render_template("covid.html", stats=response.json())
 
 
-
+@app.route('/covid', methods=['GET', 'POST'])
+def covid():
+    url = "https://corona-virus-world-and-india-data.p.rapidapi.com/api"
+    headers = {
+        'x-rapidapi-key': "dec069b877msh0d9d0827664078cp1a18fajsn2afac35ae063",
+        'x-rapidapi-host': "corona-virus-world-and-india-data.p.rapidapi.com"
+    }
 
 
 
