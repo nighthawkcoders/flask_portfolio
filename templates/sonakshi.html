@@ -1,56 +1,39 @@
-<!-- Extending the predefined project layout -->
-{% extends "layouts/base.html" %}
+{% include "layouts/navbar.html" %}
+<title>Sonakshi</title>
+<body style="background-color: #EBF7FA;">
+<style>
+    .button1 {
+        background-color: white;
+        color: grey;
+        border: 3px solid #9CD8EC;
+        text-decoration: none;
+        margin: 4px 2px;
+        padding: 3px 4px;
+    }
 
-<!- This variable sets name of browser tab  -->
-{% set project = "Stubby" %}
+    .button1:hover {
+        background-color: whitesmoke;
+        color: black;
+    }
+</style>
 
-<!- This is a replacement block for Body in base.html -->
-{% block body %}
-
-    <html>
-    <head>
-        <style>
-            body {
-                background-image: url("https://wallpaperaccess.com/full/438941.jpg");
-            }
-
-            h1 {
-                color: black;
-                text-align: center;
-            }
-
-            p {
-                color: black;
-                text-align: center;
-                font-size: 20px;
-            }
-
-
-        </style>
-
-    </head>
-
-    <h1>Sonakshi</h1>
-    <p> Hi! My name is Sonakshi. I am 16 years old and a senior at Del Norte High School. I love to play tennis and enjoy going to the beach. </p>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-2">
+<div style="margin: 2% 5% 5%; text-align:center; font-family: Baskerville; font-size: larger">
+    <div>
+        <p style="font-size: x-large"id="wave"><strong>Hello{{name}}!</strong></p>
+        <script>
+            var targetForWave = document.getElementById("wave");
+            targetForWave.textContent += String.fromCodePoint(0x1F44B);
+        </script>
+    </div>
 
 
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-2">
-
-    <body>
-
-    <div class="container">
-        <div class="row">
-
-            <div class="col-sm-1">
+    <br>
+    <p>
+    </p>
+    <p style="font-size: large; font-family: Baskerville; text-align: center"><i>Click Me</i></p>
+    <a href="{{url_for('newapi')}}" class="button1">Here is The API</a>
 
     <img id="myImage" onclick="changeImage()" src="/static/assets/sonakshi.png" width="250" height="250">
-
 
     <script>
         function changeImage() {
@@ -62,70 +45,7 @@
             }
         }
     </script>
-                <img src="/static/assets/tennis.png" alt="Tennis Ball" style="width: 200px; height: 200px;">
-                <p style="text-align: center;"> Sonakshi's Hobbies </p>
-
-    </body>
-
-                {% set data = stats.list %}
-
-                <head>
-                    <style>
-                        body, html {
-                            background-color: lightskyblue;
-                        }
-                    </style>
-                </head>
-                <body>
-                <div class="center-block" style="margin: 2% 5% 5%; font-family: gilroy,serif;">
-                    <div class="col-12" style="text-align: center;">
-                        <h1><strong>Weather Data From San Diego</strong></h1>
-                        </form>
-                    </div>
 
 
-                    <div class="col-20" style="text-align: left; ">
-                        <table class="table">
-                            <tbody>
-                            <thead>
-                            <tr>
-                                <th>dt</th>
-                                <th>Temperature</th>
-                                <th>Pressure</th>
-                                <th>Wind Speed</th>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <div class="col-12" style="text-align: left; ">
-                                    {% for info in data %}
-                                        <tr>
-                                            <td> {{info.dt}} </td>
-                                            <td> {{info.temp}} </td>
-                                            <td> {{info.pressure}} </td>
-                                            <td> {{info.wind_speed}} </td>
-                                        </tr>
-                                    {% endfor %}
-                        </table>
-                    </div>
-
-                </div>
-                <style>
-                    table, td, th {
-                        text-align: center;
-                    }
-                    td, th {
-                        text-align:center;
-                    }
-                </style>
-            </div>
-
-
-
-
-{% endblock %}
-
-
-{% block background %}
-{% endblock %}
-
-
+</div>
+</body>
