@@ -8,7 +8,20 @@
 {% block body %}
     <!- Try building a new body here ->
     <p>hopefully this shows up------------------------------------------------------------------------------------------</p>
-<img src="https://images.unsplash.com/photo-1507146426996-ef05306b995a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cHVwcHklMjBkb2d8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80">
+    <p id="click" onclick="fun()">CLICK HERE!</p>
+    <img src="https://images.unsplash.com/photo-1507146426996-ef05306b995a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cHVwcHklMjBkb2d8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80">
+
+    <script>
+        function fun(){
+            document.getElementById("click").innerHTML = "HELLO!!!" ;
+        }
+    </script>
+
+    <p> My name is Leah Bogomolny and I am in 12th grade</p>
+    <p> I like to play games and hang out with friends</p>
+    <p> I have an older sister named, Maggie, who is a junior in college.</p>
+    <p> I want to be a computer science major in college </p>
+
     <style>
         p {
             margin-left: 250px;
