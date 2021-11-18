@@ -7,7 +7,7 @@
     <head>
         <style>
             body, html {
-                background-color: rosybrown;
+                background-color: lightskyblue;
             }
         </style>
     </head>
@@ -15,8 +15,7 @@
     <div class="center-block" style="margin: 2% 5% 5%; font-family: gilroy,serif;">
         <!-- Title -->
         <div class="col-12" style="text-align: center;">
-            <h1><strong>Historical Weather Data from rapidapi.com</strong></h1>
-            <a href="{{url_for('newapi')}}" class="button1">Refresh!</a>
+            <h1><strong>Weather Data From San Diego</strong></h1>
             </form>
         </div>
 
@@ -29,7 +28,6 @@
                     <th>dt</th>
                     <th>Temperature</th>
                     <th>Pressure</th>
-                    <th>Average</th>
                     <th>Wind Speed</th>
             </thead>
                 <tbody>
@@ -49,7 +47,6 @@
     </div>
     <style>
         table, td, th {
-        {#border: 1px solid var(--dblue);#}
         }
         td, th {
             text-align:left;

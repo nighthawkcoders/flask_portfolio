@@ -30,9 +30,9 @@ def stub():
 
 
 
-@app.route('/sonakshi')
-def sonakshi():
-    return render_template("sonakshi.html")
+## @app.route('/sonakshi')
+## def sonakshi():
+ ##   return render_template("sonakshi.html")
 
 
 @app.route('/genius', methods=['GET', 'POST'])
@@ -56,8 +56,8 @@ def genius():
 
 
 
-@app.route('/newapi', methods=['GET', 'POST'])
-def newapi():
+@app.route('/sonakshi', methods=['GET', 'POST'])
+def sonakshi():
 
     url = "https://community-open-weather-map.p.rapidapi.com/climate/month"
     querystring = {"q":"San Diego"}
@@ -69,7 +69,7 @@ def newapi():
 
     response = requests.request("GET", url, headers=headers, params=querystring)
 
-    return render_template("newapi.html", stats=response.json())
+    return render_template("sonakshi.html", stats=response.json())
 
 # runs the application on the development server
 if __name__ == "__main__":

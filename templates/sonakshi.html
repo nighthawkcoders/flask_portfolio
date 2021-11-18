@@ -67,6 +67,58 @@
 
     </body>
 
+                {% set data = stats.list %}
+
+                <head>
+                    <style>
+                        body, html {
+                            background-color: lightskyblue;
+                        }
+                    </style>
+                </head>
+                <body>
+                <div class="center-block" style="margin: 2% 5% 5%; font-family: gilroy,serif;">
+                    <div class="col-12" style="text-align: center;">
+                        <h1><strong>Weather Data From San Diego</strong></h1>
+                        </form>
+                    </div>
+
+
+                    <div class="col-20" style="text-align: left; ">
+                        <table class="table">
+                            <tbody>
+                            <thead>
+                            <tr>
+                                <th>dt</th>
+                                <th>Temperature</th>
+                                <th>Pressure</th>
+                                <th>Wind Speed</th>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <div class="col-12" style="text-align: left; ">
+                                    {% for info in data %}
+                                        <tr>
+                                            <td> {{info.dt}} </td>
+                                            <td> {{info.temp}} </td>
+                                            <td> {{info.pressure}} </td>
+                                            <td> {{info.wind_speed}} </td>
+                                        </tr>
+                                    {% endfor %}
+                        </table>
+                    </div>
+
+                </div>
+                <style>
+                    table, td, th {
+                        text-align: center;
+                    }
+                    td, th {
+                        text-align:center;
+                    }
+                </style>
+            </div>
+
 
 
 
