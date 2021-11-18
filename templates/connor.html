@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% include "layouts/navbar.html" %}
+<head>
+    <meta charset="UTF-8">
+    <title>Connor</title>
+</head>
+<script>
+    function mask() {
+        document.getElementById('place')
+        .src="/static/assets/connormask.jpg";
+    }
+    function nomask() {
+        document.getElementById('place')
+        .src="/static/assets/nomaskconnor.jpg";
+    }
+</script>
+<body>
+<h1 class="text-center">Connor Home Page</h1>
+<div class="container">
+    <div class="row justify-content-md-center">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Connor</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <img id="place" class="img-responsive py-3" alt="" width="256" src="/static/assets/connormask.jpg" >
+                    <div>
+                        <button onclick="mask()">Mask</button>
+                        <button onclick="nomask()">No Mask</button>
+                    </div>
+                </td>
+            </tr>
+</body>
+</html>
