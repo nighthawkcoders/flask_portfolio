@@ -36,6 +36,11 @@ def stub():
 def pokemon_cards():
     return render_template("pokemon_cards.html")
 
+@app.route('/sportscards/')
+def sports_cards():
+    return render_template("sports_cards.html")
+
+
 
 # runs the application on the development server
 if __name__ == "__main__":
