@@ -2,6 +2,17 @@
 Runtime link: https://portfolio.nighthawkcodingsociety.com/
 ### Idea
 Starter code should be fun and practical.
+
+#### Week 0
+|Contributor| Links to Commits  |
+|---|---|
+| Sanjay  |  [About Page](https://github.com/SimonBrunzell/flask_portfolio/commit/35bd15cff37a527274e25a305ca8c6ccde16d00b) |
+| Evan  |   |
+| Leah  |   |
+| Simon  |   |
+| Vunsh  |   |
+
+
 ### Visual thoughts
 #### Organize with Bootstrap menu 
 #### Add some color and fun through VANTA Visuals (birds, halo, solar, net)
