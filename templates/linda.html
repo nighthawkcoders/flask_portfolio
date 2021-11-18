@@ -1,0 +1,57 @@
+<!-- Extending the predefined project layout -->
+{% extends "layouts/base.html" %}
+
+<!- This variable sets name of browser tab  -->
+{% set project = "Stubby" %}
+
+<!- This is a replacement block for Body in base.html -->
+{% block body %}
+
+<h1>Linda Liu Individual Page</h1>
+
+<body style="background-color: #EBF7FA;">
+<style>
+    .button1 {
+        background-color: white;
+        color: grey;
+        border: 3px solid #9CD8EC;
+        text-decoration: none;
+        margin: 4px 2px;
+        padding: 3px 4px;
+    }
+
+    .button1:hover {
+        background-color: whitesmoke;
+        color: black;
+    }
+</style>
+
+<div style="margin: 2% 5% 5%; text-align:center; font-family: Baskerville; font-size: larger">
+    <div>
+
+    <p>Hello <span id="myName">{{name}}</span>, I am Linda Liu!</p>
+
+    <form action="#" id="linda" method="POST" >
+        <label for="name">Enter Your Name</label>
+        <input name="name" id="name">
+        <input type="submit" value="Go!" onclick="(function (){document.getElementById('myName').innerText=document.getElementById('name').value})();return false;">
+    </form>
+
+    <br>
+    <p>
+        <img src="/static/design/.jpeg" style="height: 300px; width: 350px;" id="imgClickAndChange" onclick="changeImage()"/>
+    </p>
+    <p style="font-size: large; font-family: Baskerville; text-align: center"><i>Click Me</i></p>
+    <script>
+        function changeImage() {
+
+            if (document.getElementById("imgClickAndChange").src ="/static/design/.jpeg")
+            {
+                document.getElementById("imgClickAndChange").src = "/static/design/.jpeg";
+            }
+
+        }
+    </script>
+</div>
+</body>
+
