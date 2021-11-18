@@ -17,6 +17,10 @@ def connor():
 def tanay():
     return render_template('tanay.html')
 
+@app.route('/colin/')
+def colin():
+    return render_template('colin.html')
+
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)

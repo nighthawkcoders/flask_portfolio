@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% include "layouts/navbar.html" %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Colin About</title>
+
+</head>
+<body>
+<h1 class="text-center">Colin Home Page</h1>
+<div class="container">
+    <div class="row justify_content_md_center" style="align:center">
+        <table class="table">
+            <thead>
+            <tr>
+                <th style="text-align:center">About Colin</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <img id="colinMask" class="img-responsive py-3" alt="" width="256 " src="/static/assets/colinMask.jpg">
+                    <div>
+                        <button onclick="mask()">With Mask</button>
+                        <button onclick="noMask()">No Mask</button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+<script>
+    function mask() {
+        document.getElementByID('colinMask')
+        .src="/static/assets/colinMask.jpg";
+    }
+
+    function nomask() {
+        document.getElementById('colinMask')
+        .src=""
+    }
+</script>
+</html>
