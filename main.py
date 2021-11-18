@@ -32,6 +32,11 @@ def stub():
     return render_template("stub.html")
 
 
+@app.route('/pokemoncards/')
+def pokemon_cards():
+    return render_template("pokemon_cards.html")
+
+
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)
