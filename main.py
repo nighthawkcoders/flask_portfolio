@@ -39,6 +39,10 @@ def leah():
 def evan():
     return render_template("evan.html")
 
+@app.route('/simon/')
+def simon():
+    return render_template("simon.html")
+
 @app.route("/sanjay/")
 def sanjay():
     return render_template("sanjay.html")

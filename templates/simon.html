@@ -7,13 +7,43 @@
 <!- This is a replacement block for Body in base.html -->
 {% block body %}
 <!- Try building a new body here ->
-<p> Simon's Page </p>
+
 <style>
     p {
         margin-left: 200px;
     }
+
+    .mee{
+        position: relative;
+    left: 755px;
+        font-size: 30px;
+
+
+    }
+
+
 </style>
-{% endblock %}
+
+<br>
+
+<h1 class="mee"> Simon's Page</h1>
+
+<div style="text-align: center" class="aboutme">
+    <p class="fun"> Hello welcome to Simon Brunzell's about us Page, this is a page about the greatest thing ever... me!</p>
+    <p class="fun">Some fun facts about me include...</p>
+    <p class="fun"> I'm in 12th grade in my Senior year, I am a part of the Del Norte music program, I play the flute, have participated in choir, and
+        am a upcoming flute section leader for symphonic band, </p>
+    <p class="fun"> I'm a part of our school's GSA, as well as our Hip Hop club </p>
+    <p class="fun"> I am the oldest sibling, with two younger siblings, my younger brother Sebastian,
+        and my younger sister Josephine</p>
+    <p class="fun">Well now that you know you many fun things about me you should feel alot better,
+        But if not, idk how you wouldn't, but if you don't some how...</p>
+    <p class="fun"> go to study you're probably stressed because of that test/quiz/something you have coming up so go to (insert website name here)
+        and work for that grade you deserve. (insert website name here) is an amazing website full of study
+        resources it's also made by some really cool people, including me! ;) </p>
+
+
+    {% endblock %}
 
 <!- This is turning off birds background from base.html -->
 {% block background %}
