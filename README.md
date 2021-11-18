@@ -33,7 +33,7 @@ Scrum Board:
 | ---------------- | --------------- | ---------------------------------------------------------------------------- | ------ |----------- | ---------------- |
 | Nathan Manangan  | ProRichyMan     | [Scrumboard]() | [Issue]() | [Commits]()| [@ProRichyMan]()|
 | Reem Ben Ishai | Reem57 | [Scrumboard]() | [Issue]() | [Commits]()| [@Reem57]()|
-| James Lee  | __          | [Scrumboard]() | [Issue]() | [Commits]()| [@]()|
+| James Lee  | __          | [Scrumboard]() | [Issue]() | [Commits]()| [@](JL1080)|
 | Jacob Rozenkrants     | __  | [Scrumboard]() | [Issue]() | [Commits]()| [@]()|
 | __      | __  | [Scrumboard]() | [Issue]() | [Commits]()| [@]()|
 
