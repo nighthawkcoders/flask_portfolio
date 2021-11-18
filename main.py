@@ -50,9 +50,9 @@ def genius():
     return render_template("genius.html", stats=response.json())
 
 
-
-
-
+@app.route('/linda')
+def linda():
+    return render_template("linda.html")
 
 
 

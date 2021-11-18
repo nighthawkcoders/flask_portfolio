@@ -1,3 +1,4 @@
+### Exclude IntelliJ IDEA from GitHub ###
 .idea
 *.iws
 *.iml
