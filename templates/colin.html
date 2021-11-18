@@ -13,7 +13,7 @@
         <table class="table">
             <thead>
             <tr>
-                <th style="text-align:center">About Colin</th>
+                <th style="text-align:center">About Colin - Technical Officer</th>
             </tr>
             </thead>
             <tbody>
@@ -22,7 +22,7 @@
                     <img id="colinMask" class="img-responsive py-3" alt="" width="256 " src="/static/assets/colinMask.jpg">
                     <div>
                         <button onclick="mask()">With Mask</button>
-                        <button onclick="noMask()">No Mask</button>
+                        <button onclick="nomask()">No Mask</button>
                     </div>
                 </td>
             </tr>
@@ -33,13 +33,13 @@
 
 <script>
     function mask() {
-        document.getElementByID('colinMask')
+        document.getElementById('colinMask')
         .src="/static/assets/colinMask.jpg";
     }
 
     function nomask() {
         document.getElementById('colinMask')
-        .src=""
+        .src="/static/assets/colinNoMask.jpg";
     }
 </script>
 </html>
