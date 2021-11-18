@@ -3,4 +3,4 @@ Website function: The purpose of this website is to represent information for ce
 
 Weak 0: 
 Goals - To setup our website and have an overall template of the website. We also have to add our homepages and come up with a theme.
-<img src=”https://userimages.githubusercontent.com/75753187/123358567-aac7b900-d539-11eb-8275-0b380264bb4c.png" alt=”my banner”>
+
