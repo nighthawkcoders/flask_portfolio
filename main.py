@@ -31,6 +31,22 @@ def hawkers():
 def stub():
     return render_template("stub.html")
 
+@app.route('/LucasAboutMe/')
+def LucasAboutMe ():
+    return render_template("LucasAboutMe.html")
+
+@app.route('/IanAboutMe/')
+def IanAboutMe ():
+    return render_template("IanAboutMe.html")
+
+@app.route('/KianAboutMe/')
+def KianAboutMe ():
+    return render_template("KianAboutMe.html")
+
+@app.route('/GavinAboutMe/')
+def GavinAboutMe ():
+    return render_template("GavinAboutMe.html")
+
 
 @app.route('/pokemoncards/')
 def pokemon_cards():
