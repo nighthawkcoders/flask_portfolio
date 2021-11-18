@@ -21,6 +21,10 @@ def tanay():
 def colin():
     return render_template('colin.html')
 
+@app.route('/pranav/')
+def pranav():
+    return render_template('pranav.html')
+
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)
