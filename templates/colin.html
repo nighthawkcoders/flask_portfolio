@@ -1,11 +1,15 @@
 <!DOCTYPE html>
-{% include "layouts/navbar.html" %}
+{% extends "layouts/base.html" %}
+{%block head %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Colin About</title>
 
 </head>
+{%endblock%}
+
+{% block body %}
 <body>
 <h1 class="text-center">Colin Home Page</h1>
 <div class="container">
@@ -29,6 +33,11 @@
             </tbody>
         </table>
     </div>
+
+    <div class="container">
+        <div class
+    </div>
+    </div>
 </body>
 
 <script>
@@ -42,4 +51,5 @@
         .src="/static/assets/colinNoMask.jpg";
     }
 </script>
+{% endblock %}
 </html>
