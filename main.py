@@ -39,6 +39,10 @@ def leah():
 def evan():
     return render_template("evan.html")
 
+@app.route('/simon/')
+def simon():
+    return render_template("simon.html")
+
 
 # runs the application on the development server
 if __name__ == "__main__":
