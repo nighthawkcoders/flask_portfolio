@@ -10,26 +10,32 @@ app = Flask(__name__)
 def index():
     return render_template("index.html")
 
+@app.route('/aboutnathan')
+def aboutnathan():
+    return render_template("aboutnathan.html")
 
-# connects /kangaroos path to render kangaroos.html
-@app.route('/kangaroos/')
-def kangaroos():
-    return render_template("kangaroos.html")
-
-
-@app.route('/walruses/')
-def walruses():
-    return render_template("walruses.html")
+@app.route('/aboutreem')
+def aboutreem():
+    return render_template("aboutreem.html")
 
 
-@app.route('/hawkers/')
-def hawkers():
-    return render_template("hawkers.html")
+@app.route('/aboutjacob')
+def aboutjacob():
+    return render_template("aboutjacob.html")
 
 
-@app.route('/stub/')
-def stub():
-    return render_template("stub.html")
+@app.route('/aboutjames')
+def aboutjames():
+    return render_template("aboutjames.html")
+
+
+@app.route('/aboutdaniel')
+def aboutdaniel():
+    return render_template("aboutdaniel.html")
+
+@app.route('/mainabout')
+def mainabout():
+    return render_template("mainabaout.html")
 
 
 # runs the application on the development server

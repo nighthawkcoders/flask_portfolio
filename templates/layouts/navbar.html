@@ -6,15 +6,21 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-            <!-- url_for is a Jinja2 pre-processor that finds route from function name (def) -->
-            <a class="nav-link" href={{ url_for('index') }}>Portfolio</a>
-            <a class="nav-link" href={{ url_for('kangaroos') }}>Kangaroos</a>
-            <a class="nav-link" href={{ url_for('walruses') }}>Walruses</a>
-            <a class="nav-link" href={{ url_for('hawkers') }}>Hawkers</a>
-            <!-- stub is shown using the name of the route -->
-            <a class="nav-link" href="/stub">Stub</a>
-        </div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <!--root menu -->
+            <li class="nav-item active">
+                <a class="nav-link" href="/mainabout">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarModel" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Pages
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/grid">Mini Labs</a>
+                    <a class="dropdown-item" href="/mainabout">About Us</a>
+                </div>
+            </li>
+        </ul>
     </div>
 </nav>

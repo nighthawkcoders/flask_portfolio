@@ -1,20 +1,27 @@
 {% extends "layouts/base.html" %}
 <!-- Custom block for standardizing Project Data-->
-{% block links %}
-    <div class="col-3">
-        <a href="{{ overview }}" class="btn">Overview</a>
-    </div>
+{% block body %}
+    <div class="row">
+        <div class="col-3">
+            <a href="{{ aboutdaniel }}" class="btn">Daniel</a>
+        </div>
 
-    <div class="col-3">
-        <a href="{{ scrumboard }}" class="btn">Scrum Board</a>
-    </div>
+        <div class="col-3">
+            <a href="{{ aboutnathan }}" class="btn">Nathan</a>
+        </div>
 
-    <div class="col-3">
-        <a href="{{ repo }}" class="btn">Repository</a>
+        <div class="col-3">
+            <a href="{{ aboutreem }}" class="btn">Reem</a>
+        </div>
     </div>
+    <div class="row">
+        <div class="col-6">
+            <a href="{{ aboutjames }}" class="btn">James</a>
+        </div>
 
-    <div class="col-3">
-        <a href="{{ authors }}" class="btn">Authors</a>
+        <div class="col-6">
+            <a href="{{ aboutjacob }}" class="btn">Jacob</a>
+        </div>
     </div>
 {% endblock %}
 
