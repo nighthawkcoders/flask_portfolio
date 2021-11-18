@@ -1,6 +1,6 @@
-/.idea/.gitignore
-/.idea/aws.xml
-/.idea/flask_portfolio.iml
-/.idea/misc.xml
-/.idea/modules.xml
-/.idea/vcs.xml
+### Exclude IntelliJ IDEA from GitHub ###
+.idea
+*.iws
+*.iml
+*.ipr
+*.xml
