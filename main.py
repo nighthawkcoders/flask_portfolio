@@ -35,37 +35,10 @@ def sonakshi():
     return render_template("sonakshi.html")
 
 
+@app.route('/genius', methods=['GET', 'POST'])
+def genius():
 
-
-
-
-
-
-@app.route('/timezoneapi', methods=['GET', 'POST'])
-def timezoneapi():
-
-    # import requests
-
-    url = "https://weatherbit-v1-mashape.p.rapidapi.com/current"
-
-    querystring = {"lon":"117.1611","lat":"32.7157"}
-
-    headers = {
-        'x-rapidapi-host': "weatherbit-v1-mashape.p.rapidapi.com",
-        'x-rapidapi-key': "8d571b2f72msh44f8fd48e083624p19cce1jsnfb1e373c1716"
-    }
-
-    response = requests.request("GET", url, headers=headers, params=querystring)
-    # return (response.text)
-
-    return render_template("timezoneapi.html", stats=response.json())
-
-
-@app.route('/newapi', methods=['GET', 'POST'])
-def newapi():
-
-    url = "https://community-open-weather-map.p.rapidapi.com/climate/month"
-
+    url = "https://genius.p.rapidapi.com/songs/442856"
     querystring = {"q":"San Diego"}
 
     headers = {
@@ -75,7 +48,27 @@ def newapi():
 
     response = requests.request("GET", url, headers=headers, params=querystring)
 
-    # return(response.text)
+    return render_template("newapi.html", stats=response.json())
+
+
+
+
+
+
+
+
+@app.route('/newapi', methods=['GET', 'POST'])
+def newapi():
+
+    url = "https://community-open-weather-map.p.rapidapi.com/climate/month"
+    querystring = {"q":"San Diego"}
+
+    headers = {
+        'x-rapidapi-host': "community-open-weather-map.p.rapidapi.com",
+        'x-rapidapi-key': "8d571b2f72msh44f8fd48e083624p19cce1jsnfb1e373c1716"
+    }
+
+    response = requests.request("GET", url, headers=headers, params=querystring)
 
     return render_template("newapi.html", stats=response.json())
 

@@ -2,8 +2,7 @@
 This HTML is setup as a fragment allowing it to be "included" by other HTML files via Jinja2
 -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="http://127.0.0.1:5000/">All Around The World</a>
-    <img class="animated-gif" src="http://gifimgs.com/res/1021/6179adb63a1a8806593935.gif"</img>
+        <a class="navbar-brand" href="http://127.0.0.1:5000/">Student Resources</a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -12,7 +11,6 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
         <div class="navbar-nav">
             <!-- url_for is a Jinja2 pre-processor that finds route from function name (def) -->
             <a class="nav-link" href={{ url_for('home') }}>Home</a>
-            <a class="nav-link" href={{ url_for('timezoneapi') }}>Current Weather Data/Timezone API</a>
             <a class="nav-link" href={{ url_for('newapi') }}>Historical Weather API</a>
             <a class="nav-link" href={{ url_for('sonakshi') }}>Sonakshi</a>
             <a class="nav-link" href="/stub">Stub</a>
