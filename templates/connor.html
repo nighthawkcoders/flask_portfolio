@@ -1,26 +1,20 @@
 <!DOCTYPE html>
-
-{% extends "layouts/base.html" %}
-
-{% block meta %}
-    <script>
-        function changeImage() {
-            if (document.getElementById("img1").src == document.getElementById('img_orig1').innerHTML) {
-                document.getElementById('img1').src = document.getElementById('img_gray1').innerHTML;
-            }
-            else {
-                document.getElementById('img1').src = document.getElementById('img_orig1').innerHTML;
-            }
-        }
-        // Hack: add java script function to toggle image from original to gray and back (toggle)
-        //  document.getElementById("img<n>").src
-        //  document.getElementID("img_gray<n>").innerHTML
-        //  help: https://www.geeksforgeeks.org/how-to-change-the-src-attribute-of-an-img-element-in-javascript-jquery/
-    </script>
-    <title>RGB starter</title>
-{% endblock %}
-
-{% block body %}
+{% include "layouts/navbar.html" %}
+<head>
+    <meta charset="UTF-8">
+    <title>Connor</title>
+</head>
+<script>
+    function mask() {
+        document.getElementById('place')
+        .src="/static/assets/connormask.jpg";
+    }
+    function nomask() {
+        document.getElementById('place')
+        .src="/static/assets/nomaskconnor.jpg";
+    }
+</script>
+<body>
 <h1 class="text-center">Connor Home Page</h1>
 <div class="container">
     <div class="row justify-content-md-center">
@@ -31,9 +25,14 @@
             </tr>
             </thead>
             <tbody>
-            {% for image in images %}
             <tr>
                 <td>
-                    <img class="img-responsive py-3" id=img{{loop.index}} alt="" width="256" height="Auto" src="{{image.base64}}" >
+                    <img id="place" class="img-responsive py-3" alt="" width="256" src="/static/assets/connormask.jpg" >
+                    <div>
+                        <button onclick="mask()">Mask</button>
+                        <button onclick="nomask()">No Mask</button>
+                    </div>
                 </td>
             </tr>
+</body>
+</html>
