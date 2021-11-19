@@ -2,15 +2,15 @@
 {% extends "layouts/base.html" %}
 
 <!- This variable sets name of browser tab  -->
-{% set project = "Leah" %}
+{% set project = "simon" %}
 
 <!- This is a replacement block for Body in base.html -->
 {% block body %}
-<!- Try building a new body here ->
+
 
 <style>
     p {
-        margin-left: 200px;
+        margin-left: 250px;
     }
 
     .mee{
@@ -24,12 +24,31 @@
         top: 555px;
         position: relative;
         left: 775px;
-        background: url("https://www.adesso.com/wp-content/uploads/2020/06/PPE-100_1.jpg") no-repeat;
+        background: url("https://propacusa.com/wp-content/uploads/2020/06/PPE-3-Ply-Mask.jpg") no-repeat;
         display: inline-block;
+        object-fit: contain;
+        z-index: 2;
     }
     .card:hover {
         background: url("images/card-front.jpg") no-repeat;
     }
+
+    div {
+        width: 100px;
+        height: 100px;
+        background: url("");
+        animation-name: simonb;
+        animation-duration: 4s;
+        top: 666px;
+        position: relative;
+        left: 775px;;
+    }
+
+    @keyframes simonb {
+        0%   {background: url("")}
+        100% {background: url("")}}
+
+
 
 
 </style>
@@ -53,11 +72,12 @@
     <p class="fun"> go to study you're probably stressed because of that test/quiz/something you have coming up so go to (insert website name here) </p>
        <p> and work for that grade you deserve. (insert website name here) </p>
         <p> is an amazing website full of study
-        resources it's also made by some really cool people, including me! ;) </p>
+            resources it's also made by some really cool people, including me! ;) </p>
+</div>
 
-
-    {% endblock %}
+{% endblock %}
 
 <!- This is turning off birds background from base.html -->
 {% block background %}
+
 {% endblock %}
