@@ -2,6 +2,7 @@
 from flask import Flask, render_template
 import requests
 import json
+import random
 # create a Flask instance
 app = Flask(__name__)
 
@@ -25,6 +26,8 @@ def simon():
 
 @app.route("/sanjay/")
 def sanjay():
+    options = ["soccer_efl_champ","soccer_epl","soccer_england_efl_cup","soccer_england_league1","soccer_england_league2"]
+    selection = options[random.randint(0,len(options)-1)]
     url = "https://odds.p.rapidapi.com/v1/odds"
 
     querystring = {"sport":"soccer_epl","region":"uk","mkt":"h2h","dateFormat":"iso","oddsFormat":"decimal"}
