@@ -130,7 +130,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 
     </style>
 
-    <!--<title>{{ basename }} | {{ project }} </title>
+    <title>{{ basename }} | {{ project }} </title>
     <div class="sidenav">
         <p>this is working :D</p>
         <a href="/leah">leah</a>
@@ -138,6 +138,8 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
         <a href="/evan">evan</a>
         <br>
         <a href="/simon">simon</a>
+        <br>
+        <a href="/sanjay">sanjay</a>
     </div>
 
 </head>
@@ -152,7 +154,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
     <div class="row justify-content-end" style="padding: 2%;">
         <div class="col-2" style="text-align: right;">
             {% block info %}
-                <!-- notice jinja style variables used in href's -->
+                <!-- notice jinja style variables used in href's --!>
                 <a><h5>{{basename}}</h5></a>
                 <a href={{github}} target="_blank"><i class="fa fa-github"></i></a>
                 <a href={{youtube}} target="_blank"><i class="fa fa-youtube-play"></i></a>

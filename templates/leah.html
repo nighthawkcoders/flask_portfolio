@@ -7,9 +7,11 @@
 <!- This is a replacement block for Body in base.html -->
 {% block body %}
     <!- Try building a new body here ->
-    <p>hopefully this shows up------------------------------------------------------------------------------------------</p>
     <p id="click" onclick="fun()">CLICK HERE!</p>
     <img id="nomask" onclick="mask()" src="/static/assets/leahunmasked.jpg">
+    <br>
+    <br>
+    <button class="btn" id="masking" onclick="mask()">mask</button>
 
     <script>
     var masked = false
@@ -27,7 +29,7 @@
             }
         }
     </script>
-
+    <br>
     <p> My name is Leah Bogomolny and I am in 12th grade</p>
     <p> I like to play games and hang out with friends</p>
     <p> I have an older sister named, Maggie, who is a junior in college.</p>
@@ -41,6 +43,9 @@
             margin-left: 250px;
             width: 207px;
             height: 368px;
+        }
+        button {
+            margin-left: 250px;
         }
     </style>
 {% endblock %}
