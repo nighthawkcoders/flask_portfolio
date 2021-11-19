@@ -7,29 +7,51 @@
     <title>Title</title>
 </head>
 {% block body %}
-    <div class="container">
-        <div class="row" style="margin:auto">
-            <div class="col-3">
-                <a href="/aboutdaniel" class="btn">Daniel</a>
+    <div class="col-0" style="margin: 3% 5% 2%" name="imgbox" id="imgbox">
+    <table class="table">
+        <thead>
+        <tr>
+            <div class="content_img">
+                <img src='/static/nathan1.jpg' width='125%' height='175%' style="margin: 0% 0% 0%">
+                <div>Nathan Manangan:<br>15 years old<br>Allergic to seafood </div>
             </div>
-
-            <div class="col-3">
-                <a href="/aboutnathan" class="btn">Nathan</a>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <div class="content_img">
+                <img src='/static/nathan1.jpg' width='125%' height='175%' style="margin: 0% 0% 0%">
+                <div>Daniel<br><br></div>
             </div>
-
-            <div class="col-3">
-                <a href="/aboutreem" class="btn">Reem</a>
+        </tr>
+        <tr>
+            <div class="content_img">
+                <img src='/static/nathan1.jpg' width='125%' height='175%' style="margin: 0% 0% 0%">
+                <div>Reem<br><br></div>
             </div>
-        </div>
-        <div class="row" style="margin-top:10%; margin-left:5%">
-            <div class="col-6">
-                <a href="/aboutjames" class="btn">James</a>
+        </tr>
+        <tr>
+            <div class="content_img">
+                <img src='/static/nathan1.jpg' width='125%' height='175%' style="margin: 0% 0% 0%">
+                <div>Jacob<br><br></div>
             </div>
-
-            <div class="col-6">
-                <a href="/aboutjacob" class="btn">Jacob</a>
+        </tr>
+        <tr>
+            <div class="content_img">
+                <img src='/static/nathan1.jpg' width='125%' height='175%' style="margin: 0% 0% 0%">
+                <div>James<br><br></div>
             </div>
-        </div>
-    </div>
+        </tr>
+        </tbody>
+    </table>
+    <style>
+        .content_img{
+            position: static;
+            width: 14%;
+            height: 20%;
+            float: left;
+            margin-right: 11%;
+        }
+    </style>
 {% endblock %}
 </html>
