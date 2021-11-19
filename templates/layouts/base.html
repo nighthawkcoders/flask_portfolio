@@ -22,9 +22,9 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         :root{
-            --txt: #fed2b9;
+            --txt: black;
             --black: #ceb680;
-            --bg: #64483f;
+            --bg: #8e6f64;
             --button: #fed2b9;
             --buttonhover: #64483f;
         }
@@ -100,7 +100,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             transform: translateY(-1px);
             box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2);
         }
-        /*.button {
+        .button {
             padding: .5em 2em;
             border-radius: 20px;
             background-color: transparent;
@@ -112,7 +112,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
         }
         .button:hover {
             background-color: #fed2b9
-            color: #64483f*/
+            color: #64483f
         }
         .row{
             margin: auto;
@@ -122,7 +122,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             width: 200px;
             position: fixed;
             alignment: left;
-            background-color: #1da1f3;
+            background-color: #64483f;
             overflow-x: hidden;
             padding-top: 20px;
             z-index: 0;
@@ -154,7 +154,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
     <div class="row justify-content-end" style="padding: 2%;">
         <div class="col-2" style="text-align: right;">
             {% block info %}
-                <!-- notice jinja style variables used in href's --!>
+                <!-- notice jinja style variables used in href's -->
                 <a><h5>{{basename}}</h5></a>
                 <a href={{github}} target="_blank"><i class="fa fa-github"></i></a>
                 <a href={{youtube}} target="_blank"><i class="fa fa-youtube-play"></i></a>

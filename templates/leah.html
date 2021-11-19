@@ -7,16 +7,25 @@
 <!- This is a replacement block for Body in base.html -->
 {% block body %}
     <!- Try building a new body here ->
-    <p id="click" onclick="fun()">CLICK HERE!</p>
+    <br>
     <img id="nomask" onclick="mask()" src="/static/assets/leahunmasked.jpg">
     <br>
     <br>
     <button class="btn" id="masking" onclick="mask()">mask</button>
+    <button class="btn" onclick="location.href='https://docs.google.com/document/d/14MmFHefrfgQY180T0y2Cm4jv_q2mBz3U1obzI0VOSqc/edit?usp=sharing';">journal</button>
 
     <script>
     var masked = false
+    var hello = false
         function fun(){
-            document.getElementById("click").innerHTML = "HELLO!!!" ;
+        if (hello === false) {
+            document.getElementById("click").innerHTML = "https://docs.google.com/document/d/14MmFHefrfgQY180T0y2Cm4jv_q2mBz3U1obzI0VOSqc/edit?usp=sharing" ;
+            hello = true
+        }
+        else {
+            document.getElementById("click").innerHTML = "journal" ;
+            hello = false
+        }
         }
         function mask(){
             if (masked === false) {
