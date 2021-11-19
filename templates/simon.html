@@ -2,58 +2,46 @@
 {% extends "layouts/base.html" %}
 
 <!- This variable sets name of browser tab  -->
-{% set project = "simon" %}
+{% set project = "Leah" %}
 
 <!- This is a replacement block for Body in base.html -->
 {% block body %}
-
+<!- Try building a new body here ->
 
 <style>
     p {
         margin-left: 250px;
     }
+    img {
+        margin-left: 250px;
+    }
+
 
     .mee{
         position: relative;
-    left: 755px;
+        left: 51%;
         font-size: 30px;}
 
-    .card {
-        width: 130px;
-        height: 130px;
-        top: 555px;
+    div.pic{
+        width: 380px;
+        height: 520px;
         position: relative;
-        left: 775px;
-        background: url("https://propacusa.com/wp-content/uploads/2020/06/PPE-3-Ply-Mask.jpg") no-repeat;
-        display: inline-block;
-        object-fit: contain;
-        z-index: 2;
-    }
-    .card:hover {
-        background: url("images/card-front.jpg") no-repeat;
+        left: 45%;
+        z-index: 4;
+        object-fit: scale-down;
+        background: url("https://lh3.googleusercontent.com/7va73Q90KGx2alpNVUxw4yVe_aKBNVJXlql1rQpoTc_xGWFEhRhkapZ8H4aPYcao1pGRe9bojkD18TmHi2UKvDd2YHV7ujMmUsR5sR4PTm1d7DhoreIlgU8picNjALlLJ6WkkPRXbRMkzJb5O4IhL-dB1TdKi249uQnzRPIT1p4A871jrNI5dywMPstQX-9cTp2lMwfb7ruqxCl3d8EIWGJ_jIEaStpPTNs82URkyeDA0Y1FJZi9r31yMsl33zdC9JKGTVjBdtQ4ON1KIfafphzADRvaihLBA1oydc1hPfnur_I4cWfY--tcCtbHdBGSaQBg_afaX0z51Iou8qdzYez1Yh1HYrMj_d1ARd4EO9BNpPblLWW_4x19l-11di6dxmLIXT8_3Mh7g1f_1uweA8vPloLfkfFqAGoTZiGCWbH_Jtwp3NxBa1orhZ7s9Z9cBF0WQ-p5SEcx_ilaPd1UeZf9MucUe43mG-4h6yOZu9rIJ7vk-j8BEBnxwZToWrO5083k8yPVCqLDrtBhY0MJ2aC9WbBHUPKOfLXB51SEkNVO7391ke_Iv4f4D6cuWguaH_-B4lbT9uYgS7FZh33YwBVgsEcwGTS_DdOnXsax5P1W8VkiUzccmM3tQaJ8HFf4WVbN3cWZrKfNb6BlugItpIpU91_Mr54IqVPTd-6m0leQm_CmGSvY8CuaXzGHgKcSGqC3cBhxusjZamyjhgz8P7W7=w459-h893-no?authuser=0")
     }
 
-    div {
-        width: 100px;
-        height: 100px;
-        background: url("");
-        animation-name: simonb;
-        animation-duration: 4s;
-        top: 666px;
+    div:hover.pic{
+        width: 380px;
+        height: 520px;
         position: relative;
-        left: 775px;;
-    }
-
-    @keyframes simonb {
-        0%   {background: url("")}
-        100% {background: url("")}}
-
-
-
+        left: 45%;
+        z-index: 4;
+        object-fit: scale-down;
+        background: url("https://lh3.googleusercontent.com/SRTDVhgyDbdBQVaaoInTAAMlI8C0cSMOknDo7-ZhiwVy5v40f5yp1Ida3DH1wR-pbqwq3glTla6VetDkiT8Ew4f5KEsJs1WhnF67y6chXXGN2jYIQZ3ectl40nIM56lGkLdQT91MJ1lZDsI_xd_nIIYfSMsrxinRRIFJ_Tk6Mb90dpJd4fnklRyTakEakyGUAbcvspWgJgTn_J5UQcH-SVaTWt57Pz_KobxUQ3E1zY69tWqbis9X3J8WrGwV232LBOYqRTS3N9eKN_XVohAb-cZ6OtEvVQw_qQHFdBstwWI183rz17lLyWmCq4PihgISIG7smf0yh2IezD_P0EiiyyU-iYm7YNpZBKBIQii6jm212rIwl63auLr7oL1TwtQ87crsUwEYyPH5arfwCmfF63lGbfWH4-0oF1w6shQZ6fm1alXytqb-NW2Zf41oyr29IaLI36a0obLhPVBc3mkOQ1Vx96hyJmWsuvmEv25KE_kba0lunFimQwZJhCC6pla0ChslJW9qShDW5XLvhUSE_B0En982ZoeBmhkeLS3NaXhQoFok7VJLIwaYsFIGJZgynnTPusVpzlpchBJceNhbcDtvo6cM6TH7awzcO5PTj1l0gmXEI89lU_X8loCOgUYgEaCQ86CxT27kNyK0hY4IvrDLx9sj8AyYQLkS0D19cMTeUu0yDNIekEmisJKmY2rPd2sb0CWqeOxytrT3VrfRKd6U=w396-h603-no?authuser=0") }
 
 </style>
-
-<div class="card"></div>
 
 <br>
 
@@ -70,14 +58,19 @@
     <p class="fun">Well now that you know you many fun things about me you should feel alot better,
         But if not, idk how you wouldn't, but if you don't some how...</p>
     <p class="fun"> go to study you're probably stressed because of that test/quiz/something you have coming up so go to (insert website name here) </p>
-       <p> and work for that grade you deserve. (insert website name here) </p>
-        <p> is an amazing website full of study
-            resources it's also made by some really cool people, including me! ;) </p>
+    <p> and work for that grade you deserve. (insert website name here) </p>
+    <p> is an amazing website full of study
+        resources it's also made by some really cool people, including me! ;) </p>
 </div>
+
+<br>
+
+<div class="pic">
+</div>
+
 
 {% endblock %}
 
 <!- This is turning off birds background from base.html -->
 {% block background %}
-
 {% endblock %}
