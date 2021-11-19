@@ -1,4 +1,4 @@
-<!-- Extending the predefined project layout -->
+<<!-- Extending the predefined project layout -->
 {% extends "layouts/base.html" %}
 
 <!- This variable sets name of browser tab  -->
@@ -19,7 +19,7 @@
 
     .mee{
         position: relative;
-        left: 51%;
+        left: 52%;
         font-size: 30px;
         }
 
@@ -66,13 +66,85 @@
 
 <br>
 
+<!-- Fun Fact Generator-->
+<p id = "GFG_UP" style =
+        "font-size: 1px; color:#64483f">
+</p>
 
+<p id = "GFG_DOWN" style =
+        "font-size: 24px; color:#fed2b9;border-style: outset;width:500px;position: relative;
+        left: 25%;">
+</p>
+
+
+<!--Button-->
+<div style="position: relative;
+        left: 54%">
+<button id = "button" onclick = "GFG_Fun()">
+    click for a fun fact
+
+</button>
+</div>
+
+
+<script>
+    var up = document.getElementById('GFG_UP');
+    var down = document.getElementById('GFG_DOWN');
+
+    var arr = ["I am 17 years old", "I am symphonic band's flute section leader",
+        "I have my learners permit", "I get my license in Jan. so excited!", "I love to read, particularly fantasy", "I just joined Del Nortes's hip-hop club",
+        " I am the solo Bass singer in our show choir Vocal Flight", "I had a great time at Home-Coming",
+        "I objectively have the Best friends in the world!", "My friends are better than yours /hj",
+        "I am better than you /j", "My favorite candy is Twix", "I am going to be a polar bear for Halloween",
+        "My friends and I are going to play some D&d on Halloween", "BOO!", "I have to lead a sectional today :(","*spooky noise", ];
+
+    up.innerHTML = "Click on the button to check "
+        + "the type of element.<br><br>" + arr;
+
+    function GFG_Fun() {
+        down.innerHTML =
+            arr[Math.floor(Math.random() * arr.length)];
+    }
+</script>
+
+
+<!--Question-->
+
+<p style="position:relative;left:64%">How perfect is Simon?</p>
+
+<input style="position:relative;left:82%" id="id1" type="number" min="100" max="100" required>
+<button onclick="myFunction()" style="position:relative;left:82%"> % </button>
+
+<p style="position:relative;left:64%"> Hint he's perfect </p>
+
+<p id="demo" style="position:relative;left:64%"></p>
+
+
+
+<script>
+    function myFunction() {
+        const inpObj = document.getElementById("id1");
+        if (!inpObj.checkValidity()) {
+            document.getElementById("demo").innerHTML = inpObj.validationMessage;
+        } else {
+            document.getElementById("demo").innerHTML = "Input OK";
+        }
+    }
+</script>
+
+
+
+<br>
+
+<!-- Notepad link to notes-->
 <a href="https://docs.google.com/document/d/14MmFHefrfgQY180T0y2Cm4jv_q2mBz3U1obzI0VOSqc/
-edit?usp=sharing">paired journal
+edit?usp=sharing" style="text-align:center">
+
+    <img style="width:100px;height:100px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Notepad_icon.svg/2048px-Notepad_icon.svg.png">
 
 </a>
 
-
+<!--This is my picture-->
 <div class="pic">
 </div>
 
@@ -81,4 +153,4 @@ edit?usp=sharing">paired journal
 
 <!- This is turning off birds background from base.html -->
 {% block background %}
-{% endblock %}
+{% endblock %}>
