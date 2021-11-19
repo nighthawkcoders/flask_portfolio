@@ -7,7 +7,7 @@
 <!- This is a replacement block for Body in base.html -->
 {% block body %}
 
-<h1>Linda Liu Individual Page</h1>
+<center><h1 style="font-family: 'Roboto Thin'">Linda Liu Individual Page</h1></center>
 
 <body style="background-color: #EBF7FA;">
 <style>
@@ -29,7 +29,7 @@
 <div style="margin: 2% 5% 5%; text-align:center; font-family: Baskerville; font-size: larger">
     <div>
 
-    <p>Hello <span id="myName">{{name}}</span>, I am Linda Liu!</p>
+    <p>Hello <span id="myName">{{name}}</span>, welcome to my individual page!</p>
 
     <form action="#" id="linda" method="POST" >
         <label for="name">Enter Your Name</label>
@@ -38,20 +38,23 @@
     </form>
 
     <br>
+
+
     <p>
-        <img src="/static/design/.jpeg" style="height: 300px; width: 350px;" id="imgClickAndChange" onclick="changeImage()"/>
+        <img src="/static/assets/lindaImages/withMask.jpg" style="height: 300px; width: auto;" id="imgClickAndChange" onclick="changeImage()"/>
     </p>
     <p style="font-size: large; font-family: Baskerville; text-align: center"><i>Click Me</i></p>
-    <script>
+    <script> //from Shreya
         function changeImage() {
 
-            if (document.getElementById("imgClickAndChange").src ="/static/design/.jpeg")
+            if (document.getElementById("imgClickAndChange").src ="/static/assets/lindaImages/withMask.jpg")
             {
-                document.getElementById("imgClickAndChange").src = "/static/design/.jpeg";
+                document.getElementById("imgClickAndChange").src = "/static/assets/lindaImages/withoutMask.jpg";
             }
-
         }
     </script>
 </div>
 </body>
+
+{% endblock %}
 
