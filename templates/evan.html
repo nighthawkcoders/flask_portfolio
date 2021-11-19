@@ -1,19 +1,13 @@
-{% extends "layouts/base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clicker Game</title>
+    {% extends "layouts/base.html" %}
+</head>
+<body>
+{%  block body %}
 
-<!- This variable sets name of browser tab  -->
-{% set project = "evan" %}
-
-<!- This is a replacement block for Body in base.html -->
-{% block body %}
-    <!- Try building a new body here ->
-    <p>hopefully this shows up------------------------------------------------------------------------------------------</p>
-    <style>
-        p {
-            margin-left: 200px;
-        }
-    </style>
-{% endblock %}
-
-<!- This is turning off birds background from base.html -->
-{% block background %}
-{% endblock %}
+{%  endblock %}
+</body>
+</html>
