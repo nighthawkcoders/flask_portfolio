@@ -7,26 +7,54 @@
 <!- This is a replacement block for Body in base.html -->
 {% block body %}
 
-<!- Try building a new body here ->
-<div class="center-block" style="margin: 2% 5% 5%; text-align:left;">
 
-    <div class="container-fluid">
-        <div class="row justify-content-end">
-            <div class="col-8">
-            </div>
-            <div class="col-8">
-                <p>Hello, <span id="name">{{name1}}</span>!</p>
-            </div>
-        </div>
-        <div class="col-8">
-            <form action="/khushi/" id="greet" method="POST" >
-                <label for="name">Type a greeting name?</label>
-                <input name="name" id="name1">
-                <input type="submit" value="Greetings!" onclick= "(function (){document.getElementById('name').innerText=document.getElementById('name1').value})();return false;">
-            </form>
-        </div>
-    </div>
+<title>Greet Khushi</title>
+<body style="background-color: #EBF7FA;">
+<style>
+   .button1 {
+       background-color: white;
+       color: grey;
+       border: 3px solid #9CD8EC;
+       text-decoration: none;
+       margin: 4px 2px;
+       padding: 3px 4px;
+   }
+
+   .button1:hover {
+       background-color: whitesmoke;
+       color: black;
+   }
+</style>
+
+<img id="myImage" onclick="changeImage()" src="/static/assets/khushi2.jpg" width="250" height="250">
+
+<p>Hello <span id="myName">{{name}}</span>, Greetings!</p>
+
+<form action="#" id="khushi" method="POST" >
+    <label for="name">Enter Your Name</label>
+    <input name="name" id="name">
+    <input type="submit" value="Go!" onclick="(function (){document.getElementById('myName').innerText=document.getElementById('name').value})();return false;">
+</form>
+
+<br>
+<p>
+    <img src="/static/assets/khushiimages/Khushi.jpg" style="height: 400px; width: 350px;" id="imgClickAndChange" onclick="changeImage()"/>
+</p>
+<p style="font-size: large; font-family: Baskerville; text-align: center"><i>Click Me</i></p>
+<script>
+   function changeImage() {
+
+       if (document.getElementById("imgClickAndChange").src ="/static/assets/khushiimages/Khushi.jpg")
+       {
+           document.getElementById("imgClickAndChange").src = "/static/assets/khushiimages/khushi2.jpg";
+       }
+
+   }
+</script>
 </div>
+</body>
+
+
 {% endblock %}
 
 {% block background %}
