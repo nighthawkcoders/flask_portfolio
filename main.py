@@ -33,9 +33,9 @@ def aboutjames():
 def aboutdaniel():
     return render_template("aboutdaniel.html")
 
-@app.route('/mainabout')
+@app.route('/mainabout/')
 def mainabout():
-    return render_template("mainabaout.html")
+    return render_template("mainabout.html")
 
 
 # runs the application on the development server
