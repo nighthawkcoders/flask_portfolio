@@ -35,7 +35,7 @@ Scrum Board:
 | Reem Ben Ishai | Reem57 | [Scrumboard]() | [Issue]() | [Commits]()| [@Reem57]()|
 | James Lee  | __          | [Scrumboard]() | [Issue]() | [Commits]()| [@JL1080]()|
 | Jacob Rozenkrants     | __  | [Scrumboard]() | [Issue]() | [Commits]()| [@]()|
-| __      | __  | [Scrumboard]() | [Issue]() | [Commits]()| [@]()|
+| Daniel Bertino     | Danny4w | [Scrumboard]() | [Issue]() | [Commits]()| [@Danny4w]()|
 
 ## Current Functions
 | Function | Contributor(s)|
