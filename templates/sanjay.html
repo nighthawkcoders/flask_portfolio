@@ -1,8 +1,40 @@
+{% extends "layouts/base.html" %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+{% block body %}
+<h1 style="text-align:center">
+Sanjay Bharadwaj
+</h1>
+<section class="description container">
+    <figure class="img">
+        <img src="/static/assets/sanjaypic1.jpg" alt="nomask" id="nomask" >
+        </img>
+        <img src = "/static/assets/sanjaypic2.jpg" alt='mask' id="mask" style="display: none;">
+        </img>
+    </figure>
+    <div class='text'>
+        <h4 style="text-align: center;"> About me </h4>
+        <p>Hi, I'm Sanjay. I'm a sophomore at Del Norte High School. I like Computer Science and hope to pursue this in the future.</p>
+        <button class="btn" onclick="changePic()">Change Picture</button>
+    </div>
+</section>
+<section class="container">
+<h3 style="text-align: center;"> API Excercise </h3>
+<table>
+    <tr>
+        <th>Date</th>
+        <th>Team1</th>
+        <th>Team2</th>
+    </tr>
+    {% for x in data["data"] %}
+    <tr>
+        <td>{{x["commence_time"]}}</td>
+        <td>{{x["teams"][0]}}</td>
+        <td>{{x["teams"][1]}}</td>
+    </tr>
+    {% endfor %}
+</table>
+</section>
     <script>
         function changePic() {
             if (document.getElementById("nomask").style.display == "block") {
@@ -16,96 +48,51 @@
         }
     </script>
     <style>
+        .container {
+            margin: 0 auto;
+        }
         .description {
             display: flex;
             justify-content: space-between;
-            border: 2px solid green
         }
         .img {
             width: 33%;
-            border: 2px solid blue;
         }
         .img img {
-            margin: 0 auto;
+            width: 75%;
         }
         .text {
             width: 60%;
-            border: 2px solid red;
             padding: 2em;
         }
-    </style>
-</head>
-<body>
-<h1>
-Sanjay Bharadwaj
-</h1>
-<section class="description">
-    <figure class="img">
-        <img src="https://picsum.photos/200/300" alt="nomask" id="nomask">
-        </img>
-        <img src = "https://picsum.photos/300/300" alt='mask' id="mask" style="display: none">
-        </img>
-    </figure>
-    <div class='text'>
-        <h4 style="text-align: center;"> About me </h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta lacus pulvinar dolor tincidunt, imperdiet suscipit urna dapibus. Nullam vitae dictum ante. Vivamus laoreet dolor tincidunt eros lacinia, at pulvinar nulla hendrerit. Donec auctor dolor eu elit ultricies efficitur. Nulla vel sapien lectus. Morbi tempor felis ac dui sollicitudin cursus.</p>
-        <button onclick="changePic()">Change Picture</button>
-    <<!DOCTYPE html>
-     <html lang="en">
-     <head>
-         <meta charset="UTF-8">
-         <title>Title</title>
-         <script>
-             function changePic() {
-                 if (document.getElementById("nomask").style.display == "block") {
-                     document.getElementById("mask").style.display = "block"
-                     document.getElementById("nomask").style.display = "none"
-                 } else {
-                     document.getElementById("mask").style.display = "none"
-                     document.getElementById("nomask").style.display = "block"
+        table,th,td {
+            border: 1px solid #fed2b9;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
 
-                 }
-             }
-         </script>
-         <style>
-             .description {
-                 display: flex;
-                 justify-content: space-between;
-                 border: 2px solid green
-             }
-             .img {
-                 width: 33%;
-                 border: 2px solid blue;
-             }
-             .img img {
-                 margin: 0 auto;
-             }
-             .text {
-                 width: 60%;
-                 border: 2px solid red;
-                 padding: 2em;
-             }
-         </style>
-     </head>
-     <body>
-     <h1>
-     Sanjay Bharadwaj
-     </h1>
-     <section class="description">
-         <figure class="img">
-             <img src="https://picsum.photos/200/300" alt="nomask" id="nomask">
-             </img>
-             <img src = "https://picsum.photos/300/300" alt='mask' id="mask" style="display: none">
-             </img>
-         </figure>
-         <div class='text'>
-             <h4 style="text-align: center;"> About me </h4>
-             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta lacus pulvinar dolor tincidunt, imperdiet suscipit urna dapibus. Nullam vitae dictum ante. Vivamus laoreet dolor tincidunt eros lacinia, at pulvinar nulla hendrerit. Donec auctor dolor eu elit ultricies efficitur. Nulla vel sapien lectus. Morbi tempor felis ac dui sollicitudin cursus.</p>
-             <button onclick="changePic()">Change Picture</button>
-         </div>
-     </section>
-     </body>
-     </html>/div>
-</section>
-</body>
+        }
+        th{
+            height: 70px;
+
+        }
+        th,td {
+            padding: 15px;
+        }
+        td {
+            text-align: center;
+            height: 50px;
+
+        }
+        tr:hover {
+            background-color: #fed2b9;
+            color: #64483f;
+        }
+        section {
+            width: 80%;
+        }
+    </style>
+
+{% endblock %}
 </html>
