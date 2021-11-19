@@ -19,13 +19,20 @@
 
 <div style="margin: 2% 5% 5%; text-align:center; font-family: Baskerville; font-size: larger">
     <div>
-        <p style="font-size: x-large"id="wave"><strong>Hello{{name}}!</strong></p>
+        <p style="font-size: x-large"id="wave"><strong>Hello, {{name}}!</strong></p>
         <script>
             var targetForWave = document.getElementById("wave");
             targetForWave.textContent += String.fromCodePoint(0x1F44B);
         </script>
     </div>
 
+    <div>
+        <form action="/sonakshi" id="sonakshi" method="POST" >
+            <label for="name">Enter a greeting name!</label>
+            <input name="name" id="name">
+            <input type="submit" class="button1" value="Greetings!">
+        </form>
+    </div>
 
     <br>
     <p>
