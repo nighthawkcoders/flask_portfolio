@@ -53,6 +53,17 @@ def rohan():
             return render_template("rohan.html", name1=name)
     return render_template("rohan.html", name1="homie")
 
+# Genius Lyrics api
+url = "https://genius.p.rapidapi.com/artists/16775/songs"
+
+headers = {
+    'x-rapidapi-host': "genius.p.rapidapi.com",
+    'x-rapidapi-key': "SIGN-UP-FOR-KEY"
+}
+
+response = requests.request("GET", url, headers=headers)
+
+print(response.text)
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)
