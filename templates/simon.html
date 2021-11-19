@@ -2,7 +2,7 @@
 {% extends "layouts/base.html" %}
 
 <!- This variable sets name of browser tab  -->
-{% set project = "Leah" %}
+{% set project = "Simon" %}
 
 <!- This is a replacement block for Body in base.html -->
 {% block body %}
@@ -41,7 +41,6 @@
         z-index: 4;
         object-fit: scale-down;
         background: url("https://lh3.googleusercontent.com/SRTDVhgyDbdBQVaaoInTAAMlI8C0cSMOknDo7-ZhiwVy5v40f5yp1Ida3DH1wR-pbqwq3glTla6VetDkiT8Ew4f5KEsJs1WhnF67y6chXXGN2jYIQZ3ectl40nIM56lGkLdQT91MJ1lZDsI_xd_nIIYfSMsrxinRRIFJ_Tk6Mb90dpJd4fnklRyTakEakyGUAbcvspWgJgTn_J5UQcH-SVaTWt57Pz_KobxUQ3E1zY69tWqbis9X3J8WrGwV232LBOYqRTS3N9eKN_XVohAb-cZ6OtEvVQw_qQHFdBstwWI183rz17lLyWmCq4PihgISIG7smf0yh2IezD_P0EiiyyU-iYm7YNpZBKBIQii6jm212rIwl63auLr7oL1TwtQ87crsUwEYyPH5arfwCmfF63lGbfWH4-0oF1w6shQZ6fm1alXytqb-NW2Zf41oyr29IaLI36a0obLhPVBc3mkOQ1Vx96hyJmWsuvmEv25KE_kba0lunFimQwZJhCC6pla0ChslJW9qShDW5XLvhUSE_B0En982ZoeBmhkeLS3NaXhQoFok7VJLIwaYsFIGJZgynnTPusVpzlpchBJceNhbcDtvo6cM6TH7awzcO5PTj1l0gmXEI89lU_X8loCOgUYgEaCQ86CxT27kNyK0hY4IvrDLx9sj8AyYQLkS0D19cMTeUu0yDNIekEmisJKmY2rPd2sb0CWqeOxytrT3VrfRKd6U=w396-h603-no?authuser=0") }
-
 </style>
 
 <br>
@@ -49,16 +48,16 @@
 <h1 class="mee"> Simon's Page</h1>
 
 <div style="text-align:center" class="aboutme">
-    <p class="fun"> Hello welcome to Simon Brunzell's about us Page, this is a page about the greatest thing ever... me!</p>
-    <p class="fun">Some fun facts about me include...</p>
-    <p class="fun"> I'm in 12th grade in my Senior year, I am a part of the Del Norte music program, I play the flute, have participated in choir, and
+    <p> Hello welcome to Simon Brunzell's about us Page, this is a page about the greatest thing ever... me!</p>
+    <p>Some fun facts about me include...</p>
+    <p> I'm in 12th grade in my Senior year, I am a part of the Del Norte music program, I play the flute, have participated in choir, and
         am a upcoming flute section leader for symphonic band, </p>
-    <p class="fun"> I'm a part of our school's GSA, as well as our Hip Hop club </p>
-    <p class="fun"> I am the oldest sibling, with two younger siblings, my younger brother Sebastian,
+    <p> I'm a part of our school's GSA, as well as our Hip Hop club </p>
+    <p> I am the oldest sibling, with two younger siblings, my younger brother Sebastian,
         and my younger sister Josephine</p>
-    <p class="fun">Well now that you know you many fun things about me you should feel alot better,
+    <p>Well now that you know you many fun things about me you should feel alot better,
         But if not, idk how you wouldn't, but if you don't some how...</p>
-    <p class="fun"> go to study you're probably stressed because of that test/quiz/something you have coming up so go to (insert website name here) </p>
+    <p> go to study you're probably stressed because of that test/quiz/something you have coming up so go to (insert website name here) </p>
     <p> and work for that grade you deserve. (insert website name here) </p>
     <p> is an amazing website full of study
         resources it's also made by some really cool people, including me! ;) </p>
@@ -67,8 +66,7 @@
 <br>
 
 <!-- Fun Fact Generator-->
-<p id = "GFG_UP" style =
-        "font-size: 1px; color:#64483f">
+<p id="GFG_UP" style="font-size: 1px; color:#64483f">
 </p>
 
 <p id = "GFG_DOWN" style =
@@ -79,8 +77,8 @@
 
 <!--Button-->
 <div style="position: relative;
-        left: 54%">
-<button id = "button" onclick = "GFG_Fun()">
+        left: 50%">
+<button class="btn" id="button" onclick="GFG_Fun()">
     click for a fun fact
 
 </button>
@@ -109,17 +107,14 @@
 
 
 <!--Question-->
-
 <p style="position:relative;left:64%">How perfect is Simon?</p>
 
 <input style="position:relative;left:82%" id="id1" type="number" min="100" max="100" required>
-<button onclick="myFunction()" style="position:relative;left:82%"> % </button>
+<button class="btn"  onclick="myFunction()" style="position:relative;left:82%"> % </button>
 
 <p style="position:relative;left:64%"> Hint he's perfect </p>
 
 <p id="demo" style="position:relative;left:64%"></p>
-
-
 
 <script>
     function myFunction() {
