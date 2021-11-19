@@ -2,7 +2,7 @@
 {% extends "layouts/base.html" %}
 
 <!- This variable sets name of browser tab  -->
-{% set project = "Adi is Awesome" %}
+{% set project = "Adi" %}
 
 <!- This is a replacement block for Body in base.html -->
 {% block body %}
@@ -11,14 +11,11 @@
         Adi Khandelwal Home Page
     </h1>
 
+    <div>
+    <input type="button" onClick=changeimage() value="Change Image"/>
     <br>
-    <input type="button" onClick="changeimage()" value="Change Image"/>
-    <img src="https://www.iconsdb.com/icons/preview/white/square-xxl.png" id="image0" width="900" height="750" hidden="hidden">
-    <br>
-    <div
-            class="center-block"
-            style="margin: 2% 5% 5%; text-align: center; font-family: gilroy, serif">
-    </div>
+    <img src="https://www.powayusd.com/PUSD/media/DNHS/images/slider/Hi-Res-School-Photo-min.jpg?ext=.jpg" id="image" width="800" height="300" >
+  </div>
     <p align="center">
 <!--        <iframe-->
 <!--                width="1000"-->
@@ -28,20 +25,29 @@
     </p>
 {% endblock %}
 <script>
+    const pic1='img'.src;
+    const pic2=image 2;
+     var imagenumber=0;
+
     function changeimage() {
-        const images = ["https://m.media-amazon.com/images/I/81dIEAgoytL._AC_SL1500_.jpg",
-            "https://m.media-amazon.com/images/I/515kAp4XiRL._AC_SL1000_.jpg",
-            "https://m.media-amazon.com/images/I/91oKfKVZjHL._AC_SL1500_.jpg",
-            "https://www.lego.com/cdn/cs/set/assets/blt892f38a4fd55edeb/75257.jpg?fit=bounds&format=jpg&quality=80&width=1500&height=1500&dpr=1",
-            "https://m.media-amazon.com/images/I/71aYQI5JwBL._AC_SL1500_.jpg"
-        ];
-        for(i=0;i<images.length;i++){
-            image='image'+i;
-            document.getElementById(image).src=images[i];
-            document.getElementById(image).hidden = false;
+        if(imagenumber==0){
+
+            imagenumber=1;
+        }else if(imagenumber==1){
+
+            imagenumber=0;
         }
+        document.getElementById('image').src = "http://1.bp.blogspot.com/-A2AJ-eifDWU/UqQj1D95ZeI/AAAAAAAAYHA/-oNiUWxWrNs/s1600/IMAG2928.jpg";
     }
 </script>
+
+
+
+
+        //     document.getElementById(image).src=images[i];
+        //     document.getElementById(image).hidden = false;
+
+
 
 
 <!- This is turning off birds background from base.html -->
