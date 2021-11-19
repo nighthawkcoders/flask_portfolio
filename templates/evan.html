@@ -2,12 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Clicker Game</title>
-    {% extends "layouts/base.html" %}
+    <title>About Evan</title>
 </head>
-<body>
+
+{% extends 'layouts/base.html' %}
+
 {%  block body %}
 
-{%  endblock %}
+<body style="text-align: center;">
+
+<h1>Evan Sanchez</h1>
+
+<section style="margin-left: 20%; margin-right: 20%;">
+
+<h2> About Me </h2>
+
+    <p style="font-size: 18px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta lacus pulvinar dolor tincidunt,
+        imperdiet suscipit urna dapibus. Nullam vitae dictum ante. Vivamus laoreet dolor tincidunt eros
+        lacinia, at pulvinar nulla hendrerit. Donec auctor dolor eu elit ultricies efficitur. Nulla vel
+        sapien lectus. Morbi tempor felis ac dui sollicitudin cursus.</p>
+
+    <img src="https://picsum.photos/500/300">
+
+    <img src="https://picsum.photos/500/300">
+
+    <hr> <h2>Image Toggle</h2>
+
+    <img id='img1' src="https://picsum.photos/300">
+
+
+  <br>  <button onclick='toggleSwitch()'> Click me to Toggle</button>
+</section>
+
 </body>
+
+    <script>
+    function toggleSwitch(){
+        if(document.getElementById('img1').src == 'https://picsum.photos/300'){
+            document.getElementById('img1').src = 'https://picsum.photos/300?grayscale';
+        } else{
+            document.getElementById('img1').src = 'https://picsum.photos/300';
+        }
+    }
+    </script>
+
+{%  endblock %}
 </html>
