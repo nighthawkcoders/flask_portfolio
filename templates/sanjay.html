@@ -7,20 +7,29 @@ Sanjay Bharadwaj
 </h1>
 <section class="description container">
     <figure class="img">
-        <img src="/static/assets/sanjaypic1.jpg" alt="nomask" id="nomask" >
+        <img src="/static/assets/sanjaypic1.jpg" alt="nomask" id="nomask" style="display: none;" >
         </img>
-        <img src = "/static/assets/sanjaypic2.jpg" alt='mask' id="mask" style="display: none;">
+        <img src = "/static/assets/sanjaypic2.jpg" alt='mask' id="mask" >
         </img>
     </figure>
     <div class='text'>
         <h4 style="text-align: center;"> About me </h4>
         <p>Hi, I'm Sanjay. I'm a sophomore at Del Norte High School. I like Computer Science and hope to pursue this in the future.</p>
-        <button class="btn" onclick="changePic()">Change Picture</button>
+        <table style="margin-bottom: 20px">
+            <tr>
+                <td> <a href="https://github.com/SanjayB06">Github Profile</a> </td>
+
+                <td> <a href="https://github.com/SimonBrunzell/flask_portfolio/commits?author=SanjayB06">Commits</a> </td>
+                <td> <a href="https://github.com/SimonBrunzell/flask_portfolio/projects/1?card_filter_query=assignee%3Asanjayb06">Scrum Board Tasks</a> </td>
+
+            </tr>
+        </table>
+        <button class="btn" id="toggler" onclick="changePic()">No Mask</button>
     </div>
 </section>
 <section class="container">
 <h3 style="text-align: center;"> API Excercise </h3>
-<table>
+<table class="table">
     <tr>
         <th>Date</th>
         <th>Team1</th>
@@ -35,14 +44,18 @@ Sanjay Bharadwaj
     {% endfor %}
 </table>
 </section>
+<section>
+</section>
     <script>
         function changePic() {
             if (document.getElementById("nomask").style.display == "block") {
-                document.getElementById("mask").style.display = "block"
-                document.getElementById("nomask").style.display = "none"
+                document.getElementById("mask").style.display = "block";
+                document.getElementById("nomask").style.display = "none";
+                document.getElementById("toggler").innerText = "No Mask"
             } else {
-                document.getElementById("mask").style.display = "none"
-                document.getElementById("nomask").style.display = "block"
+                document.getElementById("mask").style.display = "none";
+                document.getElementById("nomask").style.display = "block";
+                document.getElementById("toggler").innerText = "Put mask back on pls"
 
             }
         }
@@ -60,12 +73,13 @@ Sanjay Bharadwaj
         }
         .img img {
             width: 75%;
+            border-radius: 50px;
         }
         .text {
             width: 60%;
             padding: 2em;
         }
-        table,th,td {
+        .table,th,td {
             border: 1px solid #fed2b9;
         }
         table {
@@ -85,7 +99,7 @@ Sanjay Bharadwaj
             height: 50px;
 
         }
-        tr:hover {
+        .table tr:hover {
             background-color: #fed2b9;
             color: #64483f;
         }
