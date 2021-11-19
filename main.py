@@ -55,7 +55,9 @@ def genius():
 def linda():
     return render_template("linda.html")
 
-
+@app.route('/khushi')
+def khushi():
+    return render_template("khushi.html")
 
 @app.route('/newapi', methods=['GET', 'POST'])
 def newapi():
