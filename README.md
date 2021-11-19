@@ -8,7 +8,7 @@ Starter code should be fun and practical.
 |---|---|
 | Sanjay  |  [About Page](https://github.com/SimonBrunzell/flask_portfolio/commit/35bd15cff37a527274e25a305ca8c6ccde16d00b)<br/> [About Page PT 2](https://github.com/SimonBrunzell/flask_portfolio/commit/e900e68e8917848690659b15b8aec711a6f68938#diff-9593e34db94aca426d593f1f46c03f1c73307157df159e66ca8e092c1aac655f) <br/> [About Page API](https://github.com/SimonBrunzell/flask_portfolio/commit/e900e68e8917848690659b15b8aec711a6f68938#diff-b10564ab7d2c520cdd0243874879fb0a782862c3c902ab535faabe57d5a505e1) <br/> [Base.html Changes](https://github.com/SimonBrunzell/flask_portfolio/commit/e900e68e8917848690659b15b8aec711a6f68938#diff-76445280ac812dc6e42103e56c567a6b21eb2fc8f5d5c87554cf985da0a6a9ab)|
 | Evan  |   |
-| Leah  |   |
+| Leah  |  [started work on a sidebar](https://github.com/SimonBrunzell/flask_portfolio/commit/2944fbaf4efe0845bd2a22f301329bd0fd3a0192) <br/> [made the sidebar on every page](https://github.com/SimonBrunzell/flask_portfolio/commit/6cce5e051f31bc74651bc102ae69d981a1d3c099) <br/> [sidebar margin doesn't cover body](https://github.com/SimonBrunzell/flask_portfolio/commit/5c31638a550e0ca91232962d9c1b1e5145e84b96) <br/> [editing sidebar for scrolling](https://github.com/SimonBrunzell/flask_portfolio/commit/d2d7547e5ea74d2e4e10f70925e46058fd3182ca) <br/> [starting on my about page](https://github.com/SimonBrunzell/flask_portfolio/commit/062eb7af7c5d4fc19ff56ce826df7073a2d6c06e) <br/> [putting the picture onto my about page](https://github.com/SimonBrunzell/flask_portfolio/commit/1b816cd2b4bdd27922ccde1e59fbb80b923687e0) |
 | Simon  |   |
 | Vunsh  |   |
 
