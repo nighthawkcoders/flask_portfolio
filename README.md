@@ -15,7 +15,7 @@
 ## Contributors
 ---------------------------------------
 
-Contributors: 
+Contributors: Daniel, Nathan, Reem, James, & Jacob
 
 Scrum Board: 
 
