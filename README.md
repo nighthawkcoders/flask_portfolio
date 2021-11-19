@@ -6,5 +6,5 @@ Website function: The purpose of this website is to represent information for ce
 - we created the necessities for the team such as slack, github, setup new project etc.
 - Started individual homepages
 - start journals
-- 
+- 1.1 and 1.2 quizzes
 
