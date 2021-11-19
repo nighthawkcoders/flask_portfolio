@@ -22,9 +22,11 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         :root{
-            --white: #fed2b9;
+            --txt: #fed2b9;
             --black: #ceb680;
-            --grey: #64483f;
+            --bg: #64483f;
+            --button: #fed2b9;
+            --buttonhover: #64483f;
         }
 
         html, body{
@@ -34,12 +36,12 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             -moz-animation: fadein 2s; /* Firefox */
             -webkit-animation: fadein 2s; /* Safari and Chrome */
             -o-animation: fadein 2s; /* Opera */
-            background-color: var(--grey);
-            color: var(--white);
+            background-color: var(--bg);
+            color: var(--txt);
         }
 
         .dark-mode {
-            background-color: var(--white);
+            background-color: var(--txt);
             color: var(--black);
         }
 
@@ -74,21 +76,21 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             color: #000000;
         }
 
+        .btn,
         .btn:link,
         .btn:visited {
             text-transform: uppercase;
             text-decoration: none;
-            padding: 15px 40px;
+            padding: .5em 2em;
             display: inline-block;
-            border-radius: 100px;
+            border-radius: 25px;
             transition: all .2s;
-            position: absolute;
-            color: white;
-            font-size: 2.5em;
+            color: #fed2b9;
+            border: 2px solid #fed2b9
         }
 
         .btn:hover {
-            transform: translateY(-3px);
+            background-color: #fed2b9;
             box-shadow: 0 20px 40px rgba(255, 255, 255, 0.2);
         }
 
@@ -96,7 +98,20 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             transform: translateY(-1px);
             box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2);
         }
+        /*.button {
+            padding: .5em 2em;
+            border-radius: 20px;
+            background-color: transparent;
+            transition: all .5s;
+            outline: none
+            color: #fed2b9;
+            border: 2px solid #fed2b9
 
+        }
+        .button:hover {
+            background-color: #fed2b9
+            color: #64483f*/
+        }
         .row{
             margin: auto;
         }
@@ -112,13 +127,13 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 
     </style>
 
-    <title>{{ basename }} | {{ project }} </title>
+    <!--<title>{{ basename }} | {{ project }} </title>
     <div class="sidenav">
         <p>this is working :D</p>
         <a href="/leah">leah</a>
         <br>
         <a href="/evan">evan</a>
-    </div>
+    </div>-->
 
 </head>
 
