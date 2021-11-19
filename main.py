@@ -2,6 +2,7 @@
 from flask import Flask, render_template
 import requests
 import json
+
 # create a Flask instance
 app = Flask(__name__)
 
@@ -32,20 +33,24 @@ def hawkers():
 def stub():
     return render_template("stub.html")
 
+
 @app.route('/LucasAboutMe/')
-def LucasAboutMe ():
+def LucasAboutMe():
     return render_template("LucasAboutMe.html")
 
+
 @app.route('/IanAboutMe/')
-def IanAboutMe ():
+def IanAboutMe():
     return render_template("IanAboutMe.html")
 
+
 @app.route('/KianAboutMe/')
-def KianAboutMe ():
+def KianAboutMe():
     return render_template("KianAboutMe.html")
 
+
 @app.route('/GavinAboutMe/')
-def GavinAboutMe ():
+def GavinAboutMe():
     return render_template("GavinAboutMe.html")
 
 
@@ -67,6 +72,10 @@ def pokemon_cards():
 def sports_cards():
     return render_template("sports_cards.html")
 
+
+@app.route('/funkopops/')
+def funko_pops():
+    return render_template("funko_pops.html")
 
 
 # runs the application on the development server
