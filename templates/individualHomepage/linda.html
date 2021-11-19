@@ -1,0 +1,52 @@
+{% block body %}
+
+    <center><h1 style="font-family: 'Roboto Thin'">Linda Liu Individual Homepage</h1></center>
+
+    <body style="background-color: white;">
+    <style>
+        .button1 {
+            background-color: white;
+            color: grey;
+            border: 3px solid #9CD8EC;
+            text-decoration: none;
+            margin: 4px 2px;
+            padding: 3px 4px;
+        }
+
+        .button1:hover {
+            background-color: whitesmoke;
+            color: black;
+        }
+    </style>
+
+    <div style="margin: 2% 5% 5%; text-align:center; font-family: Baskerville; font-size: larger">
+        <div>
+
+            <p>Hello <span id="myName">{{name}}</span>, welcome to my individual page!</p>
+
+            <form action="#" id="linda" method="POST" >
+                <label for="name">Enter Your Name</label>
+                <input name="name" id="name">
+                <input type="submit" value="Go!" onclick="(function (){document.getElementById('myName').innerText=document.getElementById('name').value})();return false;">
+            </form>
+
+            <br>
+
+
+            <p>
+                <img src="/static/assets/lindaWithMask.jpg" style="height: 350px; width: auto;" id="imgClickAndChange" onclick="changeImage()"/>
+            </p>
+            <p style="font-size: large; font-family: Baskerville; text-align: center"><i>Click Me</i></p>
+            <script> //from Shreya
+            function changeImage() {
+
+                if (document.getElementById("imgClickAndChange").src ="/static/assets/lindaWithMask.jpg")
+                {
+                    document.getElementById("imgClickAndChange").src = "/static/assets/lindaWithoutMask.jpg";
+                }
+            }
+            </script>
+        </div>
+    </body>
+
+{% endblock %}
