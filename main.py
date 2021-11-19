@@ -31,7 +31,17 @@ def aboutjames():
 
 @app.route('/aboutdaniel')
 def aboutdaniel():
-    return render_template("aboutdaniel.html")
+    url = ""
+
+    headers = {
+    'x-rapidapi-host': "",
+    'x-rapidapi-key': ""
+    }
+    response = requests.request("GET", url, headers=headers)
+    output = json.loads(response.text)
+
+    print(response.text)
+    return render_template("aboutdaniel.html",x=output)
 
 @app.route('/mainabout/')
 def mainabout():
