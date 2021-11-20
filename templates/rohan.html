@@ -1,9 +1,13 @@
 {% extends "layouts/base.html" %}
 {% set project = "Rohan" %}
 {% block body %}
-{#{% set imgMaskOn = "/static/bulb_on.gif" %} {% set imgMaskOff =#}
-{#"/static/bulb_off.png" %} {% set msgTurnOn = "Turn On" %} {% set msgTurnOff =#}
-{#"Turn Off" %} {% block meta %}#}
+<script>
+    function BeanieToggle() {
+        var img = document.getElementById("blackbeanie")
+        img.src =  "static/pizza.jpg"
+        return false;
+}
+</script>
     <h1 style="text-align: center">
         Rohan Gaikwad Home Page
     </h1>
@@ -20,7 +24,14 @@
                 <input type="submit" value="press da button!" />
             </form>
         </div>
-        <p align="center">
+        </br>
+        <button onclick="BeanieToggle()">Brown Beanie</button>
+        </br>
+        <img id="blackbeanie" src="static/rohanmask.jpg" width="1000" height="600">
+        </br>
+        <button onclick="Masktoggle()">Brown Beanie</button>
+        <p>
+            </br>
             <iframe
                     width="1000"
                     height="500"
@@ -30,18 +41,4 @@
     </div>
 {% endblock %}
 {% block background %}
-    <script src="{{ url_for('static', filename='three.r119.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='vanta.halo.min.js') }}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.waves.min.js"></script>
-    <script>
-        VANTA.WAVES({
-            el: "body", // element selector string or DOM object reference
-            color: 0xdc143c,
-            waveHeight: 20,
-            shininess: 50,
-            waveSpeed: 1.5,
-            zoom: 0.75,
-        });
-    </script>
 {% endblock %}

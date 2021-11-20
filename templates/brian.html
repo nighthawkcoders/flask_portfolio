@@ -3,14 +3,23 @@
 {% extends "layouts/base.html" %}
 
 <!- This variable sets name of browser tab  -->
-{% set project = "Hey it's Brian!" %}
+{% set project = "Brian" %}
 
 <!- This is a replacement block for Body in base.html -->
 {% block body %}
     <!- Try building a new body here ->
-    <h1>Brian Test</h1>
+    <h1><center>Brian Tang Home Page</center></h1>
+    <body style="background-color:cornflowerblue;">
+    </div>
+    <p align="center">
+        <iframe
+                width="1000"
+                height="500"
+                src="https://docs.google.com/document/d/1v4dmPa2CQaX8GSf0YmcSUG9yk1GqDXRRTICu1DzH1yA/edit?usp=sharing"
+        ></iframe>
+    </p>
+    </div>
 {% endblock %}
-
 <!- This is turning off birds background from base.html -->
 {% block background %}
 {% endblock %}
