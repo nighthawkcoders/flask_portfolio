@@ -5,16 +5,41 @@
 {% set project = "Adi" %}
 
 <!- This is a replacement block for Body in base.html -->
+{% block head %}
+<head>
+    <script>
+        imagenumber=0;
+        function toggle() {
+            const images = ["https://i.natgeofe.com/n/1e38ab75-6d81-45e9-817c-3181a146165e/01pandainsemination_2x1.jpg",
+                "https://www.powayusd.com/PUSD/media/DNHS/images/slider/Hi-Res-School-Photo-min.jpg?ext=.jpg"
+            ];
+            if (imagenumber == 0) {
+                document.getElementById("image").src = images[0]
+                imagenumber = 1;
+            } else if (imagenumber == 1) {
+                document.getElementById("image").src = images[1]
+                imagenumber = 0;
+            }
+        }
+    </script>
+
+
+</head>
+{% endblock %}
+
 {% block body %}
+
     <body style="background-color:powderblue;">
     <h1 style="text-align: center; color: midnightblue">
         Adi Khandelwal Home Page
     </h1>
 
     <div>
-    <input type="button" onClick=changeimage() value="Change Image"/>
+    <p style="text-align: center; color: black">Click to toggle images</p>
     <br>
-    <img src="https://www.powayusd.com/PUSD/media/DNHS/images/slider/Hi-Res-School-Photo-min.jpg?ext=.jpg" id="image" width="800" height="300" >
+    <div class="container; center-block">
+        <img src="https://www.powayusd.com/PUSD/media/DNHS/images/slider/Hi-Res-School-Photo-min.jpg?ext=.jpg" id="image" width="800" height="300" onclick="toggle()" >
+    </div>
   </div>
     <p align="center">
 <!--        <iframe-->
@@ -23,33 +48,8 @@
 <!--                src="https://docs.google.com/document/d/1caGFdefkHrh74c3f_iuIx26mDD3QnP0FDM9cpS8BYFM/edit?usp=sharing"-->
 <!--        ></iframe>-->
     </p>
+
 {% endblock %}
-<script>
-    const pic1='img'.src;
-    const pic2=image 2;
-     var imagenumber=0;
-
-    function changeimage() {
-        if(imagenumber==0){
-
-            imagenumber=1;
-        }else if(imagenumber==1){
-
-            imagenumber=0;
-        }
-        document.getElementById('image').src = "http://1.bp.blogspot.com/-A2AJ-eifDWU/UqQj1D95ZeI/AAAAAAAAYHA/-oNiUWxWrNs/s1600/IMAG2928.jpg";
-    }
-</script>
 
 
 
-
-        //     document.getElementById(image).src=images[i];
-        //     document.getElementById(image).hidden = false;
-
-
-
-
-<!- This is turning off birds background from base.html -->
-{% block background %}
-{% endblock %}
