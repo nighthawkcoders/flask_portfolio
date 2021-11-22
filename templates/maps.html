@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!-- Extending the predefined project layout -->
+{% extends "layouts/base.html" %}
+{% set project = "Sentinels" %}
+
+<!- This variable sets name of browser tab  -->
+{% set project = "Sentinels" %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sentinels</title>
+</head>
+{% block body %}
+<body style="background-color: lightcoral">
+<div class="col-0" style="margin: 3% 5% 2%" name="imgbox" id="imgbox;>
+    <iframe width="1920" height="1080">
+<div class="table">
+    <div class="row" style="margin:auto">
+        <div class="col">
+             <div class="content_img">
+                 <img src="../static/valorant/maps/ascent.png" width='120%' height='100%' style="margin: 0% 0% 0%">
+                 <div>Ascent</div>
+             </div>
+         </div>
+        <div class="col">
+             <div class="content_img">
+                 <img src="../static/valorant/maps/bind.png" width='120%' height='100%' style="margin: 0% 0% 0%">
+                 <div>Bind</div>
+             </div>
+        </div>
+        <div class="col">
+            <div class="content_img">
+                <img src="../static/valorant/maps/breeze.png" width='120%' height='100%' style="margin: 0% 0% 0%">
+                <div>Breeze</div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="content_img">
+                <img src="../static/valorant/maps/fracture.png" width='120%' height='100%' style="margin: 0% 0% 0%">
+                <div>Fracture</div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="content_img">
+                <img src="../static/valorant/maps/haven.png" width='120%' height='100%' style="margin: 0% 0% 0%">
+                <div>Haven</div>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin: 2% 1% 0%">
+        <div class="content_img">
+            <img src="../static/valorant/maps/icebox.png" width='120%' height='100%' style="margin: 0% 0% 0%">
+            <div>Icebox</div>
+        </div>
+        <div class="content_img">
+            <img src="../static/valorant/maps/split.png" width='120%' height='100%' style="margin: 0% 25% 0%">
+            <div>Split</div>
+        </div>
+    </div>
+</div>
+<style>/* Parent Container */
+.content_img{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    float: left;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+/* Child Text Container */
+.content_img div{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: black;
+    color: white;
+    margin-bottom: 5px;
+    font-family: sans-serif;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: visibility 0s, opacity 0.5s linear;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
+/* Hover on Parent Container */
+.content_img:hover{
+    cursor: pointer;
+}
+
+.content_img:hover div{
+    width: 150px;
+    padding: 8px 15px;
+    visibility: visible;
+    opacity: 0.7;
+}
+}</style>
+</body>
+{% endblock %}
+</html>

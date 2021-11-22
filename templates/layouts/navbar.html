@@ -1,20 +1,73 @@
-<!-- Navigation Bar from bootstrap
-This HTML is setup as a fragment allowing it to be "included" by other HTML files via Jinja2
--->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="https://csp.nighthawkcodingsociety.com/">{{basename}}</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <a class="navbar-brand" href="/val">
+        <img src="/static/valorant.png" width="50" height="50" class="d-inline-block align-center" alt="">
+
+        Valorant Clips
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-            <!-- url_for is a Jinja2 pre-processor that finds route from function name (def) -->
-            <a class="nav-link" href={{ url_for('index') }}>Portfolio</a>
-            <a class="nav-link" href={{ url_for('kangaroos') }}>Kangaroos</a>
-            <a class="nav-link" href={{ url_for('walruses') }}>Walruses</a>
-            <a class="nav-link" href={{ url_for('hawkers') }}>Hawkers</a>
-            <!-- stub is shown using the name of the route -->
-            <a class="nav-link" href="/stub">Stub</a>
-        </div>
+    <style>
+        .dropbtn {
+            background-color: white;
+            color: black;
+            padding: 0px 65px 0px 23px;
+            font-size: 16px;
+            border: none;
+        }
+        .dropdown-content.epic {
+            display: none;
+            position: absolute;
+            background-color: lightcoral;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown:hover .dropdown-content.epic {display: inline-block;}
+    </style>
+    <!-- Bootstrap menus -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <!--root menu -->
+            <li class="nav-item active">
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarModel" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Pages
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/grid">Mini Labs</a>
+                    <a class="dropdown-item" href="/aboutme">About Us</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarModel" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Valorant Pages
+                </a>
+                <div class="dropdown-menu multi-level" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/val">Main Page</a>
+                    <div class="dropdown">
+                        <button class="dropbtn" id="agents">Agents</button>
+                        <div class="dropdown-content epic">
+                            <a href="/controllers" id="agents">Controllers</a>
+                            <a href="/duelists" id="agents">Duelists</a>
+                            <a href="sentinels" id="agents">Sentinels</a>
+                            <a href="/initiators" id="agents">Initiators</a>
+                        </div>
+                    </div>
+                    <a class="dropdown-item" href="/maps">Maps</a>
+                    <a class="dropdown-item" href="/kdr">KDR Calculator</a>
+                    <a class="dropdown-item" href="/weapons">Weapons</a>
+                    <a class="dropdown-item" href="/slider">Slider</a>
+                </div>
+            </li>
+        </ul>
     </div>
 </nav>
