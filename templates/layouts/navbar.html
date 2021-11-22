@@ -1,6 +1,33 @@
 <!-- Navigation Bar from bootstrap
 This HTML is setup as a fragment allowing it to be "included" by other HTML files via Jinja2
 -->
+<style>
+    a.nav-link {
+        background-color: rgba(255, 0, 0, 0.0);
+        transition: background-color 0.5s;
+        color: #000000 !important;
+        font-family:Courier;
+    }
+    a.nav-link:hover {
+        background-color: #8e6f64;
+    }
+    nav {
+        background-image: linear-gradient(to right, #fed2b9, #fed2b9);
+    }
+    .dropdown {
+        margin-right: 5px;
+    }
+    .dropdown-menu {
+        background-color: #fed2b9
+    }
+    .dropdown-menu a:hover {
+        background-color: #8e6f64;
+    }
+     #first{
+        margin-left:5px;
+    }
+
+</style>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="/">{{basename}}</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -21,14 +48,6 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                         <a class="dropdown-item" href="/leah/">Leah</a>
                         <a class="dropdown-item" href="/simon/">Simon</a>
                         <a class="dropdown-item" href="/sanjay/">Sanjay</a>
-
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="/evan">Evan</a>
-                        <a class="dropdown-item" href="/">Leah</a>
-                        <a class="dropdown-item" href="/">Vunsh</a>
-                        <a class="dropdown-item" href="/">Sanjay</a>
-                        <a class="dropdown-item" href="/">Simon</a>
-                    </div>
                 </li>
             </ul>
 
@@ -36,11 +55,6 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
             <a class="nav-link" href="/stub">Stub</a>
         </div>
     </div>
-    <style>
-        navbar {
-            z-index: 2;
-        }
-    </style>
 </nav>
 
 

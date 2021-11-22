@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 {% block body %}
+<div class="page-container">
 <h1 style="text-align:center">
 Sanjay Bharadwaj
 </h1>
@@ -49,8 +50,7 @@ Sanjay Bharadwaj
     {% endfor %}
 </table>
 </section>
-<section>
-</section>
+</div>
     <script>
         function changePic() {
             if (document.getElementById("nomask").style.display == "block") {
@@ -66,6 +66,9 @@ Sanjay Bharadwaj
         }
     </script>
     <style>
+        .page-container {
+            margin-left: 250px;
+        }
         a {
             text-decoration: none;
         }
