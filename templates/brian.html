@@ -2,24 +2,52 @@
 <!-- Extending the predefined project layout -->
 {% extends "layouts/base.html" %}
 
-<!- This variable sets name of browser tab  -->
 {% set project = "Brian" %}
 
-<!- This is a replacement block for Body in base.html -->
 {% block body %}
     <!- Try building a new body here ->
+<style>
+    html {background-color:cornflowerblue;}
+</style>
     <h1><center>Brian Tang Home Page</center></h1>
     <body style="background-color:cornflowerblue;">
-    </div>
     <p align="center">
         <iframe
                 width="1000"
                 height="500"
                 src="https://docs.google.com/document/d/1v4dmPa2CQaX8GSf0YmcSUG9yk1GqDXRRTICu1DzH1yA/edit?usp=sharing"
         ></iframe>
-    </p>
+        <div>
+        <button onclick="MaskOnOff()" class="center">Mask On/Off</button>
+        <style>
+            .center {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        </style>
+        </div>
+    <div>
+        <img id="MaskOn" src="../static/IMG_19F786F8D399-1.jpeg" style="max-height: 500px;" class="center">
+        <style>
+            .center {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        </style>
     </div>
+    </p>
+
+<script>
+    function MaskOnOff(){
+        if (document.getElementById("MaskOn").src=="http://127.0.0.1:5000/static/IMG_19F786F8D399-1.jpeg") {
+            document.getElementById("MaskOn").src = "../static/IMG_887CE03AB9F7-1.jpeg";
+        }
+        else document.getElementById("MaskOn").src = "http://127.0.0.1:5000/static/IMG_19F786F8D399-1.jpeg"
+    }
+</script>
+
 {% endblock %}
-<!- This is turning off birds background from base.html -->
 {% block background %}
 {% endblock %}
