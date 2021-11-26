@@ -26,9 +26,12 @@ Commits can also be done directly through github. These commits should be done s
 ### Pull Requests and Branching
 The procedure to create pull requests is complex and yet works wonderfully to avoid merge conflicts. The first item that needs to be done is to create a new branch. This can be done in IntelliJ through the git menu. IntelliJ will then allow you to work within the new branch and commit to the new branch. This will work identically to the main branch, but will be separate, so that issues that arise in the new branch do not affect the other contributors. After pushing changes to the new branch, the github repository will display a message like this:
 ![Screen Shot 2021-11-26 at 11 07 24 AM](https://user-images.githubusercontent.com/70538669/143622847-6ab0afe1-d098-457a-b857-8235bcd516b6.png)
+
 After clicking the "Compare and Pull Request" button, you will be able to describe your changes. It is absolutely imperative that you make sure the branch being merged is this repository and not the repository it is forked off of. 
 ![Screen Shot 2021-11-26 at 11 09 44 AM](https://user-images.githubusercontent.com/70538669/143623005-497625f3-771d-4a9d-bf9e-107ec0eb15ee.png)
+
 Something similar to the above photo should occur. In some cases, it will be possible to merge and the subsequent steps can be skipped, and you will be able to instantly merge. However, more often than not a merge conflict will occur due to changes made in the new branch, and they will need to be resolved. Github will prompt you to resolve the conflicts and take you to the following page:
+
 ![Screen Shot 2021-11-26 at 11 11 36 AM](https://user-images.githubusercontent.com/70538669/143623091-7812fc7c-de95-4a23-8c99-9ddc2e54bb94.png)
 After editing the file to get rid of the conflicts, you can press the resolve button and proceed to merge the branches, and then delete the extra branch. 
 
