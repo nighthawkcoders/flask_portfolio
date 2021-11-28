@@ -80,9 +80,9 @@ Our website is a website full of helpful resources for students. It will help st
 ## Week 0: Due 11/19
 <br>
 
-| Name | Requirement | Evidence | Grade | Total Score |
-| ---  | ---         | ---      | ---   | --- |
-| Sonakshi Bhalla | Individual Pages and API<br>About Us<br>CB Notes & Quizzes| Ticket<br>Ticket<br>Ticket | | /5
-| Shreya Ahuja |Individual Pages and API<br>About Us<br>CB Notes & Quizzes  | Ticket<br>Ticket<br>Ticket| | /5
-| Linda Liu |Individual Pages and API<br>About Us<br>CB Notes & Quizzes |Ticket<br>Ticket<br>Ticket| | /5
-| Khushi Bagri | Individual Pages and API<br>About Us<br>CB Notes & Quizzes| Ticket<br>Ticket<br>Ticket| | /5
+| Name | Requirement | Evidence |  Total Score |
+| ---  | ---         | ---      | --- |
+| Sonakshi Bhalla | Individual Pages and API<br>About Us<br>CB Notes & Quizzes| Ticket<br>Ticket<br>Ticket | 5/5
+| Shreya Ahuja |Individual Pages and API<br>About Us<br>CB Notes & Quizzes  | Ticket<br>Ticket<br>Ticket| 5/5
+| Linda Liu |Individual Pages and API<br>About Us<br>CB Notes & Quizzes |Ticket<br>Ticket<br>Ticket| 5/5
+| Khushi Bagri | Individual Pages and API<br>About Us<br>CB Notes & Quizzes| Ticket<br>Ticket<br>Ticket| 5/5
