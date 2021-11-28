@@ -82,7 +82,7 @@ Our website is a website full of helpful resources for students. It will help st
 
 | Name | Requirement | Evidence |  Total Score |
 | ---  | ---         | ---      | --- |
-| Sonakshi Bhalla | Individual Pages and API<br>About Us<br>CB Notes & Quizzes| Ticket<br>Ticket<br>Ticket | 5/5
-| Shreya Ahuja |Individual Pages and API<br>About Us<br>CB Notes & Quizzes  | Ticket<br>Ticket<br>Ticket| 5/5
-| Linda Liu |Individual Pages and API<br>About Us<br>CB Notes & Quizzes |Ticket<br>Ticket<br>Ticket| 5/5
-| Khushi Bagri | Individual Pages and API<br>About Us<br>CB Notes & Quizzes| Ticket<br>Ticket<br>Ticket| 5/5
+| Sonakshi Bhalla | Individual Pages and API<br>About Us<br>CB Notes & Quizzes| <a href="https://github.com/sonakshibhalla/tri2turtles/issues/66">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/62">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/67">Ticket</a> | 5/5
+| Shreya Ahuja |Individual Pages and API<br>About Us<br>CB Notes & Quizzes  | <a href="https://github.com/sonakshibhalla/tri2turtles/issues/64">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/62">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/67">Ticket</a>| 5/5
+| Linda Liu |Individual Pages and API<br>About Us<br>CB Notes & Quizzes |<a href="https://github.com/sonakshibhalla/tri2turtles/issues/65">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/62">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/68">Ticket</a>| 5/5
+| Khushi Bagri | Individual Pages and API<br>About Us<br>CB Notes & Quizzes| <a href="https://github.com/sonakshibhalla/tri2turtles/issues/63">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/62">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/68">Ticket</a>| 5/5
