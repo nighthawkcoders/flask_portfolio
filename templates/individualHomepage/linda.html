@@ -1,8 +1,9 @@
 {% block body %}
 
-    <center><h1 style="font-family: 'Roboto Thin'">Linda Liu Individual Homepage</h1></center>
 
-    <body style="background-color: white;">
+<link rel="stylesheet" type="text/css" href="/static/css/video_style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <body>
     <style>
         .button1 {
             background-color: white;
@@ -34,21 +35,49 @@
 
             <h1>Linda Liu Individual Homepage</h1>
             <p>Hello <span id="myName">{{name}}</span>, welcome to my individual page!</p>
-
             <form action="#" id="linda" method="POST" >
                 <label for="name">Enter Your Name</label>
                 <input name="name" id="name">
                 <input type="submit" value="Go!" onclick="(function (){document.getElementById('myName').innerText=document.getElementById('name').value})();return false;">
             </form>
-
-            <br>
-
-
             <p>
                 <img src="/static/assets/lindaWithMask.jpg" style="height: 350px; width: auto;" id="imgClickAndChange" onclick="changeImage()"/>
             </p>
             <p style="font-size: large; font-family: Baskerville; text-align: center"><i>Click Me</i></p>
-            <script> //from Shreya
+
+<!-Random Motivational Quote Api->
+            <button id="get-quote" style="margin-top: 20px;height: 35px" onclick="newQuote()">Get me a quote</button>
+
+            <div id="display-quote" style="margin-top: 10px;font-size: 29px;color: white;font-weight: 600;">No quote yet</div>
+
+<!-Todo List->
+            <button id="show-todo" onclick="showTodo()">Show Todo List</button>
+            <div class="container" id="todo-list">
+                <h2>TODO LIST</h2>
+                <h3>Add Item</h3>
+                <p>
+                    <input id="new-task" type="text"><button onclick="addTask()">Add</button>
+                </p>
+
+                <h3>Todo</h3>
+                <ul id="incomplete-tasks">
+                    <li><input type="checkbox"><label>Math Homework</label><input type="text"><button class="edit">Edit</button><button class="delete">Delete</button></li>
+                    <li><input type="checkbox"><label>History Reading</label><input type="text" value="Go Shopping"><button class="edit">Edit</button><button class="delete">Delete</button></li>
+                </ul>
+
+                <h3>Completed</h3>
+                <ul id="completed-tasks">
+                    <li><input type="checkbox" checked><label>Essay Final Draft</label><input type="text"><button class="edit">Edit</button><button class="delete">Delete</button></li>
+                </ul>
+            </div>
+
+            <script>
+                //Todo List
+            function showTodo(){
+                document.getElementById("todo-list").style.display = "block";
+            }
+
+            //Images Toggle, code from Shreya
             function changeImage() {
 
                 if (document.getElementById("imgClickAndChange").src.includes('lindaWithMask'))
@@ -59,8 +88,188 @@
                     document.getElementById("imgClickAndChange").src ="/static/assets/lindaWithMask.jpg"
                 }
             }
+
+            //Random Motivational Quote Api
+            function newQuote(){
+                $.ajax(settings).done(function (response) {
+                    console.log(response);
+                    document.getElementById("display-quote").innerText = response;
+                });
+            }
+            const settings = {
+                "async": true,
+                "crossDomain": true,
+                "url": "https://motivational-quotes1.p.rapidapi.com/motivation",
+                "method": "POST",
+                "headers": {
+                    "content-type": "application/json",
+                    "x-rapidapi-host": "motivational-quotes1.p.rapidapi.com",
+                    "x-rapidapi-key": "9e3f40a0cemshcced0bdaa85f0c0p1e3309jsnbb4748bd1d8c"
+                },
+                "processData": false,
+                "data": {
+                    "key1": "value",
+                    "key2": "value"
+                }
+            };
+
+            $.ajax(settings).done(function (response) {
+                console.log(response);
+                document.getElementById("display-quote").innerText = response;
+            });
+
+            var taskInput = document.getElementById("new-task"); //new-task
+            var addButton = document.getElementsByTagName("button")[0]; //first button
+            var incompleteTasksHolder = document.getElementById("incomplete-tasks"); //incomplete-tasks
+            var completedTasksHolder = document.getElementById("completed-tasks"); //completed-tasks
+
+            //New Task List Item
+            var createNewTaskElement = function(taskString) {
+                //Create List Item
+                var listItem = document.createElement("li");
+
+                //input (checkbox)
+                var checkBox = document.createElement("input"); // checkbox
+                //label
+                var label = document.createElement("label");
+                //input (text)
+                var editInput = document.createElement("input"); // text
+                //button.edit
+                var editButton = document.createElement("button");
+                //button.delete
+                var deleteButton = document.createElement("button");
+
+                //Each element needs modifying
+
+                checkBox.type = "checkbox";
+                editInput.type = "text";
+
+                editButton.innerText = "Edit";
+                editButton.className = "edit";
+                deleteButton.innerText = "Delete";
+                deleteButton.className = "delete";
+
+                label.innerText = taskString;
+
+                //Each element needs appending
+                listItem.appendChild(checkBox);
+                listItem.appendChild(label);
+                listItem.appendChild(editInput);
+                listItem.appendChild(editButton);
+                listItem.appendChild(deleteButton);
+
+                return listItem;
+            }
+
+            //Add a new task
+            var addTask = function() {
+                console.log("Add task...");
+                //Create a new list item with the text from #new-task:
+                var listItem = createNewTaskElement(taskInput.value);
+                //Append listItem to incompleteTasksHolder
+                incompleteTasksHolder.appendChild(listItem);
+                bindTaskEvents(listItem, taskCompleted);
+
+                taskInput.value = "";
+            }
+
+            //Edit an existing task
+            var editTask = function() {
+                console.log("Edit task...");
+
+                var listItem = this.parentNode;
+
+                var editInput = listItem.querySelector("input[type=text");
+                var label = listItem.querySelector("label");
+
+                var containsClass = listItem.classList.contains("editMode");
+
+                //if the class of the parent is .editMode
+                if (containsClass) {
+                    //Switch from .editMode
+                    //label text become the input's value
+                    label.innerText = editInput.value;
+                } else {
+                    //Switch to .editMode
+                    //input value becomes the label's text
+                    editInput.value = label.innerText;
+                }
+
+                //Toggle .editMode on the list item
+                listItem.classList.toggle("editMode");
+
+            }
+
+            //Delete an existing task
+            var deleteTask = function() {
+                console.log("Delete task...");
+                var listItem = this.parentNode;
+                var ul = listItem.parentNode;
+
+                //Remove the parent list item from the ul
+                ul.removeChild(listItem);
+            }
+
+            //Mark a task as complete
+            var taskCompleted = function() {
+                console.log("Task complete...");
+                //Append the task list item to the #completed-tasks
+                var listItem = this.parentNode;
+                completedTasksHolder.appendChild(listItem);
+                bindTaskEvents(listItem, taskIncomplete);
+            }
+
+            //Mark a task as incomplete
+            var taskIncomplete = function() {
+                console.log("Task incomplete...");
+                //Append the task list item to the #incomplete-tasks
+                var listItem = this.parentNode;
+                incompleteTasksHolder.appendChild(listItem);
+                bindTaskEvents(listItem, taskCompleted);
+            }
+
+            var bindTaskEvents = function(taskListItem, checkBoxEventHandler) {
+                console.log("Bind list item events");
+                //select taskListItem's children
+                var checkBox = taskListItem.querySelector("input[type=checkbox]");
+                var editButton = taskListItem.querySelector("button.edit");
+                var deleteButton = taskListItem.querySelector("button.delete");
+
+                //bind editTask to edit button
+                editButton.onclick = editTask;
+
+                //bind deleteTask to delete button
+                deleteButton.onclick = deleteTask;
+
+                //bind checkBoxEventHandler to checkbox
+                checkBox.onchange = checkBoxEventHandler;
+            }
+
+            // var ajaxRequest = function() {
+            // 	console.log("AJAX request");
+            // }
+
+            //Set the click handler to the addTask function
+            addButton.addEventListener("click", addTask);
+            //addButton.addEventListener("click", ajaxRequest);
+
+            //cycle over incompleteTasksHolder ul list items
+            for (var i = 0; i < incompleteTasksHolder.children.length; i++) {
+                //bind events to list item's children (taskCompleted)
+                bindTaskEvents(incompleteTasksHolder.children[i], taskCompleted);
+            }
+
+            //cycle over completedTasksHolder ul list items
+            for (var i = 0; i < completedTasksHolder.children.length; i++) {
+                //bind events to list item's children (taskIncomplete)
+                bindTaskEvents(completedTasksHolder.children[i], taskIncomplete);
+            }
+
+
             </script>
         </div>
+        </div>
+    </div>
     </body>
 
 {% endblock %}
