@@ -55,12 +55,13 @@ Scrum Board:
 | Sprint 1,2 (Week 14)   |              |
 | Sprint 0 (Week 13)   |              |
 
-### Week 1
-| Roles   | About Assignment | 
-| ------------- | -------------------------------------------------------------|
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
+
+### Week 0
+| Members | Jobs | Ticket |
+| ------------- | -------------------------------------------------------------| - |
+| Nathan | Scrum Master |  |
+| Reem | TO |  |
+| Daniel | Ideas Man |  |
+| Jacob | Deployment Manager |  |
+| James | Github Admin |  |
 
