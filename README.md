@@ -37,7 +37,7 @@ Starter code should be fun and practical.
 |  Evan | [@deimie](https://github.com/deimie)  |  [All Commits](https://github.com/SimonBrunzell/flask_portfolio/commits?author=deimie) | [Tasks](https://github.com/SimonBrunzell/flask_portfolio/projects/1?card_filter_query=assignee%3Adeimie)  |
 | Sanjay  | [@SanjayB06](https://github.com/SanjayB06)  | [All Commits](https://github.com/SimonBrunzell/flask_portfolio/commits?author=SanjayB06)  | [Tasks](https://github.com/SimonBrunzell/flask_portfolio/projects/1?card_filter_query=assignee%3Asanjayb06)  |
 | Simon  | [@SimonBrunzell](https://github.com/SimonBrunzell)  | [All Commits](https://github.com/SimonBrunzell/flask_portfolio/commits?author=SimonBrunzell)  | [Tasks](https://github.com/SimonBrunzell/flask_portfolio/projects/1?card_filter_query=assignee%3Asimonbrunzell)  |
-| Vunsh  | [@vunsh](https://github.com/vunsh)  | [All Commits]()  |   |
+| Vunsh  | [@vunsh](https://github.com/vunsh)  | [All Commits](https://github.com/SimonBrunzell/flask_portfolio/commits/?author=vunsh)  | [Tasks](https://github.com/SimonBrunzell/flask_portfolio/projects/1?card_filter_query=assignee%3vunsh)  |
 
 
 
