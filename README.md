@@ -83,10 +83,10 @@ Our website is a website full of helpful resources for students. It will help st
 
 | Name | Requirement | Evidence |  Total Score |
 | ---  | ---         | ---      | --- |
-| Sonakshi Bhalla | Github Management Plan<br>10-12 Technicals<br>CB Notes & Quizzes| <a href="">Ticket</a><br><a href="">Ticket</a><br><a href="">Ticket</a>| /8 
-| Shreya Ahuja |Create Issues and Timebox<br>Organized Scrum Board<br>Backlog<br>CB Notes & Quizzes  | <a href="">Ticket</a><br><a href="">Ticket</a><br><a href="">Ticket</a>| /8
-| Punarvasu Sangam |Wiki Theme<br>Brain Write/Wireframe<br>CB Notes & Quizzes | <a href="">Ticket</a><br><a href="">Ticket</a><br><a href="">Ticket</a>| /8
-| Khushi Bagri | Wiki Plan<br>Hardware and Frequency<br>CB Notes & Quizzes| <a href="">Ticket</a><br><a href="">Ticket</a><br><a href="">Ticket</a>| /8
+| Sonakshi Bhalla | Github Management Plan<br>10-12 Technicals<br>CB Notes & Quizzes| <a href="https://github.com/sonakshibhalla/tri2turtles/issues/71">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/72">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/69">Ticket</a>| /8 
+| Shreya Ahuja |Create Issues and Timebox<br>Organized Scrum Board<br>Backlog<br>CB Notes & Quizzes  | <a href="https://github.com/sonakshibhalla/tri2turtles/issues/73">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/74">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/69">Ticket</a>| /8
+| Punarvasu Sangam |Wiki Theme<br>Brain Write/Wireframe<br>CB Notes & Quizzes | <a href="https://github.com/sonakshibhalla/tri2turtles/issues/75">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/76">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/70">Ticket</a>| /8
+| Khushi Bagri | Wiki Plan<br>Hardware and Frequency<br>CB Notes & Quizzes| <a href="https://github.com/sonakshibhalla/tri2turtles/issues/77">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/78">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/70">Ticket</a>| /8
 
 <br>
 
