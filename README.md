@@ -15,9 +15,7 @@
 | Colin Howard| [@koolkidkai](https://github.com/KoolKidKai) | [Tasks](https://github.com/connorw72/food/issues/assigned/KoolKidKai) |[Scrum Board](https://github.com/connorw72/food/projects/1?card_filter_query=assignee%3Akoolkidkai) | [Commits](https://github.com/connorw72/food/commits?author=koolkidkai)| Technical Officer
 | Chase Ott | [@ChaseOtt](https://github.com/ChaseOtt) | [Tasks](https://github.com/connorw72/food/issues/assigned/ChaseOtt) |[Scrum Board](https://github.com/connorw72/food/projects/1?card_filter_query=assignee%3Achaseott) | [Commits](https://github.com/connorw72/food/commits?author=ChaseOtt)| GitHub Admin
 ### Week 0
-|Member | Task| Tangible Link |
+|Task| Tangible Link |
 |:-----|:----------------------| :------|
-|Connor| About/Home Page|l
-|Tanay| About/Home Page| l
-|Colin| About/Home Page|l
-|Pranav| About/Home Page|l
+|Wire Frame| [Wire Frame](https://docs.google.com/drawings/d/1lE1sUsjAlyknfTvKNZUxXqfIHMqynNdGCp_NhJ8ziTU/edit?usp=sharing)
+|Brain Write| [Brain Write]()
