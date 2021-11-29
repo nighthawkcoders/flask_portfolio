@@ -7,7 +7,7 @@
 ## Overall Policy
 The overall contributing policy for this group will be to use pull requests. Merge Conflicts were one of the main issues encountered last trimester, and therefore the policy is crafted around a) avoiding merge conflicts and b) resolving merge conflicts in a convenient way that avoids members losing code. 
 
-In order to achieve both these goals, pull requests will be used. Members will create branches off main whenever they are working on major features or making major changes to existing files. Within these branches, members will commit and push as usual, but will not affect the other contributors on the main branch. After the new feature or change is finished, contributors will create a pull request describing their changes, with specific information about important lines of code. 
+In order to achieve both these goals, pull requests will be used. Members will create branches off main whenever they are working on major features or making major changes to existing files. Any edits to [base.html](https://github.com/SimonBrunzell/flask_portfolio/blob/main/templates/layouts/base.html) will require branches to be created. Within these branches, members will commit and push as usual, but will not affect the other contributors on the main branch. After the new feature or change is finished, contributors will create a pull request describing their changes, with specific information about important lines of code. 
 
 These pull requests will be sent to the Github Admin for review. In the event that the changes made are proper and useful, they will be merged to the main branch. Members will also have to resolve any merge conflicts that occur as described below. 
 
