@@ -14,15 +14,19 @@ def index():
 
 @app.route('/evan/')
 def evan():
-    return render_template("evan.html")
+    return render_template("about_us/evan.html")
 
 @app.route('/leah/')
 def leah():
-    return render_template("leah.html")
+    return render_template("about_us/leah.html")
 
 @app.route('/simon/')
 def simon():
-    return render_template("simon.html")
+    return render_template("about_us/simon.html")
+
+@app.route('/vunsh/')
+def vunsh():
+    return render_template("about_us/vunsh.html")
 
 @app.route("/sanjay/")
 def sanjay():

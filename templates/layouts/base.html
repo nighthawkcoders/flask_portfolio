@@ -93,8 +93,6 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 
         .btn:hover {
             background-color: #fed2b9;
-            color: #8e6f64;
-            font-weight: 700;
             box-shadow: 0 20px 40px rgba(255, 255, 255, 0.2);
         }
 
@@ -102,7 +100,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             transform: translateY(-1px);
             box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2);
         }
-        .button {
+        /*.button {
             padding: .5em 2em;
             border-radius: 20px;
             background-color: transparent;
@@ -114,7 +112,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
         }
         .button:hover {
             background-color: #fed2b9
-            color: #64483f
+            color: #64483f*/
         }
         .row{
             margin: auto;
@@ -130,18 +128,27 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             z-index: 0;
         }
 
+
+        A:link {text-decoration:none;color:#8E6F64FF}
+        A:visited {text-decoration:none;color:#8E6F64FF}
+        A:active {text-decoration:none;color:#8E6F64FF}
+        A:hover {text-decoration:none;color:#fed2b9}
+
     </style>
 
     <title>{{ basename }} | {{ project }} </title>
+
+
     <div class="sidenav">
         <p>this is working :D</p>
-        <a href="/leah">leah</a>
         <br>
-        <a href="/evan">evan</a>
+        <a href="/leah">Leah</a>
         <br>
-        <a href="/simon">simon</a>
+        <a href="/evan">Evan</a>
         <br>
-        <a href="/sanjay">sanjay</a>
+        <a href="/simon">Simon</a>
+        <br>
+        <a href="/sanjay">Sanjay</a>
     </div>
 
 </head>
@@ -157,6 +164,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
         <div class="col-2" style="text-align: right;">
             {% block info %}
                 <!-- notice jinja style variables used in href's -->
+                <!-- notice jinja style variables used in href's --->
                 <a><h5>{{basename}}</h5></a>
                 <a href={{github}} target="_blank"><i class="fa fa-github"></i></a>
                 <a href={{youtube}} target="_blank"><i class="fa fa-youtube-play"></i></a>
