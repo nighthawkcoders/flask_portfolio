@@ -33,14 +33,14 @@ Scrum Board:
 | ---------------- | --------------- | ---------------------------------------------------------------------------- | ------ |----------- | ---------------- |
 | Nathan Manangan  | ProRichyMan     | [Scrumboard]() | [Issue]() | [Commits]()| [@ProRichyMan]()|
 | Reem Ben Ishai | Reem57 | [Scrumboard]() | [Issue]() | [Commits]()| [@Reem57]()|
-| James Lee  | __          | [Scrumboard]() | [Issue]() | [Commits]()| [@JL1080]()|
-| Jacob Rozenkrants     | __  | [Scrumboard]() | [Issue]() | [Commits]()| [@]()|
+| James Lee  | JL1080          | [Scrumboard]() | [Issue]() | [Commits]()| [@JL1080]()|
+| Jacob Rozenkrants     | jar04  | [Scrumboard]() | [Issue]() | [Commits]()| [@jar04]()|
 | Daniel Bertino     | Danny4w | [Scrumboard]() | [Issue]() | [Commits]()| [@Danny4w]()|
 
 ## Current Functions
 | Function | Contributor(s)|
 | ------------- | -------------------------------------------------------------|
-|  |  |
+| TBD | TBD |
 |  |  |
 |  |  |
 |  |  |
