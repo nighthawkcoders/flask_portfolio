@@ -13,7 +13,7 @@
 | Pranav Parthasarathy| [@PranavP04](https://github.com/PranavP04) | [Tasks](https://github.com/connorw72/food/issues/assigned/PranavP04) |[Scrum Board](https://github.com/connorw72/food/projects/1?card_filter_query=assignee%3Apranavp04) | [Commits](https://github.com/connorw72/food/commits?author=pranavp04)| Web Designer
 | Connor Wang| [@connorw72](https://github.com/connorw72) | [Tasks](https://github.com/connorw72/food/issues/assigned/connorw72) |[Scrum Board](https://github.com/connorw72/food/projects/1?card_filter_query=assignee%3Aconnorw72) | [Commits](https://github.com/connorw72/food/commits?author=connorw72)| Scrum Master
 | Colin Howard| [@koolkidkai](https://github.com/KoolKidKai) | [Tasks](https://github.com/connorw72/food/issues/assigned/KoolKidKai) |[Scrum Board](https://github.com/connorw72/food/projects/1?card_filter_query=assignee%3Akoolkidkai) | [Commits](https://github.com/connorw72/food/commits?author=koolkidkai)| Technical Officer
-| Chase Ott | [@ChaseOtt](https://github.com/ChaseOtt) | [Tasks]() |[Scrum Board]() | [Commits]()| GitHub Admin
+| Chase Ott | [@ChaseOtt](https://github.com/ChaseOtt) | [Tasks](https://github.com/connorw72/food/issues/assigned/ChaseOtt) |[Scrum Board](https://github.com/connorw72/food/projects/1?card_filter_query=assignee%3Achaseott) | [Commits](https://github.com/connorw72/food/commits?author=ChaseOtt)| GitHub Admin
 ### Week 0
 |Member | Task| Tangible Link |
 |:-----|:----------------------| :------|
