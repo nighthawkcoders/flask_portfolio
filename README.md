@@ -3,7 +3,6 @@
 - [Idea](#idea)
 - [Week by Week Progress](#week-by-week-progress)
   - [Week 1](#week-1)
-    -  [Technical Ideas](#technical-ideas)   
   - [Week 0](#week-0)
 - [Contributors](#contributors)
 
@@ -21,7 +20,6 @@ Starter code should be fun and practical.
 | Sanjay  |   |
 |  Leah |   |
 
-#### Technical Ideas
 
 ### Week 0
 |Contributor| Links to Commits  |
