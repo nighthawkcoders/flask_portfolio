@@ -43,7 +43,7 @@ def sanjay():
 
     response = requests.request("GET", url, headers=headers, params=querystring)
     output =json.loads(response.text)
-    return render_template("sanjay.html",data=output)
+    return render_template("about_us/sanjay.html",data=output)
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)
