@@ -16,6 +16,6 @@
 | Chase Ott | [@ChaseOtt](https://github.com/ChaseOtt) | [Tasks](https://github.com/connorw72/food/issues/assigned/ChaseOtt) |[Scrum Board](https://github.com/connorw72/food/projects/1?card_filter_query=assignee%3Achaseott) | [Commits](https://github.com/connorw72/food/commits?author=ChaseOtt)| GitHub Admin
 ### Week 0
 |Task| Tangible Link |
-|:-----|:----------------------| :------|
+|:-----|:----------------------|
 |Wire Frame| [Wire Frame](https://docs.google.com/drawings/d/1lE1sUsjAlyknfTvKNZUxXqfIHMqynNdGCp_NhJ8ziTU/edit?usp=sharing)
 |Brain Write| [Brain Write]()
