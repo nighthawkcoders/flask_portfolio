@@ -1,7 +1,7 @@
 # Period 5 - Team Food
 ### Project Description:
 ## [Scrum Board](https://github.com/connorw72/food/projects/1)
-### PUT IMAGE OF HOME PAGE
+### ![Screen Shot 2021-11-29 at 2 57 43 PM](https://user-images.githubusercontent.com/89223703/143955920-b221c674-82e5-4840-9981-46165d32b82f.png)
 ## Table of Contents
 1. [GitHub repo Contributors](https://github.com/connorw72/food/graphs/contributors)
 2. Pair Share Journals [Tanay and Connor](https://docs.google.com/document/d/1yMnRk0cY8TWYl3YKTgz0OKkrI5Gac4pEyoyiffEeUoE/edit?usp=sharing), [Colin and Pranav]()
