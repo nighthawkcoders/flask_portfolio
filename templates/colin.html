@@ -1,11 +1,15 @@
 <!DOCTYPE html>
-{% include "layouts/navbar.html" %}
+{% extends "layouts/base.html" %}
+{%block head %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Colin About</title>
 
 </head>
+{%endblock%}
+
+{% block body %}
 <body>
 <h1 class="text-center">Colin Home Page</h1>
 <div class="container">
@@ -13,22 +17,37 @@
         <table class="table">
             <thead>
             <tr>
-                <th style="text-align:center">About Colin - Technical Officer</th>
+                <th colspan="2">
+                 <h3 style="text-align:center">About Colin - Technical Officer</h3>
+                </th>
             </tr>
             </thead>
+
             <tbody>
             <tr>
                 <td>
-                    <img id="colinMask" class="img-responsive py-3" alt="" width="256 " src="/static/assets/colinMask.jpg">
-                    <div>
-                        <button onclick="mask()">With Mask</button>
-                        <button onclick="nomask()">No Mask</button>
+                    <img id="colinMask" class="img-responsive py-3" alt="" width="512" src="/static/assets/colinMask.jpg">
+                    <div class="d-grid gap-2 $blue">
+                        <button class="btn-lg" onclick="mask()">With Mask</button>
+                        <button class="btn-lg" onclick="nomask()">No Mask</button>
                     </div>
+                </td>
+                <td>
+                    <p style="text-align:center" class="fs-2">
+                        My name is Colin Howard, and I'm a junior in Ms. Naidu's CSP period 5. I don't have any experience
+                        in computer science or coding of any time, so learning new things in this class is lots of fun.
+                        Sometimes it's hard to keep up, but thankfully, Google almost always has the answers to my questions.
+                        I'm excited to continue to learn how to code this trimester and to work with my new group.
+                    </p>
                 </td>
             </tr>
             </tbody>
+
         </table>
     </div>
+
+
+</div>
 </body>
 
 <script>
@@ -42,4 +61,5 @@
         .src="/static/assets/colinNoMask.jpg";
     }
 </script>
+{% endblock %}
 </html>
