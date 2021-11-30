@@ -140,6 +140,25 @@ edit?usp=sharing" style="text-align:center">
 <div class="pic">
 </div>
 
+<!--API thing-->
+<script>
+    fetch("https://jokes-by-api-ninjas.p.rapidapi.com/v1/jokes", {
+        "method": "GET",
+        "headers": {
+            "x-rapidapi-host": "jokes-by-api-ninjas.p.rapidapi.com",
+            "x-rapidapi-key": "ff99cd2382msh23fabc003b17462p1078a2jsnc82687ebfb77"
+        }
+    })
+        .then(response => response.json())
+        .then(response => {
+            console.log(response);
+            console.log(response.content);
+        })
+        .catch(err => {
+            console.error(err);
+        });
+
+</script>
 
 {% endblock %}
 
