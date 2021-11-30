@@ -1,0 +1,39 @@
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Saathvika</title>
+    <script>
+        function changeImage() {
+
+            if (document.getElementById("imgClickAndChange").src.includes('/static/assets/little.jpg'))
+            {
+                document.getElementById("imgClickAndChange").src = "/static/assets/greyLittle.jpg";
+            }
+            else{
+                document.getElementById("imgClickAndChange").src ="/static/assets/little.jpg"
+            }
+        }
+    </script>
+</head>
+<body style="background-image: url('/static/assets/saathvikaBG.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-size: cover;">
+<div style="margin: 2% 5% 5%; text-align:center; font-family: monospace; font-size: larger" >
+    <div>
+        <h1 style="background-color: rosybrown; font-family: monospace">Saathvika Ajith's Individual Homepage</h1>
+        <p style="background-color: rosybrown">Hello there <span id="myName">{{name}}</span>, welcome to my individual homepage!</p>
+        <form action="/saathvika/" id="saathvika2" method="POST" >
+            <label for="name">Enter Your Name!</label>
+            <input name="name" id="name">
+            <input type="submit" value="Go!" onclick="(function (){document.getElementById('myName').innerText=document.getElementById('name').value})();return false;">
+        </form>
+        <p style="background-color: rosybrown">
+            <img src="/static/assets/little.jpg" style="height: 350px; width: auto;" id="imgClickAndChange" onclick="changeImage()" alt="change"/>
+            <br>
+            Click to ColorZap!
+        </p>
+    </div>
+</div>
+</body>
+</html>
+{% endblock %}
