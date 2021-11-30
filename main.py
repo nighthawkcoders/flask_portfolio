@@ -36,7 +36,13 @@ def samaya():
     return render_template("samaya.html")
 
 
+@app.route('/alice/')
+def alice():
+    return render_template("alice.html")
 
+@app.route('/linda/')
+def linda():
+    return render_template("linda.html")
 
 # runs the application on the development server
 if __name__ == "__main__":
