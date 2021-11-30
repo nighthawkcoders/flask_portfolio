@@ -21,6 +21,11 @@ def alice():
     return render_template("alice.html")
 
 
+@app.route('/pranavi/')
+def pranavi():
+    return render_template("pranavi.html")
+
+
 @app.route('/saathvika/')
 def saathvika():
     return render_template("saathvika.html")
