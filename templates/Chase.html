@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+{% extends "layouts/base.html" %}
+{%block head %}
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Chase About</title>
+
+    </head>
+{%endblock%}
+
+{% block body %}
+    <body>
+    <h1 class="text-center">Chase's Home Page</h1>
+    <div class="container">
+    <div class="row justify_content_md_center" style="align:center">
+        <table class="table">
+            <thead>
+            <tr>
+                <th colspan="2">
+                    <h3 style="text-align:center">About Chase The Github Admin</h3>
+                </th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr>
+                <td>
+                    <img id="chaseMask" class="img-responsive py-3" alt="" width="512" src="/static/assets/ChaseMask.jpg">
+                    <div class="d-grid gap-2 $blue">
+                        <button class="btn-lg" onclick="mask()">With Mask</button>
+                        <button class="btn-lg" onclick="nomask()">No Mask</button>
+                    </div>
+                </td>
+                <td>
+
+                <p style="text-align:center" class="fs-2">
+                 My name is Chase and I am a sophomore at Del Norte Homeschool.
+                 I took AP Computer Science because I was interested in how coding worked.
+                <a href="https://docs.google.com/document/d/1Bfy11_zCAIg2uaeKcpmVLbDg7jgdFrZuKj8gulCr_xQ/edit"> Journal </a>
+                </p>
+                </td>
+
+    <script>
+        function mask() {
+            document.getElementById('chaseMask')
+                .src="/static/assets/ChaseMask.jpg";
+        }
+
+        function nomask() {
+            document.getElementById('chaseMask')
+                .src="/static/assets/ChasenoMask.jpg";
+        }
+    </script>
+
+    </table>
+        <style>
+            html,body {
+                background: url('/static/assets/DogBackground.jpg') no-repeat center center fixed;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+            }
+        </style>
+    </div>
+{%endblock%}
+</html>

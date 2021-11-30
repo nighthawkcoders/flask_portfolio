@@ -13,6 +13,10 @@ def index():
 def connor():
     return render_template('connor.html')
 
+@app.route('/Chase/')
+def chase():
+    return render_template('Chase.html')
+
 @app.route('/tanay/')
 def tanay():
     return render_template('tanay.html')
