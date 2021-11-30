@@ -58,19 +58,19 @@ Scrum Board:
 ### Week 1
 | Members | Jobs | Ticket |
 | ------------- | -------------------------------------------------------------| - |
-| Nathan | Scrum Master |  |
+| Nathan | Scrum Master | https://github.com/Reem57/flask_portfolio/wiki/Policies |
 | Reem | TO |  |
-| Daniel | Primary Designer |  |
+| Daniel | Primary Designer | https://github.com/Reem57/flask_portfolio/wiki/Theme |
 | Jacob | Deployment Manager |  |
-| James | Github Admin |  |
+| James | Github Admin | https://github.com/Reem57/flask_portfolio/wiki/Contribution-Guidelines |
 
 
 ### Week 0
 | Members | Jobs | Ticket |
 | ------------- | -------------------------------------------------------------| - |
 | Nathan | Scrum Master | https://github.com/Reem57/flask_portfolio/projects/1 |
-| Reem | TO | <img width="829" alt="Screen Shot 2021-11-30 at 1 29 12 PM" src="https://user-images.githubusercontent.com/89236893/144131022-43c1e5d2-940a-45a3-88e7-0020d36469a9.png"> |
-| Daniel | Primary Designer | https://docs.google.com/document/d/1tb-dejgl3LDyOKPLLTXAAF7qAneWY_KO6omHmS9C-_Y/edit |
-| Jacob | Deployment Manager | <img width="464" alt="Screen Shot 2021-11-30 at 1 36 21 PM" src="https://user-images.githubusercontent.com/89236893/144131906-0a33ed73-363d-4b20-b0f8-e89760710c68.png"> |
-| James | Github Admin | <img width="335" alt="Screen Shot 2021-11-30 at 1 29 01 PM" src="https://user-images.githubusercontent.com/89236893/144131124-a68a4a44-6b94-4876-86e9-57e800d6db3b.png"> |
+| Reem | TO | https://github.com/Reem57/flask_portfolio/issues/7 |
+| Daniel | Primary Designer | https://github.com/Reem57/flask_portfolio/issues/3 |
+| Jacob | Deployment Manager | https://github.com/Reem57/flask_portfolio/issues/11 |
+| James | Github Admin | https://github.com/Reem57/flask_portfolio/issues/1 |
 
