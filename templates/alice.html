@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<h1 id="abt_name"> Alice Tang Individual Homepage</h1>
+<style>
+    body{
+        background: #8c8cb8;
+    }
+
+    #abt_name {
+        font-family: 'Blippo';
+        font-size: 60px;
+        text-align: center;
+        padding: 15px;
+        color: #ede9f3;
+        text-shadow: 5px 5px #33268a;
+    }
+
+</style>
+
+<p>Hello <span id="myName">{{name}}</span>, welcome to my individual page!</p>
+<form action="#" id="alice" method="POST" >
+    <label for="name">Enter Your Name</label>
+    <input name="name" id="name">
+    <input type="submit" value="enter" onclick="(function (){document.getElementById('myName').innerText=document.getElementById('name').value})();return false;">
+</form>
+
+
+<p>
+    <img src="/static/assets/alicewithmask.jpg" style="height: 300px; width: 300px;" id="imgClickAndChange" onclick="changeImage()"/>
+</p>
+<script>
+function changeImage() {
+
+if (document.getElementById("imgClickAndChange").src.includes('alicewithmask'))
+{
+document.getElementById("imgClickAndChange").src = "/static/assets/alicewithoutmask.jpg";
+}
+else{
+document.getElementById("imgClickAndChange").src ="/static/assets/alicewithmask.jpg"
+}
+}
+</script>
+
+<p>Click Me!</p>
