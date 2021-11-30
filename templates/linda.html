@@ -34,23 +34,34 @@
         <div>
 
             <h1>Linda Liu Individual Homepage</h1>
+
+            <!-Greet->
             <p>Hello <span id="myName">{{name}}</span>, welcome to my individual page!</p>
             <form action="#" id="linda" method="POST" >
-                <label for="name">Enter Your Name</label>
+                <label for="name" style="color: white">Enter Your Name</label>
                 <input name="name" id="name">
                 <input type="submit" value="Go!" onclick="(function (){document.getElementById('myName').innerText=document.getElementById('name').value})();return false;">
             </form>
+
+            <!-Links->
+            <p style="text-align: left"><a href="https://docs.google.com/document/d/1PGcv6fkv8A5Y1uzuN-iLSGm9CKhdWEL_fQRZyGv9ymI/edit?usp=sharing">Pair Journal</a></p>
+            <p style="text-align: left"><a href="https://docs.google.com/document/d/1sZS-mU7SGq6S9c94T5OciGrEQYjoQMeJLd6lv3WhqoY/edit?usp=sharing">My Individual Journal</a></p>
+            <p style="text-align: left"><a href="https://docs.google.com/document/d/1Fgip2Fr26XOBEdhVSpi1QiwjZowhopY57o4UpwbYZzo/edit?usp=sharing">StudyOwl Brainwrite</a></p>
+
+            <!-Images Toggle->
             <p>
                 <img src="/static/assets/lindaWithMask.jpg" style="height: 350px; width: auto;" id="imgClickAndChange" onclick="changeImage()"/>
             </p>
             <p style="font-size: large; font-family: Baskerville; text-align: center"><i>Click Me</i></p>
 
-<!-Random Motivational Quote Api->
+
+            <!-Random Motivational Quote Api->
             <button id="get-quote" style="margin-top: 20px;height: 35px" onclick="newQuote()">Get me a quote</button>
 
             <div id="display-quote" style="margin-top: 10px;font-size: 29px;color: white;font-weight: 600;">No quote yet</div>
 
-<!-Todo List->
+
+            <!-Todo List->
             <button id="show-todo" onclick="showTodo()">Show Todo List</button>
             <div class="container" id="todo-list">
                 <h2>TODO LIST</h2>
@@ -71,8 +82,10 @@
                 </ul>
             </div>
 
+
             <script>
-                //Todo List
+
+            //Todo List
             function showTodo(){
                 document.getElementById("todo-list").style.display = "block";
             }
