@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-{% include "layouts/navbar.html" %}
+{% extends "layouts/base.html" %}
+{%block head %}
 <head>
     <meta charset="UTF-8">
     <title>Connor</title>
@@ -14,7 +15,9 @@
         .src="/static/assets/nomaskconnor.jpg";
     }
 </script>
-<body>
+{%endblock%}
+{% block body %}
+
 <h1 class="text-center">Connor Home Page</h1>
 <div class="container">
     <div class="row justify-content-md-center">
@@ -34,5 +37,5 @@
                     </div>
                 </td>
             </tr>
-</body>
+{% endblock %}
 </html>

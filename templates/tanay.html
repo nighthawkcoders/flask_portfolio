@@ -1,5 +1,7 @@
 <!DOCTYPE html>
+{% extends "layouts/base.html" %}
 
+{% block head %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,19 +9,22 @@
 
 <script>
     function mask() {
-        document.getElementById('place')
-        .src="/static/assets/tanaymask.jpg";
+        document.getElementById("place")
+        .src="/static/assets/maskedtanay.jpg";
     }
     function nomask() {
-        document.getElementById('place')
-        .src="/static/assets/tanaymaskoff.jpg";
+        document.getElementById("place")
+        .src="/static/assets/maskofftanay.jpg";
     }
 </script>
 
-<h1>Meet Tanay Rayavarapu</h1>
-    <h2>Deployment Manager</h2>
 </head>
+{% endblock %}
+
+{% block body %}
 <body>
+<h1>Meet Tanay Rayavarapu</h1>
+<h2>Deployment Manager</h2>
 <div class="container">
     <div class="row justify-content-md-center" style="align:center">
         <table class="table">
@@ -31,7 +36,7 @@
             <tbody>
             <tr>
                 <td>
-                    <img id="place" class="img-responsive py-3" alt="" width="256" src="/static/assets/tanaymask.jpg" >
+                    <img id="place" class="img-responsive py-3" alt="" width="256" src="/static/assets/maskedtanay.jpg" >
                     <div>
                         <button onclick="mask()">Mask</button>
                         <button onclick="nomask()">No Mask</button>
@@ -40,3 +45,4 @@
             </tr>
 </body>
 </html>
+{% endblock %}
