@@ -9,7 +9,8 @@
 
 
 <title>Greet Khushi</title>
-<body style="background-color: #EBF7FA;">
+<body style="background-color: #EBF7FA; text-align:center">
+
 <style>
    .button1 {
        background-color: white;
@@ -26,7 +27,8 @@
    }
 </style>
 
-<img id="myImage" onclick="changeImage()" src="/static/assets/khushi2.jpg" width="250" height="250">
+<div style="margin: 2% 5% 5%; text-align:center; font-family: Baskerville; font-size: larger">
+    </div>
 
 <p>Hello <span id="myName">{{name}}</span>, Greetings!</p>
 
@@ -37,16 +39,16 @@
 </form>
 
 <br>
-<p>
-    <img src="/static/assets/khushiimages/Khushi.jpg" style="height: 400px; width: 350px;" id="imgClickAndChange" onclick="changeImage()"/>
+<p> <!-- Reference from Linda -->
+    <img src="/static/assets/khushiimages/Khushi.jpg" style="height: 400px; width: auto;" id="imgClickAndChange" onclick="changeImage()"/>
 </p>
 <p style="font-size: large; font-family: Baskerville; text-align: center"><i>Click Me</i></p>
-<script>
-   function changeImage() {
 
+<script> //reference from Shreya
+   function changeImage() {
        if (document.getElementById("imgClickAndChange").src ="/static/assets/khushiimages/Khushi.jpg")
        {
-           document.getElementById("imgClickAndChange").src = "/static/assets/khushiimages/khushi2.jpg";
+           document.getElementById("imgClickAndChange").src = "/static/assets/khushiimages/Khushi2.jpg";
        }
 
    }
