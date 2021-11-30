@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <script>
+        function mask() {
+            document.getElementById('place')
+                .src="/static/assets/pranavmask.jpg";
+        }
+        function nomask() {
+            document.getElementById('place')
+                .src="/static/assets/pranavnomask.jpg";
+        }
+    </script>
+
     <style>
         * {
             box-sizing: border-box;
@@ -130,7 +141,25 @@
         <div class="card">
             <h2>TITLE HEADING</h2>
             <h5>Title description, Sep 2, 2017</h5>
-            <div class="fakeimg" style="height:200px;">Image</div>
+            <div class="container">
+                <div class="row justify-content-md-center" style="align:center">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th style="text-align:center">Pranav</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                <img id="place" class="img-responsive py-3" alt="" width="256" src="/static/assets/pranavmask.jpg" >
+                                <div>
+                                    <button onclick="mask()">Mask</button>
+                                    <button onclick="nomask()">No Mask</button>
+                                </div>
+                            </td>
+                        </tr>
+
             <p>Some text..</p>
             <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
         </div>

@@ -1,7 +1,7 @@
 # Period 5 - Team Food
 ### Project Description:
 ## [Scrum Board](https://github.com/connorw72/food/projects/1)
-### PUT IMAGE OF HOME PAGE
+### ![Screen Shot 2021-11-29 at 2 57 43 PM](https://user-images.githubusercontent.com/89223703/143955920-b221c674-82e5-4840-9981-46165d32b82f.png)
 ## Table of Contents
 1. [GitHub repo Contributors](https://github.com/connorw72/food/graphs/contributors)
 2. Pair Share Journals [Tanay and Connor](https://docs.google.com/document/d/1yMnRk0cY8TWYl3YKTgz0OKkrI5Gac4pEyoyiffEeUoE/edit?usp=sharing), [Colin and Pranav]()
@@ -15,9 +15,7 @@
 | Colin Howard| [@koolkidkai](https://github.com/KoolKidKai) | [Tasks](https://github.com/connorw72/food/issues/assigned/KoolKidKai) |[Scrum Board](https://github.com/connorw72/food/projects/1?card_filter_query=assignee%3Akoolkidkai) | [Commits](https://github.com/connorw72/food/commits?author=koolkidkai)| Technical Officer
 | Chase Ott | [@ChaseOtt](https://github.com/ChaseOtt) | [Tasks](https://github.com/connorw72/food/issues/assigned/ChaseOtt) |[Scrum Board](https://github.com/connorw72/food/projects/1?card_filter_query=assignee%3Achaseott) | [Commits](https://github.com/connorw72/food/commits?author=ChaseOtt)| GitHub Admin
 ### Week 0
-|Member | Task| Tangible Link |
-|:-----|:----------------------| :------|
-|Connor| About/Home Page|l
-|Tanay| About/Home Page| l
-|Colin| About/Home Page|l
-|Pranav| About/Home Page|l
+|Task| Tangible Link |
+|:-----|:----------------------|
+|Wire Frame| [Wire Frame](https://docs.google.com/drawings/d/1lE1sUsjAlyknfTvKNZUxXqfIHMqynNdGCp_NhJ8ziTU/edit?usp=sharing)
+|Brain Write| [Brain Write]()
