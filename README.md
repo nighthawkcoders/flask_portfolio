@@ -55,13 +55,22 @@ Scrum Board:
 | Sprint 1,2 (Week 14)   |              |
 | Sprint 0 (Week 13)   |              |
 
-
-### Week 0
+### Week 1
 | Members | Jobs | Ticket |
 | ------------- | -------------------------------------------------------------| - |
 | Nathan | Scrum Master |  |
 | Reem | TO |  |
-| Daniel | Ideas Man |  |
+| Daniel | Primary Designer |  |
+| Jacob | Deployment Manager |  |
+| James | Github Admin |  |
+
+
+### Week 0
+| Members | Jobs | Ticket |
+| ------------- | -------------------------------------------------------------| - |
+| Nathan | Scrum Master | https://github.com/Reem57/flask_portfolio/projects/1 |
+| Reem | TO |  |
+| Daniel | Primary Designer | https://docs.google.com/document/d/1tb-dejgl3LDyOKPLLTXAAF7qAneWY_KO6omHmS9C-_Y/edit |
 | Jacob | Deployment Manager |  |
 | James | Github Admin |  |
 
