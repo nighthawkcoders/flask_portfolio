@@ -1,7 +1,7 @@
 # Team Milkshake
 
 ## Purpose of Project
-#### TBD
+This is a world interactive website that our scrum team developed to help others learn about different countries and their diverse cultures. On this website, our team included many dropdown menus containing information about each country. Learn about us, new languages, best travel destinations, traditions, and interesting statistics in the form of api databases to stay informed about our world.
 
 ## Purpose of README
 #### To organize and highlight our projects through weekly sprints that connect to our PBL. This is shown through commits, tangibles and videos which are organized by the week to showcase work.
