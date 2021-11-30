@@ -27,16 +27,24 @@ def hawkers():
     return render_template("hawkers.html")
 
 
-@app.route('/stub/')
-def stub():
-    return render_template("stub.html")
-
 @app.route('/samaya/')
 def samaya():
     return render_template("samaya.html")
 
 
+@app.route('/alice/')
+def alice():
+    return render_template("alice.html")
 
+
+@app.route('/saathvika/')
+def saathvika():
+    return render_template("saathvika.html")
+
+
+@app.route('/linda/')
+def linda():
+    return render_template("linda.html")
 
 
 # runs the application on the development server
