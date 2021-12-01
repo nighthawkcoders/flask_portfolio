@@ -17,8 +17,8 @@
 
 ---
 ## Table of Contents
-1. [Week 0](#Week0)
-2. [Week 1 - Project Approval](#Week1)
+1. [Week 1 - Project Approval](#Week1)
+2. [Week 0](#Week0)
 ---
 ###   <h2 id="Week1">Week 1 - Project Approval: Due 12/2</h2>
 
@@ -29,20 +29,20 @@
 | Name | Requirement | Evidence | Grade |
 |:----:|:-----------:|:--------:|:-----:|
 | Saathvika Ajith |10 to 12 Key Ideas<br>CB Notes & Quizzes|<a href="https://github.com/PranaviInukurti/flask_portfolio/issues/16">Ticket</a><br><a href="https://github.com/PranaviInukurti/flask_portfolio/issues/12">Ticket</a><br>|/8|
-| Pranavi Inukurti |Wiki Management Plan<br>Scrum Board Assignments and Backlog<br>CB Notes & Quizzes|<a href="https://github.com/PranaviInukurti/flask_portfolio/issues/15">Ticket</a><br><a href="https://github.com/PranaviInukurti/flask_portfolio/projects/1">Ticket</a><br><a href="https://github.com/PranaviInukurti/flask_portfolio/issues/12">Ticket</a><br>|/8|
+| Pranavi Inukurti |Wiki Management Plan<br>CB Notes & Quizzes|<a href="https://github.com/PranaviInukurti/flask_portfolio/issues/15">Ticket</a><br><a href="https://github.com/PranaviInukurti/flask_portfolio/issues/12">Ticket</a><br>|/8|
 | Alice Tang |Wiki Theme<br>Wire Frame<br>CB Notes & Quizzes|<a href="https://github.com/PranaviInukurti/flask_portfolio/issues/17">Ticket</a><br><a href="https://github.com/PranaviInukurti/flask_portfolio/issues/8">Ticket</a><br><a href="https://github.com/PranaviInukurti/flask_portfolio/issues/12">Ticket</a><br>|/8|
 | Samaya Sankuratri |Wiki Plan - Hardware and Frequency<br>CB Notes & Quizzes|<a href="https://github.com/PranaviInukurti/flask_portfolio/issues/14">Ticket</a><br><a href="https://github.com/PranaviInukurti/flask_portfolio/issues/12">Ticket</a><br>|/8|
-| Linda Liu |CB Notes & Quizzes|<a href="https://github.com/PranaviInukurti/flask_portfolio/issues/12">Ticket</a><br>|/8|
+| Linda Liu |Scrum Board Assignments and Backlog<br>CB Notes & Quizzes|<a href="https://github.com/PranaviInukurti/flask_portfolio/projects/1">Ticket</a><br><a href="https://github.com/PranaviInukurti/flask_portfolio/issues/12">Ticket</a><br>|/8|
 
 - Individual Scoring
 
 | Name | Journal with TT & TPT Notes | Grade |
 |:----:|:---------------------------:|:-----:|
-| Saathvika Ajith | https://docs.google.com/document/d/1mfrMqXhbkRceC4fq3nXZMLD8jo5IjC2mwAsvpqjQX94/edit?usp=sharing | 5/5 |
-| Pranavi Inukurti | https://docs.google.com/document/d/1PGcv6fkv8A5Y1uzuN-iLSGm9CKhdWEL_fQRZyGv9ymI/edit?usp=sharing | 5/5 |
-| Alice Tang | https://docs.google.com/document/d/1mfrMqXhbkRceC4fq3nXZMLD8jo5IjC2mwAsvpqjQX94/edit?usp=sharing | 5/5 |
-| Samaya Sankuratri | https://docs.google.com/document/d/1PGcv6fkv8A5Y1uzuN-iLSGm9CKhdWEL_fQRZyGv9ymI/edit?usp=sharing | 5/5 |
-| Linda Liu | https://docs.google.com/document/d/1PGcv6fkv8A5Y1uzuN-iLSGm9CKhdWEL_fQRZyGv9ymI/edit?usp=sharing | 5/5 |
+| Saathvika Ajith | <a href="https://docs.google.com/document/d/1mfrMqXhbkRceC4fq3nXZMLD8jo5IjC2mwAsvpqjQX94/edit?usp=sharing">Journal</a> | 5/5 |
+| Pranavi Inukurti | <a href="https://docs.google.com/document/d/1PGcv6fkv8A5Y1uzuN-iLSGm9CKhdWEL_fQRZyGv9ymI/edit?usp=sharing">Journal</a> | 5/5 |
+| Alice Tang | <a href="https://docs.google.com/document/d/1mfrMqXhbkRceC4fq3nXZMLD8jo5IjC2mwAsvpqjQX94/edit?usp=sharing">Journal</a> | 5/5 |
+| Samaya Sankuratri | <a href="https://docs.google.com/document/d/1PGcv6fkv8A5Y1uzuN-iLSGm9CKhdWEL_fQRZyGv9ymI/edit?usp=sharing">Journal</a> | 5/5 |
+| Linda Liu | <a href="https://docs.google.com/document/d/1PGcv6fkv8A5Y1uzuN-iLSGm9CKhdWEL_fQRZyGv9ymI/edit?usp=sharing">Journal</a> | 5/5 |
 
 
 ###   <h2 id="Week0">Week 0: Due 11/19</h2>
@@ -53,19 +53,19 @@
 
 | Name | Requirement | Evidence | Grade |
 |:----:|:-----------:|:--------:|:-----:|
-| Saathvika Ajith |Individual Homepage|https://github.com/PranaviInukurti/flask_portfolio/issues/10|3/3|
-| Pranavi Inukurti |Individual Homepage|https://github.com/PranaviInukurti/flask_portfolio/issues/10|3/3|
-| Alice Tang |Individual Homepage|https://github.com/PranaviInukurti/flask_portfolio/issues/10|3/3|
-| Samaya Sankuratri |Individual Homepage|https://github.com/PranaviInukurti/flask_portfolio/issues/10|3/3|
-| Linda Liu |Individual Homepage|https://github.com/PranaviInukurti/flask_portfolio/issues/10|3/3|
+| Saathvika Ajith |Individual Homepage|<a href="https://github.com/PranaviInukurti/flask_portfolio/issues/10">Ticket</a>|3/3|
+| Pranavi Inukurti |Individual Homepage|<a href="https://github.com/PranaviInukurti/flask_portfolio/issues/10">Ticket</a>|3/3|
+| Alice Tang |Individual Homepage|<a href="https://github.com/PranaviInukurti/flask_portfolio/issues/10">Ticket</a>|3/3|
+| Samaya Sankuratri |Individual Homepage|<a href="https://github.com/PranaviInukurti/flask_portfolio/issues/10">Ticket</a>|3/3|
+| Linda Liu |Individual Homepage|<a href="https://github.com/PranaviInukurti/flask_portfolio/issues/10">Ticket</a>|3/3|
 
 - Individual Scoring
 
 | Name | Journal with TT & TPT Notes | Grade |
 |:----:|:---------------------------:|:-----:|
-| Saathvika Ajith | https://docs.google.com/document/d/1mfrMqXhbkRceC4fq3nXZMLD8jo5IjC2mwAsvpqjQX94/edit?usp=sharing | 5/5 |
-| Pranavi Inukurti | https://docs.google.com/document/d/1PGcv6fkv8A5Y1uzuN-iLSGm9CKhdWEL_fQRZyGv9ymI/edit?usp=sharing | 5/5 |
-| Alice Tang | https://docs.google.com/document/d/1mfrMqXhbkRceC4fq3nXZMLD8jo5IjC2mwAsvpqjQX94/edit?usp=sharing | 5/5 |
-| Samaya Sankuratri | https://docs.google.com/document/d/1PGcv6fkv8A5Y1uzuN-iLSGm9CKhdWEL_fQRZyGv9ymI/edit?usp=sharing | 5/5 |
-| Linda Liu | https://docs.google.com/document/d/1PGcv6fkv8A5Y1uzuN-iLSGm9CKhdWEL_fQRZyGv9ymI/edit?usp=sharing | 5/5 |
+| Saathvika Ajith | <a href="https://docs.google.com/document/d/1mfrMqXhbkRceC4fq3nXZMLD8jo5IjC2mwAsvpqjQX94/edit?usp=sharing">Journal</a> | 5/5 |
+| Pranavi Inukurti | <a href="https://docs.google.com/document/d/1PGcv6fkv8A5Y1uzuN-iLSGm9CKhdWEL_fQRZyGv9ymI/edit?usp=sharing">Journal</a> | 5/5 |
+| Alice Tang | <a href="https://docs.google.com/document/d/1mfrMqXhbkRceC4fq3nXZMLD8jo5IjC2mwAsvpqjQX94/edit?usp=sharing">Journal</a> | 5/5 |
+| Samaya Sankuratri | <a href="https://docs.google.com/document/d/1PGcv6fkv8A5Y1uzuN-iLSGm9CKhdWEL_fQRZyGv9ymI/edit?usp=sharing">Journal</a> | 5/5 |
+| Linda Liu | <a href="https://docs.google.com/document/d/1PGcv6fkv8A5Y1uzuN-iLSGm9CKhdWEL_fQRZyGv9ymI/edit?usp=sharing">Journal</a> | 5/5 |
 
