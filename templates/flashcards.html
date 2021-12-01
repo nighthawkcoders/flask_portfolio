@@ -17,8 +17,45 @@
     .flashcards-grid {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+        grid-auto-rows: min-content;
         grid-gap: 30px;
         width: 95%;
+    }
+    .flashcard {
+        height: 100px;
+        border: 2px solid red;
+    }
+    .flashcard-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+
+    .flashcard:hover .flashcard-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flashcard-front, .flashcard-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .flashcard-front {
+      color: black;
+    }
+
+    .flashcard-back {
+      color: white;
+      transform: rotateY(180deg);
     }
 
 </style>
@@ -26,12 +63,12 @@
 <h1> Flashcards <h1>
 <div class="flashcards-grid">
     <div class="flashcard">
-        <div class="card">
-            <div class="flashcard-face flashcard-front">
+        <div id="card1" class="flashcard-inner">
+            <div class="flashcard-front">
                 <h4> front side </h4>
                 <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu molestie nibh, quis accumsan urna. Praesent lorem felis, elementum scelerisque faucibus a, pharetra a purus. Morbi nisi purus, placerat at. </p>
             </div>
-            <div class="flashcard-face flashcard-back">
+            <div class="flashcard-back">
                 <h4> back side </h4>
                 <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu molestie nibh, quis accumsan urna. Praesent lorem felis, elementum scelerisque faucibus a, pharetra a purus. Morbi nisi purus, placerat at. </p>
             </div>
