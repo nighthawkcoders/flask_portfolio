@@ -2,11 +2,12 @@
 ### Project Description:
 #### The project created by team food spreads awareness on pets and animal adoption. On the website, you will learn about the animals that you can adopt, common pets, and even where to adopt these pets if any of them are appealing to you. Find your next best friend here!
 ## [Scrum Board](https://github.com/connorw72/food/projects/1)
+## Home Page
 ### ![Screen Shot 2021-11-29 at 2 57 43 PM](https://user-images.githubusercontent.com/89223703/143955920-b221c674-82e5-4840-9981-46165d32b82f.png)
 ## Table of Contents
 1. [GitHub repo Contributors](https://github.com/connorw72/food/graphs/contributors)
 2. Pair Share Journals [Tanay and Connor](https://docs.google.com/document/d/1yMnRk0cY8TWYl3YKTgz0OKkrI5Gac4pEyoyiffEeUoE/edit?usp=sharing), [Colin and Pranav]()
-3. [Innovation sprint 1,2 Week 1]()
+3. [Innovation sprint 1,2 Week 1](https://github.com/connorw72/food#innovation-sprint-12-week-1)
 ## Contributors
 | Name | GitHub ID and Profile | Tasks | Scrum Board | Commits | BOF Job |
 |:-----|:----------------------|:-----:|:-----------:|:-------:|:--------:|
