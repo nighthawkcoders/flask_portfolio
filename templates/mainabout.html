@@ -1,57 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
 {%  extends "layouts/base.html" %}
 {%  set project = "About Us" %}
+
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>About Us</title>
 </head>
 {% block body %}
+<div class="container-fluid" style="background-image: url('../static/nathan1.jpg'); height: available; width: 100%; background-repeat: no-repeat; background-attachment: fixed">
+    <style>
+        /* Parent Container */
+
+        .aboutUsImage{
+            background: url('../static/nathan.png') no-repeat;
+            cursor:pointer;
+            width: 232px;
+            height: 309px;
+            transform: translateY(3px);
+        }
+        .fa:hover {
+            font-size: 3em;
+            letter-spacing: 1em;
+            transition: all .2s;
+            color: white;
+            box-shadow: 0 20px 40px rgba(255, 255, 255, 0.7);
+        }
+    </style>
+</div>
+<body>
     <div class="col-0" style="margin: 3% 5% 2%" name="imgbox" id="imgbox">
     <table class="table">
-        <thead>
+        tbody>
         <tr>
             <div class="content_img">
-                <img src='/static/nathan1.jpg' width='125%' height='175%' style="margin: 0% 0% 0%">
-                <div>Nathan Manangan:<br>15 years old<br>Allergic to seafood </div>
+                <input type="button" class="fa aboutUsImage" onclick="location.href = '/aboutnathan';">
+                <div>Nathan Manangan</div>
             </div>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <div class="content_img">
-                <img src='/static/nathan1.jpg' width='125%' height='175%' style="margin: 0% 0% 0%">
-                <div>Daniel<br><br></div>
-            </div>
+
         </tr>
         <tr>
             <div class="content_img">
-                <img src='/static/nathan1.jpg' width='125%' height='175%' style="margin: 0% 0% 0%">
-                <div>Reem<br><br></div>
+                <input type="button" class="fa aboutUsImage" onclick="location.href = '/aboutnathan';">
+                <div>Reem Ben Ishai</div>
             </div>
         </tr>
         <tr>
             <div class="content_img">
-                <img src='/static/nathan1.jpg' width='125%' height='175%' style="margin: 0% 0% 0%">
-                <div>Jacob<br><br></div>
+                <input type="button" class="fa aboutUsImage" onclick="location.href = '/aboutnathan';">
+                <div>Nathan Manangan</div>
             </div>
         </tr>
         <tr>
             <div class="content_img">
-                <img src='/static/nathan1.jpg' width='125%' height='175%' style="margin: 0% 0% 0%">
-                <div>James<br><br></div>
+                <input type="button" class="fa aboutUsImage" onclick="location.href = '/aboutnathan';">
+                <div>Nathan Manangan</div>
+            </div>
+        </tr>
+        <tr>
+            <div class="content_img">
+                <input type="button" class="fa aboutUsImage" onclick="location.href = '/aboutnathan';">
+                <div>Nathan Manangan</div>
             </div>
         </tr>
         </tbody>
     </table>
+    </div>
+</body>
     <style>
-        .content_img{
-            position: static;
-            width: 14%;
-            height: 20%;
-            float: left;
-            margin-right: 11%;
-        }
+
     </style>
+    </div>
+    </html>
 {% endblock %}
-</html>
