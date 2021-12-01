@@ -8,3 +8,14 @@ Website function: The purpose of this website is to represent information for ce
 - Start journals
 - 1.1 and 1.2 quizzes
 
+Team Members | Tasks | Journal | Commits | Pair Share | Github |
+--- | --- | --- | --- |--- |--- 
+Kian Pasokhi | 301 | N/A | [Commits](https://github.com/kiannp44/n224-pokeman/commits?author=kiannp44) | N/A | [Profile](https://github.com/kiannp44) | 
+Lucas Huang | 301 | N/A | [Commits](https://github.com/kiannp44/n224-pokeman/commits?author=lucashuang248) | N/A | [Profile](https://github.com/lucashuang248) | 
+Ian Hua | 301 | N/A | [Commits](https://github.com/kiannp44/n224-pokeman/commits?author=IanHua14) | N/A | [Profile](https://github.com/IanHua14) | 
+Gavin Wu | 301 | N/A | [Commits](https://github.com/kiannp44/n224-pokeman/commits?author=GavinYWu) | N/A | [Profile](https://github.com/GavinYWu) | 
+
+
+
+
+
