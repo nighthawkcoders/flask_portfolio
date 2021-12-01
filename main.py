@@ -45,5 +45,8 @@ def sanjay():
     output =json.loads(response.text)
     return render_template("about_us/sanjay.html",data=output)
 # runs the application on the development server
+@app.route('/flashcards/')
+def flashcards():
+    return render_template('flashcards.html')
 if __name__ == "__main__":
     app.run(debug=True)

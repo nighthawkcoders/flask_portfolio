@@ -1,0 +1,45 @@
+{% extends "layouts/base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flashcards</title>
+</head>
+{% block body %}
+<style>
+    .page-container {
+        margin-left: 250px;
+        text-align: center;
+    }
+    p {
+        font-size: 15px
+    }
+    .flashcards-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 30px;
+        width: 95%;
+    }
+
+</style>
+<div class="page-container">
+<h1> Flashcards <h1>
+<div class="flashcards-grid">
+    <div class="flashcard">
+        <div class="card">
+            <div class="flashcard-face flashcard-front">
+                <h4> front side </h4>
+                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu molestie nibh, quis accumsan urna. Praesent lorem felis, elementum scelerisque faucibus a, pharetra a purus. Morbi nisi purus, placerat at. </p>
+            </div>
+            <div class="flashcard-face flashcard-back">
+                <h4> back side </h4>
+                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu molestie nibh, quis accumsan urna. Praesent lorem felis, elementum scelerisque faucibus a, pharetra a purus. Morbi nisi purus, placerat at. </p>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+{% endblock %}
+
+</html>
