@@ -19,7 +19,7 @@
 ### Innovation sprint 1,2 Week 1
 |BOF Task| Tangible Link |
 |:-----|:----------------------|
-|Design - Wiki Theme, Brain Write & Wire Frame| [Wire Frame](https://docs.google.com/drawings/d/1lE1sUsjAlyknfTvKNZUxXqfIHMqynNdGCp_NhJ8ziTU/edit?usp=sharing),[Brain Write](https://docs.google.com/document/d/18dbqQSwC8XAAXiMIO4DE5xemwSxYM788A-3KE1XdrRY/edit?usp=sharing),[Wiki]()
+|Design - Wiki Theme, Brain Write & Wire Frame| [Wire Frame](https://docs.google.com/drawings/d/1lE1sUsjAlyknfTvKNZUxXqfIHMqynNdGCp_NhJ8ziTU/edit?usp=sharing),[Brain Write](https://docs.google.com/document/d/18dbqQSwC8XAAXiMIO4DE5xemwSxYM788A-3KE1XdrRY/edit?usp=sharing),[Wiki](https://github.com/connorw72/food/wiki)
 |Technicals - 10  to 12 key ideas | [Brain Write](https://docs.google.com/document/d/18dbqQSwC8XAAXiMIO4DE5xemwSxYM788A-3KE1XdrRY/edit?usp=sharing)
 |Github - On Wiki containing Management Plan| [Wiki page]()
 |Deployment - Wiki Plan, Hardware and Frequency| [Wiki page](),[Proof of Completion]()
