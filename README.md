@@ -12,19 +12,17 @@ This is a world interactive website that our scrum team developed to help others
 ## Table of Contents
 | Title | Link |
 | ---------------- | ------------------------------------------------------------------------------------------------------------ |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
+| Wiki | https://github.com/Reem57/flask_portfolio/wiki |
+| Contributors | https://github.com/Reem57/flask_portfolio#contributors |
+| Sprint Overview | https://github.com/Reem57/flask_portfolio#sprint-overview |
+
 
 ## Contributors
 ---------------------------------------
 
 Contributors: Daniel, Nathan, Reem, James, & Jacob
 
-Scrum Board: 
+Scrum Board: https://github.com/Reem57/flask_portfolio/projects/1
 
 | Name             | Journal                                                                                                      |
 | ---------------- | ------------------------------------------------------------------------------------------------------------ |
@@ -56,11 +54,11 @@ Scrum Board:
 |  |  |
 
 ### Sprint Overview
-| Week Number | Issue List                                              |
-| ------------- | -------------------------------------------------------------|
-| Sprint 1,2 (Week 15)   |       https://github.com/Reem57/flask_portfolio/issues?q=is%3Aopen+is%3Aissue+label%3A%22Week+2%22       |
-| Sprint 1,2 (Week 14)   |       https://github.com/Reem57/flask_portfolio/issues?q=is%3Aopen+is%3Aissue+label%3A%22Week+1%22       |
-| Sprint 0 (Week 13)   |       https://github.com/Reem57/flask_portfolio/issues?q=is%3Aopen+is%3Aissue+label%3A%22Week+0%22       |
+| Week Number | Timebox | Issue List                                              |
+| ------------- | ------------- | -------------------------------------------------------------|
+| Sprint 1,2 (Week 15)   |  |      https://github.com/Reem57/flask_portfolio/issues?q=is%3Aopen+is%3Aissue+label%3A%22Week+2%22       |
+| Sprint 1,2 (Week 14)   | https://github.com/Reem57/flask_portfolio#week-1 |    https://github.com/Reem57/flask_portfolio/issues?q=is%3Aopen+is%3Aissue+label%3A%22Week+1%22       |
+| Sprint 0 (Week 13)   | https://github.com/Reem57/flask_portfolio#week-0 |     https://github.com/Reem57/flask_portfolio/issues?q=is%3Aopen+is%3Aissue+label%3A%22Week+0%22       |
 
 ### Week 1
 | Members | Jobs | Ticket |
