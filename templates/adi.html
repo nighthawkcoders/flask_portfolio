@@ -10,13 +10,21 @@
         imagenumber=0;
         function toggle() {
             const images = ["/static/winnin.jpg",
-                "https://www.powayusd.com/PUSD/media/DNHS/images/slider/Hi-Res-School-Photo-min.jpg?ext=.jpg"
+                "/static/wideeyes.jpg",
+                "/static/rohanbrownbeanie.jpg",
+                "/static/IMG_887CE03AB9F7-1.jpeg"
             ];
             if (imagenumber == 0) {
                 document.getElementById("image").src = images[0]
                 imagenumber = 1;
             } else if (imagenumber == 1) {
                 document.getElementById("image").src = images[1]
+                imagenumber = 2;
+            } else if (imagenumber == 2) {
+                document.getElementById("image").src = images[2]
+                imagenumber = 3;
+            } else if (imagenumber == 3) {
+                document.getElementById("image").src = images[3]
                 imagenumber = 0;
             }
         }
@@ -30,8 +38,10 @@
 
     <p style="text-align: center; color: black">Click to toggle images</p>
     <br>
-        <img id="image" src="/static/winnin.jpg" onclick="toggle()" width="600" height="100">
-
+        <img id="image" src="/static/winnin.jpg" onclick="toggle()" width="1500" height="550">
+<br>
+<br>
+<br>
     <p align="center">
 <!--        <iframe-->
 <!--                width="1000"-->
