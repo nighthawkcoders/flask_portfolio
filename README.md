@@ -17,13 +17,26 @@
 
 ---
 ## Table of Contents
-1. [Sprint 0 - Introduction](#Sprint0)
+1. [Week 0](#Week0)
+2. [Week 1 - Project Approval](#Week1)
 ---
+###   <h2 id="Week1">Week 1 - Project Approval: Due 12/2</h2>
+- <a href=" ">Scrum Board</a>
 
-###   <h2 id="Sprint0">Sprint 0</h2>
-#### <h3> Week 0 </h3>
-- Scrum Board
-  - https://github.com/PranaviInukurti/flask_portfolio/projects/1?card_filter_query=milestone%3A%22sprint+0+-+introduction%22
+| Name | Requirement | Evidence | Grade |
+|:----:|:-----------:|:--------:|:-----:|
+| Saathvika Ajith |10 to 12 Key Ideas<br>CB Notes & Quizzes|<a href="https://github.com/PranaviInukurti/flask_portfolio/issues/16">Ticket</a><br><a href="https://github.com/PranaviInukurti/flask_portfolio/issues/12">Ticket</a><br>|/8|
+| Pranavi Inukurti |Wiki Management Plan<br>CB Notes & Quizzes|<a href="https://github.com/PranaviInukurti/flask_portfolio/issues/15">Ticket</a><br><a href="https://github.com/PranaviInukurti/flask_portfolio/issues/12">Ticket</a><br>|/8|
+| Alice Tang |Wiki Theme<br>Brain Write & Wire Frame<br>CB Notes & Quizzes|<a href="https://github.com/PranaviInukurti/flask_portfolio/issues/17">Ticket</a><br><a href="https://github.com/PranaviInukurti/flask_portfolio/issues/8">Ticket</a><br><a href="https://github.com/PranaviInukurti/flask_portfolio/issues/12">Ticket</a><br>|/8|
+| Samaya Sankuratri |Wiki Plan - Hardware and Frequency<br>CB Notes & Quizzes|<a href="https://github.com/PranaviInukurti/flask_portfolio/issues/14">Ticket</a><br><a href="https://github.com/PranaviInukurti/flask_portfolio/issues/12">Ticket</a><br>|/8|
+| Linda Liu |Scrum Board Assignments and Backlog<br>CB Notes & Quizzes|<a href="https://github.com/PranaviInukurti/flask_portfolio/projects/1">Evidence</a><br><a href="https://github.com/PranaviInukurti/flask_portfolio/issues/12">Ticket</a><br>|/8|
+
+
+
+###   <h2 id="Week0">Week 0: Due 11/19</h2>
+
+- <a href="https://github.com/PranaviInukurti/flask_portfolio/projects/1?card_filter_query=milestone%3A%22sprint+0+-+introduction%22">Scrum Board</a>
+
   
 - Team Scoring
 
