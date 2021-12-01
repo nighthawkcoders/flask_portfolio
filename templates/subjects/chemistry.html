@@ -1,0 +1,32 @@
+<!-- Extending the predefined project layout -->
+{% extends "layouts/base.html" %}
+
+<!- This variable sets name of browser tab  -->
+{% set project = "AP Chemistry" %}
+
+<!- This is a replacement block for Body in base.html -->
+{% block body %}
+
+    <script>
+
+    </script>
+
+
+    <style>
+        p {
+            margin-left: 250px;
+        }
+        img {
+            margin-left: 250px;
+            width: 207px;
+            height: 368px;
+        }
+        button {
+            margin-left: 250px;
+        }
+    </style>
+{% endblock %}
+
+<!- This is turning off birds background from base.html -->
+{% block background %}
+{% endblock %}

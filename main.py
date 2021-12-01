@@ -44,6 +44,35 @@ def sanjay():
     response = requests.request("GET", url, headers=headers, params=querystring)
     output =json.loads(response.text)
     return render_template("about_us/sanjay.html",data=output)
+
+@app.route('/apec/')
+def apec():
+    return render_template("subjects/apec.html")
+
+@app.route('/apush/')
+def apush():
+    return render_template("subjects/apush.html")
+
+@app.route('/biology/')
+def biology():
+    return render_template("subjects/biology.html")
+
+@app.route('/calcab/')
+def calcab():
+    return render_template("subjects/calcab.html")
+
+@app.route('/chemistry/')
+def chemisty():
+    return render_template("subjects/chemistry.html")
+
+@app.route('/csp/')
+def csp():
+    return render_template("subjects/csp.html")
+
+@app.route('/stats/')
+def stats():
+    return render_template("subjects/stats.html")
+
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)
