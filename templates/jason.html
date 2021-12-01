@@ -6,20 +6,36 @@
 <!- This is a replacement block for Body in base.html -->
 {% block body %}
     <!- Try building a new body here ->
+
     <body style="background-color:white;">
     <p style="text-align: center; font-size: 100px; font-weight: 600; color: rebeccapurple">
        Jason Kaplan's Krib
     </p>
+    <p align="right">
+        </br>
+        <button onclick="mask1()">Toggle Mask</button>
+        </br>
+        <img id="mask1" src="https://www.cnet.com/a/img/j8LP96kbXPC3Yn-WuGzxNZ5tgNg=/940x0/2019/08/16/65ef0311-d2a6-49f4-9b55-5fce9e60e3a1/obi2.jpg" width="950" height="600">
+        </br>
+    </p>
     </div>
-    <p align="center">
+    <p align="left">
         <iframe
-                width="1000"
-                height="500"
+                width="950"
+                height="600"
                 src="https://docs.google.com/document/d/1caGFdefkHrh74c3f_iuIx26mDD3QnP0FDM9cpS8BYFM/edit?usp=sharing"
         ></iframe>
     </p>
     </div>
+<script
 
+    <script>
+        function mask1() {
+            var img = document.getElementById("mask1")
+            img.src =  "https://insidethemagic.net/wp-content/uploads/2021/01/jedi-temple.png"
+            return false;
+        }
+    </script>
 
 {% endblock %}
 
