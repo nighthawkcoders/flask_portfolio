@@ -2,15 +2,14 @@
 {% extends "layouts/base.html" %}
 
 <!- This variable sets name of browser tab  -->
-{% set project = "Adi" %}
+{% set project = "Adi is so Cool" %}
 
 <!- This is a replacement block for Body in base.html -->
-{% block head %}
-<head>
+{% block body %}
     <script>
         imagenumber=0;
         function toggle() {
-            const images = ["winnin.jpg",
+            const images = ["/static/winnin.jpg",
                 "https://www.powayusd.com/PUSD/media/DNHS/images/slider/Hi-Res-School-Photo-min.jpg?ext=.jpg"
             ];
             if (imagenumber == 0) {
@@ -23,24 +22,16 @@
         }
     </script>
 
+<!--    <body style="background-color:powderblue;">-->
 
-</head>
-{% endblock %}
-
-{% block body %}
-
-    <body style="background-color:powderblue;">
     <h1 style="text-align: center; color: midnightblue">
         Adi Khandelwal Home Page
     </h1>
 
-    <div>
     <p style="text-align: center; color: black">Click to toggle images</p>
     <br>
-    <div class="container; center-block">
-        <img src="https://www.powayusd.com/PUSD/media/DNHS/images/slider/Hi-Res-School-Photo-min.jpg?ext=.jpg" id="image" width="800" height="300" onclick="toggle()" >
-    </div>
-  </div>
+        <img id="image" src="/static/winnin.jpg" onclick="toggle()" width="600" height="100">
+
     <p align="center">
 <!--        <iframe-->
 <!--                width="1000"-->
