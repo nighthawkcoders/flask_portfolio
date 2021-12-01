@@ -29,12 +29,12 @@
       width: 100%;
       height: 100%;
       text-align: center;
-      transition: transform 0.8s;
+      transition: transform 1.2s;
       transform-style: preserve-3d;
     }
 
     .flashcard:hover .flashcard-inner {
-      transform: rotateY(180deg);
+      transform: rotateX(180deg);
     }
 
     .flashcard-front, .flashcard-back {
@@ -57,7 +57,7 @@
     .flashcard-back {
       background-color: #64483f;
       color: #fed2b9;
-      transform: rotateY(180deg);
+      transform: rotateX(180deg);
     }
     .flashcard h2 {
         font-size: 30px;
@@ -67,19 +67,20 @@
 <div class="page-container">
 <h2> Flashcards <h2>
 <div class="flashcards-grid">
-    <div class="flashcard">
-        <div id="card1" class="flashcard-inner">
-            <div class="flashcard-front">
-                <h2> front side </h2>
-                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu molestie nibh, quis accumsan urna. Praesent lorem felis, elementum scelerisque faucibus a, pharetra a purus. Morbi nisi purus, placerat at. </p>
-            </div>
-            <div class="flashcard-back">
-                <h2> back side </h2>
-                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu molestie nibh, quis accumsan urna. Praesent lorem felis, elementum scelerisque faucibus a, pharetra a purus. Morbi nisi purus, placerat at. </p>
+    {% for x in range(8) %}
+        <div class="flashcard">
+            <div id="card1" class="flashcard-inner">
+                <div class="flashcard-front">
+                    <h2> front side of card {{x+1}}</h2>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu molestie nibh, quis accumsan urna. Praesent lorem felis, elementum scelerisque faucibus a, pharetra a purus. Morbi nisi purus, placerat at. </p>
+                </div>
+                <div class="flashcard-back">
+                    <h2> back side of card {{x+1}} </h2>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu molestie nibh, quis accumsan urna. Praesent lorem felis, elementum scelerisque faucibus a, pharetra a purus. Morbi nisi purus, placerat at. </p>
+                </div>
             </div>
         </div>
-    </div>
-
+    {% endfor %}
 </div>
 </div>
 {% endblock %}
