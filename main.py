@@ -41,6 +41,17 @@ def sonakshi():
     return render_template("sonakshi.html", name="World")
 # starting and empty input default
 
+@app.route('/shreya', methods=['GET', 'POST'])
+def shreya():
+    # submit button has been pushed
+    if request.form:
+        name = request.form.get("name")
+        if len(name) != 0:  # input field has content
+            return render_template("shreya.html", name=name)
+    # starting and empty input default
+    return render_template("shreya.html", name="World")
+# starting and empty input default
+
 
 @app.route('/genius', methods=['GET', 'POST'])
 def genius():
