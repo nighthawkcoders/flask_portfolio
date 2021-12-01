@@ -21,7 +21,10 @@
 2. [Week 1 - Project Approval](#Week1)
 ---
 ###   <h2 id="Week1">Week 1 - Project Approval: Due 12/2</h2>
+
 - <a href="https://github.com/PranaviInukurti/flask_portfolio/projects/1?card_filter_query=milestone%3A%22week+1+-+project+approval%22">Scrum Board</a>
+
+- Team Scoring
 
 | Name | Requirement | Evidence | Grade |
 |:----:|:-----------:|:--------:|:-----:|
@@ -31,13 +34,21 @@
 | Samaya Sankuratri |Wiki Plan - Hardware and Frequency<br>CB Notes & Quizzes|<a href="https://github.com/PranaviInukurti/flask_portfolio/issues/14">Ticket</a><br><a href="https://github.com/PranaviInukurti/flask_portfolio/issues/12">Ticket</a><br>|/8|
 | Linda Liu |Scrum Board Assignments and Backlog<br>CB Notes & Quizzes|<a href="https://github.com/PranaviInukurti/flask_portfolio/projects/1">Ticket</a><br><a href="https://github.com/PranaviInukurti/flask_portfolio/issues/12">Ticket</a><br>|/8|
 
+- Individual Scoring
+
+| Name | Journal with TT & TPT Notes | Grade |
+|:----:|:---------------------------:|:-----:|
+| Saathvika Ajith | https://docs.google.com/document/d/1mfrMqXhbkRceC4fq3nXZMLD8jo5IjC2mwAsvpqjQX94/edit?usp=sharing | 5/5 |
+| Pranavi Inukurti | https://docs.google.com/document/d/1PGcv6fkv8A5Y1uzuN-iLSGm9CKhdWEL_fQRZyGv9ymI/edit?usp=sharing | 5/5 |
+| Alice Tang | https://docs.google.com/document/d/1mfrMqXhbkRceC4fq3nXZMLD8jo5IjC2mwAsvpqjQX94/edit?usp=sharing | 5/5 |
+| Samaya Sankuratri | https://docs.google.com/document/d/1PGcv6fkv8A5Y1uzuN-iLSGm9CKhdWEL_fQRZyGv9ymI/edit?usp=sharing | 5/5 |
+| Linda Liu | https://docs.google.com/document/d/1PGcv6fkv8A5Y1uzuN-iLSGm9CKhdWEL_fQRZyGv9ymI/edit?usp=sharing | 5/5 |
 
 
 ###   <h2 id="Week0">Week 0: Due 11/19</h2>
 
 - <a href="https://github.com/PranaviInukurti/flask_portfolio/projects/1?card_filter_query=milestone%3A%22sprint+0+-+introduction%22">Scrum Board</a>
 
-  
 - Team Scoring
 
 | Name | Requirement | Evidence | Grade |
