@@ -1,6 +1,7 @@
-### Exclude IntelliJ IDEA from GitHub ###
-.idea
-*.iws
-*.iml
-*.ipr
-*.xml
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
+.idea/**/aws.xml
+.idea/**/contentModel.xml
