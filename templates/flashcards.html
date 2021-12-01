@@ -22,8 +22,7 @@
         width: 95%;
     }
     .flashcard {
-        height: 100px;
-        border: 2px solid red;
+        height: 300px;
     }
     .flashcard-inner {
       position: relative;
@@ -39,6 +38,7 @@
     }
 
     .flashcard-front, .flashcard-back {
+      padding: 50px;
       position: absolute;
       width: 100%;
       height: 100%;
@@ -47,29 +47,34 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+
     }
 
     .flashcard-front {
-      color: black;
+       background-color: #fed2b9;
+       color: darken(#64483f,10%);
     }
-
     .flashcard-back {
-      color: white;
+      background-color: #64483f;
+      color: #fed2b9;
       transform: rotateY(180deg);
     }
-
+    .flashcard h2 {
+        font-size: 30px;
+        text-transform: uppercase;
+    }
 </style>
 <div class="page-container">
-<h1> Flashcards <h1>
+<h2> Flashcards <h2>
 <div class="flashcards-grid">
     <div class="flashcard">
         <div id="card1" class="flashcard-inner">
             <div class="flashcard-front">
-                <h4> front side </h4>
+                <h2> front side </h2>
                 <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu molestie nibh, quis accumsan urna. Praesent lorem felis, elementum scelerisque faucibus a, pharetra a purus. Morbi nisi purus, placerat at. </p>
             </div>
             <div class="flashcard-back">
-                <h4> back side </h4>
+                <h2> back side </h2>
                 <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu molestie nibh, quis accumsan urna. Praesent lorem felis, elementum scelerisque faucibus a, pharetra a purus. Morbi nisi purus, placerat at. </p>
             </div>
         </div>
