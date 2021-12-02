@@ -29,10 +29,10 @@
 | Name | Requirement | Evidence | Grade |
 |:----:|:-----------:|:--------:|:-----:|
 | Saathvika Ajith |10 to 12 Key Ideas<br>CB Notes & Quizzes|<a href="https://github.com/PranaviInukurti/flask_portfolio/issues/16">Ticket</a><br><a href="https://github.com/PranaviInukurti/flask_portfolio/issues/12">Ticket</a><br>|/8|
-| Pranavi Inukurti |Wiki Management Plan<br>CB Notes & Quizzes|<a href="https://github.com/PranaviInukurti/flask_portfolio/issues/15">Ticket</a><br><a href="https://github.com/PranaviInukurti/flask_portfolio/issues/12">Ticket</a><br>|/8|
+| Pranavi Inukurti |Scrum Board Assignments and Backlog<br>CB Notes & Quizzes|<a href="https://github.com/PranaviInukurti/flask_portfolio/projects/1">Ticket</a><br><a href="https://github.com/PranaviInukurti/flask_portfolio/issues/12">Ticket</a><br>|/8|
 | Alice Tang |Wiki Theme<br>Wire Frame<br>CB Notes & Quizzes|<a href="https://github.com/PranaviInukurti/flask_portfolio/issues/17">Ticket</a><br><a href="https://github.com/PranaviInukurti/flask_portfolio/issues/8">Ticket</a><br><a href="https://github.com/PranaviInukurti/flask_portfolio/issues/12">Ticket</a><br>|/8|
 | Samaya Sankuratri |Wiki Plan - Hardware and Frequency<br>CB Notes & Quizzes|<a href="https://github.com/PranaviInukurti/flask_portfolio/issues/14">Ticket</a><br><a href="https://github.com/PranaviInukurti/flask_portfolio/issues/12">Ticket</a><br>|/8|
-| Linda Liu |Scrum Board Assignments and Backlog<br>CB Notes & Quizzes|<a href="https://github.com/PranaviInukurti/flask_portfolio/projects/1">Ticket</a><br><a href="https://github.com/PranaviInukurti/flask_portfolio/issues/12">Ticket</a><br>|/8|
+| Linda Liu |Wiki Management Plan<br>CB Notes & Quizzes|<a href="https://github.com/PranaviInukurti/flask_portfolio/issues/15">Ticket</a><br><a href="https://github.com/PranaviInukurti/flask_portfolio/issues/12">Ticket</a><br>|/8|
 
 - Individual Scoring
 
