@@ -19,8 +19,8 @@
 ### Innovation sprint 1,2 Week 1
 |BOF Task| Tangible Link |
 |:-----|:----------------------|
-|Design - Wiki Theme, Brain Write & Wire Frame| [Wire Frame](https://docs.google.com/drawings/d/1lE1sUsjAlyknfTvKNZUxXqfIHMqynNdGCp_NhJ8ziTU/edit?usp=sharing),[Brain Write](https://docs.google.com/document/d/18dbqQSwC8XAAXiMIO4DE5xemwSxYM788A-3KE1XdrRY/edit?usp=sharing),[Wiki](https://github.com/connorw72/food/wiki)
-|Technicals - 10  to 12 key ideas | [Brain Write](https://docs.google.com/document/d/18dbqQSwC8XAAXiMIO4DE5xemwSxYM788A-3KE1XdrRY/edit?usp=sharing)
+|Design - Wiki Theme, Brain Write & Wire Frame| [Wire Frame](https://docs.google.com/drawings/d/1lE1sUsjAlyknfTvKNZUxXqfIHMqynNdGCp_NhJ8ziTU/edit?usp=sharing),[Brain Write](https://github.com/connorw72/food/wiki/Brain-Write),[Wiki](https://github.com/connorw72/food/wiki)
+|Technicals - 10  to 12 key ideas | [Brain Write](https://github.com/connorw72/food/wiki/Brain-Write)
 |Github - On Wiki containing Management Plan| [Wiki page](https://github.com/connorw72/food/wiki/Github-Admin-Policy-Stuff)
 |Deployment - Wiki Plan, Hardware and Frequency| [Wiki page with proof of completion](https://github.com/connorw72/food/wiki/Deployment-Guide)
 |Scrum Board - Assignments and Backlog| [Wiki page](https://github.com/connorw72/food/wiki/Scrum-Master-Policies),[Assignments(Scrum Board)](https://github.com/connorw72/food/projects/1),[Backlog](https://github.com/connorw72/food/projects/1#column-17077693)
