@@ -4,12 +4,33 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
 <style>
     a.nav-link {
         background-color: rgba(255, 0, 0, 0.0);
-        transition: background-color 0.5s;
+        transition: border-bottom 0.5s;
         color: #000000 !important;
         font-family:Courier;
+        margin: 0 5px;
+        position: relative;
     }
-    a.nav-link:hover {
-        background-color: #8e6f64;
+    .nav-border {
+        position: absolute;
+        left: 0%;
+        right: 0;
+        border-bottom: 2px solid transparent;
+    }
+    .nav-link:hover .nav-border {
+        animation-name: border-move;
+        animation-duration: 0.8s;
+        border-bottom: 2px solid #64483f;
+
+    }
+    @keyframes border-move {
+        0% {
+            right: 100%;
+            left: 100%;
+        }
+        100% {
+            right: 0%;
+            left: 0%;
+        }
     }
     nav {
         background-image: linear-gradient(to right, #fed2b9, #fed2b9);
@@ -42,6 +63,7 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarStarters" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         About Us
+                        <div class="nav-border"></div>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="/evan/">Evan</a>
@@ -51,8 +73,8 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                 </li>
             </ul>
 
-            <a class="nav-link" href={{ url_for('index') }}>Portfolio</a>
-            <a class="nav-link" href="/stub">Stub</a>
+            <a class="nav-link" href={{ url_for('index') }}>Portfolio <div class="nav-border"></div></a>
+            <a class="nav-link" href="/flashcards/">Flash Cards <div class="nav-border"></div></a>
         </div>
     </div>
 </nav>
