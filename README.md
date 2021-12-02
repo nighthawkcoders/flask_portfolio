@@ -1,3 +1,9 @@
+**Our Website Idea:**  
+(Website Name) is a travel website that makes vacationing easy and efficient for all people. It will overall be simplistic, easy to use, and free for everyone. Contains all the information needed to go on a wonderful trip, and has a built in itinerary with planning for travel included. 
+
+
+
+
 Contributor | GitHub | Tasks | Scrum Board | Commit | Journal Links
 ----------- | ----------- | ------------- | ------------- | ------------- | -------------
 Adi Khandelwal | [@Adi-K-Coding](https://github.com/Adi-K-Coding)| [Tasks](https://github.com/RohanG326/supporting_cast/issues) | [Scrum Board](https://github.com/RohanG326/supporting_cast/projects/1) | [Commits](https://github.com/RohanG326/supporting_cast/graphs/contributors) | [Journal](https://docs.google.com/document/d/1caGFdefkHrh74c3f_iuIx26mDD3QnP0FDM9cpS8BYFM/edit?usp=sharing)
