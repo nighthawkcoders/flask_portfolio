@@ -15,11 +15,22 @@
         .src="/static/assets/nomaskconnor.jpg";
     }
 </script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .image {
+            padding: 50px;
+            text-align: center;
+            background-color:forestgreen;
+        }
+    </style>
 {%endblock%}
 {% block body %}
 
-<h1 class="text-center">Connor Home Page</h1>
-<div class="container">
+<h1 class="image">Connor Home Page</h1>
+<div class="image">
     <div class="row justify-content-md-center">
         <table class="table">
             <thead>
@@ -30,12 +41,20 @@
             <tbody>
             <tr>
                 <td>
-                    <img id="place" class="img-responsive py-3" alt="" width="256" src="/static/assets/connormask.jpg" >
+                    <img id="place" class="img-responsive py-3" alt="" width="400" src="/static/assets/connormask.jpg" >
                     <div>
                         <button onclick="mask()">Mask</button>
                         <button onclick="nomask()">No Mask</button>
-                    </div>
+                        <p style="text-align:center" class="fs-2">
+                            <a href="https://docs.google.com/document/d/1yMnRk0cY8TWYl3YKTgz0OKkrI5Gac4pEyoyiffEeUoE/edit?usp=sharing"> Journal </a>
+                        </p>
                 </td>
             </tr>
+            </tr>
+            </tbody>
+            </tbody>
+        </table>
+    </div>
+</div>
 {% endblock %}
 </html>
