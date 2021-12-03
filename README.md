@@ -66,7 +66,7 @@ Scrum Board: https://github.com/Reem57/flask_portfolio/projects/1
 | Nathan | Scrum Master | https://github.com/Reem57/flask_portfolio/wiki/Policies |
 | Reem | TO |  |
 | Daniel | Primary Designer | https://github.com/Reem57/flask_portfolio/wiki/Theme |
-| Jacob | Deployment Manager |  |
+| Jacob | Deployment Manager | https://github.com/Reem57/flask_portfolio/wiki/Deployment |
 | James | Github Admin | https://github.com/Reem57/flask_portfolio/wiki/Contribution-Guidelines |
 
 
