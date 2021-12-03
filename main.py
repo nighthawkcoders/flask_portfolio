@@ -73,6 +73,11 @@ def csp():
 def stats():
     return render_template("subjects/stats.html")
 
+@app.route('/notes/')
+def notes():
+    return render_template("subjects/notes.html")
+
+
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)
