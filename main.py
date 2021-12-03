@@ -81,6 +81,13 @@ def rohan():
 # for outcome in outcomes:
 #     lyrics.append(outcome['lyric'])
 
+@app.route('/photogallery', methods=['GET', 'POST'])
+def photogallery():
+    if request.form:
+        input = request.form.get("input")
+        if len(input) != 0:
+            return render_template("photogallery.html", input1=input)
+    return render_template("photogallery.html", input1="")
 
 # runs the application on the development server
 if __name__ == "__main__":

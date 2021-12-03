@@ -1,0 +1,104 @@
+{% extends "layouts/base.html" %}
+
+{% set project = "Photo Gallery" %}
+
+{% block body %}
+<h1 style="font-size: 70px"> Photo Gallery</h1>
+<h4 style="text-align: center">Stunning Images From Locations Around the World!</h4>
+
+
+
+
+<br>
+<script>
+    function beaches() {
+        const imageBeach = ["http://cdn.cnn.com/cnnnext/dam/assets/181010131059-australia-best-beaches-cossies-beach-cocos3.jpg",
+            "https://www.minervastrategies.com/wp-content/uploads/2016/03/default-avatar.jpg",
+            "https://www.minervastrategies.com/wp-content/uploads/2016/03/default-avatar.jpg",
+            "https://www.minervastrategies.com/wp-content/uploads/2016/03/default-avatar.jpg",
+            "https://www.minervastrategies.com/wp-content/uploads/2016/03/default-avatar.jpg"
+        ];
+        for(i=0;i<imageBeach.length;i++){
+            image='image'+i;
+            document.getElementById(image).src=imageBeach[i];
+            document.getElementById(image).hidden = false;
+        }
+    }
+
+    function mountains() {
+        const imageMountain = [
+            "https://th-thumbnailer.cdn-si-edu.com/_fo23UThzt2yYi8vrV0jcafbQ3Q=/fit-in/1600x0/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/25/f0/25f08cff-0355-4001-86ad-28950a866af4/grandteton.jpg",
+            "https://www.minervastrategies.com/wp-content/uploads/2016/03/default-avatar.jpg",
+            "https://www.minervastrategies.com/wp-content/uploads/2016/03/default-avatar.jpg",
+            "https://www.minervastrategies.com/wp-content/uploads/2016/03/default-avatar.jpg",
+            "https://www.minervastrategies.com/wp-content/uploads/2016/03/default-avatar.jpg"];
+        for (i = 0; i < imageMountain.length; i++) {
+            image = 'image' + i;
+            document.getElementById(image).src = imageMountain[i];
+            document.getElementById(image).hidden = false;
+        }
+    }
+
+    function forests() {
+        const imageForest = [
+            "https://www.timeforkids.com/wp-content/uploads/2019/09/final-cover-forest.jpg",
+            "https://www.minervastrategies.com/wp-content/uploads/2016/03/default-avatar.jpg",
+            "https://www.minervastrategies.com/wp-content/uploads/2016/03/default-avatar.jpg",
+            "https://www.minervastrategies.com/wp-content/uploads/2016/03/default-avatar.jpg",
+            "https://www.minervastrategies.com/wp-content/uploads/2016/03/default-avatar.jpg",
+        ];
+        for (i = 0; i < imageForest.length; i++) {
+            image = 'image' + i;
+            document.getElementById(image).src = imageForest[i];
+            document.getElementById(image).hidden = false;
+        }
+    }
+
+    function cities() {
+        const imageCity = [
+            "https://static01.nyt.com/images/2020/07/17/business/00virus-cities1/00virus-cities1-mediumSquareAt3X.jpg",
+            "https://www.minervastrategies.com/wp-content/uploads/2016/03/default-avatar.jpg",
+            "https://www.minervastrategies.com/wp-content/uploads/2016/03/default-avatar.jpg",
+            "https://www.minervastrategies.com/wp-content/uploads/2016/03/default-avatar.jpg",
+            "https://www.minervastrategies.com/wp-content/uploads/2016/03/default-avatar.jpg"
+        ];
+        for (i = 0; i < imageCity.length; i++) {
+            image = 'image' + i;
+            document.getElementById(image).src = imageCity[i];
+            document.getElementById(image).hidden = false;
+        }
+    }
+
+</script>
+<div style="text-align: center">
+    <div class="col-0">
+        <form action="/photogallery" id="greet" method="POST">
+            <label for="input">Search for a location</label>
+            <br>
+            <input name="input" id="input" />
+            <input type="submit" value="Search" />
+        </form>
+        <p>Your input was: {{input1}}</p>
+    </div>
+    </br>
+
+    <input type="button" onclick="beaches()" value="          Beaches          " />
+<input type="button" onclick="mountains()" value="          Mountains          "/>
+<input type="button" onclick="forests()" value="          Forests          "/>
+<input type="button" onclick="cities()" value="          Cities          "/>
+<br>
+
+
+<img src="https://www.iconsdb.com/icons/preview/white/square-xxl.png" id="image0" width="900" height="750" hidden="hidden">
+<br>
+<img src="https://www.iconsdb.com/icons/preview/white/square-xxl.png" id="image1" width="900" height="750" hidden="hidden">
+<br>
+<img src="https://www.iconsdb.com/icons/preview/white/square-xxl.png" id="image2" width="900" height="750" hidden="hidden">
+<br>
+<img src="https://www.iconsdb.com/icons/preview/white/square-xxl.png" id="image3" width="900" height="750" hidden="hidden">
+<br>
+<img src="https://www.iconsdb.com/icons/preview/white/square-xxl.png" id="image4" width="900" height="750" hidden="hidden">
+
+</div>
+
+{% endblock %}
