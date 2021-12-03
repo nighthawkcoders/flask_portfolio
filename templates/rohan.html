@@ -1,12 +1,20 @@
 {% extends "layouts/base.html" %}
-{% set project = "Rohan" %}
+{% set project = "Rohan is so Cool" %}
 {% block body %}
 <script>
+    beanienumber=0;
     function BeanieToggle() {
-        var img = document.getElementById("blackbeanie")
-        img.src =  "static/pizza.jpg"
-        return false;
-}
+        const images = ["/static/rohanblackbeanie.jpg",
+            "/static/rohanbrownbeanie.jpg"
+        ];
+        if (beanienumber == 0) {
+            document.getElementById("beanie").src = images[0]
+            beanienumber = 1;
+        } else if (beanienumber == 1) {
+            document.getElementById("beanie").src = images[1]
+            beanienumber = 0;
+        }
+    }
 </script>
     <h1 style="text-align: center">
         Rohan Gaikwad Home Page
@@ -24,12 +32,12 @@
                 <input type="submit" value="press da button!" />
             </form>
         </div>
+<!--        {outcome(0)}-->
         </br>
-        <button onclick="BeanieToggle()">Brown Beanie</button>
+        <button onclick="BeanieToggle()">Change Beanie</button>
         </br>
-        <img id="blackbeanie" src="static/rohanmask.jpg" width="1000" height="600">
+        <img id="beanie" src="static/rohanblackbeanie.jpg" width="1000" height="600">
         </br>
-        <button onclick="Masktoggle()">Brown Beanie</button>
         <p>
             </br>
             <iframe
