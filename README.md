@@ -3,7 +3,8 @@
 #### The project created by team food spreads awareness on pets and animal adoption. On the website, you will learn about the animals that you can adopt, common pets, and even where to adopt these pets if any of them are appealing to you. Find your next best friend here!
 ## [Scrum Board](https://github.com/connorw72/food/projects/1)
 ## Website Home Page
-### ![Screen Shot 2021-11-29 at 2 57 43 PM](https://user-images.githubusercontent.com/89223703/143955920-b221c674-82e5-4840-9981-46165d32b82f.png)
+
+### ![Screen Shot 2021-12-03 at 5 30 39 PM](https://user-images.githubusercontent.com/60719508/144691799-4dadd747-de62-4072-8088-9b0b3baefd1c.png)
 
 
 
