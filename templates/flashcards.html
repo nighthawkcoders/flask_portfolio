@@ -8,12 +8,21 @@
 {% block body %}
 <script>
     function reveal(answer,button,warning,warning2) {
-
-        document.getElementById(answer).style.display = "block";
-        document.getElementById(button).style.display = "none";
-        document.getElementById(warning2).style.display="none";
-        document.getElementById(warning).style.display="none";
-
+        if (document.getElementById(answer).style.display == "none") {
+            document.getElementById(answer).style.display = "block";
+            document.getElementById(button).style.position = "absolute";
+            document.getElementById(button).style.top = "0";
+            document.getElementById(button).style.right = "0";
+            document.getElementById(button).innerText = "Hide";
+            document.getElementById(warning2).style.display="none";
+            document.getElementById(warning).style.display="none";
+        } else {
+            document.getElementById(answer).style.display = "none";
+            document.getElementById(button).style.position = "static";
+            document.getElementById(button).innerText = "Reveal";
+            document.getElementById(warning2).style.display="block";
+            document.getElementById(warning).style.display="block";
+        }
     }
 </script>
 <style>
@@ -73,6 +82,10 @@
       background-color: #64483f;
       color: #fed2b9;
       transform: rotateX(180deg);
+    }
+    h2 {
+        text-transform: uppercase;
+        font-size: 50px;
     }
     .flashcard h2 {
         font-size: 30px;

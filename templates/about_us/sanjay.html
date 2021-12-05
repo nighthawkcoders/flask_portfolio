@@ -2,7 +2,8 @@
 <!DOCTYPE html>
 <html lang="en">
 {% block body %}
-<div class="page-container">
+<div id="page-container" class="dark-theme">
+<button style="position: absolute;right:0;" onclick="theme()">change theme</button>
 <h1 style="text-align:center">
 Sanjay Bharadwaj
 </h1>
@@ -31,6 +32,17 @@ Sanjay Bharadwaj
 </section>
 <section class="container">
 <h3 style="text-align: center;"> API Excercise </h3>
+<div class="joke" >
+    <div class="col">
+        <h4>Joke API </h4>
+        <p> API: <a style="text-decoration: underline" href="https://rapidapi.com/sameer.kumar/api/geek-jokes/" target="_blank">Geek Jokes</a> </p>
+        <a href="/sanjay#jokes" style="text-decoration:underline"> New Joke </a>
+    </div>
+    <div class="col" id="joke">
+        <h5> Joke: </h5>
+        <p class="setup">{{joke["joke"]}}</p>
+    </div>
+</div>
 <table class="table">
     <tr>
         <th>Date</th>
@@ -64,18 +76,50 @@ Sanjay Bharadwaj
 
             }
         }
+        function theme() {
+            if (document.getElementById("page-container").classList.contains("light-theme")) {
+                document.getElementById("page-container").classList.add('dark-theme');
+                document.getElementById("page-container").classList.remove('light-theme');
+            } else {
+                document.getElementById("page-container").classList.add('light-theme');
+                document.getElementById("page-container").classList.remove('dark-theme');
+            }
+        }
     </script>
     <style>
-        .page-container {
+        #page-container {
             margin-left: 250px;
         }
-/*         a { */
-/*             text-decoration: none; */
-/*         } */
-/*         a:hover { */
-/*             color: midnightblue; */
-/*             text-decoration: underline */
-/*         } */
+        /* color theming */
+        #page-container.dark-theme {
+            background-color: #64483f
+        }
+        .light-theme .table,th,td {
+            border: 1px solid black;
+        }
+        .light-theme table {
+            width: 100%;
+/*             border-collapse: collapse; */
+            color: #fed2b9
+        }
+        .light-theme .table tr:hover {
+            background-color: #fed2b9;
+            color: #64483f;
+            font-weight: 500;
+        }
+        .dark-theme .table,th,td {
+            border: 1px solid red;
+        }
+        .dark-theme table {
+            width: 100%;
+/*             border-collapse: collapse; */
+            color: #64483f;
+        }
+        .dark-theme .table tr:hover {
+            background-color: #64483f;
+            color: #fed2b9;
+            font-weight: 500;
+        }
         .container {
             margin: 0 auto;
         }
@@ -94,14 +138,6 @@ Sanjay Bharadwaj
             width: 60%;
             padding: 2em;
         }
-        .table,th,td {
-            border: 1px solid #fed2b9;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            color: #fed2b9
-        }
         th{
             height: 70px;
 
@@ -114,14 +150,28 @@ Sanjay Bharadwaj
             height: 50px;
 
         }
-        .table tr:hover {
-            background-color: #fed2b9;
-            color: #64483f;
-        }
         section {
             width: 80%;
         }
-
+        .joke {
+            display: flex;
+            padding: 2em;
+            width: 60%;
+            margin: 0 auto;
+        }
+        .col h4 {
+            font-size: 30px;
+        }
+        .col p {
+            font-size: 20px;
+        }
+        .col h5 {
+            font-size: 27px;
+        }
+        .col .setup {
+            font-size: 23px;
+            color: #fed2b9;
+        }
     </style>
 
 {% endblock %}

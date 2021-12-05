@@ -20,7 +20,6 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
         animation-name: border-move;
         animation-duration: 0.8s;
         border-bottom: 2px solid #64483f;
-
     }
     @keyframes border-move {
         0% {
@@ -50,7 +49,7 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
 
 </style>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="/">{{basename}}</a>
+    <a class="navbar-brand" href="/">{{basename}} <div class="nav-border"></div></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
