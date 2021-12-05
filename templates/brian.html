@@ -7,6 +7,12 @@
 {% block body %}
     <!- Try building a new body here ->
 <style>
+    .organization{
+        width: 80%;
+        margin: auto;
+        border-style: solid;
+        padding: 25px;
+    }
     html {background-color:cornflowerblue;}
 </style>
     <h1><center>Brian Tang Home Page</center></h1>
@@ -34,15 +40,9 @@
     <h1><center>Check out some tennis news!</center></h1>
     <ul>
     {% for tournament in tournaments %}
-        <li>The {{tournament.name}} tournament was played in the city of {{tournament.city}} in the country of {{tournament.country}}. The {{tournament.name}} started on {{tournament.start_date}} and ended on {{tournament.end_date}} and was a part of the {{tournament.season}} season. This tournament was a part of the {{tournament.code}} tour and was played on {{tournament.surface}} surface.</li>
+        <li class="organization">The {{tournament.name}} tournament was played in the city of {{tournament.city}} in the country of {{tournament.country}}. The {{tournament.name}} started on {{tournament.start_date}} and ended on {{tournament.end_date}} and was a part of the {{tournament.season}} season. This tournament was a part of the {{tournament.code}} tour and was played on {{tournament.surface}} surface.</li>
     {% endfor %}
     </ul>
-<!--    <div id="TennisRankings">-->
-<!--        The {{tournaments[0].name}} tournament was played in the city of {{tournaments[0].city}} in the country of {{tournaments[0].country}}. The {{tournaments[0].name}} started on {{tournaments[0].start_date}} and ended on {{tournaments[0].end_date}} and was a part of the {{tournaments[0].season}} season. This tournament was a part of the {{tournaments[0].code}} tour and was played on {{tournaments[0].surface}} surface.-->
-<!--    </div>-->
-<!--    <div id="TennisRankings">-->
-<!--        The {{tournaments[1].name}} tournament was played in the city of {{tournaments[1].city}} in {{tournaments[1].country}}. The {{tournaments[1].name}} started on {{tournaments[1].start_date}} and ended on {{tournaments[1].end_date}} and was a part of the {{tournaments[1].season}} season. This tournament was a part of the {{tournaments[1].code}} tour and was played on {{tournaments[1].surface}} surface.-->
-<!--    </div>-->
     <h1><center>Journal</center></h1>
     <iframe class="center"
             width="1000"
