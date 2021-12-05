@@ -16,9 +16,11 @@ def index():
 def evan():
     return render_template("about_us/evan.html")
 
-@app.route('/clean/')
-def clean():
-    return render_template("about_us/clean.html")
+@app.route('/darktest/')
+def darktest():
+    return render_template("about_us/darktest.html")
+
+GET /darktest/templates/layouts/dark.scss HTTP/1.1"
 
 @app.route('/leah/')
 def leah():
