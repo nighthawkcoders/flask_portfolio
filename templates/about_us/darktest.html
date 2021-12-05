@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <title>dark test</title>
-
-    <link rel="stylesheet"  type="text/css"  href="templates/layouts/dark.scss" />
+    <link rel="stylesheet" href="templates/layouts/dark.scss" />
 </head>
-
 <body>
 
 <div class="container">
@@ -17,6 +15,31 @@
 
 <p>Words are here, and they say things that mean things, and stuff that you really will appreciate reading</p>
 </div>
+
+<script>
+    // checking to see if the dark theme checkbox has been clicked
+    var checkbox = document.querySelector('input[name=theme]');
+
+    checkbox.addEventListener('change', function() {
+        if(this.checked) {
+            trans()
+            document.documentElement.setAttribute('data-theme', 'dark')
+        } else {
+            trans()
+            document.documentElement.setAttribute('data-theme', 'light')
+        }
+    });
+
+    // allowing for a transition between the dark and light theme
+    let trans = () => {
+        document.documentElement.classList.add('transition');
+        window.setTimeout(() => {
+            document.documentElement.classList.remove('transition')
+        }, 1000)
+    }
+
+
+</script>
 
 
 

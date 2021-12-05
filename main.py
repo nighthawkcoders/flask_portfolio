@@ -20,8 +20,6 @@ def evan():
 def darktest():
     return render_template("about_us/darktest.html")
 
-GET /darktest/templates/layouts/dark.scss HTTP/1.1"
-
 @app.route('/leah/')
 def leah():
     return render_template("about_us/leah.html")
