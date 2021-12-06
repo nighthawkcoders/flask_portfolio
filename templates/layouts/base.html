@@ -5,6 +5,10 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
  ... code reuse
 -->
 <!DOCTYPE HTML>
+
+<!-- added for dark mode -->
+<html lang="en" data-theme="light">
+
 <html lang="en">
 
 {% set basename = "Nighthawk Coding" %}
@@ -23,10 +27,19 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 
 
     <style>
-        :root{
+        html{
             --txt: black;
             --black: #ceb680;
             --bg: #8e6f64;
+            --button: #fed2b9;
+            --buttonhover: #64483f;
+        }
+
+        html[data-theme='dark'] {
+            --bg: #16100F;
+            --txt:#373332;
+
+            /*need to figure out what this is and make a dark version */
             --button: #fed2b9;
             --buttonhover: #64483f;
         }
@@ -38,8 +51,6 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             -moz-animation: fadein 2s; /* Firefox */
             -webkit-animation: fadein 2s; /* Safari and Chrome */
             -o-animation: fadein 2s; /* Opera */
-            background-color: var(--grey);+-+
-            color: var(--white);
             background-color: var(--bg);
             color: var(--txt);
 
@@ -171,11 +182,46 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
         <a href="/simon">Simon</a>
         <br>
         <a href="/sanjay">Sanjay</a>
+
+        <br>
+            <!-- adds the dark mode toggle to the sidebar -->
+            <div class="toggle-container">
+                <input type="checkbox" id="switch" name="theme" /><label for="switch">Toggle</label>
+            </div>
+
     </div>
 
 </head>
 
 <body>
+
+<!-- script for dark mode toggle -->
+<script>
+    // checking to see if the dark theme checkbox has been clicked
+    var checkbox = document.querySelector('input[name=theme]');
+
+    checkbox.addEventListener('change', function() {
+        if(this.checked) {
+            trans()
+            document.documentElement.setAttribute('data-theme', 'dark')
+        } else {
+            trans()
+            document.documentElement.setAttribute('data-theme', 'light')
+        }
+    });
+
+    // allowing for a transition between the dark and light theme
+    let trans = () => {
+        document.documentElement.classList.add('transition');
+        window.setTimeout(() => {
+            document.documentElement.classList.remove('transition')
+        }, 1000)
+    }
+</script>
+
+
+
+
 {% include "layouts/navbar.html" %}
 
 {% block body %}
