@@ -3,9 +3,12 @@ from flask import Flask, render_template
 import requests
 import json
 import random
-# create a Flask instance
-app = Flask(__name__)
+from crud.app_crud import app_crud
 
+# create a Flask instance
+from __init__ import app
+
+app.register_blueprint(app_crud)
 
 # connects default URL to render index.html
 @app.route('/')
@@ -77,11 +80,9 @@ def stats():
 def notes():
     return render_template("subjects/notes.html")
 
-@app.route('/database/')
-def database():
-    return render_template("database.html")
+
 
 
 # runs the application on the development server
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, port="5002")
