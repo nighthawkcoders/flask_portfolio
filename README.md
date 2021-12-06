@@ -64,7 +64,7 @@ Our website is a website full of helpful resources for students. It will help st
     <td>Individual Journals</td>
     <td><a href="https://docs.google.com/document/d/1tzKxrktNmIau5yW4qIBZ5nULiQ-DUNyJaQTLDgQ4XXU/edit">Sonakshi's Journal</a></td>
     <td><a href="https://docs.google.com/document/d/1kiNPT2VoJIwpsf-8tR-1t58_ihXYbHytcyO2m-8JxU0/edit?usp=sharing">Shreya's Journal</a></td>
-    <td><a href="https://docs.google.com/document/d/1sZS-mU7SGq6S9c94T5OciGrEQYjoQMeJLd6lv3WhqoY/edit?usp=sharing">Punarvasu's Journal</a></td>
+    <td><a href="https://docs.google.com/document/d/1OCl1CWA4lm_ulO1LmSvhFY0vk0bn3JAZ5PvuIuloMRI/edit?usp=sharing">Punarvasu's Journal</a></td>
     <td><a href="https://docs.google.com/document/d/1F7jZ8Qvhu4UHAMA8RKTd8uXNWJdfZppVzL78_epN8UY/edit?usp=sharing">Khushi's Journal</a></td>
    <tr> 
 </table>
