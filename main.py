@@ -28,7 +28,6 @@ def funko_pop():
     return render_template("funko_pop.html")
 
 
-
 @app.route('/KianAboutMe/')
 def KianAboutMe():
     return render_template("KianAboutMe.html")
