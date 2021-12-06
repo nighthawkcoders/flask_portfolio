@@ -2,6 +2,7 @@
 ### Table of Contents
 - [Idea](#idea)
 - [Week by Week Progress](#week-by-week-progress)
+  - [Week 2](#week-2)
   - [Week 1](#week-1)
   - [Week 0](#week-0)
 - [Contributors](#contributors)
@@ -10,6 +11,8 @@
 Starter code should be fun and practical.
 
 ## Week by Week Progress
+
+### Week 2
 
 ### Week 1
 | Contributor  | Links to Commits  |
