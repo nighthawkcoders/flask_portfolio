@@ -60,48 +60,16 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
 
 
 
-    <!--Whole Button Group-->
+    <!--Clock thing-->
     <div class="btn-group">
         <!-- Clock display -->
         <div class="px-3 text-dark">
             <span id="clock">12/2/2021, 2:45:33 PM</span>
         </div>
-        <!-- Dark mode action -->
-        <div class="form-check form-switch">
-            <label class="custom-control-label" for="darkSwitch">
-                <input type="checkbox" onclick="darkFunction()" class="form-check-input" id="darkSwitch">
-                Dark Mode</label>
-        </div>
     </div>
 
 
     <script>
-        // Dark Mode Control
-        // darkSwitch global element is set for convenience
-        const darkSwitch=document.getElementById("darkSwitch");
-        // establishes the initial state of darkSwitch on page load
-        if(darkSwitch) {
-            // obtains the value of darkSwitch from localStorage
-            const darkSwitchSelected =
-                localStorage.getItem("darkSwitch") !== null &&
-                localStorage.getItem("darkSwitch") === "dark";
-            // sets the value of darkSwitch.checked to the global darkSwitch
-            darkSwitch.checked=darkSwitchSelected;
-            // if dark-mode, toggle the switch to dark-mode position
-            if (darkSwitchSelected)
-                document.body.classList.toggle("dark-mode");
-        }
-        // executes on each "dark mode" UI toggle
-        function darkFunction() {
-            // toggles between off (standard CSS) and dark-mode (.dark-mode CSS)
-            document.body.classList.toggle("dark-mode");
-            // localStorage is used to manage darkSwitch status
-            darkSwitch.checked
-                ? localStorage.setItem("darkSwitch","dark")
-                : localStorage.removeItem("darkSwitch");
-        }
-        // End Dark Mode Control
-
 
         // Clock Control
         // clockElement global element set for convenience
