@@ -2,6 +2,7 @@
 ### Table of Contents
 - [Idea](#idea)
 - [Week by Week Progress](#week-by-week-progress)
+  - [Week 3](#week-3)
   - [Week 2](#week-2)
   - [Week 1](#week-1)
   - [Week 0](#week-0)
@@ -12,16 +13,34 @@ Starter code should be fun and practical.
 
 ## Week by Week Progress
 
+### Week 3
+
+| Contributor  | Links to Commits  |
+|---|---|
+| Evan | []()|
+| Vunsh | []() |
+| Simon | []()|
+| Sanjay | []()|
+| Leah | []()|
+
 ### Week 2
+
+| Contributor  | Links to Commits  |
+|---|---|
+| Evan | []()|
+| Vunsh | []()|
+| Simon | []()|
+| Sanjay | []()|
+| Leah | []()|
 
 ### Week 1
 | Contributor  | Links to Commits  |
 |---|---|
-|  Evan |   |
-| Vunsh  |   |
-|Simon   |   |
-| Sanjay  |   |
-|  Leah |   |
+| Evan | []()|
+| Vunsh | []()|
+| Simon | []()|
+| Sanjay | []()|
+| Leah | []()|
 
 
 ### Week 0
