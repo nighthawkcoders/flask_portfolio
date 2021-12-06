@@ -10,14 +10,37 @@
 {% block body %}
 <div class="container-fluid" style="background-image: url('../static/nathan1.jpg'); height: available; width: 100%; background-repeat: no-repeat; background-attachment: fixed">
     <style>
-        /* Parent Container */
-
         .aboutUsImage{
-            background: url('../static/nathan.png') no-repeat;
             cursor:pointer;
             width: 232px;
             height: 309px;
             transform: translateY(3px);
+            margin:auto;
+        }
+        .nathan{
+            background: url('../static/nathan.png') no-repeat;
+            width: 232px;
+            height: 309px;
+        }
+        .reem{
+            background: url('../static/nathan.png') no-repeat;
+            width: 232px;
+            height: 309px;
+        }
+        .daniel{
+            background: url('../static/daniel.png') no-repeat;
+            width: 232px;
+            height: 309px;
+        }
+        .jacob{
+            background: url('../static/jacob.png') no-repeat;
+            width: 232px;
+            height: 309px;
+        }
+        .james{
+            background: url('../static/james.png') no-repeat;
+            width: 232px;
+            height: 309px;
         }
         .fa:hover {
             font-size: 3em;
@@ -29,23 +52,31 @@
     </style>
 </div>
 <body>
-    <div class="col-0" style="margin: 3% 5% 2%" name="imgbox" id="imgbox">
-    <table class="table">
-        <tr>
-            <div class="content_img">
-                <input type="button" class="fa aboutUsImage" onclick="location.href = '/aboutnathan';">
-                <div>Nathan Manangan</div>
-                <input type="button" class="fa aboutUsImage" onclick="location.href = '/aboutnathan';">
-                <div>Reem Ben Ishai</div>
-                <input type="button" class="fa aboutUsImage" onclick="location.href = '/aboutnathan';">
-                <div>Daniel Bertino</div>
-                <input type="button" class="fa aboutUsImage" onclick="location.href = '/aboutnathan';">
-                <div>Jacob Rozenkrants</div>
-                <input type="button" class="fa aboutUsImage" onclick="location.href = '/aboutnathan';">
-                <div>James Lee</div>
+    <div class="col-0" style="margin: 10% 5%" name="imgbox" id="imgbox">
+        <div class="table">
+            <div class="row">
+                <div class="content_img" style="margin-left:0%">
+                    <input type="button" class="fa aboutUsImage nathan" onclick="location.href = '/aboutnathan';">
+                    <div style="color:black">Nathan Manangan</div>
+                </div>
+                <div class="content_img" style="margin-left:2%">
+                    <input type="button" class="fa aboutUsImage reem" onclick="location.href = '/aboutreem';">
+                    <div style="color:black">Reem Ben Ishai</div>
+                </div>
+                <div class="content_img" style="margin-left:2%">
+                    <input type="button" class="fa aboutUsImage daniel" onclick="location.href = '/aboutdaniel';">
+                    <div style="color:black">Daniel Bertino</div>
+                </div>
+                <div class="content_img" style="margin-left:2%">
+                    <input type="button" class="fa aboutUsImage jacob" onclick="location.href = '/aboutjacob';">
+                    <div style="color:black">Jacob Rozenkrants</div>
+                </div>
+                <div class="content_img" style="margin-left:2%">
+                    <input type="button" class="fa aboutUsImage james" onclick="location.href = '/aboutjames';">
+                    <div style="color:black">James Lee</div>
+                </div>
             </div>
-        </tr>
-    </table>
+        </div>
     </div>
 </body>
     </html>
