@@ -36,7 +36,7 @@ Starter code should be fun and practical.
 ### Week 1
 | Contributor  | Links to Commits  |
 |---|---|
-| Evan | []()|
+| Evan | [Navbar touch ups](https://github.com/SimonBrunzell/flask_portfolio/commit/44eff8dfe05420dc5ec7d9a6234ff7e93f1b7cb4)|
 | Vunsh | []()|
 | Simon | []()|
 | Sanjay | []()|
