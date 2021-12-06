@@ -1,4 +1,13 @@
-{% include "layouts/navbar.html" %}
+<!-- Extending the predefined project layout -->
+{% extends "layouts/base.html" %}
+
+<!- This variable sets name of browser tab  -->
+{% set project = "Stubby" %}
+
+<!- This is a replacement block for Body in base.html -->
+{% block body %}
+
+
 <title>Sonakshi</title>
 <body style="background-color: #EBF7FA;">
 <style>
@@ -56,3 +65,8 @@
 
 </div>
 </body>
+
+{% endblock %}
+
+{% block background %}
+{% endblock %}

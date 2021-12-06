@@ -1,0 +1,71 @@
+<!-- Extending the predefined project layout -->
+{% extends "layouts/base.html" %}
+
+<!- This variable sets name of browser tab  -->
+{% set project = "Stubby" %}
+
+<!- This is a replacement block for Body in base.html -->
+{% block body %}
+
+
+    <title>Shreya</title>
+    <body style="background-color: #EBF7FA;">
+    <style>
+        .button1 {
+            background-color: white;
+            color: grey;
+            border: 3px solid #9CD8EC;
+            text-decoration: none;
+            margin: 4px 2px;
+            padding: 3px 4px;
+        }
+
+        .button1:hover {
+            background-color: whitesmoke;
+            color: black;
+        }
+    </style>
+
+    <div style="margin: 2% 5% 5%; text-align:center; font-family: Baskerville; font-size: larger">
+        <div>
+            <p style="font-size: x-large"id="wave"><strong>Hello, {{name}}!</strong></p>
+            <script>
+                var targetForWave = document.getElementById("wave");
+                targetForWave.textContent += String.fromCodePoint(0x1F44B);
+            </script>
+        </div>
+
+        <div>
+            <form action="/shreya" id="shreya" method="POST" >
+                <label for="name">Enter a greeting name!</label>
+                <input name="name" id="name">
+                <input type="submit" class="button1" value="Greetings!">
+            </form>
+        </div>
+
+        <br>
+        <p>
+        </p>
+        <p style="font-size: large; font-family: Baskerville; text-align: center"><i>Click Me</i></p>
+
+        <img id="myImage" onclick="changeImage()" src="/static/assets/shreyaimages/shreya.png" width="285" height="400">
+
+        <script>
+            function changeImage() {
+                var image = document.getElementById('myImage');
+                if (image.src.match("/static/assets/shreyaimages/shreya.png")) {
+                    image.src = "/static/assets/shreyaimages/shreyadog.jpg";
+                } else {
+                    image.src = "/static/assets/shreyaimages/shreya.png";
+                }
+            }
+        </script>
+
+
+    </div>
+    </body>
+
+{% endblock %}
+
+{% block background %}
+{% endblock %}
