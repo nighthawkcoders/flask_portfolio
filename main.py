@@ -77,6 +77,10 @@ def stats():
 def notes():
     return render_template("subjects/notes.html")
 
+@app.route('/database/')
+def database():
+    return render_template("database.html")
+
 
 # runs the application on the development server
 if __name__ == "__main__":
