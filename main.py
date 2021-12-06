@@ -63,23 +63,19 @@ def divya():
 
 @app.route('/rohan', methods=['GET', 'POST'])
 def rohan():
-    if request.form:
-        name = request.form.get("name")
-        if len(name) != 0:
-            return render_template("rohan.html", name1=name)
+    url = "https://genius.p.rapidapi.com/artists/16775/songs"
+
+    headers = {
+    'x-rapidapi-host': "genius.p.rapidapi.com",
+    'x-rapidapi-key': "35a01f5f74msh20628303ae6dbefp168484jsn83f86e2f8568"
+    }
+
+    response = requests.request("GET", url, headers=headers)
+    outcomes = json.loads(response.content.decode("utf-8"))['outcomes']
+    lyrics = []
+    for outcome in outcomes:
+      lyrics.append(outcome['lyric'])
     return render_template("rohan.html", name1="homie")
-# Genius Lyrics api
-# url = "https://genius.p.rapidapi.com/artists/16775/songs"
-# headers = {
-#     'x-rapidapi-host': "genius.p.rapidapi.com",
-#     'x-rapidapi-key': "35a01f5f74msh20628303ae6dbefp168484jsn83f86e2f8568"
-# }
-# response = requests.request("GET", url, headers=headers)
-#
-# outcomes = json.loads(response.content.decode("utf-8"))['outcomes']
-# lyrics = []
-# for outcome in outcomes:
-#     lyrics.append(outcome['lyric'])
 
 @app.route('/photogallery', methods=['GET', 'POST'])
 def photogallery():
