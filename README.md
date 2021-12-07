@@ -78,6 +78,16 @@ Our website is a website full of helpful resources for students. It will help st
 
 <br>
 
+## Week 2: Due 12/10
+| Name | Requirement | Evidence |  Total Score |
+| ---  | ---         | ---      | --- |
+| Sonakshi Bhalla | Individual Page<br>Individual API<br>CB Notes & Quizzes| <a href="https://github.com/sonakshibhalla/tri2turtles/issues/71">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/72">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/69">Ticket</a>| /8 
+| Shreya Ahuja | Individual Page<br>Individual API<br>Make Issues Until After Break<br>CB Notes & Quizzes|  <a href="https://github.com/sonakshibhalla/tri2turtles/issues/73">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/74">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/69">Ticket</a>| /8
+| Punarvasu Sangam | Individual Page<br>Individual API<br>CB Notes & Quizzes| <a href="https://github.com/sonakshibhalla/tri2turtles/issues/75">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/76">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/70">Ticket</a>| /8
+| Khushi Bagri | Individual Page<br>Individual API<br>CB Notes & Quizzes| <a href="https://github.com/sonakshibhalla/tri2turtles/issues/77">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/78">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/70">Ticket</a>| /8
+
+<br>
+
 ## Week 1: Due 12/2
 <br>
 
