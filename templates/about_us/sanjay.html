@@ -3,7 +3,13 @@
 <html lang="en">
 {% block body %}
 <div id="page-container" class="dark-theme">
-<button style="position: absolute;right:0;" onclick="theme()">change theme</button>
+<div class="theme-toggle" id="to-light" onclick="theme()">
+    <img  src="/static/assets/sun.svg"></img>
+    <p id="current-theme"></p>
+</div>
+<div class="theme-toggle" id="to-dark" onclick="theme()" style="display: none">
+    <img  src="/static/assets/moon.svg"></img>
+</div>
 <h1 style="text-align:center">
 Sanjay Bharadwaj
 </h1>
@@ -77,47 +83,63 @@ Sanjay Bharadwaj
             }
         }
         function theme() {
-            if (document.getElementById("page-container").classList.contains("light-theme")) {
-                document.getElementById("page-container").classList.add('dark-theme');
-                document.getElementById("page-container").classList.remove('light-theme');
-            } else {
-                document.getElementById("page-container").classList.add('light-theme');
-                document.getElementById("page-container").classList.remove('dark-theme');
-            }
+               var themes = ["light","blue","dark"]
+               var theme = document.getElementById("page-container").classList[0];
+               var new_theme = themes[Math.floor(Math.random() * themes.length)];
+               var new_theme = new_theme + "-theme"
+               while (new_theme == theme) {
+                   var new_theme = themes[Math.floor(Math.random() * themes.length)];
+                   var new_theme = new_theme + "-theme"
+               }
+               document.getElementById("page-container").classList.remove(theme);
+               document.getElementById("page-container").classList.add(new_theme);
+               document.getElementById("current-theme").innerText = document.getElementById("page-container").classList + theme;
+//             if (document.getElementById("page-container").classList.contains("light-theme")) {
+//                 document.getElementById("page-container").classList.add('dark-theme');
+//                 document.getElementById("page-container").classList.remove('light-theme');
+//                 document.getElementById("to-dark").style.display = "none"
+//                 document.getElementById("to-light").style.display = "block"
+//             } else {
+//                 document.getElementById("page-container").classList.add('light-theme');
+//                 document.getElementById("page-container").classList.remove('dark-theme');
+//                 document.getElementById("to-light").style.display = "none"
+//                 document.getElementById("to-dark").style.display = "block"
+//
+//             }
         }
     </script>
     <style>
         #page-container {
             margin-left: 200px;
+            position: relative;
+            background-color: var(--bg-color);
+            color: var(--main-color)
+
         }
-        /* color theming */
-        #page-container.dark-theme {
-            background-color: #64483f
+        .blue-theme {
+            --bg-color: #6CA0DC;
+            --main-color: #082567;
+            --secondary-color: #A1CAF1;
         }
-        .dark-theme .table,th,td {
-            border: 1px solid black;
+        .to-dark {
+            display: none
         }
-        .dark-theme table {
+        .theme-toggle {
+            position: absolute;
+            top: 0;
+            right:0;
+        }
+        .theme-toggle img {
+            max-width: 100%;
+            width: 30px;
+        }
+        table {
             width: 100%;
-/*             border-collapse: collapse; */
-            color: #fed2b9
+/*             color: var(--main-color); */
         }
-        .dark-theme .table tr:hover {
-            background-color: #fed2b9;
-            color: #64483f;
-            font-weight: 500;
-        }
-        .light-theme .table,th,td {
-            border: 1px solid red;
-        }
-        .light-theme table {
-            width: 100%;
-/*             border-collapse: collapse; */
-            color: #64483f;
-        }
-        .light-theme .table tr:hover {
-            background-color: #64483f;
-            color: #fed2b9;
+        .table tr:hover {
+            background-color: var(--secondary-color);
+            color: var(--main-color);
             font-weight: 500;
         }
         .container {
@@ -170,7 +192,7 @@ Sanjay Bharadwaj
         }
         .col .setup {
             font-size: 23px;
-            color: #fed2b9;
+            color: var(--main-color);
         }
     </style>
 

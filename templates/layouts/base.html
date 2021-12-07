@@ -44,6 +44,18 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 /*             background-size: 400% 400%; */
 /*             animation: gradient 15s ease infinite; */
   }
+        .light-theme {
+            --bg-color: #cfb8b0;
+            --main-color: #64483f;
+            --secondary-color: #fed2b9;
+            background-color: var(--bg-color)
+        }
+        .dark-theme {
+            --bg-color: #8e6e64;
+            --main-color: #fed2b9;
+            --secondary-color: #64483f;
+            background-color: var(--bg-color)
+        }
 
   @keyframes gradient {
       0% {
@@ -105,13 +117,13 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             display: inline-block;
             border-radius: 25px;
             transition: all .2s;
-            color: #fed2b9;
-            border: 2px solid #fed2b9
+            color: var(--main-color);
+            border: 2px solid var(--main-color)
         }
 
         .btn:hover {
-            color: #8e6f64;
-            background-color: #fed2b9;
+            color: var(--secondary-color);
+            background-color: var(--main-color);
             font-weight: 700;
             box-shadow: 0 20px 40px rgba(255, 255, 255, 0.2);
         }
@@ -152,7 +164,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
         A:link {text-decoration:none;color:#000}
         A:visited {text-decoration:none;color:#000}
         A:active {text-decoration:none;color:#000}
-        A:hover {text-decoration:none;color:#fed2b9;font-weight: 500;}
+        A:hover {text-decoration:none;color:var(--main-color);font-weight: 500;}
 
     </style>
 
