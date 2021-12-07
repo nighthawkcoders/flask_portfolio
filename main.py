@@ -51,6 +51,23 @@ def shreya():
     return render_template("shreya.html", name="World")
 # starting and empty input default
 
+@app.route('/linda', methods=['GET', 'POST'])
+def linda():
+    if request.form:
+        name = request.form.get("name")
+        if len(name) != 0:  # input field has content
+            return render_template("linda.html", name=name)
+    return render_template("linda.html")
+
+@app.route('/khushi', methods=['GET', 'POST'])
+def khushi():
+    # submit button has been pushed
+    if request.form:
+        name = request.form.get("name")
+        if len(name) != 0:  # input field has content
+            return render_template("khushi.html", name=name)
+    # starting and empty input default
+    return render_template("khushi.html", name="World")
 
 @app.route('/genius', methods=['GET', 'POST'])
 def genius():
@@ -65,37 +82,6 @@ def genius():
     response = requests.request("GET", url, headers=headers)
 
     return render_template("genius.html", stats=response.json())
-
-
-@app.route('/linda')
-def linda():
-    return render_template("linda.html")
-
-@app.route('/khushi', methods=['GET', 'POST'])
-def khushi():
-    # submit button has been pushed
-    if request.form:
-        name = request.form.get("name")
-        if len(name) != 0:  # input field has content
-            return render_template("khushi.html", name=name)
-    # starting and empty input default
-    return render_template("khushi.html", name="World")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @app.route('/newapi', methods=['GET', 'POST'])
 def newapi():
