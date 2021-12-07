@@ -75,7 +75,7 @@ Our website is a website full of helpful resources for students. It will help st
 ## Table of Contents
 - <a href="https://github.com/sonakshibhalla/tri2turtles/blob/main/README.md#week-0-due-1119">Week 0</a>
 - <a href="https://github.com/sonakshibhalla/tri2turtles/blob/main/README.md#week-1-due-122">Week 1</a>
-
+- <a href="https://github.com/sonakshibhalla/tri2turtles/blob/main/README.md#week-2-due-1210">Week 2</a>
 <br>
 
 ## Week 2: Due 12/10
