@@ -35,17 +35,23 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             --buttonhover: #64483f;
             --logocolor: white;
             --catdrop: #000000;
+            --sidebarbg:#64483f;
+            --visitlink:#fed2b9;
+            --navbarbg: #fed2b9;
         }
 
         html[data-theme='dark'] {
             --bg: #291F1C;
-            --txt:#373332;
+            --txt:#6a6260;
             --logocolor:black;
             --catdrop: #373332;
 
             /*need to figure out what this is and make a dark version */
-            --button: #fed2b9;
-            --buttonhover: #64483f;
+            --button: #6a6260;
+            --buttonhover: #c5bebd;
+            --sidebarbg:#16100F;
+            --visitlink:#c5bebd;
+            --navbarbg: #3b2d29;
         }
 
         html, body{
@@ -117,13 +123,13 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             display: inline-block;
             border-radius: 25px;
             transition: all .2s;
-            color: #fed2b9;
-            border: 2px solid #fed2b9
+            color: var(--button);
+            border: 2px solid var(--button)
         }
 
         .btn:hover {
-            color: #8e6f64;
-            background-color: #fed2b9;
+            color: var(--button);
+            background-color: var(--buttonhover);
             font-weight: 700;
             box-shadow: 0 20px 40px rgba(255, 255, 255, 0.2);
         }
@@ -154,17 +160,18 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             width: 200px;
             position: fixed;
             alignment: left;
-            background-color: #64483f;
+            background-color: var(--sidebarbg);
+            color: var(--txt);
             overflow-x: hidden;
             padding-top: 20px;
             z-index: 0;
         }
 
 
-        A:link {text-decoration:none;color:#000}
-        A:visited {text-decoration:none;color:#000}
-        A:active {text-decoration:none;color:#000}
-        A:hover {text-decoration:none;color:#fed2b9}
+        A:link {text-decoration:none;color: var(--txt);}
+        A:visited {text-decoration:none;color: var(--txt);}
+        A:active {text-decoration:none;color: var(--txt);}
+        A:hover {text-decoration:none;color:var(--visitlink);}
 
     </style>
 

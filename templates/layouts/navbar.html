@@ -5,23 +5,24 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
     a.nav-link {
         background-color: rgba(255, 0, 0, 0.0);
         transition: background-color 0.5s;
-        color: #000000 !important;
+        color: var(--txt) !important;
         font-family:Courier;
     }
     a.nav-link:hover {
-        background-color: #8e6f64;
+        background-color: var(--buttonhover);
     }
     nav {
-        background-image: linear-gradient(to right, #fed2b9, #fed2b9);
+        background-image: linear-gradient(to right, var(--navbarbg), var(--navbarbg) );
     }
     .dropdown {
         margin-right: 5px;
     }
     .dropdown-menu {
-        background-color: #fed2b9
+        background-color: var(--navbarbg)
     }
     .dropdown-menu a:hover {
-        background-color: #8e6f64;
+        background-color: var(--bg);
+        color: var(--txt);
     }
      #first{
         margin-left:5px;
