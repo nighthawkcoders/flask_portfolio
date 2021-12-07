@@ -2,13 +2,55 @@
 <html lang="en">
 {%  extends "layouts/base.html" %}
 {%  set project = "Jacob" %}
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-{%  block body %}
-    <body>
+{#<head>#}
+  {#    <meta charset="UTF-8">#}
+  {#    <title>About me: Jacob Rozenkrants</title>#}
+  {#</head>#}
+{#{% set project = "Brian" %}#}
+{##}
+{##}
+{#{% extends "layouts/base.html" %}#}
+{##}
+{#{% set project = "Connor" %}#}
+{##}
+{#{% block body %}#}
+{#    <p>I am Jacob and I am a junior and AP CSP student at Del Norte. My idea is that we should perhaps make a forum for discussing current events, with a bar at the top for the different topics such as national politics, international politics, business, sports, technology, miscellaneous.</p>#}
+{#    <div class="center-block" style="margin: 2% 5% 5%; text-align:center; font-family: gilroy,serif;">#}
+  {#        <div class="col-12">#}
+    {#            <p>Hello, {{nickname}}!</p>#}
+    {#        </div>#}
+  {#        <div class="col-12">#}
+    {#            <form action="/Jacob/" id="greet" method="POST" >#}
+      {#                <label for="name">Type a greeting name?</label>#}
+      {#                <input name="name" id="name">#}
+      {#                <input type="submit" value="Greetings!">#}
+      {#            </form>#}
+    {#        </div>#}
+  {#    </div>#}
+{#{% endblock %}#}
+{#{% block background %}#}
+{#    <script src="{{ url_for('static', filename='three.r119.min.js') }}"></script>#}
+{#    <script src="{{ url_for('static', filename='vanta.net.min.js') }}"></script>#}
+{#    <script>#}
+{#        VANTA.NET({#}
+  {#            el: "body",#}
+  {#            mouseControls: true,#}
+  {#            touchControls: true,#}
+  {#            gyroControls: false,#}
+  {#            minHeight: 200.00,#}
+  {#            minWidth: 200.00,#}
+  {#            scale: 1.00,#}
+  {#            scaleMobile: 1.00#}
+  {#        })#}
+{#    </script>#}
+{#{% endblock %}#}
+{#</html>#}
+{% extends "layouts/base.html" %}
+{% block content %}
 
-    </body>
+<div class="row">
+  <h3 style="text-align: left;">Hello, My name is Jacob Rozenkrants! I am a senior in high school. My hobbies include soccer and reading!</h3>
+  <body style="background-color:burlywood"#}
+</div>
+<img src= "https://iconape.com/wp-content/files/ts/325506/png/325506.png"
 {% endblock %}
-</html>
