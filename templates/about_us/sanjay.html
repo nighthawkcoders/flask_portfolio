@@ -2,13 +2,10 @@
 <!DOCTYPE html>
 <html lang="en">
 {% block body %}
-<div id="page-container" class="dark-theme">
-<div class="theme-toggle" id="to-light" onclick="theme()">
-    <img  src="/static/assets/sun.svg"></img>
-    <p id="current-theme"></p>
-</div>
-<div class="theme-toggle" id="to-dark" onclick="theme()" style="display: none">
-    <img  src="/static/assets/moon.svg"></img>
+<div id="page-container" class="green-theme">
+<div class="theme-toggle">
+    <button onclick="theme()">Change Theme</button>
+    <p>Current Theme: <span id="current">green</span></p>
 </div>
 <h1 style="text-align:center">
 Sanjay Bharadwaj
@@ -27,10 +24,10 @@ Sanjay Bharadwaj
         <table style="margin-bottom: 20px">
             <tr>
                 <td> <a target="_blank" href="https://github.com/SanjayB06">Github Profile</a> </td>
-
                 <td> <a target="_blank" href="https://github.com/SimonBrunzell/flask_portfolio/commits?author=SanjayB06">Commits</a> </td>
                 <td> <a target="_blank" href="https://github.com/SimonBrunzell/flask_portfolio/projects/1?card_filter_query=assignee%3Asanjayb06">Scrum Board Tasks</a> </td>
                 <td><a target="_blank" href="https://docs.google.com/document/d/1utBhod9HOMFYtKowLyFNyT5Rc6tgHKbGJc-yEbY509U/edit?usp=sharing">Pair Journal</a></td>
+                <td><a target="_blank" href="https://docs.google.com/document/d/1utBhod9HOMFYtKowLyFNyT5Rc6tgHKbGJc-yEbY509U/edit#bookmark=id.76sqakcgpzf5">Create Task Plan</a></td>
             </tr>
         </table>
         <button class="btn" id="toggler" onclick="changePic()">No Mask</button>
@@ -49,6 +46,8 @@ Sanjay Bharadwaj
         <p class="setup">{{joke["joke"]}}</p>
     </div>
 </div>
+<h4 style="text-align: center">Premier League Games from Upcoming week </h4>
+<h6 style="text-align: center">Soccer API</h6>
 <table class="table">
     <tr>
         <th>Date</th>
@@ -83,17 +82,17 @@ Sanjay Bharadwaj
             }
         }
         function theme() {
-               var themes = ["light","blue","dark"]
+               var themes = ["purple","green","light","blue","dark"]
                var theme = document.getElementById("page-container").classList[0];
-               var new_theme = themes[Math.floor(Math.random() * themes.length)];
-               var new_theme = new_theme + "-theme"
+               var generated = themes[Math.floor(Math.random() * themes.length)];
+               var new_theme = generated + "-theme"
                while (new_theme == theme) {
-                   var new_theme = themes[Math.floor(Math.random() * themes.length)];
-                   var new_theme = new_theme + "-theme"
+                   var generated = themes[Math.floor(Math.random() * themes.length)];
+                   var new_theme = generated + "-theme"
                }
                document.getElementById("page-container").classList.remove(theme);
                document.getElementById("page-container").classList.add(new_theme);
-               document.getElementById("current-theme").innerText = document.getElementById("page-container").classList + theme;
+               document.getElementById("current").innerText = generated
 //             if (document.getElementById("page-container").classList.contains("light-theme")) {
 //                 document.getElementById("page-container").classList.add('dark-theme');
 //                 document.getElementById("page-container").classList.remove('light-theme');
@@ -116,32 +115,31 @@ Sanjay Bharadwaj
             color: var(--main-color)
 
         }
-        .blue-theme {
-            --bg-color: #6CA0DC;
-            --main-color: #082567;
-            --secondary-color: #A1CAF1;
-        }
-        .to-dark {
-            display: none
-        }
         .theme-toggle {
             position: absolute;
             top: 0;
             right:0;
-        }
-        .theme-toggle img {
-            max-width: 100%;
-            width: 30px;
+            text-align: center;
         }
         table {
             width: 100%;
-/*             color: var(--main-color); */
         }
         .table tr:hover {
             background-color: var(--secondary-color);
             color: var(--main-color);
             font-weight: 500;
         }
+        th{
+            height: 70px;
+        }
+        th,td {
+            padding: 15px;
+            color: var(--main-color);
+            text-align: center;
+            height: 50px;
+            border: 2px solid var(--main-color)
+        }
+
         .container {
             margin: 0 auto;
         }
@@ -153,33 +151,33 @@ Sanjay Bharadwaj
             width: 33%;
         }
         .img img {
-            width: 75%;
+            width: 70%;
             border-radius: 50px;
         }
         .text {
             width: 60%;
             padding: 2em;
         }
-        th{
-            height: 70px;
-
-        }
-        th,td {
-            padding: 15px;
-        }
-        td, th {
-            text-align: center;
-            height: 50px;
-
-        }
         section {
             width: 80%;
         }
         .joke {
             display: flex;
+            justify-content: center;
             padding: 2em;
-            width: 60%;
+            width: 100%;
             margin: 0 auto;
+            background-color: var(--main-color);
+            color: var(--bg-color)
+        }
+        .joke a {
+            color: var(--bg-color)
+        }
+        .joke a:hover {
+            color: var(--secondary-color)
+        }
+        .col:first-of-type {
+            text-align: center;
         }
         .col h4 {
             font-size: 30px;
@@ -192,7 +190,6 @@ Sanjay Bharadwaj
         }
         .col .setup {
             font-size: 23px;
-            color: var(--main-color);
         }
     </style>
 

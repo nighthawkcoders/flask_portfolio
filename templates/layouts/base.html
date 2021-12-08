@@ -56,6 +56,22 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             --secondary-color: #64483f;
             background-color: var(--bg-color)
         }
+        .blue-theme {
+            --bg-color: #6CA0DC;
+            --main-color: #000080;
+            --secondary-color: #A1CAF1;
+        }
+        .green-theme {
+            --bg-color: #043927;
+            --main-color: #50C878;
+            --secondary-color: #00755E;
+        }
+        .purple-theme {
+            --bg-color: #4B0082;
+            --main-color: #FAE6FA;
+            --secondary-color: #9370DB;
+        }
+
 
   @keyframes gradient {
       0% {
@@ -72,10 +88,6 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 
 
 
-        .dark-mode {
-            background-color: var(--white);
-            color: var(--black);
-        }
 
         h1{
             font-size: 5em;
@@ -161,10 +173,8 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
         }
 
 
-        A:link {text-decoration:none;color:#000}
-        A:visited {text-decoration:none;color:#000}
-        A:active {text-decoration:none;color:#000}
-        A:hover {text-decoration:none;color:var(--main-color);font-weight: 500;}
+        A {text-decoration:none;color:var(--main-color)}
+        A:hover {text-decoration:none;color:var(--secondary-color);font-weight: 500;}
 
     </style>
 
