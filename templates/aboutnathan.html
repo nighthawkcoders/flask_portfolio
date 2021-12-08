@@ -4,11 +4,33 @@
 {%  set project = "Nathan" %}
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Nathan</title>
 </head>
 {%  block body %}
 <body>
-
+<div class="row">
+    <div class="col-sm">
+        <h1>Nathan</h1>
+        <img src="/static/assets/nathan2.jpg" width="50%"  id="nathanimg" onclick="nathanImg()" >
+    </div>
+    <div class="col-sm">
+        <h1>API</h1>
+    </div>
+    <script>
+        var nathanVar = 0;
+        function nathanImg () {
+            const element = document.getElementById("nathanimg");
+            if (nathanVar == 0) {
+                element.src = "/static/assets/nathan1.jpg";
+                nathanVar = 1
+            }
+            else {
+                element.src = "/static/assets/nathan2.jpg";
+                nathanVar = 0;
+            }
+        }
+    </script>
+</div>
 </body>
 {% endblock %}
 </html>
