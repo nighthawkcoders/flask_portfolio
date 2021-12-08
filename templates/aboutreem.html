@@ -4,11 +4,33 @@
 {%  set project = "Reem" %}
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Reem Ben Ishai</title>
 </head>
 {%  block body %}
     <body>
-
+    <div class="row">
+    <div class="col-sm">
+        <h1>Reem</h1>
+        <img src="../static/assets/ReemNoMask.jpg" width="50%"  id="Reemimg" onclick="ReemImg()" >
+    </div>
+    <div class="col-sm">
+        <h1>API</h1>
+    </div>
+    </div>
+    <script>
+        var ReemVar = 0;
+        function ReemImg () {
+            const element = document.getElementById("Reemimg");
+            if (ReemVar == 0) {
+                element.src = "../static/assets/ReemNoMask.jpg";
+                ReemVar = 1
+            }
+            else {
+                element.src = "../static/assets/ReemMask.jpg";
+                ReemVar = 0;
+            }
+        }
+    </script>
     </body>
 {% endblock %}
 </html>
