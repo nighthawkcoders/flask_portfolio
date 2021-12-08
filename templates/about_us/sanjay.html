@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 {% block body %}
+
 <div id="page-container" class="green-theme">
 <div class="theme-toggle">
     <button onclick="theme()">Change Theme</button>
@@ -68,6 +69,13 @@ Sanjay Bharadwaj
 </table>
 </section>
 </div>
+<script>
+    var stored = localStorage.getItem("theme");
+    var current = document.getElementById("page-container").classList[0];
+    document.getElementById("page-container").classList.remove(current);
+    document.getElementById("page-container").classList.add(stored)
+</script>
+
     <script>
         function changePic() {
             if (document.getElementById("nomask").style.display == "block") {
@@ -92,19 +100,8 @@ Sanjay Bharadwaj
                }
                document.getElementById("page-container").classList.remove(theme);
                document.getElementById("page-container").classList.add(new_theme);
-               document.getElementById("current").innerText = generated
-//             if (document.getElementById("page-container").classList.contains("light-theme")) {
-//                 document.getElementById("page-container").classList.add('dark-theme');
-//                 document.getElementById("page-container").classList.remove('light-theme');
-//                 document.getElementById("to-dark").style.display = "none"
-//                 document.getElementById("to-light").style.display = "block"
-//             } else {
-//                 document.getElementById("page-container").classList.add('light-theme');
-//                 document.getElementById("page-container").classList.remove('dark-theme');
-//                 document.getElementById("to-light").style.display = "none"
-//                 document.getElementById("to-dark").style.display = "block"
-//
-//             }
+               localStorage.setItem("theme",new_theme);
+               document.getElementById("current").innerText = generated;
         }
     </script>
     <style>
