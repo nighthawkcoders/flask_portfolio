@@ -33,6 +33,8 @@ Primary Designer | Divya Suri | Primary Designer and Layout manager.  Organize J
 Deployment Manager | Jason Kaplan | Deploy Web site.  Establish policy and frequency for updates.  Ensure site is not broken and always alive for reviews.
 
 # Week 1
+[Week 1 Issue]
+[Week 1 Review Ticket](https://github.com/RohanG326/supporting_cast/issues/31)
 
 # Week 2
 
