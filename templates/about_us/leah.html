@@ -14,6 +14,7 @@
     <button class="btn" id="masking" onclick="mask()">mask</button>
     <button class="btn" onclick="location.href='https://docs.google.com/document/d/14MmFHefrfgQY180T0y2Cm4jv_q2mBz3U1obzI0VOSqc/edit?usp=sharing';">journal</button>
 
+
     <script>
     var masked = false
     var hello = false
@@ -37,12 +38,48 @@
                 masked = false
             }
         }
+    $(document).ready(function() {
+
+        var baseURL = "https://v2.jokeapi.dev";
+        var categories = ["Programming", "Misc", "Pun", "Spooky", "Christmas"];
+        var params = [
+            "blacklistFlags=nsfw,religious,racist",
+            "idRange=0-100"
+        ];
+
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", baseURL + "/joke/" + categories.join(",") + "?" + params.join("&"));
+
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status < 300) // readyState 4 means request has finished + we only want to parse the joke if the request was successful (status code lower than 300)
+            {
+                var randomJoke = JSON.parse(xhr.responseText);
+
+                if (randomJoke.type === "single") {
+                    // If type == "single", the joke only has the "joke" property
+                    document.getElementById("jokework").innerHTML = randomJoke["joke"]
+
+                } else {
+                    // If type == "single", the joke only has the "joke" property
+                    document.getElementById("jokework").innerHTML = randomJoke
+                }
+            } else if (xhr.readyState === 4) {
+                alert("Error while requesting joke.\n\nStatus code: " + xhr.status + "\nServer response: " + xhr.responseText);
+            }
+        };
+
+        xhr.send();
+    })
     </script>
+    <br>
+    <br>
+    <p id="jokework"></p>
     <br>
     <p> My name is Leah Bogomolny and I am in 12th grade</p>
     <p> I like to play games and hang out with friends</p>
     <p> I have an older sister named, Maggie, who is a junior in college.</p>
     <p> I want to be a computer science major in college </p>
+
 
     <style>
         p {
@@ -55,6 +92,15 @@
         }
         button {
             margin-left: 250px;
+        }
+        printjoke {
+            margin-left: 250px;
+        }
+        jokework {
+            margin-left: 250px;
+        }
+        body {
+            background-color: #8e87b7 !important;
         }
     </style>
 {% endblock %}
