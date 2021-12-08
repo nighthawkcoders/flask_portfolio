@@ -1,40 +1,64 @@
 {% extends "layouts/project.html" %}
 {% block body %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Saathvika</title>
-    <script>
-        function changeImage() {
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Saathvika</title>
+        <script src="https://genius.p.rapidapi.com/artists/16775/songs"></script>
+        <script>
+            function changeImage() {
 
-            if (document.getElementById("imgClickAndChange").src.includes('/static/assets/little.jpg'))
-            {
-                document.getElementById("imgClickAndChange").src = "/static/assets/greyLittle.jpg";
+                if (document.getElementById("imgClickAndChange").src.includes('/static/assets/little.jpg'))
+                {
+                    document.getElementById("imgClickAndChange").src = "/static/assets/greyLittle.jpg";
+                }
+                else{
+                    document.getElementById("imgClickAndChange").src ="/static/assets/little.jpg"
+                }
             }
-            else{
-                document.getElementById("imgClickAndChange").src ="/static/assets/little.jpg"
+
+            function getLyric() {
+                fetch("https://genius.p.rapidapi.com/artists/16775/songs", {
+                    "method": "GET",
+                    "headers": {
+                        "x-rapidapi-host": "genius.p.rapidapi.com",
+                        "x-rapidapi-key": "SIGN-UP-FOR-KEY"
+                    }
+                })
+                    .then(response => {
+                        console.log(response);
+                    })
+                    .catch(err => {
+                        console.error(err);
+                    });
             }
-        }
-    </script>
-</head>
-<body style="background-image: url('/static/assets/saathvikaBG.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-size: cover;">
-<div style="margin: 2% 5% 5%; text-align:center; font-family: monospace; font-size: larger" >
-    <div>
-        <h1 style="background-color: rosybrown; font-family: 'Blippo'; font-size: 65px; text-align: center; padding: 15px; color: papayawhip; text-shadow: 5px 3px black;">Saathvika Ajith's Individual Homepage</h1>
-        <p style="background-color: rosybrown">Hello there <span id="myName">{{name}}</span>, welcome to my individual homepage!</p>
-        <form action="/saathvika/" id="saathvika2" method="POST" >
-            <label for="name">Enter Your Name!</label>
-            <input name="name" id="name">
-            <input type="submit" value="Go!" onclick="(function (){document.getElementById('myName').innerText=document.getElementById('name').value})();return false;">
-        </form>
-        <p style="background-color: rosybrown">
-            <img src="/static/assets/little.jpg" style="height: 350px; width: auto;" id="imgClickAndChange" onclick="changeImage()" alt="change"/>
-            <br>
-            Click to ColorZap!
-        </p>
+        </script>
+    </head>
+    <body style="background-image: url('../static/assets/ghibli-9-960x519@2x.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-size: cover;">
+    <div style="margin: 2% 5% 5%; text-align:center; font-family: monospace; font-size: larger" >
+        <div>
+            <h1 style="background-color: #3b4f3f; font-family: 'Blippo'; font-size: 65px; text-align: center; padding: 25px; color: papayawhip; text-shadow: 5px 3px black;">Saathvika Ajith's Individual Homepage</h1>
+            <p style="background-color: #3b4f3f; font-size: 20px">Hello there <span id="myName">{{name}}</span>, welcome to my individual homepage!</p>
+            <form action="/saathvika/" id="saathvika2" method="POST" >
+                <label for="name">Enter Your Name!</label>
+                <input name="name" id="name">
+                <input type="submit" value="Go!" onclick="(function (){document.getElementById('myName').innerText=document.getElementById('name').value})();return false;">
+            </form>
+            <p style="background-color: #3b4f3f">
+                <img src="/static/assets/little.jpg" style="height: 350px; width: auto;" id="imgClickAndChange" onclick="changeImage()" alt="change"/>
+                <br>
+                Click to ColorZap!
+            </p>
+
+
+            <button id="get-lyric" style="margin-top: 20px; height: 35px; font-family: monospace; font-size: 15px" onclick="getLyric()">Get me a Lyric!</button>
+
+            <div id="display-lyric" style="margin-top: 10px; font-size: 30px; color: papayawhip; font-weight: 600; font-family: monospace; text-align: center">No Lyric Yet</div>
+
+
+        </div>
     </div>
-</div>
-</body>
-</html>
+    </body>
+    </html>
 {% endblock %}
