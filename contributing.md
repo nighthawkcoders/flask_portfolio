@@ -31,6 +31,6 @@ Steps to merge a pull request:
 <li><a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/about-pull-request-merges">Rebase the commits individually onto the base branch</a> by clicking the merge drop down menu, selecting Rebase and merge and then clicking the Rebase and merge button.</li>
 </ul>
 <li>If prompted, type a commit message, or accept the default message.</li>
-<li>For information about the default commit messages for squash merges, see <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/about-pull-request-merges">"About pull request merges."</a></li>
+For information about the default commit messages for squash merges, see <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/about-pull-request-merges">"About pull request merges."</a></li>
 <li>Click Confirm merge, Confirm squash and merge, or Confirm rebase and merge.</li>
 </li>
