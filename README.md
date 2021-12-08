@@ -27,6 +27,7 @@ link to be added later
 
 # Week 1
 [Week 1 Issue](https://github.com/RohanG326/supporting_cast/issues/40)
+
 [Week 1 Review Ticket](https://github.com/RohanG326/supporting_cast/issues/31)
 
 # Week 0
