@@ -21,6 +21,14 @@ Rohan Gaikwad | GitHub Admin | [@rohang326](https://github.com/rohang326)| [Task
 
 link to be added later
 
+# Week 3
+
+# Week 2
+
+# Week 1
+[Week 1 Issue](https://github.com/RohanG326/supporting_cast/issues/40)
+[Week 1 Review Ticket](https://github.com/RohanG326/supporting_cast/issues/31)
+
 # Week 0
 Establish Roles Within Team
 
@@ -31,11 +39,3 @@ GitHub Admin | Rohan Gaikwad | Setup Project in Git.  Integrate any starter code
 Technical Officer | Adi Khandelwal | Works with Teacher, Classroom TOs, and BOF TO's to form TPT lessons and Tech Talk Topics for Trimester.  Also, facilitates learning of Technical Concepts within Scrum Team.
 Primary Designer | Divya Suri | Primary Designer and Layout manager.  Organize Jinja2 Enabled Templates, ensure usage of Bootstrap (minimize CSS customization per page).  Establish plan for overrides on each of the User Pages.
 Deployment Manager | Jason Kaplan | Deploy Web site.  Establish policy and frequency for updates.  Ensure site is not broken and always alive for reviews.
-
-# Week 1
-[Week 1 Issue]
-[Week 1 Review Ticket](https://github.com/RohanG326/supporting_cast/issues/31)
-
-# Week 2
-
-# Week 3
