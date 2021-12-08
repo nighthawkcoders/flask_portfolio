@@ -17,9 +17,21 @@
 
 ---
 ## Table of Contents
-1. [Week 1 - Project Approval](#Week1)
-2. [Week 0](#Week0)
+1. [Week 2 - Home Pages](#Week2)
+2. [Week 1 - Project Approval](#Week1)
+3. [Week 0](#Week0)
 ---
+###   <h2 id="Week2">Week 2 - Home Pages: Due 12/10</h2>
+- <a href=" ">Scrum Board</a>
+
+| Name | Requirement | Evidence | Grade |
+|:----:|:-----------:|:--------:|:-----:|
+| Saathvika Ajith | |<a href=" ">Ticket</a><br>|/8|
+| Pranavi Inukurti | |<a href=" ">Ticket</a><br>|/8|
+| Alice Tang | |<a href=" ">Ticket</a><br>|/8|
+| Samaya Sankuratri | |<a href=" ">Ticket</a><br>|/8|
+| Linda Liu | |<a href=" ">Ticket</a><br>|/8|
+
 ###   <h2 id="Week1">Week 1 - Project Approval: Due 12/2</h2>
 
 - <a href="https://github.com/PranaviInukurti/flask_portfolio/projects/1?card_filter_query=milestone%3A%22week+1+-+project+approval%22">Scrum Board</a>
