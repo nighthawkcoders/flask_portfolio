@@ -7,9 +7,32 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
         transition: background-color 0.5s;
         color: var(--txt) !important;
         font-family:Courier;
+        margin: 0 5px;
+        position: relative;
     }
-    a.nav-link:hover {
-        background-color: var(--buttonhover);
+
+    .nav-border {
+        position: absolute;
+        left: 0%;
+        right: 0;
+        border-bottom: 2px solid transparent;
+    }
+    .nav-link:hover .nav-border {
+        animation-name: border-move;
+        animation-duration: 0.8s;
+        border-bottom: 2px solid #64483f;
+    }
+    @keyframes border-move {
+        0% {
+            right: 100%;
+            left: 100%;
+        }
+        100% {
+            right: 0%;
+            left: 0%;
+        }
+
+
     }
     nav {
         background-image: linear-gradient(to right, var(--navbarbg), var(--navbarbg) );
@@ -32,6 +55,7 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a style="color:var(--txt);"   class="navbar-brand" href="/">{{basename}} </a>
+    <a class="navbar-brand" href="/">{{basename}} <div class="nav-border"></div></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -45,6 +69,7 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarStarters" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         About Us
+                        <div class="nav-border"></div>
                     </a>
 
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -57,10 +82,11 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                 </li>
             </ul>
 
-            <a class="nav-link" href={{ url_for('index') }}>Portfolio</a>
-            <a class="nav-link" href="/stub">Stub</a>
-            <a class="nav-link" href="/notes">Notes</a>
+            <a class="nav-link" href={{ url_for('index') }}>Portfolio <div class="nav-border"></div></a>
+            <a class="nav-link" href="/flashcards/">Flash Cards <div class="nav-border"></div></a>
 
+            <a class="nav-link" href={{ url_for('index') }}>Portfolio</a>
+            <a class="nav-link" href="/notes">Notes</a>
         </div>
     </div>
   
