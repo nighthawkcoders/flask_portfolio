@@ -17,7 +17,20 @@ Divya Suri | Primary Designer | [@divyanshisuri](https://github.com/divyanshisur
 Jason Kaplan | Deployment Manager | [@strangiato2112](https://github.com/strangiato2112)| [Tasks](https://github.com/RohanG326/supporting_cast/issues) | [Scrum Board](https://github.com/RohanG326/supporting_cast/projects/1)  | [Commits](https://github.com/RohanG326/supporting_cast/commits?author=strangiato2112) | [Rohan/Jason/Adi Journal](https://docs.google.com/document/d/1caGFdefkHrh74c3f_iuIx26mDD3QnP0FDM9cpS8BYFM/edit)
 Rohan Gaikwad | GitHub Admin | [@rohang326](https://github.com/rohang326)| [Tasks](https://github.com/RohanG326/supporting_cast/issues) | [Scrum Board](https://github.com/RohanG326/supporting_cast/projects/1) | [Commits](https://github.com/RohanG326/supporting_cast/graphs/contributors) | [Rohan/Jason/Adi Journal](https://docs.google.com/document/d/1caGFdefkHrh74c3f_iuIx26mDD3QnP0FDM9cpS8BYFM/edit) |
 
+# Runtime
+
+link to be added later
+
 # Week 0
+Establish Roles Within Team
+
+Role | Name | Role Description
+----------- | ----------- | -----------
+Scrum Master | Brian Tang | Ensure roles are assigned.  Build Scrum Board.  
+GitHub Admin | Rohan Gaikwad | Setup Project in Git.  Integrate any starter code from Trimester 1.  Build policies for Fork and Pull requests.
+Technical Officer | Adi Khandelwal | Works with Teacher, Classroom TOs, and BOF TO's to form TPT lessons and Tech Talk Topics for Trimester.  Also, facilitates learning of Technical Concepts within Scrum Team.
+Primary Designer | Divya Suri | Primary Designer and Layout manager.  Organize Jinja2 Enabled Templates, ensure usage of Bootstrap (minimize CSS customization per page).  Establish plan for overrides on each of the User Pages.
+Deployment Manager | Jason Kaplan | Deploy Web site.  Establish policy and frequency for updates.  Ensure site is not broken and always alive for reviews.
 
 # Week 1
 
