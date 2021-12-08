@@ -10,6 +10,7 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
         margin: 0 5px;
         position: relative;
     }
+
     .nav-border {
         position: absolute;
         left: 0%;
@@ -30,29 +31,34 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
             right: 0%;
             left: 0%;
         }
+
+
     }
     nav {
-        background-image: linear-gradient(to right, #fed2b9, #fed2b9);
+        background-image: linear-gradient(to right, var(--navbarbg), var(--navbarbg) );
     }
     .dropdown {
         margin-right: 5px;
     }
     .dropdown-menu {
-        background-color: #fed2b9
+        background-color: var(--navbarbg)
     }
     .dropdown-menu a:hover {
-        background-color: #8e6f64;
+        background-color: var(--bg);
+        color: var(--txt);
     }
      #first{
         margin-left:5px;
     }
 
 </style>
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="/">{{basename}} <div class="nav-border"></div></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
+
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
             <!-- url_for is a Jinja2 pre-processor that finds route from function name (def) -->
@@ -64,18 +70,55 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                         About Us
                         <div class="nav-border"></div>
                     </a>
+
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="/evan/">Evan</a>
-                        <a class="dropdown-item" href="/leah/">Leah</a>
-                        <a class="dropdown-item" href="/simon/">Simon</a>
-                        <a class="dropdown-item" href="/sanjay/">Sanjay</a>
+                        <a class="dropdown-item" href="/evan">Evan</a>
+                        <a class="dropdown-item" href="/leah">Leah</a>
+                        <a class="dropdown-item" href="/vunsh">Vunsh</a>
+                        <a class="dropdown-item" href="/sanjay">Sanjay</a>
+                        <a class="dropdown-item" href="/simon">Simon</a>
+                    </div>
                 </li>
             </ul>
 
             <a class="nav-link" href={{ url_for('index') }}>Portfolio <div class="nav-border"></div></a>
             <a class="nav-link" href="/flashcards/">Flash Cards <div class="nav-border"></div></a>
+
+            <a class="nav-link" href={{ url_for('index') }}>Portfolio</a>
+            <a class="nav-link" href="/notes">Notes</a>
         </div>
     </div>
-</nav>
+  
+    <style>
+        nav {
+            z-index: 2;
+            background-color: #ceb680;
+        }
+    </style>
+  
+    <!--Clock thing-->
+    <div class="btn-group">
+        <!-- Clock display -->
+        <div class="px-3 text-dark">
+            <span id="clock">12/2/2021, 2:45:33 PM</span>
+        </div>
+    </div>
 
+
+    <script>
+
+        // Clock Control
+        // clockElement global element set for convenience
+        let clockElement = document.getElementById('clock');
+        // Clock update executes on each interval set by timer
+        function clock() {
+            let date = new Date();
+            clockElement.textContent = date.toLocaleString();
+        }
+        // Clock refresh timer, a reoccurring event
+        setInterval(clock, 1000);
+        // End Clock Control
+
+    </script>
+</nav>
 

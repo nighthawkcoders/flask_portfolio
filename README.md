@@ -2,6 +2,8 @@
 ### Table of Contents
 - [Idea](#idea)
 - [Week by Week Progress](#week-by-week-progress)
+  - [Week 3](#week-3)
+  - [Week 2](#week-2)
   - [Week 1](#week-1)
   - [Week 0](#week-0)
 - [Contributors](#contributors)
@@ -11,14 +13,34 @@ Starter code should be fun and practical.
 
 ## Week by Week Progress
 
+### Week 3
+
+| Contributor  | Links to Commits  |
+|---|---|
+| Evan | []()|
+| Vunsh | []() |
+| Simon | []()|
+| Sanjay | []()|
+| Leah | []()|
+
+### Week 2
+
+| Contributor  | Links to Commits  |
+|---|---|
+| Evan | []()|
+| Vunsh | []()|
+| Simon | []()|
+| Sanjay | []()|
+| Leah | []()|
+
 ### Week 1
 | Contributor  | Links to Commits  |
 |---|---|
-|  Evan |   |
-| Vunsh  |   |
-|Simon   |   |
-| Sanjay  |   |
-|  Leah |   |
+| Evan | [Navbar touch ups](https://github.com/SimonBrunzell/flask_portfolio/commit/44eff8dfe05420dc5ec7d9a6234ff7e93f1b7cb4)|
+| Vunsh | []()|
+| Simon | []()|
+| Sanjay | []()|
+| Leah | []()|
 
 
 ### Week 0

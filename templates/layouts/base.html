@@ -5,9 +5,13 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
  ... code reuse
 -->
 <!DOCTYPE HTML>
+
+<!-- added for dark mode -->
+<html lang="en" data-theme="light">
+
 <html lang="en">
 
-{% set basename = "Nighthawk Coding" %}
+{% set basename = "Levss" %}
 {% set github = "https://github.com/nighthawkcoders" %}
 {% set twitter = "https://twitter.com/NighthawkCoding" %}
 {% set youtube = "https://www.youtube.com/channel/UClIKOsDS5dsfzFA3zveDT3Q?view_as=subscriber" %}
@@ -20,13 +24,34 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
     <style>
-        :root{
-            --txt: black;
+        html{
+            --txt: #000000;
             --black: #ceb680;
             --bg: #8e6f64;
             --button: #fed2b9;
             --buttonhover: #64483f;
+            --logocolor: white;
+            --catdrop: #000000;
+            --sidebarbg:#64483f;
+            --visitlink:#fed2b9;
+            --navbarbg: #fed2b9;
+        }
+
+        html[data-theme='dark'] {
+            --bg: #291F1C;
+            --txt:#6a6260;
+            --logocolor:black;
+            --catdrop: #373332;
+
+            /*need to figure out what this is and make a dark version */
+            --button: #6a6260;
+            --buttonhover: #c5bebd;
+            --sidebarbg:#16100F;
+            --visitlink:#c5bebd;
+            --navbarbg: #3b2d29;
         }
 
         html, body{
@@ -78,21 +103,12 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
         }
 
 
-  @keyframes gradient {
-      0% {
-          background-position: 0% 50%;
-      }
-      50% {
-          background-position: 100% 50%;
-      }
-      100% {
-          background-position: 0% 50%;
-      }
-  }
+        html,body {
+            margin: 0;
+            height: 100%;
+            background-color: var(--bg);
+            color: var(--txt);
         }
-
-
-
 
         h1{
             font-size: 5em;
@@ -102,11 +118,12 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             color: midnightblue;
         }
 
+        /* This is for the socials' logos */
         .fa{
             font-size: 3em;
             letter-spacing: 1em;
             transition: all .2s;
-            color: white;
+            color: var(--logocolor);
         }
 
         .fa:hover{
@@ -122,7 +139,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
         }
 
         .fa-github:hover{
-            color: #000000;
+            color: var(--catdrop);
         }
 
         .btn,
@@ -154,15 +171,15 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             border-radius: 20px;
             background-color: transparent;
             transition: all .5s;
-            outline: none
+            outline: none;
             color: #fed2b9;
             border: 2px solid #fed2b9
 
         }
         .button:hover {
-            background-color: #fed2b9
-            color: #64483f*/
-        }
+            background-color: #fed2b9;
+            color: #64483f
+        } */
         .row{
             margin: auto;
         }
@@ -187,26 +204,73 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
         A {text-decoration:none;color:var(--main-color)}
         A:hover {text-decoration:none;color:var(--secondary-color);font-weight: 500;}
 
+        nav {
+            background-color: #ceb680;
+        }
+
+
+
+
     </style>
 
     <title>{{ basename }} | {{ project }} </title>
 
 
     <div class="sidenav">
-        <p>this is working :D</p>
         <br>
-        <a href="/leah">Leah</a>
         <br>
-        <a href="/evan">Evan</a>
+        <a href="/apec">AP European History</a>
         <br>
-        <a href="/simon">Simon</a>
+        <a href="/apush">AP US History</a>
         <br>
-        <a href="/sanjay">Sanjay</a>
+        <a href="/biology">AP Biology</a>
+        <br>
+        <a href="/calcab">AP Calculus AB</a>
+        <br>
+        <a href="/chemistry">AP Chemistry</a>
+        <br>
+        <a href="/csp">AP Computer Science Principles</a>
+        <br>
+        <a href="/stats">AP Statistics</a>
+        <br>
+            <!-- adds the dark mode toggle to the sidebar -->
+            <div class="toggle-container" style="">
+                <input type="checkbox" id="switch" name="theme" /><label for="switch">Dark Mode</label>
+            </div>
     </div>
-
+    {% block meta %}
+    {% endblock %}
 </head>
 
 <body>
+
+<!-- script for dark mode toggle -->
+<script>
+    // checking to see if the dark theme checkbox has been clicked
+    var checkbox = document.querySelector('input[name=theme]');
+
+    checkbox.addEventListener('change', function() {
+        if(this.checked) {
+            trans()
+            document.documentElement.setAttribute('data-theme', 'dark')
+        } else {
+            trans()
+            document.documentElement.setAttribute('data-theme', 'light')
+        }
+    });
+
+    // allowing for a transition between the dark and light theme
+    let trans = () => {
+        document.documentElement.classList.add('transition');
+        window.setTimeout(() => {
+            document.documentElement.classList.remove('transition')
+        }, 1000)
+    }
+</script>
+
+
+
+
 {% include "layouts/navbar.html" %}
 
 {% block body %}

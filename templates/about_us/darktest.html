@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <title>dark test</title>
+    <!-- Putting the slash stops if from looking for it from darktest-->
+
+    <style>
+        html {
+            height:100%;
+            display: grid;
+            text-align: center;
+            align-items: center;
+            justify-items: center;
+            --bg: #8E6F64;
+            --bg-panel: #E1CFC9;
+            --color-headings:#000000;
+            --color-text:#000000;
+        }
+
+        html[data-theme='dark'] {
+            --bg: #16100F;
+            --bg-panel: #291F1C;
+            --color-headings:#373332;
+            --color-text:#373332;
+        }
+
+        body {
+            background-color: var(--bg);
+
+        }
+
+        .container {
+            background-color: var(--bg-panel);
+            margin: 5em;
+            padding: 5em;
+            border-radius: 15px;
+
+            display: grid;
+            grid-template-columns: 80% auto;
+            grid-template-rows: auto auto;
+            grid-template-areas:
+    "title switch"
+    "content content";
+        h1 {
+            margin: 0;
+            color: var(--color-headings);
+        }
+
+        p{
+            color: var(--color-text);
+            grid-area: content;
+            font-size: 1.1em;
+            line-height: 1.8em;
+            margin-top: 2em;
+        }
+
+        /* fancy toggle code doesn't seem neccesary but it's still in dark.scss */
+        /* toggle code from https://codepen.io/mburnette/pen/LxNxNg */
+
+    </style>
+
+
+</head>
+<body>
+
+<div class="container">
+    <h1> Light / Dark Mode</h1>
+    <div class="toggle-container">
+       <input type="checkbox" id="switch" name="theme" /><label for="switch">Toggle</label>
+    </div>
+
+<p>Words are here, and they say things that mean things, and stuff that you really will appreciate reading</p>
+</div>
+
+<script>
+    // checking to see if the dark theme checkbox has been clicked
+    var checkbox = document.querySelector('input[name=theme]');
+
+    checkbox.addEventListener('change', function() {
+        if(this.checked) {
+            trans()
+            document.documentElement.setAttribute('data-theme', 'dark')
+        } else {
+            trans()
+            document.documentElement.setAttribute('data-theme', 'light')
+        }
+    });
+
+    // allowing for a transition between the dark and light theme
+    let trans = () => {
+        document.documentElement.classList.add('transition');
+        window.setTimeout(() => {
+            document.documentElement.classList.remove('transition')
+        }, 1000)
+    }
+
+
+</script>
+
+
+
+</body>
+</html>
