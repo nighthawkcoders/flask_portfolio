@@ -22,15 +22,26 @@
 3. [Week 0](#Week0)
 ---
 ###   <h2 id="Week2">Week 2 - Home Pages: Due 12/10</h2>
-- <a href=" ">Scrum Board</a>
+- <a href="https://github.com/samayass/flask_portfolio/projects/1">Scrum Board</a>
 
 | Name | Requirement | Evidence | Grade |
 |:----:|:-----------:|:--------:|:-----:|
-| Saathvika Ajith | |<a href=" ">Ticket</a><br>|/8|
-| Pranavi Inukurti | |<a href=" ">Ticket</a><br>|/8|
-| Alice Tang | |<a href=" ">Ticket</a><br>|/8|
-| Samaya Sankuratri | |<a href=" ">Ticket</a><br>|/8|
-| Linda Liu | |<a href=" ">Ticket</a><br>|/8|
+| Saathvika Ajith |Individual Homepage|<a href="https://github.com/samayass/flask_portfolio/issues/10">Ticket</a><br>|/8|
+| Pranavi Inukurti |Individual Homepage|<a href="https://github.com/samayass/flask_portfolio/issues/10">Ticket</a><br>|/8|
+| Alice Tang |Individual Homepage|<a href="https://github.com/samayass/flask_portfolio/issues/10">Ticket</a><br>|/8|
+| Samaya Sankuratri |Individual Homepage|<a href="https://github.com/samayass/flask_portfolio/issues/10">Ticket</a><br>|/8|
+| Linda Liu |Individual Homepage|<a href="https://github.com/samayass/flask_portfolio/issues/10">Ticket</a><br>|/8|
+
+- Individual Scoring
+
+| Name | Journal with TT & TPT Notes | Grade |
+|:----:|:---------------------------:|:-----:|
+| Saathvika Ajith | <a href="https://docs.google.com/document/d/1mfrMqXhbkRceC4fq3nXZMLD8jo5IjC2mwAsvpqjQX94/edit?usp=sharing">Journal</a> | 5/5 |
+| Pranavi Inukurti | <a href="https://docs.google.com/document/d/1PGcv6fkv8A5Y1uzuN-iLSGm9CKhdWEL_fQRZyGv9ymI/edit?usp=sharing">Journal</a> | 5/5 |
+| Alice Tang | <a href="https://docs.google.com/document/d/1mfrMqXhbkRceC4fq3nXZMLD8jo5IjC2mwAsvpqjQX94/edit?usp=sharing">Journal</a> | 5/5 |
+| Samaya Sankuratri | <a href="https://docs.google.com/document/d/1PGcv6fkv8A5Y1uzuN-iLSGm9CKhdWEL_fQRZyGv9ymI/edit?usp=sharing">Journal</a> | 5/5 |
+| Linda Liu | <a href="https://docs.google.com/document/d/1PGcv6fkv8A5Y1uzuN-iLSGm9CKhdWEL_fQRZyGv9ymI/edit?usp=sharing">Journal</a> | 5/5 |
+
 
 ###   <h2 id="Week1">Week 1 - Project Approval: Due 12/2</h2>
 
