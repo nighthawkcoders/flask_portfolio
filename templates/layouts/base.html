@@ -32,30 +32,21 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
         html, body{
             margin: 0;
             height: 100%;
-            animation: fadein 2s;
-            -moz-animation: fadein 2s; /* Firefox */
-            -webkit-animation: fadein 2s; /* Safari and Chrome */
-            -o-animation: fadein 2s; /* Opera */
-            background-color: var(--grey);+-+
-            color: var(--white);
             background-color: var(--bg);
             color: var(--txt);
-  }
+        }
 
-  @keyframes gradient {
-      0% {
-          background-position: 0% 50%;
-      }
-      50% {
-          background-position: 100% 50%;
-      }
-      100% {
-          background-position: 0% 50%;
-      }
-  }
-
-
-
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
 
         .dark-mode {
             background-color: var(--white);
