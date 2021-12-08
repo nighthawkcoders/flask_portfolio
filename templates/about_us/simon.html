@@ -93,7 +93,7 @@
         " I am the solo Bass singer in our show choir Vocal Flight",
         "I objectively have the Best friends in the world!", "My friends are better than yours /hj",
         "I am better than you /j", "My favorite candy is Twix", "I'm having a friendsgiving at Denny's",
-        "My friends play d&d better than you","Happy Holidays","*merry noises",]
+        "My friends play d&d better than you","Happy Holidays","*merry noises","I am perfection","I am cooler than you","You wish you were me","hi :)"]
 
     up.innerHTML = "Click on the button to check "
         + "the type of element.<br><br>" + arr;
@@ -108,7 +108,7 @@
 <!--Proof of Perfection-->
 <p style="position:relative;left:64%">How perfect is Simon?</p>
 
-<input style="position:relative;left:82%" id="id1" type="number" min="100" max="100" required>
+<input style="position:relative;left:82%" id="id1" type="number" min="100" max="1000" required>
 <button class="btn"  onclick="myFunction()" style="position:relative;left:82%"> % </button>
 
 <p style="position:relative;left:64%"> Hint he's perfect </p>
@@ -121,7 +121,7 @@
         if (!inpObj.checkValidity()) {
             document.getElementById("demo").innerHTML = inpObj.validationMessage;
         } else {
-            document.getElementById("demo").innerHTML = "Input OK";
+            document.getElementById("demo").innerHTML = "Correct he's perfection";
         }
     }
 </script>
@@ -140,6 +140,25 @@ edit?usp=sharing" style="text-align:center">
 <div class="pic">
 </div>
 
+<!--API thing-->
+<script>
+    fetch("https://jokes-by-api-ninjas.p.rapidapi.com/v1/jokes", {
+        "method": "GET",
+        "headers": {
+            "x-rapidapi-host": "jokes-by-api-ninjas.p.rapidapi.com",
+            "x-rapidapi-key": "ff99cd2382msh23fabc003b17462p1078a2jsnc82687ebfb77"
+        }
+    })
+        .then(response => response.json())
+        .then(response => {
+            console.log(response);
+            console.log(response.content);
+        })
+        .catch(err => {
+            console.error(err);
+        });
+
+</script>
 
 {% endblock %}
 

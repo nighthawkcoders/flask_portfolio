@@ -5,23 +5,24 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
     a.nav-link {
         background-color: rgba(255, 0, 0, 0.0);
         transition: background-color 0.5s;
-        color: #000000 !important;
+        color: var(--txt) !important;
         font-family:Courier;
     }
     a.nav-link:hover {
-        background-color: #8e6f64;
+        background-color: var(--buttonhover);
     }
     nav {
-        background-image: linear-gradient(to right, #fed2b9, #fed2b9);
+        background-image: linear-gradient(to right, var(--navbarbg), var(--navbarbg) );
     }
     .dropdown {
         margin-right: 5px;
     }
     .dropdown-menu {
-        background-color: #fed2b9
+        background-color: var(--navbarbg)
     }
     .dropdown-menu a:hover {
-        background-color: #8e6f64;
+        background-color: var(--bg);
+        color: var(--txt);
     }
      #first{
         margin-left:5px;
@@ -34,6 +35,7 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
+
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
             <!-- url_for is a Jinja2 pre-processor that finds route from function name (def) -->
@@ -61,11 +63,37 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
 
         </div>
     </div>
+  
     <style>
         nav {
             z-index: 2;
             background-color: #ceb680;
         }
     </style>
+  
+    <!--Clock thing-->
+    <div class="btn-group">
+        <!-- Clock display -->
+        <div class="px-3 text-dark">
+            <span id="clock">12/2/2021, 2:45:33 PM</span>
+        </div>
+    </div>
+
+
+    <script>
+
+        // Clock Control
+        // clockElement global element set for convenience
+        let clockElement = document.getElementById('clock');
+        // Clock update executes on each interval set by timer
+        function clock() {
+            let date = new Date();
+            clockElement.textContent = date.toLocaleString();
+        }
+        // Clock refresh timer, a reoccurring event
+        setInterval(clock, 1000);
+        // End Clock Control
+
+    </script>
 </nav>
 
