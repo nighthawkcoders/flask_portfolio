@@ -45,6 +45,7 @@ link to be added later
 Commit | Evidence | Name | Description
 ----------- | ----------- | ----------- | -----------
 Incorporate API Into About Page | [Evidence](https://github.com/RohanG326/supporting_cast/commit/8bcd70cb41c89450948ecbdfab859a046cc1899d#) | Brian Tang | I added an API related to tennis into my about page.
+Add mask toggle to about page | [Evidnece](https://github.com/RohanG326/supporting_cast/commit/44f59e6db251374e993650bba49a946452adcd54) | Brian Tang | I incorporated the mask on/off toggle into my about page.
 
 #   <h2 id="Week0">Week 0: Due 11/19</h2>
 Establish Roles Within Team
