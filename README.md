@@ -42,8 +42,9 @@ link to be added later
 
 [Week 1 Review Ticket](https://github.com/RohanG326/supporting_cast/issues/31)
 
-Evidence | Name | Description
+Commit | Evidence | Name | Description
 ----------- | ----------- | -----------
+Incorporate API Into About Page | [Evidnece](https://github.com/RohanG326/supporting_cast/commit/8bcd70cb41c89450948ecbdfab859a046cc1899d#) | Brian Tang | I added an API related to tennis into my about page.
 
 #   <h2 id="Week0">Week 0: Due 11/19</h2>
 Establish Roles Within Team
