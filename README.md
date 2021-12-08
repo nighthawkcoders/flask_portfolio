@@ -22,8 +22,14 @@ Rohan Gaikwad | GitHub Admin | [@rohang326](https://github.com/rohang326)| [Task
 link to be added later
 
 # Week 3
+[Week 3 Issue](https://github.com/RohanG326/supporting_cast/issues/38)
+
+[Week 3 Review Ticket]
 
 # Week 2
+[Week 2 Issue](https://github.com/RohanG326/supporting_cast/issues/39)
+
+[Week 2 Review Ticket]
 
 # Week 1
 [Week 1 Issue](https://github.com/RohanG326/supporting_cast/issues/40)
