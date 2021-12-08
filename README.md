@@ -18,3 +18,9 @@ Jason Kaplan | Deployment Manager | [@strangiato2112](https://github.com/strangi
 Rohan Gaikwad | GitHub Admin | [@rohang326](https://github.com/rohang326)| [Tasks](https://github.com/RohanG326/supporting_cast/issues) | [Scrum Board](https://github.com/RohanG326/supporting_cast/projects/1) | [Commits](https://github.com/RohanG326/supporting_cast/graphs/contributors) | [Rohan/Jason/Adi Journal](https://docs.google.com/document/d/1caGFdefkHrh74c3f_iuIx26mDD3QnP0FDM9cpS8BYFM/edit) |
 
 # Week 0
+
+# Week 1
+
+# Week 2
+
+# Week 3
