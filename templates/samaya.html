@@ -3,16 +3,18 @@
 
         <!- Try building a new body here ->
         <h1 id="abt_name"> Samaya </h1>
+        <p>
+            <img src="/static/img/samaya_with_mask.jpg" style="height: 350px; width: auto;" id="imgClickAndChange" onclick="changeImage()"/>
+        </p>
+
+        <p id="click">Click Me </p>
+        <a id="journal" href="https://docs.google.com/document/d/1PGcv6fkv8A5Y1uzuN-iLSGm9CKhdWEL_fQRZyGv9ymI/edit?usp=sharing">Daily Journal</a>
 
 
-        <style>
+    <style>
             body{
-                background: #37505c;
+                background: #A0C1D1;
             }
-
-        </style>
-
-        <style>
 
             #abt_name {
                 font-family: 'Ephesis';
@@ -20,9 +22,50 @@
                 text-align: center;
                 padding: 15px;
                 color: white;
-                text-shadow: 5px 5px #f76f8e;
+                text-shadow: 5px 5px #232C33;
             }
 
+            #click {
+                font-family: 'Ephesis';
+                font-size: 20px;
+                color: #232C33;
+                position:absolute;
+                left:45rem;
+                top: 37rem;
+
+            }
+
+            #imgClickAndChange {
+                position:absolute;
+                left:38rem;
+                border: 7px solid #232C33;
+            }
+
+
+            #journal {
+                font-size: 40px;
+                color: #5A7D7C;
+                font-family:'Ephesis';
+                text-shadow: 2px 2px #232C33;
+                position:absolute;
+                left:11rem;
+            }
+
+
+
         </style>
+
+    <script>
+        function changeImage() {
+
+            if (document.getElementById("imgClickAndChange").src.includes('samaya_with_mask'))
+            {
+                document.getElementById("imgClickAndChange").src = "/static/img/samaya_without.jpg";
+            }
+            else{
+                document.getElementById("imgClickAndChange").src ="/static/img/samaya_with_mask.jpg"
+            }
+        }
+    </script>
     {% endblock %}
 
