@@ -1,18 +1,44 @@
-{% extends "layouts/project.html" %}
-
-<!--This sets the variables in the predefined layout within the project.html file so that every page has the same layout and is efficient-->
-{% set basename = "About Creators" %}
-{% set project = "Daniel Bertino" %}
-{% set para1 ="Hello! My name is Daniel Bertino, but you can call me Danny. I am seventeen years old and was born here in the US. I have an Italian heritage because my parents were born in Italy and ever since I was a child they have shared their Italian Culture with me. I am fluent in Italian and during my high school career I have taken three years’ worth of Spanish, so I can speak it quite well too. Some of my main interests are outdoor-related activities. One of my favorite things to do in my spare time is travel. I have been in various parts of Europe and each year I would typically spend my summers traveling. Since all my family and relatives are in Italy I would go there to see them each year and hang out with my friends. The lifestyle over there is very active which has made me enjoy the outdoors so much more. Some of my other interests, besides traveling are sailing, nature hikes, biking, and fishing. A big part of Italian culture is its food, architecture, and soccer. Soccer has always been one of my favorite sports since I was little and during my free time, I would go to the pitch to practice my skills. Additionally, I love studying the Architecture of different places I travel to because each country has its own particular style of building which fascinates me. This year, I took computer science principles because I wanted to try to learn more about a different field just to get a solid background of how coding works as our world is shifting to a more technological phase." %}
-{% set imageSRC = "self.jpg"  %}
-{% set imageWidth = "425" %}
-{% set imageHeight = "425" %}
-
-<body>
-{% block button %}
+<!DOCTYPE html>
+<html lang="en">
+{%  extends "layouts/base.html" %}
+{%  set project = "Daniel" %}
+<head>
+    <meta charset="UTF-8">
+    <title>Daniel Bertino</title>
+</head>
+{%  block body %}
+    <body>
+    <div class="row">
+        <div class="col-sm">
+            <h1>Daniel</h1>
+            <img src="/static/assets/nathan2.jpg" width="50%"  id="danielimg" onclick="danielImg()" >
+        </div>
+        <div class="col-sm">
+            <h1>API</h1>
+        </div>
+    </div>
+    <script>
+        var DanielVar = 0;
+        function ReemImg () {
+            const element = document.getElementById("Danielimg");
+            if (DanielVar == 0) {
+                element.src = "/static/assets/nathan1.jpg";
+                ReemVar = 1
+            }
+            else {
+                element.src = "/static/assets/nathan2.jpg";
+                DanielVar = 0;
+            }
+        }
+    </script>
+    </body>
 {% endblock %}
+</html>
 
-{% block button2 %}
-{% endblock %}
 
-</body>
+
+
+
+
+
+

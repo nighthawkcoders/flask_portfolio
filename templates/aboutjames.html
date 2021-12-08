@@ -8,7 +8,27 @@
 </head>
 {%  block body %}
     <body>
-
-    </body>
+    <div class="row">
+    <div class="col-sm">
+        <h1>Nathan</h1>
+        <img src="/static/assets/james1.jpg" width="50%"  id="jamesimg" onclick="jamesImg()" >
+    </div>
+    <div class="col-sm">
+        <h1>API</h1>
+    </div>
+    <script>
+        var jamesVar = 0;
+        function jamesImg () {
+            const element = document.getElementById("jamesimg");
+            if (jamesVar == 0) {
+                element.src = "/static/assets/james2.jpg";
+                jamesVar = 1
+            }
+            else {
+                element.src = "/static/assets/james1.jpg";
+                jamesVar = 0;
+            }
+        }
+    </script>
 {% endblock %}
 </html>
