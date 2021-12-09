@@ -3,8 +3,6 @@ from flask import Flask, render_template
 import requests
 from pathlib import Path
 
-
-
 # create a Flask instance
 app = Flask(__name__)
 
