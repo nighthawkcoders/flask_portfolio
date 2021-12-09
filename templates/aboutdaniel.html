@@ -2,38 +2,39 @@
 <html lang="en">
 {%  extends "layouts/base.html" %}
 {%  set project = "Daniel" %}
-<head>
+head>
     <meta charset="UTF-8">
-    <title>Daniel Bertino</title>
+    <title>Daniel</title>
 </head>
 {%  block body %}
     <body>
     <div class="row">
         <div class="col-sm">
             <h1>Daniel</h1>
-            <img src="/static/assets/nathan2.jpg" width="50%"  id="danielimg" onclick="danielImg()" >
+            <img src="/static/assets/daniel2.jpg" width="50%"  id="danielimg" onclick="danielImg()" >
         </div>
         <div class="col-sm">
             <h1>API</h1>
         </div>
+        <script>
+            var danielVar = 0;
+            function danielImg () {
+                const element = document.getElementById("danielimg");
+                if (danielVar == 0) {
+                    element.src = "/static/assets/daniel.png";
+                    danielVar = 1
+                }
+                else {
+                    element.src = "/static/assets/daniel2.jpg";
+                    danielVar = 0;
+                }
+            }
+        </script>
     </div>
-    <script>
-        var DanielVar = 0;
-        function ReemImg () {
-            const element = document.getElementById("Danielimg");
-            if (DanielVar == 0) {
-                element.src = "/static/assets/nathan1.jpg";
-                ReemVar = 1
-            }
-            else {
-                element.src = "/static/assets/nathan2.jpg";
-                DanielVar = 0;
-            }
-        }
-    </script>
     </body>
 {% endblock %}
 </html>
+
 
 
 
