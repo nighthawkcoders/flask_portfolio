@@ -6,14 +6,20 @@
     <title>Connor</title>
 </head>
 <script>
-    function mask() {
-        document.getElementById('place')
-        .src="/static/assets/connormask.jpg";
+    var maskon = true;
+    function maskchange() {
+        if(maskon) {
+            maskon = false;
+            document.getElementById('place').src="/static/assets/nomaskconnor.jpg";
+            document.getElementById("togglemask-btn").innerText = "Put mask on";
+        } else{
+            maskon = true;
+            document.getElementById('place').src="/static/assets/connormask.jpg";
+            document.getElementById("togglemask-btn").innerText = "Take mask off";
+        }
     }
-    function nomask() {
-        document.getElementById('place')
-        .src="/static/assets/nomaskconnor.jpg";
-    }
+    // togglemask()
+    // togglemask()
 </script>
     <style>
         * {
@@ -43,8 +49,7 @@
                 <td>
                     <img id="place" class="img-responsive py-3" alt="" width="400" src="/static/assets/connormask.jpg" >
                     <div>
-                        <button onclick="mask()">Mask</button>
-                        <button onclick="nomask()">No Mask</button>
+                        <button onclick="maskchange()"></button>
                         <p style="text-align:center" class="fs-2">
                             <a href="https://docs.google.com/document/d/1yMnRk0cY8TWYl3YKTgz0OKkrI5Gac4pEyoyiffEeUoE/edit?usp=sharing"> Journal </a>
                         </p>
