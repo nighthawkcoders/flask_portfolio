@@ -9,6 +9,12 @@
 <!- Try building a new body here ->
 
 <style>
+
+    body {
+        background-color: var(--simonbg);
+        background-size: cover;
+    }
+
     p {
         margin-left: 250px;
     }
@@ -106,7 +112,7 @@
 
 
 <!--Proof of Perfection-->
-<p style="position:relative;left:64%">How perfect is Simon?</p>
+<p style="position:relative;left:64%;" >How perfect is Simon?</p>
 
 <input style="position:relative;left:82%" id="id1" type="number" min="100" max="1000" required>
 <button class="btn"  onclick="myFunction()" style="position:relative;left:82%"> % </button>
@@ -159,6 +165,52 @@ edit?usp=sharing" style="text-align:center">
         });
 
 </script>
+
+<div style="position: relative; left: 50%"
+     class="motive">
+
+
+
+
+
+
+
+</div>
+
+<script>
+
+    fetch("https://motivational-quotes1.p.rapidapi.com/motivation", {
+        "method": "POST",
+        "headers": {
+            "content-type": "application/json",
+            "x-rapidapi-host": "motivational-quotes1.p.rapidapi.com",
+            "x-rapidapi-key": "ff99cd2382msh23fabc003b17462p1078a2jsnc82687ebfb77"
+        },
+        "body": {
+            "key1": "value",
+            "key2": "value"
+        }
+    })
+        .then(data => {
+            console.log(data.data);
+            const html = data.data.map(user => {
+
+                return `<p>
+ </p>`
+            }
+
+
+            document
+                .querySelector(".motive")
+                .insertAdjacentHTML('afterbegin',"<h1> hello </h1>");
+        })
+
+        .catch(err => {
+            console.error(err);
+        });
+
+</script>
+
 
 {% endblock %}
 
