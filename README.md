@@ -8,14 +8,11 @@
 
 
 
-
-
-
-
 ## Table of Contents
 1. [GitHub repo Contributors](https://github.com/connorw72/food/graphs/contributors)
 2. Pair Share Journals [Tanay and Connor](https://docs.google.com/document/d/1yMnRk0cY8TWYl3YKTgz0OKkrI5Gac4pEyoyiffEeUoE/edit?usp=sharing), [Colin Pranav and Chase](https://docs.google.com/document/d/1iU4SOdLDTyFTuoI4yuBxjvRjvVHq53I5JZgaCRP8Ah4/edit?usp=sharing)
 3. [Innovation sprint 1,2 Week 1](https://github.com/connorw72/food#innovation-sprint-12-week-1)
+4. [Innovation sprint 1,2 Week 2](https://github.com/connorw72/food#innovation-sprint-12-week-2)
 ## Contributors
 | Name | GitHub ID and Profile | Tasks | Scrum Board | Commits | BOF Job |
 |:-----|:----------------------|:-----:|:-----------:|:-------:|:--------:|
@@ -32,3 +29,15 @@
 |Github - On Wiki containing Management Plan| [Wiki page](https://github.com/connorw72/food/wiki/Github-Admin-Policy-Stuff)
 |Deployment - Wiki Plan, Hardware and Frequency| [Wiki page](https://github.com/connorw72/food/wiki/Deployment-Guide),[Proof of Completion](https://docs.google.com/document/d/1CnUgrEOaBEkarbom8t4-QB-iBG9zsTitnZ6huIYOVTU/edit?usp=sharing)
 |Scrum Board - Assignments and Backlog| [Wiki page](https://github.com/connorw72/food/wiki/Scrum-Master-Policies),[Assignments(Scrum Board)](https://github.com/connorw72/food/projects/1),[Backlog](https://github.com/connorw72/food/projects/1#column-17077693)
+### Innovation sprint 1,2 Week 2
+|Task| Tangible Link |
+|:-----|:----------------------|
+|Connor's about page| [Code](https://github.com/connorw72/food/blob/main/templates/connor.html)
+|Colin's about page| [Code](https://github.com/connorw72/food/blob/main/templates/colin.html)
+|Tanay's about page| [Code](https://github.com/connorw72/food/blob/main/templates/tanay.html)
+|Pranav's about page| [Code](https://github.com/connorw72/food/blob/main/templates/pranav.html)
+|Chase's about page| [Code](https://github.com/connorw72/food/blob/main/templates/Chase.html)
+|Release day policy| [Code](https://github.com/connorw72/food/wiki/Deployment-Guide#deployment-policy)
+
+
+
