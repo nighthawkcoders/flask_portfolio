@@ -2,14 +2,20 @@
 <html>
 <head>
     <script>
-        function mask() {
-            document.getElementById('place')
-                .src="/static/assets/pranavmask.jpg";
+        var maskon = true;
+        function togglemask() {
+            if(maskon) {
+                maskon = false;
+                document.getElementById('place').src="/static/assets/pranavnomask.jpg";
+                document.getElementById("togglemask-btn").innerText = "Put mask on";
+            } else{
+                maskon = true;
+                document.getElementById('place').src="/static/assets/pranavmask.jpg";
+                document.getElementById("togglemask-btn").innerText = "Take mask off";
+            }
         }
-        function nomask() {
-            document.getElementById('place')
-                .src="/static/assets/pranavnomask.jpg";
-        }
+        // togglemask()
+        // togglemask()
     </script>
 
     <style>
@@ -139,8 +145,7 @@
             <p>Hi, my name is Pranav. I am a Junior that goes to Del Norte High School. I am currently taking Ap Computer Science Principles with Mrs. Naidu. I am very excited for taking this class as there are many importances to understanding computer programming in life. I am a student athlete that does both soccer and track. I also liek playing other sports in my free time like Basketball, Football, and Cricket. I have lived in three different locations in my life which are: Geneva, San Diego, and Milwaukee.  </p>
         </div>
         <div class="card">
-            <h2>TITLE HEADING</h2>
-            <h5>Title description, Sep 2, 2017</h5>
+            <h2>Sports Live Highlights</h2>
             <div class="container">
                 <div class="row justify-content-md-center" style="align:center">
                     <table class="table">
@@ -154,38 +159,20 @@
                             <td>
                                 <img id="place" class="img-responsive py-3" alt="" width="256" src="/static/assets/pranavmask.jpg" >
                                 <div>
-                                    <button onclick="mask()">Mask</button>
-                                    <button onclick="nomask()">No Mask</button>
+                                    <button onclick="togglemask()" id="togglemask-btn">Take mask off</button>
                                 </div>
                             </td>
                         </tr>
-
-            <p>Some text..</p>
-            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
         </div>
     </div>
-    <div class="rightcolumn">
-        <div class="card">
-            <h2>About Me</h2>
-            <div class="fakeimg" style="height:100px;">Image</div>
-            <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
-        </div>
-        <div class="card">
-            <h3>Popular Post</h3>
-            <div class="fakeimg"><p>Image</p></div>
-            <div class="fakeimg"><p>Image</p></div>
-            <div class="fakeimg"><p>Image</p></div>
-        </div>
-        <div class="card">
-            <h3>Follow Me</h3>
-            <p>Some text..</p>
-        </div>
-    </div>
+            <div>
+                {% for item in data %}
+                    <p> {{ item.embed|safe }} </p>
+                {% endfor %}
+            </div>
 </div>
 
-<div class="footer">
-    <h2>Footer</h2>
-</div>
+
 
 </body>
 </html>
