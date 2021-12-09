@@ -4,7 +4,7 @@
 ## [Scrum Board](https://github.com/connorw72/food/projects/1)
 ## Website Home Page
 
-### ![Screen Shot 2021-12-03 at 5 30 39 PM](https://user-images.githubusercontent.com/60719508/144691799-4dadd747-de62-4072-8088-9b0b3baefd1c.png)
+### ![Animal Adoption Wireframe](https://user-images.githubusercontent.com/89223703/145302079-f7f57720-5e20-4077-8e01-50e62d9e3276.png)
 
 
 
