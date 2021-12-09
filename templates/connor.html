@@ -11,26 +11,25 @@
         if(maskon) {
             maskon = false;
             document.getElementById('place').src="/static/assets/nomaskconnor.jpg";
-            document.getElementById("maskchange-btn").innerText = "Switch to mask on";
+            document.getElementById("togglemask-btn").innerText = "Put mask on";
         } else{
             maskon = true;
             document.getElementById('place').src="/static/assets/connormask.jpg";
-            document.getElementById("maskchange-btn").innerText = "Switch to mask off";
+            document.getElementById("togglemask-btn").innerText = "Take mask off";
         }
     }
+    // togglemask()
+    // togglemask()
 </script>
     <style>
-        body {
-            background-image: url("/static/assets/broncos.png");
-            background-size: cover;
-        }
         * {
             box-sizing: border-box;
         }
+
         .image {
             padding: 50px;
             text-align: center;
-            color: white;
+            background-color:forestgreen;
         }
     </style>
 {%endblock%}
@@ -41,38 +40,37 @@
     <div class="row justify-content-md-center">
         <table class="table">
             <thead>
-            <tr class="image">
+            <tr>
                 <th>Connor</th>
             </tr>
             </thead>
             <tbody>
-            <tr class="image">
+            <tr>
                 <td>
-                    <p> Hi! My name is Connor Wang and I am a junior at Del Norte High School. I am enrolled in the CSP class. I play for the Del Norte football team, and love spending time with friends!</p>
-                    <img id="place" class="img-responsive py-3" alt="" width="256" src="/static/assets/connormask.jpg" >
+                    <img id="place" class="img-responsive py-3" alt="" width="400" src="/static/assets/connormask.jpg" >
                     <div>
-                        <button onclick="maskchange()" id="maskchange-btn">Switch to mask off</button>
-                    </div>
+                        <button onclick="maskchange()"></button>
                         <p style="text-align:center" class="fs-2">
                             <a href="https://docs.google.com/document/d/1yMnRk0cY8TWYl3YKTgz0OKkrI5Gac4pEyoyiffEeUoE/edit?usp=sharing"> Journal </a>
                         </p>
                 </td>
+
             </tr>
             </tr>
             </tbody>
             </tbody>
         </table>
     </div>
-    <div id="image">
+    <div>
         <div class="row justify-content-md-center">
             <table class="table">
-                <tr class="image">
+                <tr>
                     <th> Artist </th>
                     <th> Song title </th>
                     <th> Album Cover </th>
                 </tr>
                 {% for item in data %}
-                <tr class="image">
+                <tr>
                 <td>{{ item.artist_names }}</td>
                     <td>{{ item.title }}</td>
                     <td>  <img src="{{ item.header_image_thumbnail_url }}"></td>
