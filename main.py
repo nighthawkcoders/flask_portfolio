@@ -6,9 +6,11 @@ from pathlib import Path
 # create a Flask instance
 app = Flask(__name__)
 
+
 @app.route('/')
 def index():
     return render_template("index.html")
+
 
 @app.route('/connor/')
 def connor():
@@ -25,17 +27,35 @@ def connor():
     print(data)
     return render_template('connor.html', data=data)
 
+
 @app.route('/Chase/')
 def chase():
     return render_template('Chase.html')
+
 
 @app.route('/tanay/')
 def tanay():
     return render_template('tanay.html')
 
+
 @app.route('/colin/')
 def colin():
-    return render_template('colin.html')
+
+    url = "https://free-nba.p.rapidapi.com/players"
+    return render_template('colin.html', data=data)
+
+querystring = {"page":"0","per_page":"25"}
+
+headers = {
+    'x-rapidapi-host': "free-nba.p.rapidapi.com",
+    'x-rapidapi-key': "c9627c0b20msh49d43de4e2620d8p16c0f2jsn67c02d827b55"
+    }
+
+response = requests.request("GET", url = "https://free-nba.p.rapidapi.com/players", headers=headers, params=querystring)
+data = response.json()['data']
+
+print(data)
+
 
 @app.route('/pranav/')
 def pranav():
@@ -51,7 +71,6 @@ def pranav():
 
     print(response.json())
     return render_template('pranav.html', data=data[-5:])
-
 
 
 # runs the application on the development server

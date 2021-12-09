@@ -7,7 +7,7 @@
     <title>Colin About</title>
 
 </head>
-{%endblock%}
+{% endblock %}
 
 {% block body %}
 <body>
@@ -15,6 +15,11 @@
 <div class="container">
     <div class="row justify_content_md_center" style="align:center">
         <table class="table">
+            <style>
+                html,body {
+                    background-color: plum
+                }
+            </style>
             <thead>
             <tr>
                 <th colspan="2">
@@ -28,12 +33,11 @@
                 <td>
                     <img id="colinMask" class="img-responsive py-3" alt="" width="512" src="/static/assets/colinMask.jpg">
                     <div class="d-grid gap-2 $blue">
-                        <button class="btn-lg" onclick="mask()">With Mask</button>
-                        <button class="btn-lg" onclick="nomask()">No Mask</button>
+                        <button class="btn-lg" id="togglemask-btn" onclick="togglemask()">No Mask</button>
                     </div>
                 </td>
                 <td>
-                    <p style="text-align:center; background-image:url("pastelBackground.jpg")" class="fs-2">
+                    <p style="text-align:center" class="fs-2">
                         My name is Colin Howard, and I'm a junior in Ms. Naidu's CSP period 5. I don't have any experience
                         in computer science or coding of any time, so learning new things in this class is lots of fun.
                         Sometimes it's hard to keep up, but thankfully, Google almost always has the answers to my questions.
@@ -46,11 +50,13 @@
             <tfoot>
             <tr>
                 <th colspan="2">
-                    <a style="text-decoration-color: rebeccapurple" href="https://docs.google.com/document/
-                    d/1iU4SOdLDTyFTuoI4yuBxjvRjvVHq53I5JZgaCRP8Ah4/
-                    edit?usp=sharing">
+                    <a style="text-decoration-color: rebeccapurple" href="https://docs.google.com/document/d/1iU4SOdLDTyFTuoI4yuBxjvRjvVHq53I5JZgaCRP8Ah4/edit?usp=sharing">
                         <p style="text-align:center; color:rebeccapurple;" class="fs-2" >
                         Colin, Chase and Pranav Journal</p>
+                    </a>
+                    <a style="text-decoration-color: rebeccapurple" href="https://docs.google.com/document/d/1C1YFaKtlkEoc11cKRjTXIda8cJLGXyiuyiqn1IU8F1U/edit?usp=sharing">
+                    <p style="text-align:center; color:rebeccapurple;" class="fs-2" >
+                        Comp Sci Create Task</p>
                     </a>
                 </th>
             </tr>
@@ -58,21 +64,48 @@
 
         </table>
     </div>
-
+    <div>
+        <div class="row justify-content-md-center">
+            <table class="table">
+                <tr>
+                    <th> Basketball Players</th>
+                </tr>
+                <tr>
+                    <th> First Name </th>
+                    <th> Last Name </th>
+                    <th> Position Played </th>
+                    <th> Team </th>
+                </tr>
+                {% for item in data %}
+                <tr>
+                    <td>{{ item.first_name }}</td>
+                    <td>{{ item.last_name }}</td>
+                    <td>{{ item.position }}</td>
+                    <td>{{ item.team.full_name }}</td>
+                </tr>
+                {% endfor %}
+                </td>
+            </table>
+        </div>
 
 </div>
 </body>
 
 <script>
-    function mask() {
-        document.getElementById('colinMask')
-        .src="/static/assets/colinMask.jpg";
+    var maskon = true;
+    function togglemask() {
+        if(maskon) {
+            maskon = false;
+            document.getElementById('colinMask').src="/static/assets/colinNoMask.jpg";
+            document.getElementById("togglemask-btn").innerText = "Put mask on";
+        } else{
+            maskon = true;
+            document.getElementById('colinMask').src="/static/assets/colinMask.jpg";
+            document.getElementById("togglemask-btn").innerText = "Take mask off";
+        }
     }
-
-    function nomask() {
-        document.getElementById('colinMask')
-        .src="/static/assets/colinNoMask.jpg";
-    }
+    // togglemask()
+    // togglemask()
 </script>
 
 {% endblock %}
