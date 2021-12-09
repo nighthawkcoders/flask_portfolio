@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 {% extends "layouts/base.html" %}
-{%block head %}
+{% block head %}
 <head>
     <meta charset="UTF-8">
     <title>Connor</title>
@@ -55,6 +55,24 @@
             </tbody>
         </table>
     </div>
+    <div>
+        <div class="row justify-content-md-center">
+            <table class="table">
+                <tr>
+                    <th> Artist </th>
+                    <th> Song title </th>
+                    <th> Album Cover </th>
+                </tr>
+                {% for item in data %}
+                <tr>
+                <td>{{ item.artist_names }}</td>
+                    <td>{{ item.title }}</td>
+                    <td>  <img src="{{ item.header_image_thumbnail_url }}"></td>
+                </tr>
+                {% endfor %}
+                </td>
+            </table>
+            </div>
 </div>
 {% endblock %}
 </html>
