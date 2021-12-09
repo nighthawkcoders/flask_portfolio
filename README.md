@@ -38,6 +38,7 @@
 |Pranav's about page| [Code](https://github.com/connorw72/food/blob/main/templates/pranav.html)
 |Chase's about page| [Code](https://github.com/connorw72/food/blob/main/templates/Chase.html)
 |Release day policy| [Wiki](https://github.com/connorw72/food/wiki/Deployment-Guide#deployment-policy)
+|Connor and Tanay Create task plan| [top of journal](https://docs.google.com/document/d/1yMnRk0cY8TWYl3YKTgz0OKkrI5Gac4pEyoyiffEeUoE/edit?usp=sharing)
 
 
 
