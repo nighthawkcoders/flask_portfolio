@@ -142,9 +142,52 @@ edit?usp=sharing" style="text-align:center">
     <img style="width:100px;height:100px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Notepad_icon.svg/2048px-Notepad_icon.svg.png">
 </a>
 
+<!-- My location API-->
+<!-- specifies function -->
+<div style="float: top;" style="position:relative;left:82%" class="geo">
+
+    <button onclick="getLocation()">Where am I?</button>
+
+    <p style="float: left;"  id="geo"> </p>
+</div>
+
+<script>
+    /* where its going to put it*/
+    const x = document.getElementById("geo");
+
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+            x.innerHTML = " why would I know...? ";
+        }
+    }
+
+    function showPosition(position) {
+        /* puts it on the page */
+        x.innerHTML = "Latitude: " + position.coords.latitude +
+            "<br>Longitude: " + position.coords.longitude;
+    }
+</script>
+
 <!--This is my picture-->
 <div class="pic">
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!--API thing-->
 <script>
@@ -169,12 +212,6 @@ edit?usp=sharing" style="text-align:center">
 <div style="position: relative; left: 50%"
      class="motive">
 
-
-
-
-
-
-
 </div>
 
 <script>
@@ -191,20 +228,9 @@ edit?usp=sharing" style="text-align:center">
             "key2": "value"
         }
     })
-        .then(data => {
-            console.log(data.data);
-            const html = data.data.map(user => {
-
-                return `<p>
- </p>`
-            }
-
-
-            document
-                .querySelector(".motive")
-                .insertAdjacentHTML('afterbegin',"<h1> hello </h1>");
+        .then(response => {
+            console.log(response);
         })
-
         .catch(err => {
             console.error(err);
         });
