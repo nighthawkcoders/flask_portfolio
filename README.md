@@ -37,7 +37,7 @@
 |Tanay's about page| [Code](https://github.com/connorw72/food/blob/main/templates/tanay.html)
 |Pranav's about page| [Code](https://github.com/connorw72/food/blob/main/templates/pranav.html)
 |Chase's about page| [Code](https://github.com/connorw72/food/blob/main/templates/Chase.html)
-|Release day policy| [Code](https://github.com/connorw72/food/wiki/Deployment-Guide#deployment-policy)
+|Release day policy| [Wiki](https://github.com/connorw72/food/wiki/Deployment-Guide#deployment-policy)
 
 
 
