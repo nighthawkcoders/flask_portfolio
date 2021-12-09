@@ -27,6 +27,8 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 
 
     <style>
+
+        /* for light mode */
         html{
             --txt: #000000;
             --black: #ceb680;
@@ -39,15 +41,16 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             --visitlink:#fed2b9;
             --navbarbg: #fed2b9;
             --simonbg: #b76b52;
+
         }
 
+        /* for dark mode */
         html[data-theme='dark'] {
             --bg: #291F1C;
             --txt:#6a6260;
             --logocolor:black;
             --catdrop: #373332;
 
-            /*need to figure out what this is and make a dark version */
             --button: #6a6260;
             --buttonhover: #c5bebd;
             --sidebarbg:#16100F;
