@@ -36,27 +36,31 @@
         </script>
     </head>
     <body style="background-image: url('../static/assets/ghibli-9-960x519@2x.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-size: cover;">
-    <div style="margin: 2% 5% 5%; text-align:center; font-family: monospace; font-size: larger" >
+    <div style="text-align:center; font-family: monospace; font-size: larger; width: 75%; margin: 2% auto 5%;" >
         <div>
             <h1 style="background-color: #3b4f3f; font-family: 'Blippo'; font-size: 65px; text-align: center; padding: 25px; color: papayawhip; text-shadow: 5px 3px black;">Saathvika Ajith's Individual Homepage</h1>
-            <p style="background-color: #3b4f3f; font-size: 20px">Hello there <span id="myName">{{name}}</span>, welcome to my individual homepage!</p>
-            <form action="/saathvika/" id="saathvika2" method="POST" >
+            <p style="background-color: #3b4f3f; font-size: 20px; color: papayawhip; font-family: monospace">Hello there <span id="myName">{{name}}</span>, welcome to my individual homepage!</p>
+            <form style="padding: 5px; font-size: 17px; background-color: #3b4f3f; color: papayawhip; font-family: monospace" action="/saathvika/" id="saathvika2" method="POST" >
                 <label for="name">Enter Your Name!</label>
                 <input name="name" id="name">
                 <input type="submit" value="Go!" onclick="(function (){document.getElementById('myName').innerText=document.getElementById('name').value})();return false;">
             </form>
-            <p style="background-color: #3b4f3f">
+        </div>
+        <br>
+        <div>
+            <p style="background-color: #3b4f3f; font-size: 17px; font-family: monospace; color: papayawhip">
                 <img src="/static/assets/little.jpg" style="height: 350px; width: auto;" id="imgClickAndChange" onclick="changeImage()" alt="change"/>
                 <br>
                 Click to ColorZap!
             </p>
+            <p style="background-color: #3b4f3f; font-size: 20px; color: papayawhip; font-family: monospace">Trimester Work: </p>
+        </div>
 
+            <button id="get-lyric" style="margin-top: 20px; height: 35px; font-family: monospace; font-size: 15px; color: #3b4f3f; background-color: papayawhip" onclick="getLyric()">Get me a Lyric!</button>
 
-            <button id="get-lyric" style="margin-top: 20px; height: 35px; font-family: monospace; font-size: 15px" onclick="getLyric()">Get me a Lyric!</button>
+            <div id="display-lyric" style="margin-top: 10px; font-size: 30px; color: papayawhip; background-color: #3b4f3f; font-weight: 600; font-family: monospace; text-align: center">No Lyric Yet</div>
 
-            <div id="display-lyric" style="margin-top: 10px; font-size: 30px; color: papayawhip; font-weight: 600; font-family: monospace; text-align: center">No Lyric Yet</div>
-
-
+<br><br><br>
         </div>
     </div>
     </body>
