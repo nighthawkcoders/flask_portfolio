@@ -2,7 +2,7 @@
 from flask import Flask, render_template
 import requests
 from pathlib import Path
-
+from ChaseAPI import game
 # create a Flask instance
 app = Flask(__name__)
 
@@ -27,7 +27,7 @@ def connor():
 
 @app.route('/Chase/')
 def chase():
-    return render_template('Chase.html')
+    return render_template('Chase.html', fgame=game())
 
 @app.route('/tanay/')
 def tanay():
