@@ -3,27 +3,143 @@
 
 <!-- Setting up variables to customize "project" details to be specific to kangaroos -->
 
-
-
-
 {% block body %}
+
 <h1 id=mainheader> Expeditions </h1>
 
 
 
+<div id=container>
+    Travel
+    <div id=flip>
+        <div><div>Freely</div></div>
+        <div><div>Organized</div></div>
+        <div><div>Travel With us</div></div>
+    </div>
+    Welcome to Expeditions
+</div>
 
 </div>
 {% block background %}
 
 <style>
 
-    body {
-        background: #d2b48c;
-    url('https://fonts.googleapis.com/css?family=Roboto:700');
+
+    #container {
+        color:#ffffff;
+        text-transform: uppercase;
+        font-size:40px;
+        font-weight:bold;
+        padding-top:200px;
+        position:relative;
+        width:100%;
+        top:40%;
+        left:20%;
         align-self: center;
 
+    }
+
+    #flip {
+        height:50px;
+        overflow:hidden;
+    }
+
+    #flip > div > div {
+        color:#000000;
+        padding:4px 12px;
+        height:45px;
+        margin-bottom:45px;
+        display:inline-block;
+    }
+
+    #flip div:first-child {
+        animation: show 5s linear infinite;
+    }
+
+    #flip div div {
+        background:#ffffff;
+    }
+    #flip div:first-child div {
+        background:#ffffff;
+    }
+    #flip div:last-child div {
+        background:#ffffff;
+    }
+
+    @keyframes show {
+        0% {margin-top:-270px;}
+        5% {margin-top:-180px;}
+        33% {margin-top:-180px;}
+        38% {margin-top:-90px;}
+        66% {margin-top:-90px;}
+        71% {margin-top:0px;}
+        99.99% {margin-top:0px;}
+        100% {margin-top:-270px;}
+    }
+
+    p {
+        position:fixed;
+        width:100%;
+        bottom:30px;
+        font-size:12px;
+        color:#999;
+        margin-top:200px;
+    }
+    /* Additional styling */
+
+    body {
+        font-size: 18px;
+        font-family: "Vibur", sans-serif;
+        background-color: #010a01;
+    }
+
+    h1, h2 {
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 400;
+    }
+
+    h1 {
+        font-size: 4.2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    a{
+        color:saddlebrown;
+    }
+
+
+
+    @keyframes pulse {
+        0% {
+            background-color: #DAA520;
+        }
+        100% {
+            background-color: #DAA520;
+        }
+    }
+
+    html,
+    body {
+        height: 100%;
+    }
+    #mainheader {
+        position: absolute;
+        top: 5%;
+        font-size:65px;
+        padding-top: 130px;
+        selfalign: center;
+        left: 400px;
         font-family: "Times New Roman";
     }
+
+    html, body {
+        background-color: #D2B48C;
+    }
+
 
 
 </style>
