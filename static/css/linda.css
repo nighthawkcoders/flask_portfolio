@@ -221,3 +221,22 @@ ul li.editMode label {
     background: white;
     color: black;
 }
+
+#show-clock{
+    margin-top: 20px;
+    height: 35px;
+    width: 130px;
+    background: white;
+    color: black;
+}
+
+
+#clock {
+    font-size: 135px;
+    width: 900px;
+    margin: 50px;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
