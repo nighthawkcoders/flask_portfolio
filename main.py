@@ -47,9 +47,17 @@ def jason():
 
 
 
-@app.route('/adi/')
+@app.route('/adi/', methods={'GET', 'POST'})
 def adi():
-    return render_template("adi.html")
+    url = "https://sportscore1.p.rapidapi.com/sports/1/teams"
+    headers = {
+        'x-rapidapi-host': "sportscore1.p.rapidapi.com",
+        'x-rapidapi-key': "39c4bf8c2emsh30b02ab6dc01dd9p13f427jsn690a650cf2ec"
+    }
+    # return render_template("AboutDylan.html")
+
+    response = requests.request("GET", url, headers=headers)
+    return render_template("adi.html", stats=response.json())
 
 @app.route('/brian/')
 def brian():
@@ -68,18 +76,19 @@ def divya():
 
 @app.route('/rohan', methods=['GET', 'POST'])
 def rohan():
-    url = "https://genius.p.rapidapi.com/search"
-
-    querystring = {"q":"Kendrick Lamar"}
+    url = "https://genius.p.rapidapi.com/artists/16775/songs"
 
     headers = {
-       'x-rapidapi-host': "genius.p.rapidapi.com",
-       'x-rapidapi-key': "35a01f5f74msh20628303ae6dbefp168484jsn83f86e2f8568"
+    'x-rapidapi-host': "genius.p.rapidapi.com",
+    'x-rapidapi-key': "35a01f5f74msh20628303ae6dbefp168484jsn83f86e2f8568"
     }
 
-    response = requests.request("GET", url, headers=headers, params=querystring)
-    return render_template("rohan.html")
-
+    response = requests.request("GET", url, headers=headers)
+    outcomes = json.loads(response.content.decode("utf-8"))['outcomes']
+    lyrics = []
+    for outcome in outcomes:
+      lyrics.append(outcome['lyric'])
+    return render_template("rohan.html", name1="homie")
 @app.route('/photogallery', methods=['GET', 'POST'])
 def photogallery():
     if request.form:

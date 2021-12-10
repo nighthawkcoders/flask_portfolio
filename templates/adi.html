@@ -11,8 +11,8 @@
         function toggle() {
             const images = ["/static/winnin.jpg",
                 "/static/wideeyes.jpg",
-                "/static/rohanbrownbeanie.jpg",
-                "/static/IMG_887CE03AB9F7-1.jpeg"
+                "https://1z8qih1l8tj53pg8zi3f9dif-wpengine.netdna-ssl.com/wp-content/uploads/2017/01/Del-Norte-HS-Poway-K12-Structural-San-Diego-1200x600.jpg",
+                "https://upload.wikimedia.org/wikipedia/commons/d/d7/Del_norte_wiki.png"
             ];
             if (imagenumber == 0) {
                 document.getElementById("image").src = images[0]
@@ -30,25 +30,74 @@
         }
     </script>
 
-<!--    <body style="background-color:powderblue;">-->
+  <body style="background-color:powderblue; height: fit-content">
 
     <h1 style="text-align: center; color: midnightblue">
         Adi Khandelwal Home Page
     </h1>
 
-    <p style="text-align: center; color: black">Click to toggle images</p>
+    <p style="text-align: center; color: black">Click to toggle images
     <br>
-        <img id="image" src="/static/winnin.jpg" onclick="toggle()" width="1500" height="550">
+        <img id="image" src="/static/winnin.jpg" onclick="toggle()" width="800" height="400">
+    </p>
 <br>
 <br>
 <br>
     <p align="center">
-<!--        <iframe-->
-<!--                width="1000"-->
-<!--                height="600"-->
-<!--                src="https://docs.google.com/document/d/1caGFdefkHrh74c3f_iuIx26mDD3QnP0FDM9cpS8BYFM/edit?usp=sharing"-->
-<!--        ></iframe>-->
+        <iframe
+                width="1000"
+                height="900"
+                src="https://docs.google.com/document/d/1caGFdefkHrh74c3f_iuIx26mDD3QnP0FDM9cpS8BYFM/edit?usp=sharing"
+        ></iframe>
     </p>
+
+<style>
+    table, td, th {
+        border: 10px solid white;
+        padding: 50px;
+    }
+    td, th {
+        text-align:center;
+        color: midnightblue;
+    }
+    table{
+        width: 75%;
+        margin: auto;
+    }
+
+</style>
+
+{% set teams = stats.data %}
+
+<div class="-block" style="margin: 2% 25% 5%; font-family: gilroy,serif;">
+    <div class="col-12" style="text-align: center;">
+        <h1 style="color: midnightblue">European Club Soccer Teams</h1>
+    </div>
+
+    <div class="col-12 mainbox center-block">
+        <table style="margin: 2%">
+            <tr>
+                <th>Logo</th>
+                <th>Team Name</th>
+                <th>Country</th>
+            </tr>
+
+            {% for team in teams %}
+            <tr>
+                {% set logo = team.logo %}
+                <td><img src="{{logo}}"></td>
+                {% set teamname = team.name %}
+                <td>{{teamname}}</td>
+                {% set country = team.country %}
+                <td>{{country}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+
+    </div>
+
+</div>
+
 
 {% endblock %}
 
