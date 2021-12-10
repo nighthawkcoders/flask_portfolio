@@ -30,6 +30,7 @@ def walruses():
 def hawkers():
     return render_template("hawkers.html")
 
+
 @app.route('/jason/')
 def jason():
     url = "https://video-game-news.p.rapidapi.com/star_wars"
@@ -41,15 +42,14 @@ def jason():
 
     response = requests.request("GET", url, headers=headers)
 
-    final=response.text
+    final = response.text
     return render_template("jason.html")
-
-
 
 
 @app.route('/adi/')
 def adi():
     return render_template("adi.html")
+
 
 @app.route('/brian/')
 def brian():
@@ -69,25 +69,40 @@ def brian():
     # tournament = json.loads(response.content.decode("utf-8"))['results'][0]['tournament']
     return render_template("brian.html", tournaments=tournaments)
 
+
 @app.route('/divya/')
 def divya():
-    return render_template("divya.html")
+    url = "https://famous-quotes4.p.rapidapi.com/random"
+    querystring = {"category": "all", "count": "2"}
+    headers = {
+        'x-rapidapi-host': "famous-quotes4.p.rapidapi.com",
+        'x-rapidapi-key': "80afb5b6afmsh552d92e769ba3a5p1bfac9jsnfb6c407dd20f"
+    }
+
+    responsestr = requests.request("GET", url, headers=headers, params=querystring)
+    responses = responsestr.json()
+    quotes = []
+    for response in responses:
+        quotes.append(response['text'] + " Author: " + response['author'])
+    return render_template("divya.html", quotes=quotes)
+
 
 @app.route('/rohan', methods=['GET', 'POST'])
 def rohan():
     url = "https://genius.p.rapidapi.com/artists/16775/songs"
 
     headers = {
-    'x-rapidapi-host': "genius.p.rapidapi.com",
-    'x-rapidapi-key': "35a01f5f74msh20628303ae6dbefp168484jsn83f86e2f8568"
+        'x-rapidapi-host': "genius.p.rapidapi.com",
+        'x-rapidapi-key': "35a01f5f74msh20628303ae6dbefp168484jsn83f86e2f8568"
     }
 
     response = requests.request("GET", url, headers=headers)
     outcomes = json.loads(response.content.decode("utf-8"))['outcomes']
     lyrics = []
     for outcome in outcomes:
-      lyrics.append(outcome['lyric'])
+        lyrics.append(outcome['lyric'])
     return render_template("rohan.html", name1="homie")
+
 
 @app.route('/photogallery', methods=['GET', 'POST'])
 def photogallery():
@@ -97,6 +112,7 @@ def photogallery():
             return render_template("photogallery.html", input1=input)
     return render_template("photogallery.html", input1="")
 
+
 # runs the application on the development server
 if __name__ == "__main__":
-    app.run(debug=True,port=8000)
+    app.run(debug=True, port=8000)
