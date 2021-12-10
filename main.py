@@ -33,9 +33,17 @@ def chase():
     return render_template('Chase.html')
 
 
-@app.route('/tanay/')
+@app.route('/tanay/', methods=['GET', 'POST'])
 def tanay():
-    return render_template('tanay.html')
+    url = "https://sportscore1.p.rapidapi.com/sports/1/teams"
+    headers = {
+        'x-rapidapi-host': "sportscore1.p.rapidapi.com",
+        'x-rapidapi-key': "39c4bf8c2emsh30b02ab6dc01dd9p13f427jsn690a650cf2ec"
+    }
+    # return render_template("tanay.html")
+
+    response = requests.request("GET", url, headers=headers)
+    return render_template("tanay.html", stats=response.json())
 
 
 @app.route('/colin/')
