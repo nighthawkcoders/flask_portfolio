@@ -54,10 +54,9 @@ def adi():
         'x-rapidapi-host': "sportscore1.p.rapidapi.com",
         'x-rapidapi-key': "39c4bf8c2emsh30b02ab6dc01dd9p13f427jsn690a650cf2ec"
     }
-    # return render_template("AboutDylan.html")
 
     response = requests.request("GET", url, headers=headers)
-    return render_template("adi.html", stats=response.json())
+    return render_template("adi.html", information=response.json())
 
 @app.route('/brian/')
 def brian():
