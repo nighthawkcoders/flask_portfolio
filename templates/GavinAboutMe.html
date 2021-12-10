@@ -2,10 +2,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>About Me: Gavin</title>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        /* Remove the navbar's default margin-bottom and rounded borders */
+        .navbar {
+            margin-bottom: 0;
+            border-radius: 0;
+        }
+
+        /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+        .row.content {height: auto}
+
+        .row {
+            display: flex;
+        }
+
+        .column {
+            flex: 33.33%;
+            padding: 5px;
+        }
+
+    </style>
 </head>
 <body>
 
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <!--<ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>-->
+            <<ul class="nav navbar-nav navbar-right">
+                <!--<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>-->
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid text-center">
+    <div class="row content">
+        <div class="col-sm-2 sidenav">
+            <p><a href="#"></a></p>
+            <p><a href="#"></a></p>
+            <p><a href="#"></a></p>
+        </div>
+        <div class="col-sm-8 text-left">
+            <h1>Welcome to Gavin's About Page</h1>
+            <p>My name is Gavin Wu, I am 15, and I am a Sophomore here at Del Norte High school. I like to eat, sleep
+                read, play video games, and watch TV in my free time. There is a fun random movie generator below which you
+                you can use to find yourself movies. I am currently taking AP Computer Science Principles class because I
+                think it will be important in the future.</p>
+            <hr>
+            <h3>Picture</h3>
+            <div class="row">
+                <div class="column">
+                    <button id=toggler onclick="masktoggle()">Mask Toggle</button>
+                    <div>
+                        <img id="mask" src="/static/assets/maskon.JPG" width="400" height="530">
+                        <img id="nomask" src="/static/assets/maskoff.JPG" style="display: none;" width="400" height="530">
+                    </div>
+                    <script>
+                        function masktoggle() {
+                            let x = document.getElementById("mask");
+                            let y = document.getElementById("nomask");
+                            if (y.style.display === "block") {
+                                x.style.display = "block";
+                                y.style.display = "none";
+                            } else {
+                                x.style.display = "none";
+                                y.style.display = "block";
+                            }
+                        }
+                    </script>
+                </div>
+                <div class="column">
+                    <b style="font-size: xx-large">Random Movie/TV Shows Generator</b>
+                    <br><br>
+                    <b style="font-size: large">{{ moviequiz['Title']}}</b>
+                    <br>
+                    <button class="button1" style=
+                            "color: #ffffff;
+                        width: 50%;
+                        height:50px;
+                        border-radius: 10px;
+                        text-align: center;
+                        font-weight: 600;
+                        background-color: #1261A0 ;
+                        text-decoration: none;">
+                        <a class="button1" href="/GavinAboutMe/">New Show</a>
+                    </button>
+                    <br><br><br><br><br>
+                    <b style="font-size: large">Click on book below for my pair share journal</b>
+                    <p><a href="https://docs.google.com/document/d/1bz69bZUXveOjDREpvgvM_BcSK2rspoDvrIt0UUoQAxs/edit?usp=sharing">
+                    <img src="/static/assets/journal.jpg" width="200">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <!--<div class="col-sm-2 sidenav">
+            <div class="well">
+                <p>ADS</p>
+            </div>
+            <div class="well">
+                <p>ADS</p>
+            </div>
+        </div>-->
+    </div>
+</div>
+
+<!--<footer class="container-fluid text-center">
+    <p>Footer Text</p>
+</footer>
+
 </body>
-</html>
+</html>-->
