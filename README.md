@@ -37,6 +37,10 @@ link to be added later
 
 [Week 2 Review Ticket]
 
+Commit | Evidence | Name | Description
+----------- | ----------- | ----------- | -----------
+Update API |  | Brian Tang | Update API to show more information
+
 #   <h2 id="Week1">Week 1: Due 12/3</h2>
 [Week 1 Issue](https://github.com/RohanG326/supporting_cast/issues/40)
 
