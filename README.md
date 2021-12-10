@@ -32,7 +32,7 @@
 ### Innovation sprint 1,2 Week 2
 |Task| Tangible Link |
 |:-----|:----------------------|
-|Connor's about page| [Code](https://github.com/connorw72/food/blob/main/templates/connor.html)
+|Connor's About Pages on deployed on Site - Page must Extend from Layout and have special customization (color pallet, background, etc), Picture with Mask that toggles to Picture of Choice (ie pic without mask), Pull or show data (Web API) with information of interest, Establish link(s) to journal and other key indicators of your work and progress (remember pop quiz). TPT Link to Create Task planning| [Code](https://github.com/connorw72/food/blob/main/templates/connor.html)
 |Colin's about page| [Code](https://github.com/connorw72/food/blob/main/templates/colin.html)
 |Tanay's about page| [Code](https://github.com/connorw72/food/blob/main/templates/tanay.html)
 |Pranav's about page| [Code](https://github.com/connorw72/food/blob/main/templates/pranav.html)
