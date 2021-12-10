@@ -17,30 +17,30 @@ Starter code should be fun and practical.
 
 | Contributor  | Links to Commits  |
 |---|---|
-| Evan | []()|
+| Evan | [Finished about page](https://github.com/SimonBrunzell/flask_portfolio/commits?author=deimie)|
 | Vunsh | []() |
-| Simon | []()|
-| Sanjay | []()|
-| Leah | []()|
+| Simon | [Color palate update](https://github.com/SimonBrunzell/flask_portfolio/commit/e05e3514c207b90a36fbee1ec5b71863db8bb2b6)|
+| Sanjay | [Flashcards + updates](https://github.com/SimonBrunzell/flask_portfolio/commit/ebb9432c4da0f185c922d74f6f7ae6c6c8a11f1b)|
+| Leah | [Search database](https://github.com/SimonBrunzell/flask_portfolio/commit/756e4652ce3621ec1b88505263758b0cedc97dc4)|
 
 ### Week 2
 
 | Contributor  | Links to Commits  |
 |---|---|
-| Evan | []()|
+| Evan | [Finished README formatting](https://github.com/SimonBrunzell/flask_portfolio/commit/5d3e9d82f9e9de190f86bf43b78bf94ac5f8577a)|
 | Vunsh | []()|
-| Simon | []()|
-| Sanjay | []()|
-| Leah | []()|
+| Simon | [Dark Mode](https://github.com/SimonBrunzell/flask_portfolio/commit/abdc6d4138397996c5fed6d9a9279f3f34f19427)|
+| Sanjay | [Theme toggling](https://github.com/SimonBrunzell/flask_portfolio/commit/86813b769306aa29833f3a7a7cf7b26da53ed283)|
+| Leah | [Notes section working](https://github.com/SimonBrunzell/flask_portfolio/commit/e5b6704cd10023d74e9cb5a4312c1325aa6a9d01)|
 
 ### Week 1
 | Contributor  | Links to Commits  |
 |---|---|
 | Evan | [Navbar touch ups](https://github.com/SimonBrunzell/flask_portfolio/commit/44eff8dfe05420dc5ec7d9a6234ff7e93f1b7cb4)|
 | Vunsh | []()|
-| Simon | []()|
-| Sanjay | []()|
-| Leah | []()|
+| Simon | [About Me page work](https://github.com/SimonBrunzell/flask_portfolio/commit/8c1016e4279d42f1e7abd947ead89b091346cb3c)|
+| Sanjay | [Button fixes](https://github.com/SimonBrunzell/flask_portfolio/commit/ddb8a5e6ed00d9e5c55a589c675a146d3b24e1e7)|
+| Leah | [About page implemented](https://github.com/SimonBrunzell/flask_portfolio/commit/062eb7af7c5d4fc19ff56ce826df7073a2d6c06e)|
 
 
 ### Week 0
