@@ -5,7 +5,7 @@ import json
 
 # create a Flask instance
 app = Flask(__name__)
-
+import random
 
 # connects default URL to render index.html
 @app.route('/')
@@ -35,7 +35,17 @@ def KianAboutMe():
 
 @app.route('/GavinAboutMe/')
 def GavinAboutMe():
-    return render_template("GavinAboutMe.html")
+    url = "https://movie-database-imdb-alternative.p.rapidapi.com/"
+    querystring = {"r":"json","type":"movie","i":"tt{id}".format(id=random.randint(1000000,4000000))}
+
+    headers = {
+        'x-rapidapi-host': "movie-database-imdb-alternative.p.rapidapi.com",
+        'x-rapidapi-key': "7815f70232mshea0c87cc336b4aap13f459jsn464272722115"
+    }
+
+    response = requests.request("GET", url, headers=headers, params=querystring)
+    data = json.loads(response.text)
+    return render_template("GavinAboutMe.html", moviequiz=data)
 
 
 @app.route('/pokemoncards/')
