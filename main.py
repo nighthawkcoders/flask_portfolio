@@ -73,7 +73,18 @@ def brian():
 
 @app.route('/divya/')
 def divya():
-    return render_template("divya.html")
+    url = "https://famous-quotes4.p.rapidapi.com/random"
+    querystring = {"category":"all","count":"2"}
+    headers = {
+        'x-rapidapi-host': "famous-quotes4.p.rapidapi.com",
+        'x-rapidapi-key': "80afb5b6afmsh552d92e769ba3a5p1bfac9jsnfb6c407dd20f"
+    }
+    response = requests.request("GET", url, headers=headers, params=querystring)
+    response = response.json()
+    quotes = []
+    for result in response:
+        quotes.append(result['text'] + " by author: " + result['author'])
+    return render_template("divya.html", quotes=quotes)
 
 @app.route('/rohan', methods=['GET', 'POST'])
 def rohan():
