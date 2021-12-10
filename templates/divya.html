@@ -10,24 +10,8 @@
 <!- Try building a new body here ->
 <h1><center>Divyanshi</center></h1>
 <body style="background-color:lightcoral;">
-<p align="center">
-    <iframe
-            width="1000"
-            height="500"
-            src="https://docs.google.com/document/d/1v4dmPa2CQaX8GSf0YmcSUG9yk1GqDXRRTICu1DzH1yA/edit?usp=sharing">
-    </iframe>
-</p>
-<button onclick="MaskOnOff()" class="center">Mask On/Off</button>
-<style>
-    .center {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-</style>
-
-<div>
-    <img id="MaskOn" src=".." style="max-height: 500px;" class="center">
+<p>
+    <button onclick="MaskOnOff()" class="center">Mask On/Off</button>
     <style>
         .center {
             display: block;
@@ -35,6 +19,32 @@
             margin-right: auto;
         }
     </style>
+</p>
+<div>
+    <img id="MaskOn" src="../static/maskon_divya.png" style="max-height: 500px;" class="center">
+    <style>
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</div>
+</p> align="center">
+    <iframe
+            width="1000"
+            height="500"
+            src="https://docs.google.com/document/d/1v4dmPa2CQaX8GSf0YmcSUG9yk1GqDXRRTICu1DzH1yA/edit?usp=sharing">
+    </iframe>
+</style>
+    <script>
+        function MaskOnOff(){
+            if (document.getElementById("MaskOn").src=="http://127.0.0.1:5000/static/maskon_divya.png") {
+                document.getElementById("MaskOn").src = "../static/maskoff_divya.png";
+            }
+            else document.getElementById("MaskOn").src = "http://127.0.0.1:5000/static/maskon_divya.png"
+        }
+    </script>
     <h1> Look at some of the quotes below by famous people </h1>
     <ul>
         {% for quote in quotes %}
