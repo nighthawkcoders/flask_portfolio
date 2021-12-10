@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+{% extends "layouts/base.html" %}
+{% block head %}
 <html>
 <head>
     <script>
@@ -123,6 +125,8 @@
         }
     </style>
 </head>
+{%endblock%}
+{% block body %}
 <body>
 
 <div class="header">
@@ -175,6 +179,7 @@
 
 
 </body>
+{% endblock %}
 </html>
 
 
