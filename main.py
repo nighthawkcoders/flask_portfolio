@@ -1,6 +1,7 @@
 # import "packages" from flask
 from pathlib import Path
 
+
 from flask import Flask, render_template, request
 from algorithms.image import rotatehack, sonakshi_image_data, kashish_image_data, saumya_image_data
 import requests
@@ -23,7 +24,6 @@ def sonakshi():
             return render_template("sonakshi.html", name=name)
     # starting and empty input default
     return render_template("sonakshi.html", name="World")
-# starting and empty input default
 
 @app.route('/shreya', methods=['GET', 'POST'])
 def shreya():
@@ -34,7 +34,19 @@ def shreya():
             return render_template("shreya.html", name=name)
     # starting and empty input default
     return render_template("shreya.html", name="World")
-# starting and empty input default
+
+@app.route('/genius', methods=['GET', 'POST'])
+def genius():
+    url = "https://genius.p.rapidapi.com/songs/442856"
+
+    headers = {
+        'x-rapidapi-host': 'genius.p.rapidapi.com',
+        'x-rapidapi-key': '4c61a908e2mshb55cf4906131117p1da9ffjsnde3b82957ef9'
+    }
+
+    response = requests.request("GET", url, headers=headers)
+
+    return render_template("genius.html", stats=response.json())
 
 @app.route('/linda', methods=['GET', 'POST'])
 def linda():
@@ -54,6 +66,36 @@ def khushi():
     # starting and empty input default
     return render_template("khushi.html", name="World")
 
+@app.route('/newapi', methods=['GET', 'POST'])
+def newapi():
+    url = "https://community-open-weather-map.p.rapidapi.com/climate/month"
+    querystring = {"q": "San Diego"}
+
+    headers = {
+        'x-rapidapi-host': "community-open-weather-map.p.rapidapi.com",
+        'x-rapidapi-key': "8d571b2f72msh44f8fd48e083624p19cce1jsnfb1e373c1716"
+    }
+
+    response = requests.request("GET", url, headers=headers, params=querystring)
+
+    return render_template("newapi.html", stats=response.json())
+
+@app.route('/listmovie/', methods=['GET', 'POST'])
+def listmovie():
+    url = "https://watchmode.p.rapidapi.com/list-titles/"
+
+    querystring = {"types": "movie,tv_series", "regions": "US", "source_types": "sub,free", "source_ids": "23,206",
+                   "page": "1", "limit": "250", "genres": "4,9"}  # assigns values to specified parameters(keys)
+
+    headers = {
+        'x-rapidapi-host': "watchmode.p.rapidapi.com",
+        'x-rapidapi-key': "f4480562c7mshcfebe0975d4fd48p16ab77jsnae6575329780"
+    }
+
+    response = requests.request("GET", url, headers=headers, params=querystring)
+    response = response.json().get("titles")
+
+    return render_template("listmovie.html", response=response)
 
 @app.route ('/dictionary', methods=['GET', 'POST'])
 def dictionary():
@@ -67,22 +109,6 @@ def dictionary():
     }
     response = requests.request("GET", url, headers=headers, params=querystring)
     return render_template("dictionary.html", word=word, stats=response.json())
-
-
-@app.route('/newapi', methods=['GET', 'POST'])
-def newapi():
-
-    url = "https://community-open-weather-map.p.rapidapi.com/climate/month"
-    querystring = {"q":"San Diego"}
-
-    headers = {
-        'x-rapidapi-host': "community-open-weather-map.p.rapidapi.com",
-        'x-rapidapi-key': "8d571b2f72msh44f8fd48e083624p19cce1jsnfb1e373c1716"
-    }
-
-    response = requests.request("GET", url, headers=headers, params=querystring)
-
-    return render_template("newapi.html", stats=response.json())
 
 @app.route('/punnuapitest', methods=['GET', 'POST'])
 def punnuapitest():
