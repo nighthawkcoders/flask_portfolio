@@ -12,6 +12,7 @@
 </style>
 <body>
 
+
 <!-- !PAGE CONTENT! -->
 <div class="w3-content" style="max-width:1500px">
 
@@ -38,19 +39,13 @@
 
     <!-- End Page Content -->
 </div>
-
-<!-- Footer / About Section -->
-<footer class="w3-light-grey w3-padding-64 w3-center" id="about">
-    <h2>About Me</h2>
-    <img src="/static/assets/Kian.JPG" class="w3-image w3-padding-32" width="300" height="300">
-    <form style="margin:auto;width:60%" action="/action_page.php" target="_blank">
-        <p> </p>
-        <button onclick="toggle()">Mask Toggle</button>
-        <div>
-            <img id="mask" src="/static/assets/kianmask.jpg" width="400">
-            <img id="nomask" src="/static/assets/kiannomask.jpg" width="400" style="display: none;">
-        </div>
-        <script>
+<p> </p>
+<button onclick="toggle()">Mask Toggle</button>
+<div>
+    <img id="mask" src="/static/assets/kianmask.jpg" width="400">
+    <img id="nomask" src="/static/assets/kiannomask.jpg" width="400" style="display: none;">
+</div>
+<script>
             function toggle() {
                 let a = document.getElementById("mask");
                 let b = document.getElementById("nomask");
@@ -59,6 +54,19 @@
                     b.style.display = "none";
                 } else {
                     a.style.display = "none";
+                    b.style.display = "block";
+                }
+            }
+        </script>
+<div>
+
+<!-- Footer / About Section -->
+<footer class="w3-light-grey w3-padding-64 w3-center" id="about">
+    <h2>About Me</h2>
+    <img src="/static/assets/Kian.JPG" class="w3-image w3-padding-32" width="300" height="300">
+    <form style="margin:auto;width:60%" action="/action_page.php" target="_blank">
+        <p> </p>
+                     a.style.display = "none";
                     b.style.display = "block";
                 }
             }
