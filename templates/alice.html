@@ -9,6 +9,11 @@
     <div style="margin: 2% 5% 5%; text-align:center; font-family: monospace; font-size: larger" >
         <div>
             <h1 style="background-color: #bdbde1; font-family: 'Blippo'; font-size: 22px; text-align: center; padding: 15px; color: #33268a;">This is Alice Tang's Individual Homepage</h1>
+            <p style="background-color: #bdbde1">Hello there <span id="myName">{{name}}</span>, welcome!</p>
+            <form action="/alice/" id="alice" method="POST" >
+                <label for="name">Enter Your Name!</label>
+                <input name="name" id="name">
+                <input type="submit" value="Go!" onclick="(function (){document.getElementById('myName').innerText=document.getElementById('name').value})();return false;">
             <p style="background-color: #bdbde1">
                 <img src="/static/assets/alicewithmask.jpg" style="height: 300px; width: 300px;" id="imgClickAndChange" onclick="changeImage()"/>
             </p>
