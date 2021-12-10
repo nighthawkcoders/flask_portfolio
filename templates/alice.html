@@ -1,10 +1,11 @@
 {% extends "layouts/project.html" %}
 {% block body %}
-<!DOCTYPE html>
+    <!DOCTYPE html>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-<h1 id="abt_name"> Alice Tang</h1>
+    <h1 id="abt_name"> Alice Tang</h1>
 
-
+    <head>
     <div style="margin: 2% 5% 5%; text-align:center; font-family: monospace; font-size: larger" >
         <div>
             <h1 style="background-color: #bdbde1; font-family: 'Blippo'; font-size: 22px; text-align: center; padding: 15px; color: #33268a;">This is Alice Tang's Individual Homepage</h1>
@@ -18,57 +19,76 @@
                 <a id="journal" href="https://www.figma.com/file/9CvmDXms787Ban053NP0Gf/StudyOwl?node-id=4%3A2">StudyOwl Wireframes,</a>
                 <a id="journal" href="https://github.com/PranaviInukurti/flask_portfolio/projects/1">GitHub</a>
             </h3>
+            <button id="get-cat" style="margin-top: 20px;height: 35px" onclick="newCat()">Generate Random Cat Fact</button>
+            <div id="display-cat" style="margin-top: 10px;font-size: 29px;color: white;font-weight: 600;">No Cat Fact Generated Yet</div>
 
         </div>
     </div>
-    </body>
+    </html>
 
-<style>
-    body{
-        background: #8c8cb8 ;
-        background-size: cover;
-    }
+    <style>
+        body{
+            background: #8c8cb8 ;
+            background-size: cover;
+        }
 
-    #abt_name {
-        font-family: 'Blippo';
-        font-size: 70px;
-        text-align: center;
-        padding: 15px;
-        color: #ede9f3;
-        text-shadow: 5px 5px #33268a;
-    }
+        #abt_name {
+            font-family: 'Blippo';
+            font-size: 70px;
+            text-align: center;
+            padding: 15px;
+            color: #ede9f3;
+            text-shadow: 5px 5px #33268a;
+        }
 
-</style>
-
-
-
-
-
-<script>
-function changeImage() {
-
-if (document.getElementById("imgClickAndChange").src.includes('alicewithmask'))
-{
-document.getElementById("imgClickAndChange").src = "/static/assets/alicewithoutmask.jpg";
-}
-else{
-document.getElementById("imgClickAndChange").src ="/static/assets/alicewithmask.jpg"
-}
-}
-</script>
+    </style>
 
 
 
 
-<p>Random Cat Fact : {{ output[0].text }}</p>
+
+    <script>
+        function changeImage() {
+            if (document.getElementById("imgClickAndChange").src.includes('alicewithmask'))
+            {
+                document.getElementById("imgClickAndChange").src = "/static/assets/alicewithoutmask.jpg";
+            }
+            else{
+                document.getElementById("imgClickAndChange").src ="/static/assets/alicewithmask.jpg"
+            }
+        }
+
+        function newCat(){
+            const settings = {
+                "async": true,
+                "crossDomain": true,
+                "url": "https://demotivational-quotes.p.rapidapi.com/api/quotes/all",
+                "method": "GET",
+                "headers": {
+                    "x-rapidapi-host": "demotivational-quotes.p.rapidapi.com",
+                    "x-rapidapi-key": "f877084053msh82cfa972b631ab7p1c4893jsn442e2f514bb0"
+                }
+            };
+
+            $.ajax(settings).done(function (response) {
+                console.log(response);
+                document.getElementById("display-cat").innerText = response.value;
+            });
+        }
+    </script>
+
+
+
+
+<!-- <p>Random Cat Fact : {   { output[0].text }}</p>
 <span id="mynumber"></span>
 
 <script>
     var number = int(Math.floor(Math.random() * 5)) ;
     document.getElementById("mynumber").innerHTML = output[0].text ;
-</script>
+</script> -->
 
-
+    </head>
 
 
 {% endblock %}
