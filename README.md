@@ -1,6 +1,6 @@
 
 Website function: The purpose of this website is to represent information for certain collectable items. Some examples of these items are, pokemon cards and sports cards. A user can use this website to either fulfil their interest on the item and learn about the statistics of the item.
-
+For week 2 we added API's and finished up our aboutme's, we added a policy/guidelines in the wiki page, we also took notes and do the quizzes for 2.3 and 2.4, start project on making a searchbar for databases.
 ### Week 2:
 Team Members | Tasks | Commits | Pair Share | Github |
 --- | --- | --- |--- |--- 
