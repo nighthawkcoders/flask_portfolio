@@ -53,7 +53,7 @@
     <h1>WHERE I'M FROM</h1>
     <p>I'm from here in San Diego California </p>
 </section>
-<section class="questions-section">
+    <button class="questions-section"></button>
     <h2>MORE ABOUT ME</h2>
     <p>I like playing games and talking to my friends, I like to do apcsp because it's challeneging but "fun".</p>
 <footer class="content-footer">
@@ -71,6 +71,23 @@
    <body style="background-color:beige;">
    </body>
 </html>
-
+    <button id=toggle onclick="ian()">Mask Toggle</button>
+    <div>
+        <img id="ian1" src="/static/assets/ianmask.jpg" width="400" height="530">
+        <img id="ian2" src="/static/assets/iannomask.jpg" style="display: none;" width="400" height="530">
+    </div>
+    <script>
+        function ian() {
+            let x = document.getElementById("ian1");
+            let y = document.getElementById("ian2");
+            if (y.style.display === "block") {
+                x.style.display = "block";
+                y.style.display = "none";
+            } else {
+                x.style.display = "none";
+                y.style.display = "block";
+            }
+        }
+    </script>
 </section>
 </section>
