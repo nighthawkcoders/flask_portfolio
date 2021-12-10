@@ -1,13 +1,6 @@
 # import "packages" from flask
 from pathlib import Path
 
-import requests
-
-
-class Flask:
-    pass
-
-
 
 # connects default URL to render index.html
 @app.route('/')
@@ -15,19 +8,9 @@ def home():
     return render_template("home.html")
 
 
-# connects /kangaroos path to render home.html
-
-
-
-
-
-
 @app.route('/stub/')
 def stub():
     return render_template("stub.html")
-
-
-
 
 
 @app.route('/sonakshi', methods=['GET', 'POST'])
@@ -39,6 +22,8 @@ def sonakshi():
             return render_template("sonakshi.html", name=name)
     # starting and empty input default
     return render_template("sonakshi.html", name="World")
+
+
 # starting and empty input default
 
 @app.route('/shreya', methods=['GET', 'POST'])
@@ -50,12 +35,13 @@ def shreya():
             return render_template("shreya.html", name=name)
     # starting and empty input default
     return render_template("shreya.html", name="World")
+
+
 # starting and empty input default
 
 
 @app.route('/genius', methods=['GET', 'POST'])
 def genius():
-
     url = "https://genius.p.rapidapi.com/songs/442856"
 
     headers = {
@@ -72,6 +58,7 @@ def genius():
 def linda():
     return render_template("linda.html")
 
+
 @app.route('/khushi', methods=['GET', 'POST'])
 def khushi():
     # submit button has been pushed
@@ -83,15 +70,10 @@ def khushi():
     return render_template("khushi.html", name="World")
 
 
-
-
-
-
 @app.route('/newapi', methods=['GET', 'POST'])
 def newapi():
-
     url = "https://community-open-weather-map.p.rapidapi.com/climate/month"
-    querystring = {"q":"San Diego"}
+    querystring = {"q": "San Diego"}
 
     headers = {
         'x-rapidapi-host': "community-open-weather-map.p.rapidapi.com",
@@ -108,10 +90,11 @@ def render_template(listmovie):
 
 
 @app.route('/listmovie/', methods=['GET', 'POST'])
-def movie():
+def listmovie():
     url = "https://watchmode.p.rapidapi.com/list-titles/"
 
-    querystring = {"types":"movie,tv_series","regions":"US","source_types":"sub,free","source_ids":"23,206","page":"1","limit":"250","genres":"4,9"} #assigns values to specified parameters(keys)
+    querystring = {"types": "movie,tv_series", "regions": "US", "source_types": "sub,free", "source_ids": "23,206",
+                   "page": "1", "limit": "250", "genres": "4,9"}  # assigns values to specified parameters(keys)
 
     headers = {
         'x-rapidapi-host': "watchmode.p.rapidapi.com",
@@ -121,9 +104,7 @@ def movie():
     response = requests.request("GET", url, headers=headers, params=querystring)
     response = response.json().get("titles")
 
-
     return render_template("listmovie.html", response=response)
-
 
 
 # runs the application on the development server
