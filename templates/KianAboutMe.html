@@ -12,6 +12,7 @@
 </style>
 <body>
 
+
 <!-- !PAGE CONTENT! -->
 <div class="w3-content" style="max-width:1500px">
 
@@ -38,6 +39,26 @@
 
     <!-- End Page Content -->
 </div>
+<p> </p>
+<button onclick="toggle()">Mask Toggle</button>
+<div>
+    <img id="mask" src="/static/assets/kianmask.jpg" width="400">
+    <img id="nomask" src="/static/assets/kiannomask.jpg" width="400" style="display: none;">
+</div>
+<script>
+            function toggle() {
+                let a = document.getElementById("mask");
+                let b = document.getElementById("nomask");
+                if (b.style.display === "block") {
+                    a.style.display = "block";
+                    b.style.display = "none";
+                } else {
+                    a.style.display = "none";
+                    b.style.display = "block";
+                }
+            }
+        </script>
+<div>
 
 <!-- Footer / About Section -->
 <footer class="w3-light-grey w3-padding-64 w3-center" id="about">
@@ -45,6 +66,11 @@
     <img src="/static/assets/Kian.JPG" class="w3-image w3-padding-32" width="300" height="300">
     <form style="margin:auto;width:60%" action="/action_page.php" target="_blank">
         <p> </p>
+                     a.style.display = "none";
+                    b.style.display = "block";
+                }
+            }
+        </script>
         <div>
             <p>Hi, welcome to my About Me page! My name is Kian Pasokhi, I am 16, and I am a Sophmore here at Del Norte Highschool. On my free time I like to sleep, study, play video games, listen to music, travel, and hangout with my friends.   </p>
             <p class="w3-large w3-text-pink">My contact information:</p>
