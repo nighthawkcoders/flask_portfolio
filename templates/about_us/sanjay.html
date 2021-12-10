@@ -10,11 +10,12 @@
 <h1 style="text-align:center;text-transform: uppercase">
 Sanjay Bharadwaj
 </h1>
-<section class="description container">
+<section class=" container">
+<div class="description">
     <figure class="img">
-        <img src="/static/assets/sanjaypic1.jpg" alt="nomask" id="nomask" style="display: none;" >
+        <img src="/static/assets/sanjaypic1.jpg" alt="nomask" id="nomask"  >
         </img>
-        <img src = "/static/assets/sanjaypic2.jpg" alt='mask' id="mask" >
+        <img src = "/static/assets/sanjaypic2.jpg" alt='mask' id="mask" style="display: none;" >
         </img>
     </figure>
     <div class='text'>
@@ -27,11 +28,12 @@ Sanjay Bharadwaj
                 <td> <a target="_blank" href="https://github.com/SimonBrunzell/flask_portfolio/commits?author=SanjayB06">Commits</a> </td>
                 <td> <a target="_blank" href="https://github.com/SimonBrunzell/flask_portfolio/projects/1?card_filter_query=assignee%3Asanjayb06">Scrum Board Tasks</a> </td>
                 <td><a target="_blank" href="https://docs.google.com/document/d/1utBhod9HOMFYtKowLyFNyT5Rc6tgHKbGJc-yEbY509U/edit?usp=sharing">Pair Journal</a></td>
-                <td><a target="_blank" href="https://docs.google.com/document/d/1utBhod9HOMFYtKowLyFNyT5Rc6tgHKbGJc-yEbY509U/edit#bookmark=id.76sqakcgpzf5">Create Task Plan</a></td>
+                <td><a target="_blank" href="https://github.com/SimonBrunzell/flask_portfolio/issues/41">Create Task Plan</a></td>
             </tr>
         </table>
-        <button class="btn" id="toggler" onclick="changePic()">No Mask</button>
+        <button class="btn" id="toggler" onclick="changePic()" style="width: 100%;">put mask on pls</button>
     </div>
+</div>
 </section>
 <section class="container">
 <h3 style="text-align: center;"> API Excercise </h3>
@@ -77,14 +79,14 @@ Sanjay Bharadwaj
 
     <script>
         function changePic() {
-            if (document.getElementById("nomask").style.display == "block") {
-                document.getElementById("mask").style.display = "block";
-                document.getElementById("nomask").style.display = "none";
-                document.getElementById("toggler").innerText = "No Mask"
-            } else {
-                document.getElementById("mask").style.display = "none";
+            if (document.getElementById("mask").style.display == "block") {
                 document.getElementById("nomask").style.display = "block";
-                document.getElementById("toggler").innerText = "Put mask back on pls"
+                document.getElementById("mask").style.display = "none";
+                document.getElementById("toggler").innerText = "put mask back on pls"
+            } else {
+                document.getElementById("nomask").style.display = "none";
+                document.getElementById("mask").style.display = "block";
+                document.getElementById("toggler").innerText = "no mask"
 
             }
         }
@@ -140,15 +142,32 @@ Sanjay Bharadwaj
             margin: 0 auto;
         }
         .description {
+            margin: 0 auto;
+            width: 80%;
+            padding: 1em;
+            min-height: 700px;
             display: flex;
+            flex-direction: column;
             justify-content: space-between;
+/*             display: flex; */
+/*             justify-content: space-between; */
+
+        }
+        .description div {
+            text-align: 0;
+            width: 100%;
         }
         .img {
-            width: 33%;
+            width: 40%;
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+            height: 100%;
+            justify-self: flex-end;
         }
         .img img {
-            width: 70%;
-            border-radius: 50px;
+            width: 80%;
+            border-radius: 50%;
         }
         .text {
             width: 60%;
