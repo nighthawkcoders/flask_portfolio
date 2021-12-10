@@ -88,18 +88,14 @@ def newapi():
 
     return render_template("newapi.html", stats=response.json())
 
-@app.route('/hearthstoneapitest', methods=['GET', 'POST'])
-def hearthstoneapitest():
-    url = "https://omgvamp-hearthstone-v1.p.rapidapi.com/info"
+@app.route('/punnuapitest', methods=['GET', 'POST'])
+def punnuapitest():
+    url = "https://api.kuroganehammer.com/api/characters"
+    response = requests.request("GET", url)
+    text = response.json()
+    return render_template("/punnuapitest.html", text=text)
 
-    headers = {
-        'x-rapidapi-host': "omgvamp-hearthstone-v1.p.rapidapi.com",
-        'x-rapidapi-key': "760079828dmsh9006e40c21730bap1bbe9ejsn50fbcf34cfff"
-    }
 
-    response = requests.request("GET", url, headers=headers)
-
-    print(response.text)
 
 # runs the application on the development server
 if __name__ == "__main__":

@@ -1,0 +1,21 @@
+{% extends "layouts/base.html" %}
+
+<!- This variable sets name of browser tab  -->
+{% set project = "punnuapitest" %}
+
+<!- This is a replacement block for Body in base.html -->
+{% block body %}
+
+<title>Smash Character API</title>
+<table style="border-collapse:1px; text-align: center;" >
+    <tr>
+        <th style="text-align: center">Character + Link to Character Page</th>
+    </tr>
+    {% for i in range(30) %}
+    <tr>
+        <td><a target="_blank" href="{{ text[i].FullUrl }}">{{ text[i].Name }}</a></td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}
