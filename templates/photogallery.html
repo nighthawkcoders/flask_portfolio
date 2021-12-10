@@ -3,9 +3,9 @@
 {% set project = "Photo Gallery" %}
 
 {% block body %}
-<h1 style="font-size: 70px"> Photo Gallery</h1>
+<h1 style="text-align: center; font-size: 70px"> Photo Gallery</h1>
 <h4 style="text-align: center">Stunning Images From Locations Around the World!</h4>
-
+<body style="background-color:lightpink; height: 4200px">
 
 
 
@@ -79,6 +79,11 @@
             <input type="submit" value="Search" />
         </form>
         <p>Your input was: {{input1}}</p>
+        <script>
+            if(input1.getElementById(greet)=="San Diego"){
+                cities();
+            }
+        </script>
     </div>
     </br>
 
