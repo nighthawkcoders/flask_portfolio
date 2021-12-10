@@ -39,7 +39,7 @@ link to be added later
 
 Commit | Evidence | Name | Description
 ----------- | ----------- | ----------- | -----------
-Update API |  | Brian Tang | Update API to show more information
+Update API | [Evidence](https://github.com/RohanG326/supporting_cast/commit/151a5589a09d858e5c1017ebb6eb1636bcc2bdaa) | Brian Tang | Update API to show more information
 
 #   <h2 id="Week1">Week 1: Due 12/3</h2>
 [Week 1 Issue](https://github.com/RohanG326/supporting_cast/issues/40)
