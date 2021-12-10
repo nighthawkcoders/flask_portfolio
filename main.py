@@ -16,8 +16,14 @@ def index():
 
 @app.route('/LucasAboutMe/')
 def LucasAboutMe():
-    return render_template("LucasAboutMe.html")
-
+    url = "https://f1-race-schedule.p.rapidapi.com/api"
+    headers = {
+    'x-rapidapi-host': "f1-race-schedule.p.rapidapi.com",
+    'x-rapidapi-key': "9d1b3b63d7msh7765eaeb56e30d0p1d3c7ejsna149c7e76f59"
+    }
+    response = requests.request("GET", url, headers=headers)
+    print(response.text)
+    return render_template("LucasAboutMe.html", output=response.json())
 
 @app.route('/IanAboutMe/')
 def IanAboutMe():

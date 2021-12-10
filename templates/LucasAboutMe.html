@@ -9,6 +9,11 @@
 <style>
     body {font-family: "Raleway", Arial, sans-serif}
     .w3-row img {margin-bottom: -8px}
+
+    table, td, th{
+        border: 3px solid black;
+        padding: 7px;
+    }
 </style>
 <body>
 
@@ -41,7 +46,7 @@
 <!-- Footer / About Section -->
 <footer class="w3-light-grey w3-padding-64 w3-center" id="about">
     <h2>About Me</h2>
-    <img src="/static/assets/IMG_5304.JPG" class="w3-image w3-padding-32" width="300" height="300">
+    <img src="/static/assets/IMG_5304.JPG" class="w3-image w3-padding-32" width="700" height="700">
     <form style="margin:auto;width:60%" action="/action_page.php" target="_blank">
         <p> (I am the left middle one)</p>
         <div>
@@ -53,4 +58,26 @@
         </div>
 </footer>
 </body>
+
+{% set formula1 = output %}
+<div class="col-12 mainbox center-block">
+    <table style="margin: 2%">
+        <tr>
+            <th>Race</th>
+            <th>Track Location</th>
+            <th>Date</th>
+
+        </tr>
+
+        {% for headers in formula1 %}
+            <tr>
+                <td>{{headers.race_no}}</td>
+                <td>{{headers.track}}</td>
+                <td>{{headers.date}}</td>
+
+            </tr>
+        {% endfor %}
+    </table>
+</div>
+
 </html>
