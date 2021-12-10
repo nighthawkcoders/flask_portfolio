@@ -19,7 +19,7 @@
   - [Week 0](#week-0)
   
 ## Idea
-Starter code should be fun and practical.
+A studying site. Will contain minigames and useful tools to help students study. 
 
 ## Week by Week Progress
 
