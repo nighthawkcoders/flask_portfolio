@@ -30,9 +30,21 @@ def walruses():
 def hawkers():
     return render_template("hawkers.html")
 
-@app.route('/jason/', methods=['GET', 'POST'])
+@app.route('/jason/')
 def jason():
+    url = "https://video-game-news.p.rapidapi.com/star_wars"
+
+    headers = {
+        'x-rapidapi-host': "video-game-news.p.rapidapi.com",
+        'x-rapidapi-key': "9c2bef1841msh474f0e89d12625ap15b46cjsn29537babe185"
+    }
+
+    response = requests.request("GET", url, headers=headers)
+
+    final=response.text
     return render_template("jason.html")
+
+
 
 
 @app.route('/adi/')
