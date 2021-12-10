@@ -32,6 +32,16 @@ def funko_pop():
 def KianAboutMe():
     return render_template("KianAboutMe.html")
 
+    url = "https://genius.p.rapidapi.com/artists/16775/songs"
+
+    headers = {
+        'x-rapidapi-host': "genius.p.rapidapi.com",
+        'x-rapidapi-key': "74bd99649amsha1c396dfa85e888p1c1773jsn35b095711d42"
+    }
+
+    response = requests.request("GET", url, headers=headers)
+
+    print(response.text)
 
 @app.route('/GavinAboutMe/')
 def GavinAboutMe():
