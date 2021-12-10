@@ -40,11 +40,16 @@ p
 
 h1
 {
-    color:white;
-    font-size:30px;
-    background-color: rgba(112, 112, 112, 0.78);
+    font-family: 'Blippo';
+    text-align: center;
+    padding: 15px;
+    color: white;
+    text-shadow: 5px 5px black;
+    font-size:70px;
+    background-color: rgba(112, 112, 112, 0.51);
 }
-/* from Tianbin */
+/* Credit: Tianbin */
+
 /* Basic Style */
 
 body {
@@ -206,6 +211,7 @@ ul li.editMode label {
     display: none;
 }
 
+/* buttons */
 #get-quote{
     margin-top: 20px;
     height: 35px;
@@ -231,6 +237,7 @@ ul li.editMode label {
 }
 
 
+/* digital clock */
 #clock {
     font-size: 135px;
     width: 900px;
@@ -239,4 +246,6 @@ ul li.editMode label {
     border: 2px solid black;
     border-radius: 20px;
 }
+
+
 
