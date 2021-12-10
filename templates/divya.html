@@ -21,7 +21,7 @@
     </style>
 </p>
 <div>
-    <img id="MaskOn" src="../static/maskon_divya.png" style="max-height: 500px;" class="center">
+    <img id="MaskOn" src="/static/maskon_divya.png" style="max-height: 500px;" class="center">
     <style>
         .center {
             display: block;
@@ -31,18 +31,23 @@
     </style>
 </div>
 </p>
-    <iframe
-            width="1000"
-            height="500"
-            src="https://docs.google.com/document/d/1v4dmPa2CQaX8GSf0YmcSUG9yk1GqDXRRTICu1DzH1yA/edit?usp=sharing">
-    </iframe>
+<!--    <iframe-->
+<!--            width="1000"-->
+<!--            height="500"-->
+<!--            src="https://docs.google.com/document/d/1v4dmPa2CQaX8GSf0YmcSUG9yk1GqDXRRTICu1DzH1yA/edit?usp=sharing">-->
+<!--    </iframe>-->
 </style>
     <script>
+        togglenumber=0;
         function MaskOnOff(){
-            if (document.getElementById("MaskOn").src=="http://127.0.0.1:5000/static/maskon_divya.png") {
-                document.getElementById("MaskOn").src = "../static/maskoff_divya.png";
+            if (togglenumber == 0) {
+                document.getElementById("MaskOn").src = "/static/maskoff_divya.png";
+                togglenumber=1;
             }
-            else document.getElementById("MaskOn").src = "http://127.0.0.1:5000/static/maskon_divya.png"
+            else if(togglenumber ==1){
+                document.getElementById("MaskOn").src = "http://127.0.0.1:5000/static/maskon_divya.png"
+            togglenumber=0;
+            }
         }
     </script>
     <h1> Look at some of the quotes below by famous people </h1>
