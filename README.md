@@ -64,7 +64,7 @@ Our website is a website full of helpful resources for students. It will help st
     <td>Individual Journals</td>
     <td><a href="https://docs.google.com/document/d/1tzKxrktNmIau5yW4qIBZ5nULiQ-DUNyJaQTLDgQ4XXU/edit">Sonakshi's Journal</a></td>
     <td><a href="https://docs.google.com/document/d/1kiNPT2VoJIwpsf-8tR-1t58_ihXYbHytcyO2m-8JxU0/edit?usp=sharing">Shreya's Journal</a></td>
-    <td><a href="https://docs.google.com/document/d/1sZS-mU7SGq6S9c94T5OciGrEQYjoQMeJLd6lv3WhqoY/edit?usp=sharing">Punarvasu's Journal</a></td>
+    <td><a href="https://docs.google.com/document/d/1OCl1CWA4lm_ulO1LmSvhFY0vk0bn3JAZ5PvuIuloMRI/edit?usp=sharing">Punarvasu's Journal</a></td>
     <td><a href="https://docs.google.com/document/d/1F7jZ8Qvhu4UHAMA8RKTd8uXNWJdfZppVzL78_epN8UY/edit?usp=sharing">Khushi's Journal</a></td>
    <tr> 
 </table>
@@ -75,6 +75,16 @@ Our website is a website full of helpful resources for students. It will help st
 ## Table of Contents
 - <a href="https://github.com/sonakshibhalla/tri2turtles/blob/main/README.md#week-0-due-1119">Week 0</a>
 - <a href="https://github.com/sonakshibhalla/tri2turtles/blob/main/README.md#week-1-due-122">Week 1</a>
+- <a href="https://github.com/sonakshibhalla/tri2turtles/blob/main/README.md#week-2-due-1210">Week 2</a>
+<br>
+
+## Week 2: Due 12/10
+| Name | Requirement | Evidence |  Total Score |
+| ---  | ---         | ---      | --- |
+| Sonakshi Bhalla | Individual Page<br>Individual API<br>Create Task Plan<br>CB Notes & Quizzes| <a href="https://github.com/sonakshibhalla/tri2turtles/issues/66">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/86">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/87">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/83">Ticket</a>| /8 
+| Shreya Ahuja | Individual Page<br>Individual API<br>Make Issues Until After Break<br>Create Task Plan<br>CB Notes & Quizzes|  <a href="https://github.com/sonakshibhalla/tri2turtles/issues/64">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/85">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/87">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/83">Ticket</a>| /8
+| Punarvasu Sangam | Individual Page<br>Individual API<br>Create Task Plan<br>CB Notes & Quizzes| <a href="https://github.com/sonakshibhalla/tri2turtles/issues/65">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/84">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/87">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/82">Ticket</a>| /8
+| Khushi Bagri | Individual Page<br>Individual API<br>Create Task Plan<br>CB Notes & Quizzes| <a href="https://github.com/sonakshibhalla/tri2turtles/issues/63">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/81">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/87">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/82">Ticket</a>| /8
 
 <br>
 

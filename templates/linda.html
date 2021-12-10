@@ -2,12 +2,12 @@
 {% extends "layouts/base.html" %}
 
 <!- This variable sets name of browser tab  -->
-{% set project = "Stubby" %}
+{% set project = "Punnu" %}
 
 <!- This is a replacement block for Body in base.html -->
 {% block body %}
 
-<center><h1 style="font-family: 'Roboto Thin'">Linda Liu Individual Page</h1></center>
+<center><h1 style="font-family: 'Roboto Thin'">Punarvasu Sangam Individual Page</h1></center>
 
 <body style="background-color: #EBF7FA;">
 <style>
@@ -31,7 +31,7 @@
 
     <p>Hello <span id="myName">{{name}}</span>, welcome to my individual page!</p>
 
-    <form action="#" id="linda" method="POST" >
+    <form action="#" id="punnu" method="POST" >
         <label for="name">Enter Your Name</label>
         <input name="name" id="name">
         <input type="submit" value="Go!" onclick="(function (){document.getElementById('myName').innerText=document.getElementById('name').value})();return false;">
@@ -41,15 +41,16 @@
 
 
     <p>
-        <img src="/static/assets/lindaImages/withMask.jpg" style="height: 350px; width: auto;" id="imgClickAndChange" onclick="changeImage()"/>
+        <img id="myImage" src="/static/assets/punnuImages/PunnuMask.jpeg" style="height: 350px; width: auto;"  onclick="changeImage()"/>
     </p>
-    <p style="font-size: large; font-family: Baskerville; text-align: center"><i>Click Me</i></p>
-    <script> //from Shreya
+    <p style="font-size: large; font-family: Baskerville; text-align: center"><i><a href="punnuapitest">Punnu API</a></i></p>
+    <script>
         function changeImage() {
-
-            if (document.getElementById("imgClickAndChange").src ="/static/assets/lindaImages/withMask.jpg")
-            {
-                document.getElementById("imgClickAndChange").src = "/static/assets/lindaImages/withoutMask.jpg";
+            var image = document.getElementById('myImage');
+            if (image.src.match("/static/assets/punnuImages/PunnuMask.jpeg")) {
+                image.src = "/static/assets/punnuImages/Punnu.jpg";
+            } else {
+                image.src = "/static/assets/punnuImages/PunnuMask.jpeg";
             }
         }
     </script>
