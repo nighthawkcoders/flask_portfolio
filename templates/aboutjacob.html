@@ -1,50 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-%  extends "layouts/base.html" %
-%  set project = "Jacob" %
+{%  extends "layouts/base.html" %}
+{%  set project = "Jacob" %}
 <head>
-      <meta charset="UTF-8">}
-      <title>About me: Jacob Rozenkrants</title>}
-  </head>}
-  
-% block body %
-    <p>I am Jacob and I am a Senior and an AP CSP student at Del Norte. </p>
-    <div class="center-block" style="margin: 2% 5% 5%; text-align:center; font-family: gilroy,serif;">
-          <div class="col-12">
-                <p>Hello, {{nickname}}!</p>
-            </div>
-          <div class="col-12">
-                <form action="/Jacob/" id="greet" method="POST" >
-                      <label for="name">Type a greeting name?</label>
-                      <input name="name" id="name">
-                      <input type="submit" value="Greetings!">
-                  </form>
-            </div>
-      </div>
-% endblock %
-% block background %
-    <script src="{{ url_for('static', filename='three.r119.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='vanta.net.min.js') }}"></script>
-    <script>
-        VANTA.NET
-              el: "body",
-              mouseControls: true,
-              touchControls: true,
-              gyroControls: false,
-              minHeight: 200.00,
-              minWidth: 200.00,
-              scale: 1.00,
-              scaleMobile: 1.00
-  
-    </script>
-% endblock %
-</html>
-% extends "layouts/base.html" %
-% block content %
+    <meta charset="UTF-8">
+    <title>Jacob</title>
+    {% block background %}
+    <style>
+        html, body{
+            background-color: orange;
+        }
+    </style>
+    {% endblock %}
+</head>
+{%  block body %}
+    <body>
+    <div class="row">
+        <div class="col-sm">
+            <h1>Jacob</h1>
+            <img src="/static/assets/nathan2.jpg" width="50%"  id="jacobimg" onclick="jacobImg()" >
+        </div>
+        <div class="col-sm">
+            <h1>API</h1>
+            <p>Name</p>
+            <div id="name"></div>
+            <br>
+            <p>Id</p>
+            <div id="id"></div>
+            <br>
+            <p>Height</p>
+            <div id="height"></div>
+            <br>
+            <h1>Links</h1>
+            <a href="https://docs.google.com/document/d/1243B2mbRGslTk-0YRXKdKykfs6fAU5pK1LFUyJQ83vM/edit">Create Task Planning</a>
+            <br>
+            <a href="https://docs.google.com/document/d/1iWY0JFOhnv8dLGOX7WXPdvvbnUYI_WglTmJvhG3r4QQ/edit">Journal</a>
 
-<div class="row">
-  <h3 style="text-align: left;">Hello, My name is Jacob Rozenkrants! I am a senior in high school. My hobbies include soccer and reading!</h3>
-  <body style="background-color:burlywood"
-</div>
-<img src= "https://iconape.com/wp-content/files/ts/325506/png/325506.png"
-% endblock %
+            <script>
+                async function getposition() {
+                    const response = await fetch("https://pokedex2.p.rapidapi.com/pokedex/uk/pikachu", {
+                        "method": "GET",
+                        "headers": {
+                            'x-rapidapi-host': 'pokedex2.p.rapidapi.com',
+                            'x-rapidapi-key': 'a2517cf9bdmshb3cb60d57e2fe79p1f907fjsna7217b3dedc7',
+                        }
+                    })
+                    console.log(response);
+                    const pokemon = await response.json();
+                    console.log(pokemon);
+                    const pokeinfo = pokemon[0];
+                    document.getElementById("name").textContent = pokeinfo["name"];
+                    document.getElementById("id").textContent = pokeinfo["id"];
+                    document.getElementById("height").textContent = pokeinfo["height"];
+                }
+                getposition()
+            </script>
+        </div>
+        <script>
+            var jacobVar = 0;
+            function jacobImg () {
+                const element = document.getElementById("jacobimg");
+                if (jacobVar == 0) {
+                    element.src = "/static/assets/nathan1.jpg";
+                    jacobVar = 1
+                }
+                else {
+                    element.src = "/static/assets/nathan2.jpg";
+                    jacobVar = 0;
+                }
+            }
+        </script>
+    </div>
+    </body>
+{% endblock %}
+</html>

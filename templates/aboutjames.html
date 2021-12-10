@@ -4,17 +4,61 @@
 {%  set project = "James" %}
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>James</title>
+    {% block background %}
+        <style>
+            html, body{
+                background-color: rebeccapurple;
+            }
+        </style>
+    {% endblock %}
 </head>
 {%  block body %}
     <body>
     <div class="row">
-    <div class="col-sm">
-        <h1>Nathan</h1>
-        <img src="/static/assets/james1.jpg" width="50%"  id="jamesimg" onclick="jamesImg()" >
-    </div>
-    <div class="col-sm">
-        <h1>API</h1>
+        <div class="col-sm">
+            <h1>James</h1>
+            <img src="/static/assets/james1.jpg" width="50%"  id="jamesimg" onclick="jamesImg()" >
+        </div>
+        <div class="col-sm">
+            <h1>API</h1>
+            <p>Name</p>
+            <div id="name"></div>
+            <br>
+            <p>Id</p>
+            <div id="idea"></div>
+            <br>
+            <p>Restaurant</p>
+            <div id="restaurant"></div>
+            <br>
+            <p>Description</p>
+            <div id="description"></div>
+            <br>
+            <h1>Links</h1>
+            <a href="https://docs.google.com/document/d/1243B2mbRGslTk-0YRXKdKykfs6fAU5pK1LFUyJQ83vM/edit">Create Task Planning</a>
+            <br>
+            <a href="https://docs.google.com/document/d/1iWY0JFOhnv8dLGOX7WXPdvvbnUYI_WglTmJvhG3r4QQ/edit">Journal</a>
+            <script>
+                async function getburger() {
+                    const response = await fetch("https://burgers1.p.rapidapi.com/burgers", {
+                        "method": "GET",
+                        "headers": {
+                            'x-rapidapi-host': 'burgers1.p.rapidapi.com',
+                            'x-rapidapi-key': 'a2517cf9bdmshb3cb60d57e2fe79p1f907fjsna7217b3dedc7',
+                        }
+                    })
+                    console.log(response);
+                    const burger = await response.json();
+                    console.log(burger);
+                    const burgerinfo = burger[0];
+                    document.getElementById("name").textContent = burgerinfo["name"];
+                    document.getElementById("idea").textContent = burgerinfo["id"];
+                    document.getElementById("restaurant").textContent = burgerinfo["restaurant"];
+                    document.getElementById("description").textContent = burgerinfo["description"];
+                }
+                getburger()
+            </script>
+        </div>
     </div>
     <script>
         var jamesVar = 0;
