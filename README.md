@@ -45,7 +45,7 @@ Scrum Board: https://github.com/Reem57/flask_portfolio/projects/1
 ## Current Functions
 | Function | Contributor(s)|
 | ------------- | -------------------------------------------------------------|
-| TBD | TBD |
+| About Page | Everybody |
 |  |  |
 |  |  |
 |  |  |
@@ -59,6 +59,24 @@ Scrum Board: https://github.com/Reem57/flask_portfolio/projects/1
 | Sprint 1,2 (Week 2)   |  |      https://github.com/Reem57/flask_portfolio/issues?q=is%3Aopen+is%3Aissue+label%3A%22Week+2%22       |
 | Sprint 1,2 (Week 1)   | https://github.com/Reem57/flask_portfolio#week-1 |    https://github.com/Reem57/flask_portfolio/issues?q=is%3Aopen+is%3Aissue+label%3A%22Week+1%22       |
 | Sprint 0 (Week 0)   | https://github.com/Reem57/flask_portfolio#week-0 |     https://github.com/Reem57/flask_portfolio/issues?q=is%3Aopen+is%3Aissue+label%3A%22Week+0%22       |
+
+### Week 3
+| Members | Jobs | Ticket |
+| ------------- | -------------------------------------------------------------| - |
+| Nathan | Scrum Master | TBD |
+| Reem | TO | TBD |
+| Daniel | Primary Designer | TBD |
+| Jacob | Deployment Manager | TBD |
+| James | Github Admin | TBD |
+
+### Week 2
+| Members | Jobs | Ticket |
+| ------------- | -------------------------------------------------------------| - |
+| Nathan | Scrum Master | https://github.com/Reem57/flask_portfolio/issues/11 |
+| Reem | TO | https://github.com/Reem57/flask_portfolio/issues/11 |
+| Daniel | Primary Designer | https://github.com/Reem57/flask_portfolio/issues/11 |
+| Jacob | Deployment Manager | https://github.com/Reem57/flask_portfolio/issues/11 |
+| James | Github Admin | https://github.com/Reem57/flask_portfolio/issues/11 |
 
 ### Week 1
 | Members | Jobs | Ticket |
