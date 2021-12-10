@@ -72,7 +72,7 @@
             <h3>Picture</h3>
             <div class="row">
                 <div class="column">
-                    <button id=toggler onclick="masktoggle()">Mask Toggle</button>
+                    <button id=toggler onclick="masktoggle()">Mask</button>
                     <div>
                         <img id="mask" src="/static/assets/maskon.JPG" width="400" height="530">
                         <img id="nomask" src="/static/assets/maskoff.JPG" style="display: none;" width="400" height="530">
@@ -81,12 +81,15 @@
                         function masktoggle() {
                             let x = document.getElementById("mask");
                             let y = document.getElementById("nomask");
+                            let z= document.getElementById("toggler");
                             if (y.style.display === "block") {
                                 x.style.display = "block";
                                 y.style.display = "none";
+                                z.innerText = "Take Mask Off"
                             } else {
                                 x.style.display = "none";
                                 y.style.display = "block";
+                                z.innerText = "Put Mask On"
                             }
                         }
                     </script>
