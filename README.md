@@ -35,7 +35,7 @@ link to be added later
 #   <h2 id="Week2">Week 2: Due 12/10</h2>
 [Week 2 Issue](https://github.com/RohanG326/supporting_cast/issues/39)
 
-[Week 2 Review Ticket]
+[Week 2 Review Ticket](https://github.com/RohanG326/supporting_cast/issues/46)
 
 Commit | Evidence | Name | Description
 ----------- | ----------- | ----------- | -----------
@@ -44,6 +44,8 @@ Add API | [Evidence](https://github.com/RohanG326/supporting_cast/commit/0db40e4
 Background color | [Evidence](https://github.com/RohanG326/supporting_cast/commit/fdf8ecd4cdb3799ea999ec9b41d3ef822d676fcd) | Divya Suri | Extend pink background of about page
 Image Toggle | [Evidence](https://github.com/RohanG326/supporting_cast/commit/d623fe6b9ef1c2dc6293329bcecc8a4cb084ea26) | Divya Suri | Incorporate image toggle feature into about page
 Add API | [Evidence](https://github.com/RohanG326/supporting_cast/commit/3b52a3a3310893db29e5e638f4fd77197b458bf3) | Adi Khandelwal | Incorporate API into about page
+Add API | [Evidence](https://github.com/RohanG326/supporting_cast/commit/927786ee3f9ff7547a44999d1561f4eb0987e25f) | Rohan Gaikwad | Incorporate API into about page
+Add API | [Evidence](https://github.com/RohanG326/supporting_cast/commit/144fa9a26d7b1351f52fe0f63fb18d16face0ed5) | Jason Kaplan | Incorporate API into about page
 
 #   <h2 id="Week1">Week 1: Due 12/3</h2>
 [Week 1 Issue](https://github.com/RohanG326/supporting_cast/issues/40)
