@@ -35,7 +35,7 @@ link to be added later
 #   <h2 id="Week2">Week 2: Due 12/10</h2>
 [Week 2 Issue](https://github.com/RohanG326/supporting_cast/issues/39)
 
-[Week 2 Review Ticket]
+[Week 2 Review Ticket](https://github.com/RohanG326/supporting_cast/issues/46)
 
 Commit | Evidence | Name | Description
 ----------- | ----------- | ----------- | -----------
