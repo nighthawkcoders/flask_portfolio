@@ -5,29 +5,69 @@
 <head>
     <meta charset="UTF-8">
     <title>Jacob Adam Rozenkrants</title>
+    {% block background %}
+        <style>
+            html, body{
+                background-color: orange;
+            }
+        </style>
+    {% endblock %}
 </head>
 {%  block body %}
     <body>
     <div class="row">
     <div class="col-sm">
-        <h1>Reem</h1>
-        <img src="/static/assets/nathan2.jpg" width="50%"  id="Jacobimg" onclick="JacobImg()" >
+        <h1>Jacob</h1>
+        <img src="/static/assets/jacobwide.png" width="50%"  id="jacobimg" onclick="jacobImg()" >
     </div>
     <div class="col-sm">
         <h1>API</h1>
+        <p>Name:</p>
+        <div id="name"></div>
+        <br>
+        <p>Id:</p>
+        <div id="id"></div>
+        <br>
+        <p>Height:</p>
+        <div id="height"></div>
+        <br>
+        <h1>Links</h1>
+        <a href="https://docs.google.com/document/d/1243B2mbRGslTk-0YRXKdKykfs6fAU5pK1LFUyJQ83vM/edit">Create Task Planning</a>
+        <br>
+        <a href="https://docs.google.com/document/d/12rQvrhtsNnlDFDhkCI9sT8w7fTD3y-4FW6W8LPLuf9w/edit">Journal</a>
+
+        <script>
+            async function getcovid() {
+                const response = await fetch("https://pokedex2.p.rapidapi.com/pokedex/uk/pikachu", {
+                    "method": "GET",
+                    "headers": {
+                        'x-rapidapi-host': 'pokedex2.p.rapidapi.com',
+                        'x-rapidapi-key': 'a2517cf9bdmshb3cb60d57e2fe79p1f907fjsna7217b3dedc7'
+                    }
+                })
+                console.log(response);
+                const covidarr = await response.json();
+                console.log(covidarr);
+                const covidstats = covidarr[0];
+                document.getElementById("id").textContent = covidstats["id"];
+                document.getElementById("name").textContent = covidstats["name"];
+                document.getElementById("height").textContent = covidstats["height"];
+            }
+            getcovid();
+        </script>
     </div>
     </div>
     <script>
-        var JacobVar = 0;
-        function ReemImg () {
-            const element = document.getElementById("Jacobimg");
-            if (ReemVar == 0) {
-                element.src = "/static/assets/Jacob1.jpg";
-                ReemVar = 1
+        var jacobVar = 0;
+        function jacobImg () {
+            const element = document.getElementById("jacobimg");
+            if (jacobVar == 0) {
+                element.src = "/static/assets/jacob.png";
+                jacobVar = 1
             }
             else {
-                element.src = "/static/assets/Jacob2.jpg";
-                ReemVar = 0;
+                element.src = "/static/assets/jacobwide.png";
+                jacobVar = 0;
             }
         }
     </script>
