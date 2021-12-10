@@ -9,11 +9,11 @@
 <title>Smash Character API</title>
 <table style="border-collapse:1px; text-align: center;" >
     <tr>
-        <th style="text-align: center">Character + Link to Character Page</th>
+        <th style="text-align: center">Character + Link to Character Page</th><th>Character ID</th>
     </tr>
     {% for i in range(30) %}
     <tr>
-        <td><a target="_blank" href="{{ text[i].FullUrl }}">{{ text[i].Name }}</a></td>
+        <td><a target="_blank" href="{{ text[i].FullUrl }}">{{ text[i].Name }}</a></td><td>{{ text[i].OwnerId }}</td>
     </tr>
     {% endfor %}
 </table>
