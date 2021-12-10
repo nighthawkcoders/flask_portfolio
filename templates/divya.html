@@ -21,7 +21,7 @@
     </style>
 </p>
 <div>
-    <img id="MaskOn" src="/static/maskon_divya.png" style="max-height: 500px;" class="center">
+    <img id="image" src="/static/maskon_divya.png" style="max-height: 500px;" class="center"; onclick=MaskOnOff()>
     <style>
         .center {
             display: block;
@@ -39,14 +39,17 @@
 </style>
     <script>
         togglenumber=0;
+        const images = ["/static/maskoff_divya.png",
+            "/static/maskon_divya.png"
+        ];
         function MaskOnOff(){
             if (togglenumber == 0) {
-                document.getElementById("MaskOn").src = "/static/maskoff_divya.png";
-                togglenumber=1;
+                document.getElementById("image").src = images[0]
+                togglenumber = 1;
             }
-            else if(togglenumber ==1){
-                document.getElementById("MaskOn").src = "http://127.0.0.1:5000/static/maskon_divya.png"
-            togglenumber=0;
+            else if(togglenumber == 1){
+                document.getElementById("image").src = images[1]
+                togglenumber = 0;
             }
         }
     </script>
