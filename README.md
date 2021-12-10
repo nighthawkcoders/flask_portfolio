@@ -38,7 +38,7 @@
 |Pranav's About Pages on deployed on Site - Page must Extend from Layout and have special customization (color pallet, background, etc), Picture with Mask that toggles to Picture of Choice (ie pic without mask), Pull or show data (Web API) with information of interest, Establish link(s) to journal and other key indicators of your work and progress (remember pop quiz). TPT Link to Create Task planning| [Code](https://github.com/connorw72/food/blob/main/templates/pranav.html)
 |Chase's About Pages on deployed on Site - Page must Extend from Layout and have special customization (color pallet, background, etc), Picture with Mask that toggles to Picture of Choice (ie pic without mask), Pull or show data (Web API) with information of interest, Establish link(s) to journal and other key indicators of your work and progress (remember pop quiz). TPT Link to Create Task planning| [Code](https://github.com/connorw72/food/blob/main/templates/Chase.html)
 |Release day policy| [Wiki](https://github.com/connorw72/food/wiki/Deployment-Guide#deployment-policy)
-|Connor and Tanay Create task plan| [top of journal](https://docs.google.com/document/d/1yMnRk0cY8TWYl3YKTgz0OKkrI5Gac4pEyoyiffEeUoE/edit?usp=sharing)
+|Create task plan| On Journals [Tanay and Connor](https://docs.google.com/document/d/1yMnRk0cY8TWYl3YKTgz0OKkrI5Gac4pEyoyiffEeUoE/edit?usp=sharing), [Colin Pranav and Chase](https://docs.google.com/document/d/1iU4SOdLDTyFTuoI4yuBxjvRjvVHq53I5JZgaCRP8Ah4/edit?usp=sharing)
 |Deployed Website|[Site]()
 
 
