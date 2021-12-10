@@ -47,9 +47,17 @@ def jason():
 
 
 
-@app.route('/adi/')
+@app.route('/adi/', methods={'GET', 'POST'})
 def adi():
-    return render_template("adi.html")
+    url = "https://sportscore1.p.rapidapi.com/sports/1/teams"
+    headers = {
+        'x-rapidapi-host': "sportscore1.p.rapidapi.com",
+        'x-rapidapi-key': "39c4bf8c2emsh30b02ab6dc01dd9p13f427jsn690a650cf2ec"
+    }
+    # return render_template("AboutDylan.html")
+
+    response = requests.request("GET", url, headers=headers)
+    return render_template("adi.html", stats=response.json())
 
 @app.route('/brian/')
 def brian():
@@ -81,7 +89,6 @@ def rohan():
     for outcome in outcomes:
       lyrics.append(outcome['lyric'])
     return render_template("rohan.html", name1="homie")
-
 @app.route('/photogallery', methods=['GET', 'POST'])
 def photogallery():
     if request.form:
