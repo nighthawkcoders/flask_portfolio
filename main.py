@@ -3,6 +3,7 @@ from flask import Flask, render_template, request
 import os
 import requests
 import json
+from requests import get
 import random
 
 # create a Flask instance
@@ -76,19 +77,16 @@ def divya():
 
 @app.route('/rohan', methods=['GET', 'POST'])
 def rohan():
-    url = "https://genius.p.rapidapi.com/artists/16775/songs"
+    url = "https://free-nba.p.rapidapi.com/players"
 
     headers = {
-    'x-rapidapi-host': "genius.p.rapidapi.com",
-    'x-rapidapi-key': "35a01f5f74msh20628303ae6dbefp168484jsn83f86e2f8568"
+       'x-rapidapi-host': "free-nba.p.rapidapi.com",
+        'x-rapidapi-key': "35a01f5f74msh20628303ae6dbefp168484jsn83f86e2f8568"
     }
-
     response = requests.request("GET", url, headers=headers)
-    outcomes = json.loads(response.content.decode("utf-8"))['outcomes']
-    lyrics = []
-    for outcome in outcomes:
-      lyrics.append(outcome['lyric'])
-    return render_template("rohan.html", name1="homie")
+    data = response.json()
+    return render_template("rohan.html", data=data)
+
 @app.route('/photogallery', methods=['GET', 'POST'])
 def photogallery():
     if request.form:

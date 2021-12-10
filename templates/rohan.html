@@ -19,12 +19,8 @@
     <h1 style="text-align: center">
         Rohan Gaikwad Home Page
     </h1>
-    <div
-            class="container; center-block"
-            style="margin: 2% 5% 5%; text-align: center; font-family: gilroy, serif">
-        <div class="col-0">
-        </div>
-<!--        {outcome(0)}-->
+    <div class="container; center-block"
+         style="margin: 2% 5% 5%; text-align: center; font-family: gilroy, serif">
         </br>
         <button onclick="BeanieToggle()">Change Beanie</button>
         </br>
@@ -39,6 +35,47 @@
             ></iframe>
         </p>
     </div>
-{% endblock %}
-{% block background %}
+<style>
+    table, td, th {
+        border: 10px solid white;
+        padding: 50px;
+    }
+    td, th {
+        text-align:center;
+        color: black;
+    }
+    table{
+        width: 100%;
+        margin: auto;
+    }
+
+</style>
+
+<div class="-block" style="margin: 2% 25% 5%; font-family: gilroy,serif;">
+    <div class="col-12" style="text-align: center;">
+        <h2>All NBA Players</h2>
+    </div>
+
+    {% set players = data.data%}
+    <div class="col-12 mainbox center-block">
+        <table style="margin: 2%">
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Position</th>
+            </tr>
+
+        {% for player in players %}
+            <tr>
+                <td>{{player.first_name}}</td>
+                <td>{{player.last_name}}</td>
+                <td>{{player.position}}</td>
+            </tr>
+
+        {% endfor %}
+        </table>
+
+    </div>
+
+</div>
 {% endblock %}
