@@ -41,21 +41,14 @@ def adi():
 
 @app.route('/brian/')
 def brian():
-    url = "https://tennis-live-data.p.rapidapi.com/matches-by-date/2020-09-06"
-
+    url = "https://tennis-live-data.p.rapidapi.com/tournaments/ATP/2020"
     headers = {
         'x-rapidapi-host': "tennis-live-data.p.rapidapi.com",
         'x-rapidapi-key': "3d43659d98msh26d5e705bc7d8b6p1d6431jsnba44357aaf20"
     }
-
     response = requests.request("GET", url, headers=headers)
     results = json.loads(response.content.decode("utf-8"))['results']
-    tournaments = []
-    for result in results:
-        # result['tournament']
-        tournaments.append(result['tournament'])
-    # tournament = json.loads(response.content.decode("utf-8"))['results'][0]['tournament']
-    return render_template("brian.html", tournaments=tournaments)
+    return render_template("brian.html", res=results)
 
 @app.route('/divya/')
 def divya():
@@ -87,4 +80,4 @@ def photogallery():
 
 # runs the application on the development server
 if __name__ == "__main__":
-    app.run(debug=True,port=8000)
+    app.run(debug=True,port=8080)

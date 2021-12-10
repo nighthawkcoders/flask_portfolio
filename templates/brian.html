@@ -6,6 +6,7 @@
 
 {% block body %}
     <!- Try building a new body here ->
+
 <style>
     .organization{
         width: 80%;
@@ -38,10 +39,15 @@
         </style>
     </div>
     <h1><center>Check out some tennis news!</center></h1>
-    <ul>
-    {% for tournament in tournaments %}
-        <li class="organization">The {{tournament.name}} tournament was played in the city of {{tournament.city}} in the country of {{tournament.country}}. The {{tournament.name}} started on {{tournament.start_date}} and ended on {{tournament.end_date}} and was a part of the {{tournament.season}} season. This tournament was a part of the {{tournament.code}} tour and was played on {{tournament.surface}} surface.</li>
-    {% endfor %}
+    {% for games in res %}
+
+        <li class="organization">The {{games.name}} tournament was played in the city of
+            {{games.city}} in the country of {{games.country}}.
+            The {{games.name}} started on {{games.start_date}} and ended on
+            {{games.end_date}} and was a part of the {{games.season}} season.
+            This tournament was a part of the {{games.code}} tour and was played on
+            {{games.surface}} surface.</li>
+        {% endfor %}
     </ul>
     <h1><center>Journal</center></h1>
     <iframe class="center"
