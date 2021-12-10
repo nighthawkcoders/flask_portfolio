@@ -48,7 +48,9 @@ h1
     font-size:70px;
     background-color: rgba(112, 112, 112, 0.51);
 }
-/* Credit: Tianbin */
+.navbar {
+    z-index: 900 !important;
+}
 
 /* Basic Style */
 
