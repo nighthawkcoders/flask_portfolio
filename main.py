@@ -54,20 +54,24 @@ def khushi():
     # starting and empty input default
     return render_template("khushi.html", name="World")
 
+@app.route('/darkmodetest')
 
-@app.route ('/dictionary', methods=['GET', 'POST'])
-def dictionary():
+def darkmodetest():
+    return render_template("darkmodetest.html")
 
-    word = "fantastic"
-    url = "https://dictionary-by-api-ninjas.p.rapidapi.com/v1/dictionary"
-    querystring = {"word":word}
+@app.route('/genius', methods=['GET', 'POST'])
+def genius():
+
+    url = "https://genius.p.rapidapi.com/songs/442856"
+
     headers = {
-        'x-rapidapi-host': "dictionary-by-api-ninjas.p.rapidapi.com",
-        'x-rapidapi-key': "69b86a4f86msh0f84d36c298ca22p15693fjsne0d137318725"
+        'x-rapidapi-host': 'genius.p.rapidapi.com',
+        'x-rapidapi-key': '4c61a908e2mshb55cf4906131117p1da9ffjsnde3b82957ef9'
     }
-    response = requests.request("GET", url, headers=headers, params=querystring)
-    return render_template("dictionary.html", word=word, stats=response.json())
 
+    response = requests.request("GET", url, headers=headers)
+
+    return render_template("genius.html", stats=response.json())
 
 @app.route('/newapi', methods=['GET', 'POST'])
 def newapi():
