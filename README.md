@@ -40,6 +40,8 @@ link to be added later
 Commit | Evidence | Name | Description
 ----------- | ----------- | ----------- | -----------
 Update API | [Evidence](https://github.com/RohanG326/supporting_cast/commit/151a5589a09d858e5c1017ebb6eb1636bcc2bdaa) | Brian Tang | Update API to show more information
+Add API | [Evidence](https://github.com/RohanG326/supporting_cast/commit/0db40e411465180d7475b65d3b21c9f321cb2673) | Divya Suri | Incorporate API into about page
+Add API | [Evidence](https://github.com/RohanG326/supporting_cast/commit/3b52a3a3310893db29e5e638f4fd77197b458bf3) | Adi Khandelwal | Incorporate API into about page
 
 #   <h2 id="Week1">Week 1: Due 12/3</h2>
 [Week 1 Issue](https://github.com/RohanG326/supporting_cast/issues/40)
