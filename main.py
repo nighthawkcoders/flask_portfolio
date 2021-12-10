@@ -1,11 +1,12 @@
 # import "packages" from flask
 from pathlib import Path
 
-from flask import Flask, render_template, request
-from algorithms.image import rotatehack, sonakshi_image_data, kashish_image_data, saumya_image_data
 import requests
-# create a Flask instance
-app = Flask(__name__)
+
+
+class Flask:
+    pass
+
 
 
 # connects default URL to render index.html
@@ -86,17 +87,6 @@ def khushi():
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 @app.route('/newapi', methods=['GET', 'POST'])
 def newapi():
 
@@ -111,6 +101,30 @@ def newapi():
     response = requests.request("GET", url, headers=headers, params=querystring)
 
     return render_template("newapi.html", stats=response.json())
+
+
+def render_template(listmovie):
+    pass
+
+
+@app.route('/listmovie/', methods=['GET', 'POST'])
+def movie():
+    url = "https://watchmode.p.rapidapi.com/list-titles/"
+
+    querystring = {"types":"movie,tv_series","regions":"US","source_types":"sub,free","source_ids":"23,206","page":"1","limit":"250","genres":"4,9"} #assigns values to specified parameters(keys)
+
+    headers = {
+        'x-rapidapi-host': "watchmode.p.rapidapi.com",
+        'x-rapidapi-key': "f4480562c7mshcfebe0975d4fd48p16ab77jsnae6575329780"
+    }
+
+    response = requests.request("GET", url, headers=headers, params=querystring)
+    response = response.json().get("titles")
+
+
+    return render_template("listmovie.html", response=response)
+
+
 
 # runs the application on the development server
 if __name__ == "__main__":

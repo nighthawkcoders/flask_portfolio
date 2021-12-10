@@ -39,23 +39,27 @@
 </form>
 
 <br>
-<p> <!-- Reference from Linda -->
-    <img src="/static/assets/khushiimages/Khushi2.jpg" style="height: 400px; width: auto;" id="imgClickAndChange2"/>
-    <img src="/static/assets/khushiimages/Khushi.jpg" style="height: 400px; width: auto;" id="imgClickAndChange" onclick="changeImage()"/>
+<p>
 </p>
 <p style="font-size: large; font-family: Baskerville; text-align: center"><i>Click Me</i></p>
 
-<script> //reference from Shreya and Sonakshi
-   function changeImage() {
-       if (document.getElementById("imgClickAndChange").src ="/static/assets/khushiimages/Khushi.jpg") {
-           document.getElementById("imgClickAndChange2").src = "/static/assets/khushiimages/Khushi2.jpg";
-       } else {
-          document.getElementById("imgClickAndChange").src = "/static/assets/khushiimages/Khushi.jpg";
-       }
+<img id="myImage" onclick="changeImage()" src="/static/assets/khushiimages/Khushi.jpg" width="auto" height="300px">
+
+<script>
+            function changeImage() {
+                var image = document.getElementById('myImage');
+                if (image.src.match("/static/assets/khushiimages/Khushi.jpg")) {
+                    image.src = "/static/assets/khushiimages/Khushi2.jpg";
+                } else {
+                    image.src = "/static/assets/khushiimages/Khushi.jpg";
+                }
             }
-</script>
+        </script>
+
+
 </div>
 </body>
+
 
 
 {% endblock %}
