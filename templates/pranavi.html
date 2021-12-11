@@ -1,6 +1,7 @@
 {% extends "layouts/project.html" %}
 {% block body %}
     <!DOCTYPE html>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <h1 id="abt_name"> Pranavi Inukurti </h1>
 
     </head>
@@ -17,8 +18,11 @@
                 <a id="journal" href="https://docs.google.com/document/d/1PGcv6fkv8A5Y1uzuN-iLSGm9CKhdWEL_fQRZyGv9ymI/edit?usp=sharing">Daily Journal,</a>
                 <a id="journal" href="https://docs.google.com/document/d/1Fgip2Fr26XOBEdhVSpi1QiwjZowhopY57o4UpwbYZzo/edit?usp=sharing">StudyOwl Brainwrite,</a>
                 <a id="journal" href="https://www.figma.com/file/9CvmDXms787Ban053NP0Gf/StudyOwl?node-id=4%3A2">StudyOwl Wireframes,</a>
+                <a id="journal" href="https://github.com/samayass/flask_portfolio">Pop Quiz (README),</a>
                 <a id="journal" href="https://docs.google.com/document/d/1OkAMgzNODur6Gtonz_EuvoDeVXUnaMvdthtZnsBjXwU/edit?usp=sharing">TPT (Create Task Planning)</a>
             </h3>
+            <button id="get-meme" style="margin-top: 20px;height: 35px" onclick="newMeme()">Generate Chuck Norris facts</button>
+            <div id="display-meme" style="margin-top: 10px;font-size: 29px;color: white;font-weight: 600;">No Chuck Norris facts Generated Yet</div>
 
         </div>
     </div>
@@ -60,6 +64,29 @@
             }
         }
     </script>
+    <script>
+
+
+        function newMeme(){
+            const settings = {
+                "async": true,
+                "crossDomain": true,
+                "url": "https://matchilling-chuck-norris-jokes-v1.p.rapidapi.com/jokes/random",
+                "method": "GET",
+                "headers": {
+                    "accept": "application/json",
+                    "x-rapidapi-host": "matchilling-chuck-norris-jokes-v1.p.rapidapi.com",
+                    "x-rapidapi-key": "644e68648emsh4cd27460fc55318p1db393jsn3ea02f46215c"
+                }
+            };
+
+            $.ajax(settings).done(function (response) {
+                console.log(response);
+                document.getElementById("display-meme").innerText = response.value;
+            });
+        }
+    </script>
+
 </head>
 </html>
 

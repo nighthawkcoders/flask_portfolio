@@ -1,5 +1,8 @@
 # import "packages" from flask
 from flask import Flask, render_template
+import requests
+import json
+
 
 # create a Flask instance
 app = Flask(__name__)
@@ -18,7 +21,23 @@ def samaya():
 
 @app.route('/alice/')
 def alice():
-    return render_template("alice.html")
+    url = "https://brianiswu-cat-facts-v1.p.rapidapi.com/facts"
+
+    headers = {
+        'x-rapidapi-host': "brianiswu-cat-facts-v1.p.rapidapi.com",
+        'x-rapidapi-key': "f877084053msh82cfa972b631ab7p1c4893jsn442e2f514bb0"
+    }
+
+    response = requests.request("GET", url, headers=headers)
+    # how long is the response.json, 0-4, random, 0-8
+    output = response.json()     #5 items long
+    list=[]
+    for i in range(len(output)):
+        list.append(output[i]['text'])
+
+    return render_template("alice.html", output=list)
+
+
 
 
 @app.route('/pranavi/')
