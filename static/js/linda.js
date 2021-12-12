@@ -10,6 +10,30 @@ function changeImage() {
     }
 }
 
+//Translation Api
+function translateIt() {
+    console.log(document.getElementById("english").value)
+    let translateSetting = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://nlp-translation.p.rapidapi.com/v1/translate",
+        "method": "POST",
+        "headers": {
+            "content-type": "application/x-www-form-urlencoded",
+            "x-rapidapi-host": "nlp-translation.p.rapidapi.com",
+            "x-rapidapi-key": "9e3f40a0cemshcced0bdaa85f0c0p1e3309jsnbb4748bd1d8c"
+        },
+        "data": {
+            "text": document.getElementById("english").value,
+            "to": "es",
+            "from": "en"
+        }
+    };
+    $.ajax(translateSetting).done(function (response) {
+        console.log(response)
+        document.getElementById("spanish").innerText = response.translated_text.es;
+    });
+}
 
 //Random Motivational Quote Api
 function newQuote(){
