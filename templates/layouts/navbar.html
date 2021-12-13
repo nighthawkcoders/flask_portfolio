@@ -97,17 +97,41 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
         }
     </style>
 
-    <div class="mb-3">
-        <div class="form-group">
+    <div style="border:2px solid red" class="form-group">
+        <div style="display: flex;" class="search">
             <input type="text" class="form-control" id="term" placeholder="enter search term">
             <label></label> <!-- used for spacer -->
+            <button onclick="search_data();">Search</button>
         </div>
-        <button class="btn btn-primary bg-secondary" onclick="search_data();">Search</button>
-    </div>
-    <div class="container">
-        <div class="row" id="result">
+        <div class="container">
+        <div class="row" id="result"></div>
         </div>
     </div>
+    <!--Clock thing-->
+    <div style="color:var(--txt);" class="btn-group">
+        <!-- Clock display -->
+        <div class="px-3" style="color:var(--txt);">
+            <span id="clock">12/2/2021, 2:45:33 PM</span>
+        </div>
+    </div>
+
+
+
+    <script>
+
+        // Clock Control
+        // clockElement global element set for convenience
+        let clockElement = document.getElementById('clock');
+        // Clock update executes on each interval set by timer
+        function clock() {
+            let date = new Date();
+            clockElement.textContent = date.toLocaleString();
+        }
+        // Clock refresh timer, a reoccurring event
+        setInterval(clock, 1000);
+        // End Clock Control
+
+    </script>
     <script>
         function search_data() {
             // fetch standard requires data set to a name-value pair
@@ -117,7 +141,7 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
             };
 
             // fetch call with header options
-            fetch('/templates/layouts/term/', {
+            fetch('/crud/search/term/', {
                 method: "POST",
                 credentials: "include",
                 body: JSON.stringify(body),
@@ -155,30 +179,6 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                 })
         }
     </script>
-    <!--Clock thing-->
-    <div style="color:var(--txt);" class="btn-group">
-        <!-- Clock display -->
-        <div class="px-3" style="color:var(--txt);">
-            <span id="clock">12/2/2021, 2:45:33 PM</span>
-        </div>
-    </div>
 
-
-
-    <script>
-
-        // Clock Control
-        // clockElement global element set for convenience
-        let clockElement = document.getElementById('clock');
-        // Clock update executes on each interval set by timer
-        function clock() {
-            let date = new Date();
-            clockElement.textContent = date.toLocaleString();
-        }
-        // Clock refresh timer, a reoccurring event
-        setInterval(clock, 1000);
-        // End Clock Control
-
-    </script>
 </nav>
 
