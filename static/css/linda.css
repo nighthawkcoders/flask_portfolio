@@ -1,20 +1,18 @@
-body
-{
-    text-align:center;
-    width:100%;
-    margin:0 auto;
-    padding:0px;
-    font-family:helvetica;
+body {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0px;
+    font-family: helvetica;
 }
-#video_wrapper
-{
-    margin:0px;
-    padding:0px;
+#video_wrapper {
+    margin: 0px;
+    padding: 0px;
 }
-#video_wrapper video
-{
+#video_wrapper video {
     position: fixed;
-    top: 50%; left: 50%;
+    top: 50%;
+    left: 50%;
     z-index: 1;
     min-width: 100%;
     min-height: 100%;
@@ -22,33 +20,32 @@ body
     height: auto;
     transform: translate(-50%, -50%);
 }
-#wrapper
-{
-    position:relative;
-    text-align:center;
-    margin:0 auto;
-    padding:0px;
-    width:995px;
-    z-index:2;
+#wrapper {
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0px;
+    width: 995px;
+    z-index: 2;
 }
-p
-{
-    color:white;
-    font-size:20px;
+p {
+    color: white;
+    font-size: 20px;
     background-color: rgba(112, 112, 112, 0.51);
 }
 
-h1
-{
-    font-family: 'Blippo';
+h1 {
+    font-family: "Blippo";
     text-align: center;
     padding: 15px;
     color: white;
     text-shadow: 5px 5px black;
-    font-size:70px;
+    font-size: 50px;
     background-color: rgba(112, 112, 112, 0.51);
 }
-/* Credit: Tianbin */
+.navbar {
+    z-index: 900 !important;
+}
 
 /* Basic Style */
 
@@ -56,23 +53,22 @@ body {
     background: #fff;
     color: #333;
     font-family: Lato, sans-serif;
-    background-color:#e4e4e4;
+    background-color: #e4e4e4;
 }
 
 .container {
-
     display: none;
     width: 400px;
     margin: 10px auto 100px;
-    background-color:#fff;
-    padding:0px 10px 10px 10px;
-    border-radius:10px
+    background-color: #fff;
+    padding: 0px 10px 10px 10px;
+    border-radius: 10px;
 }
 
 h2 {
-    text-align:center;
-    padding-top:10px;
-    margin-bottom:0px;
+    text-align: center;
+    padding-top: 10px;
+    margin-bottom: 0px;
 }
 
 ul {
@@ -110,11 +106,10 @@ button:hover {
     color: #333;
 }
 
-
 /* Heading */
 
 h3,
-label[for='new-task'] {
+label[for="new-task"] {
     color: #333;
     font-weight: 700;
     font-size: 15px;
@@ -141,10 +136,9 @@ input[type="text"]:focus {
     color: #333;
 }
 
-
 /* New Task */
 
-label[for='new-task'] {
+label[for="new-task"] {
     display: block;
     margin: 0 0 20px;
 }
@@ -155,9 +149,8 @@ input#new-task {
 }
 
 p > button:hover {
-    color: #0FC57C;
+    color: #0fc57c;
 }
-
 
 /* Task list */
 
@@ -185,9 +178,8 @@ li > input[type="text"] {
 }
 
 li > .delete:hover {
-    color: #CF2323;
+    color: #cf2323;
 }
-
 
 /* Completed */
 
@@ -196,14 +188,13 @@ li > .delete:hover {
     color: #888;
 }
 
-
 /* Edit Task */
 
-ul li input[type=text] {
+ul li input[type="text"] {
     display: none;
 }
 
-ul li.editMode input[type=text] {
+ul li.editMode input[type="text"] {
     display: block;
 }
 
@@ -212,7 +203,7 @@ ul li.editMode label {
 }
 
 /* buttons */
-#get-quote{
+#get-quote {
     margin-top: 20px;
     height: 35px;
     width: 130px;
@@ -220,7 +211,7 @@ ul li.editMode label {
     color: black;
 }
 
-#show-todo{
+#show-todo {
     margin-top: 20px;
     height: 35px;
     width: 130px;
@@ -228,7 +219,7 @@ ul li.editMode label {
     color: black;
 }
 
-#show-clock{
+#show-clock {
     margin-top: 20px;
     height: 35px;
     width: 130px;
@@ -246,6 +237,3 @@ ul li.editMode label {
     border: 2px solid black;
     border-radius: 20px;
 }
-
-
-
