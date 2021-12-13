@@ -31,9 +31,13 @@ function calcgrade() {
       var curr = document.getElementById("curr").value;
       var goal = document.getElementById("goal").value;
       var weight = document.getElementById("weight").value;
-      other = (curr/100)*(100-weight);
-      var needed = +(((goal-other)*100)/weight).toFixed(2);
-      document.getElementById("result").innerText="You need a " + needed + "% to get a " + goal + "% on your exam."
+      if ((! curr.value) || (! goal.value) || (! weight.value)) {
+            document.getElementById("result").innerText = "Please fill out all the fields. "
+      } else {
+          other = (curr/100)*(100-weight);
+          var needed = +(((goal-other)*100)/weight).toFixed(2);
+          document.getElementById("result").innerText="You need a " + needed + "% to get a " + goal + "% on your exam."
+      }
 }
 function theme() {
        var themes = ["purple","green","light","blue","dark"]
