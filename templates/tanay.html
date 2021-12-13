@@ -73,20 +73,17 @@
                 <div class="col-12 mainbox center-block">
                     <table style="margin: 2%">
                         <tr>
-                            <th>Country</th>
-                            <th>Gender</th>
                             <th>Team Name</th>
+                            <th>Country</th>
                             <th>Logo</th>
                         </tr>
 
                         {% for team in teams %}
                         <tr>
-                            {% set country = team.country %}
-                            <td>{{country}}</td>
-                            {% set gender = team.gender %}
-                            <td>{{gender}}</td>
                             {% set teamname = team.name %}
                             <td>{{teamname}}</td>
+                            {% set country = team.country %}
+                            <td>{{country}}</td>
                             {% set logo = team.logo %}
                             <td><img src="{{logo}}"></td>
                         </tr>
