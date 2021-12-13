@@ -1,0 +1,30 @@
+{% extends "layouts/base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+{% block body %}
+<div id="page-container" class="green-theme">
+<p> test </p>
+</div>
+<script>
+    var stored = localStorage.getItem("theme");
+    var current = document.getElementById("page-container").classList[0];
+    document.getElementById("page-container").classList.remove(current);
+    document.getElementById("page-container").classList.add(stored)
+</script>
+
+<style>
+#page-container {
+    margin-left: 200px;
+    position: relative;
+    background-color: var(--bg-color);
+    color: var(--main-color);
+    min-height: 100vh;
+}
+</style>
+
+{% endblock %}
+</html>
