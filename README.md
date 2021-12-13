@@ -78,6 +78,16 @@ Our website is a website full of helpful resources for students. It will help st
 - <a href="https://github.com/sonakshibhalla/tri2turtles/blob/main/README.md#week-2-due-1210">Week 2</a>
 <br>
 
+## Week 3: Due 12/16
+| Name | Requirement | Evidence |  Total Score |
+| ---  | ---         | ---      | --- |
+| Sonakshi Bhalla | TO Database<br>Github Admin<br>AP Multiple Choice| <a href="https://github.com/sonakshibhalla/tri2turtles/issues/93">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/94">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/111">Ticket</a>| /8 
+| Shreya Ahuja | Scrum Master<br>Database<br>AP Multiple Choice| <a href="https://github.com/sonakshibhalla/tri2turtles/issues/91">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/94">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/111">Ticket</a>| /8
+| Punarvasu Sangam | Deployment Manager<br>AP Multiple Choice| <a href="https://github.com/sonakshibhalla/tri2turtles/issues/90">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/112">Ticket</a>| /8
+| Khushi Bagri | Design Manager<br>AP Multiple Choice| <a href="https://github.com/sonakshibhalla/tri2turtles/issues/92">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/112">Ticket</a>| /8
+
+<br>
+
 ## Week 2: Due 12/10
 | Name | Requirement | Evidence |  Total Score |
 | ---  | ---         | ---      | --- |
