@@ -40,6 +40,14 @@
 |Release day policy| [Wiki](https://github.com/connorw72/food/wiki/Deployment-Guide#deployment-policy)
 |Create task plan| On Journals [Tanay and Connor](https://docs.google.com/document/d/1yMnRk0cY8TWYl3YKTgz0OKkrI5Gac4pEyoyiffEeUoE/edit?usp=sharing), [Colin Pranav and Chase](https://docs.google.com/document/d/1iU4SOdLDTyFTuoI4yuBxjvRjvVHq53I5JZgaCRP8Ah4/edit?usp=sharing)
 |Deployed Website|[Site]()
+### Database intro sprint 3 week 3
+|Task| Tangible Link |
+|:-----|:----------------------|
+|Design Manager showing Bootstrap layouts, and at least 3 frontend screens with functionality toward Project Theme.|[Bootstrap layouts]()
+|Scrum Master overview of progress using GitHub README, Tickets (Completed and Backlog), and Wiki.  Show expected backlog when returning from Winter Break.| [Backlog](),
+|Technical officer highlighting Asynchronous access(es) to a Database (expectation is a Search and/or a CRUD operations).|[Search or CRUD]()
+|Deployment manager showing Web Site running from URL (https), and demonstrating the process to perform an update.|[Website]()
+|GitHub admin highlighting issue, commits, and pull requests completed by each individual.|[Issue, commits and pull requests]()
 
 
 
