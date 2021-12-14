@@ -1,0 +1,85 @@
+{% extends "layouts/base.html" %}
+{% block meta %}
+    <script>
+        function returnFeed(){
+            let text = document.get
+            ElementById("change").innerHTML;
+            document.getElementById("top").innerHTML = text // putting the new text at the top so it is seperate
+            if (typeof(Storage) !== "undefined") {
+                let stored =  localStorage.getItem("input") //getting everything out of local storage and putting it in stored
+                if (stored == null){
+                    stored = ""
+                }
+                //split stored into session and message
+                let input = text + "<br>" + stored
+                if (text !== "<br><mark>Previous Responses</mark><br>"){
+                    localStorage.setItem("input", input); //setting local storage
+                    document.getElementById("top").hidden = false;
+                    input = input.substring(text.length, input.length) //cutting out the recent text so it is not displayed
+                    document.getElementById("previous").hidden = false;
+                }
+                //else{
+                //localStorage.setItem("input", "<br><mark>New Responses</mark><br>" + stored)
+                //}
+                // Retrieve
+                document.getElementById("change").innerHTML = input
+                // Store
+            } else {
+                document.getElementById("change").innerHTML = "Sorry, your browser does not support Web Storage...";
+            }
+        }
+
+        function remove(){
+            localStorage.clear();
+            let input = "";
+            document.getElementById("change").innerHTML = input;
+            document.getElementById("top").hidden = true;
+            document.getElementById("previous").hidden = false;
+        }
+
+        function pop(){
+            let totaltext = localStorage.getItem("input")
+            let newtext = "" + document.getElementById("top").innerHTML // I set the current text to be in a hidden id element called hidden so I cna get the length of that element and do a substring from the end of that length to the end of the string to be rid of the most recent text displayed
+            let length1 = parseInt(totaltext.length)
+            let length2 = parseInt(newtext.length)
+            let input = totaltext.substring(length2 + 5, length1);
+            localStorage.setItem("input", input)
+            document.getElementById("change").innerHTML = input;
+            document.getElementById("top").hidden = true;
+        }
+
+    </script>
+{% endblock %}
+
+{% block body %}
+    <body onload="returnFeed()">
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="row" style="padding-left:0%; padding-top:5%; justify-content: center">
+                <!--this creates the text displayed at the top that changed and sets the thing to be changed to a variable so you can set it to different values in python so it can change-->
+                <div class="col-12">
+                    <h1><center>Feedback</center></h1>
+                    <!--this form tag creates the search bar that is tied to a label which is displayed text and to a submit button so the user can input information-->
+                    <form action="/feedback/" name="feedbackForm" method="POST" >
+                        <label>Please type your name here!</label>
+                        <input name="feed2" id="feed2">
+                        <div>
+                            <label>Please type any feedback that you have for our website in the text box shown here!</label>
+                        </div>
+                        <textarea rows="6" cols="80" name="feed1" id="feed1"></textarea>
+                        <input type="submit" name="feedbut" value="Post Feedback">
+                        <input type="button" value="Delete Most Recent" onclick="pop()">
+                        <input type="button" value="Clear All" onclick="remove()">
+                    </form>
+
+                    <!--<ul>-->     <p hidden id="top"></p> <!--this contains only the most recent text added so when text is added this is not hidden anymore and is displayed above the "previous text" box-->
+                    <p hidden id="previous" style="color:white"><br><mark>Previous Responses</mark><br></p><!--this becomes unhidden when text is added-->
+                    <!--<li>-->     <p id="change" style="color:white";>{% if input | length != 0 %} {{ name }} : {{ input }} {% else %}<br><mark>Previous Responses</mark><br>{% endif %}</p><!--</li>--><!--this contains only the local storage without the new text-->
+                    <!--</ul>-->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+{% endblock %}

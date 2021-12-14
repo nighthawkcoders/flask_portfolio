@@ -40,6 +40,15 @@ def aboutdaniel():
 def mainabout():
     return render_template("mainabout.html")
 
+@app.route('/feedback/', methods=['GET', 'POST'])
+def feedback():
+    if request.form:
+        input = request.form.get("feed1")
+        name = request.form.get("feed2")
+        if len(input) != 0:  # input field has content
+            return render_template("layouts/feedback.html", input=input, name=name)
+    return render_template("layouts/feedback.html")
+
 
 # runs the application on the development server
 # changed port from 5000 to 8080 to test gunicorn
