@@ -8,10 +8,11 @@
 {% block body %}
 
 
-    <table>
+<br>
+    <table >
         <tr>
             <td style="padding-top: 50px;">
-                <a href='http://www.volkeeurohistory.com/lecture-notes.html'><button class="btn">APEC notes</button></a>
+                <a href='http://www.volkeeurohistory.com/lecture-notes.html'><button id="apec" class="btn">APEC notes</button></a>
             </td>
             <td style="padding-top: 50px;">
                 <a href='https://apnotes.net/ap-16e.html'><button id="history" class="btn">APUSH notes</button></a>
@@ -23,13 +24,13 @@
         </tr>
         <tr>
             <td style="padding-top: 50px;">
-                <button class="btn" onclick="location.href='https://arborview.enschool.org/ourpages/auto/2018/8/10/50419544/AP%20Calculus%20AB%20Notes.pdf';">AP Calc AB notes</button>
+                <button id="calc" class="btn" onclick="location.href='https://arborview.enschool.org/ourpages/auto/2018/8/10/50419544/AP%20Calculus%20AB%20Notes.pdf';">AP Calc AB notes</button>
             </td>
             <td style="padding-top: 50px;">
                 <a href='https://blog.prepscholar.com/ap-chemistry-notes'><button id="chemistry"   class="btn">AP Chem notes</button></a>
             </td>
             <td style="padding-top: 50px;">
-                <button class="btn" onclick="location.href='https://1.cdn.edl.io/OfjStocj8Y1KTz9KqamsFIajcovZigo8gOlPdChUQtDnW9Lu.pdf';">AP CSP notes</button>
+                <button  id="csp" class="btn" onclick="location.href='https://1.cdn.edl.io/OfjStocj8Y1KTz9KqamsFIajcovZigo8gOlPdChUQtDnW9Lu.pdf';">AP CSP notes</button>
             </td>
         </tr>
         <tr>
@@ -63,6 +64,33 @@
             margin-left: 20px;
         }
     </style>
+
+<br>
+<br>
+
+<h2 class="camp" style="position: relative;
+    left: 52%;
+    font-size: 250px;color: #16100F "> Study </h2>
+
+<style>
+    .camp:hover{
+    position:relative;left: 52%;
+        font-size: 250px;color:#16100F;
+        opacity: 100%;
+    }
+
+    .camp{
+       opacity: 0%;
+    }
+
+
+</style>
+
+
+
+
+
+
 {% endblock %}
 
 <!- This is turning off birds background from base.html -->
