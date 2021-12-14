@@ -36,11 +36,11 @@ Scrum Board: https://github.com/Reem57/flask_portfolio/projects/1
 ---------------------------------------
 | Name             | ID              | Scrumboard                                                                   | Issues |Commits  | Profile          |
 | ---------------- | --------------- | ---------------------------------------------------------------------------- | ------ |----------- | ---------------- |
-| Nathan Manangan  | ProRichyMan     | [Scrumboard]() | [Issue]() | [Commits]()| [@ProRichyMan]()|
-| Reem Ben Ishai | Reem57 | [Scrumboard]() | [Issue]() | [Commits]()| [@Reem57]()|
-| James Lee  | JL1080          | [Scrumboard]() | [Issue]() | [Commits]()| [@JL1080]()|
-| Jacob Rozenkrants     | jar04  | [Scrumboard]() | [Issue]() | [Commits]()| [@jar04]()|
-| Daniel Bertino     | Danny4w | [Scrumboard]() | [Issue]() | [Commits]()| [@Danny4w]()|
+| Nathan Manangan  | ProRichyMan     | [Scrumboard](https://github.com/jar04/flask_portfolio/projects/1) | [Issue](https://github.com/jar04/flask_portfolio/issues?q=is%3Aopen+is%3Aissue+author%3AProRichyMan+assignee%3AProRichyMan) | [Commits](https://github.com/jar04/flask_portfolio/commits?author=ProRichyMan)| [@ProRichyMan](https://github.com/ProRichyMan)|
+| Reem Ben Ishai | Reem57 | [Scrumboard](https://github.com/jar04/flask_portfolio/projects/1) | [Issue](https://github.com/jar04/flask_portfolio/issues?q=is%3Aopen+is%3Aissue+author%3AProRichyMan+assignee%3AReem57) | [Commits](https://github.com/jar04/flask_portfolio/commits?author=Reem57)| [@Reem57](https://github.com/Reem57)|
+| James Lee  | JL1080          | [Scrumboard](https://github.com/jar04/flask_portfolio/projects/1) | [Issue](https://github.com/jar04/flask_portfolio/issues?q=is%3Aopen+is%3Aissue+author%3AProRichyMan+assignee%3AJL1080) | [Commits](https://github.com/jar04/flask_portfolio/commits?author=JL1080)| [@JL1080](https://github.com/JL1080)|
+| Jacob Rozenkrants     | jar04  | [Scrumboard](https://github.com/jar04/flask_portfolio/projects/1) | [Issue](https://github.com/jar04/flask_portfolio/issues?q=is%3Aopen+is%3Aissue+author%3AProRichyMan+assignee%3Ajar04) | [Commits](https://github.com/jar04/flask_portfolio/commits?author=jar04)| [@jar04](https://github.com/jar04)|
+| Daniel Bertino     | Danny4w | [Scrumboard](https://github.com/jar04/flask_portfolio/projects/1) | [Issue](https://github.com/jar04/flask_portfolio/issues?q=is%3Aopen+is%3Aissue+author%3AProRichyMan+assignee%3ADanny4w) | [Commits](https://github.com/jar04/flask_portfolio/commits?author=Danny4w)| [@Danny4w](https://github.com/Danny4w)|
 
 ## Current Functions
 | Function | Contributor(s)|
