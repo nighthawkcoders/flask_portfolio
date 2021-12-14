@@ -2,6 +2,9 @@
 This HTML is setup as a fragment allowing it to be "included" by other HTML files via Jinja2
 -->
 <style>
+    nav.navbar {
+        position: relative;
+    }
     a.nav-link {
         background-color: rgba(255, 0, 0, 0.0);
         transition: background-color 0.5s;
@@ -50,11 +53,37 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
      #first{
         margin-left:5px;
     }
+    .search-icon {
+        max-width: 30px;
+    }
+    .form-control {
+        border: none;
+        outline: none;
+    }
+    .form-control:focus {
+        background-color: var(--secondary-color);
+        color: var(--main-color)
+    }
+    .form-control:focus::placeholder {
+        color:var(--tertiary-color)
+    }
+
+    .form-group{
+        max-width: 30%;
+        position: absolute;
+        top: 50px;
+        right: 10px;
+    }
+    .container {
+        background-color: var(--main-color);
+        color: var(--secondary-color);
+
+    }
 
 </style>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a style="color:var(--txt);" class="navbar-brand" href="/">{{basename}} <div class="nav-border"></div></a>
+    <a style="color:var(--txt);" class="navbar-brand" href="/">{{basename}} </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -96,14 +125,15 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
             background-color: #ceb680;
         }
     </style>
-
-    <div style="border:2px solid red" class="form-group">
+<!--     <button onclick="showSearch()">Search</button> -->
+    <div><img class="search-icon" src="/static/assets/search.svg" onclick="showSearch()" alt=""></div>
+    <div id="form-group" class="form-group" style="display: none">
         <div style="display: flex;" class="search">
             <input type="text" class="form-control" id="term" placeholder="enter search term">
             <label></label> <!-- used for spacer -->
-            <button onclick="search_data();">Search</button>
+            <button  onclick="search_data();"><img class="search-icon" src="/static/assets/search.svg" alt="search"></button>
         </div>
-        <div class="container">
+        <div class="container" >
         <div class="row" id="result"></div>
         </div>
     </div>
@@ -133,6 +163,15 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
 
     </script>
     <script>
+        function showSearch() {
+            if (document.getElementById("form-group").style.display == "none") {
+                document.getElementById("form-group").style.display = "block";
+                console.log("displayed")
+            } else {
+                document.getElementById("form-group").style.display = "none";
+                console.log("hidden")
+            }
+        }
         function search_data() {
             // fetch standard requires data set to a name-value pair
             const term = document.getElementById("term");
