@@ -96,12 +96,10 @@ def stats():
 def notes():
     return render_template("subjects/notes.html")
 
-
-
-
 # runs the application on the development server
 @app.route('/flashcards/')
 def flashcards():
     return render_template('flashcards.html')
+
 if __name__ == "__main__":
     app.run(debug=True, port="5002")

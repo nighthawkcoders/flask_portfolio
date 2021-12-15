@@ -51,9 +51,12 @@
         xhr.open("GET", baseURL + "/joke/" + categories.join(",") + "?" + params.join("&"));
 
         xhr.onreadystatechange = function () {
+            console.log("this is xhr ready state: " + xhr.readyState + " and status: " + xhr.status)
+
             if (xhr.readyState === 4 && xhr.status < 300) // readyState 4 means request has finished + we only want to parse the joke if the request was successful (status code lower than 300)
             {
                 var randomJoke = JSON.parse(xhr.responseText);
+                console.log(randomJoke)
 
                 if (randomJoke.type === "single") {
                     // If type == "single", the joke only has the "joke" property
@@ -74,12 +77,10 @@
     <br>
     <br>
     <p id="jokework"></p>
-    <br>
     <p> My name is Leah Bogomolny and I am in 12th grade</p>
     <p> I like to play games and hang out with friends</p>
     <p> I have an older sister named, Maggie, who is a junior in college.</p>
     <p> I want to be a computer science major in college </p>
-
 
     <style>
         p {

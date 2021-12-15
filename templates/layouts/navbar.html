@@ -2,6 +2,9 @@
 This HTML is setup as a fragment allowing it to be "included" by other HTML files via Jinja2
 -->
 <style>
+    nav.navbar {
+        position: relative;
+    }
     a.nav-link {
         background-color: rgba(255, 0, 0, 0.0);
         transition: background-color 0.5s;
@@ -50,11 +53,37 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
      #first{
         margin-left:5px;
     }
+    .search-icon {
+        max-width: 30px;
+    }
+    .form-control {
+        border: none;
+        outline: none;
+    }
+    .form-control:focus {
+        background-color: var(--secondary-color);
+        color: var(--main-color)
+    }
+    .form-control:focus::placeholder {
+        color:var(--tertiary-color)
+    }
+
+    .form-group{
+        max-width: 30%;
+        position: absolute;
+        top: 50px;
+        right: 10px;
+    }
+    .container {
+        background-color: var(--main-color);
+        color: var(--secondary-color);
+
+    }
 
 </style>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a style="color:var(--txt);" class="navbar-brand" href="/">{{basename}} <div class="nav-border"></div></a>
+    <a style="color:var(--txt);" class="navbar-brand" href="/">{{basename}} </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -82,9 +111,13 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
             </ul>
 
             <a class="nav-link" href="/flashcards/">Flash Cards <div class="nav-border"></div></a>
-            <a class="nav-link" href="/notes">Notes                         <div class="nav-border"></div></a>
+            <a class="nav-link" href="/crud">Database <div class="nav-border"></div></a>
+            <a class="nav-link" href="/crud/search">Searchbar <div class="nav-border"></div></a>
+            <a class="nav-link" href="/notes">AP Notes <div class="nav-border"></div> </a>
         </div>
     </div>
+
+
   
     <style>
         nav {
@@ -92,7 +125,18 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
             background-color: #ceb680;
         }
     </style>
-  
+<!--     <button onclick="showSearch()">Search</button> -->
+    <div><img class="search-icon" src="/static/assets/search.svg" onclick="showSearch()" alt=""></div>
+    <div id="form-group" class="form-group" style="display: none">
+        <div style="display: flex;" class="search">
+            <input type="text" class="form-control" id="term" placeholder="enter search term">
+            <label></label> <!-- used for spacer -->
+            <button  onclick="search_data();"><img class="search-icon" src="/static/assets/search.svg" alt="search"></button>
+        </div>
+        <div class="container" >
+        <div class="row" id="result"></div>
+        </div>
+    </div>
     <!--Clock thing-->
     <div style="color:var(--txt);" class="btn-group">
         <!-- Clock display -->
@@ -100,6 +144,7 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
             <span id="clock">12/2/2021, 2:45:33 PM</span>
         </div>
     </div>
+
 
 
     <script>
@@ -117,5 +162,62 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
         // End Clock Control
 
     </script>
+    <script>
+        function showSearch() {
+            if (document.getElementById("form-group").style.display == "none") {
+                document.getElementById("form-group").style.display = "block";
+                console.log("displayed")
+            } else {
+                document.getElementById("form-group").style.display = "none";
+                console.log("hidden")
+            }
+        }
+        function search_data() {
+            // fetch standard requires data set to a name-value pair
+            const term = document.getElementById("term");
+            const body = {
+                term: term.value
+            };
+
+            // fetch call with header options
+            fetch('/crud/search/term/', {
+                method: "POST",
+                credentials: "include",
+                body: JSON.stringify(body),
+                cache: "no-cache",
+                headers: new Headers({
+                    "content-type": "application/json"
+                })
+            })
+                // async then replies with response header
+                .then(function (response) {
+                    // prepare HTML search result container for new output
+                    const resultContainer = document.getElementById("result");
+                    // clean up from previous search
+                    while (resultContainer.firstChild) {
+                        resultContainer.removeChild(resultContainer.firstChild);
+                    }
+                    // trap error response from Web API
+                    if (response.status !== 200) {
+                        const errorMsg = 'Database response error: ' + response.status;
+                        console.log(errorMsg);
+                        const div = document.createElement("div");
+                        div.innerHTML = errorMsg;
+                        resultContainer.appendChild(div);
+                        return;
+                    }
+                    // response contains valid result
+                    response.json().then(function(data) {
+                        // loop through JSON and build HTML output
+                        for (let i = 0; i < data.length; i++) {
+                            const div = document.createElement("div");
+                            div.innerHTML = data[i].name + ' ' + data[i].email;
+                            resultContainer.appendChild(div);
+                        }
+                    })
+                })
+        }
+    </script>
+
 </nav>
 
