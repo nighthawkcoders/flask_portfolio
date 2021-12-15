@@ -1,13 +1,12 @@
 # import "packages" from flask
-from flask import Flask, render_template, request
-import os
+
+from flask import render_template, request
+from __init__ import app
 import requests
 import json
-from requests import get
-import random
 
-# create a Flask instance
-app = Flask(__name__)
+from crud.app_crud import app_crud
+app.register_blueprint(app_crud)
 
 
 # connects default URL to render index.html
@@ -112,4 +111,4 @@ def weather():
 
 # runs the application on the development server
 if __name__ == "__main__":
-    app.run(debug=True,port=8080)
+    app.run(debug=True,port=8081)
