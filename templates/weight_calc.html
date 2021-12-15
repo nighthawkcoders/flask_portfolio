@@ -1,0 +1,136 @@
+{% extends "layouts/base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+{% block body %}
+<div id="page-container" class="green-theme">
+<div class="theme-toggle">
+    <button onclick="theme()">Change Theme</button>
+</div>
+<h1 style="text-align: center; text-transform: uppercase">Final Grade Calculator</h1>
+<div class="grade-container">
+    <input type="number" name="weight" id = "weight" placeholder="How much is the category worth?" min=0 max=100>
+    <input type="number" name="curr" id = "curr" placeholder="How many points are in right now?">
+    <input type="number" name="pts" id = "pts" placeholder="How many points is the test?" >
+    <button onclick="calc_weight()" id="calc-btn" class='btn'>Submit</button>
+    <p id="result"></p>
+</div>
+
+</div>
+<script>
+    var stored = localStorage.getItem("theme");
+    var current = document.getElementById("page-container").classList[0];
+    document.getElementById("page-container").classList.remove(current);
+    document.getElementById("page-container").classList.add(stored)
+</script>
+<script>
+function calc_weight() {
+      var curr = document.getElementById("curr").value;
+      var pts = document.getElementById("pts").value;
+      var weight = document.getElementById("weight").value;
+      if ((! curr) || (! pts) || (! weight)) {
+            document.getElementById("result").innerText = "Please fill out all the fields. "
+      } else {
+            var ofCategory = pts/(curr+pts);
+            console.log(pts);
+            console.log(curr+pts);
+            console.log(pts/(curr+pts)
+            var final = +(ofCategory * weight*100).toFixed(2);
+            document.getElementById("result").innerText = "The test is worth " + final + "% of the grade."
+      }
+
+}
+function calcgrade() {
+      var curr = document.getElementById("curr").value;
+      var goal = document.getElementById("goal").value;
+      var weight = document.getElementById("weight").value;
+      if ((! curr) || (! goal) || (! weight)) {
+            document.getElementById("result").innerText = "Please fill out all the fields. "
+      } else {
+          other = (curr/100)*(100-weight);
+          var needed = +(((goal-other)*100)/weight).toFixed(2);
+          document.getElementById("result").innerText="You need a " + needed + "% to get a " + goal + "% on your exam."
+      }
+}
+function theme() {
+       var themes = ["purple","green","light","blue","dark"]
+       var theme = document.getElementById("page-container").classList[0];
+       var generated = themes[Math.floor(Math.random() * themes.length)];
+       var new_theme = generated + "-theme"
+       while (new_theme == theme) {
+           var generated = themes[Math.floor(Math.random() * themes.length)];
+           var new_theme = generated + "-theme"
+       }
+       document.getElementById("page-container").classList.remove(theme);
+       document.getElementById("page-container").classList.add(new_theme);
+       localStorage.setItem("theme",new_theme);
+       document.getElementById("current").innerText = generated;
+}
+</script>
+<style>
+#page-container {
+    margin-left: 200px;
+    position: relative;
+    background-color: var(--bg-color);
+    color: var(--main-color);
+    min-height: 100vh;
+}
+.theme-toggle {
+    position: absolute;
+    top: 0;
+    right:0;
+    text-align: center;
+}
+
+.grade-container {
+    width: 70%;
+    margin: 0 auto;
+}* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+ }
+ .grade-container {
+   width: 40%;
+   margin: auto;
+   padding: 2em;
+   background-color: var(--secondary-color)
+ }
+
+ .grade-container input{
+   width: 100%;
+   padding: 2em;
+   border: none;
+   outline: none;
+   margin-bottom: 30px;
+   background-color: var(--main-color);
+   color: var(--secondary-color)
+ }
+ .grade-container input:focus {
+    background-color: var(--tertiary-color);
+    color: var(--main-color)
+ }
+ .grade-container input::placeholder {
+    color: var(--tertiary-color)
+ }
+ .grade-container input:focus::placeholder {
+    color: var(--secondary-color)
+ }
+ #calc-btn {
+   width: 100%;
+ }
+
+ #result {
+   text-align: center;
+   font-size: 24px;
+   color: var(--tertiary-color)
+ }
+
+
+</style>
+
+{% endblock %}
+</html>

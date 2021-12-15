@@ -63,7 +63,12 @@ def sanjay():
 
     output2 = json.loads(response2.text)
     return render_template("about_us/sanjay.html",data=output,joke=output2)
-
+@app.route("/final_grade_calc/")
+def final_grade_calc():
+    return render_template("final_grade_calc.html")
+@app.route("/weight_calc/")
+def weight_calc():
+    return render_template("weight_calc.html")
 @app.route('/apec/')
 def apec():
     return render_template("subjects/apec.html")
