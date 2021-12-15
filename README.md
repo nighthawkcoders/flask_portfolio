@@ -36,16 +36,16 @@ Scrum Board: https://github.com/Reem57/flask_portfolio/projects/1
 ---------------------------------------
 | Name             | ID              | Scrumboard                                                                   | Issues |Commits  | Profile          |
 | ---------------- | --------------- | ---------------------------------------------------------------------------- | ------ |----------- | ---------------- |
-| Nathan Manangan  | ProRichyMan     | [Scrumboard]() | [Issue]() | [Commits]()| [@ProRichyMan]()|
-| Reem Ben Ishai | Reem57 | [Scrumboard]() | [Issue]() | [Commits]()| [@Reem57]()|
-| James Lee  | JL1080          | [Scrumboard]() | [Issue]() | [Commits]()| [@JL1080]()|
-| Jacob Rozenkrants     | jar04  | [Scrumboard]() | [Issue]() | [Commits]()| [@jar04]()|
-| Daniel Bertino     | Danny4w | [Scrumboard]() | [Issue]() | [Commits]()| [@Danny4w]()|
+| Nathan Manangan  | ProRichyMan     | [Scrumboard](https://github.com/jar04/flask_portfolio/projects/1) | [Issue](https://github.com/jar04/flask_portfolio/issues?q=is%3Aopen+is%3Aissue+author%3AProRichyMan+assignee%3AProRichyMan) | [Commits](https://github.com/jar04/flask_portfolio/commits?author=ProRichyMan)| [@ProRichyMan](https://github.com/ProRichyMan)|
+| Reem Ben Ishai | Reem57 | [Scrumboard](https://github.com/jar04/flask_portfolio/projects/1) | [Issue](https://github.com/jar04/flask_portfolio/issues?q=is%3Aopen+is%3Aissue+author%3AProRichyMan+assignee%3AReem57) | [Commits](https://github.com/jar04/flask_portfolio/commits?author=Reem57)| [@Reem57](https://github.com/Reem57)|
+| James Lee  | JL1080          | [Scrumboard](https://github.com/jar04/flask_portfolio/projects/1) | [Issue](https://github.com/jar04/flask_portfolio/issues?q=is%3Aopen+is%3Aissue+author%3AProRichyMan+assignee%3AJL1080) | [Commits](https://github.com/jar04/flask_portfolio/commits?author=JL1080)| [@JL1080](https://github.com/JL1080)|
+| Jacob Rozenkrants     | jar04  | [Scrumboard](https://github.com/jar04/flask_portfolio/projects/1) | [Issue](https://github.com/jar04/flask_portfolio/issues?q=is%3Aopen+is%3Aissue+author%3AProRichyMan+assignee%3Ajar04) | [Commits](https://github.com/jar04/flask_portfolio/commits?author=jar04)| [@jar04](https://github.com/jar04)|
+| Daniel Bertino     | Danny4w | [Scrumboard](https://github.com/jar04/flask_portfolio/projects/1) | [Issue](https://github.com/jar04/flask_portfolio/issues?q=is%3Aopen+is%3Aissue+author%3AProRichyMan+assignee%3ADanny4w) | [Commits](https://github.com/jar04/flask_portfolio/commits?author=Danny4w)| [@Danny4w](https://github.com/Danny4w)|
 
 ## Current Functions
 | Function | Contributor(s)|
 | ------------- | -------------------------------------------------------------|
-| TBD | TBD |
+| About Page | Everybody |
 |  |  |
 |  |  |
 |  |  |
@@ -56,9 +56,28 @@ Scrum Board: https://github.com/Reem57/flask_portfolio/projects/1
 ### Sprint Overview
 | Week Number | Timebox | Issue List                                              |
 | ------------- | ------------- | -------------------------------------------------------------|
-| Sprint 1,2 (Week 2)   |  |      https://github.com/Reem57/flask_portfolio/issues?q=is%3Aopen+is%3Aissue+label%3A%22Week+2%22       |
+| Sprint 3,4 (Week 3)   | https://github.com/Reem57/flask_portfolio/blob/main/README.md#week-3 |      https://github.com/Reem57/flask_portfolio/issues?q=is%3Aopen+is%3Aissue+label%3A%22Week+3%22       |
+| Sprint 1,2 (Week 2)   | https://github.com/Reem57/flask_portfolio/blob/main/README.md#week-2 |      https://github.com/Reem57/flask_portfolio/issues?q=is%3Aopen+is%3Aissue+label%3A%22Week+2%22       |
 | Sprint 1,2 (Week 1)   | https://github.com/Reem57/flask_portfolio#week-1 |    https://github.com/Reem57/flask_portfolio/issues?q=is%3Aopen+is%3Aissue+label%3A%22Week+1%22       |
 | Sprint 0 (Week 0)   | https://github.com/Reem57/flask_portfolio#week-0 |     https://github.com/Reem57/flask_portfolio/issues?q=is%3Aopen+is%3Aissue+label%3A%22Week+0%22       |
+
+### Week 3
+| Members | Jobs | Ticket |
+| ------------- | -------------------------------------------------------------| - |
+| Nathan | Scrum Master | TBD |
+| Reem | TO | TBD |
+| Daniel | Primary Designer | TBD |
+| Jacob | Deployment Manager | TBD |
+| James | Github Admin | TBD |
+
+### Week 2
+| Members | Jobs | Ticket |
+| ------------- | -------------------------------------------------------------| - |
+| Nathan | Scrum Master | https://github.com/Reem57/flask_portfolio/issues/11 |
+| Reem | TO | https://github.com/Reem57/flask_portfolio/issues/11 |
+| Daniel | Primary Designer | https://github.com/Reem57/flask_portfolio/issues/11 |
+| Jacob | Deployment Manager | https://github.com/Reem57/flask_portfolio/issues/11 |
+| James | Github Admin | https://github.com/Reem57/flask_portfolio/issues/11 |
 
 ### Week 1
 | Members | Jobs | Ticket |
