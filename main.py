@@ -47,7 +47,7 @@ def jason():
 
 
 
-@app.route('/adi/', methods={'GET', 'POST'})
+@app.route('/adi', methods={'GET', 'POST'})
 def adi():
     url = "https://sportscore1.p.rapidapi.com/sports/1/teams"
     headers = {
@@ -59,7 +59,7 @@ def adi():
     response = requests.request("GET", url, headers=headers)
     return render_template("adi.html", stats=response.json())
 
-@app.route('/brian/')
+@app.route('/brian')
 def brian():
     url = "https://tennis-live-data.p.rapidapi.com/tournaments/ATP/2020"
     headers = {
@@ -70,7 +70,7 @@ def brian():
     results = json.loads(response.content.decode("utf-8"))['results']
     return render_template("brian.html", res=results)
 
-@app.route('/divya/')
+@app.route('/divya')
 def divya():
     url = "https://famous-quotes4.p.rapidapi.com/random"
     querystring = {"category":"all","count":"2"}
@@ -105,7 +105,7 @@ def photogallery():
             return render_template("photogallery.html", input1=input)
     return render_template("photogallery.html", input1="")
 
-@app.route('/weather/')
+@app.route('/weather')
 def weather():
     return render_template("weather.html")
 
