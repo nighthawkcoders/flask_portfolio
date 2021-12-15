@@ -1,14 +1,19 @@
 # import "packages" from flask
 from flask import Flask, render_template
+from flask import request
+from __init__ import app
+from crud.app_crud import app_crud
 
 # create a Flask instance
-app = Flask(__name__)
+# app = Flask(__name__)
+app.register_blueprint(app_crud)
 
 
 # connects default URL to render index.html
 @app.route('/')
 def index():
     return render_template("index.html")
+
 
 @app.route('/aboutnathan')
 def aboutnathan():
