@@ -60,6 +60,15 @@ def translator():
             return render_template("layouts/translator.html", input=input, name=name)
     return render_template("layouts/translator.html")
 
+@app.route('/crud')
+def crud():
+    return render_template("crud.html")
+
+@app.route('/search')
+def search():
+    return render_template("search.html")
+
+
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)
