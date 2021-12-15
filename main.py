@@ -1,18 +1,20 @@
 # import "packages" from flask
-from pathlib import Path
-
-
-from flask import Flask, render_template, request
+from flask import render_template, request
+from __init__ import app
 import requests
+
+from crud3.app_crud import app_crud
 import http.client
 # create a Flask instance
-app = Flask(__name__)
+
+app.register_blueprint(app_crud)
 
 
 # connects default URL to render index.html
 @app.route('/')
 def home():
     return render_template("home.html")
+
 
 @app.route('/sonakshi', methods=['GET', 'POST'])
 def sonakshi():
@@ -23,6 +25,7 @@ def sonakshi():
             return render_template("sonakshi.html", name=name)
     # starting and empty input default
     return render_template("sonakshi.html", name="World")
+
 
 @app.route('/shreya', methods=['GET', 'POST'])
 def shreya():
@@ -43,6 +46,7 @@ def linda():
             return render_template("linda.html", name=name)
     return render_template("linda.html")
 
+
 @app.route('/khushi', methods=['GET', 'POST'])
 def khushi():
     # submit button has been pushed
@@ -52,6 +56,7 @@ def khushi():
             return render_template("khushi.html", name=name)
     # starting and empty input default
     return render_template("khushi.html", name="World")
+
 
 @app.route('/newapi', methods=['GET', 'POST'])
 def newapi():
@@ -66,6 +71,7 @@ def newapi():
     response = requests.request("GET", url, headers=headers, params=querystring)
 
     return render_template("newapi.html", stats=response.json())
+
 
 @app.route('/listmovie/', methods=['GET', 'POST'])
 def listmovie():
@@ -84,12 +90,12 @@ def listmovie():
 
     return render_template("listmovie.html", response=response)
 
-@app.route ('/dictionary', methods=['GET', 'POST'])
-def dictionary():
 
+@app.route('/dictionary', methods=['GET', 'POST'])
+def dictionary():
     word = "fantastic"
     url = "https://dictionary-by-api-ninjas.p.rapidapi.com/v1/dictionary"
-    querystring = {"word":word}
+    querystring = {"word": word}
     headers = {
         'x-rapidapi-host': "dictionary-by-api-ninjas.p.rapidapi.com",
         'x-rapidapi-key': "69b86a4f86msh0f84d36c298ca22p15693fjsne0d137318725"
@@ -97,13 +103,13 @@ def dictionary():
     response = requests.request("GET", url, headers=headers, params=querystring)
     return render_template("dictionary.html", word=word, stats=response.json())
 
+
 @app.route('/punnuapitest', methods=['GET', 'POST'])
 def punnuapitest():
     url = "https://api.kuroganehammer.com/api/characters"
     response = requests.request("GET", url)
     text = response.json()
     return render_template("/punnuapitest.html", text=text)
-
 
 
 # runs the application on the development server
