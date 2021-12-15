@@ -17,3 +17,7 @@ def pranav():
 
     print(response.json())
     return render_template('pranav.html', data=data[-5:])
+
+@bpranav.route('/dogs/')
+def dogs():
+    return render_template('dogs.html')
