@@ -17,6 +17,7 @@
     <input type="number" name="weight" id = "weight" placeholder="How much is the test worth?" min=0 max=100>
     <button onclick="calcgrade()" id="calc-btn" class='btn'>Submit</button>
     <p id="result"></p>
+    <p id="test"></p>
 </div>
 
 </div>
@@ -32,11 +33,13 @@ function calcgrade() {
       var goal = document.getElementById("goal").value;
       var weight = document.getElementById("weight").value;
       if ((! curr) || (! goal) || (! weight)) {
-            document.getElementById("result").innerText = "Please fill out all the fields. "
+            console.log("situation 0");
+            document.getElementById("test").innerText = "Please fill out all the fields."
       } else {
+          console.log("situation 1");
           other = (curr/100)*(100-weight);
           var needed = +(((goal-other)*100)/weight).toFixed(2);
-          document.getElementById("result").innerText="You need a " + needed + "% to get a " + goal + "% on your exam."
+          document.getElementById("test").innerText = "You needed a " + needed + "% to get a " + goal + "% on the test."
       }
 }
 function theme() {
@@ -107,7 +110,7 @@ function theme() {
    width: 100%;
  }
 
- #result {
+ #test {
    text-align: center;
    font-size: 24px;
    color: var(--tertiary-color)
