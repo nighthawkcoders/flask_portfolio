@@ -3,7 +3,6 @@ from pathlib import Path
 
 
 from flask import Flask, render_template, request
-from algorithms.image import rotatehack, sonakshi_image_data, kashish_image_data, saumya_image_data
 import requests
 import http.client
 # create a Flask instance
@@ -35,18 +34,6 @@ def shreya():
     # starting and empty input default
     return render_template("shreya.html", name="World")
 
-@app.route('/genius', methods=['GET', 'POST'])
-def genius():
-    url = "https://genius.p.rapidapi.com/songs/442856"
-
-    headers = {
-        'x-rapidapi-host': 'genius.p.rapidapi.com',
-        'x-rapidapi-key': '4c61a908e2mshb55cf4906131117p1da9ffjsnde3b82957ef9'
-    }
-
-    response = requests.request("GET", url, headers=headers)
-
-    return render_template("genius.html", stats=response.json())
 
 @app.route('/linda', methods=['GET', 'POST'])
 def linda():
