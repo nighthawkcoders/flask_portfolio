@@ -30,7 +30,15 @@ link to be added later
 #   <h2 id="Week3">Week 3: Due 12/17</h2>
 [Week 3 Issue](https://github.com/RohanG326/supporting_cast/issues/38)
 
-[Week 3 Review Ticket]
+[Week 3 Review Ticket](https://github.com/RohanG326/supporting_cast/issues/48)
+
+Commit | Evidence | Name | Description
+----------- | ----------- | ----------- | -----------
+Weather API | [Evidence](https://github.com/RohanG326/supporting_cast/commit/2c3bd46f006303b30fed43ff574dc017c13568d8) | Brian Tang | Incorporate weather API with city search function
+Deployment | [Evidence](https://github.com/RohanG326/supporting_cast/commit/7f1a9240dcd072166dd644581875570f23f76152) | Jason Kaplan | Add items into requirements.txt for deployment
+Fix APIs | [Evidence](https://github.com/RohanG326/supporting_cast/commit/c3a617dbdc5dfa3ef1d01733dd5c11cfcce8ba54) | Rohan Gaikward | Repair APIs with issues
+CSS | [Evidnece](https://github.com/RohanG326/supporting_cast/commit/4c0e292e7c099ef79d5cd9eeb201dbb4e8dcf3cd) | Divya Suri | Added banner image gallery and fixed CSS
+Add Crud Model | [Evidence](https://github.com/RohanG326/supporting_cast/commit/9a136493e16c9557f6687060f503aac41bffd332) | Adi Khandelwal | Add Crud Model
 
 #   <h2 id="Week2">Week 2: Due 12/10</h2>
 [Week 2 Issue](https://github.com/RohanG326/supporting_cast/issues/39)
