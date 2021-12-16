@@ -3,35 +3,35 @@
 {% set project = "Weather is so Cool" %}
 
 {% block body %}
-<form action='/weather/' method="POST">
+<form action="/weather/" method="POST">
     <input type="text" placeholder="Enter keyword term" name='keyword'>
     <button type="submit">Get Weather</button>
 
 
 </form>
-    <style>
-        table, td, th {
-            border: 10px solid white;
-            padding: 50px;
-        }
-        td, th {
-            text-align:center;
-            color: white;
-            font-size: 20px;
-        }
-        table{
-            width: 75%;
-            margin: auto;
-        }
 
-    </style>
+<style>
+    table, td, th {
+        border: 10px solid white;
+        padding: 50px;
+    }
+    td, th {
+        text-align:center;
+        color: white;
+        font-size: 20px;
+    }
+    table{
+        width: 75%;
+        margin: auto;
+    }
 
+</style>
 
     <div class="-block" style="margin: 2% 25% 5%; font-family: gilroy,serif;">
         <div class="col-12" style="text-align: center;">
             <h1 style="color: midnightblue">City Weather Data</h1>
         </div>
-
+        {% if results %}
         <div class="col-12 mainbox center-block">
             <table style="margin: 2%">
                 <tr>
@@ -58,9 +58,9 @@
 
     </div>
 
-{% if results %}
+
 <p>
-    Currently in {{results.location.city}}, the wind speed is {{results.current_observation.wind.speed}}.
+    Currently in {{ results.location.city }}, the wind speed is {{results.current_observation.wind.speed}}.
     The humidity is {{results.current_observation.atmosphere.humidity}}, the visibility is
     {{results.current_observation.atmosphere.visibility}}, and the pressure is
     {{results.current_observation.atmosphere.pressure}}. Sunrise today is at
