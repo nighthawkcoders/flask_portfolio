@@ -1,10 +1,11 @@
 # Supporting Cast
 
 # Table of Contents
-1. [Week 3 - WIP Project Review](#Week3)
-2. [Week 2 - Home Pages](#Week2)
-3. [Week 1 - Project Approval](#Week1)
-4. [Week 0](#Week0)
+1. [Week 4 - ](#Week4)
+2. [Week 3 - WIP Project Review](#Week3)
+3. [Week 2 - Home Pages](#Week2)
+4. [Week 1 - Project Approval](#Week1)
+5. [Week 0](#Week0)
 
 ## Project Credits
 
@@ -27,10 +28,26 @@ Rohan Gaikwad | GitHub Admin | [@rohang326](https://github.com/rohang326)| [Task
 
 link to be added later
 
+#   <h2 id="Week4">Week 4: Due 1/7</h2>
+[Week 4 Issue](https://github.com/RohanG326/supporting_cast/issues/45)
+
+[Week 4 Review Ticket]
+
+Commit | Evidence | Name | Description
+----------- | ----------- | ----------- | -----------
+
 #   <h2 id="Week3">Week 3: Due 12/17</h2>
 [Week 3 Issue](https://github.com/RohanG326/supporting_cast/issues/38)
 
-[Week 3 Review Ticket]
+[Week 3 Review Ticket](https://github.com/RohanG326/supporting_cast/issues/48)
+
+Commit | Evidence | Name | Description
+----------- | ----------- | ----------- | -----------
+Weather API | [Evidence](https://github.com/RohanG326/supporting_cast/commit/2c3bd46f006303b30fed43ff574dc017c13568d8) | Brian Tang | Incorporate weather API with city search function
+Deployment | [Evidence](https://github.com/RohanG326/supporting_cast/commit/7f1a9240dcd072166dd644581875570f23f76152) | Jason Kaplan | Add items into requirements.txt for deployment
+Fix APIs | [Evidence](https://github.com/RohanG326/supporting_cast/commit/c3a617dbdc5dfa3ef1d01733dd5c11cfcce8ba54) | Rohan Gaikward | Repair APIs with issues
+CSS | [Evidnece](https://github.com/RohanG326/supporting_cast/commit/4c0e292e7c099ef79d5cd9eeb201dbb4e8dcf3cd) | Divya Suri | Added banner image gallery and fixed CSS
+Add Crud Model | [Evidence](https://github.com/RohanG326/supporting_cast/commit/9a136493e16c9557f6687060f503aac41bffd332) | Adi Khandelwal | Add Crud Model
 
 #   <h2 id="Week2">Week 2: Due 12/10</h2>
 [Week 2 Issue](https://github.com/RohanG326/supporting_cast/issues/39)
