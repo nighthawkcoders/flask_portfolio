@@ -15,6 +15,10 @@ app = Flask(__name__)
 def home():
     return render_template("home.html")
 
+@app.route('/dark')
+def dark():
+    return render_template("dark.html")
+
 @app.route('/study')
 def study():
     return render_template("study.html")
