@@ -30,7 +30,7 @@ A studying site. Will contain minigames and useful tools to help students study.
 | Evan | [Finished about page](https://github.com/SimonBrunzell/flask_portfolio/commits?author=deimie)|
 | Vunsh | []() |
 | Simon | [Color palate update](https://github.com/SimonBrunzell/flask_portfolio/commit/e05e3514c207b90a36fbee1ec5b71863db8bb2b6)|
-| Sanjay | [Flashcards + updates](https://github.com/SimonBrunzell/flask_portfolio/commit/ebb9432c4da0f185c922d74f6f7ae6c6c8a11f1b) <br/> [Added PBL Technical](https://github.com/SimonBrunzell/flask_portfolio/pull/43) <br/> [Toggling Navbar Search](https://github.com/SimonBrunzell/flask_portfolio/commit/b34bf5e3042d547cbb95310623b9d363b99e942e)|
+| Sanjay | [Flashcards + updates](https://github.com/SimonBrunzell/flask_portfolio/commit/ebb9432c4da0f185c922d74f6f7ae6c6c8a11f1b) <br/> [Added PBL Technical](https://github.com/SimonBrunzell/flask_portfolio/pull/43) <br/> [Toggling Navbar Search](https://github.com/SimonBrunzell/flask_portfolio/commit/fc94584859e3ee03c1e0c931b3e8fc4cb41a0cae)|
 | Leah | [Search database](https://github.com/SimonBrunzell/flask_portfolio/commit/756e4652ce3621ec1b88505263758b0cedc97dc4)|
 
 ### Week 2
