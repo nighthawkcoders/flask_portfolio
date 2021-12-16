@@ -3,13 +3,13 @@
 {% set project = "Photo Gallery" %}
 
 {% block body %}
-<h1 style="text-align: center; font-size: 70px"> Photo Gallery</h1>
-<h4 style="text-align: center">Stunning Images From Locations Around the World!</h4>
-<body style="background-color:lightpink; height: 4200px">
+<div class="container">
+    <img id="photogallery" src="/static/photogallery.PNG">
+    <div id="title">  Photo Gallery </div>
+    <div id="subheading"> Amazing pictures from around the world! </div>
+</div>
 
 
-
-<br>
 <script>
     function beaches() {
         const imageBeach = ["http://cdn.cnn.com/cnnnext/dam/assets/181010131059-australia-best-beaches-cossies-beach-cocos3.jpg",
@@ -70,7 +70,7 @@
     }
 
 </script>
-<div style="text-align: center">
+<div class="search_input" style="text-align: center">
     <div class="col-0">
         <form action="/photogallery" id="greet" method="POST">
             <label for="input">Search for a location</label>
@@ -80,30 +80,76 @@
         </form>
         <p>Your input was: {{input1}}</p>
         <script>
-            if(input1.getElementById(greet)=="San Diego"){
+            if(input1.getElementById(greet)=="San Diego")
+            {
                 cities();
             }
         </script>
     </div>
-    </br>
-
-    <input type="button" onclick="beaches()" value="          Beaches          " />
-<input type="button" onclick="mountains()" value="          Mountains          "/>
-<input type="button" onclick="forests()" value="          Forests          "/>
-<input type="button" onclick="cities()" value="          Cities          "/>
-<br>
-
-
-<img src="https://www.iconsdb.com/icons/preview/white/square-xxl.png" id="image0" width="900" height="750" hidden="hidden">
-<br>
-<img src="https://www.iconsdb.com/icons/preview/white/square-xxl.png" id="image1" width="900" height="750" hidden="hidden">
-<br>
-<img src="https://www.iconsdb.com/icons/preview/white/square-xxl.png" id="image2" width="900" height="750" hidden="hidden">
-<br>
-<img src="https://www.iconsdb.com/icons/preview/white/square-xxl.png" id="image3" width="900" height="750" hidden="hidden">
-<br>
-<img src="https://www.iconsdb.com/icons/preview/white/square-xxl.png" id="image4" width="900" height="750" hidden="hidden">
-
 </div>
+
+<div class="search_buttons">
+    <input type="button" style="width:200px" onclick="beaches()" value="Beaches" />
+    <input type="button" style="width:200px" onclick="mountains()" value="Mountains"/>
+    <input type="button" style="width:200px" onclick="forests()" value="Forests"/>
+    <input type="button" style="width:200px" onclick="cities()" value="Cities"/>
+    <br>
+    <img src="https://www.iconsdb.com/icons/preview/white/square-xxl.png" id="image0" width="900" height="750" hidden="hidden">
+    <br>
+    <img src="https://www.iconsdb.com/icons/preview/white/square-xxl.png" id="image1" width="900" height="750" hidden="hidden">
+    <br>
+    <img src="https://www.iconsdb.com/icons/preview/white/square-xxl.png" id="image2" width="900" height="750" hidden="hidden">
+    <br>
+    <img src="https://www.iconsdb.com/icons/preview/white/square-xxl.png" id="image3" width="900" height="750" hidden="hidden">
+    <br>
+    <img src="https://www.iconsdb.com/icons/preview/white/square-xxl.png" id="image4" width="900" height="750" hidden="hidden">
+    <br>
+    <br>
+</div>
+
+<style>
+    #photogallery{
+        padding-top: 80px;
+        position: absolute;
+        left: 300px;
+        top: 1%;
+    }
+    #title{
+        top: 40px;
+        left: 300px;
+        position: relative;
+        font-size:75px;
+        font-weight: bold;
+        font-family: "Times New Roman";
+    }
+    #subheading{
+        top: 30px;
+        left: 300px;
+        font-size:30px;
+        font-weight: bold;
+        font-family: "Times New Roman";
+        position:relative;
+
+    }
+    container {
+        position: relative;
+        text-align: center;
+        color: white;
+    }
+    .search_input{
+        padding-top: 100px;
+        position: relative;
+    }
+    .search_buttons{
+        padding-top: 20px;
+        padding-left: 200px;
+        position: relative;
+    }
+
+    html,body{
+        background-color: saddlebrown;
+        min-height:200%
+    }
+</style>
 
 {% endblock %}
