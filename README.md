@@ -46,9 +46,9 @@ Scrum Board: https://github.com/Reem57/flask_portfolio/projects/1
 | Function | Contributor(s)|
 | ------------- | -------------------------------------------------------------|
 | About Page | Everybody |
-|  |  |
-|  |  |
-|  |  |
+| Search Bar + Crud | Reem |
+| Translator | Daniel |
+| Feedback | Daniel |
 |  |  |
 |  |  |
 |  |  |
