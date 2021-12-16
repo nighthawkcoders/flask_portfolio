@@ -14,22 +14,6 @@ app.register_blueprint(app_crud)
 def index():
     return render_template("index.html")
 
-
-# connects /kangaroos path to render kangaroos.html
-@app.route('/kangaroos/')
-def kangaroos():
-    return render_template("kangaroos.html")
-
-
-@app.route('/walruses/')
-def walruses():
-    return render_template("walruses.html")
-
-
-@app.route('/hawkers/')
-def hawkers():
-    return render_template("hawkers.html")
-
 @app.route('/jason/')
 def jason():
     url = "https://video-game-news.p.rapidapi.com/star_wars"
