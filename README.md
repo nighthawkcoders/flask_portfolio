@@ -12,7 +12,7 @@
 
 ### Table of Contents
 - [Idea](#idea)
-- [Week by Week Progress](#week-by-week-progress)
+- [TimeBoxes](#timeboxes)
   - [Week 3](#week-3)
   - [Week 2](#week-2)
   - [Week 1](#week-1)
@@ -21,7 +21,7 @@
 ## Idea
 A studying site. Will contain minigames and useful tools to help students study. 
 
-## Week by Week Progress
+## Timeboxes
 
 ### Week 3
 
@@ -30,7 +30,7 @@ A studying site. Will contain minigames and useful tools to help students study.
 | Evan | [Finished about page](https://github.com/SimonBrunzell/flask_portfolio/commits?author=deimie)|
 | Vunsh | []() |
 | Simon | [Color palate update](https://github.com/SimonBrunzell/flask_portfolio/commit/e05e3514c207b90a36fbee1ec5b71863db8bb2b6)|
-| Sanjay | [Flashcards + updates](https://github.com/SimonBrunzell/flask_portfolio/commit/ebb9432c4da0f185c922d74f6f7ae6c6c8a11f1b)|
+| Sanjay | [Flashcards + updates](https://github.com/SimonBrunzell/flask_portfolio/commit/ebb9432c4da0f185c922d74f6f7ae6c6c8a11f1b) <br/> [Added PBL Technical](https://github.com/SimonBrunzell/flask_portfolio/pull/43) <br/> [Toggling Navbar Search](https://github.com/SimonBrunzell/flask_portfolio/commit/b34bf5e3042d547cbb95310623b9d363b99e942e)|
 | Leah | [Search database](https://github.com/SimonBrunzell/flask_portfolio/commit/756e4652ce3621ec1b88505263758b0cedc97dc4)|
 
 ### Week 2
@@ -40,7 +40,7 @@ A studying site. Will contain minigames and useful tools to help students study.
 | Evan | [Finished README formatting](https://github.com/SimonBrunzell/flask_portfolio/commit/5d3e9d82f9e9de190f86bf43b78bf94ac5f8577a)|
 | Vunsh | []()|
 | Simon | [Dark Mode](https://github.com/SimonBrunzell/flask_portfolio/commit/abdc6d4138397996c5fed6d9a9279f3f34f19427)[Pull request](https://github.com/SimonBrunzell/flask_portfolio/pull/39)|
-| Sanjay | [Theme toggling](https://github.com/SimonBrunzell/flask_portfolio/commit/86813b769306aa29833f3a7a7cf7b26da53ed283) [Pull request](https://github.com/SimonBrunzell/flask_portfolio/pull/36)|
+| Sanjay | [Theme toggling](https://github.com/SimonBrunzell/flask_portfolio/commit/86813b769306aa29833f3a7a7cf7b26da53ed283) [Pull request](https://github.com/SimonBrunzell/flask_portfolio/pull/36) |
 | Leah | [Notes section working](https://github.com/SimonBrunzell/flask_portfolio/commit/e5b6704cd10023d74e9cb5a4312c1325aa6a9d01)|
 
 ### Week 1
