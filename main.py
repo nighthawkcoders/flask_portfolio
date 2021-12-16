@@ -16,6 +16,22 @@ def home():
     return render_template("home.html")
 
 
+@app.route('/dark')
+def dark():
+    return render_template("dark.html")
+
+@app.route('/study')
+def study():
+    return render_template("study.html")
+
+@app.route('/stress')
+def stress():
+    return render_template("stress.html")
+
+@app.route('/volunteer')
+def volunteer():
+    return render_template("volunteer.html")
+
 @app.route('/sonakshi', methods=['GET', 'POST'])
 def sonakshi():
     # submit button has been pushed
@@ -109,7 +125,7 @@ def punnuapitest():
     url = "https://api.kuroganehammer.com/api/characters"
     response = requests.request("GET", url)
     text = response.json()
-    return render_template("/punnuapitest.html", text=text)
+    return render_template("punnuapitest.html", text=text)
 
 
 # runs the application on the development server
