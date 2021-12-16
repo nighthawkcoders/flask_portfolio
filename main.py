@@ -1,56 +1,30 @@
 # import "packages" from flask
-from flask import Flask, render_template
+from flask import Flask, render_template, request
+from crud import app_crud
+from __init__ import app
+from flask import Blueprint
 import requests
-from pathlib import Path
+import ssl
 
+
+from blueprints.connor import bconnor
+from blueprints.pranav import bpranav
+from blueprints.colin import bcolin
+from blueprints.chase import bchase
+from blueprints.tanay import btanay
 # create a Flask instance
-app = Flask(__name__)
+app.register_blueprint(app_crud)
+app.register_blueprint(bconnor, url_prefix="/")
+app.register_blueprint(bpranav, url_prefix="/")
+app.register_blueprint(bcolin, url_prefix="/")
+app.register_blueprint(bchase, url_prefix="/")
+app.register_blueprint(btanay, url_prefix="/")
+
 
 @app.route('/')
 def index():
     return render_template("index.html")
 
-@app.route('/connor/')
-def connor():
-    url = "https://genius.p.rapidapi.com/artists/16775/songs"
-
-    headers = {
-        'x-rapidapi-host': "genius.p.rapidapi.com",
-        'x-rapidapi-key': "e96b80de18msh080ccecb09304e3p1f9084jsn90d405c70ce3"
-    }
-
-    response = requests.request("GET", url, headers=headers)
-    data = response.json()['response']['songs']
-
-    print(data)
-    return render_template('connor.html', data=data)
-
-@app.route('/Chase/')
-def chase():
-    return render_template('Chase.html')
-
-@app.route('/tanay/')
-def tanay():
-    return render_template('tanay.html')
-
-@app.route('/colin/')
-def colin():
-    return render_template('colin.html')
-
-@app.route('/pranav/')
-def pranav():
-    url = "https://free-football-soccer-videos.p.rapidapi.com/"
-
-    headers = {
-        'x-rapidapi-host': "free-football-soccer-videos.p.rapidapi.com",
-        'x-rapidapi-key': "a52c00a742mshc6c13b49056f1c7p11b54cjsnc5e7c51a6001"
-    }
-
-    response = requests.request("GET", url, headers=headers)
-    data = response.json()
-
-    print(response.json())
-    return render_template('pranav.html', data=data[-5:])
 
 
 

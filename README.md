@@ -7,15 +7,12 @@
 ### ![Animal Adoption Wireframe](https://user-images.githubusercontent.com/89223703/145302079-f7f57720-5e20-4077-8e01-50e62d9e3276.png)
 
 
-
-
-
-
-
 ## Table of Contents
 1. [GitHub repo Contributors](https://github.com/connorw72/food/graphs/contributors)
 2. Pair Share Journals [Tanay and Connor](https://docs.google.com/document/d/1yMnRk0cY8TWYl3YKTgz0OKkrI5Gac4pEyoyiffEeUoE/edit?usp=sharing), [Colin Pranav and Chase](https://docs.google.com/document/d/1iU4SOdLDTyFTuoI4yuBxjvRjvVHq53I5JZgaCRP8Ah4/edit?usp=sharing)
 3. [Innovation sprint 1,2 Week 1](https://github.com/connorw72/food#innovation-sprint-12-week-1)
+4. [Innovation sprint 1,2 Week 2](https://github.com/connorw72/food#innovation-sprint-12-week-2)
+5. [Database intro sprint 3 week 3](https://github.com/connorw72/food#database-intro-sprint-3-week-3)
 ## Contributors
 | Name | GitHub ID and Profile | Tasks | Scrum Board | Commits | BOF Job |
 |:-----|:----------------------|:-----:|:-----------:|:-------:|:--------:|
@@ -32,3 +29,33 @@
 |Github - On Wiki containing Management Plan| [Wiki page](https://github.com/connorw72/food/wiki/Github-Admin-Policy-Stuff)
 |Deployment - Wiki Plan, Hardware and Frequency| [Wiki page](https://github.com/connorw72/food/wiki/Deployment-Guide),[Proof of Completion](https://docs.google.com/document/d/1CnUgrEOaBEkarbom8t4-QB-iBG9zsTitnZ6huIYOVTU/edit?usp=sharing)
 |Scrum Board - Assignments and Backlog| [Wiki page](https://github.com/connorw72/food/wiki/Scrum-Master-Policies),[Assignments(Scrum Board)](https://github.com/connorw72/food/projects/1),[Backlog](https://github.com/connorw72/food/projects/1#column-17077693)
+### Innovation sprint 1,2 Week 2
+|Task| Tangible Link |
+|:-----|:----------------------|
+|Connor's About Pages on deployed on Site - Page must Extend from Layout and have special customization (color pallet, background, etc), Picture with Mask that toggles to Picture of Choice (ie pic without mask), Pull or show data (Web API) with information of interest, Establish link(s) to journal and other key indicators of your work and progress (remember pop quiz). TPT Link to Create Task planning| [Code](https://github.com/connorw72/food/blob/main/templates/connor.html)
+|Colin's About Pages on deployed on Site - Page must Extend from Layout and have special customization (color pallet, background, etc), Picture with Mask that toggles to Picture of Choice (ie pic without mask), Pull or show data (Web API) with information of interest, Establish link(s) to journal and other key indicators of your work and progress (remember pop quiz). TPT Link to Create Task planning| [Code](https://github.com/connorw72/food/blob/main/templates/colin.html)
+|Tanay's About Pages on deployed on Site - Page must Extend from Layout and have special customization (color pallet, background, etc), Picture with Mask that toggles to Picture of Choice (ie pic without mask), Pull or show data (Web API) with information of interest, Establish link(s) to journal and other key indicators of your work and progress (remember pop quiz). TPT Link to Create Task planning| [Code](https://github.com/connorw72/food/blob/main/templates/tanay.html)
+|Pranav's About Pages on deployed on Site - Page must Extend from Layout and have special customization (color pallet, background, etc), Picture with Mask that toggles to Picture of Choice (ie pic without mask), Pull or show data (Web API) with information of interest, Establish link(s) to journal and other key indicators of your work and progress (remember pop quiz). TPT Link to Create Task planning| [Code](https://github.com/connorw72/food/blob/main/templates/pranav.html)
+|Chase's About Pages on deployed on Site - Page must Extend from Layout and have special customization (color pallet, background, etc), Picture with Mask that toggles to Picture of Choice (ie pic without mask), Pull or show data (Web API) with information of interest, Establish link(s) to journal and other key indicators of your work and progress (remember pop quiz). TPT Link to Create Task planning| [Code](https://github.com/connorw72/food/blob/main/templates/Chase.html)
+|Release day policy| [Wiki](https://github.com/connorw72/food/wiki/Deployment-Guide#deployment-policy)
+|Create task plan| On Journals [Tanay and Connor](https://docs.google.com/document/d/1yMnRk0cY8TWYl3YKTgz0OKkrI5Gac4pEyoyiffEeUoE/edit?usp=sharing), [Colin Pranav and Chase](https://docs.google.com/document/d/1iU4SOdLDTyFTuoI4yuBxjvRjvVHq53I5JZgaCRP8Ah4/edit?usp=sharing)
+|Deployed Website|[Site]()
+### Database intro sprint 3 week 3
+|Task| Tangible Link |
+|:-----|:----------------------|
+|Design Manager showing Bootstrap layouts, and at least 3 frontend screens with functionality toward Project Theme.|[Screen 1](https://github.com/connorw72/food/blob/main/templates/dogs.html),[Screen 2](https://github.com/connorw72/food/blob/main/templates/birds.html), [Screen 3]()
+|Scrum Master overview of progress using GitHub README, Tickets (Completed and Backlog), and Wiki.  Show expected backlog when returning from Winter Break.| [Expected Backlog](https://github.com/connorw72/food/projects/1#column-17077693),[Wiki](https://github.com/connorw72/food/wiki/Stories-Progress)
+|Technical officer highlighting Asynchronous access(es) to a Database (expectation is a Search and/or a CRUD operations).|[init](https://github.com/connorw72/food/blob/main/crud/__init__.py),[Model](https://github.com/connorw72/food/blob/main/crud/model.py),[Dark](https://github.com/connorw72/food/blob/main/crud/templates/crud/crud.html),[Search](https://github.com/connorw72/food/blob/main/crud/templates/crud/search.html),[Video](https://youtu.be/_9MRMyBmT9c)
+|Deployment manager showing Web Site running from URL (https), and demonstrating the process to perform an update.|[Website](https://tanayteamfood.tk/),[Process](https://github.com/connorw72/food/wiki/Deployment-Guide#process-to-perform-an-update)
+|GitHub admin highlighting issue, commits, and pull requests completed by each individual.|[Commits of all from main branch](https://github.com/connorw72/food/commits/main)
+
+|AP MCQ| Journals |
+|:-----|:----------------------|
+|AP MCQ Test and Corrections (2 pts)| [Connor and Tanay](https://docs.google.com/document/d/1yMnRk0cY8TWYl3YKTgz0OKkrI5Gac4pEyoyiffEeUoE/edit?usp=sharing)
+|AP MCQ Test and Corrections (2 pts)| [Pranav, Chase, Colin](https://docs.google.com/document/d/1iU4SOdLDTyFTuoI4yuBxjvRjvVHq53I5JZgaCRP8Ah4/edit?usp=sharing)
+
+
+
+
+
+

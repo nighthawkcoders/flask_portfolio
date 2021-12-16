@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+{% extends "layouts/base.html" %}
+{% block head %}
+<html lang="en">
+<head>
+    <title>Bootstrap 5 Website Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .fakeimg {
+            height: 200px;
+            background: #aaa;
+        }
+    </style>
+</head>
+{%endblock%}
+{% block body %}
+<body>
+
+<div class="p-5 bg-primary text-white text-center">
+    <h1>Bird Adoption Information Page</h1>
+</div>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <div class="container-fluid">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link active" href="https://www.humanesociety.org/resources/top-reasons-adopt-pet">Why Pet Adoption?</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="https://akitarescue.rescuegroups.org/info/display?PageID=3247#:~:text=If%20your%20dog%20doesn't,execution%2C%20though%20not%20for%20long.">What Happens To Rescued Pets?</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="https://www.animalfriends.co.uk/dog/dog-blog/10-benefits-of-owning-a-pet/">Benefits of Owning a Pet</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<h2>Bird Adoption Information</h2>
+<p>Have you ever wondered what it is like to have a pet bird? Many people own both cats and dogs, however birds are extremely unique and fun to have around. Did you know that some species of birds can also mmic words that you say and repeat your words? There are many different types of birds that people can own as pets. Many of these birds have lost their homes or have gotten injured which has resulted in them having to be rescued and kept in shelters. Birds are one of the most affected species because of global warming and this is because of deforestation. Deforestation has resulted in birds losing their homes in their natural environments and them being forced into living in cities. While living in cities, many of these birds are injured because of human activities. Therefore, large amounts of birds are ending up in rescue shelters. These birds need a home and it would be a great investment and stress reliver to get a bird of your own. Below we have created a table showing three of the more wellknown birds and where you can adopt them.</p>
+<div class="container mt-3">
+    <h2>Bird Adoption Table</h2>
+    <table class="table table-dark table-hover">
+        <thead>
+        <tr>
+            <th>Type of Bird</th>
+            <th>Popularity</th>
+            <th>Link to Adopt</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Parrot</td>
+            <td>5/5</td>
+            <td><a href="https://www.petfinder.com/member/us/ca/san-diego/parrot-education-adoption-center-ca1694/">Parrot Adoption</a></td>
+        </tr>
+        <tr>
+            <td>Lovebird</td>
+            <td>4/5</td>
+            <td><a href="https://www.adoptapet.com/s/lovebird-adoption">Lovebird Adoption</a></td>
+        </tr>
+        <tr>
+            <td>Dove</td>
+            <td>3/5</td>
+            <td><a href="https://www.pigeonrescue.org/">Dove Adoption</a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="mt-5 p-4 bg-dark text-white text-center">
+    <p>Created By Pranav: Team Food</p>
+</div>
+
+</body>
+{% endblock %}
+</html>

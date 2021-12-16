@@ -26,14 +26,10 @@
             <tbody>
             <tr>
                 <td>
-                    <img id="chaseMask" class="img-responsive py-3" alt="" width="512" src="/static/assets/ChaseMask.jpg">
-                    <div class="d-grid gap-2 $blue">
-                        <button class="btn-lg" onclick="mask()">With Mask</button>
-                        <button class="btn-lg" onclick="nomask()">No Mask</button>
-                    </div>
+                    <b> Click the Image </b>
+                    <img id="image" onclick=MaskChanger(); src="/static/assets/ChaseMask.jpg" width="600" alt="123">
                 </td>
                 <td>
-
                 <p style="text-align:center" class="fs-2">
                  My name is Chase and I am a sophomore at Del Norte Homeschool.
                  I took AP Computer Science because I was interested in how coding worked.
@@ -42,14 +38,17 @@
                 </td>
 
     <script>
-        function mask() {
-            document.getElementById('chaseMask')
-                .src="/static/assets/ChaseMask.jpg";
-        }
+        let MaskToggle = "YMask";
 
-        function nomask() {
-            document.getElementById('chaseMask')
-                .src="/static/assets/ChasenoMask.jpg";
+        function MaskChanger(){
+            if (MaskToggle === "YMask") {
+                document.getElementById("image").src = "/static/assets/ChaseMask.Jpg";
+                MaskToggle = "NMask"
+            }
+            else if (MaskToggle === "NMask") {
+                document.getElementById("image").src = "/static/assets/ChasenoMask.jpg";
+                MaskToggle = "YMask"
+            }
         }
     </script>
 
@@ -64,5 +63,12 @@
             }
         </style>
     </div>
+    <div>
+    <h1> Free Games on Epic Games API </h1>
+        <b>{{ fgame[0] }}, {{ fgame[1] }}, {{ fgame[2] }}</b>
+
+    </div>
+
+
 {%endblock%}
 </html>

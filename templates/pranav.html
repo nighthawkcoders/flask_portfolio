@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+{% extends "layouts/base.html" %}
+{% block head %}
 <html>
 <head>
     <script>
@@ -123,6 +125,8 @@
         }
     </style>
 </head>
+{%endblock%}
+{% block body %}
 <body>
 
 <div class="header">
@@ -171,10 +175,11 @@
                 {% endfor %}
             </div>
 </div>
-
+        <p><a href="https://docs.google.com/document/d/1iU4SOdLDTyFTuoI4yuBxjvRjvVHq53I5JZgaCRP8Ah4/edit?usp=sharing">Pranav, Chase, and Colin Journal</a></p>
 
 
 </body>
+{% endblock %}
 </html>
 
 
