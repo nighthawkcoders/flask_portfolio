@@ -7,7 +7,6 @@
 ### ![Animal Adoption Wireframe](https://user-images.githubusercontent.com/89223703/145302079-f7f57720-5e20-4077-8e01-50e62d9e3276.png)
 
 
-
 ## Table of Contents
 1. [GitHub repo Contributors](https://github.com/connorw72/food/graphs/contributors)
 2. Pair Share Journals [Tanay and Connor](https://docs.google.com/document/d/1yMnRk0cY8TWYl3YKTgz0OKkrI5Gac4pEyoyiffEeUoE/edit?usp=sharing), [Colin Pranav and Chase](https://docs.google.com/document/d/1iU4SOdLDTyFTuoI4yuBxjvRjvVHq53I5JZgaCRP8Ah4/edit?usp=sharing)
@@ -46,9 +45,16 @@
 |:-----|:----------------------|
 |Design Manager showing Bootstrap layouts, and at least 3 frontend screens with functionality toward Project Theme.|[Screen 1](https://github.com/connorw72/food/blob/main/templates/dogs.html),[Screen 2](https://github.com/connorw72/food/blob/main/templates/birds.html), [Screen 3]()
 |Scrum Master overview of progress using GitHub README, Tickets (Completed and Backlog), and Wiki.  Show expected backlog when returning from Winter Break.| [Expected Backlog](https://github.com/connorw72/food/projects/1#column-17077693),[Wiki](https://github.com/connorw72/food/wiki/Stories-Progress)
-|Technical officer highlighting Asynchronous access(es) to a Database (expectation is a Search and/or a CRUD operations).|[init](https://github.com/connorw72/food/blob/main/crud/__init__.py),[Model](https://github.com/connorw72/food/blob/main/crud/model.py),[Dark](https://github.com/connorw72/food/blob/main/crud/templates/crud/crud.html),[Search](https://github.com/connorw72/food/blob/main/crud/templates/crud/search.html)
-|Deployment manager showing Web Site running from URL (https), and demonstrating the process to perform an update.|[Website](https://tanayteamfood.tk/)
+|Technical officer highlighting Asynchronous access(es) to a Database (expectation is a Search and/or a CRUD operations).|[init](https://github.com/connorw72/food/blob/main/crud/__init__.py),[Model](https://github.com/connorw72/food/blob/main/crud/model.py),[Dark](https://github.com/connorw72/food/blob/main/crud/templates/crud/crud.html),[Search](https://github.com/connorw72/food/blob/main/crud/templates/crud/search.html),[Video](https://youtu.be/_9MRMyBmT9c)
+|Deployment manager showing Web Site running from URL (https), and demonstrating the process to perform an update.|[Website](https://tanayteamfood.tk/),[Process](https://github.com/connorw72/food/wiki/Deployment-Guide#process-to-perform-an-update)
 |GitHub admin highlighting issue, commits, and pull requests completed by each individual.|[Commits of all from main branch](https://github.com/connorw72/food/commits/main)
+
+|AP MCQ| Journals |
+|:-----|:----------------------|
+|AP MCQ Test and Corrections (2 pts)| [Connor and Tanay](https://docs.google.com/document/d/1yMnRk0cY8TWYl3YKTgz0OKkrI5Gac4pEyoyiffEeUoE/edit?usp=sharing)
+|AP MCQ Test and Corrections (2 pts)| [Pranav, Chase, Colin](https://docs.google.com/document/d/1iU4SOdLDTyFTuoI4yuBxjvRjvVHq53I5JZgaCRP8Ah4/edit?usp=sharing)
+
+
 
 
 
