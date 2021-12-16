@@ -46,8 +46,9 @@
 |Design Manager showing Bootstrap layouts, and at least 3 frontend screens with functionality toward Project Theme.|[Bootstrap layouts]()
 |Scrum Master overview of progress using GitHub README, Tickets (Completed and Backlog), and Wiki.  Show expected backlog when returning from Winter Break.| [Backlog](),
 |Technical officer highlighting Asynchronous access(es) to a Database (expectation is a Search and/or a CRUD operations).|[Search or CRUD]()
-|Deployment manager showing Web Site running from URL (https), and demonstrating the process to perform an update.|[Website]()
+|Deployment manager showing Web Site running from URL (https), and demonstrating the process to perform an update.|[Website](https://tanayteamfood.tk/)
 |GitHub admin highlighting issue, commits, and pull requests completed by each individual.|[Issue, commits and pull requests]()
+
 
 
 
