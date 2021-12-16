@@ -13,7 +13,7 @@
 2. Pair Share Journals [Tanay and Connor](https://docs.google.com/document/d/1yMnRk0cY8TWYl3YKTgz0OKkrI5Gac4pEyoyiffEeUoE/edit?usp=sharing), [Colin Pranav and Chase](https://docs.google.com/document/d/1iU4SOdLDTyFTuoI4yuBxjvRjvVHq53I5JZgaCRP8Ah4/edit?usp=sharing)
 3. [Innovation sprint 1,2 Week 1](https://github.com/connorw72/food#innovation-sprint-12-week-1)
 4. [Innovation sprint 1,2 Week 2](https://github.com/connorw72/food#innovation-sprint-12-week-2)
-5. [Database intro sprint 3 week 3]()
+5. [Database intro sprint 3 week 3](https://github.com/connorw72/food#database-intro-sprint-3-week-3)
 ## Contributors
 | Name | GitHub ID and Profile | Tasks | Scrum Board | Commits | BOF Job |
 |:-----|:----------------------|:-----:|:-----------:|:-------:|:--------:|
