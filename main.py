@@ -58,6 +58,14 @@ def translator():
             return render_template("layouts/translator.html", input=input, name=name)
     return render_template("layouts/translator.html")
 
+@app.route('/weather/', methods=['GET', 'POST'])
+def weather():
+    if request.form:
+        input = request.form.get("feed1")
+        name = request.form.get("feed2")
+        if len(input) != 0:  # input field has content
+            return render_template("layouts/weather.html", input=input, name=name)
+    return render_template("layouts/weather.html")
 
 # runs the application on the development server
 # changed port from 5000 to 8080 to test gunicorn
