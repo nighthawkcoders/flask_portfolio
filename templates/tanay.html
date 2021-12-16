@@ -2,48 +2,97 @@
 {% extends "layouts/base.html" %}
 
 {% block head %}
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Tanay</title>
 
-<script>
-    function mask() {
-        document.getElementById("place")
-        .src="/static/assets/maskedtanay.jpg";
-    }
-    function nomask() {
-        document.getElementById("place")
-        .src="/static/assets/maskofftanay.jpg";
-    }
-</script>
-{% endblock %}
+    <script>
 
-{% block body %}
+        var maskon = true;
+        function togglemask() {
+            if(maskon) {
+                maskon = false;
+                document.getElementById('place').src="/static/assets/maskofftanay.jpg";
+                document.getElementById("togglemask-btn").innerText = "Put mask on";
+            } else{
+                maskon = true;
+                document.getElementById('place').src="/static/assets/maskedtanay.jpg";
+                document.getElementById("togglemask-btn").innerText = "Take mask off";
+            }
+        }
+        // togglemask()
+        // togglemask()
+    </script>
+
+    {% endblock %}
+
+    {% block body %}
 
 </head>
 
 <body>
-<h1>Meet Tanay Rayavarapu</h1>
-<h2>Deployment Manager</h2>
+<h1 class="text-center">Meet Tanay Rayavarapu</h1>
 <div class="container">
     <div class="row justify-content-md-center" style="align:center">
         <table class="table">
             <thead>
             <tr>
-                <th style="text-align:center">Tanay</th>
+                <th colspan="2">
+                    <h3 style="text-align:center">Deployment Manager of Team Food</h3>
+                </th>
             </tr>
             </thead>
-            <tbody>
+            <tr>
             <tr>
                 <td>
                     <img id="place" class="img-responsive py-3" alt="" width="256" src="/static/assets/maskedtanay.jpg" >
                     <div>
-                        <button onclick="mask()">Mask</button>
-                        <button onclick="nomask()">No Mask</button>
+                        <button onclick="togglemask()" id="togglemask-btn">Take mask off</button>
                     </div>
                 </td>
             </tr>
+
+            <p style="text-align:center" class="fs-2">
+                Hi, my name is Tanay Rayavarapu and I am a junior at Del Norte High School.
+                <a href="https://docs.google.com/document/d/1yMnRk0cY8TWYl3YKTgz0OKkrI5Gac4pEyoyiffEeUoE/edit?usp=sharing"> Tanay and Connor Journal </a>
+            </p>
+            </td>
+            </tr>
+
+            {% set teams = stats.data %}
+
+            <div class="center-block" style="margin: 2% 5% 5%; font-family: gilroy,serif;">
+                <!-- Title -->
+                <div class="col-12" style="text-align: center;">
+
+                </div>
+
+                <!-- Sequence -->
+                <div class="col-12 mainbox center-block">
+                    <table style="margin: 2%">
+                        <tr>
+                            <th>Team Name</th>
+                            <th>Country</th>
+                            <th>Logo</th>
+                        </tr>
+
+                        {% for team in teams %}
+                        <tr>
+                            {% set teamname = team.name %}
+                            <td>{{teamname}}</td>
+                            {% set country = team.country %}
+                            <td>{{country}}</td>
+                            {% set logo = team.logo %}
+                            <td><img src="{{logo}}"></td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+
+                </div>
+
+            </div>
 </body>
 </html>
 {% endblock %}

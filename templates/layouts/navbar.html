@@ -29,17 +29,37 @@
                     About Pages
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="{{ url_for('connor') }}">Connor</a>
-                    <a class="dropdown-item" href="{{ url_for('tanay') }}">Tanay</a>
-                    <a class="dropdown-item" href="{{ url_for('colin')}}">Colin</a>
-                    <a class="dropdown-item" href="{{ url_for('pranav')}}">Pranav</a>
-                    <a class="dropdown-item" href="{{ url_for('chase')}}">Chase</a>
+                    <a class="dropdown-item" href="{{ url_for('bconnor.connor') }}">Connor</a>
+                    <a class="dropdown-item" href="{{ url_for('btanay.tanay') }}">Tanay</a>
+                    <a class="dropdown-item" href="{{ url_for('bcolin.colin')}}">Colin</a>
+                    <a class="dropdown-item" href="{{ url_for('bpranav.pranav')}}">Pranav</a>
+                    <a class="dropdown-item" href="{{ url_for('bchase.chase')}}">Chase</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarStarters" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    PBL Pages
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="{{ url_for('bpranav.dogs') }}">Dogs Adoption</a>
                 </div>
             </li>
 
         </div>
 
     </div>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <ul class="navbar-nav mr-auto">
+            <li class="navbar-nav">
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Databases
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="nav-link" href={{ url_for('crud.search') }}>SQL Search</a>
+                    <a class="nav-link" href={{ url_for('crud.crud') }}>SQL Crud </a>
+                </div>
 
 </nav>
 
