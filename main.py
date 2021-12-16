@@ -62,6 +62,7 @@ def sanjay():
     response2 = requests.request("GET", url2, headers=headers2, params=querystring2)
 
     output2 = json.loads(response2.text)
+    print(output2)
     return render_template("about_us/sanjay.html",data=output,joke=output2)
 @app.route("/final_grade_calc/")
 def final_grade_calc():
@@ -97,6 +98,9 @@ def stats():
 @app.route('/notes/')
 def notes():
     return render_template("subjects/notes.html")
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404
 
 # runs the application on the development server
 @app.route('/flashcards/')
