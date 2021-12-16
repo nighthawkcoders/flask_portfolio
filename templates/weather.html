@@ -3,13 +3,12 @@
 {% set project = "Weather is so Cool" %}
 
 {% block body %}
-<form action="/weather/" method="POST">
+
+    <form action="/weather/" method="POST">
     <input type="text" placeholder="Enter keyword term" name='keyword'>
     <button type="submit">Get Weather</button>
-
-
 </form>
-
+    <body style="background-color:lightpink; height: 1000px">
 <style>
     table, td, th {
         border: 10px solid white;
@@ -27,13 +26,13 @@
 
 </style>
 
-    <div class="-block" style="margin: 2% 25% 5%; font-family: gilroy,serif;">
-        <div class="col-12" style="text-align: center;">
+    <div class="center-block" style="font-family: gilroy,serif;">
+        <div style="text-align: center;">
             <h1 style="color: midnightblue">City Weather Data</h1>
         </div>
         {% if results %}
-        <div class="col-12 mainbox center-block">
-            <table style="margin: 2%">
+        <div class=center-block">
+            <table>
                 <tr>
                     <th>City</th>
                     <th>Wind Speed</th>
