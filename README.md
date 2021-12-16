@@ -13,6 +13,7 @@
 2. Pair Share Journals [Tanay and Connor](https://docs.google.com/document/d/1yMnRk0cY8TWYl3YKTgz0OKkrI5Gac4pEyoyiffEeUoE/edit?usp=sharing), [Colin Pranav and Chase](https://docs.google.com/document/d/1iU4SOdLDTyFTuoI4yuBxjvRjvVHq53I5JZgaCRP8Ah4/edit?usp=sharing)
 3. [Innovation sprint 1,2 Week 1](https://github.com/connorw72/food#innovation-sprint-12-week-1)
 4. [Innovation sprint 1,2 Week 2](https://github.com/connorw72/food#innovation-sprint-12-week-2)
+5. [Database intro sprint 3 week 3]()
 ## Contributors
 | Name | GitHub ID and Profile | Tasks | Scrum Board | Commits | BOF Job |
 |:-----|:----------------------|:-----:|:-----------:|:-------:|:--------:|
@@ -44,7 +45,7 @@
 |Task| Tangible Link |
 |:-----|:----------------------|
 |Design Manager showing Bootstrap layouts, and at least 3 frontend screens with functionality toward Project Theme.|[Bootstrap layouts]()
-|Scrum Master overview of progress using GitHub README, Tickets (Completed and Backlog), and Wiki.  Show expected backlog when returning from Winter Break.| [Backlog](),
+|Scrum Master overview of progress using GitHub README, Tickets (Completed and Backlog), and Wiki.  Show expected backlog when returning from Winter Break.| [Expected Backlog](https://github.com/connorw72/food/projects/1#column-17077693),[Wiki](https://github.com/connorw72/food/wiki/Stories-Progress)
 |Technical officer highlighting Asynchronous access(es) to a Database (expectation is a Search and/or a CRUD operations).|[Search or CRUD]()
 |Deployment manager showing Web Site running from URL (https), and demonstrating the process to perform an update.|[Website](https://tanayteamfood.tk/)
 |GitHub admin highlighting issue, commits, and pull requests completed by each individual.|[Issue, commits and pull requests]()
