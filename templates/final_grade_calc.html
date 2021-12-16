@@ -86,7 +86,8 @@ function theme() {
    width: 40%;
    margin: auto;
    padding: 2em;
-   background-color: var(--secondary-color)
+     /* the body of the calculator */
+   background-color: var(--calcbg);
  }
  
  .grade-container input{
@@ -95,12 +96,13 @@ function theme() {
    border: none;
    outline: none;
    margin-bottom: 30px;
-   background-color: var(--main-color);
-   color: var(--secondary-color)
+     /* the box of the calculator */
+   background-color: var(--calcbx);
+   color: var(--calctxt)
  }
  .grade-container input:focus {
-    background-color: var(--tertiary-color);
-    color: var(--main-color)
+    background-color: var(--calcbx);
+    color: var(--calctxt)
  }
  .grade-container input::placeholder {
     color: var(--tertiary-color)
