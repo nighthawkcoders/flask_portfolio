@@ -49,6 +49,13 @@
 |Deployment manager showing Web Site running from URL (https), and demonstrating the process to perform an update.|[Website](https://tanayteamfood.tk/),[Process](https://github.com/connorw72/food/wiki/Deployment-Guide#process-to-perform-an-update)
 |GitHub admin highlighting issue, commits, and pull requests completed by each individual.|[Commits of all from main branch](https://github.com/connorw72/food/commits/main)
 
+|AP MCQ| Journals |
+|:-----|:----------------------|
+|AP MCQ Test and Corrections (2 pts)| [Connor and Tanay](https://docs.google.com/document/d/1yMnRk0cY8TWYl3YKTgz0OKkrI5Gac4pEyoyiffEeUoE/edit?usp=sharing)
+|AP MCQ Test and Corrections (2 pts)| [Pranav, Chase, Colin](https://docs.google.com/document/d/1iU4SOdLDTyFTuoI4yuBxjvRjvVHq53I5JZgaCRP8Ah4/edit?usp=sharing)
+
+
+
 
 
 
