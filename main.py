@@ -68,6 +68,16 @@ def crud():
 def search():
     return render_template("search.html")
 
+@app.route('/weather/', methods=['GET', 'POST'])
+def weather():
+    if request.form:
+        input = request.form.get("feed1")
+        name = request.form.get("feed2")
+        if len(input) != 0:  # input field has content
+            return render_template("layouts/weather.html", input=input, name=name)
+    return render_template("layouts/weather.html")
+
+
 
 # runs the application on the development server
 if __name__ == "__main__":
