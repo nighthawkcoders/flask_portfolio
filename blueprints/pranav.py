@@ -21,3 +21,7 @@ def pranav():
 @bpranav.route('/dogs/')
 def dogs():
     return render_template('dogs.html')
+
+@bpranav.route('/birds/')
+def birds():
+    return render_template('birds.html')
