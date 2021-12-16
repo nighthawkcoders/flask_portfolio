@@ -48,7 +48,7 @@
 |Scrum Master overview of progress using GitHub README, Tickets (Completed and Backlog), and Wiki.  Show expected backlog when returning from Winter Break.| [Expected Backlog](https://github.com/connorw72/food/projects/1#column-17077693),[Wiki](https://github.com/connorw72/food/wiki/Stories-Progress)
 |Technical officer highlighting Asynchronous access(es) to a Database (expectation is a Search and/or a CRUD operations).|[init](https://github.com/connorw72/food/blob/main/crud/__init__.py),[Model](https://github.com/connorw72/food/blob/main/crud/model.py),[Dark](https://github.com/connorw72/food/blob/main/crud/templates/crud/crud.html),[Search](https://github.com/connorw72/food/blob/main/crud/templates/crud/search.html)
 |Deployment manager showing Web Site running from URL (https), and demonstrating the process to perform an update.|[Website](https://tanayteamfood.tk/)
-|GitHub admin highlighting issue, commits, and pull requests completed by each individual.|[Issue, commits and pull requests]()
+|GitHub admin highlighting issue, commits, and pull requests completed by each individual.|[Commites of all from main branch](https://github.com/connorw72/food/commits/main)
 
 
 
