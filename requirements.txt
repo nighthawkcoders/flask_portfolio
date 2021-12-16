@@ -1,4 +1,3 @@
-Flask
 flask~=1.1.2
 requests~=2.25.1
 SQLAlchemy~=1.3.24
