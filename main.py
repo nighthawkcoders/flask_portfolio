@@ -61,14 +61,14 @@ def adi():
 
 @app.route('/brian')
 def brian():
-    url = "https://tennis-live-data.p.rapidapi.com/tournaments/ATP/2020"
-    headers = {
-        'x-rapidapi-host': "tennis-live-data.p.rapidapi.com",
-        'x-rapidapi-key': "3d43659d98msh26d5e705bc7d8b6p1d6431jsnba44357aaf20"
-    }
-    response = requests.request("GET", url, headers=headers)
-    results = json.loads(response.content.decode("utf-8"))['results']
-    return render_template("brian.html", res=results)
+    # url = "https://tennis-live-data.p.rapidapi.com/tournaments/ATP/2020"
+    # headers = {
+    #     'x-rapidapi-host': "tennis-live-data.p.rapidapi.com",
+    #     'x-rapidapi-key': "3d43659d98msh26d5e705bc7d8b6p1d6431jsnba44357aaf20"
+    # }
+    # response = requests.request("GET", url, headers=headers)
+    # results = json.loads(response.content.decode("utf-8"))['results']
+    return render_template("brian.html")#, res=results)
 
 @app.route('/divya')
 def divya():
@@ -105,9 +105,27 @@ def photogallery():
             return render_template("photogallery.html", input1=input)
     return render_template("photogallery.html", input1="")
 
-@app.route('/weather')
+@app.route('/weather/', methods=['GET','POST'])
 def weather():
-    return render_template("weather.html")
+    try:
+        keyword = request.form['keyword']
+    except:
+        keyword = ""
+    url = "https://yahoo-weather5.p.rapidapi.com/weather"
+
+    querystring = {"location":keyword,"format":"json","u":"f"}
+
+    headers = {
+        'x-rapidapi-host': "yahoo-weather5.p.rapidapi.com",
+        'x-rapidapi-key': "3d43659d98msh26d5e705bc7d8b6p1d6431jsnba44357aaf20"
+    }
+
+    response = requests.request("GET", url, headers=headers, params=querystring)
+    if response.status_code<400:
+        results = json.loads(response.content.decode("utf-8"))
+        return render_template("weather.html", results=results)
+    else:
+        return render_template("weather.html")
 
 # runs the application on the development server
 if __name__ == "__main__":
