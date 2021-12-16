@@ -1,14 +1,14 @@
 {% extends "layouts/base.html" %}
-
 {% set project = "Weather is so Cool" %}
-
 {% block body %}
-<form action='/weather/' method="POST">
-    <input type="text" placeholder="Enter keyword term" name='keyword'>
-    <button type="submit">Get Weather</button>
+    <body style="background-color: lightpink; height: 1000px">
+
+    <form action='/weather/' method="POST">
+        <input type="text" placeholder="Enter keyword term" name='keyword'>
+        <button type="submit">Get Weather</button>
 
 
-</form>
+    </form>
     <style>
         table, td, th {
             border: 10px solid white;
@@ -27,13 +27,14 @@
     </style>
 
 
-    <div class="-block" style="margin: 2% 25% 5%; font-family: gilroy,serif;">
+    <div class="center-block" style="font-family: gilroy,serif;">
         <div class="col-12" style="text-align: center;">
             <h1 style="color: midnightblue">City Weather Data</h1>
         </div>
 
-        <div class="col-12 mainbox center-block">
-            <table style="margin: 2%">
+        <div class="center-block">
+            {% if results %}
+            <table>
                 <tr>
                     <th>City</th>
                     <th>Wind Speed</th>
@@ -43,28 +44,30 @@
                     <th>Sunrise</th>
                     <th>Sunset</th>
                 </tr>
-                    <tr>
-                        <td>{{results.location.city}}</td>
-                        <td>{{results.current_observation.wind.speed}}</td>
-                        <td>{{results.current_observation.atmosphere.humidity}}</td>
-                        <td>{{results.current_observation.atmosphere.visibility}}</td>
-                        <td>{{results.current_observation.atmosphere.pressure}}</td>
-                        <td>{{results.current_observation.astronomy.sunrise}}</td>
-                        <td>{{results.current_observation.astronomy.sunset}}</td>
-                    </tr>
-            </table>
+                <tr>
 
+                    <td>{{results.location.city}}</td>
+                    <td>{{results.current_observation.wind.speed}}</td>
+                    <td>{{results.current_observation.atmosphere.humidity}}</td>
+                    <td>{{results.current_observation.atmosphere.visibility}}</td>
+                    <td>{{results.current_observation.atmosphere.pressure}}</td>
+                    <td>{{results.current_observation.astronomy.sunrise}}</td>
+                    <td>{{results.current_observation.astronomy.sunset}}</td>
+
+                </tr>
+            </table>
+                    {% endif %}
         </div>
 
     </div>
 
-{% if results %}
-<p>
-    Currently in {{results.location.city}}, the wind speed is {{results.current_observation.wind.speed}}.
-    The humidity is {{results.current_observation.atmosphere.humidity}}, the visibility is
-    {{results.current_observation.atmosphere.visibility}}, and the pressure is
-    {{results.current_observation.atmosphere.pressure}}. Sunrise today is at
-    {{results.current_observation.astronomy.sunrise}} and sunset is at {{results.current_observation.astronomy.sunset}}.
-</p>
-{% endif %}
+    {% if results %}
+        <p>
+            Currently in {{results.location.city}}, the wind speed is {{results.current_observation.wind.speed}}.
+            The humidity is {{results.current_observation.atmosphere.humidity}}, the visibility is
+            {{results.current_observation.atmosphere.visibility}}, and the pressure is
+            {{results.current_observation.atmosphere.pressure}}. Sunrise today is at
+            {{results.current_observation.astronomy.sunrise}} and sunset is at {{results.current_observation.astronomy.sunset}}.
+        </p>
+    {% endif %}
 {% endblock %}
