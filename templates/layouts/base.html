@@ -134,6 +134,27 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             <div class="col-3">
                 <a href="{{ repo }}" class="btn">Repository</a>
             </div>
+
+                <!--<style>
+                    .button {
+                        text-decoration: none;
+                        color: white;
+                        background: linear-gradient(#000000 0%, #29C5F6 100%);
+                        border-radius: 10px;
+                        text-align: center;
+                        font-weight: 600;
+
+                    }
+                </style>
+
+                <div class="col-2">
+                <a href="/pokemoncards/" class="button">Pokemon Cards</a>
+            </div>
+
+            <div class="col-2">
+                <a href="/sportscards/" class="button">Sports Card</a>
+            </div>-->
+
             {% endblock %}
         </div>
 
@@ -144,7 +165,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 </body>
 
 {% block background %}
-<style>
+    <style>
     body{
         background-image: url("http://wonderfulengineering.com/wp-content/uploads/2014/09/blue-wallpaper-20.jpg");
     }

@@ -5,12 +5,68 @@
     <meta charset="UTF-8">
     <title>Pokemon Cards</title>
 </head>
-<body>
+<body style="background:linear-gradient(to bottom, #03254c 0%, #29C5F6 100%);">
 
-<table>
+
+<style>
+    .table {
+        margin: auto;
+        border: 1px solid black;
+        width: 50%;
+        padding-left: 75px;
+    }
+
+    .th {
+        border: 1px solid black;
+    }
+
+    .td {
+        border: 1px solid black;
+    }
+
+
+</style>
+
+<table class="table">
     <tr>
-        <th>{{ pokemoncard['name'] }}</th>
-        <th></th>
+        <th class="th">Pokemon</th>
+        <th class="th">Type</th>
+        <th class="th">Picture</th>
+    </tr>
+    <tr>
+        <td class="td">{{ pokemoncard['results'][0]['name']}}</td>
+        <td class="td">{{ pokemoncard['results'][0]['types'][0]}}</td>
+        <td class="td"><img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/596.png" width="75"></td>
+    </tr>
+    <tr>
+        <td class="td">{{ pokemoncard['results'][1]['name']}}</td>
+        <td class="td">{{ pokemoncard['results'][1]['types'][0]}}</td>
+        <td class="td"><img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/035.png" width="75"></td>
+    </tr>
+    <tr>
+        <td class="td">{{ pokemoncard['results'][2]['name']}}</td>
+        <td class="td">{{ pokemoncard['results'][2]['types'][0]}}</td>
+        <td class="td"><img src="https://marriland.com/wp-content/plugins/marriland-core/images/pokemon/sprites/home/256/alcremie.png" width="75"></td>
+    </tr>
+    <tr>
+        <td class="td">{{ pokemoncard['results'][3]['name']}}</td>
+        <td class="td">{{ pokemoncard['results'][3]['types'][0]}}</td>
+        <td class="td"><img src="http://static.pokemonpets.com/images/monsters-images-800-800/732-Trumbeak.webp" width="75"></td>
+    </tr>
+    <tr>
+        <td class="td">{{ pokemoncard['results'][4]['name']}}</td>
+        <td class="td">{{ pokemoncard['results'][4]['types'][0]}}</td>
+        <td class="td"><img src="https://www.pngplay.com/wp-content/uploads/10/Dedenne-Pokemon-Transparent-Images-Clip-Art.png" width="75"></td>
+    </tr>
+    <tr>
+        <td class="td">{{ pokemoncard['results'][5]['name']}}</td>
+        <td class="td">{{ pokemoncard['results'][5]['types'][0]}}</td>
+        <td class="td"><img src="https://www.pngkey.com/png/full/120-1206070_hsart-218-slugma-pokemon.png" width="75"></td>
+    </tr>
+    <tr>
+        <td class="td">{{ pokemoncard['results'][6]['name']}}</td>
+        <td class="td">{{ pokemoncard['results'][6]['types'][0]}}</td>
+        <td class="td"><img src="https://www.pngplay.com/wp-content/uploads/10/Dialga-Pokemon-No-Background.png" width="75"></td>
     </tr>
 </table>
 
