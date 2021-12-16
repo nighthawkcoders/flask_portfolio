@@ -48,6 +48,18 @@
         </div>
 
     </div>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <ul class="navbar-nav mr-auto">
+            <li class="navbar-nav">
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Databases
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="nav-link" href={{ url_for('crud.search') }}>SQL Search</a>
+                    <a class="nav-link" href={{ url_for('crud.crud') }}>SQL Crud </a>
+                </div>
 
 </nav>
 
