@@ -39,7 +39,7 @@ Commit | Evidence | Name | Description
 #   <h2 id="Week3">Week 3: Due 12/17</h2>
 [Week 3 Issue](https://github.com/RohanG326/supporting_cast/issues/38)
 
-[Week 3 Review Ticket](https://github.com/RohanG326/supporting_cast/issues/48)
+[Week 3 Review Ticket](https://github.com/RohanG326/supporting_cast/issues/38)
 
 Commit | Evidence | Name | Description
 ----------- | ----------- | ----------- | -----------
