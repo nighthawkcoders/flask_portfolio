@@ -66,14 +66,16 @@ def GavinAboutMe():
 
 @app.route('/pokemoncards/')
 def pokemon_cards():
-    url = "https://pokemon-tcg-card-prices.p.rapidapi.com/card/c4cbb4b6-ceba-4b14-8e28-ad2b590ccd59"
+    url = "https://pokemon-tcg-card-prices.p.rapidapi.com/card"
+
+    querystring = {"setId":"33ee55f4-30d0-4900-850f-36a351fb9719","set":"vivid-voltage","series":"sword-and-shield"}
 
     headers = {
         'x-rapidapi-host': "pokemon-tcg-card-prices.p.rapidapi.com",
         'x-rapidapi-key': "7815f70232mshea0c87cc336b4aap13f459jsn464272722115"
     }
 
-    response = requests.request("GET", url, headers=headers)
+    response = requests.request("GET", url, headers=headers, params=querystring)
     data = json.loads(response.text)
     return render_template("pokemon_cards.html", pokemoncard=data)
 
@@ -91,3 +93,5 @@ def funko_pops():
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)
+
+
