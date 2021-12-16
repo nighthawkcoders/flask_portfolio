@@ -64,11 +64,11 @@ Scrum Board: https://github.com/Reem57/flask_portfolio/projects/1
 ### Week 3
 | Members | Jobs | Ticket |
 | ------------- | -------------------------------------------------------------| - |
-| Nathan | Scrum Master | TBD |
-| Reem | TO | TBD |
-| Daniel | Primary Designer | TBD |
-| Jacob | Deployment Manager | TBD |
-| James | Github Admin | TBD |
+| Nathan | Scrum Master | https://github.com/jar04/flask_portfolio/issues |
+| Reem | TO | https://github.com/jar04/flask_portfolio/issues/27 |
+| Daniel | Primary Designer | https://github.com/jar04/flask_portfolio/issues/20 |
+| Jacob | Deployment Manager | http://dnhs-flask-portfolio.online/ + https://github.com/jar04/flask_portfolio/wiki/Deployment |
+| James | Github Admin | https://github.com/jar04/flask_portfolio/issues/26 |
 
 ### Week 2
 | Members | Jobs | Ticket |
