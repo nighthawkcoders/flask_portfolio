@@ -1,5 +1,9 @@
 # import "packages" from flask
+from pathlib import Path
+
+
 from flask import Flask, render_template, request
+from algorithms.image import rotatehack, sonakshi_image_data, kashish_image_data, saumya_image_data
 import requests
 import http.client
 # create a Flask instance
@@ -51,9 +55,6 @@ def linda():
         if len(name) != 0:  # input field has content
             return render_template("linda.html", name=name)
     return render_template("linda.html")
-
-
-
 
 @app.route('/khushi', methods=['GET', 'POST'])
 def khushi():
