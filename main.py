@@ -1,5 +1,4 @@
 # import "packages" from flask
-
 from flask import Flask, render_template, request
 import requests
 import http.client
@@ -52,6 +51,9 @@ def linda():
         if len(name) != 0:  # input field has content
             return render_template("linda.html", name=name)
     return render_template("linda.html")
+
+
+
 
 @app.route('/khushi', methods=['GET', 'POST'])
 def khushi():
