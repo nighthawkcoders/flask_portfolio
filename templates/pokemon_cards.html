@@ -30,45 +30,17 @@
 
 <table class="table">
     <tr>
-        <th class="th">Pokemon</th>
+        <th class="th"Pokemon</th>
         <th class="th">Type</th>
-        <th class="th">Picture</th>
+        <!--<th class="th">Picture</th>-->
     </tr>
+    {%  for x in pokemoncard["results"] %}
     <tr>
-        <td class="td">{{ pokemoncard['results'][0]['name']}}</td>
-        <td class="td">{{ pokemoncard['results'][0]['types'][0]}}</td>
-        <td class="td"><img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/596.png" width="75"></td>
+        <td class="td">{{ x["name"]}}</td>
+        <td class="td">{{ x['types'][0]}}</td>
+        <!--<td class="td"><img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/596.png" width="75"></td>-->
     </tr>
-    <tr>
-        <td class="td">{{ pokemoncard['results'][1]['name']}}</td>
-        <td class="td">{{ pokemoncard['results'][1]['types'][0]}}</td>
-        <td class="td"><img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/035.png" width="75"></td>
-    </tr>
-    <tr>
-        <td class="td">{{ pokemoncard['results'][2]['name']}}</td>
-        <td class="td">{{ pokemoncard['results'][2]['types'][0]}}</td>
-        <td class="td"><img src="https://marriland.com/wp-content/plugins/marriland-core/images/pokemon/sprites/home/256/alcremie.png" width="75"></td>
-    </tr>
-    <tr>
-        <td class="td">{{ pokemoncard['results'][3]['name']}}</td>
-        <td class="td">{{ pokemoncard['results'][3]['types'][0]}}</td>
-        <td class="td"><img src="http://static.pokemonpets.com/images/monsters-images-800-800/732-Trumbeak.webp" width="75"></td>
-    </tr>
-    <tr>
-        <td class="td">{{ pokemoncard['results'][4]['name']}}</td>
-        <td class="td">{{ pokemoncard['results'][4]['types'][0]}}</td>
-        <td class="td"><img src="https://www.pngplay.com/wp-content/uploads/10/Dedenne-Pokemon-Transparent-Images-Clip-Art.png" width="75"></td>
-    </tr>
-    <tr>
-        <td class="td">{{ pokemoncard['results'][5]['name']}}</td>
-        <td class="td">{{ pokemoncard['results'][5]['types'][0]}}</td>
-        <td class="td"><img src="https://www.pngkey.com/png/full/120-1206070_hsart-218-slugma-pokemon.png" width="75"></td>
-    </tr>
-    <tr>
-        <td class="td">{{ pokemoncard['results'][6]['name']}}</td>
-        <td class="td">{{ pokemoncard['results'][6]['types'][0]}}</td>
-        <td class="td"><img src="https://www.pngplay.com/wp-content/uploads/10/Dialga-Pokemon-No-Background.png" width="75"></td>
-    </tr>
+    {% endfor %}
 </table>
 
 </body>
