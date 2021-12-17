@@ -5,9 +5,9 @@
     <title>Bootstrap Example</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>-->
     <style>
         /* Remove the navbar's default margin-bottom and rounded borders */
         .navbar {
@@ -31,7 +31,7 @@
 </head>
 <body>
 
-<nav class="navbar navbar-inverse">
+<!--<nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -42,18 +42,18 @@
             <a class="navbar-brand" href="#"></a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
-            <!--<ul class="nav navbar-nav">
+            <<ul class="nav navbar-nav">
                 <li class="active"><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Projects</a></li>
                 <li><a href="#">Contact</a></li>
-            </ul>-->
+            </ul>
             <<ul class="nav navbar-nav navbar-right">
-                <!--<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>-->
+                <<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
             </ul>
         </div>
     </div>
-</nav>
+</nav>-->
 
 <div class="container-fluid text-center">
     <div class="row content">
@@ -115,6 +115,23 @@
                     <p><a href="https://docs.google.com/document/d/1bz69bZUXveOjDREpvgvM_BcSK2rspoDvrIt0UUoQAxs/edit?usp=sharing">
                     <img src="/static/assets/journal.jpg" width="200">
                     </a>
+
+                        <div>
+                    <style>
+                        .darkmode {
+                            background-color: black;
+                            color: white;
+                        }
+                    </style>
+
+                    <button id=darkmode onclick="darkmode()">Dark Mode</button>
+                    <script>
+                        function darkmode() {
+                            let element = document.body;
+                            element.classList.toggle("darkmode");
+                        }
+                    </script>
+                </div>
                 </div>
             </div>
 
