@@ -48,8 +48,8 @@ def feedback():
         input = request.form.get("feed1")
         name = request.form.get("feed2")
         if len(input) != 0:  # input field has content
-            return render_template("feedback.html", input=input, name=name)
-    return render_template("feedback.html")
+            return render_template("layouts/feedback.html", input=input, name=name)
+    return render_template("layouts/feedback.html")
 
 @app.route('/translator/', methods=['GET', 'POST'])
 def translator():
@@ -57,8 +57,8 @@ def translator():
         input = request.form.get("feed1")
         name = request.form.get("feed2")
         if len(input) != 0:  # input field has content
-            return render_template("translator.html", input=input, name=name)
-    return render_template("translator.html")
+            return render_template("layouts/translator.html", input=input, name=name)
+    return render_template("layouts/translator.html")
 
 @app.route('/crud')
 def crud():
