@@ -84,8 +84,8 @@ Our website is a website full of helpful resources for students. It will help st
 | ---  | ---         | ---      | --- |
 | Sonakshi Bhalla | TO Database<br>Github Admin<br>AP Multiple Choice| <a href="https://github.com/sonakshibhalla/tri2turtles/issues/93">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/94">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/111">Ticket</a>| /8 
 | Shreya Ahuja | Scrum Master<br>Database<br>AP Multiple Choice| <a href="https://github.com/sonakshibhalla/tri2turtles/issues/91">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/94">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/111">Ticket</a>| /8
-| Khushi Bagri | Deployment Manager<br>AP Multiple Choice| <a href="https://github.com/sonakshibhalla/tri2turtles/issues/90">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/112">Ticket</a>| /8
-| Punarvasu Sangam | Design Manager<br>AP Multiple Choice| <a href="https://github.com/sonakshibhalla/tri2turtles/issues/92">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/112">Ticket</a>| /8
+| Punarvasu Sangam | Design Manager<br>AP Multiple Choice| <a href="https://github.com/sonakshibhalla/tri2turtles/issues/90">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/112">Ticket</a>| /8
+| Khushi Bagri | Deployment Manager<br>AP Multiple Choice| <a href="https://github.com/sonakshibhalla/tri2turtles/issues/92">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/112">Ticket</a>| /8
 
 <br>
 
