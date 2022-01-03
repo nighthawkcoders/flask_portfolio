@@ -42,6 +42,10 @@ def aboutdaniel():
 def mainabout():
     return render_template("mainabout.html")
 
+@app.route('/worldclock/')
+def worldclock():
+    return render_template("worldclock.html")
+
 @app.route('/feedback/', methods=['GET', 'POST'])
 def feedback():
     if request.form:

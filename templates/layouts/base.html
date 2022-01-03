@@ -88,7 +88,9 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
     </style>
 
     <title>{{ basename }} | {{ project }} </title>
+{% block meta %}
 
+{% endblock %}
 </head>
 
 <body>

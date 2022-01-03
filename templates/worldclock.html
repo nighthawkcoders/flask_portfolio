@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+{%  extends "layouts/base.html" %}
+{%  set project = "World Clock" %}
+<head>
+    <meta charset="UTF-8">
+    <title>World Clock</title>
+    {% block background %}
+        <style>
+            html, body{
+                background-color: deepskyblue;
+            }
+        </style>
+    {% endblock %}
+</head>
+{%  block body %}
+    <body>
+    <div class="row">
+        <div class="col-sm">
+            <h1>World Clock</h1>
+            <img src="/static/assets/danielno.jpg" width="50%"  id="danielImg" onclick="danielImg()" >
+        </div>
+        <div class="col-sm">
+            <h1>API</h1>
+            <p>TITLE</p>
+            <div id="title"></div>
+            <br>
+            <p>URL</p>
+            <div id="url"></div>
+            <br>
+            <h1>Links</h1>
+            <a href="https://docs.google.com/document/d/1243B2mbRGslTk-0YRXKdKykfs6fAU5pK1LFUyJQ83vM/edit">Create Task Planning</a>
+            <br>
+            <a href="https://docs.google.com/document/d/12rQvrhtsNnlDFDhkCI9sT8w7fTD3y-4FW6W8LPLuf9w/edit">Journal</a>
+            <script>
+                    async function clock() {
+                    const response = await fetch("https://world-clock.p.rapidapi.com/json/utc/now", {
+                    "method": "GET",
+                        "headers": {
+                            "x-rapidapi-host": "world-clock.p.rapidapi.com",
+                            "x-rapidapi-key": "a2517cf9bdmshb3cb60d57e2fe79p1f907fjsna7217b3dedc7"
+                        }
+                })
+                    console.log(response);
+                    const clock = await response.json();
+                    console.log(clock);
+                    document.getElementById("currentDateTime").textContent = clock["currentDateTime"];
+                    document.getElementById("dayOfTheWeek").textContent = clock["dayOfTheWeek"];
+                        document.getElementById("timeZoneName").textContent = clock["timeZoneName"];
+                }
+                    clock();
+            </script>
+        </div>
+    </div>
+    </body>
+{% endblock %}
+</html>
