@@ -79,11 +79,19 @@ Our website is a website full of helpful resources for students. It will help st
 - <a href="https://github.com/sonakshibhalla/tri2turtles/blob/main/README.md#week-3-due-1216">Week 3</a>
 <br>
 
+## Week 4: Due 1/7
+| Name | Requirement | Evidence |  Total Score |
+| ---  | ---         | ---      | --- |
+| Sonakshi Bhalla | Individual PBL (change with exact task) <br>CB Notes & Quizzes|<a href="">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/88">Ticket</a> |  /5
+| Shreya Ahuja | Individual PBL (change with exact task) <br>CB Notes & Quizzes|<a href="">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/88">Ticket</a>  |  /5
+| Punarvasu Sangam | Individual PBL (change with exact task) <br>CB Notes & Quizzes|<a href="">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/89">Ticket</a>  |  /5
+| Khushi Bagri | Individual PBL (change with exact task) <br>CB Notes & Quizzes|<a href="">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/89">Ticket</a>  |  /5
+
 ## Week 3: Due 12/16
 | Name | Requirement | Evidence |  Total Score |
 | ---  | ---         | ---      | --- |
-| Sonakshi Bhalla | TO Database<br>Github Admin<br>AP Multiple Choice| <a href="https://github.com/sonakshibhalla/tri2turtles/issues/93">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/94">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/111">Ticket</a>| /8 
-| Shreya Ahuja | Scrum Master<br>Database<br>AP Multiple Choice| <a href="https://github.com/sonakshibhalla/tri2turtles/issues/91">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/94">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/111">Ticket</a>| /8
+| Sonakshi Bhalla | TO Database<br>Github Admin<br>AP Multiple Choice| <a href="https://github.com/sonakshibhalla/tri2turtles/issues/93">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/94">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/111">Ticket</a>| 7.75/8 
+| Shreya Ahuja | Scrum Master<br>Database<br>AP Multiple Choice| <a href="https://github.com/sonakshibhalla/tri2turtles/issues/91">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/94">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/111">Ticket</a>| 7.75/8
 | Punarvasu Sangam | Design Manager<br>AP Multiple Choice| <a href="https://github.com/sonakshibhalla/tri2turtles/issues/90">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/112">Ticket</a>| /8
 | Khushi Bagri | Deployment Manager<br>AP Multiple Choice| <a href="https://github.com/sonakshibhalla/tri2turtles/issues/92">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/112">Ticket</a>| /8
 
