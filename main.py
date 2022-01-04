@@ -39,6 +39,10 @@ def stress():
 def volunteer():
     return render_template("volunteer.html")
 
+@app.route('/crud/search')
+def search():
+    return render_template("search.html")
+
 @app.route('/sonakshi', methods=['GET', 'POST'])
 def sonakshi():
     # submit button has been pushed
