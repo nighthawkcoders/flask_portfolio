@@ -6,7 +6,7 @@ flask_login
 Flask
 numpy
 Pillow~=8.2.0
-flask_sqlalchemy
+flask-sqlalchemy==2.1.0
 flask_migrate
 flask_restful
 numpy~=1.21.4

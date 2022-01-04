@@ -1,7 +1,6 @@
 import base64
 from io import BytesIO
 import numpy
-from PIL import Image, ImageDraw, ImageFilter
 import re
 
 
