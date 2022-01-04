@@ -8,7 +8,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 <html lang="en">
 
 {% set basename = "Team Milkshake" %}
-{% set github = "https://github.com/nighthawkcoders" %}
+{% set github = "https://github.com/jar04/flask_portfolio" %}
 
 
 <head>
@@ -53,14 +53,6 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             transform: translateY(10px);
         }
 
-        .fa-youtube-play:hover{
-            color: #cc0000;
-        }
-
-        .fa-twitter:hover{
-            color: #1da1f2;
-        }
-
         .fa-github:hover{
             color: #000000;
         }
@@ -102,8 +94,6 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
                 <!-- notice jinja style variables used in href's -->
                 <a><h5>{{basename}}</h5></a>
                 <a href={{github}} target="_blank"><i class="fa fa-github"></i></a>
-                <a href={{youtube}} target="_blank"><i class="fa fa-youtube-play"></i></a>
-                <a href={{twitter}} target="_blank"><i class="fa fa-twitter"></i></a>
             {% endblock %}
         </div>
     </div>
