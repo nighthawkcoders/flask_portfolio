@@ -1,9 +1,12 @@
 # import "packages" from flask
-from flask import Flask, render_template, request, json
-import requests
+from flask import Flask, render_template
+from flask import request
+from __init__ import app
+from crud.app_crud import app_crud
 
 # create a Flask instance
-app = Flask(__name__)
+# app = Flask(__name__)
+app.register_blueprint(app_crud)
 
 
 # connects default URL to render index.html
@@ -35,13 +38,47 @@ def aboutjames():
 def aboutdaniel():
     return render_template("aboutdaniel.html")
 
-
 @app.route('/mainabout/')
 def mainabout():
     return render_template("mainabout.html")
 
+@app.route('/feedback/', methods=['GET', 'POST'])
+def feedback():
+    if request.form:
+        input = request.form.get("feed1")
+        name = request.form.get("feed2")
+        if len(input) != 0:  # input field has content
+            return render_template("layouts/feedback.html", input=input, name=name)
+    return render_template("layouts/feedback.html")
+
+@app.route('/translator/', methods=['GET', 'POST'])
+def translator():
+    if request.form:
+        input = request.form.get("feed1")
+        name = request.form.get("feed2")
+        if len(input) != 0:  # input field has content
+            return render_template("layouts/translator.html", input=input, name=name)
+    return render_template("layouts/translator.html")
+
+@app.route('/crud')
+def crud():
+    return render_template("crud.html")
+
+@app.route('/search')
+def search():
+    return render_template("search.html")
+
+@app.route('/weather/', methods=['GET', 'POST'])
+def weather():
+    if request.form:
+        input = request.form.get("feed1")
+        name = request.form.get("feed2")
+        if len(input) != 0:  # input field has content
+            return render_template("layouts/weather.html", input=input, name=name)
+    return render_template("layouts/weather.html")
+
+
 
 # runs the application on the development server
-# changed port from 5000 to 8080 to test gunicorn
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=8080)
