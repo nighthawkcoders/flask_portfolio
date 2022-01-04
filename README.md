@@ -65,7 +65,7 @@ Scrum Board: https://github.com/Reem57/flask_portfolio/projects/1
 | Members | Jobs | Ticket |
 | ------------- | -------------------------------------------------------------| - |
 | Nathan | Scrum Master | https://github.com/jar04/flask_portfolio/issues |
-| Reem | TO | https://github.com/jar04/flask_portfolio/issues/27 |
+| Reem | TO | https://github.com/jar04/flask_portfolio/issues/27 video: (https://cs-p-hq.slack.com/files/U02CG1SV5EC/F02QYS5HC7L/video1141813565_trim.mp4) |
 | Daniel | Primary Designer | https://github.com/jar04/flask_portfolio/issues/20 |
 | Jacob | Deployment Manager | http://dnhs-flask-portfolio.online/ + https://github.com/jar04/flask_portfolio/wiki/Deployment |
 | James | Github Admin | https://github.com/jar04/flask_portfolio/issues/26 |
