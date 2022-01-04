@@ -2,7 +2,7 @@
 
 ## Contributors
 
-|---
+
 
 | Member  | Github Profile  | Commits  | Scrum Board Tasks  |
 |---|---|---|---|
@@ -48,7 +48,7 @@ A studying site. Will contain minigames and useful tools to help students study.
 
 ### Week 1
 
-|---
+
 
 
 | Contributor  | Links to Commits  |
@@ -62,7 +62,7 @@ A studying site. Will contain minigames and useful tools to help students study.
 
 ### Week 0
 
-|---
+
 
 
 |Contributor| Links to Commits  |
