@@ -4,8 +4,9 @@ inspiration from https://www.youtube.com/watch?v=QKcVjdLEX_s
 -->
 {% extends "layouts/base.html" %}
 
+{% set project = "Database Search" %}
 {% block head %}
-<title>Search</title>
+    <title>SQL search</title>
 {% endblock %}
 
 {% block body %}
@@ -39,11 +40,13 @@ inspiration from https://www.youtube.com/watch?v=QKcVjdLEX_s
 
     <script>
         function search_data() {
+            // fetch standard requires data set to a name-value pair
             const term = document.getElementById("term");
             const body = {
                 term: term.value
             };
 
+            // fetch call with header options
             fetch('/crud/search/term/', {
                 method: "POST",
                 credentials: "include",
@@ -53,27 +56,33 @@ inspiration from https://www.youtube.com/watch?v=QKcVjdLEX_s
                     "content-type": "application/json"
                 })
             })
-            .then(function (response) {
-                const resultContainer = document.getElementById("result");
-                while (resultContainer.firstChild) {
-                    resultContainer.removeChild(resultContainer.firstChild);
-                }
-                if (response.status !== 200) {
-                    const errorMsg = 'Database response error: ' + response.status;
-                    console.log(errorMsg);
-                    const div = document.createElement("div");
-                    div.innerHTML = errorMsg;
-                    resultContainer.appendChild(div);
-                    return;
-                }
-                response.json().then(function(data) {
-                    for (let i = 0; i < data.length; i++) {
-                        const div = document.createElement("div");
-                        div.innerHTML = data[i].name + ' ' + data[i].email;
-                        resultContainer.appendChild(div);
+                // async then replies with response header
+                .then(function (response) {
+                    // prepare HTML search result container for new output
+                    const resultContainer = document.getElementById("result");
+                    // clean up from previous search
+                    while (resultContainer.firstChild) {
+                        resultContainer.removeChild(resultContainer.firstChild);
                     }
+                    // trap error response from Web API
+                    if (response.status !== 200) {
+                        const errorMsg = 'Database response error: ' + response.status;
+                        console.log(errorMsg);
+                        const div = document.createElement("div");
+                        div.innerHTML = errorMsg;
+                        resultContainer.appendChild(div);
+                        return;
+                    }
+                    // response contains valid result
+                    response.json().then(function(data) {
+                        // loop through JSON and build HTML output
+                        for (let i = 0; i < data.length; i++) {
+                            const div = document.createElement("div");
+                            div.innerHTML = data[i].name + ' ' + data[i].email;
+                            resultContainer.appendChild(div);
+                        }
+                    })
                 })
-            })
         }
     </script>
 {% endblock %}
