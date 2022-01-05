@@ -29,13 +29,16 @@ class Users(db.Model):
     email = db.Column(db.String(255), unique=True, nullable=False)
     password = db.Column(db.String(255), unique=False, nullable=False)
     phone = db.Column(db.String(255), unique=False, nullable=False)
+    note = db.Column(db.String(255), unique=False, nullable=False)
 
-    # constructor of a User object, initializes of instance variables within object
-    def __init__(self, name, email, password, phone):
+
+# constructor of a User object, initializes of instance variables within object
+    def __init__(self, name, email, password, phone, note):
         self.name = name
         self.email = email
         self.password = password
         self.phone = phone
+        self.note = note
 
     # CRUD create/add a new record to the table
     # returns self or None on error
@@ -57,12 +60,13 @@ class Users(db.Model):
             "name": self.name,
             "email": self.email,
             "password": self.password,
-            "phone": self.phone
+            "phone": self.phone,
+            "note": self.note
         }
 
     # CRUD update: updates users name, password, phone
     # returns self
-    def update(self, name, password="", phone=""):
+    def update(self, name, note, password="", phone=""):
         """only updates values with length"""
         if len(name) > 0:
             self.name = name
@@ -70,6 +74,8 @@ class Users(db.Model):
             self.password = password
         if len(phone) > 0:
             self.phone = phone
+        if len(note) > 0:
+            self.note = note
         db.session.commit()
         return self
 
@@ -90,14 +96,14 @@ def model_tester():
     print("--------------------------")
     db.create_all()
     """Tester data for table"""
-    u1 = Users(name='Thomas Edison', email='tedison@example.com', password='123toby', phone="1111111111")
-    u2 = Users(name='Nicholas Tesla', email='ntesla@example.com', password='123niko', phone="1111112222")
-    u3 = Users(name='Alexander Graham Bell', email='agbell@example.com', password='123lex', phone="1111113333")
-    u4 = Users(name='Eli Whitney', email='eliw@example.com', password='123whit', phone="1111114444")
-    u5 = Users(name='John Mortensen', email='jmort1021@gmail.com', password='123qwerty', phone="8587754956")
-    u6 = Users(name='John Mortensen', email='jmort1021@yahoo.com', password='123qwerty', phone="8587754956")
+    u1 = Users(name='Thomas Edison', email='tedison@example.com', password='123toby', phone="1111111111", note="hi")
+    u2 = Users(name='Nicholas Tesla', email='ntesla@example.com', password='123niko', phone="1111112222", note="hope this works")
+    u3 = Users(name='Alexander Graham Bell', email='agbell@example.com', password='123lex', phone="1111113333", note="hello world")
+    u4 = Users(name='Eli Whitney', email='eliw@example.com', password='123whit', phone="1111114444", note="text")
+    u5 = Users(name='John Mortensen', email='jmort1021@gmail.com', password='123qwerty', phone="8587754956", note="fjdsla;")
+    u6 = Users(name='John Mortensen', email='jmort1021@yahoo.com', password='123qwerty', phone="8587754956", note="qwerty")
     # U7 intended to fail as duplicate key
-    u7 = Users(name='John Mortensen', email='jmort1021@yahoo.com', password='123qwerty', phone="8586791294")
+    u7 = Users(name='John Mortensen', email='jmort1021@yahoo.com', password='123qwerty', phone="8586791294", note="what's this one for?")
     table = [u1, u2, u3, u4, u5, u6, u7]
     for row in table:
         try:

@@ -69,7 +69,8 @@ def create():
             request.form.get("name"),
             request.form.get("email"),
             request.form.get("password"),
-            request.form.get("phone")
+            request.form.get("phone"),
+            request.form.get("note")
         )
         po.create()
     return redirect(url_for('crud.crud'))
@@ -136,8 +137,8 @@ def search_term():
 class UsersAPI:
     # class for create/post
     class _Create(Resource):
-        def post(self, name, email, password, phone):
-            po = Users(name, email, password, phone)
+        def post(self, name, email, password, phone, note):
+            po = Users(name, email, password, phone, note)
             person = po.create()
             if person:
                 return person.read()

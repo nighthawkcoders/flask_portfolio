@@ -3,8 +3,6 @@ inspiration from https://www.youtube.com/watch?v=QKcVjdLEX_s
 -->
 {% extends "layouts/base.html" %}
 
-
-
 {% block body %}
     <div class="container py-4 bg-primary">
         <!-- heading -->
@@ -22,7 +20,7 @@ inspiration from https://www.youtube.com/watch?v=QKcVjdLEX_s
                             <input type="text" class="form-control" id="term" placeholder="enter search term">
                             <label></label> <!-- used for spacer -->
                         </div>
-                        <button class="btn btn-primary bg-secondary" onclick="search_data();">Search</button>
+                        <button id="searchbutton" class="btn btn-primary bg-secondary" onclick="search_data();">Search</button>
                     </div>
                 </div>
             </div>
@@ -35,6 +33,8 @@ inspiration from https://www.youtube.com/watch?v=QKcVjdLEX_s
     </div>
 
     <script>
+    search_data()
+
         function search_data() {
             // fetch standard requires data set to a name-value pair
             const term = document.getElementById("term");
@@ -80,6 +80,14 @@ inspiration from https://www.youtube.com/watch?v=QKcVjdLEX_s
                         }
                     })
                 })
+            var input = document.getElementById("searchbutton");
+            input.addEventListener("keyup", function(event) {
+                if (event.keyCode === 13) {
+                    event.preventDefault();
+                    document.getElementById("searchbutton").click();
+                    console.log("hopefully enter worked")
+                }
+            });
         }
     </script>
 {% endblock %}

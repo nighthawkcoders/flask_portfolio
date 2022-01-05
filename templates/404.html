@@ -1,37 +1,38 @@
 {% extends "layouts/base.html" %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
+
+{% block meta %}
   <meta charset="UTF-8">
   <title>Title</title>
-</head>
-{% block body %}
-<div id="page-container">
-<h1 style="font-size: 50px;"> Sorry <br> The Page you are looking for could not be found </h1>
-<img src = "/static/assets/404.png" alt="lol even the 404 imagine can't be found">
-<a class="btn" href="/">Go back to home</a>
-</div>
-<style>
-* {
-    text-align: center;
-}
-#page-container {
-    margin-left: 200px;
-    position: relative;
-    background-color: var(--bg-color);
-    color: var(--main-color)
-}
-img {
-    max-width: 100%;
-    width: 50%;
-    padding: 0;
-    margin: 0 auto;
-}
-.btn {
-    width: 50%;
-    display: inline-block;
-    margin: 0 auto;
-}
-</style>
 {% endblock %}
-</html>
+
+{% block body %}
+    <div id="page-container">
+        <h1 style="font-size: 50px;"> Sorry <br> The Page you are looking for could not be found </h1>
+        <img src = "/static/assets/404.png" alt="lol even the 404 imagine can't be found">
+        <a class="btn" href="/">Go back to home</a>
+    <br>
+    </div>
+
+    <style>
+    * {
+        text-align: center;
+    }
+    #page-container {
+        margin-left: 200px;
+        position: relative;
+        background-color: var(--bg-color);
+        color: var(--main-color)
+    }
+    img {
+        max-width: 100%;
+        width: 50%;
+        padding: 0;
+        margin: 0 auto;
+    }
+    .btn {
+        width: 50%;
+        display: inline-block;
+        margin: 0 auto;
+    }
+    </style>
+{% endblock %}
