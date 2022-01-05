@@ -1,6 +1,6 @@
 ---
 layout: default
 ---
-{% include navigation.html %}
+{% include nav_jekyll.html %}
 
 {% include_relative README.md %}
