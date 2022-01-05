@@ -1,6 +1,5 @@
 {% include nav_jekyll.html %}
 ---
-permalink: /contributing/
 ---
 
 # Contribution Guidelines
