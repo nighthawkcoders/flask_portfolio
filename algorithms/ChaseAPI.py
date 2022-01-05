@@ -16,7 +16,7 @@ def stufn():
 def game():
     tog = []
     games = stufn()
-    for n in range(3):
+    for n in range(5):
         joe = games['freeGames']['current'][n]['title']
         tog.append(joe)
     print(tog)
