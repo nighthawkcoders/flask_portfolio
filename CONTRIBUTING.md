@@ -1,4 +1,8 @@
 {% include nav_jekyll.html %}
+---
+permalink: /contributing/
+---
+
 # Contribution Guidelines
 ## Table of Contents 
 - [Our Policy](#overall-policy)
