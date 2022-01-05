@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template
 import requests
 from algorithms.ChaseAPI import game
-from algorithms.Table import sussy
+from algorithms.Table import habitat
 
 bchase = Blueprint("bchase", __name__, static_folder="static", template_folder="templates")
 
@@ -18,5 +18,5 @@ def cats():
 
 @bchase.route('/Habitats/')
 def habitats():
-    return render_template('Habitats.html', sussy=sussy())
+    return render_template('Habitats.html', habitat=habitat())
 
