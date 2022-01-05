@@ -1,3 +1,4 @@
+{% include nav_jekyll.html %}
 # Contribution Guidelines
 ## Table of Contents 
 - [Our Policy](#overall-policy)
