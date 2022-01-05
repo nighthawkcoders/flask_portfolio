@@ -5,14 +5,28 @@
     <meta charset="UTF-8">
     <title>Stress Relief</title>
 </head>
-{%  block body %}
+<style>
+.button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button1 {background-color: #4CAF50;} /* Green */
+</style>
+{%  block body %} <!-- Code from Punnu -->
 <body>
 <div class="container-fluid">
     <h1 style="text-align: center">Relaxation</h1>
     <div class="row">
         <div class="col-sm-6">
             <p style="font-size: x-large">
-                Here is the relaxing video:
+                <button class="button button1">Relaxing Video</button>
                 <br>
                 <a href="https://www.youtube.com/watch?v=4ROrW727q_s">
                     <img src="/static/assets/Bluelantern.jpg" width="50%">
@@ -20,14 +34,13 @@
                 <br>
             </p>
         </div>
-        <div class="col-sm-6" ">
+        <div class="col-sm-6">
         <p>
             Here is the coloring book:
             <br>
             <a href="https://coloringbook.pics/">
                 <img src="/static/assets/colorpage.jpg" width=70%">
             </a>
-
         </p>
     </div>
 </div>
