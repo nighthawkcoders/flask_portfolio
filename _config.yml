@@ -1,0 +1,10 @@
+
+remote_theme: pages-themes/midnight@v0.2.0
+plugins:
+- jekyll-remote-theme 
+title: LEVSS Study Tools
+description: This is our PBL Project for Trimester 2. We are creating a study tools website that will have a broad collection of tools and programs in order to help students, specifically Del Norte students, study and prepare for their classes and understand concepts. Overall, it is meant to ease high school life.
+collections:
+  pages:
+    output: true
+    permalink: /:collection/:name
