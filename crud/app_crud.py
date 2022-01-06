@@ -126,7 +126,9 @@ def search_term():
     """ obtain term/search request """
     req = request.get_json()
     term = req['term']
-    response = make_response(jsonify(users_ilike(term)), 200)
+    result = users_ilike(term)
+    result.sort(key=lambda x: x["name"])
+    response = make_response(jsonify(result), 200)
     return response
 
 
