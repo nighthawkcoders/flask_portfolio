@@ -47,7 +47,13 @@
                 </div>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link" href={{ url_for('bchase.Enclosures') }}>Enclosures</a>
+                <a class="nav-link dropdown-toggle" href="#" id="navbarStarters" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Learn!
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="{{ url_for('bconnor.PetInfo') }}">Pet Information Overview</a>
+                    <a class="dropdown-item" href="{{ url_for('bchase.Enclosures') }}">Enclosures</a>
+                </div>
             </li>
 
         </div>
