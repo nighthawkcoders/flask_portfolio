@@ -26,9 +26,7 @@ def jason():
     response = requests.request("GET", url, headers=headers)
 
     final=response.text
-    return render_template("jason.html")
-
-
+    return render_template("aboutpages/jason.html")
 
 
 @app.route('/adi', methods={'GET', 'POST'})
@@ -41,7 +39,7 @@ def adi():
     # return render_template("AboutDylan.html")
 
     response = requests.request("GET", url, headers=headers)
-    return render_template("adi.html", stats=response.json())
+    return render_template("aboutpages/adi.html", stats=response.json())
 
 @app.route('/brian')
 def brian():
@@ -52,7 +50,7 @@ def brian():
     # }
     # response = requests.request("GET", url, headers=headers)
     # results = json.loads(response.content.decode("utf-8"))['results']
-    return render_template("brian.html")#, res=results)
+    return render_template("aboutpages/brian.html")#, res=results)
 
 @app.route('/divya')
 def divya():
@@ -67,7 +65,7 @@ def divya():
     quotes = []
     for result in response:
         quotes.append(result['text'] + " by author: " + result['author'])
-    return render_template("divya.html", quotes=quotes)
+    return render_template("aboutpages/divya.html", quotes=quotes)
 
 @app.route('/rohan', methods=['GET', 'POST'])
 def rohan():
@@ -79,7 +77,7 @@ def rohan():
     }
     response = requests.request("GET", url, headers=headers)
     data = response.json()
-    return render_template("rohan.html", data=data)
+    return render_template("aboutpages/rohan.html", data=data)
 
 @app.route('/photogallery', methods=['GET', 'POST'])
 def photogallery():
@@ -87,7 +85,7 @@ def photogallery():
         input = request.form.get("input")
         if len(input) != 0:
             return render_template("photogallery.html", input1=input)
-    return render_template("photogallery.html", input1="")
+    return render_template("pbl/photogallery.html", input1="")
 
 @app.route('/weather/', methods=['GET','POST'])
 def weather():
@@ -109,7 +107,33 @@ def weather():
         results = json.loads(response.content.decode("utf-8"))
         return render_template("weather.html", results=results)
     else:
-        return render_template("weather.html")
+        return render_template("pbl/weather.html")
+
+@app.route('/hotels/', methods=['GET','POST'])
+def hotels():
+    try:
+        keyword = request.form['keyword']
+    except:
+        keyword = "new york"
+    url = "https://hotels4.p.rapidapi.com/locations/v2/search"
+
+    querystring = {"query":keyword,"locale":"en_US","currency":"USD"}
+
+    headers = {
+        'x-rapidapi-host': "hotels4.p.rapidapi.com",
+        'x-rapidapi-key': "3d43659d98msh26d5e705bc7d8b6p1d6431jsnba44357aaf20"
+    }
+
+    response = requests.request("GET", url, headers=headers, params=querystring)
+
+    # print(json.loads(response.content.decode("utf-8")))
+    results = json.loads(response.content.decode("utf-8"))
+    # print(results['suggestions'])
+    for suggestions in results['suggestions']:
+        # print(suggestions['entities'])
+        for entities in suggestions['entities']:
+            print(entities['name'])
+    return render_template("hotels.html", results=results)
 
 # runs the application on the development server
 if __name__ == "__main__":
