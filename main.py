@@ -2,7 +2,6 @@
 
 from pathlib import Path
 
-
 from flask import Flask, render_template, request
 from algorithms.image import rotatehack, sonakshi_image_data, kashish_image_data, saumya_image_data
 import requests
@@ -119,7 +118,7 @@ def listmovie():
     response = requests.request("GET", url, headers=headers, params=querystring)
     response = response.json().get("titles")
 
-    return render_template("listmovie.html", response=response)
+    return render_template("listmovieapi.html", response=response)
 
 
 @app.route('/dictionary', methods=['GET', 'POST'])
@@ -141,7 +140,6 @@ def punnuapitest():
     response = requests.request("GET", url)
     text = response.json()
     return render_template("punnuapitest.html", text=text)
-
 
 # runs the application on the development server
 if __name__ == "__main__":
