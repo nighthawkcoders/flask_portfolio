@@ -13,6 +13,7 @@
 3. [Innovation sprint 1,2 Week 1](https://github.com/connorw72/food#innovation-sprint-12-week-1)
 4. [Innovation sprint 1,2 Week 2](https://github.com/connorw72/food#innovation-sprint-12-week-2)
 5. [Database intro sprint 3 week 3](https://github.com/connorw72/food#database-intro-sprint-3-week-3)
+6. [Python Database Modeling Sprint 4,5 week 4](https://github.com/connorw72/food#python-database-modeling-sprint-45-week-4)
 ## Contributors
 | Name | GitHub ID and Profile | Tasks | Scrum Board | Commits | BOF Job |
 |:-----|:----------------------|:-----:|:-----------:|:-------:|:--------:|
@@ -53,6 +54,15 @@
 |:-----|:----------------------|
 |AP MCQ Test and Corrections (2 pts)| [Connor and Tanay](https://docs.google.com/document/d/1yMnRk0cY8TWYl3YKTgz0OKkrI5Gac4pEyoyiffEeUoE/edit?usp=sharing)
 |AP MCQ Test and Corrections (2 pts)| [Pranav, Chase, Colin](https://docs.google.com/document/d/1iU4SOdLDTyFTuoI4yuBxjvRjvVHq53I5JZgaCRP8Ah4/edit?usp=sharing)
+### Python Database Modeling Sprint 4,5 week 4
+|Member| Technicals of the week |
+|:-----|:----------------------|
+|Connor| [Blueprints](https://github.com/connorw72/food/tree/main/blueprints),[Overview of info](https://github.com/connorw72/food/blob/main/templates/PetInfo.html),[Info](https://github.com/connorw72/food/blob/main/algorithms/petinfo.py)
+|Tanay| [Hangman]()
+|Pranav| [Page]()
+|Colin| [Page]()
+|Chase| [Enclosures](https://github.com/connorw72/food/blob/main/templates/Enclosures.html)
+
 
 
 

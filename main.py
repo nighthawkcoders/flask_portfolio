@@ -5,7 +5,6 @@ from __init__ import app
 from flask import Blueprint
 import requests
 
-
 from blueprints.connor import bconnor
 from blueprints.pranav import bpranav
 from blueprints.colin import bcolin
