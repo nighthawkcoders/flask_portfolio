@@ -1,8 +1,6 @@
-<!-- Extending the project layout, as this file will do minor customizations -->
-{% extends "layouts/project.html" %}
-
-<!-- Setting up variables to customize "project" details to be specific to walruses -->
-{% set project = "Home" %}
+<body>
+<html>
+{% include "layouts/navbar.html" %}
 
 {% block body %}
 
@@ -29,9 +27,11 @@
         </style>
 
     </head>
+    <br>
 
     <h1>Student Resources</h1>
-
+    <br>
+    <br>
     <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -43,12 +43,12 @@
     <div class="container">
         <div class="jumbotron">
             <h1>Other Sites & Info </h1>
-            <p>There are many other sites full of info about stress relief, relaxation, and other resources. We've organized them into neat categories for you! </p>
+            <p> There are many other sites full of info about stress relief, relaxation, and other resources. We've organized them into neat categories for you! </p>
         </div>
         <div style="font-size: xx-large; text-align: center">
-        <p> <a href="/stress">Stress Relief</a> </p>
-        <p> <a href="/study">Study Hall</a> </p>
-        <p> <a href="/volunteer">Volunteer!</a> </p>
+        <p> <a style="font-family: Baskerville" href="/stress">Stress Relief</a> </p>
+        <p> <a style="font-family: Baskerville" href="/study">Study Hall</a> </p>
+        <p> <a style="font-family: Baskerville" href="/volunteer">Volunteer!</a> </p>
         </div>
     </div>
 

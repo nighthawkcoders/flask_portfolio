@@ -43,6 +43,10 @@ def volunteer():
 def search():
     return render_template("search.html")
 
+@app.route('/crud')
+def crud():
+    return render_template("crud.html")
+
 @app.route('/sonakshi', methods=['GET', 'POST'])
 def sonakshi():
     # submit button has been pushed
@@ -141,4 +145,4 @@ def punnuapitest():
 
 # runs the application on the development server
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, port="5001")

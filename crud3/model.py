@@ -90,14 +90,18 @@ def model_tester():
     print("--------------------------")
     db.create_all()
     """Tester data for table"""
-    u1 = Users(name='Thomas Edison', email='tedison@example.com', password='123toby', phone="1111111111")
-    u2 = Users(name='Nicholas Tesla', email='ntesla@example.com', password='123niko', phone="1111112222")
-    u3 = Users(name='Alexander Graham Bell', email='agbell@example.com', password='123lex', phone="1111113333")
-    u4 = Users(name='Eli Whitney', email='eliw@example.com', password='123whit', phone="1111114444")
+    u1 = Users(name='Sonakshi Bhalla', email='sonakshi@example.com', password='123school', phone="8471947575")
+    u2 = Users(name='Shreya Ahuja', email='shreya@example.com', password='123milo', phone="1111112222")
+    u3 = Users(name='Khushi Bagri', email='khushi@example.com', password='123khushi', phone="1111113333")
+    u4 = Users(name='Punnu Sangram', email='punnu@example.com', password='123punnu', phone="1111114444")
     u5 = Users(name='John Mortensen', email='jmort1021@gmail.com', password='123qwerty', phone="8587754956")
-    u6 = Users(name='John Mortensen', email='jmort1021@yahoo.com', password='123qwerty', phone="8587754956")
-    # U7 intended to fail as duplicate key
-    u7 = Users(name='John Mortensen', email='jmort1021@yahoo.com', password='123qwerty', phone="8586791294")
+    u6 = Users(name='Bob Fred', email='bobfred1@yahoo.com', password='123bobfred', phone="8587754956")
+    u7 = Users(name='Anthony Smith', email='bobfred1@yahoo.com', password='123bobfred', phone="99876790")
+    u8 = Users(name='Jake Gregory', email='jake@yahoo.com', password='123gregory', phone="7349327488")
+    u9 = Users(name='Claire Miller', email='bobfred1@yahoo.com', password='123bobfred', phone="8587754956")
+    u10 = Users(name='Lina Johnson', email='bobfred1@yahoo.com', password='123bobfred', phone="8587754956")
+# U10 intended to fail as duplicate key
+    u10 = Users(name='John Mortensen', email='jmort1021@yahoo.com', password='123qwerty', phone="8586791294")
     table = [u1, u2, u3, u4, u5, u6, u7]
     for row in table:
         try:
