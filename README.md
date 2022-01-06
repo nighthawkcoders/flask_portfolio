@@ -57,11 +57,11 @@
 ### Python Database Modeling Sprint 4,5 week 4
 |Member| Technicals of the week |
 |:-----|:----------------------|
-|Connor| [Blueprints](),[Overview of info]()
+|Connor| [Blueprints](https://github.com/connorw72/food/tree/main/blueprints),[Overview of info]()
 |Tanay| [Hangman]()
 |Pranav| [Page]()
 |Colin| [Page]()
-|Chase| [Enclosures]()
+|Chase| [Enclosures](https://github.com/connorw72/food/blob/main/templates/Enclosures.html)
 
 
 
