@@ -4,8 +4,6 @@ from crud import app_crud
 from __init__ import app
 from flask import Blueprint
 import requests
-import ssl
-
 
 from blueprints.connor import bconnor
 from blueprints.pranav import bpranav
