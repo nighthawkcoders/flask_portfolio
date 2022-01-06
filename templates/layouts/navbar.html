@@ -17,7 +17,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
     <a class="navbar-brand" href="/">
-        <img src="/static/improvedtordle.png" width="76" height="50" class="center" alt="">
+        <img src="/static/assets/foodlogo.png" width="76" height="50" class="center" alt="">
         <span class="navbar-toggler-icon"></span>
     </a>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -43,6 +43,7 @@
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="{{ url_for('bpranav.dogs') }}">Dogs Adoption</a>
                     <a class="dropdown-item" href="{{ url_for('bpranav.birds') }}">Birds Adoption</a>
+                    <a class="dropdown-item" href="{{ url_for('bcolin.imageCarousel') }}">Meet Some Pets</a>
                 </div>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -55,8 +56,36 @@
             </li>
 
         </div>
-
+        <div>
+            <span id="clock"></span>
+        </div>
     </div>
+
 </nav>
 
+
+
+
+
+
+
+
 </html>
+<script type="text/javascript">
+    var clockElement = document.getElementById('clock');
+
+    function clock() {
+        var date = new Date();
+
+        // Replace '400px' below with where you want the format to change.
+        if (window.matchMedia('(max-width: 400px)').matches) {
+            // Use this format for windows with a width up to the value above.
+            clockElement.textContent = date.toLocaleString();
+        } else {
+            // While this format will be used for larger windows.
+            clockElement.textContent = date.toString();
+        }
+    }
+
+    setInterval(clock, 1000);
+</script>
