@@ -5,13 +5,6 @@
 <head>
     <meta charset="UTF-8">
     <title>World Clock</title>
-    {% block background %}
-        <style>
-            html, body{
-                background-color: deepskyblue;
-            }
-        </style>
-    {% endblock %}
 </head>
 {%  block body %}
     <body>
@@ -19,13 +12,19 @@
         <div class="col-sm">
             <h1>World Clock</h1>
             <p>TIME</p>
-            <div id="currentDateTime"></div>
+            <div style="width:500px;height:100px;border:5px solid #000; background-color:darkgreen">
+                <div id="currentDateTime" style="font-size: 50px; font-family:Chalkboard"></div>
+            </div>
             <br>
             <p>DAY OF THE WEEK</p>
-            <div id="dayOfTheWeek"></div>
+            <div style="width:500px;height:100px;border:5px solid #000; background-color:darkgreen">
+                <div id="dayOfTheWeek" style="font-size: 50px; font-family:Chalkboard"></div>
+            </div>
             <br>
             <p>TIMEZONE</p>
-            <div id="timeZoneName"></div>
+            <div style="width:500px;height:100px;border:5px solid #000; background-color:darkgreen">
+                <div id="timeZoneName" style="font-size: 50px; font-family:Chalkboard"></div>
+            </div>
             <br>
             <script>
                 async function clock() {
@@ -34,7 +33,7 @@
                         "headers": {
                             "x-rapidapi-host": "world-clock.p.rapidapi.com",
                             "x-rapidapi-key": "a2517cf9bdmshb3cb60d57e2fe79p1f907fjsna7217b3dedc7"
-                            
+
                         }
                     })
                     console.log(response);
