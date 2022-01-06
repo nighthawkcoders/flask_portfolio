@@ -1,14 +1,136 @@
 <!DOCTYPE html>
 
 <!-- EXTEND (layout.html), this is a template for all rendered pages in the project -->
-{% extends "layouts/base.html" %}
-
-{% set project = "CRUD" %}
+{% extends "layout.html" %}
 
 <!-- CONTENT (in <head>), content for this page -->
 {% block head %}
-    <title>CRUD page</title>
+    <title>Async CRUD page</title>
     <script src={{  url_for("crud.static", filename="javascript/validation.js", version='101') }}></script>
+
+    <script>
+        function create_User(){
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            const phone = document.getElementById("phone").value;
+            const requestOptions = {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer my-token',
+                },
+            };
+            const url='/crud_api/create/' + name + '/' + email+ '/' + password + '/' + phone;
+            fetch(url, requestOptions).then(response => {
+                // prepare HTML search result container for new output
+                const resultContainer = document.getElementById("result");
+                // trap error response from Web API
+                if (response.status !== 200) {
+                    const errorMsg = 'Database response error: ' + response.status;
+                    console.log(errorMsg);
+                    const tr = document.createElement("tr");
+                    const td = document.createElement("td");
+                    td.innerHTML = errorMsg;
+                    tr.appendChild(td);
+                    resultContainer.appendChild(tr);
+                    return;
+                }
+                response.json().then(data => {
+                    console.log(data);
+                    const tr = document.createElement("tr");
+                    for (let key in data) {
+                        const td = document.createElement("td");
+                        td.innerHTML = data[key];
+                        tr.appendChild(td);
+                    }
+                    resultContainer.appendChild(tr);
+                })
+            })
+        }
+
+        function read_User(){
+            const get_userid = document.getElementById("read_userid");
+            const userID = get_userid.value;
+            const url='/crud_api/read/' + userID;
+            const requestOptions = {
+                method: 'GET',
+            };
+            fetch(url, requestOptions).then(response => {
+                // prepare HTML search result container for new output
+                const resultContainer = document.getElementById("result");
+                // clean up from previous search
+                while (resultContainer.firstChild) {
+                    resultContainer.removeChild(resultContainer.firstChild);
+                }
+                // trap error response from Web API
+                if (response.status !== 200) {
+                    const errorMsg = 'Database response error: ' + response.status;
+                    console.log(errorMsg);
+                    const tr = document.createElement("tr");
+                    const td = document.createElement("td");
+                    td.innerHTML = errorMsg;
+                    tr.appendChild(td);
+                    resultContainer.appendChild(tr);
+                    return;
+                }
+                response.json().then(data => {
+                    console.log(data);
+                    const tr = document.createElement("tr");
+                    for (let key in data) {
+                        const td = document.createElement("td");
+                        td.innerHTML = data[key];
+                        tr.appendChild(td);
+                    }
+                    resultContainer.appendChild(tr);
+                })
+            })
+        }
+
+        function update_User() {
+            const username = document.getElementById("update_name").value;
+            const userid = document.getElementById("update_userid").value;
+            const url = '/crud_api/update/' + userid + '/' + username;
+            const requestOptions = {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer my-token',
+                },
+            };
+            fetch(url, requestOptions).then(response => {
+                // prepare HTML search result container for new output
+                const table = document.getElementById("result");
+                response.json().then(data => {
+                    console.log(data);
+                    const updateRow = $("#result td:contains("+userid+")").closest("tr").find("td");
+                    updateRow[1].innerHTML = username;
+                    console.log(updateRow);
+
+                })
+            })
+        }
+
+        function delete_User(){
+            const userid = document.getElementById("delete_userid").value;
+            const url = '/crud_api/delete/' + userid;
+            const requestOptions = {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer my-token',
+                },
+            };
+            fetch(url, requestOptions).then(response => {
+                // prepare HTML search result container for new output
+
+                response.json().then(data => {
+                    console.log(data);
+                    $("#"+"result").find("td:contains('"+userid+"')").closest('tr').remove();
+                    })
+            })
+        }
+    </script>
 {% endblock %}
 
 <!-- CONTENT (in <body>), content for this page -->
@@ -16,7 +138,7 @@
     <div class="container py-4 text-light bg-success">
         <header class="pb-3 mb-4 border-bottom">
             <div class="d-flex align-items-center text-light text-decoration-none">
-                <span class="fs-4">SQL CRUD Admin Page</span>
+                <span class="fs-4">Async SQL CRUD Admin Page</span>
             </div>
         </header>
 
@@ -29,7 +151,7 @@
                         <tr>
                             <td></td>
                             <td></td>
-                            <td><a href={{url_for('crud.crud')}}>Full Table </a></td>
+                            <td><a href={{url_for('crud_api.crud_api')}}>Full Table </a></td>
                             <td><a href="https://github.com/nighthawkcoders/nighthawk_csp/tree/master/crud">GitHub Source</a></td>
                         </tr>
                         </tbody>
@@ -47,7 +169,7 @@
                                 <th>Phone</th>
                             </tr>
                             </thead>
-                            <tbody>
+                            <tbody id="result">
                             <!-- Loop through rows in table -->
                             {% for row in table %}
                                 <!--
@@ -69,14 +191,11 @@
                     </div>
                 </div>
             </div>
-
         </div>
-
-
         <div class="container py-4">
             <div class="p-5 mb-4 bg-light text-dark rounded-3">
                 <h2>Create a new record</h2>
-                <form method="POST" ID="create" action={{url_for('crud.create')}} >
+
                     <table class="table">
                         <thead>
                         <tr>
@@ -92,30 +211,26 @@
                             <td><input type="email" name="email" id="email" placeholder="abc@xyz.org" required></td>
                             <td><input type="password" name="password" id="password" required></td>
                             <td><input type="tel" name="phone" id="phone" pattern="[0-9]{10}" placeholder="1234567890" required></td>
-                            <td><input type="submit" value="Create"></td>
+                            <td><button onclick="create_User()">Create</button></td>
+
                         </tr>
                         </tbody>
                     </table>
                     <p id="pswError"></p>
-                </form>
             </div>
-
         </div>
-
         <div class="container py-4">
-
             <div class="row mb-4 bg-light text-dark rounded-3">
-
                 <div class="col-md-3">
                     <div class="p-5 mb-4 bg-light text-dark rounded-3">
                         <h2>Read</h2>
-                        <form method="POST" ID="read" action={{url_for('crud.read')}} >
+                        <!-- <input type="submit" value="Read" -->
                             <table id="read_table">
                                 <tr><th><label for="read_userid">ID</label></th></tr>
                                 <tr>
                                     <td>
                                         <select name="userid" id="read_userid">
-                                            <optgroup label="userid">
+                                            <optgroup label="userid" id="oguserid">
                                                 {% for row in table %}
                                                     <option label="{{ row['userID'] }}">{{ row['userID'] }}</option>
                                                 {% endfor %}
@@ -123,18 +238,16 @@
                                         </select>
                                     </td>
                                     <td>
-                                        <input type="submit" value="Read">
+                                        <!-- <input type="submit" value="Read" -->
+                                        <button onclick="read_User()">Read</button>
                                     </td>
                                 </tr>
                             </table>
-                        </form>
                     </div>
                 </div>
-
                 <div class="col-md-6">
                     <div class="p-5 mb-4 bg-light text-dark rounded-3">
                         <h2>Update</h2>
-                        <form method="POST" ID="update" action={{url_for('crud.update')}} >
                             <table id="update_table">
                                 <tr>
                                     <th><label for="update_userid">ID</label></th>
@@ -143,7 +256,7 @@
                                 <tr>
                                     <td>
                                         <select name="userid" id="update_userid">
-                                            <optgroup label="userid">
+                                            <optgroup label="userid" id="oguserid">
                                                 {% for row in table %}
                                                     <option label="{{ row['userID'] }}">{{ row['userID'] }}</option>
                                                 {% endfor %}
@@ -151,33 +264,31 @@
                                         </select>
                                     </td>
                                     <td><input type="text" name="name" id="update_name" required></td>
-                                    <td><input type="submit" value="Update"></td>
+                                    <!-- td><input type="submit" value="Update"></td -->
+                                    <td> <button onclick="update_User()">Update</button>
+                                    </td>
                                 </tr>
                             </table>
-                        </form>
                     </div>
                 </div>
-
                 <div class="col-md-3">
                     <div class="p-5 mb-4 bg-light text-dark rounded-3">
                         <h2>Delete</h2>
-                        <form method="POST" ID="read" action={{url_for('crud.delete')}} >
                             <table id="read_table">
                                 <tr><th><label for="delete_userid">ID</label></th></tr>
                                 <tr>
                                     <td>
                                         <select name="userid" id="delete_userid">
-                                            <optgroup label="userid">
+                                            <optgroup label="userid" id="oguserid">
                                                 {% for row in table %}
                                                     <option label="{{ row['userID'] }}">{{ row['userID'] }}</option>
                                                 {% endfor %}
                                             </optgroup>
                                         </select>
                                     </td>
-                                    <td><input type="submit" value="Delete"></td>
+                                    <td><button onclick="delete_User()">Delete</button></td>
                                 </tr>
                             </table>
-                        </form>
                     </div>
                 </div>
 
@@ -187,22 +298,5 @@
 
     </div>
 
-    <!-- Back end SQL data definition code (SQLalchemy) -->
-    <div class="container py-4">
-        <h1 id="BE-MODEL">Back End Definition Code (Model) </h1>
-        <script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2Fnighthawkcoders%2Fnighthawk_csp%2Fblob%2Fmaster%2Fcrud%2Fmodel.py&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
-    </div>
-
-    <!-- Front End HTML, shows this file -->
-    <div class="container py-4">
-        <h1 id="FE-VIEW">Front End HTML Code (View) </h1>
-        <script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2Fnighthawkcoders%2Fnighthawk_csp%2Fblob%2Fmaster%2Fcrud%2Ftemplates%2Fcrud%2Fcrud.html&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
-    </div>
-
-    <!-- Back Route code -->
-    <div class="container py-4">
-        <h1 id="BE-CONTROL">Back End Form Request and API Code (Control)</h1>
-        <script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2Fnighthawkcoders%2Fnighthawk_csp%2Fblob%2Fmaster%2Fcrud%2Fapp_crud.py&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
-    </div>
 
 {% endblock %}
