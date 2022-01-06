@@ -1,4 +1,7 @@
-{% include nav_jekyll.html %}
+---
+title: About 
+layout: default
+---
 
 <table>
   <tr> 
