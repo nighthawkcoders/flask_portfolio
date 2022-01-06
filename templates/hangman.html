@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% extends "layouts/base.html" %}
+{% block head %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hangman</title>
+
+    <script></script>
+
+    {% endblock %}
+
+    {% block body %}
+
+</head>
+<body>
+    <h1>The input element</h1>
+
+    <form action="/">
+        <label for="fname">Word</label>
+        <input type="text" id="fname" name="fname"><br><br>
+        <label for="lname">Guess</label>
+        <input type="text" id="lname" name="lname"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <p>Guess the Pet Name (Do With Partner!)</p>
+
+</body>
+</html>
+{% endblock %}
