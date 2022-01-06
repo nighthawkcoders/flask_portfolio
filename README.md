@@ -1,7 +1,7 @@
 # Supporting Cast
 
 # Table of Contents
-1. [Week 4 - ](#Week4)
+1. [Week 4 - "Time to be Resolute" 3,4,5](#Week4)
 2. [Week 3 - WIP Project Review](#Week3)
 3. [Week 2 - Home Pages](#Week2)
 4. [Week 1 - Project Approval](#Week1)
