@@ -109,11 +109,15 @@ def weather():
     else:
         return render_template("weather.html")
 
-@app.route('/hotels/')
+@app.route('/hotels/', methods=['GET','POST'])
 def hotels():
+    try:
+        keyword = request.form['keyword']
+    except:
+        keyword = "new york"
     url = "https://hotels4.p.rapidapi.com/locations/v2/search"
 
-    querystring = {"query":"new york","locale":"en_US","currency":"USD"}
+    querystring = {"query":keyword,"locale":"en_US","currency":"USD"}
 
     headers = {
         'x-rapidapi-host': "hotels4.p.rapidapi.com",
@@ -122,8 +126,14 @@ def hotels():
 
     response = requests.request("GET", url, headers=headers, params=querystring)
 
-    print(response.text)
-    return render_template("hotels.html")
+    # print(json.loads(response.content.decode("utf-8")))
+    results = json.loads(response.content.decode("utf-8"))
+    # print(results['suggestions'])
+    for suggestions in results['suggestions']:
+        # print(suggestions['entities'])
+        for entities in suggestions['entities']:
+            print(entities['name'])
+    return render_template("hotels.html", results=results)
 
 # runs the application on the development server
 if __name__ == "__main__":

@@ -9,7 +9,17 @@
     <title>Title</title>
 </head>
 <body>
-
+<form action="/hotels/" method="POST">
+    <input type="text" placeholder="Enter location" name='keyword'>
+    <button type="submit">Get Hotels</button>
+</form>
+    {% for suggestion in results.suggestions %}
+        {% for entities in suggestion.entities %}
+            <div>
+                {{entities.name}}
+            </div>
+        {% endfor %}
+    {% endfor %}
 </body>
 </html>
 
