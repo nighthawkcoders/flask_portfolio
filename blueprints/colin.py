@@ -20,3 +20,7 @@ response = requests.request("GET", url = "https://free-nba.p.rapidapi.com/player
 data = response.json()['data']
 
 print(data)
+
+@bcolin.route('/imageCarousel/')
+def imageCarousel():
+    return render_template('PBL Pages/imageCarousel.html')
