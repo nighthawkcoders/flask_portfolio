@@ -6,7 +6,6 @@ from flask import Blueprint
 import requests
 import ssl
 
-
 from blueprints.connor import bconnor
 from blueprints.pranav import bpranav
 from blueprints.colin import bcolin
