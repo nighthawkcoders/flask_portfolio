@@ -2,12 +2,16 @@
 ---
 ---
 
+
+
 # Contribution Guidelines
 ## Table of Contents
 - [Our Policy](#overall-policy)
 - [Instructions](#instructions)
     - [Commits](#commits)
     - [Pull Requests and Branching](#pull-requests-and-branching)
+
+
 ## Overall Policy
 The overall contributing policy for this group will be to use pull requests. Merge Conflicts were one of the main issues encountered last trimester, and therefore the policy is crafted around a) avoiding merge conflicts and b) resolving merge conflicts in a convenient way that avoids members losing code.
 
@@ -16,6 +20,7 @@ In order to achieve both these goals, pull requests will be used. Members will c
 These pull requests will be sent to the Github Admin for review. In the event that the changes made are proper and useful, they will be merged to the main branch. Members will also have to resolve any merge conflicts that occur as described below.
 
 Commits will also be used in select cases that involve very minor additions or changes to README and other minor markdown files. However, they will be secondary to the primary policy of branching off main and then sending the Github Admin pull requests to be merged.
+
 
 ## Instructions
 ### Commits
