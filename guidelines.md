@@ -1,5 +1,6 @@
-{% include nav_jekyll.html %}
 ---
+title: Contributing Guidelines
+layout: default
 ---
 
 
