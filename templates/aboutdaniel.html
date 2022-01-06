@@ -5,40 +5,70 @@
 <head>
     <meta charset="UTF-8">
     <title>Daniel Bertino</title>
+    {% block background %}
+        <style>
+            html, body{
+                background-color: #00a9c7;
+            }
+        </style>
+    {% endblock %}
 </head>
 {%  block body %}
     <body>
     <div class="row">
         <div class="col-sm">
             <h1>Daniel</h1>
-            <img src="/static/assets/nathan2.jpg" width="50%"  id="danielimg" onclick="danielImg()" >
+            <img src="/static/assets/danielno.jpg" width="50%"  id="danielImg" onclick="danielImg()" >
         </div>
         <div class="col-sm">
+            <h1>About Me</h1>
+            </p>Hello! My name is Daniel Bertino, but you can call me Danny. I am seventeen years old and was born here in the US. I have an Italian heritage because my parents were born in Italy and ever since I was a child they have shared their Italian Culture with me. I am fluent in Italian and during my high school career I have taken three years’ worth of Spanish, so I can speak it quite well too. Some of my main interests are outdoor-related activities. One of my favorite things to do in my spare time is travel. I have been in various parts of Europe and each year I would typically spend my summers traveling. Since all my family and relatives are in Italy I would go there to see them each year and hang out with my friends. The lifestyle over there is very active which has made me enjoy the outdoors so much more. Some of my other interests, besides traveling, are sailing, nature hikes, biking, and fishing. A big part of Italian culture is its food, architecture, and soccer. Soccer has always been one of my favorite sports since I was little and during my free time, I would go to the pitch to practice my skills. Additionally, I love studying the Architecture of different places I travel to because each country has its own particular style of building which fascinates me. This year, I took computer science principles because I wanted to try to learn more about a different field just to get a solid background of how coding works as our world is shifting to a more technological phase. </p>
+
             <h1>API</h1>
+            <p>Science Article</p>
+            <div id="title"></div>
+            <br>
+            <p>URL</p>
+            <div id="url"></div>
+            <br>
+            <h1>Links</h1>
+            <a href="https://docs.google.com/document/d/1243B2mbRGslTk-0YRXKdKykfs6fAU5pK1LFUyJQ83vM/edit">Create Task Planning</a>
+            <br>
+            <a href="https://docs.google.com/document/d/12rQvrhtsNnlDFDhkCI9sT8w7fTD3y-4FW6W8LPLuf9w/edit">Journal</a>
+            <script>
+                async function getAstroNews() {
+                    const response = await fetch("https://space-news.p.rapidapi.com/news/guardian", {
+                        "method": "GET",
+                        "headers": {
+                            "x-rapidapi-host": "space-news.p.rapidapi.com",
+                            "x-rapidapi-key": "92b9f4e31cmsh02f34db44282758p14191cjsndd8b61d87098"
+                        }
+                    })
+                    console.log(response);
+                    const astroNew = await response.json();
+                    console.log(astroNew);
+                    const astroNews = astroNew[0];
+                    document.getElementById("title").textContent = astroNews["title"];
+                    document.getElementById("url").textContent = astroNews["url"];
+                }
+                getAstroNews();
+            </script>
         </div>
     </div>
     <script>
-        var DanielVar = 0;
-        function ReemImg () {
-            const element = document.getElementById("Danielimg");
-            if (DanielVar == 0) {
-                element.src = "/static/assets/nathan1.jpg";
-                ReemVar = 1
+        var danielVar = 0;
+        function danielImg () {
+            const element = document.getElementById("danielImg");
+            if (danielVar == 0) {
+                element.src = "/static/assets/danielno.jpg";
+                danielVar = 1
             }
             else {
-                element.src = "/static/assets/nathan2.jpg";
-                DanielVar = 0;
+                element.src = "/static/assets/danielyes.jpg";
+                danielVar = 0;
             }
         }
     </script>
     </body>
 {% endblock %}
 </html>
-
-
-
-
-
-
-
-

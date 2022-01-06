@@ -8,7 +8,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 <html lang="en">
 
 {% set basename = "Team Milkshake" %}
-{% set github = "https://github.com/nighthawkcoders" %}
+{% set github = "https://github.com/jar04/flask_portfolio" %}
 
 
 <head>
@@ -28,7 +28,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             -moz-animation: fadein 2s; /* Firefox */
             -webkit-animation: fadein 2s; /* Safari and Chrome */
             -o-animation: fadein 2s; /* Opera */
-            background-color: var(--blue);
+            background-color: #1d6fa1;
             color: var(--white);
         }
 
@@ -51,14 +51,6 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 
         .fa:hover{
             transform: translateY(10px);
-        }
-
-        .fa-youtube-play:hover{
-            color: #cc0000;
-        }
-
-        .fa-twitter:hover{
-            color: #1da1f2;
         }
 
         .fa-github:hover{
@@ -88,7 +80,9 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
     </style>
 
     <title>{{ basename }} | {{ project }} </title>
+{% block meta %}
 
+{% endblock %}
 </head>
 
 <body>
@@ -102,8 +96,6 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
                 <!-- notice jinja style variables used in href's -->
                 <a><h5>{{basename}}</h5></a>
                 <a href={{github}} target="_blank"><i class="fa fa-github"></i></a>
-                <a href={{youtube}} target="_blank"><i class="fa fa-youtube-play"></i></a>
-                <a href={{twitter}} target="_blank"><i class="fa fa-twitter"></i></a>
             {% endblock %}
         </div>
     </div>
@@ -112,7 +104,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
         <div class="row" style="padding: 10%; padding-top: 0%; padding-bottom: 5%;">
 
             <div class="col-8" >
-                <h1>{{ project }} Project</h1>
+                <p style="font-size: 20px; ">Welcome to Global Networking! Have you ever wanted to learn more about a certain country by exploring their diverse cultures, traditions, or maybe find fun things to do when you book your next vacation trip? How about having the convenience of using our language translator to help you communicate with others in a foreign country? If you answered yes to any of these questions, this website is for you! Here you will find recent information about several countries around the world. Learn about us, new languages, different cultures, interesting facts about the environment, and recent statistics in the form of API databases on our virtual site. If you would like to begin, you could start by exploring our dropdown menus or by clicking a country down below, which will direct you to a separate page. </p>
             </div>
 
         </div>

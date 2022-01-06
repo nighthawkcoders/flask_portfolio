@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<!-- Preparing search using asynchronous "fetch" (no page reload, no wait)
+inspiration from https://www.youtube.com/watch?v=QKcVjdLEX_s
+-->
+{% extends "layouts/base.html" %}
+
+{% block body %}
+    <title>SQL search</title>
+    <div class="container py-4 bg-primary">
+        <!-- heading -->
+        <header class="pb-3 mb-4 border-bottom">
+            <a href="#" class="d-flex align-items-center text-light text-decoration-none">
+                <span class="fs-4">Search Database</span>
+            </a>
+        </header>
+        <!-- search box -->
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="mb-3">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="term" placeholder="enter search term">
+                            <label></label> <!-- used for spacer -->
+                        </div>
+                        <button class="btn btn-primary bg-secondary" onclick="search_data();">Search</button>
+                        <button class="btn btn-primary bg-secondary" onclick="sortList();">Sort</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- result of search -->
+    <div class="container" id="result">
+    </div>
+
+    <script>
+        function search_data() {
+            // fetch standard requires data set to a name-value pair
+            const term = document.getElementById("term");
+            const body = {
+                term: term.value
+            };
+
+            // fetch call with header options
+            fetch('/crud/search/term/', {
+                method: "POST",
+                credentials: "include",
+                body: JSON.stringify(body),
+                cache: "no-cache",
+                headers: new Headers({
+                    "content-type": "application/json"
+                })
+            })
+                // async then replies with response header
+                .then(function (response) {
+                    // prepare HTML search result container for new output
+                    const resultContainer = document.getElementById("result");
+                    // clean up from previous search
+                    while (resultContainer.firstChild) {
+                        resultContainer.removeChild(resultContainer.firstChild);
+                    }
+                    // trap error response from Web API
+                    if (response.status !== 200) {
+                        const errorMsg = 'Database response error: ' + response.status;
+                        console.log(errorMsg);
+                        const div = document.createElement("div");
+                        div.className = "row";
+                        div.innerHTML = errorMsg;
+                        resultContainer.appendChild(div);
+                        return;
+                    }
+                    // response contains valid result
+                    response.json().then(function (data) {
+                        // LOGIC
+                        var i, switching, shouldSwitch;
+                        switching = true;
+                        /* Make a loop that will continue until
+                        no switching has been done: */
+                        while (switching) {
+                            // Start by saying: no switching is done:
+                            switching = false;
+                            // Loop through all list items:
+                            for (i = 0; i < (data.length - 1); i++) {
+                                // Start by saying there should be no switching:
+                                shouldSwitch = false;
+                                /* Check if the next item should
+                                switch place with the current item: */
+                                if (data[i].name.innerHTML > data[i + 1].name.innerHTML) {
+                                    /* If next item is alphabetically lower than current item,
+                                    mark as a switch and break the loop: */
+                                    shouldSwitch = true;
+                                    break;
+                                }
+                            }
+                            if (shouldSwitch) {
+                                /* If a switch has been marked, make the switch
+                                and mark the switch as done: */
+                                data[i].parentNode.insertBefore(data[i + 1], data[i]);
+                                switching = true;
+                            }
+                        }
+                        // loop through JSON and build HTML output
+                        for (let i = 0; i < data.length; i++) {
+                            const div = document.createElement("div");
+                            div.className = "row";
+                            div.innerHTML = data[i].name + ' ' + data[i].email;
+                            div.id = data[i].name;
+                            resultContainer.appendChild(div);
+                        }
+                    })
+                })
+        }
+
+        {#function sortList() {#}
+        {#    var list, i, switching, b, shouldSwitch;#}
+        {#    list = document.getElementById("result");#}
+        {#    switching = true;#}
+        {#    /* Make a loop that will continue until#}
+        {#    no switching has been done: */#}
+        {#    while (switching) {#}
+        {#        // Start by saying: no switching is done:#}
+        {#        switching = false;#}
+        {#        b = list.getElementsByTagName("result");#}
+        {#        // Loop through all list items:#}
+        {#        for (i = 0; i < (b.length - 1); i++) {#}
+        {#            // Start by saying there should be no switching:#}
+        {#            shouldSwitch = false;#}
+        {#            /* Check if the next item should#}
+        {#            switch place with the current item: */#}
+        {#            if (shouldSwitch) {#}
+        {#                /* If next item is alphabetically lower than current item,#}
+        {#                mark as a switch and break the loop: */#}
+        {#                shouldSwitch = true;#}
+        {#                break;#}
+        {#            }#}
+        {#        }#}
+        {#        if (shouldSwitch) {#}
+        {#            /* If a switch has been marked, make the switch#}
+        {#            and mark the switch as done: */#}
+        {#            b[i].parentNode.insertBefore(b[i + 1], b[i]);#}
+        {#            switching = true;#}
+        {#        }#}
+        {#    }#}
+
+    </script>
+{% endblock %}
