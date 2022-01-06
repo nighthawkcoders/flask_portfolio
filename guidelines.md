@@ -1,7 +1,3 @@
----
-title: Contributing Guidelines
-layout: default
----
 
 
 

@@ -1,7 +1,3 @@
----
-title: About 
-layout: default
----
 
 <table>
   <tr> 
