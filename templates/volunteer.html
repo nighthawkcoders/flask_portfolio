@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<body>
+
 {% include "layouts/navbar.html" %}
 <title>Volunteer Oppurtunities</title>
-<body style="font-family: Baskerville" </body>
 
 <html lang="en">
 <head>
@@ -10,8 +9,8 @@
     <title>Title</title>
 </head>
 {%  block body %}
-<body>
-<div class="container-fluid">
+<body onload="myFunction()">
+<div class="container-fluid animate-bottom">
     <h1 style="text-align: center">Volunteer!</h1>
     <div class="row">
         <div class="col-sm-12">
@@ -29,7 +28,6 @@
         </div>
 
     </div>
-</div>
 </div>
 </body>
 {% endblock %}

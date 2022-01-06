@@ -1,13 +1,10 @@
-<body>
+
 {% include "layouts/navbar.html" %}
-<title>Sonakshi</title>
+
 
 <!- This is a replacement block for Body in base.html -->
 {% block body %}
 
-
-<title>Sonakshi</title>
-<body style="background-color: #EBF7FA;">
 <style>
     .button1 {
         background-color: white;
@@ -24,7 +21,10 @@
     }
 </style>
 
-<div style="margin: 2% 5% 5%; text-align:center; font-family: Baskerville; font-size: larger">
+<title>Sonakshi</title>
+<body onload="myFunction()" style="background-color: #EBF7FA;">
+
+<div id="myDiv" class="animate-bottom"; style="margin: 2% 5% 5%; display:none; text-align:center; font-family: Baskerville; font-size: larger">
     <div>
         <p style="font-size: x-large"id="wave"><strong>Hello, {{name}}!</strong></p>
         <script>

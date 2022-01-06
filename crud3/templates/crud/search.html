@@ -3,14 +3,14 @@
 inspiration from https://www.youtube.com/watch?v=QKcVjdLEX_s
 -->
 {% include "layouts/navbar.html" %}
-<title>Stress Relief</title>
-<body style="font-family: Baskerville" </body>
 
 {% block meta %}
     <title>SQL search</title>
 {% endblock %}
 
 {% block body %}
+<body onload="myFunction()">
+<div class="animate-bottom">
     <div class="container py-4 bg-primary">
         <!-- heading -->
         <header class="pb-3 mb-4 border-bottom">
@@ -38,7 +38,8 @@ inspiration from https://www.youtube.com/watch?v=QKcVjdLEX_s
         <div class="row" id="result">
         </div>
     </div>
-
+    </div>
+</body>
     <script>
         function search_data() {
             // fetch standard requires data set to a name-value pair

@@ -1,4 +1,4 @@
-<body>
+
 {% include "layouts/navbar.html" %}
 <title>Shreya</title>
 
@@ -6,8 +6,6 @@
 {% block body %}
 
 
-    <title>Shreya</title>
-    <body style="background-color: #EBF7FA;">
     <style>
         .button1 {
             background-color: white;
@@ -23,7 +21,8 @@
             color: black;
         }
     </style>
-
+<body onload="myFunction()" style="background-color: #EBF7FA;">
+    <div style="display:none;" id="myDiv" class="animate-bottom";>
     <div style="margin: 2% 5% 5%; text-align:center; font-family: Baskerville; font-size: larger">
         <div>
             <p style="font-size: x-large"id="wave"><strong>Hello, {{name}}!</strong></p>
@@ -69,6 +68,7 @@
         <a style="font-family: 'Baskerville'" href="https://docs.google.com/document/d/19XB2QXhh55YSZJ4m368AKi0JUGVT9s94BOA-rs2YWdQ/edit?usp=sharing">Pair-Share Journal</a>
         <br>
         <a style="font-family: 'Baskerville'" href="https://github.com/shreya-ahujaa">My GitHub Profile</a>
+    </div>
     </div>
     </body>
 

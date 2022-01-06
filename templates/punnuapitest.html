@@ -5,10 +5,14 @@
 
 <!- This is a replacement block for Body in base.html -->
 {% block body %}
-<html>
-    <body>
+<head>
     <title>Smash Character API</title>
-        <table style="border-collapse: 1px;">
+</head>
+<html>
+    <body onload="myFunction()";>
+        <div style="display:none; color:black;" id="myDiv" class="animate-bottom"; >
+
+        <table class="tableCenter" style="border-collapse: 1px; background-color: #BABABA">
             <tr>
                 <th style="height:30px;width:200px;text-align:center;">
                     Character Name
@@ -44,7 +48,8 @@
             </tr>
             {% endfor %}
         </table>
-
+    </div>
 {% endblock %}
+
     </body>
 </html>
