@@ -13,7 +13,7 @@
 3. [Innovation sprint 1,2 Week 1](https://github.com/connorw72/food#innovation-sprint-12-week-1)
 4. [Innovation sprint 1,2 Week 2](https://github.com/connorw72/food#innovation-sprint-12-week-2)
 5. [Database intro sprint 3 week 3](https://github.com/connorw72/food#database-intro-sprint-3-week-3)
-6. [Python Database Modeling Sprint 4,5 week 4]()
+6. [Python Database Modeling Sprint 4,5 week 4](https://github.com/connorw72/food#python-database-modeling-sprint-45-week-4)
 ## Contributors
 | Name | GitHub ID and Profile | Tasks | Scrum Board | Commits | BOF Job |
 |:-----|:----------------------|:-----:|:-----------:|:-------:|:--------:|
