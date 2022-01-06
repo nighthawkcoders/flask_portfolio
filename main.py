@@ -29,8 +29,6 @@ def jason():
     return render_template("jason.html")
 
 
-
-
 @app.route('/adi', methods={'GET', 'POST'})
 def adi():
     url = "https://sportscore1.p.rapidapi.com/sports/1/teams"
@@ -110,6 +108,22 @@ def weather():
         return render_template("weather.html", results=results)
     else:
         return render_template("weather.html")
+
+@app.route('/hotels/')
+def hotels():
+    url = "https://hotels4.p.rapidapi.com/locations/v2/search"
+
+    querystring = {"query":"new york","locale":"en_US","currency":"USD"}
+
+    headers = {
+        'x-rapidapi-host': "hotels4.p.rapidapi.com",
+        'x-rapidapi-key': "3d43659d98msh26d5e705bc7d8b6p1d6431jsnba44357aaf20"
+    }
+
+    response = requests.request("GET", url, headers=headers, params=querystring)
+
+    print(response.text)
+    return render_template("hotels.html")
 
 # runs the application on the development server
 if __name__ == "__main__":

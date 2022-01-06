@@ -1,6 +1,5 @@
-<!-- Navigation Bar from bootstrap
+ Navigation Bar from bootstrap
 This HTML is setup as a fragment allowing it to be "included" by other HTML files via Jinja2
--->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="https://csp.nighthawkcodingsociety.com/">{{basename}}</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,6 +17,7 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
             <a class="nav-link" href={{ url_for('photogallery') }}>Photography</a>
             <a class="nav-link" href={{ url_for('weather') }}>Weather</a>
             <a class="nav-link" href={{ url_for('crud.crud') }}>Crud</a>
+            <a class="nav-link" href={{ url_for('hotels') }}>Hotels</a>
             <a class="nav-link" href={{ url_for('crud.search') }}>Search</a>
         </div>
         <ul class="nav navbar-nav">
@@ -34,7 +34,7 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
     </div>
 
 
-    {##}
+
     {#    <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">#}
     {#        <ul class="navbar-nav">#}
     {#            <li class="nav-item dropdown">#}
@@ -48,4 +48,5 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
     {#            </li>#}
     {#        </ul>#}
     {#    </div>#}
+
 </nav>
