@@ -23,15 +23,14 @@ inspiration from https://www.youtube.com/watch?v=QKcVjdLEX_s
                             <label></label> <!-- used for spacer -->
                         </div>
                         <button class="btn btn-primary bg-secondary" onclick="search_data();">Search</button>
+                        <button class="btn btn-primary bg-secondary" onclick="sortList();">Sort</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- result of search -->
-    <div class="container">
-        <div class="row" id="result">
-        </div>
+    <div class="container" id="result">
     </div>
 
     <script>
@@ -65,20 +64,83 @@ inspiration from https://www.youtube.com/watch?v=QKcVjdLEX_s
                         const errorMsg = 'Database response error: ' + response.status;
                         console.log(errorMsg);
                         const div = document.createElement("div");
+                        div.className = "row";
                         div.innerHTML = errorMsg;
                         resultContainer.appendChild(div);
                         return;
                     }
                     // response contains valid result
-                    response.json().then(function(data) {
+                    response.json().then(function (data) {
+                        // LOGIC
+                        var i, switching, shouldSwitch;
+                        switching = true;
+                        /* Make a loop that will continue until
+                        no switching has been done: */
+                        while (switching) {
+                            // Start by saying: no switching is done:
+                            switching = false;
+                            // Loop through all list items:
+                            for (i = 0; i < (data.length - 1); i++) {
+                                // Start by saying there should be no switching:
+                                shouldSwitch = false;
+                                /* Check if the next item should
+                                switch place with the current item: */
+                                if (data[i].name.innerHTML > data[i + 1].name.innerHTML) {
+                                    /* If next item is alphabetically lower than current item,
+                                    mark as a switch and break the loop: */
+                                    shouldSwitch = true;
+                                    break;
+                                }
+                            }
+                            if (shouldSwitch) {
+                                /* If a switch has been marked, make the switch
+                                and mark the switch as done: */
+                                data[i].parentNode.insertBefore(data[i + 1], data[i]);
+                                switching = true;
+                            }
+                        }
                         // loop through JSON and build HTML output
                         for (let i = 0; i < data.length; i++) {
                             const div = document.createElement("div");
+                            div.className = "row";
                             div.innerHTML = data[i].name + ' ' + data[i].email;
+                            div.id = data[i].name;
                             resultContainer.appendChild(div);
                         }
                     })
                 })
         }
+
+        {#function sortList() {#}
+        {#    var list, i, switching, b, shouldSwitch;#}
+        {#    list = document.getElementById("result");#}
+        {#    switching = true;#}
+        {#    /* Make a loop that will continue until#}
+        {#    no switching has been done: */#}
+        {#    while (switching) {#}
+        {#        // Start by saying: no switching is done:#}
+        {#        switching = false;#}
+        {#        b = list.getElementsByTagName("result");#}
+        {#        // Loop through all list items:#}
+        {#        for (i = 0; i < (b.length - 1); i++) {#}
+        {#            // Start by saying there should be no switching:#}
+        {#            shouldSwitch = false;#}
+        {#            /* Check if the next item should#}
+        {#            switch place with the current item: */#}
+        {#            if (shouldSwitch) {#}
+        {#                /* If next item is alphabetically lower than current item,#}
+        {#                mark as a switch and break the loop: */#}
+        {#                shouldSwitch = true;#}
+        {#                break;#}
+        {#            }#}
+        {#        }#}
+        {#        if (shouldSwitch) {#}
+        {#            /* If a switch has been marked, make the switch#}
+        {#            and mark the switch as done: */#}
+        {#            b[i].parentNode.insertBefore(b[i + 1], b[i]);#}
+        {#            switching = true;#}
+        {#        }#}
+        {#    }#}
+
     </script>
 {% endblock %}
