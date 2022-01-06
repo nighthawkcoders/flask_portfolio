@@ -14,6 +14,10 @@ app.register_blueprint(app_crud)
 def index():
     return render_template("index.html")
 
+@app.route('/places/')
+def places():
+    return render_template("places.html")
+
 @app.route('/jason/')
 def jason():
     url = "https://video-game-news.p.rapidapi.com/star_wars"

@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    var NumberOfWords = 28
+
+var words = new BuildArray(NumberOfWords)
+
+// Use the following variables to
+// define your random words:
+words[1] = "Brazil"
+words[2] = "France"
+words[3] = "India"
+words[4] = "USA"
+words[5] = "Canada"
+words[6] = "Mexico"
+words[7] = "Isreal"
+words[8] = "China"
+words[9] = "Japan"
+words[10] = "Russia"
+words[11] = "Portugal"
+words[12] = "Argentina"
+words[13] = "Thailand"
+words[14] = "Britain"
+words[15] = "Morocco"
+words[16] = "Germany"
+words[17] = "Switzerland"
+words[18] = "Norway"
+words[19] = "Ireland"
+words[20] = "Greece"
+words[21] = "Turkey"
+words[22] = "Egypt"
+words[23] = "Poland"
+words[24] = "Spain"
+words[25] = "Nepal"
+words[26] = "South Korea"
+words[27] = "Phillipennes"
+words[28] = "Italy"
+words[29] = "Sweden"
+words[30] = "Australia"
+words[31] = "New Zealand"
+
+            function BuildArray(size){
+    this.length = size
+    for (var i = 1; i <= size; i++){
+        this[i] = null}
+    return this
+}
+
+function PickRandomWord(frm) {
+// Generate a random number between 1 and NumberOfWords
+    var rnd = Math.ceil(Math.random() * NumberOfWords)
+
+// Display the word inside the text box
+    frm.WordBox.value = words[rnd]
+}</script>
+
+
+
+<FORM NAME="WordForm">
+    <INPUT TYPE=TEXT NAME="WordBox" id="wordbox"><BR>
+    <INPUT TYPE=BUTTON VALUE="Generate" onClick="PickRandomWord(document.WordForm);" id="button">
+
+</FORM>
+ <style>
+
+     body {
+         font-family: Verdana, Geneva, sans-serif;
+         font-size: 1.2em;
+         margin: 0 auto;
+         max-width: 960px;
+         padding: 40px 10px;
+         line-height: 1.65em;
+         background: #B20940;
+         color: #fff;
+         font-weight: 300;
+     }
+
+     h1 {
+         text-align: center;
+         margin: 20% 0 5% 0;
+     }
+
+     #wordbox {
+         /*opacity: 0;*/
+         margin: 30px auto 0;
+         display: block;
+         width: 300px;
+         height: 40px;
+         font-size: 30px;
+         text-align: center;
+         background: #fff;
+         border-radius: 6px;
+         color: #black;
+         transition: 1s linear;
+     }
+
+     #button {
+         background: #0b7fba;
+         border: 0;
+         color: #fff;
+         font-size: 20px;
+         padding: 1em 2em;
+         cursor: pointer;
+         margin: 0 auto 60px;
+         display: block;
+         text-align: center;
+         border-radius: 6px;
+         font-weight: bold;
+     }
+
+
+
+ </style>
+
+
+
+</body>
+
+</html>
