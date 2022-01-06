@@ -24,7 +24,66 @@
         }
         // togglemask()
         // togglemask()
+
+        new Vue({
+            el: "#app",
+            data: function() {
+                return {
+                    darkTheme: false
+                }
+            },
+            methods: {
+                toggleTheme: function() {
+                    this.darkTheme = !this.darkTheme;
+                }
+            }
+        })
     </script>
+
+    <style>
+        $themes: (
+        darkTheme: (
+        'text-color': white,
+        'bg-color': #424242
+        ),
+        lightTheme: (
+        'text-color': black,
+        'bg-color': #f5f5f5
+        )
+        );
+
+        @mixin theme() {
+            @each $theme, $map in $themes {
+            $theme-map: $map !global;
+                .#{$theme} & {
+                @content;
+            }
+            }
+        $theme-map: null !global;
+        }
+
+        @function theme-get($key) {
+            @return map-get($theme-map, $key);
+        }
+
+        #app {
+            text-align: center;
+        }
+
+        .content {
+            padding: 32px;
+            transition: 500ms;
+            font-size: 18px;
+        @include theme() {
+            color: theme-get('text-color');
+            background-color: theme-get('bg-color');
+        }
+        }
+
+        button {
+            margin: 16px;
+        }
+    </style>
 
     {% endblock %}
 
@@ -33,66 +92,80 @@
 </head>
 
 <body>
-<h1 class="text-center">Meet Tanay Rayavarapu</h1>
-<div class="container">
-    <div class="row justify-content-md-center" style="align:center">
-        <table class="table">
-            <thead>
-            <tr>
-                <th colspan="2">
-                    <h3 style="text-align:center">Deployment Manager of Team Food</h3>
-                </th>
-            </tr>
-            </thead>
-            <tr>
-            <tr>
-                <td>
-                    <img id="place" class="img-responsive py-3" alt="" width="256" src="/static/assets/maskedtanay.jpg" >
-                    <div>
-                        <button onclick="togglemask()" id="togglemask-btn">Take mask off</button>
-                    </div>
+    <h1 class="text-center">Meet Tanay Rayavarapu</h1>
+    <div class="container">
+        <div class="row justify-content-md-center" style="align:center">
+            <table class="table">
+                <style>
+                    html,body {
+                        background-color: lightcoral;
+                    }
+                </style>
+                <thead>
+                <tr>
+                    <th colspan="2">
+                        <h3 style="text-align:center">Deployment Manager of Team Food</h3>
+                    </th>
+                </tr>
+                </thead>
+                <tr>
+                <tr>
+                    <td>
+                        <img id="place" class="img-responsive py-3" alt="" width="256" src="/static/assets/maskedtanay.jpg" >
+                        <div>
+                            <button onclick="togglemask()" id="togglemask-btn">Take mask off</button>
+                        </div>
+                    </td>
+                </tr>
+
+                <p style="text-align:center" class="fs-2">
+                    Hi, my name is Tanay Rayavarapu and I am a junior at Del Norte High School.
+                    <a href="https://docs.google.com/document/d/1yMnRk0cY8TWYl3YKTgz0OKkrI5Gac4pEyoyiffEeUoE/edit?usp=sharing"> Tanay and Connor Journal </a>
+                </p>
                 </td>
-            </tr>
+                </tr>
 
-            <p style="text-align:center" class="fs-2">
-                Hi, my name is Tanay Rayavarapu and I am a junior at Del Norte High School.
-                <a href="https://docs.google.com/document/d/1yMnRk0cY8TWYl3YKTgz0OKkrI5Gac4pEyoyiffEeUoE/edit?usp=sharing"> Tanay and Connor Journal </a>
-            </p>
-            </td>
-            </tr>
 
-            {% set teams = stats.data %}
+                <div class="center-block" style="margin: 2% 5% 5%; font-family: gilroy,serif;">
+                    <!-- Title -->
+                    <div class="col-12" style="text-align: center;">
 
-            <div class="center-block" style="margin: 2% 5% 5%; font-family: gilroy,serif;">
-                <!-- Title -->
-                <div class="col-12" style="text-align: center;">
+                    </div>
 
-                </div>
+                    <!-- Sequence -->
+                    <div class="col-12 mainbox center-block">
+                        <table style="margin: 2%">
+                            <tr>
+                                <th>Team Name</th>
+                                <th>Country</th>
+                                <th>Logo</th>
+                            </tr>
 
-                <!-- Sequence -->
-                <div class="col-12 mainbox center-block">
-                    <table style="margin: 2%">
-                        <tr>
-                            <th>Team Name</th>
-                            <th>Country</th>
-                            <th>Logo</th>
-                        </tr>
+                            {% for team in teams %}
+                            <tr>
+                                {% set teamname = team.name %}
+                                <td>{{teamname}}</td>
+                                {% set country = team.country %}
+                                <td>{{country}}</td>
+                                {% set logo = team.logo %}
+                                <td><img src="{{logo}}"></td>
+                            </tr>
+                            {% endfor %}
+                        </table>
 
-                        {% for team in teams %}
-                        <tr>
-                            {% set teamname = team.name %}
-                            <td>{{teamname}}</td>
-                            {% set country = team.country %}
-                            <td>{{country}}</td>
-                            {% set logo = team.logo %}
-                            <td><img src="{{logo}}"></td>
-                        </tr>
-                        {% endfor %}
-                    </table>
+                    </div>
 
                 </div>
 
-            </div>
+                <div id="app"
+                     :class='darkTheme ? "darkTheme" : "lightTheme"'>
+                    <div class='content'>
+                       Switch to Dark Theme
+                    </div>
+                    <button @click='toggleTheme'>
+                        Toggle
+                    </button>
+                </div>
 </body>
 </html>
 {% endblock %}

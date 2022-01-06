@@ -5,6 +5,7 @@ bcolin = Blueprint("bcolin", __name__, static_folder="static", template_folder="
 
 @bcolin.route('/colin/')
 def colin():
+    return render_template('colin.html')
 
     url = "https://free-nba.p.rapidapi.com/players"
     return render_template('colin.html', data=data)
@@ -24,3 +25,4 @@ print(data)
 @bcolin.route('/imageCarousel/')
 def imageCarousel():
     return render_template('PBL Pages/imageCarousel.html')
+

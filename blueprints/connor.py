@@ -7,6 +7,7 @@ bconnor = Blueprint("bconnor", __name__, static_folder="static", template_folder
 
 @bconnor.route('/connor/')
 def connor():
+    return render_template('connor.html')
     url = "https://genius.p.rapidapi.com/artists/16775/songs"
 
     headers = {
