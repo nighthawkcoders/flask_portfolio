@@ -57,7 +57,7 @@
 ### Python Database Modeling Sprint 4,5 week 4
 |Member| Technicals of the week |
 |:-----|:----------------------|
-|Connor| [Blueprints](https://github.com/connorw72/food/tree/main/blueprints),[Overview of info](https://github.com/connorw72/food/blob/main/templates/PetInfo.html)[Info](https://github.com/connorw72/food/blob/main/algorithms/petinfo.py)
+|Connor| [Blueprints](https://github.com/connorw72/food/tree/main/blueprints),[Overview of info](https://github.com/connorw72/food/blob/main/templates/PetInfo.html),[Info](https://github.com/connorw72/food/blob/main/algorithms/petinfo.py)
 |Tanay| [Hangman]()
 |Pranav| [Page]()
 |Colin| [Page]()
