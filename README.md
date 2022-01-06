@@ -83,7 +83,7 @@ Our website is a website full of helpful resources for students. It will help st
 | Name | Requirement | Evidence |  Total Score |
 | ---  | ---         | ---      | --- |
 | Sonakshi Bhalla | Individual PBL (change with exact task) <br>CB Notes & Quizzes|<a href="">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/88">Ticket</a> |  /5
-| Shreya Ahuja | Individual PBL (change with exact task) <br>CB Notes & Quizzes|<a href="">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/88">Ticket</a>  |  /5
+| Shreya Ahuja | Tutor's Database<br>Update Navbar<br>CB Notes & Quizzes|<a href="https://github.com/sonakshibhalla/tri2_turtles.github.io/issues/121">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2_turtles.github.io/issues/122">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/88">Ticket</a>  |  /5
 | Punarvasu Sangam | Individual PBL (change with exact task) <br>CB Notes & Quizzes|<a href="">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/89">Ticket</a>  |  /5
 | Khushi Bagri | Individual PBL (change with exact task) <br>CB Notes & Quizzes|<a href="">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2turtles/issues/89">Ticket</a>  |  /5
 
