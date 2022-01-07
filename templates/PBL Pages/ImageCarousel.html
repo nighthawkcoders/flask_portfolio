@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+{% extends "layouts/base.html" %}
+{% block head %}
 <style>
     *, *::before, *::after {
         box-sizing: border-box;
@@ -83,6 +85,9 @@
     <title>Title</title>
 </head>
 
+{%endblock%}
+{% block body %}
+
 <body>
     <section aria-label="Newest Photos">
         <div class="carousel" data-carousel>
@@ -102,4 +107,5 @@
         </div>
     </section>
 </body>
+{% endblock %}
 </html>
