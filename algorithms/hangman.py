@@ -1,8 +1,7 @@
 
-from blueprints
 import random
 
-    word = input()
+word = input()
 
     letters = []
     for character in word:
