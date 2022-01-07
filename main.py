@@ -14,6 +14,10 @@ app.register_blueprint(app_crud)
 def index():
     return render_template("index.html")
 
+@app.route('/places/')
+def places():
+    return render_template("places.html")
+
 @app.route('/jason/')
 def jason():
     url = "https://video-game-news.p.rapidapi.com/star_wars"
@@ -133,7 +137,17 @@ def hotels():
         # print(suggestions['entities'])
         for entities in suggestions['entities']:
             print(entities['name'])
-    return render_template("hotels.html", results=results)
+    return render_template("pbl/hotels.html", results=results)
+
+@app.route('/maps', methods=['GET', 'POST'])
+def maps():
+
+    return render_template("pbl/maps.html")
+
+@app.route('/attractions', methods=['GET', 'POST'])
+def attractions():
+
+    return render_template("pbl/attractions.html")
 
 # runs the application on the development server
 if __name__ == "__main__":
