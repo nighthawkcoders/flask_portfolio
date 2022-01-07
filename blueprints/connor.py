@@ -7,8 +7,18 @@ bconnor = Blueprint("bconnor", __name__, static_folder="static", template_folder
 
 @bconnor.route('/connor/')
 def connor():
-    return render_template('connor.html')
+    url = "https://genius.p.rapidapi.com/artists/16775/songs"
 
+    headers = {
+        'x-rapidapi-host': "genius.p.rapidapi.com",
+        'x-rapidapi-key': "e96b80de18msh080ccecb09304e3p1f9084jsn90d405c70ce3"
+    }
+
+    response = requests.request("GET", url, headers=headers)
+    data = response.json()['response']['songs']
+
+    print(data)
+    return render_template('connor.html', data=data)
 
 @bconnor.route('/PetInfo/')
 def PetInfo():
