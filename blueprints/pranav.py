@@ -14,3 +14,7 @@ def dogs():
 @bpranav.route('/birds/')
 def birds():
     return render_template('birds.html')
+
+@bpranav.route('/petplanner/')
+def petplanner():
+    return render_template('petplanner.html')

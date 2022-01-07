@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+{% extends "layouts/base.html" %}
+{% block head %}
+<html lang="en">
+<head>
+    <style>
+        body {
+            background-image: url("https://st2.depositphotos.com/5060369/8233/i/950/depositphotos_82333658-stock-photo-light-brown-background.jpg");
+        }
+
+        .container {
+            width: 360px;
+        }
+
+        #inputField {
+            width: 300px;
+            height: 46px;
+            border-width: 0;
+            border: 1px solid black;
+            outline: none;
+            font-size: 25px;
+            vertical-align: middle;
+        }
+
+        #addToDo {
+            height: 50px;
+            width: 50px;
+            border: 1px solid black;
+            vertical-align: middle;
+            font-size: 30px;
+        }
+
+        .paragraph-styling {
+            margin: 0;
+            cursor: pointer;
+            font-size: 25px;
+        }
+
+        .to-dos {
+            margin-top: 25px;
+        }
+        p {
+            font-size: 25px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+</head>
+{%endblock%}
+{% block body %}
+<body>
+<h1>Welcome To Pranav's Page</h1>
+<p>Welcome to this page, in this page users will be able to input text through a to do list format in order to plan out how they will adopt a pet. The purpose of this page is for users to plan out the process it takes to adopt a pet and the do's and dont's behind it. We encourage users to also check out the variuous other pages we have on our website which will give people a better undestanding behind the process of adopting a pet and how to do so. </p>
+<h1>Pet Adoption Planner</h1>
+<div class="container">
+    <input id="inputField" type="text"><button id="addToDo">+</button>
+    <div class="to-dos" id="toDoContainer">
+    </div>
+</div>
+<script>
+    let addToDoButton = document.getElementById('addToDo');
+    let toDoContainer = document.getElementById('toDoContainer');
+    let inputField = document.getElementById('inputField');
+
+    addToDoButton.addEventListener('click', function(){
+        var paragraph = document.createElement('p');
+        paragraph.classList.add('paragraph-styling');
+        paragraph.innerText = inputField.value;
+        toDoContainer.appendChild(paragraph);
+        inputField.value = "";
+        paragraph.addEventListener('click', function(){
+            paragraph.style.textDecoration = "line-through";
+        })
+        paragraph.addEventListener('dblclick', function(){
+            toDoContainer.removeChild(paragraph);
+        })
+    })
+</script>
+</body>
+{% endblock %}
+</html>
+
+
