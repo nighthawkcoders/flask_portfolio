@@ -144,6 +144,25 @@ def maps():
 
     return render_template("pbl/maps.html")
 
+
+@app.route('/airportdetails/', methods=['GET','POST'])
+def airportdetails():
+    try:
+        airportcode = request.form['keyword']
+    except:
+        airportcode = "SAN"
+
+    url = "https://airport-info.p.rapidapi.com/airport"
+    querystring = {"iata": airportcode}
+    headers = {
+        'x-rapidapi-host': "airport-info.p.rapidapi.com",
+        'x-rapidapi-key': "80afb5b6afmsh552d92e769ba3a5p1bfac9jsnfb6c407dd20f"
+    }
+
+    response = requests.request("GET", url, headers=headers, params=querystring)
+    response = response.json()
+    return render_template("pbl/airportdetails.html", results=response)
+
 @app.route('/attractions', methods=['GET', 'POST'])
 def attractions():
 
