@@ -6,7 +6,19 @@
     <meta charset="UTF-8">
     <title>Hangman</title>
 
-    <script></script>
+    <script>
+        function dark() {
+            var element = document.getElementById('navbarNavAltMarkup');
+            element.classList.toggle("dark-mode");
+        }
+    </script>
+
+    <style>
+        .dark-mode {
+            background: black;
+            color: white;
+        }
+    </style>
 
     {% endblock %}
 
@@ -14,17 +26,21 @@
 
 </head>
 <body>
-    <h1>The input element</h1>
+    <h1>Input Random Pet Name</h1>
 
     <form action="/">
-        <label for="fname">Word</label>
+        <label for="word">Word</label>
         <input type="text" id="fname" name="fname"><br><br>
-        <label for="lname">Guess</label>
+        <label for="guess">Guess</label>
         <input type="text" id="lname" name="lname"><br><br>
         <input type="submit" value="Submit">
     </form>
 
     <p>Guess the Pet Name (Do With Partner!)</p>
+
+    <div>
+        <button onclick="dark()">Toggle dark mode</button>
+        <div/>
 
 </body>
 </html>
