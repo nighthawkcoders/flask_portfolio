@@ -6,29 +6,36 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
+    <style>
+        .dropdown:hover{
+            display: inline-block;
+        }
+    </style>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <!--root menu -->
             <li class="nav-item active">
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarModel" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Pages
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/mainabout">About Us</a>
+                    <a class="dropdown-item" href="/mainabout/">Project Green</a>
+                    <a class="dropdown-item" href="/worldclock">World Clock</a>
+                    <a class="dropdown-item" href="/translator">Language Translator</a>
+                    <a class="dropdown-item" href="/mainabout">Rankings</a>
+                    <a class="dropdown-item" href="/mainabout">Activities</a>
+                    <a class="dropdown-item" href="/weather">Weather</a>
+                    <a class="dropdown-item" href="/crud">Crud</a>
+                    <a class="dropdown-item" href="/search">Search</a>
+                </div>
+            </li>
             <a class="nav-link" href="/mainabout">About Us <span class="sr-only">(current)</span></a>
             <li class="nav-item dropdown">
-                <a class="nav-link" href="/mainabout">Project Green<span class="sr-only">(current)</span></a>
-            </li>
-                <a class="nav-link" href="/worldclock">World Clock<span class="sr-only">(current)</span></a>
-            </li>
-                <a class="nav-link" href="/translator">Language Translator<span class="sr-only">(current)</span></a>
-            </li>
-                <a class="nav-link" href="/mainabout">Rankings<span class="sr-only">(current)</span></a>
-            </li>
-                <a class="nav-link" href="/mainabout">Activities<span class="sr-only">(current)</span></a>
-            </li>
-                <a class="nav-link" href="/weather">Weather<span class="sr-only">(current)</span></a>
-            </li>
                 <a class="nav-link" href="/feedback">Give Us Feedback!<span class="sr-only">(current)</span></a>
-            </li>
-                <a class="nav-link" href="/crud">Crud<span class="sr-only">(current)</span></a>
-            </li>
-                <a class="nav-link" href="/search">Search<span class="sr-only">(current)</span></a>
             </li>
         </ul>
         <div class="btn-group">
@@ -42,7 +49,6 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                 <label class="custom-control-label" for="darkSwitch">Dark Mode</label>
             </div>
         </div>
-
         {% block navbar_script %}
             <!-- Navigation bar JavaScript support -->
             <script src={{  url_for("static", filename="/navbar.js", version='140') }}></script>
