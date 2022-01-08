@@ -37,6 +37,8 @@ Commit | Evidence | Name | Description
 ----------- | ----------- | ----------- | -----------
 Hotel Search Feature | [Evidence](https://github.com/RohanG326/supporting_cast/commit/930cb0c0519bff10c103fc03bfb24a3d7e99350c) | Brian Tang | Add API to allow for hotel search based on region
 Format Weather API | [Evidence](https://github.com/RohanG326/supporting_cast/commit/33d7c7911c1fd1ae623c94040fa61745b8b5c57a) | Adi Khandelwal | Add formatting to weather page
+Random Country Generator | [Evidence](https://github.com/RohanG326/supporting_cast/commit/f2a4c0aad2725a9e46ced4ea55610bc832c42e6f) | Jason Kaplan | Add random country generator to suggest places to travel to
+Airport API | [Evidence] (Have not pushed yet because of the errors) | Divyanshi Suri | Enter an airport and get the location, number, and the website of the airport
 
 #   <h2 id="Week3">Week 3: Due 12/17</h2>
 [Week 3 Issue](https://github.com/RohanG326/supporting_cast/issues/38)
