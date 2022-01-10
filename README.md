@@ -30,7 +30,7 @@ Rohan Gaikwad | GitHub Admin | [@rohang326](https://github.com/rohang326)| [Task
 link to be added later
 
 #   <h2 id="Week5">Week 5: Due 1/14</h2>
-[Week 5 Issue]
+[Week 5 Issue](https://github.com/RohanG326/supporting_cast/issues/60)
 
 [Week 5 Review Ticket]
 
