@@ -1,14 +1,9 @@
 <!-- Navigation Bar from bootstrap
 This HTML is setup as a fragment allowing it to be "included" by other HTML files via Jinja2
 -->
-<htm>
-<head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"><</script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="annonymous"></script>
-</head>
+<html>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="/">{{basename}}</a>
+        <a class="navbar-brand" href="/" style="margin-left:1%">{{basename}}</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -21,7 +16,7 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
             <ul class="navbar-nav">
                 <!--root menu -->
                 <li class="nav-item active">
-                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/">Home</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="dropdownMenuButton1" type="button" aria-expanded="false">
@@ -39,12 +34,12 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                         <a class="dropdown-item" href="/search">Search</a>
                     </div>
                 </li>
-                <a class="nav-link" href="/mainabout">About Us <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="/mainabout">About Us</a>
                 <li class="nav-item dropdown">
-                    <a class="nav-link" href="/feedback">Give Us Feedback!<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/feedback">Give Us Feedback!</a>
                 </li>
             </ul>
-            <div class="btn-group">
+            <div class="btn-group" style="text-align: right">
                 <!-- Clock display -->
                 <div class="px-3 text-dark">
                     <span id="clock"></span>
@@ -61,4 +56,4 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
             {% endblock %}
         </div>
     </nav>
-</htm>
+</html>
