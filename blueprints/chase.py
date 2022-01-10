@@ -17,6 +17,9 @@ def cats():
 
 
 @bchase.route('/Enclosures/')
-def Enclosures():
+def enclosures():
     return render_template('Enclosures.html', enclosure=enclosure(), enclosure2=enclosure2())
 
+@bchase.route('/H2C4P/')
+def h2():
+    return render_template('H2C4P.html')
