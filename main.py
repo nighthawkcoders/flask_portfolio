@@ -56,26 +56,29 @@ def feedback():
             return render_template("layouts/feedback.html", input=input, name=name)
     return render_template("layouts/feedback.html")
 
-@app.route('/translator', methods=['GET', 'POST'])
+@app.route('/translator/', methods=['GET', 'POST'])
 def translator():
-    url = "https://shakespeare.p.rapidapi.com/shakespeare.json"
-    text = "Hello everybody, Type anything in the above search bar to translate it into Shakespearean text like you see to the right of this"
+    url = "https://translated-mymemory---translation-memory.p.rapidapi.com/api/get"
+    pairs = ["en|es", "en|it", "en|zh", "en|de", "en|he"]
+    text = "Translated text will show here"
+    original = text
+    master_list = []
     if request.form:
-        text = request.form.get("tester")
-        print(text)
+        text = request.form.get("tester2")
+        original = text
+    for item in pairs:
+        querystring = {"langpair":item,"q":text,"mt":"1","onlyprivate":"0","de":"a@b.c"}
 
-    querystring = {"text": text}
+        headers = {
+            'x-rapidapi-host': "translated-mymemory---translation-memory.p.rapidapi.com",
+            'x-rapidapi-key': "00a6319afcmshb59ecb31e0a9dbap1c6de4jsn4b86a9198483"
+        }
 
-    headers = {
-        'x-funtranslations-api-secret': "Thou shalt try this API!",
-        'x-rapidapi-host': "shakespeare.p.rapidapi.com",
-        'x-rapidapi-key': "00a6319afcmshb59ecb31e0a9dbap1c6de4jsn4b86a9198483"
-    }
-
-    response = requests.request("GET", url, headers=headers, params=querystring)
-    dictionary = response.json().get('contents')
-    print(response.text)
-    return render_template("layouts/translator.html", dictionary=dictionary)
+        response = requests.request("GET", url, headers=headers, params=querystring)
+        print(response.text)
+        dictionary = [response.json().get('responseData')]
+        master_list = master_list + dictionary
+    return render_template("layouts/translator.html", dictionary=master_list, original=original)
 
 @app.route('/crud')
 def crud():
