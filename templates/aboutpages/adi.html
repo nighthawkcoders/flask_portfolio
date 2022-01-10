@@ -43,9 +43,103 @@
 <br>
 <br>
 <br>
+
+    <style>
+
+        .collapsible {
+            {#background-color: #777;#}
+            {#color: #01030a;#}
+            top: 5%;
+            cursor: pointer;
+            padding: 18px;
+            width: 25%;
+            border: #ad2d2d;
+            border-width: 100px;
+            text-align: center;
+
+            outline: black;
+            font-size: 20px;
+        }
+
+        .active, .collapsible:hover {
+            background-color: rgba(155, 26, 26, 0.3);
+        }
+
+        .content {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            background-color: #ffffff;
+            width: 25%;
+        }
+
+        .collapsible:after {
+            content: '\02795'; /* Unicode character for "plus" sign (+) */
+            font-size: 13px;
+            color: white;
+            float: right;
+            margin-left: 5px;
+        }
+
+        .active:after {
+            content: "\2796"; /* Unicode character for "minus" sign (-) */
+        }
+        h2 {
+            background-color: white;
+            color: black;
+            font-size: 125%;
+        }
+    </style>
+<center>
+<div>
+    <button type="button" class="collapsible">About Me</button>
+    <div class="content">
+        <h2>I am a 10th Grader at Del Norte High School and I'm interested in science and technology. I love sports and coding and I'm trying to improve my knowledge of code.  </h2>
+    </div>
+</div>
+    <br>
+    <div>
+        <button type="button" class="collapsible">Interests </button>
+        <div class="content">
+            <h2>Some of my interests outside of school are that I love sports and reading. I love spending time with family and
+                friends and love learning about new things. I am always interested to learn how things work, particulary in engineering. </h2>
+        </div>
+    </div>
+    <br>
+    <div>
+    <button type="button" class="collapsible">Goals </button>
+    <div class="content">
+        <h2>My goals for this trimester in this class are to further my understanding in python, html, and javascript.
+        I want to try to improve on my current knowledge of how code works, and specifically how the different languages
+        work together</h2>
+    </div>
+    </div>
+
+</center>
+    <script>
+        var collapsible = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < collapsible.length; i++) {
+            collapsible[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+    </script>
+
+
+
+
+<br>
     <p align="center">
         <iframe
-                width="1000"
+                width=80%
                 height="900"
                 src="https://docs.google.com/document/d/1caGFdefkHrh74c3f_iuIx26mDD3QnP0FDM9cpS8BYFM/edit?usp=sharing"
         ></iframe>
