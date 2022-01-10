@@ -151,10 +151,10 @@ def maps():
 
     return render_template("pbl/maps.html")
 
-@app.route('/attractions', methods=['GET', 'POST'])
-def attractions():
+@app.route('/visit', methods=['GET', 'POST'])
+def visit():
 
-    return render_template("pbl/attractions.html")
+    return render_template("pbl/visit.html")
 
 # runs the application on the development server
 if __name__ == "__main__":
