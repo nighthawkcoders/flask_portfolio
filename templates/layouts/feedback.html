@@ -1,9 +1,8 @@
 {% extends "layouts/base.html" %}
-{% block meta %}
-    <script>
+<script>
         function returnFeed(){
             let text = document.get
-            ElementById("change").innerHTML;
+            document.getElementById("change").innerHTML;
             document.getElementById("top").innerHTML = text // putting the new text at the top so it is seperate
             if (typeof(Storage) !== "undefined") {
                 let stored =  localStorage.getItem("input") //getting everything out of local storage and putting it in stored
@@ -49,8 +48,6 @@
         }
 
     </script>
-{% endblock %}
-
 {% block body %}
     <body onload="returnFeed()">
     <div class="container">
@@ -58,7 +55,7 @@
             <div class="row" style="padding-left:0%; padding-top:5%; justify-content: center">
                 <!--this creates the text displayed at the top that changed and sets the thing to be changed to a variable so you can set it to different values in python so it can change-->
                 <div class="col-12">
-                    <h1><center>Feedback</center></h1>
+                    <h1>Feedback</h1>
                     <!--this form tag creates the search bar that is tied to a label which is displayed text and to a submit button so the user can input information-->
                     <form action="/feedback/" name="feedbackForm" method="POST" >
                         <label>Please type your name here!</label>
@@ -72,8 +69,11 @@
                         <input type="button" value="Clear All" onclick="remove()">
                     </form>
 
-                    <!--<ul>-->     <p hidden id="top"></p> <!--this contains only the most recent text added so when text is added this is not hidden anymore and is displayed above the "previous text" box-->
-                    <p hidden id="previous" color:white"><br><mark>Previous Responses</mark><br></p><!--this becomes unhidden when text is added-->
+                    <!--<ul>-->
+                    <p hidden id="top"></p> <!--this contains only the most recent text added so when text is added this is not hidden anymore and is displayed above the "previous text" box-->
+                    <p hidden id="previous">
+                    <br>
+                    <mark>Previous Responses</mark><br></p><!--this becomes unhidden when text is added-->
                     <!--<li>-->     <p id="change" style="color:white";>{% if input | length != 0 %} {{ name }} : {{ input }} {% else %}<br><mark>Previous Responses</mark><br>{% endif %}</p><!--</li>--><!--this contains only the local storage without the new text-->
                     <!--</ul>-->
 
