@@ -10,7 +10,7 @@ app.register_blueprint(app_crud)
 
 
 # connects default URL to render index.html
-@app.route('/')
+@app.route('/index/')
 def index():
     return render_template("index.html")
 
@@ -138,6 +138,13 @@ def hotels():
         for entities in suggestions['entities']:
             print(entities['name'])
     return render_template("pbl/hotels.html", results=results)
+
+
+
+@app.route('/carrental', methods=['GET', 'POST'])
+def carrental():
+
+    return render_template("pbl/carrental.html")
 
 @app.route('/maps', methods=['GET', 'POST'])
 def maps():
