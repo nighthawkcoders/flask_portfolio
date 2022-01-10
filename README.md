@@ -30,9 +30,9 @@ Rohan Gaikwad | GitHub Admin | [@rohang326](https://github.com/rohang326)| [Task
 link to be added later
 
 #   <h2 id="Week5">Week 5: Due 1/14</h2>
-[Week 4 Issue]
+[Week 5 Issue]
 
-[Week 4 Review Ticket]
+[Week 5 Review Ticket]
 
 Commit | Evidence | Name | Description
 ----------- | ----------- | ----------- | -----------
