@@ -81,7 +81,7 @@ inspiration from https://www.youtube.com/watch?v=QKcVjdLEX_s
                         const div = document.createElement("div");
                         let table = "<table>"
                         for (let i = 0; i < data.length; i++) {
-                            table += "<tr><td>" + data[i].name + "</td><td>" + data[i].email + "</td><td>" + data[i].password + "</td></tr>"
+                            table += "<tr><td>"+" | " + data[i].name + "</td><td>"+" | " + data[i].email + "</td><td>" +" | "+ data[i].password + "</td><td>" +" | "+ "</td></tr>"
                             div.innerHTML = table
                             resultContainer.appendChild(div);
                         }
@@ -89,35 +89,35 @@ inspiration from https://www.youtube.com/watch?v=QKcVjdLEX_s
                 })
         }
     </script>
-    <div class="row align-items-md-stretch">
-        <div class="container-fluid py-5">
-            <table class="table">
-                <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Password</th>
-                    <th>Phone</th>
-                </tr>
-                </thead>
-                <tbody>
-                <!-- Loop through rows in table -->
-                {% for row in table %}
-                    <!--
-                    Prepare table for display
-                        caution: phone number needs "~" format step to force type to string
-                    -->
-                    {% set pn = "" ~ row['phone'] %}
-                    {% set pnf = "(" ~ pn[0:3] ~ ")" ~ pn[3:6] ~ "-" ~ pn[6:10] %}
-                    <tr>
-                        <td>{{ row['name'] }}</td>
-                        <td>{{ row['email'] }}</td>
-                        <td>{{ row['password'] }}</td>
-                        <td>{{ pnf }}</td>
-                    </tr>
-                {% endfor %}
-                </tbody>
-            </table>
-        </div>
-    </div>
+{#    <div class="row align-items-md-stretch">#}
+{#        <div class="container-fluid py-5">#}
+{#            <table class="table">#}
+{#                <thead>#}
+{#                <tr>#}
+{#                    <th>Name</th>#}
+{#                    <th>Email</th>#}
+{#                    <th>Password</th>#}
+{#                    <th>Phone</th>#}
+{#                </tr>#}
+{#                </thead>#}
+{#                <tbody>#}
+{#                <!-- Loop through rows in table -->#}
+{#                {% for row in table %}#}
+{#                    <!--#}
+{#                    Prepare table for display#}
+{#                        caution: phone number needs "~" format step to force type to string#}
+{#                    -->#}
+{#                    {% set pn = "" ~ row['phone'] %}#}
+{#                    {% set pnf = "(" ~ pn[0:3] ~ ")" ~ pn[3:6] ~ "-" ~ pn[6:10] %}#}
+{#                    <tr>#}
+{#                        <td>{{ row['name'] }}</td>#}
+{#                        <td>{{ row['email'] }}</td>#}
+{#                        <td>{{ row['password'] }}</td>#}
+{#                        <td>{{ pnf }}</td>#}
+{#                    </tr>#}
+{#                {% endfor %}#}
+{#                </tbody>#}
+{#            </table>#}
+{#        </div>#}
+{#    </div>#}
 {% endblock %}
