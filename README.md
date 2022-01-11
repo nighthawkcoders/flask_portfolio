@@ -1,11 +1,12 @@
 # Supporting Cast  
 [Github Pages](https://rohang326.github.io/supporting_cast/)
 # Table of Contents
-1. [Week 4 - "Time to be Resolute" 3,4,5](#Week4)
-2. [Week 3 - WIP Project Review](#Week3)
+1. [Week 5 - PBL showing the How, Theme, Technicals](#Week5)
+2. [Week 4 - "Time to be Resolute" 3,4,5](#Week4)
+3. [Week 3 - WIP Project Review](#Week3)
 3. [Week 2 - Home Pages](#Week2)
-4. [Week 1 - Project Approval](#Week1)
-5. [Week 0](#Week0)
+5. [Week 1 - Project Approval](#Week1)
+6. [Week 0](#Week0)
 
 ## Project Credits
 
@@ -28,6 +29,14 @@ Rohan Gaikwad | GitHub Admin | [@rohang326](https://github.com/rohang326)| [Task
 
 link to be added later
 
+#   <h2 id="Week5">Week 5: Due 1/14</h2>
+[Week 5 Issue](https://github.com/RohanG326/supporting_cast/issues/60)
+
+[Week 5 Review Ticket]
+
+Commit | Evidence | Name | Description
+----------- | ----------- | ----------- | -----------
+
 #   <h2 id="Week4">Week 4: Due 1/7</h2>
 [Week 4 Issue](https://github.com/RohanG326/supporting_cast/issues/45)
 
@@ -37,6 +46,9 @@ Commit | Evidence | Name | Description
 ----------- | ----------- | ----------- | -----------
 Hotel Search Feature | [Evidence](https://github.com/RohanG326/supporting_cast/commit/930cb0c0519bff10c103fc03bfb24a3d7e99350c) | Brian Tang | Add API to allow for hotel search based on region
 Format Weather API | [Evidence](https://github.com/RohanG326/supporting_cast/commit/33d7c7911c1fd1ae623c94040fa61745b8b5c57a) | Adi Khandelwal | Add formatting to weather page
+Random Country Generator | [Evidence](https://github.com/RohanG326/supporting_cast/commit/f2a4c0aad2725a9e46ced4ea55610bc832c42e6f) | Jason Kaplan | Add random country generator to suggest places to travel to
+Airport API | [Evidence] (Have not pushed yet because of the errors) | Divyanshi Suri | Enter an airport and get the location, number, and the website of the airport
+Dark Mode | [Evidence](https://github.com/RohanG326/supporting_cast/commit/ea058a84d553d37ab97684dff05775e05706501d) | Brian Tang | Add toggle between light mode and dark mode on hotel page
 
 #   <h2 id="Week3">Week 3: Due 12/17</h2>
 [Week 3 Issue](https://github.com/RohanG326/supporting_cast/issues/38)

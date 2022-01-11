@@ -1,5 +1,3 @@
- Navigation Bar from bootstrap
-This HTML is setup as a fragment allowing it to be "included" by other HTML files via Jinja2
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="https://csp.nighthawkcodingsociety.com/">{{basename}}</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -21,6 +19,7 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
             <a class="nav-link" href={{ url_for('airportdetails') }}>Airport</a>
             <a class="nav-link" href={{ url_for('crud.crud') }}>Crud</a>
             <a class="nav-link" href={{ url_for('crud.search') }}>Search</a>
+            <a class="nav-link" href={{ url_for('carrental') }}>Car Rental</a>
 
             <form class="form-inline" onsubmit="alert('it works')">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
