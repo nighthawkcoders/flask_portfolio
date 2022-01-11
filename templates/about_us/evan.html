@@ -105,18 +105,23 @@
         }
     }
 
-    function binarySearch(){
+    function binarySearch(){ //A function that will count how many integers a binary search feature would need to look through before reaching 1.
         let binaryInput = document.getElementById('binaryInput').value;
-        let NoD = 1
+        let Num = 1;
+        let css = 'color: #b7ffa6';
         while(binaryInput > 1){
-            if(binaryInput % 1 == 0){
+            if(binaryInput % 1 == 0){ //Checks if # is whole. If not, it will round to a whole # before dividing.
+                console.log('Number ' + Num + ': ' + binaryInput);
                 binaryInput/=2;
-                NoD+=1;
+                Num+=1;
             } else {
-                binaryInput = Math.round(binaryInput)
+                let temp = binaryInput;
+                binaryInput = Math.round(binaryInput);
+                console.log('%c' + temp + ' was rounded to ' + binaryInput, css);
             }
         }
-        document.getElementById('return').innerHTML = NoD;
+        document.getElementById('return').innerHTML = Num + ' Integers checked';
+        console.log('Number ' + Num + ': ' + binaryInput);
     }
 
     function geoFindMe() {
