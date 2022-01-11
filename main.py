@@ -148,12 +148,12 @@ def maps():
 @app.route('/airportdetails/', methods=['GET','POST'])
 def airportdetails():
     try:
-        airportcode = request.form['keyword']
+        airportscode = request.form['keyword']
     except:
-        airportcode = "SAN"
+        airportscode = "SAN"
 
     url = "https://airport-info.p.rapidapi.com/airport"
-    querystring = {"iata": airportcode}
+    querystring = {"iata": airportscode}
     headers = {
         'x-rapidapi-host': "airport-info.p.rapidapi.com",
         'x-rapidapi-key': "80afb5b6afmsh552d92e769ba3a5p1bfac9jsnfb6c407dd20f"
