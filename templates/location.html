@@ -1,0 +1,20 @@
+{% extends "layouts/base.html" %}
+{% block body %}
+    <div class="container">
+
+        <div class="center-block" style="margin: 2% 5% 5%; font-family: gilroy,serif;">
+            <div class="col-12" style="text-align: center;">
+                <h1><strong style="font-size: 80px; color: #00A5CF; text-align: center">Where do you want to go?</strong></h1>
+            </div>
+            <!-- Input and Content -->
+            <div style="text-align: center; font-size: 70px">
+                <div class="col-md">
+                    <p class="setup"><strong style="color: black">{{location.location}}</strong></p>
+                </div>
+            </div>
+            <form action={{url_for('location')}}>
+                <button>Next Location</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}
