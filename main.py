@@ -5,6 +5,10 @@ from __init__ import app
 import requests
 import json
 
+from api.webapi import api_bp
+app.register_blueprint(api_bp)
+
+
 from crud.app_crud import app_crud
 app.register_blueprint(app_crud)
 
@@ -151,10 +155,17 @@ def maps():
 
     return render_template("pbl/maps.html")
 
-@app.route('/visit', methods=['GET', 'POST'])
-def visit():
+@app.route('/location', methods=['GET', 'POST'])
+def location():
+    url = "http://127.0.0.1:8081/api/location"
+    response = requests.request("GET", url)
+    return render_template("location.html", location=response.json())
 
-    return render_template("pbl/visit.html")
+@app.route('/locations', methods=['GET', 'POST'])
+def locations():
+    url = "http://127.0.0.1:8081/api/locations"
+    response = requests.request("GET", url)
+    return render_template("locations.html", locations=response.json())
 
 # runs the application on the development server
 if __name__ == "__main__":
