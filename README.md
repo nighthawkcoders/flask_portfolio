@@ -60,7 +60,7 @@
 |Connor| [Blueprints](https://github.com/connorw72/food/tree/main/blueprints),[Overview of info](https://github.com/connorw72/food/blob/main/templates/PetInfo.html),[Info](https://github.com/connorw72/food/blob/main/algorithms/petinfo.py)
 |Tanay| [Hangman](https://github.com/connorw72/food/blob/main/templates/hangman.html)
 |Pranav| [Planner](https://github.com/connorw72/food/blob/main/templates/petplanner.html)
-|Colin| [Clock](https://github.com/connorw72/food/blob/main/templates/layouts/navbar.html)
+|Colin| [Clock on site](https://github.com/connorw72/food/blob/main/templates/layouts/navbar.html)
 |Chase| [Enclosures](https://github.com/connorw72/food/blob/main/templates/Enclosures.html)
 
 

@@ -10,3 +10,7 @@ def tanay():
 @btanay.route('/hangman/')
 def hangman():
     return render_template('hangman.html')
+
+@btanay.route('/pethistory/')
+def pethistory():
+    return render_template('pethistory.html')

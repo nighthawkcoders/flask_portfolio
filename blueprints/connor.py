@@ -20,6 +20,7 @@ def connor():
     print(data)
     return render_template('connor.html', data=data)
 
+
 @bconnor.route('/PetInfo/')
 def PetInfo():
     path = Path(bconnor.root_path) / "testconnorimages"
