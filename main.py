@@ -8,6 +8,8 @@ import json
 from api.webapi import api_bp
 app.register_blueprint(api_bp)
 
+from algorithm.algorithm import app_algorithm
+app.register_blueprint(app_algorithm)
 
 from crud.app_crud import app_crud
 app.register_blueprint(app_crud)
