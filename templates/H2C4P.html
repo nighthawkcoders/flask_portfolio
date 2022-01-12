@@ -40,13 +40,80 @@
     </nav>
 
 
-    <h2>How to care for a lost puppy</h2>
-    <p></p>
+    <h2>Click Any Of The Buttons Below For Imformation!!!</h2>
+    <p>Some steps will be very similar</p>
     <div class="container mt-3">
-        <h2>Steps</h2>
+        <script> function dog() {
+            var text = document.getElementById("dog");
+            if (text.style.display === "none") {
+                text.style.display = "block";
+            } else {
+                text.style.display = "none";
+            }
+        }
+        function cat() {
+            var text = document.getElementById("cat");
+            if (text.style.display === "none") {
+                text.style.display = "block";
+            } else {
+                text.style.display = "none";
+            }
+        }
+        function bird() {
+            var text = document.getElementById("bird");
+            if (text.style.display === "none") {
+                text.style.display = "block";
+            } else {
+                text.style.display = "none";
+            }
+        }
+        function lizard() {
+            var text = document.getElementById("lizard");
+            if (text.style.display === "none") {
+                text.style.display = "block";
+            } else {
+                text.style.display = "none";
+            }
+        }
+
+        </script>
+        <h2>Steps:</h2>
         <table class="table table-dark table-hover">
             <tbody>
-
+            <p id='dog' style='display: none'>1.
+            <br>2.
+            <br>3.
+            <br>4.
+            <br>5.
+            </p>
+            <button type='button' onclick="dog()">How To Care for a lost Puppy</button>
+            </tbody>
+            <tbody>
+            <p id='cat' style='display: none'>1.
+                <br>2.
+                <br>3.321
+                <br>4.
+                <br>5.
+            </p>
+            <button type='button' onclick="bird()">How To Care for a lost bird</button>
+            </tbody>
+            <tbody>
+            <p id='bird' style='display: none'>1.
+                <br>2.
+                <br>3.321123
+                <br>4.
+                <br>5.
+            </p>
+            <button type='button' onclick="lizard()">How To Care for a lost cat</button>
+            </tbody>
+            <tbody>
+            <p id='lizard' style='display: none'>1.
+                <br>2.12345
+                <br>3.321
+                <br>4.
+                <br>5.
+            </p>
+            <button type='button' onclick="cat()">How To Care for a lost cat</button>
             </tbody>
         </table>
     </div>
