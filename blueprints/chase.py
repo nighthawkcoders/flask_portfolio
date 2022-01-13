@@ -8,7 +8,7 @@ bchase = Blueprint("bchase", __name__, static_folder="static", template_folder="
 
 @bchase.route('/Chase/')
 def chase():
-    return render_template('Chase.html')
+    return render_template('Chase.html', fgame=game())
 
 
 @bchase.route('/cats/')
