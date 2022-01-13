@@ -56,6 +56,16 @@ def sonakshi():
     # starting and empty input default
     return render_template("sonakshi.html", name="World")
 
+@app.route('/forum', methods=['GET', 'POST'])
+def forum():
+    # submit button has been pushed
+    if request.form:
+        name = request.form.get("name")
+        if len(name) != 0:  # input field has content
+            return render_template("forum.html", name=name)
+    # starting and empty input default
+    return render_template("forum.html", name="Advice Here")
+
 
 @app.route('/shreya', methods=['GET', 'POST'])
 def shreya():
