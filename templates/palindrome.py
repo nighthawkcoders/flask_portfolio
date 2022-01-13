@@ -56,7 +56,7 @@ class Palindrome:
 def word():
     word1 = input("What word would you like to test?")
     palin = Palindrome(word1)
-    print(f"Is the word a palindrome? {word1} = {palin._is_a_palindrome}")
+    print(f"Is the word a palindrome?{word1} = {palin._is_a_palindrome}")
 
 if __name__ == "__main__":
     word()

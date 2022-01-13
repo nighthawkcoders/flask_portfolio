@@ -237,16 +237,6 @@ def onestar():
     return render_template("ratingtest.html", fivestarsreview=fivestars_list, fourstarsreview=fourstars_list, threestarsreview=threestars_list, twostarsreview=twostars_list, onestarreview=onestar_list, average=average)
 
 
-
-if __name__ == "__main__":
-    app.run(
-        debug=True,
-        # host="0.0.0.0",
-        # port=5000
-    ),
-
-
-
 # runs the application on the development server
 if __name__ == "__main__":
-    app.run(host="127.0.0.1", port=5000)
+    app.run(host="127.0.0.1", port=8000)
