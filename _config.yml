@@ -1,3 +1,4 @@
 theme: jekyll-theme-cayman
 title: Food Information
 description: A way to track the team food progress
+markdown: kramdown
