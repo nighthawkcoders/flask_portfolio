@@ -77,7 +77,16 @@ Our website is a website full of helpful resources for students. It will help st
 - <a href="https://github.com/sonakshibhalla/tri2turtles/blob/main/README.md#week-1-due-122">Week 1</a>
 - <a href="https://github.com/sonakshibhalla/tri2turtles/blob/main/README.md#week-2-due-1210">Week 2</a>
 - <a href="https://github.com/sonakshibhalla/tri2turtles/blob/main/README.md#week-3-due-1216">Week 3</a>
+- <a href = "https://github.com/sonakshibhalla/tri2turtles/blob/main/README.md#week-4-due-114">Week 4</a>
 <br>
+
+## Week 5: Due 1/14
+| Name | Requirement | Evidence |  Total Score |
+| ---  | ---         | ---      | --- |
+| Sonakshi Bhalla | PBL Features<br>Extra Credit Tasks<br>Collegeboard Notes| <a href="https://github.com/sonakshibhalla/tri2_turtles.github.io/issues/131">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2_turtles.github.io/issues/130">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2_turtles.github.io/issues/134">Ticket</a>|  /5
+| Shreya Ahuja |PBL Features<br>Work on Jekyll<br>CRUD Database<br>Collegeboard Notes| <a href="https://github.com/sonakshibhalla/tri2_turtles.github.io/issues/131">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2_turtles.github.io/issues/135">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2_turtles.github.io/issues/134">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2_turtles.github.io/issues/134">Ticket</a>| /5
+| Punarvasu Sangam | PBL Features<br>Async Operations<br>Collegeboard Notes| <a href="https://github.com/sonakshibhalla/tri2_turtles.github.io/issues/131">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2_turtles.github.io/issues/137">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2_turtles.github.io/issues/133">Ticket</a>|  /5
+| Khushi Bagri | PBL Features<br>Themes Using Sassy<br>Collegeboard Notes| <a href="https://github.com/sonakshibhalla/tri2_turtles.github.io/issues/131">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2_turtles.github.io/issues/136">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2_turtles.github.io/issues/133">Ticket</a>|  /5
 
 ## Week 4: Due 1/7
 | Name | Requirement | Evidence |  Total Score |
