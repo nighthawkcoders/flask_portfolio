@@ -5,12 +5,18 @@ from __init__ import app
 import requests
 import json
 
+from api.webapi import api_bp
+app.register_blueprint(api_bp)
+
+from algorithm.algorithm import app_algorithm
+app.register_blueprint(app_algorithm)
+
 from crud.app_crud import app_crud
 app.register_blueprint(app_crud)
 
 
 # connects default URL to render index.html
-@app.route('/index/')
+@app.route('/')
 def index():
     return render_template("index.html")
 
@@ -40,7 +46,6 @@ def adi():
         'x-rapidapi-host': "sportscore1.p.rapidapi.com",
         'x-rapidapi-key': "39c4bf8c2emsh30b02ab6dc01dd9p13f427jsn690a650cf2ec"
     }
-    # return render_template("AboutDylan.html")
 
     response = requests.request("GET", url, headers=headers)
     return render_template("aboutpages/adi.html", stats=response.json())
@@ -109,7 +114,7 @@ def weather():
     response = requests.request("GET", url, headers=headers, params=querystring)
     if response.status_code<400:
         results = json.loads(response.content.decode("utf-8"))
-        return render_template("weather.html", results=results)
+        return render_template("pbl/weather.html", results=results)
     else:
         return render_template("pbl/weather.html")
 
@@ -144,36 +149,53 @@ def hotels():
 @app.route('/carrental', methods=['GET', 'POST'])
 def carrental():
 
+    url = "https://booking-com.p.rapidapi.com/v1/car-rental/search"
+
+    querystring = {"pick_up_datetime":"2022-07-01 13:00:00","pick_up_longitude":"37.620230899","drop_off_longitude":"37.620230899","pick_up_latitude":"55.7518540820001","drop_off_latitude":"55.7518540820001","sort_by":"recommended","locale":"en-gb","currency":"AED","drop_off_datetime":"2022-07-02 13:00:00","from_country":"it"}
+
+    headers = {
+        'x-rapidapi-host': "booking-com.p.rapidapi.com",
+        'x-rapidapi-key': "2deba3c7c5msh59e591f91803406p14659ajsn14474595701e"
+    }
+
+    response = requests.request("GET", url, headers=headers, params=querystring)
+
+    print(response.text)
     return render_template("pbl/carrental.html")
+
+@app.route('/flights', methods=['GET', 'POST'])
+def flights():
+    url = "https://priceline-com.p.rapidapi.com/flights/LAX/SFO/2021-02-17"
+
+    querystring = {"adults":"1"}
+
+    headers = {
+        'x-rapidapi-host': "priceline-com.p.rapidapi.com",
+        'x-rapidapi-key': "2deba3c7c5msh59e591f91803406p14659ajsn14474595701e"
+    }
+
+    response = requests.request("GET", url, headers=headers, params=querystring)
+
+    print(response.text)
+    return render_template("pbl/flights.html")
+
 
 @app.route('/maps', methods=['GET', 'POST'])
 def maps():
 
     return render_template("pbl/maps.html")
 
+@app.route('/location', methods=['GET', 'POST'])
+def location():
+    url = "http://127.0.0.1:8081/api/location"
+    response = requests.request("GET", url)
+    return render_template("location.html", location=response.json())
 
-@app.route('/airportdetails/', methods=['GET','POST'])
-def airportdetails():
-    try:
-        airportscode = request.form['keyword']
-    except:
-        airportscode = "SAN"
-
-    url = "https://airport-info.p.rapidapi.com/airport"
-    querystring = {"iata": airportscode}
-    headers = {
-        'x-rapidapi-host': "airport-info.p.rapidapi.com",
-        'x-rapidapi-key': "80afb5b6afmsh552d92e769ba3a5p1bfac9jsnfb6c407dd20f"
-    }
-
-    response = requests.request("GET", url, headers=headers, params=querystring)
-    response = response.json()
-    return render_template("pbl/airportdetails.html", results=response)
-
-@app.route('/attractions', methods=['GET', 'POST'])
-def attractions():
-
-    return render_template("pbl/attractions.html")
+@app.route('/locations', methods=['GET', 'POST'])
+def locations():
+    url = "http://127.0.0.1:8081/api/locations"
+    response = requests.request("GET", url)
+    return render_template("locations.html", locations=response.json())
 
 # runs the application on the development server
 if __name__ == "__main__":

@@ -118,9 +118,8 @@
 </center>
     <script>
         var collapsible = document.getElementsByClassName("collapsible");
-        var i;
 
-        for (i = 0; i < collapsible.length; i++) {
+        for ( var i = 0; i < collapsible.length; i++) {
             collapsible[i].addEventListener("click", function() {
                 this.classList.toggle("active");
                 var content = this.nextElementSibling;
