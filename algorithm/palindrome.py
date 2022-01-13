@@ -54,10 +54,15 @@ class Palindrome:
         return self._analysis
 
 if __name__ == "__main__":
-    '''Value for testing'''
-    n = "ezec"
-    '''Constructor of Class object'''
-    palindrome = Palindrome(n)
+    # '''Value for testing'''
+    # n = "ezec"
+    # '''Constructor of Class object'''
+    #
+    # '''Using getters to obtain data from object'''
+    # print(f"Checking: {n} = {palindrome.isPalindrome}")
 
-    '''Using getters to obtain data from object'''
+
+
+    n = input("Enter a Input to Check");
+    palindrome = Palindrome(n);
     print(f"Checking: {n} = {palindrome.isPalindrome}")
