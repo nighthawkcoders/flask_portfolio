@@ -15,13 +15,41 @@
 </head>
 {%  block body %}
 <body>
+<style>
+    .header {
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 4rem;
+        font-weight: 500;
+        letter-spacing: 2px;
+        color: #f35626;
+        background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-animation: hue 10s infinite linear;
+    }
+
+    @-webkit-keyframes hue {
+        from {
+            -webkit-filter: hue-rotate(0deg);
+        }
+        to {
+            -webkit-filter: hue-rotate(-360deg);
+        }
+    }
+</style>
 <div class="row">
     <div class="col-sm">
-        <h1>Nathan</h1>
+        <h1 class="header">Nathan</h1>
         <img src="/static/assets/nathan2.jpg" width="50%"  id="nathanimg" onclick="nathanImg()" >
+        <h3 class="header">Contributions</h3>
+        <a href="worldclock.html">World Clock</a>
+        <br>
+        <a href="weather.html">Weather</a>
     </div>
     <div class="col-sm">
-        <h1>API</h1>
+        <h1 class="header">About Me</h1>
+        <p>Hello, my name is Nathan Manangan. I'm Filipino, but I don't speak it because I was too lazy to learn the language when I was young, and there is no class at Del Norte. I'm currently a Sophomore enrolled at this school, and I enjoy coding from time to time. I like hanging out and playing games with my friends and I enjoy spending time with my family.</p>
+        <h1 class="header">API</h1>
         <p>TOTAL DEATHS:</p>
         <div id="deaths"></div>
         <br>
@@ -31,7 +59,7 @@
         <p>RECOVERED CASES:</p>
         <div id="recovered"></div>
         <br>
-        <h1>Links</h1>
+        <h1 class="header">Links</h1>
         <a href="https://docs.google.com/document/d/1243B2mbRGslTk-0YRXKdKykfs6fAU5pK1LFUyJQ83vM/edit">Create Task Planning</a>
         <br>
         <a href="https://docs.google.com/document/d/12rQvrhtsNnlDFDhkCI9sT8w7fTD3y-4FW6W8LPLuf9w/edit">Journal</a>

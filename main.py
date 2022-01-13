@@ -3,6 +3,7 @@ from flask import Flask, render_template
 from flask import request
 from __init__ import app
 from crud.app_crud import app_crud
+import requests
 
 # create a Flask instance
 # app = Flask(__name__)
@@ -57,12 +58,27 @@ def feedback():
 
 @app.route('/translator/', methods=['GET', 'POST'])
 def translator():
+    url = "https://translated-mymemory---translation-memory.p.rapidapi.com/api/get"
+    pairs = ["en|es", "en|it", "en|zh", "en|de", "en|he"]
+    text = "Translated text will show here"
+    original = text
+    master_list = []
     if request.form:
-        input = request.form.get("feed1")
-        name = request.form.get("feed2")
-        if len(input) != 0:  # input field has content
-            return render_template("layouts/translator.html", input=input, name=name)
-    return render_template("layouts/translator.html")
+        text = request.form.get("tester2")
+        original = text
+    for item in pairs:
+        querystring = {"langpair":item,"q":text,"mt":"1","onlyprivate":"0","de":"a@b.c"}
+
+        headers = {
+            'x-rapidapi-host': "translated-mymemory---translation-memory.p.rapidapi.com",
+            'x-rapidapi-key': "00a6319afcmshb59ecb31e0a9dbap1c6de4jsn4b86a9198483"
+        }
+
+        response = requests.request("GET", url, headers=headers, params=querystring)
+        print(response.text)
+        dictionary = [response.json().get('responseData')]
+        master_list = master_list + dictionary
+    return render_template("layouts/translator.html", dictionary=master_list, original=original)
 
 @app.route('/crud')
 def crud():
@@ -74,12 +90,24 @@ def search():
 
 @app.route('/weather/', methods=['GET', 'POST'])
 def weather():
-    if request.form:
-        input = request.form.get("feed1")
-        name = request.form.get("feed2")
-        if len(input) != 0:  # input field has content
-            return render_template("layouts/weather.html", input=input, name=name)
-    return render_template("layouts/weather.html")
+    countrycode = ['105391811', '105368361', '105359777', '105341704', '105393052', '105392171']
+    dictionarymasterlist = []  # this creates an empty list that all the dictionaries go into
+    for item in countrycode:  # this is a for loop for all the country codes so that each one gets a response
+        url = "https://foreca-weather.p.rapidapi.com/observation/latest/" + item
+
+        querystring = {"lang": "en"}
+
+        headers = {
+            'x-rapidapi-host': "foreca-weather.p.rapidapi.com",
+            'x-rapidapi-key': "00a6319afcmshb59ecb31e0a9dbap1c6de4jsn4b86a9198483"
+        }
+
+        response = requests.request("GET", url, headers=headers, params=querystring)
+        list_of_dictionaries2 = response.json().get('observations')
+        dictionarymasterlist = dictionarymasterlist + list_of_dictionaries2
+    print('WEATHER INFO')
+    print(dictionarymasterlist)
+    return render_template("layouts/weather.html", weather=dictionarymasterlist)
 
 
 
