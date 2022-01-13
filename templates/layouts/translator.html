@@ -1,0 +1,42 @@
+{% extends "layouts/base.html" %}
+
+{% block body %}
+    {% set dictionary = dictionary %}
+    {% set original = original %}
+    {% set language = ["Spanish", "Italian", "Simplified Chinese", "German", "Hebrew"] %}
+
+    <div class="container-fluid">
+        <div class = "row" style="padding-bottom:5%;">
+            <div class="col-12" style="text-align: center;">
+                <h1><strong>Translator API </strong></h1>
+                <form action="/translator/" id="translate" method="POST" > <!--the form reloads the page with the newest info by rerendering the page and recalling the api -->
+                    <label for="translate">Translate any text you desire to the languages below</label>
+                    <input name="tester2" id="tester2">
+                    <input type="submit" name="but1" value="Translate">
+                </form>
+            </div>
+        </div>
+        <div class = "row" style="padding-bottom:5%;">
+            <div class = "col-12"  style="text-align: center;">
+                <table class="center">
+                    <tr>
+                        <th style="font-size:50px">Language</th> <!--these create table headers with the name of the keys-->
+                        <th style="font-size:50px">Text</th>
+                    </tr>
+                    <tr>
+                        <td style="font-size:25px">English</td>
+                        <td style="font-size:25px">{{ original }}</td>
+                    </tr>
+
+                    {% for dictionary in dictionary %}
+                        <tr>
+                            <td style="font-size:25px">{{ language[loop.index0] }}</td> <!--we put the variable we created in the table colum-->
+                            {% set new = dictionary['translatedText']  %}
+                            <td style="font-size:25px">{{ new }}</td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}
