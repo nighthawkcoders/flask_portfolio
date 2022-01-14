@@ -6,11 +6,14 @@ from flask import Flask, render_template, request
 from algorithms.image import rotatehack, sonakshi_image_data, kashish_image_data, saumya_image_data
 import requests
 import http.client
+
 # create a Flask instance
 app = Flask(__name__)
 
+
 from crud3.app_crud import app_crud
 import http.client
+
 # create a Flask instance
 
 app.register_blueprint(app_crud)
@@ -26,25 +29,31 @@ def home():
 def dark():
     return render_template("dark.html")
 
+
 @app.route('/study')
 def study():
     return render_template("study.html")
+
 
 @app.route('/stress')
 def stress():
     return render_template("stress.html")
 
+
 @app.route('/volunteer')
 def volunteer():
     return render_template("volunteer.html")
+
 
 @app.route('/crud/search')
 def search():
     return render_template("search.html")
 
+
 @app.route('/crud')
 def crud():
     return render_template("crud.html")
+
 
 @app.route('/sonakshi', methods=['GET', 'POST'])
 def sonakshi():
@@ -55,6 +64,7 @@ def sonakshi():
             return render_template("sonakshi.html", name=name)
     # starting and empty input default
     return render_template("sonakshi.html", name="World")
+
 
 @app.route('/forum', methods=['GET', 'POST'])
 def forum():
@@ -176,6 +186,7 @@ def punnuapitest():
     response = requests.request("GET", url)
     text = response.json()
     return render_template("punnuapitest.html", text=text)
+
 
 # runs the application on the development server
 if __name__ == "__main__":
