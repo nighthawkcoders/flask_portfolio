@@ -14,3 +14,7 @@ def hangman():
 @btanay.route('/pethistory/')
 def pethistory():
     return render_template('pethistory.html')
+
+@btanay.route('/petpoll/')
+def petpoll():
+    return render_template('petpoll.html')
