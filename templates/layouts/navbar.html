@@ -67,20 +67,12 @@
         width: 100%;
     }
 </style>
-
-<!-- CODEFISH -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" >Expeditions</a>
-    <button onclick="darkMode()">Toggle Dark Mode</button>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
+    <a class="nav-link" href="{{ url_for('index') }}">Expeditions</a>
             <!-- ABOUT US DROPDOWN -->
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        About Us
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> About Us
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="nav-link" href="{{ url_for('divya') }}">Divya</a>
@@ -91,12 +83,10 @@
                     </div>
                 </li>
             </div>
-        </div>
-    <!-- ABOUT US DROPDOWN -->
+    <!--  DROPDOWN -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Travel
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Travel
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="nav-link" href="{{ url_for('hotels') }}">Hotels</a>
@@ -109,14 +99,38 @@
     </div>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Create Memories
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Photos
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="nav-link" href="{{ url_for('photogallery') }}">Photos</a>
             </div>
         </li>
     </div>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Crud Database
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="nav-link" href="{{ url_for('crud.crud') }}">Crud</a>
+                <a class="nav-link" href="{{ url_for('crud.search') }}">Search</a>
+            </div>
+        </li>
     </div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Algorithms
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="nav-link" href="{{ url_for('algorithm.palindrome') }}">Palindrome</a>
+                <a class="nav-link" href="{{ url_for('algorithm.fibonacci') }}">Fibonacci</a>
+            </div>
+        </li>
     </div>
+    <button onclick="darkMode()">Toggle Dark Mode</button>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 </nav>
