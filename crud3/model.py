@@ -100,9 +100,9 @@ def model_tester():
     u8 = Users(name='Jake Gregory', email='jake@yahoo.com', password='123gregory', phone="7349327488")
     u9 = Users(name='Claire Miller', email='bobfred1@yahoo.com', password='123bobfred', phone="8587754956")
     u10 = Users(name='Lina Johnson', email='bobfred1@yahoo.com', password='123bobfred', phone="8587754956")
-# U10 intended to fail as duplicate key
-    u10 = Users(name='John Mortensen', email='jmort1021@yahoo.com', password='123qwerty', phone="8586791294")
-    table = [u1, u2, u3, u4, u5, u6, u7]
+# U11 intended to fail as duplicate key
+    u11 = Users(name='John Mortensen', email='jmort1021@yahoo.com', password='123qwerty', phone="8586791294")
+    table = [u1, u2, u3, u4, u5, u6, u7, u8, u9, u10]
     for row in table:
         try:
             db.session.add(row)
