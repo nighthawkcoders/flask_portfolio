@@ -4,211 +4,49 @@
 <!-- Setting up variables to customize "project" details to be specific to kangaroos -->
 
 {% block body %}
-{#    comment the next line out after fixing the index#}
-<body style="background-color: pink">
-    <h1 id="mainheader" style="text-align: center"> Expeditions </h1>
-    <!--<h1 id="mainmainheader"> Expeditions </h1>-->
 
-    <h1 id="missionstatement" style="text-align: center"> Mission Statement </h1>
-
-    <!--<img id="planeticket"src="/static/planeticket.png" height="800" width="300">-->
-
-    <p id="paragraph" style="text-align: center"> This is travel website that makes travel simple  and efficient for all. We have provided
-    many features such as tabs for people that are on vacation that organize the person's stay and
-    to guide them to do what they want to do at certain times. Also, we have functions to show restaurants
-    nearby, a form of an itinerary, places to go, and Hotels near their locations.
-</body>
+<h1 id="mainheader"> Expeditions </h1>
+<h1 id="catchphrase"> create memories and travel organized to various destinations around the world </h1>
+<img id="indexmainpic"src="/static/indexmainpic.PNG" alt="Index main" height="550" width="850">
 
 
-<!--<div id=container>-->
-<!--    Travel-->
-<!--    <div id=flip>-->
-<!--        <div><div>Freely</div></div>-->
-<!--        <div><div>Organized</div></div>-->
-<!--        <div><div>Travel With us</div></div>-->
-<!--    </div>-->
-<!--    Welcome to Expeditions-->
-<!--</div>-->
+<style>
+    #indexmainpic {
+        padding-top: 80px;
+        position: absolute;
+        left: 225px;
+        bottom: 4%;
+    }
+    html,body{
+        background-color: #B99976;
+    }
+    #mainheader {
+        position: absolute;
+        top: 5%;
+        font-size:120px;
+        padding-top: 130px;
+        selfalign: center;
+        left: 335px;
+        color: black;
+        font-family: "Times New Roman";
+    }
+    container {
+        position: absolute;
+        text-align: center;
+        color: black;
+    }
+    #catchphrase {
+        position: absolute;
+        top: 35%;
+        font-size:20px;
+        padding-top: 130px;
+        selfalign: center;
+        left: 325px;
+        color: black;
+        font-family: "Times New Roman";
+    }
+</style>
 
-<!--</div>-->
-<!--{% block background %}-->
-
-<!--<style>-->
-
-<!--    #travelmainpic {-->
-<!--        padding-top: 120px;-->
-<!--        position: absolute;-->
-<!--        left: 300px;-->
-<!--        bottom: 4%;-->
-<!--    }-->
-<!--    #planeticket {-->
-<!--        padding-top: 120px;-->
-<!--        position: absolute;-->
-<!--        left: 1000px;-->
-<!--        top:700px ;-->
-<!--        filter: blur(5px);-->
-<!--        opacity: 0.35;-->
-<!--    }-->
-
-
-<!--    #container {-->
-<!--        color:#ffffff;-->
-<!--        text-transform: uppercase;-->
-<!--        font-size:40px;-->
-<!--        font-weight:bold;-->
-<!--        padding-top:200px;-->
-<!--        position:relative;-->
-<!--        width:100%;-->
-<!--        top:8%;-->
-<!--        left:19%;-->
-<!--        align-self: center;-->
-
-<!--    }-->
-<!--    #paragraph {-->
-<!--        padding-top: 150px;-->
-<!--        padding-bottom: 150px;-->
-<!--        position: absolute;-->
-<!--        left: 44%;-->
-<!--        top: 77%;-->
-<!--        text-align: center;-->
-<!--        color: black;-->
-<!--        width: 800px;-->
-<!--        height: 600px;-->
-<!--        margin-left: auto;-->
-<!--        font-family: "Times New Roman";-->
-<!--        font-weight: bolder;-->
-<!--        font-size: 20px;-->
-<!--        margin-right: auto;-->
-<!--    }-->
-
-<!--    #flip {-->
-<!--        height:50px;-->
-<!--        overflow:hidden;-->
-<!--    }-->
-
-<!--    #flip > div > div {-->
-<!--        color:#000000;-->
-<!--        padding:4px 12px;-->
-<!--        height:45px;-->
-<!--        margin-bottom:45px;-->
-<!--        display:inline-block;-->
-<!--    }-->
-
-<!--    #flip div:first-child {-->
-<!--        animation: show 5s linear infinite;-->
-<!--    }-->
-
-<!--    #flip div div {-->
-<!--        background:#ffffff;-->
-<!--    }-->
-<!--    #flip div:first-child div {-->
-<!--        background:#ffffff;-->
-<!--    }-->
-<!--    #flip div:last-child div {-->
-<!--        background:#ffffff;-->
-<!--    }-->
-
-<!--    @keyframes show {-->
-<!--        0% {margin-top:-270px;}-->
-<!--        5% {margin-top:-180px;}-->
-<!--        33% {margin-top:-180px;}-->
-<!--        38% {margin-top:-90px;}-->
-<!--        66% {margin-top:-90px;}-->
-<!--        71% {margin-top:0px;}-->
-<!--        99.99% {margin-top:0px;}-->
-<!--        100% {margin-top:-270px;}-->
-<!--    }-->
-
-<!--    p {-->
-<!--        position:fixed;-->
-<!--        width:100%;-->
-<!--        top:60px;-->
-<!--        font-size:12px;-->
-<!--        color:#999;-->
-<!--        margin-top:200px;-->
-<!--    }-->
-<!--    /* Additional styling */-->
-
-<!--    body {-->
-<!--        font-size: 18px;-->
-<!--        font-family: "Vibur", sans-serif;-->
-<!--        background-color: #010a01;-->
-<!--    }-->
-
-<!--    h1, h2 {-->
-<!--        text-align: center;-->
-<!--        text-transform: uppercase;-->
-<!--        font-weight: 400;-->
-<!--    }-->
-
-<!--    h1 {-->
-<!--        font-size: 4.2rem;-->
-<!--    }-->
-
-<!--    h2 {-->
-<!--        font-size: 1.8rem;-->
-<!--    }-->
-
-<!--    a{-->
-<!--        color:saddlebrown;-->
-<!--    }-->
-
-
-
-<!--    @keyframes pulse {-->
-<!--        0% {-->
-<!--            background-color: #DAA520;-->
-<!--        }-->
-<!--        100% {-->
-<!--            background-color: #DAA520;-->
-<!--        }-->
-<!--    }-->
-
-<!--    html,-->
-<!--    body {-->
-<!--        height: 100%;-->
-<!--    }-->
-<!--    #mainheader {-->
-<!--        position: absolute;-->
-<!--        top: 5%;-->
-<!--        font-size:250px;-->
-<!--        padding-top: 130px;-->
-<!--        selfalign: center;-->
-<!--        left: 40px;-->
-<!--        color: black;-->
-<!--        font-family: "Times New Roman";-->
-<!--    }-->
-<!--    #mainmainheader {-->
-<!--        position: absolute;-->
-<!--        top: 3%;-->
-<!--        font-size:250px;-->
-<!--        padding-top: 130px;-->
-<!--        selfalign: center;-->
-<!--        left: 46px;-->
-<!--        color: white;-->
-<!--        font-family: "Times New Roman";-->
-<!--    }-->
-<!--    #missionstatement {-->
-<!--        position: absolute;-->
-<!--        top: 95%;-->
-<!--        font-size:85px;-->
-<!--        padding-top: 130px;-->
-<!--        selfalign: center;-->
-<!--        right: 80px;-->
-<!--        color:black;-->
-<!--        font-family: "Times New Roman";-->
-<!--        Font-weight:bold;-->
-<!--    }-->
-
-<!--    html, body {-->
-<!--        background-color: #D2B48C;-->
-<!--        min-height:300%-->
-<!--    }-->
-
-
-
-<!--</style>-->
-{% endblock %}
 
 {% endblock %}
 

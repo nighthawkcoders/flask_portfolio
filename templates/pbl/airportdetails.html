@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{% extends "layouts/base.html" %}
+
+{% block body %}
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hotels</title>
+    <style>
+        th {
+            background-color: tan;
+        }
+        table, td, th {
+            border: 4px solid saddlebrown;
+            padding: 50px;
+        }
+        td, th {
+            text-align:center;
+            color: black;
+            font-size: 20px;
+        }
+        table{
+            width: 75%;
+            margin: auto;
+        }
+        html,body{
+            background-color: sandybrown;
+        }
+
+    </style>
+</head>
+<body>
+<form action="/airportdetails/" method="POST">
+    <input type="text" placeholder="Enter Airport Code" name='keyword'>
+    <button type="submit">Get Info</button>
+</form>
+<table>
+    <tr>
+        <th>Airport</th>
+        <th>Information</th>
+    </tr>
+    <tr>
+        <td>{{results.name}}</td>
+        <td>
+            Address:  {{results.street_number}} {{results.street}} {{results.city}} {{results.state}}
+            Phone:  {{results.phone}}
+            Website: {{results.website}}
+        </td>
+    </tr>
+</table>
+</body>
+</html>
+
+{% endblock %}
