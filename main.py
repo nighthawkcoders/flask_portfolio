@@ -5,9 +5,6 @@ from __init__ import app
 import requests
 import json
 
-darkmode="darkmode"
-# connects default URL to render index.html
-
 from templates.travel import travel_pg
 app.register_blueprint(travel_pg)
 
@@ -22,6 +19,10 @@ app.register_blueprint(app_algorithm)
 
 from crud.app_crud import app_crud
 app.register_blueprint(app_crud)
+
+darkmode="darkmode"
+# connects default URL to render index.html
+
 
 @app.route('/')
 def index():
@@ -52,13 +53,17 @@ def locations():
     response = requests.request("GET", url)
     return render_template("locations.html", locations=response.json(), darkmode=darkmode)
 
+@app.route('/fetchdemo', methods=['GET', 'POST'])
+def fetchdemo():
+    return render_template("fetchdemo.html", darkmode=darkmode)
+
 @app.route('/darkmode', methods=['GET', 'POST'])
 def toggleDarkMode():
     global darkmode
-    if darkmode=="darkmode":
+    if darkmode == "darkmode":
         darkmode="lightmode"
     else:
-        darkmode="darkmode"
+        darkmode = "darkmode"
     return ('', 200)
 
 

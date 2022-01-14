@@ -10,7 +10,6 @@ travel_pg = Blueprint('travel', __name__,
 
 
 darkmode="darkmode"
-# connects default URL to render index.html
 
 @travel_pg.route('/places/')
 def places():
