@@ -1,0 +1,4 @@
+theme: jekyll-theme-merlot
+title: Food Information
+description: A way to track the team food progress
+markdown: kramdown

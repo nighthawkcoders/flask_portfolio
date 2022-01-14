@@ -25,3 +25,7 @@ def connor():
 def PetInfo():
     path = Path(bconnor.root_path) / "testconnorimages"
     return render_template('PetInfo.html', pimage=pinfo(path))
+
+@bconnor.route('/PetQuiz/')
+def PetQuiz():
+    return render_template('PetQuiz.html')
