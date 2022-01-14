@@ -21,9 +21,23 @@
             --clr-background: #424874;
             --clr-text: #FFFFFF;
         }
+        form{
+            margin: auto;
+        }
+        .form input[type=text] {
+            background-color: white;
+            background-image: url('searchicon.png');
+            background-position: 10px 10px;
+            background-repeat: no-repeat;
+            padding-left: 40px;
+        }
+        .form input[type=text]:focus {
+        }
+        button {background:#06060F;color:white;}
         body {
             background-color: var(--clr-background);
             text-color: var(--clr-text);
+            text-align: center;
         }
         /*table, td, th {*/
         /*    border: 4px solid midnightblue;*/
@@ -105,7 +119,7 @@
         }
     </style>
 </head>
-<form action="/hotels/" method="POST">
+<form action="/hotels/" method="POST" class="form">
     <input type="text" placeholder="Enter location" name='keyword'>
     <button type="submit">Get Hotels</button>
 </form>
@@ -125,6 +139,9 @@
         {% endfor %}
     {% endfor %}
 </table>
+<!--<iframe id="hotelLocation">-->
+
+<!--</iframe>-->
 </body>
 </html>
 
@@ -148,6 +165,9 @@
 
     function darkModeOff() {
         document.body.classList.remove("dark-mode");
+    }
+    function changeIframeSource(newurl) {
+        document.getElementById("hotelLocation").src=newurl;
     }
 </script>
 {% endblock %}
