@@ -36,6 +36,9 @@ link to be added later
 
 Commit | Evidence | Name | Description
 ----------- | ----------- | ----------- | -----------
+Bootstrap on Hotels Page | [Evidence](https://github.com/RohanG326/supporting_cast/commit/5cd6b9340e2da4a6546ebc07d5b6f066cc1d991e) | Brian Tang | Use Bootstrap to style hotels page
+More Styling | [Evidnece](https://github.com/RohanG326/supporting_cast/commit/1d85f5341eff6761bc89f5d9dfe2fdcb50064f8e) | Brian Tang | style weather page using bootstrap and style forms using sass
+Dark Mode | [Evidence](https://github.com/RohanG326/supporting_cast/commit/9ea01438ee5dc09e987ec4fb43ab267ddd725f98) | Brian Tang | extend light mode dark mode to all pages
 
 #   <h2 id="Week4">Week 4: Due 1/7</h2>
 [Week 4 Issue](https://github.com/RohanG326/supporting_cast/issues/45)
