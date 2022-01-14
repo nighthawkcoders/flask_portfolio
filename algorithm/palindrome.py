@@ -54,7 +54,6 @@ class Palindrome:
         return self._analysis
 
 if __name__ == "__main__":
-
-    n = input("Enter a Input to Check")
+    n = input("Input?")
     palindrome = Palindrome(n)
     print(f"Checking: {n} = {palindrome.isPalindrome}")

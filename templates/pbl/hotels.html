@@ -25,21 +25,83 @@
             background-color: var(--clr-background);
             text-color: var(--clr-text);
         }
-        table, td, th {
-            border: 4px solid midnightblue;
-            padding: 50px;
-        }
-        td, th {
-            text-align:center;
-            color: midnightblue;
-            font-size: 20px;
-        }
-        table{
-            width: 75%;
-            margin: auto;
-        }
+        /*table, td, th {*/
+        /*    border: 4px solid midnightblue;*/
+        /*    padding: 50px;*/
+        /*}*/
+        /*td, th {*/
+        /*    text-align:center;*/
+        /*    color: midnightblue;*/
+        /*    font-size: 20px;*/
+        /*    border-right: 1px solid black;*/
+        /*}*/
+        /*table{*/
+        /*    width: 75%;*/
+        /*    margin: auto;*/
+        /*}*/
         html, body {
             overflow: auto;
+        }
+        .b-example-divider {
+            height: 3rem;
+            background-color: rgba(0, 0, 0, .1);
+            border: solid rgba(0, 0, 0, .15);
+            border-width: 1px 0;
+            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
+
+        .bi {
+            vertical-align: -.125em;
+            fill: currentColor;
+        }
+
+        .opacity-50 { opacity: .5; }
+        .opacity-75 { opacity: .75; }
+
+        .list-group {
+            width: auto;
+            max-width: 460px;
+            margin: 4rem auto;
+        }
+
+        .form-check-input:checked + .form-checked-content {
+            opacity: .5;
+        }
+
+        .form-check-input-placeholder {
+            pointer-events: none;
+            border-style: dashed;
+        }
+        [contenteditable]:focus {
+            outline: 0;
+        }
+
+        .list-group-checkable {
+            display: grid;
+            gap: .5rem;
+            border: 0;
+        }
+        .list-group-checkable .list-group-item {
+            cursor: pointer;
+            border-radius: .5rem;
+        }
+        .list-group-item-check {
+            position: absolute;
+            clip: rect(0, 0, 0, 0);
+            pointer-events: none;
+        }
+        .list-group-item-check:hover + .list-group-item {
+            background-color: var(--bs-light);
+        }
+        .list-group-item-check:checked + .list-group-item {
+            color: #fff;
+            background-color: var(--bs-blue);
+        }
+        .list-group-item-check[disabled] + .list-group-item,
+        .list-group-item-check:disabled + .list-group-item {
+            pointer-events: none;
+            filter: none;
+            opacity: .5;
         }
     </style>
 </head>
@@ -48,16 +110,17 @@
     <button type="submit">Get Hotels</button>
 </form>
 <body>
-<table>
-    <tr>
-        <th>GeoID</th>
+<table class="list-group">
+    <tr class="list-group-item list-group-item-action d-flex gap-3 py-3">
+<!--        <th>GeoID</th>-->
         <th>Hotel Name</th>
     </tr>
     {% for suggestion in results.suggestions %}
         {% for entities in suggestion.entities %}
-            <tr>
-                <td>{{entities.geoId}}</td>
-                <td>{{entities.name}}</td>
+            <tr class="list-group-item list-group-item-action d-flex gap-3 py-3">
+                <td onclick="window.open('http://maps.google.com/maps?q={{entities.latitude}},{{entities.longitude}}')">
+                    {{entities.name}}
+                </td>
             </tr>
         {% endfor %}
     {% endfor %}
