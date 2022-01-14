@@ -66,8 +66,15 @@
     li:hover a::before{
         width: 100%;
     }
+    .darkmode{
+        background-color: black;
+    }
+    .lightmode {
+        background-color: #f8f9fa;
+    }
+
 </style>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav id="navbar" class="navbar navbar-expand-lg navbar-light {{darkmode}}">
     <a class="nav-link" href="{{ url_for('index') }}">Expeditions</a>
             <!-- ABOUT US DROPDOWN -->
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -129,8 +136,28 @@
             </div>
         </li>
     </div>
-    <button onclick="darkMode()">Toggle Dark Mode</button>
+    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 </nav>
+
+<script>
+    function toggleDarkMode(){
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                if (document.getElementById("navbar").classList.contains("darkmode")){
+                    document.getElementById("navbar").classList.remove("darkmode");
+                    document.getElementById("navbar").classList.add("lightmode");
+                }
+                else {
+                    document.getElementById("navbar").classList.remove("lightmode");
+                    document.getElementById("navbar").classList.add("darkmode");
+                }
+            }
+        };
+        xhttp.open('POST',"/darkmode",true);
+        xhttp.send();
+    }
+</script>

@@ -14,15 +14,15 @@ app.register_blueprint(app_algorithm)
 from crud.app_crud import app_crud
 app.register_blueprint(app_crud)
 
-
+darkmode="darkmode"
 # connects default URL to render index.html
 @app.route('/')
 def index():
-    return render_template("index.html")
+    return render_template("index.html", darkmode=darkmode)
 
 @app.route('/places/')
 def places():
-    return render_template("places.html")
+    return render_template("places.html", darkmode=darkmode)
 
 @app.route('/jason/')
 def jason():
@@ -36,7 +36,7 @@ def jason():
     response = requests.request("GET", url, headers=headers)
 
     final=response.text
-    return render_template("aboutpages/jason.html")
+    return render_template("aboutpages/jason.html", darkmode=darkmode)
 
 
 @app.route('/adi', methods={'GET', 'POST'})
@@ -48,7 +48,7 @@ def adi():
     }
 
     response = requests.request("GET", url, headers=headers)
-    return render_template("aboutpages/adi.html", stats=response.json())
+    return render_template("aboutpages/adi.html", stats=response.json(), darkmode=darkmode)
 
 @app.route('/brian')
 def brian():
@@ -59,7 +59,7 @@ def brian():
     # }
     # response = requests.request("GET", url, headers=headers)
     # results = json.loads(response.content.decode("utf-8"))['results']
-    return render_template("aboutpages/brian.html")#, res=results)
+    return render_template("aboutpages/brian.html", darkmode=darkmode)#, res=results)
 
 @app.route('/divya')
 def divya():
@@ -74,7 +74,7 @@ def divya():
     quotes = []
     for result in response:
         quotes.append(result['text'] + " by author: " + result['author'])
-    return render_template("aboutpages/divya.html", quotes=quotes)
+    return render_template("aboutpages/divya.html", quotes=quotes, darkmode=darkmode)
 
 @app.route('/rohan', methods=['GET', 'POST'])
 def rohan():
@@ -86,15 +86,15 @@ def rohan():
     }
     response = requests.request("GET", url, headers=headers)
     data = response.json()
-    return render_template("aboutpages/rohan.html", data=data)
+    return render_template("aboutpages/rohan.html", data=data, darkmode=darkmode)
 
 @app.route('/photogallery', methods=['GET', 'POST'])
 def photogallery():
     if request.form:
         input = request.form.get("input")
         if len(input) != 0:
-            return render_template("photogallery.html", input1=input)
-    return render_template("pbl/photogallery.html", input1="")
+            return render_template("photogallery.html", input1=input, darkmode=darkmode)
+    return render_template("pbl/photogallery.html", input1="", darkmode=darkmode)
 
 @app.route('/weather/', methods=['GET','POST'])
 def weather():
@@ -114,9 +114,9 @@ def weather():
     response = requests.request("GET", url, headers=headers, params=querystring)
     if response.status_code<400:
         results = json.loads(response.content.decode("utf-8"))
-        return render_template("pbl/weather.html", results=results)
+        return render_template("pbl/weather.html", results=results, darkmode=darkmode)
     else:
-        return render_template("pbl/weather.html")
+        return render_template("pbl/weather.html", darkmode=darkmode)
 
 @app.route('/hotels/', methods=['GET','POST'])
 def hotels():
@@ -142,7 +142,8 @@ def hotels():
         # print(suggestions['entities'])
         for entities in suggestions['entities']:
             print(entities['name'])
-    return render_template("pbl/hotels.html", results=results)
+    return render_template("pbl/hotels.html", results=results, darkmode=darkmode)
+
 
 
 
@@ -161,7 +162,7 @@ def carrental():
     response = requests.request("GET", url, headers=headers, params=querystring)
 
     print(response.text)
-    return render_template("pbl/carrental.html")
+    return render_template("pbl/carrental.html", darkmode=darkmode)
 
 @app.route('/flights', methods=['GET', 'POST'])
 def flights():
@@ -177,25 +178,36 @@ def flights():
     response = requests.request("GET", url, headers=headers, params=querystring)
 
     print(response.text)
-    return render_template("pbl/flights.html")
+    return render_template("pbl/flights.html", darkmode=darkmode)
 
 
 @app.route('/maps', methods=['GET', 'POST'])
 def maps():
 
-    return render_template("pbl/maps.html")
+    return render_template("pbl/maps.html", darkmode=darkmode)
 
 @app.route('/location', methods=['GET', 'POST'])
 def location():
     url = "http://127.0.0.1:8081/api/location"
     response = requests.request("GET", url)
-    return render_template("location.html", location=response.json())
+    return render_template("location.html", location=response.json(), darkmode=darkmode)
 
 @app.route('/locations', methods=['GET', 'POST'])
 def locations():
     url = "http://127.0.0.1:8081/api/locations"
     response = requests.request("GET", url)
-    return render_template("locations.html", locations=response.json())
+    return render_template("locations.html", locations=response.json(), darkmode=darkmode)
+
+@app.route('/darkmode', methods=['GET', 'POST'])
+def toggleDarkMode():
+    global darkmode
+    if darkmode=="darkmode":
+        darkmode="lightmode"
+    else:
+        darkmode="darkmode"
+    return ('', 200)
+
+
 
 # runs the application on the development server
 if __name__ == "__main__":
