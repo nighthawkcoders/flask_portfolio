@@ -9,6 +9,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 
 {% set basename = "Team Turtles" %}
 {% set github = "https://github.com/sonakshibhalla/tri2turtles/" %}
+{% include "layouts/navbar.html" %}
 
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -93,7 +94,9 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
         .row{
             margin: auto;
         }
-
+        .tableCenter {
+            margin-left: 377px;
+        }
     </style>
 
     <title>{{ basename }} | {{ project }} </title>
@@ -104,7 +107,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 
 
 <body>
-{% include "layouts/navbar.html" %}
+
 
 {% block body %}
     <div class="container-fluid">
@@ -146,9 +149,6 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 {% endblock %}
 
 </body>
-
 {% block background %}
-
 {% endblock %}
-
 </html>

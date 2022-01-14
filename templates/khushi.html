@@ -1,14 +1,11 @@
-<body>
+
 {% include "layouts/navbar.html" %}
-<title>Khushi</title>
+
 
 <!- This is a replacement block for Body in base.html -->
 {% block body %}
-
-
-<title>Greet Khushi</title>
-<body style="background-color: #EBF7FA; text-align:center">
-
+<head>
+    <title>Khushi</title>
 <style>
    .button1 {
        background-color: white;
@@ -24,11 +21,20 @@
        color: black;
    }
 </style>
-
-<div style="margin: 2% 5% 5%; text-align:center; font-family: Baskerville; font-size: larger">
-    </div>
-
-<p>Hello <span id="myName">{{name}}</span>, Greetings!</p>
+<script>
+    function changeImage() {
+        var image = document.getElementById('myImage');
+        if (image.src.match("/static/assets/khushiimages/Khushi.jpg")) {
+            image.src = "/static/assets/khushiimages/Khushi2.jpg";
+        } else {
+            image.src = "/static/assets/khushiimages/Khushi.jpg";
+        }
+    }
+</script>
+</head>
+<body onload="myFunction()"; style="background-color: #EBF7FA; text-align:center">
+<div style="display:none;" id="myDiv" class="animate-bottom"; style="margin: 2% 5% 5%; text-align:center; font-family: Baskerville; font-size: larger">
+    <p>Hello <span id="myName">{{name}}</span>, Greetings!</p>
 
 <form action="#" id="khushi" method="POST" >
     <label for="name">Enter Your Name </label>
@@ -37,22 +43,11 @@
 </form>
 
 <br>
-<p>
-</p>
+
 <p style="font-size: large; font-family: Baskerville; text-align: center"><i>Click Me</i></p>
 
 <img id="myImage" onclick="changeImage()" src="/static/assets/khushiimages/Khushi.jpg" width="auto" height="300px">
 
-<script>
-            function changeImage() {
-                var image = document.getElementById('myImage');
-                if (image.src.match("/static/assets/khushiimages/Khushi.jpg")) {
-                    image.src = "/static/assets/khushiimages/Khushi2.jpg";
-                } else {
-                    image.src = "/static/assets/khushiimages/Khushi.jpg";
-                }
-            }
-        </script>
 <p style="font-size: large; font-family: Baskerville; text-align: center"><i><a href="listmovie">Movie List API</a></i></p>
 <br>
 <a style="font-family: Baskerville" href="https://docs.google.com/document/d/1F7jZ8Qvhu4UHAMA8RKTd8uXNWJdfZppVzL78_epN8UY/edit?usp=sharing">My Journal</a>
@@ -62,8 +57,6 @@
 <a style="font-family: Baskerville" href="https://github.com/KhushiB24">My GitHub Profile</a>
 </div>
 </body>
-
-
 
 {% endblock %}
 

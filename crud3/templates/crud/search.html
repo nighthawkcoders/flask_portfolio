@@ -3,19 +3,19 @@
 inspiration from https://www.youtube.com/watch?v=QKcVjdLEX_s
 -->
 {% include "layouts/navbar.html" %}
-<title>Stress Relief</title>
-<body style="font-family: Baskerville" </body>
 
 {% block meta %}
     <title>SQL search</title>
 {% endblock %}
 
 {% block body %}
-    <div class="container py-4 bg-primary">
+<body onload="myFunction()">
+<div class="animate-bottom">
+    <div class="container py-4 bg-dark">
         <!-- heading -->
         <header class="pb-3 mb-4 border-bottom">
             <a href="#" class="d-flex align-items-center text-light text-decoration-none">
-                <span class="fs-4">Search Database</span>
+                <span class="fs-4">Search for Tutors</span>
             </a>
         </header>
         <!-- search box -->
@@ -36,9 +36,11 @@ inspiration from https://www.youtube.com/watch?v=QKcVjdLEX_s
     <!-- result of search -->
     <div class="container">
         <div class="row" id="result">
+
         </div>
     </div>
-
+    </div>
+</body>
     <script>
         function search_data() {
             // fetch standard requires data set to a name-value pair

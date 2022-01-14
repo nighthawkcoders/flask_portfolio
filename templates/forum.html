@@ -1,0 +1,40 @@
+{% include "layouts/navbar.html" %}
+<title>Forum</title>
+<body style="font-family: Baskerville" </body>
+
+
+<body style="background-color: #EBF7FA;">
+
+<style>
+    .button1 {
+        background-color: white;
+        color: grey;
+        border: 3px solid #9CD8EC;
+        text-decoration: none;
+        margin: 4px 2px;
+        padding: 3px 4px;
+    }
+
+    .button1:hover {
+        background-color: whitesmoke;
+        color: black;
+    }
+</style>
+
+
+
+<div>
+    <form action="/forum" id="forum" method="POST" >
+        <label for="name">Enter your advice or tips/tricks for younger students!</label>
+        <input name="name" id="name">
+        <input type="submit" class="button1" value="Submit!">
+    </form>
+</div>
+
+<div style="margin: 2% 5% 5%; text-align:left; font-family: 'Hannotate SC'; font-size: large">
+    <div>
+        <p style="font-size: x-large"id="wave"><strong> {{name}}</strong></p>
+    </div>
+
+    <body>
+</html>

@@ -1,13 +1,12 @@
-<body>
+
 {% include "layouts/navbar.html" %}
-<title>Punnu</title>
+<title>Punarvasu Sangam</title>
 
 <!- This is a replacement block for Body in base.html -->
 {% block body %}
-<br>
-<center><h1 style="font-family: 'Roboto Thin'">Punarvasu Sangam Individual Page</h1></center>
 
-<body style="background-color: #EBF7FA;">
+<head>
+<center><h1 style="font-family: 'Roboto Thin'">Punarvasu Sangam</h1></center>
 <style>
     .button1 {
         background-color: white;
@@ -23,25 +22,6 @@
         color: black;
     }
 </style>
-
-<div style="margin: 2% 5% 5%; text-align:center; font-family: Baskerville; font-size: larger">
-    <div>
-
-    <p>Hello <span id="myName">{{name}}</span>, welcome to my individual page!</p>
-
-    <form action="#" id="punnu" method="POST" >
-        <label for="name">Enter Your Name</label>
-        <input name="name" id="name">
-        <input type="submit" value="Go!" onclick="(function (){document.getElementById('myName').innerText=document.getElementById('name').value})();return false;">
-    </form>
-
-    <br>
-
-
-    <p>
-        <img id="myImage" src="/static/assets/punnuImages/PunnuMask.jpeg" style="height: 350px; width: auto;"  onclick="changeImage()"/>
-    </p>
-    <p style="font-size: large; font-family: Baskerville; text-align: center"><i><a href="punnuapitest">Punnu API</a></i></p>
     <script>
         function changeImage() {
             var image = document.getElementById('myImage');
@@ -52,7 +32,21 @@
             }
         }
     </script>
-</div>
+</head>
+<body onload="myFunction()" style="background-color: #EBF7FA;">
+<div style="display:none;" id="myDiv" class="animate-bottom"; style="margin: 2% 5% 5%; text-align:center; font-family: Baskerville; font-size: larger">
+    <p>Hello <span id="myName">{{name}}</span>, welcome to my individual page!</p>
+
+    <form action="#" id="punnu" method="POST" >
+        <label for="name">Enter Your Name</label>
+        <input name="name" id="name">
+        <input type="submit" value="Go!" onclick="(function (){document.getElementById('myName').innerText=document.getElementById('name').value})();return false;">
+    </form>
+    <br>
+    <p>
+        <img id="myImage" src="/static/assets/punnuImages/PunnuMask.jpeg" style="height: 350px; width: auto;"  onclick="changeImage()"/>
+    </p>
+    <p style="font-size: large; font-family: Baskerville; text-align: center"><a href="punnuapitest">Punnu API</a></p>
     <br>
     <a href="https://docs.google.com/document/d/1OCl1CWA4lm_ulO1LmSvhFY0vk0bn3JAZ5PvuIuloMRI/edit?usp=sharing">My Journal</a>
     <br>

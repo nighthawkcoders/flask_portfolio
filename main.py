@@ -2,7 +2,6 @@
 
 from pathlib import Path
 
-
 from flask import Flask, render_template, request
 from algorithms.image import rotatehack, sonakshi_image_data, kashish_image_data, saumya_image_data
 import requests
@@ -57,6 +56,16 @@ def sonakshi():
     # starting and empty input default
     return render_template("sonakshi.html", name="World")
 
+@app.route('/forum', methods=['GET', 'POST'])
+def forum():
+    # submit button has been pushed
+    if request.form:
+        name = request.form.get("name")
+        if len(name) != 0:  # input field has content
+            return render_template("forum.html", name=name)
+    # starting and empty input default
+    return render_template("forum.html", name="Advice Here")
+
 
 @app.route('/shreya', methods=['GET', 'POST'])
 def shreya():
@@ -103,6 +112,33 @@ def newapi():
 
     return render_template("newapi.html", stats=response.json())
 
+@app.route('/quote', methods=['GET', 'POST'])
+def quote():
+    url = "https://motivational-quotes1.p.rapidapi.com/motivation"
+
+    payload = {"key": "value"}
+
+    headers = {
+        'content-type': "application/json",
+        'x-rapidapi-host': "motivational-quotes1.p.rapidapi.com",
+        'x-rapidapi-key': "69b86a4f86msh0f84d36c298ca22p15693fjsne0d137318725"
+    }
+
+
+@app.route('/trivia', methods=['GET', 'POST'])
+def trivia():
+    url = "https://numbersapi.p.rapidapi.com/random/trivia"
+
+    querystring = {"min":"1","max":"100","fragment":"true","json":"true"}
+
+    headers = {
+        'x-rapidapi-host': "numbersapi.p.rapidapi.com",
+        'x-rapidapi-key': "69b86a4f86msh0f84d36c298ca22p15693fjsne0d137318725"
+    }
+    response = requests.request("GET", url, headers=headers, params=querystring)
+    return render_template("trivia.html", numbers=response.json())
+    print(response.text)
+
 
 @app.route('/listmovie/', methods=['GET', 'POST'])
 def listmovie():
@@ -119,7 +155,7 @@ def listmovie():
     response = requests.request("GET", url, headers=headers, params=querystring)
     response = response.json().get("titles")
 
-    return render_template("listmovie.html", response=response)
+    return render_template("listmovieapi.html", response=response)
 
 
 @app.route('/dictionary', methods=['GET', 'POST'])
@@ -134,14 +170,12 @@ def dictionary():
     response = requests.request("GET", url, headers=headers, params=querystring)
     return render_template("dictionary.html", word=word, stats=response.json())
 
-
 @app.route('/punnuapitest', methods=['GET', 'POST'])
 def punnuapitest():
     url = "https://api.kuroganehammer.com/api/characters"
     response = requests.request("GET", url)
     text = response.json()
     return render_template("punnuapitest.html", text=text)
-
 
 # runs the application on the development server
 if __name__ == "__main__":

@@ -1,0 +1,57 @@
+{% include "layouts/navbar.html" %}
+<title>Dark Mode</title>
+<body style="font-family: Baskerville" </body>
+{% block body %}
+    {% set data = stats.list %}
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Definition API</title>
+        <head>
+            <style>
+                body, html {
+                    background-color: #EBF7FA;
+                }
+            </style>
+        </head>
+    <body>
+    <div class="center-block" style="margin: 2% 5% 5%; font-family: gilroy,serif;">
+        <!-- Title -->
+        <div class="col-12" style="text-align: center; font-family: Baskerville">
+            <h1><strong>Word Dictionary API</strong></h1>
+            </form>
+        </div>
+        </head>
+
+        <br><br>
+        <div>
+            <form>
+                <label for="word">Enter Another Word to Search the Dictionary</label>
+                <input word="word" id="word">
+                <input type="submit" class="button1" value="Search!">
+            </form>
+        </div>
+        <br><br>
+
+        <div class="col-20" style="text-align: left; font-family: Baskerville; font-size: large ">
+            <table class="table">
+                <tbody>
+                <thead>
+                <tr>
+                    <th>word</th>
+                    <th>definition</th>
+                    <th>valid</th>
+                </thead>
+                <tbody>
+                <tr>
+                    <div class="col-12" style="text-align: center; ">
+                <tr>
+                    <td> {{stats.word}} </td>
+                    <td> {{stats.definition}} </td>
+                    <td> {{stats.valid}} </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+{% endblock %}

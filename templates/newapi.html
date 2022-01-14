@@ -11,17 +11,16 @@
             }
         </style>
     </head>
-    <body>
-    <div class="center-block" style="margin: 2% 5% 5%; font-family: gilroy,serif;">
+    <body onload="myFunction()">
+    <div class="center-block animate-bottom" style="margin: 2% 5% 5%; font-family: gilroy,serif; display:none; color:black;" id="myDiv" >
         <!-- Title -->
         <div class="col-12" style="text-align: center;">
             <h1><strong>Weather Data From San Diego</strong></h1>
-            </form>
         </div>
 
 
         <div class="col-20" style="text-align: left; ">
-            <table class="table">
+            <table class="table" style="background-color: #BABABA">
                 <tbody>
                 <thead>
                 <tr>
@@ -40,6 +39,8 @@
                                 <td> {{info.pressure}} </td>
                                 <td> {{info.wind_speed}} </td>
                             </tr>
+                    </div>
+                </tbody>
                         {% endfor %}
             </table>
         </div>
