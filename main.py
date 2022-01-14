@@ -5,6 +5,9 @@ from __init__ import app
 import requests
 import json
 
+from templates.about import about_pg
+app.register_blueprint(about_pg)
+
 from api.webapi import api_bp
 app.register_blueprint(api_bp)
 

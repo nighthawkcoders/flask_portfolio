@@ -15,6 +15,12 @@
             beanienumber = 0;
         }
     }
+    function LuckyNumber() {
+        let value1 = parseInt(document.getElementById('n').value);
+        if (value1 === 2) {
+            document.getElementById('result').innerHTML = "Well Done!";
+        }
+    }
 </script>
 <body style="background-color:orangered; height: fit-content">
     <h1 style="text-align: center">
@@ -35,8 +41,15 @@
                     src="https://docs.google.com/document/d/1caGFdefkHrh74c3f_iuIx26mDD3QnP0FDM9cpS8BYFM/edit?usp=sharing"
             ></iframe>
         </p>
+        <label for="value1">Guess!</label>
+        </br>
+        <input  id="value1" type="number" />
+        </br>
+        <input type="submit" onclick="output();">
+        </br>
+        <p id="result"> </p>
     </div>
-<style>
+    <style>
     table, td, th {
         border: 10px solid black;
         padding: 50px;
@@ -49,7 +62,6 @@
         width: 100%;
         margin: auto;
     }
-
 </style>
 
 <div class="-block" style="margin: 2% 25% 5%; font-family: gilroy,serif;">
