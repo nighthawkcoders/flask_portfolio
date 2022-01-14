@@ -16,9 +16,15 @@
         }
     }
     function LuckyNumber() {
-        let value1 = parseInt(document.getElementById('n').value);
-        if (value1 === 2) {
-            document.getElementById('result').innerHTML = "Well Done!";
+        let value1 = parseInt(document.getElementById('value1').value);
+        if (value1 === 22) {
+            document.getElementById('result').innerHTML = "Well Done!"
+        }
+            else if (value1 > 22 ) {
+                document.getElementById('result').innerHTML = "Too High!"
+        }
+                else if (value1 < 22) {
+                    document.getElementById('result').innerHTML = "Too Low!"
         }
     }
 </script>
@@ -44,8 +50,7 @@
         <label for="value1">Guess!</label>
         </br>
         <input  id="value1" type="number" />
-        </br>
-        <input type="submit" onclick="output();">
+        <input type="submit" onclick="LuckyNumber();">
         </br>
         <p id="result"> </p>
     </div>

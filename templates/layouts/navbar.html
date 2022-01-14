@@ -96,11 +96,12 @@
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Travel
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="nav-link" href="{{ url_for('hotels') }}">Hotels</a>
-                <a class="nav-link" href="{{ url_for('flights') }}">Airports</a>
-                <a class="nav-link" href="{{ url_for('maps') }}">Maps</a>
-                <a class="nav-link" href="{{ url_for('weather') }}">Weather</a>
-                <a class="nav-link" href="{{ url_for('carrental') }}">Cars</a>
+                <a class="nav-link" href="{{ url_for('travel.hotels') }}">Hotels</a>
+                <a class="nav-link" href="{{ url_for('travel.flights') }}">Airports</a>
+                <a class="nav-link" href="{{ url_for('travel.maps') }}">Maps</a>
+                <a class="nav-link" href="{{ url_for('travel.weather') }}">Weather</a>
+                <a class="nav-link" href="{{ url_for('travel.carrental') }}">Cars</a>
+                <a class="nav-link" href="{{ url_for('travel.places') }}">Countries</a>
             </div>
         </li>
     </div>

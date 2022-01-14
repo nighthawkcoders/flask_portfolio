@@ -7,6 +7,10 @@ about_pg = Blueprint('about', __name__,
                    static_folder='static', static_url_path='static/about')
 
 
+
+darkmode="darkmode"
+# connects default URL to render index.html
+
 @about_pg.route('/jason/')
 def jason():
     url = "https://video-game-news.p.rapidapi.com/star_wars"
@@ -19,7 +23,7 @@ def jason():
     response = requests.request("GET", url, headers=headers)
 
     final=response.text
-    return render_template("aboutpages/jason.html")
+    return render_template("aboutpages/jason.html", darkmode=darkmode)
 
 
 @about_pg.route('/adi', methods={'GET', 'POST'})
@@ -31,7 +35,7 @@ def adi():
     }
 
     response = requests.request("GET", url, headers=headers)
-    return render_template("aboutpages/adi.html", stats=response.json())
+    return render_template("aboutpages/adi.html", stats=response.json(), darkmode=darkmode)
 
 @about_pg.route('/brian')
 def brian():
@@ -42,7 +46,7 @@ def brian():
     # }
     # response = requests.request("GET", url, headers=headers)
     # results = json.loads(response.content.decode("utf-8"))['results']
-    return render_template("aboutpages/brian.html")#, res=results)
+    return render_template("aboutpages/brian.html", darkmode=darkmode)#, res=results)
 
 @about_pg.route('/divya')
 def divya():
@@ -56,8 +60,8 @@ def divya():
     response = response.json()
     quotes = []
     for result in response:
-        quotes.about_pgend(result['text'] + " by author: " + result['author'])
-    return render_template("aboutpages/divya.html", quotes=quotes)
+        quotes.append(result['text'] + " by author: " + result['author'])
+    return render_template("aboutpages/divya.html", quotes=quotes, darkmode=darkmode)
 
 @about_pg.route('/rohan', methods=['GET', 'POST'])
 def rohan():
@@ -69,4 +73,4 @@ def rohan():
     }
     response = requests.request("GET", url, headers=headers)
     data = response.json()
-    return render_template("aboutpages/rohan.html", data=data)
+    return render_template("aboutpages/rohan.html", data=data, darkmode=darkmode)
