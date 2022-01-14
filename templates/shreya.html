@@ -39,8 +39,18 @@
                 <input type="submit" class="button1" value="Greetings!">
             </form>
         </div>
-
-        <br>
+        <script>
+            // Function to change webpage background color
+            function changeBack(color){
+                document.body.style.background = color;
+            }
+        </script>
+        <div>
+            <label>Change Background:</label>
+            <button type="button" onclick="changeBack('seashell');">Pink</button>
+            <button type="button" onclick="changeBack('ivory');">Yellow</button>
+            <button type="button" onclick="changeBack('honeydew');">Mint</button>
+        </div>
         <p>
         </p>
         <p style="font-size: large; font-family: Baskerville; text-align: center"><i>Click Me</i></p>
@@ -51,16 +61,15 @@
             function changeImage() {
                 var image = document.getElementById('myImage');
                 if (image.src.match("/static/assets/shreyaimages/shreya.png")) {
-                    image.src = "/static/assets/shreyaimages/shreyamask.png";
+                    image.src = "/static/assets/shreyaimages/shreyamaskk.png";
                 } else {
                     image.src = "/static/assets/shreyaimages/shreya.png";
                 }
             }
         </script>
     </div>
-    <a href="{{url_for('dictionary')}}" class="button1" style="font-family: Baskerville;font-size: large; margin-left: 45%">Here is The API</a>
+    <a href="{{url_for('dictionary')}}" class="button1" style="font-family: Baskerville;font-size: large; margin-left: 0%">Here is The API</a>
     <div style="text-align: center">
-        <br>
 
         <br>
         <a style="font-family: 'Baskerville'" href="https://docs.google.com/document/d/1kiNPT2VoJIwpsf-8tR-1t58_ihXYbHytcyO2m-8JxU0/edit?usp=sharing">My Journal</a>

@@ -112,6 +112,33 @@ def newapi():
 
     return render_template("newapi.html", stats=response.json())
 
+@app.route('/quote', methods=['GET', 'POST'])
+def quote():
+    url = "https://motivational-quotes1.p.rapidapi.com/motivation"
+
+    payload = {"key": "value"}
+
+    headers = {
+        'content-type': "application/json",
+        'x-rapidapi-host': "motivational-quotes1.p.rapidapi.com",
+        'x-rapidapi-key': "69b86a4f86msh0f84d36c298ca22p15693fjsne0d137318725"
+    }
+
+
+@app.route('/trivia', methods=['GET', 'POST'])
+def trivia():
+    url = "https://numbersapi.p.rapidapi.com/random/trivia"
+
+    querystring = {"min":"1","max":"100","fragment":"true","json":"true"}
+
+    headers = {
+        'x-rapidapi-host': "numbersapi.p.rapidapi.com",
+        'x-rapidapi-key': "69b86a4f86msh0f84d36c298ca22p15693fjsne0d137318725"
+    }
+    response = requests.request("GET", url, headers=headers, params=querystring)
+    return render_template("trivia.html", numbers=response.json())
+    print(response.text)
+
 
 @app.route('/listmovie/', methods=['GET', 'POST'])
 def listmovie():
@@ -142,7 +169,6 @@ def dictionary():
     }
     response = requests.request("GET", url, headers=headers, params=querystring)
     return render_template("dictionary.html", word=word, stats=response.json())
-
 
 @app.route('/punnuapitest', methods=['GET', 'POST'])
 def punnuapitest():
