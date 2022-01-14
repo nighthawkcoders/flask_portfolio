@@ -1,0 +1,14 @@
+{% extends "layouts/base.html" %}
+{% block body %}
+<script>
+fetch("http://google.com").then((res) => {
+    console.log(res)
+})
+</script>
+<body>
+<h1 style="text-align: center">Fetch Demo</h1>
+
+</body>
+{% endblock %}
+
+

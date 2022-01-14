@@ -5,7 +5,6 @@ from __init__ import app
 import requests
 import json
 
-
 darkmode="darkmode"
 # connects default URL to render index.html
 
