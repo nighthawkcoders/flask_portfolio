@@ -3,7 +3,7 @@ from flask import Flask, render_template
 from flask import request
 from __init__ import app
 from crud.app_crud import app_crud
-import requests
+import requests, random
 
 # create a Flask instance
 # app = Flask(__name__)
@@ -235,6 +235,11 @@ def onestar():
                 average = 0
             return render_template("ratingtest.html", fivestarsreview=fivestars_list, fourstarsreview=fourstars_list, threestarsreview=threestars_list, twostarsreview=twostars_list, onestarreview=onestar_list, average=average)
     return render_template("ratingtest.html", fivestarsreview=fivestars_list, fourstarsreview=fourstars_list, threestarsreview=threestars_list, twostarsreview=twostars_list, onestarreview=onestar_list, average=average)
+
+
+@app.route('/numberguess', methods=['GET', 'POST'])
+def numberguess():
+    return render_template("numberguess.html")
 
 
 # runs the application on the development server

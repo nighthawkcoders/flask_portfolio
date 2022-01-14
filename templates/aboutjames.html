@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+{% extends "layouts/base.html" %}
 <head>
     <meta charset="UTF-8">
     <title>James</title>
@@ -28,6 +29,7 @@
         }
     </style>
 </head>
+{% block body %}
 <body>
 <div class="row">
     <div class="col-sm">
@@ -95,4 +97,5 @@
     }
 </script>
 </body>
+{% endblock %}
 </html>
