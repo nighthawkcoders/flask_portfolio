@@ -1,12 +1,11 @@
-
 {% include "layouts/navbar.html" %}
 <title>Punarvasu Sangam</title>
 
 <!- This is a replacement block for Body in base.html -->
 {% block body %}
-
+{% block background %}
 <head>
-<center><h1 style="font-family: 'Roboto Thin'">Punarvasu Sangam</h1></center>
+<h1 style="font-family: 'Roboto Thin'">Punarvasu Sangam</h1>
 <style>
     .button1 {
         background-color: white;
@@ -22,7 +21,7 @@
         color: black;
     }
 </style>
-    <script>
+<script>
         function changeImage() {
             var image = document.getElementById('myImage');
             if (image.src.match("/static/assets/punnuImages/PunnuMask.jpeg")) {
@@ -31,7 +30,7 @@
                 image.src = "/static/assets/punnuImages/PunnuMask.jpeg";
             }
         }
-    </script>
+</script>
 </head>
 <body onload="myFunction()" style="background-color: #EBF7FA;">
 <div style="display:none;" id="myDiv" class="animate-bottom"; style="margin: 2% 5% 5%; text-align:center; font-family: Baskerville; font-size: larger">
@@ -54,7 +53,23 @@
     <br>
     <a href="https://github.com/PunarvasuS">My GitHub Profile</a>
 </div>
-</body>
+<script>
+    function changeVisible(id) {
 
+        var element = document.getElementById(id);
+
+        if (element.style.display == "none") {
+            element.style.display = "initial"
+        }
+        else {
+            element.style.display = "none"
+        }
+        return element
+    }
+</script>
+<img id="treeSunset" style="display:none" src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg">
+<button class="btn btn-primary"  onclick="changeVisible(document.getElementById('treeSunset').id)">Appear/Disappear</button>
+</body>
+{% endblock %}
 {% endblock %}
 

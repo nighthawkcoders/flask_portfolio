@@ -1,6 +1,19 @@
 {% include "layouts/navbar.html" %}
 <title>Stress Relief</title>
+<script>
+    function changeVisible(id) {
 
+        var element = document.getElementById(id);
+
+        if (element.style.display == "none") {
+            element.style.display = "initial"
+        }
+        else {
+            element.style.display = "none"
+        }
+        return element
+    }
+</script>
 
 <html lang="en">
 <head>
@@ -52,17 +65,17 @@
                     <div class="col-sm-7">
                         <p>
                         <p style="font size: medium">
-                            <button class="button button2">Calm</button>
+                            <button class="button button2" onclick="changeVisible(document.getElementById('smile').id)">Calm</button>
                             <br>
-                            <img src="/static/assets/smileface.jpg" width=70%">
+                            <img id="smile" style="display:none" src="/static/assets/smileface.jpg" width=70%">
                         <p style="font size: medium">
                             <br>
-                            <button class="button button3">Sad</button>
-                            <img src="/static/assets/Sad_Face_Emoji_large.png" width=70%">
+                            <button class="button button3" onclick="changeVisible(document.getElementById('sad').id)" >Sad</button>
+                            <img id="sad" style="display:none" src="/static/assets/Sad_Face_Emoji_large.png" width=70%">
                         <p style="font size: medium">
                             <br>
-                            <button class="button button3">Happy</button>
-                            <img src="/static/assets/smileface.jpg" width=70%">
+                            <button onclick="changeVisible(document.getElementById('smile2').id)">Happy</button>
+                            <img id="smile2" style="display:none" src="/static/assets/smileface.jpg" width=70%">
                         </p>
                     </div>
 
