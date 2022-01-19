@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-image: url("https://wallup.net/wp-content/uploads/2017/11/17/301412-Pokemon.jpg");
+            width: 800px;
+            height: 500px;
+        }
+    </style>
+
+    <meta name="viewport" content="width=device-width, initial scale=1.0"/>
+    <style>
+        canvas {
+            border:10px solid #BE81F7;
+            background-image: url("https://wallup.net/wp-content/uploads/2017/11/17/301412-Pokemon.jpg");
+        }
+    </style>
+</head>
+<body onload="startGame()">
+<script>
+
+    var GamePiece;
+    var Obstacles = [];
+
+    function startGame() {
+        GamePiece = new component(40, 40, "black", 20, 120);
+        GameBoard.start();
+    }
+
+    var GameBoard = {
+        canvas : document.createElement("canvas"),
+        start : function() {
+            this.canvas.width = 1000;
+            this.canvas.height = 500;
+            this.context = this.canvas.getContext("2d");
+            document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+            this.frameNo = 0;
+            this.interval = setInterval(updateGameBoard, 20);
+        },
+        clear : function() {
+            this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        },
+        stop : function() {
+            clearInterval(this.interval);
+        }
+    }
+    function component(width, height, color, x, y) {
+        this.width = width;
+        this.height = height;
+        this.speedX = 0;
+        this.speedY = 0;
+        this.x = x;
+        this.y = y;
+        this.update = function() {
+            ctx = GameBoard.context;
+            ctx.fillStyle = color;
+            ctx.fillRect(this.x, this.y, this.width, this.height);
+        }
+        this.newPos = function() {
+            this.x += this.speedX;
+            this.y += this.speedY;
+        }
+        this.crashWith = function(otherobj) {
+            var myleft = this.x;
+            var myright = this.x + (this.width);
+            var mytop = this.y;
+            var mybottom = this.y + (this.height);
+            var otherleft = otherobj.x;
+            var otherright = otherobj.x + (otherobj.width);
+            var othertop = otherobj.y;
+            var otherbottom = otherobj.y + (otherobj.height);
+            var crash = true;
+            if ((mybottom < othertop) || (mytop > otherbottom) || (myright < otherleft) || (myleft > otherright)) {
+                crash = false;
+            }
+            return crash;
+        }
+    }
+
+    function updateGameBoard() {
+        var x, height, gap, minHeight, maxHeight, minGap, maxGap;
+        for (i = 0; i < Obstacles.length; i += 1) {
+            if (GamePiece.crashWith(Obstacles[i])) {
+                GameBoard.stop();
+                return;
+            }
+        }
+        GameBoard.clear();
+        GameBoard.frameNo += 1;
+        if (GameBoard.frameNo == 1 || everyinterval(240)) {
+            x = GameBoard.canvas.width;
+            minHeight = 90;
+            maxHeight = 200;
+            height = Math.floor(Math.random()*(maxHeight-minHeight+1)+minHeight);
+            minGap = 60;
+            maxGap = 160;
+            gap = Math.floor(Math.random()*(maxGap-minGap+1)+minGap);
+            Obstacles.push(new component(130, height, "blue", x, 0));
+            Obstacles.push(new component(130, x - height - gap, "blue", x, height + gap));
+        }
+        for (i = 0; i < Obstacles.length; i += 1) {
+            Obstacles[i].x += -1;
+            Obstacles[i].update();
+        }
+        GamePiece.newPos();
+        GamePiece.update();
+    }
+
+    function moveup() {
+        GamePiece.speedY = -2;
+    }
+
+    function movedown() {
+        GamePiece.speedY = 2;
+    }
+
+    function everyinterval(n) {
+        if ((GameBoard.frameNo / n) % 1 == 0) {return true;}
+        return false;
+    }
+
+    function clearmove() {
+        GamePiece.speedX = 0;
+        GamePiece.speedY = 1;
+    }
+</script>
+<div style="text-align:left;width:480px;">
+    <button onmousedown="moveup()" onmouseup="clearmove()" ontouchstart="moveup()">Up</button><br><br>
+    <button onmousedown="movedown()" onmouseup="clearmove()" ontouchstart="movedown()">Down</button>
+</div>
+</body>
+</html>

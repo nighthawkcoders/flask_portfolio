@@ -1,23 +1,97 @@
 # import "packages" from flask
 from flask import Flask, render_template
-from blueprint import blueprint
 import requests
 import json
 
-
 # create a Flask instance
 app = Flask(__name__)
-app.register_blueprint(blueprint)
+import random
 
 # connects default URL to render index.html
 @app.route('/')
 def index():
     return render_template("index.html")
 
+@app.route('/LucasAboutMe/')
+def LucasAboutMe():
+    url = "https://f1-race-schedule.p.rapidapi.com/api"
+    headers = {
+        'x-rapidapi-host': "f1-race-schedule.p.rapidapi.com",
+        'x-rapidapi-key': "9d1b3b63d7msh7765eaeb56e30d0p1d3c7ejsna149c7e76f59"
+    }
+    response = requests.request("GET", url, headers=headers)
+    print(response.text)
+    return render_template("LucasAboutMe.html", output=response.json())
+
+@app.route('/F1Schedule/')
+def F1Schedule():
+    return render_template("F1Schedule.html")
+
+@app.route('/FPCStarWars/')
+def FPCStarWars():
+    return render_template("FPCStarWars.html")
+
+@app.route('/FPCToyStory/')
+def FPCToyStory():
+    return render_template("FPCToyStory.html")
+
+@app.route('/FPCPokemon/')
+def FPCPokemon():
+    return render_template("FPCPokemon.html")
+
+@app.route('/CollectablesGame/')
+def CollectablesGame():
+    return render_template("CollectablesGame.html")
+
+@app.route('/Pokedex/')
+def Pokedex():
+    return render_template("Pokedex.html")
+
+@app.route('/PokemonBattle/')
+def PokemonBattle():
+    return render_template("PokemonBattle.html")
+
+@app.route('/Random/')
+def Random():
+    return render_template("Random.html")
+
+@app.route('/IanAboutMe/')
+def IanAboutMe():
+    return render_template("IanAboutMe.html")
 
 @app.route('/FunkoPops/')
 def funko_pop():
     return render_template("funko_pop.html")
+
+
+@app.route('/KianAboutMe/')
+def KianAboutMe():
+    return render_template("KianAboutMe.html")
+
+    url = "https://genius.p.rapidapi.com/artists/16775/songs"
+
+    headers = {
+        'x-rapidapi-host': "genius.p.rapidapi.com",
+        'x-rapidapi-key': "74bd99649amsha1c396dfa85e888p1c1773jsn35b095711d42"
+    }
+
+    response = requests.request("GET", url, headers=headers)
+
+    print(response.text)
+
+@app.route('/GavinAboutMe/')
+def GavinAboutMe():
+    url = "https://movie-database-imdb-alternative.p.rapidapi.com/"
+    querystring = {"r":"json","type":"movie","i":"tt{id}".format(id=random.randint(1000000,4000000))}
+
+    headers = {
+        'x-rapidapi-host': "movie-database-imdb-alternative.p.rapidapi.com",
+        'x-rapidapi-key': "7815f70232mshea0c87cc336b4aap13f459jsn464272722115"
+    }
+
+    response = requests.request("GET", url, headers=headers, params=querystring)
+    data = json.loads(response.text)
+    return render_template("GavinAboutMe.html", moviequiz=data)
 
 
 @app.route('/pokemoncards/')
@@ -44,12 +118,6 @@ def sports_cards():
 @app.route('/funkopops/')
 def funko_pops():
     return render_template("funko_pops.html")
-
-
-@app.route('/darkmode/')
-def darkmode():
-    return render_template("darkmode.html")
-
 
 @app.errorhandler(404)
 def page_not_found(e):

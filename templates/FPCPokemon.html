@@ -1,0 +1,236 @@
+{% include "layouts/navbar.html" %}
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<style>
+    body {
+        background-image: url("https://wallpaperaccess.com/full/1360348.jpg");
+        height: 100%;
+        width: 100%;
+    }
+    html, body{
+        margin: 0;
+        height: 100%;
+        color: black;
+        overflow-x: hidden;
+    }
+
+    .container {
+        height: 50vh;
+        width: 50vh;
+        margin: 0rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 20px 20px;
+        position: relative; left: 125px; top: 50px;
+    }
+
+    .card-body {
+        background: white;
+    }
+    .card {
+        background: white;
+        font-family: white;
+    }
+
+    .collapsible {
+        background-color: black;
+        color: white;
+        padding: 13px;
+        border: none;
+        text-align: center;
+        outline: none;
+        font-size: 15px;
+    }
+    .active, .collapsible:hover {
+        background-color: midnightblue;
+    }
+    .content {
+        color: white;
+        padding:  18px;
+        display: none;
+        overflow: hidden;
+        background-color: black;
+    }
+    .cell {
+        color: white;
+        font-size: 40px;
+        text-align: center;
+        padding: 5px;
+        background: white;
+    }
+    .cell-1 {
+        background: white;
+        border: 2px black;
+    }
+</style>
+
+<title>Funko Pop Catalog: Pokemon</title>
+
+<div class = "container">
+    <div class="card" style="width:25rem;">
+        <div class="cell cell-1">
+            <img src="https://m.media-amazon.com/images/I/51qZNrrDpjS._AC_UL320_.jpg" style = "width:200px; height:300px;">
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">$12- Pikachu (sitting)</h5>
+            <button type="button" class="collapsible" style = "width: 22rem;">
+                <p>Learn more</p></button>
+            <div class="content" style="">
+                <p>Package weight :0.25Lbs</p>
+                <p>Stylized collectable stands 3 ¾ " tall, perfect for any Pokemon fan!</p>
+                <p><a href="https://www.amazon.com/Funko-Pop-Games-Pokemon-Pikachu/dp/B08XC3RSST/ref=sr_1_3?crid=1RZTMRQ42R9UR&keywords=pokemon+funko+pop&qid=1642018970&sprefix=pokemon+funko+pops%2Caps%2C267&sr=8-3">Amazon</a></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card" style="width:25rem"><div class="cell cell-1">
+        <img src="https://m.media-amazon.com/images/I/51ayH87LQEL._AC_UL320_.jpg" style = "width:150px; height:300px;">
+    </div>
+        <div class="card-body">
+            <h5 class="card-title">$18- Mewtwo</h5>
+            <button type="button" class="collapsible" style = "width: 22rem;">
+                <p>Learn More</p></button>
+            <div class="content" style="">
+                <p>Dimensions: 2.5 x 2.5 x 3.75 inches</p>
+                <p>Weight: 0.15 Kilograms</p>
+                <p><a href="https://www.amazon.com/Funko-Pop-Games-Pokemon-Mewtwo/dp/B084DX4Z98/ref=sr_1_1?crid=1RZTMRQ42R9UR&keywords=pokemon+funko+pop&qid=1642019303&sprefix=pokemon+funko+pops%2Caps%2C267&sr=8-1">Amazon</a></p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="card" style="width:25rem"><div class="cell cell-1">
+        <img src="https://m.media-amazon.com/images/I/51hoBnj1nFS._AC_UL320_.jpg" style = "width:230px; height:300px;">
+    </div>
+        <div class="card-body">
+            <h5 class="card-title">$12 Meowth</h5>
+            <button type="button" class="collapsible" style = "width: 22rem;">
+                <p>Learn More</p></button>
+            <div class="content" style="">
+                <p>Dimensions: 2.5 x 2.5 x 3.75 inches</p>
+                <p>Weight: 0.15 Kilograms</p>
+                <p><a href="https://www.amazon.com/Funko-Pop-Games-Pokemon-Meowth/dp/B08STXC5N9/ref=sr_1_4?crid=1RZTMRQ42R9UR&keywords=pokemon+funko+pop&qid=1642019303&sprefix=pokemon+funko+pops%2Caps%2C267&sr=8-4">Amazon</a></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card" style="width:25rem"><div class="cell cell-1">
+        <img src="https://m.media-amazon.com/images/I/51bxkIoIGjL._AC_UL320_.jpg" style = "width:240px; height:300px;">
+    </div>
+        <div class="card-body">
+            <h5 class="card-title">$12 Eevee</h5>
+            <button type="button" class="collapsible" style = "width: 22rem;">
+                <p>Learn More</p></button>
+            <div class="content" style="">
+                <p>Dimensions: 2.5 x 2.5 x 3.75 inches</p>
+                <p>Weight: 0.11 Kilograms</p>
+                <p><a href="https://www.amazon.com/Funko-Pop-Games-Pokemon-Eevee/dp/B081TQYG3N/ref=sr_1_1?crid=UBE9KR8P4Y73&keywords=pokemon+eevee+funko+pop&qid=1642105896&sprefix=pokemon+eevefunko+pop%2Caps%2C138&sr=8-1">Amazon</a></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card" style="width:25rem"><div class="cell cell-1">
+        <img src="https://m.media-amazon.com/images/I/61S3jTFt6xL._AC_UL320_.jpg" style = "width:230px; height:300px;">
+    </div>
+        <div class="card-body">
+            <h5 class="card-title">$12 Flareon</h5>
+            <button type="button" class="collapsible" style = "width: 22rem;">
+                <p>Learn More</p></button>
+            <div class="content" style="">
+                <p>Dimensions: 3 x 3 x 3.75 inches</p>
+                <p>Weight: </p>
+                <p><a href="https://www.amazon.com/Funko-Pop-Games-Pokemon-Multicolor/dp/B0863SFKTL/ref=sr_1_2?crid=UBE9KR8P4Y73&keywords=pokemon+eevee+funko+pop&qid=1642105896&sprefix=pokemon+eevefunko+pop%2Caps%2C138&sr=8-2">Amazon</a></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card" style="width:25rem"><div class="cell cell-1">
+        <img src="https://m.media-amazon.com/images/I/61ceGoumRSL._AC_UL320_.jpg" style = "width:215px; height:300px;">
+    </div>
+        <div class="card-body">
+            <h5 class="card-title">$15 Jolteon</h5>
+            <button type="button" class="collapsible" style = "width: 22rem;">
+                <p>Learn More</p></button>
+            <div class="content" style="">
+                <p>Dimensions: 3 x 3 x 3.75 inches</p>
+                <p>Weight: </p>
+                <p><a href="https://www.amazon.com/Funko-Pop-Games-Pokemon-Multicolor/dp/B0863KB25G/ref=sr_1_10?keywords=pokemon+funko+pop&qid=1642105532&sr=8-10">Amazon</a></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card" style="width:25rem"><div class="cell cell-1">
+        <img src="https://m.media-amazon.com/images/I/51T-K7TreuL._AC_UL320_.jpg" style = "width:220px; height:300px;">
+    </div>
+        <div class="card-body">
+            <h5 class="card-title">$15 Jolteon</h5>
+            <button type="button" class="collapsible" style = "width: 22rem;">
+                <p>Learn More</p></button>
+            <div class="content" style="">
+                <p>Dimensions: 3 x 3 x 3.75 inches</p>
+                <p>Weight: 0.16 Kilograms</p>
+                <p><a href="https://www.amazon.com/Funko-Pop-Games-Pokemon-Vaporeon/dp/B0863RPS9X/ref=sr_1_6?crid=UBE9KR8P4Y73&keywords=pokemon+eevee+funko+pop&qid=1642105896&sprefix=pokemon+eevefunko+pop%2Caps%2C138&sr=8-6">Amazon</a></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card" style="width:25rem"><div class="cell cell-1">
+        <img src="https://m.media-amazon.com/images/I/51d1zbvMiOL._AC_UL320_.jpg" style = "width:200px; height:300px;">
+    </div>
+        <div class="card-body">
+            <h5 class="card-title">$15 Growlithe</h5>
+            <button type="button" class="collapsible" style = "width: 22rem;">
+                <p>Learn More</p></button>
+            <div class="content" style="">
+                <p>Dimensions: 2.5 x 2.5 x 3.75</p>
+                <p>Weight: 5.6 Ounces</p>
+                <p><a href="https://www.amazon.com/Funko-Pop-Games-Growlithe-Multicolor/dp/B084R4PGXG/ref=sr_1_8?crid=2YTZZAQN17JDP&keywords=pokemon+funko+pop&qid=1642105456&sprefix=pokemon+funko+po%2Caps%2C224&sr=8-8">Amazon</a></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card" style="width:25rem"><div class="cell cell-1">
+        <img src="https://m.media-amazon.com/images/I/51SKIhzGamL._AC_UL320_.jpg" style = "width:200px; height:300px;">
+    </div>
+        <div class="card-body">
+            <h5 class="card-title">$12 Mew</h5>
+            <button type="button" class="collapsible" style = "width: 22rem;">
+                <p>Learn More</p></button>
+            <div class="content" style="">
+                <p>Dimensions: 2.5 x 2.5 x 3.75</p>
+                <p>Weight: 0.13 Kilograms</p>
+                <p><a href="https://www.amazon.com/Funko-Pop-Games-Pokemon-Mew/dp/B08NWCS93N/ref=sr_1_21?crid=UBE9KR8P4Y73&keywords=pokemon+eevee+funko+pop&qid=1642105896&sprefix=pokemon+eevefunko+pop%2Caps%2C138&sr=8-21">Amazon</a></p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</div>
+</body>
+</html>
+
+</div> <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        });
+    }
+</script>
+</body>
+</html>

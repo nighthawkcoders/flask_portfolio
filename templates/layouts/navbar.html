@@ -17,7 +17,7 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
             <!-- url_for is a Jinja2 pre-processor that finds route from function name (def) -->
-            <a class="nav-link" href={{ url_for('index') }}>Portfolio</a>
+            <a class="nav-link" href={{ url_for('index') }}>Home</a>
             <a class="nav-link" href={{ url_for('pokemon_cards') }}>Pokemon Cards</a>
             <a class="nav-link" href={{ url_for('sports_cards') }}>Sports Cards</a>
             <a class="nav-link" href={{ url_for('funko_pop') }}>Funko Pops</a>
@@ -29,6 +29,21 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                     <a class="dropdown-item" href="/KianAboutMe/">About Kian</a>
                     <a class="dropdown-item" href="/IanAboutMe/">About Ian</a>
                     <a class="dropdown-item" href="/GavinAboutMe/">About Gavin</a>
+                </div>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="dropdownMenuButton1" type="button">Funko Pop Catalog</a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <a class="dropdown-item" href="/F1Schedule/">F1 Schedule</a>
+                    <a class="dropdown-item" href="/CollectablesGame/">Collectables Game</a>
+                    <a class="dropdown-item" href="/FPCStarWars/">Funkos: StarWars</a>
+                    <a class="dropdown-item" href="/FPCToyStory/">Funkos: Toy Story</a>
+                    <a class="dropdown-item" href="/FPCPokemon/">Funkos: Pokemon</a>
+                    <a class="dropdown-item" href="/Pokedex/">Pokedex</a>
+                    <a class="dropdown-item" href="/PokemonBattle/">PokemonBattle</a>
+                    <a class="dropdown-item" href="/Random/">Random</a>
+
                 </div>
             </li>
         </div>
