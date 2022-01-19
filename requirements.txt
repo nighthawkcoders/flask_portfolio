@@ -11,5 +11,3 @@ flask_restful
 numpy~=1.21.4
 
 pathlib~=1.0.1
-Wand~=0.6.7
-palindrome~=1.0.0
