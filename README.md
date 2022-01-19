@@ -73,15 +73,26 @@
 |Colin| [Clock on site](https://github.com/connorw72/food/blob/main/templates/layouts/navbar.html)
 |Chase| [Enclosures](https://github.com/connorw72/food/blob/main/templates/Enclosures.html)
 
-### Week 6 Mid-Term and Vocab Competency
-
-|Member| Evidence of Practice |
+### Python Database Modeling Sprint 4,5 week 5
+|Member| Work done during week |
 |:-----|:----------------------|
-|Connor| [Blueprints](https://github.com/connorw72/food/tree/main/blueprints),[Overview of info](https://github.com/connorw72/food/blob/main/templates/PetInfo.html),[Info](https://github.com/connorw72/food/blob/main/algorithms/petinfo.py)
+|Connor| [Github page](ghpages.tanayteamfood.tk)
 |Tanay| [Hangman](https://github.com/connorw72/food/blob/main/templates/hangman.html)
-|Pranav| [Planner](https://github.com/connorw72/food/blob/main/templates/petplan ner.html)
+|Pranav| [Planner](https://github.com/connorw72/food/blob/main/templates/petplanner.html)
 |Colin| [Clock on site](https://github.com/connorw72/food/blob/main/templates/layouts/navbar.html)
 |Chase| [Enclosures](https://github.com/connorw72/food/blob/main/templates/Enclosures.html)
+
+
+### Week 6 Mid-Term and Vocab Competency
+
+|Member| Wiki page (used for practice) |
+|:-----|:----------------------|
+|Connor and Colin| [Wiki](https://github.com/connorw72/food/wiki/Definitions---Connor-and-Colin)
+|Chase| [Wiki]()
+|
+
+
+
 
 
 
