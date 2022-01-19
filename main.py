@@ -59,6 +59,22 @@ def Random():
 def IanAboutMe():
     return render_template("IanAboutMe.html")
 
+
+@app.route('/LucasAboutMe/')
+def LucasAboutMe():
+    url = "https://f1-race-schedule.p.rapidapi.com/api"
+    headers = {
+    'x-rapidapi-host': "f1-race-schedule.p.rapidapi.com",
+    'x-rapidapi-key': "9d1b3b63d7msh7765eaeb56e30d0p1d3c7ejsna149c7e76f59"
+    }
+    response = requests.request("GET", url, headers=headers)
+    print(response.text)
+    return render_template("LucasAboutMe.html", output=response.json())
+
+@app.route('/IanAboutMe/')
+def IanAboutMe():
+    return render_template("IanAboutMe.html")
+
 @app.route('/FunkoPops/')
 def funko_pop():
     return render_template("funko_pop.html")
@@ -110,9 +126,9 @@ def pokemon_cards():
     return render_template("pokemon_cards.html", pokemoncard=data)
 
 
-@app.route('/sportscards/')
+@app.route('/fortnite/')
 def sports_cards():
-    return render_template("sports_cards.html")
+    return render_template("fortnite.html")
 
 
 @app.route('/funkopops/')
