@@ -20,6 +20,9 @@ app.register_blueprint(app_algorithm)
 from crud.app_crud import app_crud
 app.register_blueprint(app_crud)
 
+from database.app_database import app_database
+app.register_blueprint(app_database)
+
 darkmode="darkmode"
 # connects default URL to render index.html
 
@@ -38,7 +41,7 @@ def photogallery():
     if request.form:
         input = request.form.get("input")
         if len(input) != 0:
-            return render_template("photogallery.html", input1=input, darkmode=darkmode)
+            return render_template("pbl/photogallery.html", input1=input, darkmode=darkmode)
     return render_template("pbl/photogallery.html", input1="", darkmode=darkmode)
 
 @app.route('/location', methods=['GET', 'POST'])
