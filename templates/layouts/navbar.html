@@ -36,20 +36,23 @@
                 <a class="nav-link" href="/feedback">Give Us Feedback!</a>
             </li>
         </ul>
-        <div class="btn-group">
-            <!-- Clock display -->
-            <div class="px-3 text-dark">
-                <span id="clock"></span>
-            </div>
-            <!-- Dark mode action -->
-            <div class="form-check form-switch">
-                <input type="checkbox" onclick="darkFunction()" class="form-check-input" id="darkSwitch">
-                <label class="custom-control-label" for="darkSwitch">Dark Mode</label>
-            </div>
-        </div>
-        {% block navbar_script %}
-            <!-- Navigation bar JavaScript support -->
-            <script src={{  url_for("static", filename="/navbar.js", version='140') }}></script>
-        {% endblock %}
+
     </div>
+<div class="float-right m-2">
+    <div class="btn-group">
+        <!-- Clock display -->
+        <div class="px-3 text-dark">
+            <span id="clock"></span>
+        </div>
+        <!-- Dark mode action -->
+        <div class="form-check form-switch">
+            <input type="checkbox" onclick="darkFunction()" class="form-check-input" id="darkSwitch">
+            <label class="custom-control-label" for="darkSwitch" style="color: black;">Dark Mode</label>
+        </div>
+    </div>
+    {% block navbar_script %}
+        <!-- Navigation bar JavaScript support -->
+        <script src={{  url_for("static", filename="/navbar.js", version='140') }}></script>
+    {% endblock %}
+</div>
 </nav>
