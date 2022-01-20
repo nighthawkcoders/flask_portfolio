@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+{%  extends "layouts/base.html" %}
+{%  set project = "Games" %}
+<head>
+    <meta charset="UTF-8">
+    <title>Games</title>
+</head>
+{%  block body %}
+    <body>
+    <style>
+        #yum{
+            display: block;
+            width: 200px;
+            height: 40px;
+            line-height: 40px;
+            font-size: 18px;
+            font-family: sans-serif;
+            text-decoration: none;
+            color: white;
+            border: 2px solid white;
+            letter-spacing: 2px;
+            text-align: center;
+            position: relative;
+            transition: all .35s;
+            text-decoration-color: white;
+        }
+
+        #yum span{
+            position: relative;
+            z-index: 2;
+        }
+
+        #yum:after{
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background-color: darkgreen;
+            transition: all .35s;
+        }
+
+        #yum:hover{
+            color: #fff;
+        }
+
+        #yum:hover:after{
+            width: 100%;
+        }
+    </style>
+    <div class="row" style="margin-left: 17.5%">
+        <div class="col-3" style="margin-top: 10px;">
+            <a href="/numberguess" id="yum"><span>Number Guess</span></a>
+        </div>
+        <div class="col-3" style="margin-top: 10px;margin-left: 5%">
+            <a href="/numberguess" id="yum"><span>Number Guess</span></a>
+        </div>
+        <div class="col-3" style="margin-top: 10px;margin-left: 5%">
+            <a href="/numberguess" id="yum"><span>Number Guess</span></a>
+        </div>
+    </div>
+    </body>
+{% endblock %}
+</html>

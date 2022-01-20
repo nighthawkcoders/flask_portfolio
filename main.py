@@ -241,6 +241,10 @@ def onestar():
 def numberguess():
     return render_template("numberguess.html")
 
+@app.route('/games')
+def games():
+    return render_template("games.html")
+
 
 # runs the application on the development server
 if __name__ == "__main__":
