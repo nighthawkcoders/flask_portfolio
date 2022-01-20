@@ -71,9 +71,6 @@ def LucasAboutMe():
     print(response.text)
     return render_template("LucasAboutMe.html", output=response.json())
 
-@app.route('/IanAboutMe/')
-def IanAboutMe():
-    return render_template("IanAboutMe.html")
 
 @app.route('/FunkoPops/')
 def funko_pop():
