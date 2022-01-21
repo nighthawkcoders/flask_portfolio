@@ -54,24 +54,3 @@ class Palindrome:
         return self._analysis
 
 
-if __name__ == "__main__":
-    '''Value for testing'''
-    yshort = "radar"
-    nshort = "Nighthawks"
-    ylong = "reviver"
-    ycomplex = "A nut for a jar of tuna"
-    nlong = "Deploying"
-    '''Constructor of Class object'''
-    palindromeshort = Palindrome(yshort)
-    palindromeNot = Palindrome(nshort)
-    palindromeLong = Palindrome(ylong)
-    palindromeComplex = Palindrome(ycomplex)
-    palindromeLongNot = Palindrome(nlong)
-
-    '''Using getters to obtain data from object'''
-    print(f"Is this a palindrome? : {yshort} = {palindromeshort.isPalindrome}")
-    print(f"Is this a palindrome? : {nshort} = {palindromeNot.isPalindrome}")
-    print(f"Is this a palindrome? : {ylong} = {palindromeLong.isPalindrome}")
-    print(f"Is this a palindrome? : {ycomplex} = {palindromeComplex.isPalindrome}")
-    print(f"Is this a palindrome? : {nlong} = {palindromeLongNot.isPalindrome}")
-
