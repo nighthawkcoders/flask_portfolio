@@ -33,22 +33,14 @@ def pinfo(path=Path("blueprints/testconnorimages"), pimage=None):  # path of sta
         ]
     # gather analysis data and meta data for each image, adding attributes to each row in table
     for image in pimage:
-        # File to open
-        filename = path / image['file']  # file with path
 
-        # Image open return PIL image object
+        filename = path / image['file']
         img_object = Image.open(filename)
-
-        # Python Image Library operations
         image['format'] = img_object.format
         image['mode'] = img_object.mode
         image['size'] = img_object.size
-
-        # Hacks here for images https://www.tutorialspoint.com/python_pillow/index.htm
-        # use the open img_object!!!
         img_object = img_object.rotate(0)
         image['base64'] = image_formatter(img_object, image['format'])
-        # end for loop for pixels
 
     # end for loop for images
     return pimage
