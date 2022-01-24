@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<!-- EXTEND (layout.html), this is a template for all rendered pages in the project -->
+{% extends "layouts/base.html" %}
+
+{% set project = "Flights" %}
+
+<!-- CONTENT (in <head>), content for this page -->
+{% block head %}
+    <title>Flights page</title>
+    <script src={{  url_for("flight.static", filename="javascript/validation.js", version='101') }}></script>
+{% endblock %}
+
+<!-- CONTENT (in <body>), content for this page -->
+{% block body %}
+
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .bg-image {
+            /* The image used */
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzu66_jZ9n-kOFexgTlz23k0gH6izys6R91Q&usqp=CAU");
+
+        {# another potential image, check with team which one to use: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaWiAfnPUQDlvL7Sx4d5d8z8oKmkaXb4SAQw&usqp=CAU#}
+            /* Add the blur effect */
+            {#filter: blur(8px);#}
+            {#-webkit-filter: blur(8px);#}
+
+            /* Full height */
+            height: 100%;
+
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        /* Position text in the middle of the page/image */
+        .bg-text {
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+            color: white;
+            font-weight: bold;
+            border: 3px solid #f1f1f1;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            width: 80%;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+
+    <div class="bg-text">
+        {#        <h2>Big Text</h2>#}
+        <h1 style="font-size:50px">Airline and Flight Information</h1>
+        {#        <p>Small text</p>#}
+    </div>
+    <div class="bg-image">
+        <div class="container py-4">
+            <div class="p-5 mb-4 bg-light text-dark rounded-3">
+                <h2>Table Viewer</h2>
+                <div class="row align-items-md-stretch">
+                    <table class="table">
+                        <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td><a href={{url_for('flight.flight')}}>Full Table </a></td>
+                            <td><a href="https://github.com/RohanG326/supporting_cast/tree/main/flight">GitHub Source</a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="row align-items-md-stretch">
+                    <div class="container-fluid py-5">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Airline Name</th>
+                                <th>Departing Location</th>
+                                <th>Arrival Location</th>
+                                <th>Departing Time</th>
+                                <th>Arrival Time</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <!-- Loop through rows in table -->
+                            {% for row in table %}
+                                <tr>
+                                    <td>{{ row['flightID'] }}</td>
+                                    <td>{{ row['name'] }}</td>
+                                    <td>{{ row['departingLocation'] }}</td>
+                                    <td>{{ row['arrivalLocation'] }}</td>
+                                    <td>{{ row['departingTime'] }}</td>
+                                    <td>{{ row['arrivalTime'] }}</td>
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="container py-4">
+            <div class="p-5 mb-4 bg-light text-dark rounded-3">
+                <h2>Create a new record</h2>
+                <form method="POST" ID="create" action={{url_for('flight.create')}} >
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th><label for="name">Name</label></th>
+                            <th><label for="departingLocation">Departing Location</label></th>
+                            <th><label for="arrivalLocation">arrivalLocation</label></th>
+                            <th><label for="departingTime">Departing Time</label></th>
+                            <th><label for="arrivalTime">Arrival Time</label></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><input type="text" name="name" id="name" required></td>
+                            <td><input type="departingLocation" name="departingLocation" id="departingLocation" placeholder="abc@xyz.org" required></td>
+                            <td><input type="arrivalLocation" name="arrivalLocation" id="arrivalLocation" required></td>
+                            <td><input type="departingTime" name="departingTime" id="departingTime" required></td>
+                            <td><input type="arrivalTime" name="arrivalTime" id="arrivalTime" required></td>
+                            <td><input type="submit" value="Create"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <p id="pswError"></p>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="container py-4">
+
+            <div class="row mb-4 bg-light text-dark rounded-3">
+
+                <div class="col-md-3">
+                    <div class="p-5 mb-4 bg-light text-dark rounded-3">
+                        <h2>Read</h2>
+                        <form method="POST" ID="read" action={{url_for('flight.read')}} >
+                            <table id="read_table">
+                                <tr><th><label for="read_flightid">ID</label></th></tr>
+                                <tr>
+                                    <td>
+                                        <select name="flightid" id="read_flightid">
+                                            <optgroup label="flightid">
+                                                {% for row in table %}
+                                                    <option label="{{ row['flightID'] }}">{{ row['flightID'] }}</option>
+                                                {% endfor %}
+                                            </optgroup>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <input type="submit" value="Read">
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="p-5 mb-4 bg-light text-dark rounded-3">
+                        <h2>Update</h2>
+                        <form method="POST" ID="update" action={{url_for('flight.update')}} >
+                            <table id="update_table">
+                                <tr>
+                                    <th><label for="update_flightid">ID</label></th>
+                                    <th><label for="update_name">Name</label></th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <select name="flightid" id="update_flightid">
+                                            <optgroup label="flightid">
+                                                {% for row in table %}
+                                                    <option label="{{ row['flightid'] }}">{{ row['flightid'] }}</option>
+                                                {% endfor %}
+                                            </optgroup>
+                                        </select>
+                                    </td>
+                                    <td><input type="text" name="name" id="update_name" required></td>
+                                    <td><input type="submit" value="Update"></td>
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="p-5 mb-4 bg-light text-dark rounded-3">
+                        <h2>Delete</h2>
+                        <form method="POST" ID="read" action={{url_for('flight.delete')}} >
+                            <table id="read_table">
+                                <tr><th><label for="delete_flightid">ID</label></th></tr>
+                                <tr>
+                                    <td>
+                                        <select name="flightid" id="delete_flightid">
+                                            <optgroup label="flightid">
+                                                {% for row in table %}
+                                                    <option label="{{ row['flightID'] }}">{{ row['flightID'] }}</option>
+                                                {% endfor %}
+                                            </optgroup>
+                                        </select>
+                                    </td>
+                                    <td><input type="submit" value="Delete"></td>
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+{% endblock %}

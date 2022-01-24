@@ -6,12 +6,11 @@ inspiration from https://www.youtube.com/watch?v=QKcVjdLEX_s
 
 {% set project = "Database Search" %}
 {% block head %}
-    <title>Database search</title>
+    <title>SQL search</title>
 {% endblock %}
 
 {% block body %}
     <body style="background-color:powderblue; height: 2000px">
-    <h1>Database Seacher(different from CRUD)</h1>
     <div class="container py-4 bg-primary">
         <!-- heading -->
         <header class="pb-3 mb-4 border-bottom">
@@ -49,7 +48,7 @@ inspiration from https://www.youtube.com/watch?v=QKcVjdLEX_s
             };
 
             // fetch call with header options
-            fetch('/database/search/term/', {
+            fetch('/flight/search/term/', {
                 method: "POST",
                 credentials: "include",
                 body: JSON.stringify(body),
@@ -83,7 +82,7 @@ inspiration from https://www.youtube.com/watch?v=QKcVjdLEX_s
                         const div = document.createElement("div");
                         let table = "<table>"
                         for (let i = 0; i < data.length; i++) {
-                            table += "<tr><td>"+" | " + data[i].name + "</td><td>"+" | " + data[i].place + "</td><td>" +" | "+ data[i].review + "</td><td>" +" | "+ "</td></tr>"
+                            table += "<tr><td>"+" | " + data[i].name + "</td><td>"+" | " + data[i].departingLocation + "</td><td>" +" | "+ data[i].arrivalLocation + "</td><td>" +" | "+ "</td></tr>"
                             div.innerHTML = table
                             resultContainer.appendChild(div);
                         }
@@ -91,4 +90,5 @@ inspiration from https://www.youtube.com/watch?v=QKcVjdLEX_s
                 })
         }
     </script>
+
 {% endblock %}

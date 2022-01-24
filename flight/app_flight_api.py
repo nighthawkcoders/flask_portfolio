@@ -3,105 +3,107 @@ from flask import Blueprint, render_template
 from flask_restful import Api, Resource
 import requests
 
-from crud.sql import *
+from flight.flightsql import *
 
 # blueprint defaults https://flask.palletsprojects.com/en/2.0.x/api/#blueprint-objects
 
-app_crud_api = Blueprint('crud_api', __name__,
-                         url_prefix='/crud_api',
-                         template_folder='templates/crud/',
+app_flight_api = Blueprint('flight_api', __name__,
+                         url_prefix='/flight_api',
+                         template_folder='templates/flight/',
                          static_folder='static',
                          static_url_path='static')
 
 # API generator https://flask-restful.readthedocs.io/en/latest/api.html#id1
-api = Api(app_crud_api)
+api = Api(app_flight_api)
 
 
 # Method #2 for CRUD
-@app_crud_api.route('/')
-def crud_api():
+@app_flight_api.route('/')
+def flight_api():
     """obtains all Users from table and loads Admin Form"""
-    return render_template("crud_async.html", table=users_all())
+    return render_template("flight_async.html", table=flights_all())
 
 
 """ API routes section """
 
 
-class UsersAPI:
+class FlightsAPI:
     # class for create/post
     class _Create(Resource):
-        def post(self, name, email, password, phone):
-            po = Users(name, email, password, phone)
+        def post(self, name, departingLocation, arrivalLocation, departingTime, arrivalTime):
+            po = Flights(name, departingLocation, arrivalLocation, departingTime, arrivalTime)
             person = po.create()
             if person:
                 return person.read()
-            return {'message': f'Processed {name}, either a format error or {email} is duplicate'}, 210
+            return {'message': f'Processed {name}, either a format error or {departingLocation} is duplicate'}, 210
 
     # class for read/get
     class _Read(Resource):
         def get(self):
-            return users_all()
+            return flights_all()
 
     # class for delete
     class _ReadID(Resource):
-        def get(self, userid):
-            po = user_by_id(userid)
+        def get(self, flightid):
+            po = flight_by_id(flightid)
             if po is None:
-                return {'message': f"{userid} is not found"}, 210
+                return {'message': f"{flightid} is not found"}, 210
             data = po.read()
             return data
 
     # class for read/get
     class _ReadILike(Resource):
         def get(self, term):
-            return users_ilike(term)
+            return flights_ilike(term)
 
     # class for update/put
     class _Update(Resource):
-        def put(self, email, name):
-            po = user_by_email(email)
+        def put(self, departingLocation, name):
+            po = flight_by_departingLocation(departingLocation)
             if po is None:
-                return {'message': f"{email} is not found"}, 210
+                return {'message': f"{departingLocation} is not found"}, 210
             po.update(name)
             return po.read()
 
         # class for update/put
 
     class _UpdateName(Resource):
-        def put(self, userid, name):
-            po = user_by_id(userid)
+        def put(self, flightid, name):
+            po = flight_by_id(flightid)
             if po is not None:
                 po.update(name)
             return po.read()
 
     class _UpdateAll(Resource):
-        def put(self, email, name, password, phone):
-            po = user_by_email(email)
+        def put(self, departingLocation, name, arrivalLocation, departingTime, arrivalTime):
+            po = flight_by_departingLocation(departingLocation)
             if po is None:
-                return {'message': f"{email} is not found"}, 210
-            po.update(name, password, phone)
+                return {'message': f"{departingLocation} is not found"}, 210
+            po.update(name, arrivalLocation, departingTime, arrivalTime)
             return po.read()
 
     # class for delete
     class _Delete(Resource):
-        def delete(self, userid):
-            po = user_by_id(userid)
+        def delete(self, flightid):
+            po = flight_by_id(flightid)
             if po is None:
-                return {'message': f"{userid} is not found"}, 210
+                return {'message': f"{flightid} is not found"}, 210
             data = po.read()
             po.delete()
             return data
 
     # building RESTapi resource
     # building RESTapi resource
-    api.add_resource(_Create, '/create/<string:name>/<string:email>/<string:password>/<string:phone>')
+    api.add_resource(_Create, '/create/<string:name>/<string:departingLocation>/<string:arrivalLocation>/'
+                              '<string:departingTime>/<string:arrivalTime>')
     api.add_resource(_Read, '/read/')
-    api.add_resource(_ReadID, '/read/<int:userid>')
+    api.add_resource(_ReadID, '/read/<int:flightid>')
     api.add_resource(_ReadILike, '/read/ilike/<string:term>')
-    api.add_resource(_Update, '/update/<string:email>/<string:name>')
-    api.add_resource(_UpdateName, '/update/<int:userid>/<string:name>')
-    api.add_resource(_UpdateAll, '/update/<string:email>/<string:name>/<string:password>/<string:phone>')
-    api.add_resource(_Delete, '/delete/<int:userid>')
+    api.add_resource(_Update, '/update/<string:departingLocation>/<string:name>')
+    api.add_resource(_UpdateName, '/update/<int:flightid>/<string:name>')
+    api.add_resource(_UpdateAll, '/update/<string:departingLocation>/<string:name>/<string:arrivalLocation>/'
+                                 '<string:departingTime>/<string:arrivalTime>')
+    api.add_resource(_Delete, '/delete/<int:flightid>')
 
 
 """ API testing section """
@@ -109,7 +111,7 @@ class UsersAPI:
 
 def api_tester():
     # local host URL for model
-    url = 'http://localhost:5222/crud_api'
+    url = 'http://localhost:5222/flight_api'
 
     # test conditions
     API = 0
@@ -155,9 +157,9 @@ def api_tester():
 
 def api_printer():
     print()
-    print("Users table")
-    for user in users_all():
-        print(user)
+    print("Flights table")
+    for flight in flights_all():
+        print(flight)
 
 
 """validating api's requires server to be running"""
