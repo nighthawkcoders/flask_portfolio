@@ -7,6 +7,7 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
 <style>
     .navbar{
         max-height: 75px;
+
     }
     .logo-image{
         width: 75px;
@@ -87,6 +88,7 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                     <a class="dropdown-item" href="{{ url_for('sonakshi') }}">Sonakshi</a>
                     <a class="dropdown-item" href="{{ url_for('linda') }}">Punnu</a>
                     <a class="dropdown-item" href="{{ url_for('khushi') }}">Khushi</a>
+                </div>
             <li class="nav-item"><a class="nav-link" href="{{ url_for('stress') }}">Stress Relief</a></li>
             <li class="nav-item"><a class="nav-link" href="{{ url_for('study') }}">Study Resources</a></li>
             <li class="nav-item"><a class="nav-link" href="{{ url_for('volunteer') }}">Volunteer!</a></li>
@@ -94,10 +96,9 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
             <li class="nav-item"><a class="nav-link" href="{{ url_for('search') }}">Search</a></li>
             <li class="nav-item"><a class="nav-link" href="{{ url_for('dark') }}">Dark Mode</a></li>
             <li class="nav-item"><a class="nav-link" href="{{ url_for('forum') }}">Forum</a></li>
-                </div>
         </ul>
-
-    </li>
+    </div>
+            </li>
 </nav>
-</body>
+</html> </body>
 </html>
