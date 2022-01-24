@@ -84,11 +84,13 @@
 
 
 ### Week 6 Mid-Term and Vocab Competency
-
-|Member| Wiki page (used for practice) |
+|Member| Wiki page|
 |:-----|:----------------------|
 |Connor and Colin| [Wiki](https://github.com/connorw72/food/wiki/Definitions---Connor-and-Colin)
-|Chase| [Wiki]()
+|Chase| [Wiki](https://github.com/connorw72/food/wiki/Chase-Vocabulary-Definitions)
+|Tanay and Pranav| [Wiki](https://github.com/connorw72/food/wiki/Tanay-and-Pranav-Vocabulary-Terms-and-Definitions)
+
+### Week 7 PBL Showing the How, Theme Technicals - Crossover
 |
 
 
