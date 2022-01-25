@@ -33,8 +33,17 @@ inspiration from https://www.youtube.com/watch?v=QKcVjdLEX_s
     </div>
     <!-- result of search -->
     <div class="container">
-        <div class="row" id="result">
-        </div>
+        <table class="table" >
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+            </tr>
+        </table>
+        <table>
+            <tr aria-colspan="3" id="result">
+            </tr>
+        </table>
     </div>
 
     <script>
@@ -77,7 +86,7 @@ inspiration from https://www.youtube.com/watch?v=QKcVjdLEX_s
                     // loop through JSON and build HTML output
                     for (let i = 0; i < data.length; i++) {
                         const div = document.createElement("div");
-                        div.innerHTML = data[i].name + ' ' + data[i].email;
+                            div.innerHTML = data[i].name + ' ' + data[i].email + ' ' + data[i].phone
                         resultContainer.appendChild(div);
                     }
                 })
