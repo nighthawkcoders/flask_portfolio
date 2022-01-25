@@ -156,6 +156,10 @@ Scrum Board: https://github.com/Reem57/flask_portfolio/projects/1
   </thead>
   <tbody>
     <tr>
+      <td>Week 6</td>
+      <td>https://github.com/jar04/flask_portfolio/issues?q=is%3Aissue+is%3Aopen+label%3A%22Week+6%22</td>
+    </tr>
+    <tr>
       <td>Week 5</td>
       <td>https://github.com/Reem57/flask_portfolio/issues?q=is%3Aopen+is%3Aissue+label%3A%22Week+5%22</td>
     </tr>
