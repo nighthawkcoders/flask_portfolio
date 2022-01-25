@@ -12,44 +12,78 @@ inspiration from https://www.youtube.com/watch?v=QKcVjdLEX_s
 {% block body %}
     <style>
         table, td, th {
-            border: 10px solid black;
+            border: 10px solid mediumpurple;
             padding: 50px;
         }
         td, th {
             text-align:center;
-            color: black;
+            color: mediumorchid;
         }
         table{
             width: 100%;
             margin: auto;
         }
     </style>
-    <body style="background-color:powderblue; height: 2000px">
-    <div class="container py-4 bg-primary">
-        <!-- heading -->
-        <header class="pb-3 mb-4 border-bottom">
-            <a href="#" class="d-flex align-items-center text-light text-decoration-none">
-                <span class="fs-4">Search Database</span>
-            </a>
-        </header>
-        <!-- search box -->
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <div class="mb-3">
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="term" placeholder="enter search term">
-                            <label></label> <!-- used for spacer -->
+
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .bg-image {
+            /* The image used */
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzu66_jZ9n-kOFexgTlz23k0gH6izys6R91Q&usqp=CAU");
+
+        {# another potential image, check with team which one to use: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaWiAfnPUQDlvL7Sx4d5d8z8oKmkaXb4SAQw&usqp=CAU#}
+            /* Add the blur effect */
+        {#filter: blur(8px);#}
+        {#-webkit-filter: blur(8px);#}
+
+            /* Full height */
+            height: 5000px;
+
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        /* Position text in the middle of the page/image
+<    </style>
+
+    <div class="bg-image">
+            <!-- heading -->
+            <header class="pb-3 mb-4 border-bottom">
+                <a href="" class="d-flex align-items-center text-light text-decoration-none">
+                    <span class="fs-4">Search Database</span>
+                </a>
+            </header>
+            <!-- search box -->
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="mb-3">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="term" placeholder="Search By Airlines, Times, or Airports">
+                                <label></label> <!-- used for spacer -->
+                            </div>
+                            <button class="btn btn-primary bg-secondary" onclick="search_data();">Search</button>
                         </div>
-                        <button class="btn btn-primary bg-secondary" onclick="search_data();">Search</button>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <!-- result of search -->
-    <div class="container">
-        <div class="row" id="result">
+
+        <!-- result of search -->
+        <div class="container">
+            <div class="row" id="result">
+            </div>
         </div>
     </div>
 
@@ -96,7 +130,7 @@ inspiration from https://www.youtube.com/watch?v=QKcVjdLEX_s
                         const div = document.createElement("div");
                         let table = "<table>"
                         for (let i = 0; i < data.length; i++) {
-                            table += "<tr><td>"+" | " + data[i].name + "</td><td>"+" | " + data[i].departingLocation + "</td><td>" +" | "+ data[i].arrivalLocation + "</td><td>" +" | "+ "</td></tr>"
+                            table += "<tr><td>" + data[i].name + "</td><td>" + data[i].departingLocation + "</td><td>"+ data[i].arrivalLocation + "</td><td>" + data[i].departingTime + "</td><td>" + data[i].arrivalTime + "</td></tr>"
                             div.innerHTML = table
                             resultContainer.appendChild(div);
                         }

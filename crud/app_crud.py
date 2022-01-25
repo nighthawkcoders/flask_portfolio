@@ -80,7 +80,7 @@ def delete():
 @app_crud.route('/search/')
 def search():
     """loads form to search Users data"""
-    return render_template("flightsearch.html")
+    return render_template("search.html")
 
 
 # Search request and response

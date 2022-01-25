@@ -81,13 +81,13 @@ def model_tester():
     u1 = Flights(name='American Airlines', departingLocation='San Diego SAN', arrivalLocation='Boston BOS',
                  departingTime="8:30 PM", arrivalTime="8:30 PM")
     u2 = Flights(name='United Airlines', departingLocation='Los Angeles LAX', arrivalLocation='Orlando MCO',
-                 departingTime="7:45PM", arrivalTime="8:30 PM")
+                 departingTime="7:45 PM", arrivalTime="8:30 PM")
     u3 = Flights(name='Southwest', departingLocation='San Diego SAN', arrivalLocation='San Francisco SFO',
-                 departingTime="1:45PM", arrivalTime="8:30 PM")
+                 departingTime="1:45 PM", arrivalTime="8:30 PM")
     u4 = Flights(name='Delta', departingLocation='Austin AUS', arrivalLocation='Denver DEN',
-                 departingTime="1:30PM", arrivalTime="8:30 PM")
+                 departingTime="1:30 PM", arrivalTime="8:30 PM")
     u5 = Flights(name='Alaskan Airlines', departingLocation='Vancouver YVR', arrivalLocation='Seattle SEA',
-                 departingTime="2:00PM", arrivalTime="8:30 PM")
+                 departingTime="2:00 PM", arrivalTime="8:30 PM")
     u6 = Flights(name='Spirit', departingLocation='New York JFK', arrivalLocation='Tallahassee TLH',
                  departingTime="11:15 AM", arrivalTime="8:30 PM")
     u7 = Flights(name='Emirates', departingLocation='Dubai DXB', arrivalLocation='Los Angeles LAX',

@@ -30,7 +30,11 @@ def flights_all_sql():
 def flights_ilike(term):
     """filter Users table by term into JSON list (ordered by User.name)"""
     term = "%{}%".format(term)  # "ilike" is case insensitive and requires wrapped  %term%
-    table = Flights.query.order_by(Flights.name).filter((Flights.name.ilike(term)) | (Flights.departingLocation.ilike(term)))
+    table = Flights.query.order_by(Flights.name).filter((Flights.name.ilike(term))
+                                                        | (Flights.departingLocation.ilike(term))
+                                                        | (Flights.arrivalLocation.ilike(term))
+                                                        | (Flights.departingTime.ilike(term))
+                                                        | (Flights.arrivalTime.ilike(term)))
     return [peep.read() for peep in table]
 
 
@@ -44,6 +48,19 @@ def flight_by_id(flightid):
 def flight_by_departingLocation(departingLocation):
     """finds User in table matching departingLocation """
     return Flights.query.filter_by(departingLocation=departingLocation).first()
+
+def flight_by_arrivalLocation(arrivalLocation):
+    """finds User in table matching departingLocation """
+    return Flights.query.filter_by(arrivalLocation=arrivalLocation).first()
+
+def flight_by_departingTime(departingTime):
+    """finds User in table matching departingLocation """
+    return Flights.query.filter_by(departingTime=departingTime).first()
+
+def flight_by_arrivalTime(arrivalTime):
+    """finds User in table matching departingLocation """
+    return Flights.query.filter_by(arrivalTime=arrivalTimev).first()
+
 
 
 # ALGORITHM to convert the results of an SQL Query to a JSON ready format in Python
