@@ -138,6 +138,10 @@ Scrum Board: https://github.com/Reem57/flask_portfolio/projects/1
       <td>Ratings</td>
       <td>James</td>
     </tr>
+    <tr>
+      <td>Games</td>
+      <td>Nathan + Jacob</td>
+    </tr>
   </tbody>
   
 </table>
@@ -177,7 +181,7 @@ Scrum Board: https://github.com/Reem57/flask_portfolio/projects/1
   </tbody>
 </table>
 
-<h3> Week 6 </h3>
+<h3> Week 7 </h3>
 <table>
   <thead>
     <tr>
@@ -204,6 +208,37 @@ Scrum Board: https://github.com/Reem57/flask_portfolio/projects/1
     <tr>
       <td>James</td>
       <td>TBD</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3> Week 6 </h3>
+<table>
+  <thead>
+    <tr>
+      <th>Members</th>
+      <th>Ticket</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Nathan</td>
+      <td>https://github.com/jar04/flask_portfolio/wiki/Vocab</td>
+    </tr>
+    <tr>
+      <td>Reem</td>
+      <td>https://github.com/jar04/flask_portfolio/wiki/Vocab</td>
+    </tr><tr>
+      <td>Daniel</td>
+      <td>https://github.com/jar04/flask_portfolio/wiki/Danny,-James-&-Jacob-Vocab-Terms</td>
+    </tr>
+    <tr>
+      <td>Jacob</td>
+      <td>https://github.com/jar04/flask_portfolio/wiki/Danny,-James-&-Jacob-Vocab-Terms</td>
+    </tr>
+    <tr>
+      <td>James</td>
+      <td>https://github.com/jar04/flask_portfolio/wiki/Danny,-James-&-Jacob-Vocab-Terms</td>
     </tr>
   </tbody>
 </table>
@@ -219,27 +254,27 @@ Scrum Board: https://github.com/Reem57/flask_portfolio/projects/1
   <tbody>
     <tr>
       <td>Nathan</td>
-      <td>https://github.com/jar04/flask_portfolio/issues</td>
+      <td>https://github.com/jar04/flask_portfolio/commit/2b7cf2d5b4ce2084364c643bd5a3a2ee6a20e226</td>
     </tr>
     <tr>
       <td>Reem</td>
-      <td>https://github.com/jar04/flask_portfolio/issues/27</td>
+      <td>https://github.com/jar04/flask_portfolio/commit/12f175843e74baf71c56d66df912bb86d1ca839d</td>
     </tr><tr>
       <td>Daniel</td>
-      <td>https://github.com/jar04/flask_portfolio/issues/20</td>
+      <td>https://github.com/jar04/flask_portfolio/commit/d15ca0846b091e55cc93d03b11aedc5a227d3f04</td>
     </tr>
     <tr>
       <td>Jacob</td>
-      <td>http://dnhs-flask-portfolio.online/</td>
+      <td>https://github.com/jar04/flask_portfolio/commit/99ba93937d3e5bf80482de9651e1cf21784444c7</td>
     </tr>
     <tr>
       <td>James</td>
-      <td>https://github.com/jar04/flask_portfolio/issues/26</td>
+      <td>https://github.com/jar04/flask_portfolio/commit/b1a4f3504eb37604e6441d3cab369d91cc82f2d8</td>
     </tr>
   </tbody>
 </table>
 
-<h3> Week 3 </h3>
+<h3> Week 4 </h3>
 <table>
   <thead>
     <tr>
@@ -250,22 +285,22 @@ Scrum Board: https://github.com/Reem57/flask_portfolio/projects/1
   <tbody>
     <tr>
       <td>Nathan</td>
-      <td>https://github.com/jar04/flask_portfolio/issues</td>
+      <td>https://github.com/jar04/flask_portfolio/commit/5970e13e12068b20d9ea0acc7e1f89f8e534ac0c</td>
     </tr>
     <tr>
       <td>Reem</td>
-      <td>https://github.com/jar04/flask_portfolio/issues/27</td>
+      <td>https://github.com/jar04/flask_portfolio/commit/2a1557d64aad18f57dcc0601a714da95c959b6cc</td>
     </tr><tr>
       <td>Daniel</td>
-      <td>https://github.com/jar04/flask_portfolio/issues/20</td>
+      <td>https://github.com/jar04/flask_portfolio/commit/d15ca0846b091e55cc93d03b11aedc5a227d3f04</td>
     </tr>
     <tr>
       <td>Jacob</td>
-      <td>http://dnhs-flask-portfolio.online/</td>
+      <td>https://github.com/jar04/flask_portfolio/commit/99ba93937d3e5bf80482de9651e1cf21784444c7</td>
     </tr>
     <tr>
       <td>James</td>
-      <td>https://github.com/jar04/flask_portfolio/issues/26</td>
+      <td>https://github.com/jar04/flask_portfolio/commit/b1a4f3504eb37604e6441d3cab369d91cc82f2d8</td>
     </tr>
   </tbody>
 </table>
