@@ -3,7 +3,6 @@
 from pathlib import Path
 
 from flask import Flask, render_template, request
-from algorithms.image import rotatehack, sonakshi_image_data, kashish_image_data, saumya_image_data
 import requests
 import http.client
 

@@ -6,6 +6,9 @@
 {% block body %}
 <head>
     <title>Khushi</title>
+    <p>Screen Color Changer</p>
+
+    <p id="demo">Color:</p>
 <style>
    .button1 {
        background-color: white;
@@ -20,6 +23,7 @@
        background-color: whitesmoke;
        color: black;
    }
+
 </style>
 <script>
     function changeImage() {
@@ -30,7 +34,24 @@
             image.src = "/static/assets/khushiimages/Khushi.jpg";
         }
     }
+    colors = ["Red", "Blue", "Green", "Yellow"];
+      //colors = ["#ff3399", "#e6001a", "#5900a6", "#9ec200","#34cfeb"];
+
+      alert("Call alert function and change window colors");
+      /*
+      setInterval(function () {
+        alert("Hello");
+      }, 3000); //3000 milliseconds=3secs
+      */
+       var timer = window.setInterval(changeColor, 1000); //1000 milliseconds=1sec
+
+      function changeColor() {
+        var n = Math.round(Math.random() * 3);
+        document.body.style.backgroundColor = colors[n];
+        document.getElementById("demo").innerHTML = "Color: " + colors[n];
+      }
 </script>
+
 </head>
 <body onload="myFunction()"; style="background-color: #EBF7FA; text-align:center">
 <div style="display:none;" id="myDiv" class="animate-bottom"; style="margin: 2% 5% 5%; text-align:center; font-family: Baskerville; font-size: larger">
@@ -56,6 +77,8 @@
 <br>
 <a style="font-family: Baskerville" href="https://github.com/KhushiB24">My GitHub Profile</a>
 </div>
+
+
 </body>
 
 {% endblock %}
