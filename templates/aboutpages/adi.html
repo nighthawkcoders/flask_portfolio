@@ -136,13 +136,239 @@
 
 
 <br>
-    <p align="center">
-        <iframe
-                width=80%
-                height="900"
-                src="https://docs.google.com/document/d/1caGFdefkHrh74c3f_iuIx26mDD3QnP0FDM9cpS8BYFM/edit?usp=sharing"
-        ></iframe>
-    </p>
+
+    <!--PEN CODE-->
+    <div id="tasker" class="tasker">
+        <div id="error" class="error">Enter an Item to Complete</div>
+        <div id="tasker-header" class="tasker-header">
+            <input type="text" id="input-task" placeholder="Enter a task">
+            <button id="add-task-btn"><i class="fa fa-fw fa-plus"></i>
+            </button>
+        </div>
+        <div class="tasker-body">
+            <ul id="tasks"></ul>
+        </div>
+    </div>
+    <!--END PEN CODE-->
+
+    <style>
+
+
+    reset {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+        }
+
+    transition {
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    }
+
+    body {
+    background: #f1f1f1;
+    margin-top: 2rem;
+    }
+
+    /*PEN STYLES*/
+    .tasker {
+    max-width: 400px;
+    margin: 0 auto;
+    .error {
+    display: none;
+    background: rgba(237, 28, 36, 0.7);
+    color: #fff;
+    padding: 14px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    text-align: center;
+    }
+
+    ul {
+    extend: reset;
+    background: #fff;
+    }
+
+    li,
+    .error,
+    button,
+    input {
+    extend: reset;
+    font: 18px/1.25em Helvetica, Arial, Sans-serif;
+    }
+    }
+
+    .tasker-header {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+    input,
+    button {
+    color: #fff;
+    box-sizing: border-box;
+    font-size: 1.25em;
+    padding: 14px;
+    }
+
+    input {
+    flex-grow: 2;
+    }
+
+    button {
+    extend: transition;
+    border-left: 1px solid (secondary * 1.05);
+    hover {
+    background: secondary * 1.1;
+    }
+    }
+    }
+
+    .tasker-body {
+    .task {
+    display: block;
+    position: relative;
+    padding: 14px 40px 14px 14px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    last-child {
+    border-bottom: none;
+    }
+
+    hover > button {
+    opacity: 1;
+    }
+
+    .completed {
+    color: grey;
+    text-decoration: line-through;
+    }
+
+    input {
+    margin-right: 10px;
+    }
+
+    button {
+    extend: %transition;
+    color: grey;
+    margin: 14px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    hover {
+    color: #ed1c24;
+    }
+    }
+    }
+    }
+    </style>
+<script>
+    (function() {
+    'use strict';
+    var tasker = {
+    init: function() {
+    this.cacheDom();
+    this.bindEvents();
+    this.evalTasklist();
+    },
+    cacheDom: function() {
+    this.taskInput = document.getElementById("input-task");
+    this.addBtn = document.getElementById("add-task-btn");
+    this.tasklist = document.getElementById("tasks");
+    this.tasklistChildren = this.tasklist.children;
+    this.errorMessage = document.getElementById("error");
+    },
+    bindEvents: function() {
+    this.addBtn.onclick = this.addTask.bind(this);
+    this.taskInput.onkeypress = this.enterKey.bind(this);
+    },
+    evalTasklist: function() {
+    var i, chkBox, delBtn;
+    //BIND CLICK EVENTS TO ELEMENTS
+    for (i = 0; i < this.tasklistChildren.length; i += 1) {
+    //ADD CLICK EVENT TO CHECKBOXES
+    chkBox = this.tasklistChildren[i].getElementsByTagName("input")[0];
+    chkBox.onclick = this.completeTask.bind(this, this.tasklistChildren[i], chkBox);
+    //ADD CLICK EVENT TO DELETE BUTTON
+    delBtn = this.tasklistChildren[i].getElementsByTagName("button")[0];
+    delBtn.onclick = this.delTask.bind(this, i);
+    }
+    },
+    render: function() {
+    var taskLi, taskChkbx, taskVal, taskBtn, taskTrsh;
+    //BUILD HTML
+    taskLi = document.createElement("li");
+    taskLi.setAttribute("class", "task");
+    //CHECKBOX
+    taskChkbx = document.createElement("input");
+    taskChkbx.setAttribute("type", "checkbox");
+    //USER TASK
+    taskVal = document.createTextNode(this.taskInput.value);
+    //DELETE BUTTON
+    taskBtn = document.createElement("button");
+    //TRASH ICON
+    taskTrsh = document.createElement("i");
+    taskTrsh.setAttribute("class", "fa fa-trash");
+    //INSTERT TRASH CAN INTO BUTTON
+    taskBtn.appendChild(taskTrsh);
+
+    //APPEND ELEMENTS TO TASKLI
+    taskLi.appendChild(taskChkbx);
+    taskLi.appendChild(taskVal);
+    taskLi.appendChild(taskBtn);
+
+    //ADD TASK TO TASK LIST
+    this.tasklist.appendChild(taskLi);
+
+    },
+    completeTask: function(i, chkBox) {
+    if (chkBox.checked) {
+    i.className = "task completed";
+    } else {
+    this.incompleteTask(i);
+    }
+    },
+    incompleteTask: function(i) {
+    i.className = "task";
+    },
+    enterKey: function(event) {
+    if (event.keyCode === 13 || event.which === 13) {
+    this.addTask();
+    }
+    },
+    addTask: function() {
+    var value = this.taskInput.value;
+    this.errorMessage.style.display = "none";
+
+    if (value === "") {
+    this.error();
+    } else {
+    this.render();
+    this.taskInput.value = "";
+    this.evalTasklist();
+    }
+    },
+    delTask: function(i) {
+    this.tasklist.children[i].remove();
+    this.evalTasklist();
+    },
+    error: function() {
+    this.errorMessage.style.display = "block";
+    }
+    };
+
+    tasker.init();
+    }());
+
+</script>
+{#    <p align="center">#}
+{#        <iframe#}
+{#                width=80%#}
+{#                height="900"#}
+{#                src="https://docs.google.com/document/d/1caGFdefkHrh74c3f_iuIx26mDD3QnP0FDM9cpS8BYFM/edit?usp=sharing"#}
+{#        ></iframe>#}
+{#    </p>#}
 
 <style>
     table, td, th {

@@ -104,3 +104,8 @@ def flights():
 def maps():
 
     return render_template("pbl/maps.html", darkmode=darkmode)
+
+@travel_pg.route('/planner', methods=['GET', 'POST'])
+def planner():
+
+    return render_template("pbl/planner.html", darkmode=darkmode)

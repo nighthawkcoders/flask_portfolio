@@ -26,6 +26,9 @@ app.register_blueprint(app_database)
 from flight.app_flight import app_flight
 app.register_blueprint(app_flight)
 
+from crud.app_crud_api import app_crud_api
+app.register_blueprint(app_crud_api)
+
 darkmode="darkmode"
 # connects default URL to render index.html
 
