@@ -2,9 +2,10 @@
 {% extends "layouts/base.html" %}
 
 {% block body %}
-    <h1 class="center-block" style=" text-align:center; font-family: rono,serif;"">Pet Quiz</h1>
+    <h1 class="center-block" style=" text-align:center; font-family: rono,serif;"">Pet Quiz 2</h1>
     <h2 style="padding-left: 25px"> Another Pet Quiz!!! </h2>
     <h3 style="padding-left:25px; font-size: 15px">Click the Answers Below and then press submit. Feel fry to try until you get everything right!</h3>
+    <h4 style="padding-left: 25px; font-size: 15px"> This will use information gathered from the other pages on this website.</h4>
     <div id="quiz"></div>
     <button id="submit">Submit Quiz</button>
     <div id="results"></div>
@@ -108,95 +109,93 @@
             const submitButton = document.getElementById('submit');
             const myQuestions = [
                 {
-                    question: "1. B",
+                    question: "1. What should you do if you can't capture a lost dog safely?",
                     answers: {
-                        a: "a",
-                        b: "B"
+                        a: "Take a picture or video of it",
+                        b: "Use an elephant tranquilizer on it"
+                    },
+                    correctAnswer: "a"
+                },
+                {
+                    question: "2. What is the enclosure of a fish?",
+                    answers: {
+                        a: "Aquarium",
+                        b: "Litter Box",
+                        c: "Plastic cage",
+                        d: "Bed"
+                    },
+                    correctAnswer: "a"
+                },
+                {
+                    question: "3. What is the most popular pet bird?",
+                    answers: {
+                        a: "Parrot",
+                        b: "Love Bird",
+                        c: "Dove",
+                        d: "German Shepherd "
+                    },
+                    correctAnswer: "a"
+                },
+                {
+                    question: "4. What are the two most popular shelters to adopt a dog from in San Diego ",
+                    answers: {
+                        a: "In and Out",
+                        b: "Helen Woodward Center and The Dog Squad Rescue",
+                        c: "San Diego Humane Society and Mission Bay Puppy Rescue",
+                        d: "San Diego Humane Society and Helen Woodward Center"
+                    },
+                    correctAnswer: "d"
+                },
+                {
+                    question: "5. Once you set up a pets enclosure do you need to do anything else?",
+                    answers: {
+                        a: "Yes",
+                        b: "No"
+                    },
+                    correctAnswer: "a"
+                },
+                {
+                    question: "6. What breed of Cat has very little hair?",
+                    answers: {
+                        a: "Siamese",
+                        b: "Sphynx",
+                        c: "Maine Coon",
+                        d: "Russian Blue"
                     },
                     correctAnswer: "b"
                 },
                 {
-                    question: "2.a",
+                    question: "7. Which pet is the easiest to take care of? ",
                     answers: {
-                        a: "Vibranium",
-                        b: "Adamantium",
-                        c: "Kryptonite",
-                        d: "Carbonite"
-                    },
-                    correctAnswer: "a"
-                },
-                {
-                    question: "3.a",
-                    answers: {
-                        a: "2003",
-                        b: "2000",
-                        c: "2006",
-                        d: "2001"
-                    },
-                    correctAnswer: "a"
-                },
-                {
-                    question: "4.d",
-                    answers: {
-                        a: "Finland",
-                        b: "Ireland",
-                        c: "Iceland",
-                        d: "New Zealand"
-                    },
-                    correctAnswer: "d"
-                },
-                {
-                    question: "5.c",
-                    answers: {
-                        a: "Brown and Red",
-                        b: "Black and Green",
-                        c: "Red and Green",
-                        d: "Blue and Brown"
+                        a: "Ferret",
+                        b: "Monkey",
+                        c: "Cat",
+                        d: "Chinchilla"
                     },
                     correctAnswer: "c"
                 },
                 {
-                    question: "6.a",
+                    question: "8. How many people created the website",
                     answers: {
-                        a: "Brown and Red",
-                        b: "Black and Green",
-                        c: "Red and Green",
-                        d: "Blue and Brown"
-                    },
-                    correctAnswer: "a"
-                },
-                {
-                    question: "7.c",
-                    answers: {
-                        a: "Brown and Red",
-                        b: "Black and Green",
-                        c: "Red and Green",
-                        d: "Blue and Brown"
-                    },
-                    correctAnswer: "c"
-                },
-                {
-                    question: "8.d",
-                    answers: {
-                        a: "Brown and Red",
-                        b: "Black and Green",
-                        c: "Red and Green",
-                        d: "Blue and Brown"
+                        a: "2",
+                        b: "100",
+                        c: "-7",
+                        d: "5"
                     },
                     correctAnswer: "d"
                 },
                 {
-                    question: "8.d",
+                    question: "8. (Challenge) What is the name of the team behind this website",
                     answers: {
-                        a: "Brown and Red",
-                        b: "Black and Green",
-                        c: "Red and Green",
-                        d: "Blue and Brown",
-                        e:"2",
-                        f:"3",
-                        g:"5",
-                        h:"I",
-                        i:"x"
+                        a: "Team Animals",
+                        b: "Team Friends",
+                        c: "Team APCSP",
+                        d: "Pets are Important Team",
+                        e:"Best Restaurants Team",
+                        f:"Team Adopt",
+                        g:"Team Events",
+                        h:"Team Food",
+                        i:"Team ToDo"
                     },
                     correctAnswer: "h"
                 }
@@ -209,5 +208,13 @@
             submitButton.addEventListener('click', showResults);
         })();
     </script>
-
+    <style>
+        html,body {
+            background: url('/static/assets/Pquiz2.jpg') no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+    </style>
 {% endblock %}
