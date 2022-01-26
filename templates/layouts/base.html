@@ -23,6 +23,13 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
     <link rel="icon" href="/static/assets/pawscursor.png">
     <title>{{ name }} | {{ project }} </title>
     <link rel="shortcut icon" href="/static/assets/pawscursor.png">
+
+
+    <style>
+        a{
+            cursor: url("pawscursor.png"), default;
+        }
+    </style>
     {%block head %}
 
     {%endblock%}

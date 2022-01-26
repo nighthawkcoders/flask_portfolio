@@ -18,3 +18,7 @@ def pethistory():
 @btanay.route('/petpoll/')
 def petpoll():
     return render_template('petpoll.html')
+
+@btanay.route('/costcalculator/')
+def costcalculator():
+    return render_template('costcalculator.html')
