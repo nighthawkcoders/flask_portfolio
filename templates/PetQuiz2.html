@@ -1,0 +1,213 @@
+
+{% extends "layouts/base.html" %}
+
+{% block body %}
+    <h1 class="center-block" style=" text-align:center; font-family: rono,serif;"">Pet Quiz</h1>
+    <h2 style="padding-left: 25px"> Another Pet Quiz!!! </h2>
+    <h3 style="padding-left:25px; font-size: 15px">Click the Answers Below and then press submit. Feel fry to try until you get everything right!</h3>
+    <div id="quiz"></div>
+    <button id="submit">Submit Quiz</button>
+    <div id="results"></div>
+
+    <style>
+        body{
+            font-size: 15px;
+            font-family: rono, serif;
+            color: #333;
+        }
+        .question{
+            font-weight: 600;
+        }
+        .answers {
+            margin-bottom: 20px;
+        }
+        .answers label{
+            display: block;
+        }
+        #submit{
+            font-family: sans-serif;
+            font-size: 20px;
+            background-color: pink;
+            color: black;
+            border: 0px;
+            border-radius: 3px;
+            padding: 20px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        #submit:hover{
+            background-color: lightpink;
+        }
+
+    </style>
+
+    <script>
+        (function(){
+            function buildQuiz(){
+                const output = [];
+
+                myQuestions.forEach(
+                    (currentQuestion, questionNumber) => {
+
+                        const answers = [];
+
+                        for(letter in currentQuestion.answers){
+
+                            answers.push(
+                                `<label>
+              <input type="radio" name="question${questionNumber}" value="${letter}">
+              ${letter} :
+              ${currentQuestion.answers[letter]}
+            </label>`
+                            );
+                        }
+
+                        output.push(
+                            `<div class="question"> ${currentQuestion.question} </div>
+          <div class="answers"> ${answers.join('')} </div>`
+                        );
+                    }
+                );
+
+                quizContainer.innerHTML = output.join('');
+            }
+
+            function showResults(){
+
+                const answerContainers = quizContainer.querySelectorAll('.answers');
+
+                let numCorrect = 0;
+
+                myQuestions.forEach( (currentQuestion, questionNumber) => {
+
+
+                    const answerContainer = answerContainers[questionNumber];
+                    const selector = `input[name=question${questionNumber}]:checked`;
+                    const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+
+                    if(userAnswer === currentQuestion.correctAnswer){
+
+                        numCorrect++;
+
+
+                        answerContainers[questionNumber].style.color = 'darkgreen';
+                    }
+
+                    else{
+
+                        answerContainers[questionNumber].style.color = '#ed1b76';
+                    }
+                });
+
+
+                resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length} correct`;
+            }
+
+            const quizContainer = document.getElementById('quiz');
+            const resultsContainer = document.getElementById('results');
+            const submitButton = document.getElementById('submit');
+            const myQuestions = [
+                {
+                    question: "1. B",
+                    answers: {
+                        a: "a",
+                        b: "B"
+                    },
+                    correctAnswer: "b"
+                },
+                {
+                    question: "2.a",
+                    answers: {
+                        a: "Vibranium",
+                        b: "Adamantium",
+                        c: "Kryptonite",
+                        d: "Carbonite"
+                    },
+                    correctAnswer: "a"
+                },
+                {
+                    question: "3.a",
+                    answers: {
+                        a: "2003",
+                        b: "2000",
+                        c: "2006",
+                        d: "2001"
+                    },
+                    correctAnswer: "a"
+                },
+                {
+                    question: "4.d",
+                    answers: {
+                        a: "Finland",
+                        b: "Ireland",
+                        c: "Iceland",
+                        d: "New Zealand"
+                    },
+                    correctAnswer: "d"
+                },
+                {
+                    question: "5.c",
+                    answers: {
+                        a: "Brown and Red",
+                        b: "Black and Green",
+                        c: "Red and Green",
+                        d: "Blue and Brown"
+                    },
+                    correctAnswer: "c"
+                },
+                {
+                    question: "6.a",
+                    answers: {
+                        a: "Brown and Red",
+                        b: "Black and Green",
+                        c: "Red and Green",
+                        d: "Blue and Brown"
+                    },
+                    correctAnswer: "a"
+                },
+                {
+                    question: "7.c",
+                    answers: {
+                        a: "Brown and Red",
+                        b: "Black and Green",
+                        c: "Red and Green",
+                        d: "Blue and Brown"
+                    },
+                    correctAnswer: "c"
+                },
+                {
+                    question: "8.d",
+                    answers: {
+                        a: "Brown and Red",
+                        b: "Black and Green",
+                        c: "Red and Green",
+                        d: "Blue and Brown"
+                    },
+                    correctAnswer: "d"
+                },
+                {
+                    question: "8.d",
+                    answers: {
+                        a: "Brown and Red",
+                        b: "Black and Green",
+                        c: "Red and Green",
+                        d: "Blue and Brown",
+                        e:"2",
+                        f:"3",
+                        g:"5",
+                        h:"I",
+                        i:"x"
+                    },
+                    correctAnswer: "h"
+                }
+            ];
+
+
+            buildQuiz();
+
+
+            submitButton.addEventListener('click', showResults);
+        })();
+    </script>
+
+{% endblock %}
