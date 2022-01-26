@@ -1,0 +1,220 @@
+
+{% extends "layouts/base.html" %}
+
+{% block body %}
+    <h1 class="center-block" style=" text-align:center; font-family: rono,serif;"">Pet Quiz 2</h1>
+    <h2 style="padding-left: 25px"> Another Pet Quiz!!! </h2>
+    <h3 style="padding-left:25px; font-size: 15px">Click the Answers Below and then press submit. Feel fry to try until you get everything right!</h3>
+    <h4 style="padding-left: 25px; font-size: 15px"> This will use information gathered from the other pages on this website.</h4>
+    <div id="quiz"></div>
+    <button id="submit">Submit Quiz</button>
+    <div id="results"></div>
+
+    <style>
+        body{
+            font-size: 15px;
+            font-family: rono, serif;
+            color: #333;
+        }
+        .question{
+            font-weight: 600;
+        }
+        .answers {
+            margin-bottom: 20px;
+        }
+        .answers label{
+            display: block;
+        }
+        #submit{
+            font-family: sans-serif;
+            font-size: 20px;
+            background-color: pink;
+            color: black;
+            border: 0px;
+            border-radius: 3px;
+            padding: 20px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        #submit:hover{
+            background-color: lightpink;
+        }
+
+    </style>
+
+    <script>
+        (function(){
+            function buildQuiz(){
+                const output = [];
+
+                myQuestions.forEach(
+                    (currentQuestion, questionNumber) => {
+
+                        const answers = [];
+
+                        for(letter in currentQuestion.answers){
+
+                            answers.push(
+                                `<label>
+              <input type="radio" name="question${questionNumber}" value="${letter}">
+              ${letter} :
+              ${currentQuestion.answers[letter]}
+            </label>`
+                            );
+                        }
+
+                        output.push(
+                            `<div class="question"> ${currentQuestion.question} </div>
+          <div class="answers"> ${answers.join('')} </div>`
+                        );
+                    }
+                );
+
+                quizContainer.innerHTML = output.join('');
+            }
+
+            function showResults(){
+
+                const answerContainers = quizContainer.querySelectorAll('.answers');
+
+                let numCorrect = 0;
+
+                myQuestions.forEach( (currentQuestion, questionNumber) => {
+
+
+                    const answerContainer = answerContainers[questionNumber];
+                    const selector = `input[name=question${questionNumber}]:checked`;
+                    const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+
+                    if(userAnswer === currentQuestion.correctAnswer){
+
+                        numCorrect++;
+
+
+                        answerContainers[questionNumber].style.color = 'darkgreen';
+                    }
+
+                    else{
+
+                        answerContainers[questionNumber].style.color = '#ed1b76';
+                    }
+                });
+
+
+                resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length} correct`;
+            }
+
+            const quizContainer = document.getElementById('quiz');
+            const resultsContainer = document.getElementById('results');
+            const submitButton = document.getElementById('submit');
+            const myQuestions = [
+                {
+                    question: "1. What should you do if you can't capture a lost dog safely?",
+                    answers: {
+                        a: "Take a picture or video of it",
+                        b: "Use an elephant tranquilizer on it"
+                    },
+                    correctAnswer: "a"
+                },
+                {
+                    question: "2. What is the enclosure of a fish?",
+                    answers: {
+                        a: "Aquarium",
+                        b: "Litter Box",
+                        c: "Plastic cage",
+                        d: "Bed"
+                    },
+                    correctAnswer: "a"
+                },
+                {
+                    question: "3. What is the most popular pet bird?",
+                    answers: {
+                        a: "Parrot",
+                        b: "Love Bird",
+                        c: "Dove",
+                        d: "German Shepherd "
+                    },
+                    correctAnswer: "a"
+                },
+                {
+                    question: "4. What are the two most popular shelters to adopt a dog from in San Diego ",
+                    answers: {
+                        a: "In and Out",
+                        b: "Helen Woodward Center and The Dog Squad Rescue",
+                        c: "San Diego Humane Society and Mission Bay Puppy Rescue",
+                        d: "San Diego Humane Society and Helen Woodward Center"
+                    },
+                    correctAnswer: "d"
+                },
+                {
+                    question: "5. Once you set up a pets enclosure do you need to do anything else?",
+                    answers: {
+                        a: "Yes",
+                        b: "No"
+                    },
+                    correctAnswer: "a"
+                },
+                {
+                    question: "6. What breed of Cat has very little hair?",
+                    answers: {
+                        a: "Siamese",
+                        b: "Sphynx",
+                        c: "Maine Coon",
+                        d: "Russian Blue"
+                    },
+                    correctAnswer: "b"
+                },
+                {
+                    question: "7. Which pet is the easiest to take care of? ",
+                    answers: {
+                        a: "Ferret",
+                        b: "Monkey",
+                        c: "Cat",
+                        d: "Chinchilla"
+                    },
+                    correctAnswer: "c"
+                },
+                {
+                    question: "8. How many people created the website",
+                    answers: {
+                        a: "2",
+                        b: "100",
+                        c: "-7",
+                        d: "5"
+                    },
+                    correctAnswer: "d"
+                },
+                {
+                    question: "8. (Challenge) What is the name of the team behind this website",
+                    answers: {
+                        a: "Team Animals",
+                        b: "Team Friends",
+                        c: "Team APCSP",
+                        d: "Pets are Important Team",
+                        e:"Best Restaurants Team",
+                        f:"Team Adopt",
+                        g:"Team Events",
+                        h:"Team Food",
+                        i:"Team ToDo"
+                    },
+                    correctAnswer: "h"
+                }
+            ];
+
+
+            buildQuiz();
+
+
+            submitButton.addEventListener('click', showResults);
+        })();
+    </script>
+    <style>
+        html,body {
+            background: url('/static/assets/Pquiz2.jpg') no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+    </style>
+{% endblock %}
