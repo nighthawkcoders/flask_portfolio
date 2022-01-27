@@ -5,11 +5,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <div class="wrapper-color-switch">
-        <input type="checkbox" id="input-color-switch">
-        <label for="input-color-switch">dark mode / light mode
-        </label>
-    </div>
+<!--    <div class="wrapper-color-switch">-->
+<!--        <input type="checkbox" id="input-color-switch">-->
+<!--        <label for="input-color-switch">dark mode / light mode-->
+<!--        </label>-->
+<!--    </div>-->
     <meta charset="UTF-8">
     <title>Hotels</title>
     <style>
@@ -139,32 +139,32 @@
         {% endfor %}
     {% endfor %}
 </table>
-<!--<iframe id="hotelLocation">-->
+<iframe id="hotelLocation">
 
-<!--</iframe>-->
+</iframe>
 </body>
 </html>
 
 <script>
-    const darkMode = document.getElementById("input-color-switch");
-    darkMode.addEventListener("click", checkMode);
-    function checkMode() {
-        console.log("checking...");
-        if (darkMode.checked) {
-            console.log("dark mode");
-            darkModeOn();
-        } else {
-            console.log("light mode");
-            darkModeOff();
-        }
-    }
-
-    function darkModeOn() {
-        document.body.classList.add("dark-mode");
-    }
-
-    function darkModeOff() {
-        document.body.classList.remove("dark-mode");
+    // const darkMode = document.getElementById("input-color-switch");
+    // darkMode.addEventListener("click", checkMode);
+    // function checkMode() {
+    //     console.log("checking...");
+    //     if (darkMode.checked) {
+    //         console.log("dark mode");
+    //         darkModeOn();
+    //     } else {
+    //         console.log("light mode");
+    //         darkModeOff();
+    //     }
+    // }
+    //
+    // function darkModeOn() {
+    //     document.body.classList.add("dark-mode");
+    // }
+    //
+    // function darkModeOff() {
+    //     document.body.classList.remove("dark-mode");
     }
     function changeIframeSource(newurl) {
         document.getElementById("hotelLocation").src=newurl;

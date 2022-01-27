@@ -32,7 +32,6 @@ app.register_blueprint(app_crud_api)
 darkmode="darkmode"
 # connects default URL to render index.html
 
-
 @app.route('/')
 def index():
     return render_template("index.html", darkmode=darkmode)
@@ -73,8 +72,8 @@ def toggleDarkMode():
         darkmode="lightmode"
     else:
         darkmode = "darkmode"
+    print(darkmode)
     return ('', 200)
-
 
 
 # runs the application on the development server
