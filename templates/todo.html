@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <style>
+
     :root {
         --dark: #374151;
         --darker: #1F2937;
@@ -238,43 +239,49 @@
 {% block body %}
 
 <body>
-<header>
-    <h1>Task List 2021</h1>
-    <form id="new-task-form">
-        <input
-                type="text"
-                name="new-task-input"
-                id="new-task-input"
-                placeholder="What do you have planned?" />
-        <input
-                type="submit"
-                id="new-task-submit"
-                value="Add task" />
-    </form>
-</header>
-<main>
-    <section class="task-list">
-        <h2>Tasks</h2>
 
-        <div id="tasks">
+    <div style="background-image: url('static/assets/to-do.jpeg')"></div>
 
-             <div class="task">
-                <div class="content">
-                    <input
-                        type="text"
-                        class="text"
-                        value="A new task"
-                        readonly>
+    <header>
+        <h1>Task List 2021</h1>
+        <h3>Hello newcoming owners! I know having a pet may be overwhelming, what with feeding it, cleaning it, and keeping it healthy. Here is a safe space to
+        help plan your decisions and make the best out of being a pet owner! Thanks</h3>
+        <form id="new-task-form">
+            <input
+                    type="text"
+                    name="new-task-input"
+                    id="new-task-input"
+                    placeholder="What do you have planned?" />
+            <input
+                    type="submit"
+                    id="new-task-submit"
+                    value="Add task" />
+        </form>
+    </header>
+    <main>
+        <section class="task-list">
+            <h2>Tasks</h2>
+
+            <div id="tasks">
+
+                 <div class="task">
+                    <div class="content">
+                        <input
+                            type="text"
+                            class="text"
+                            value="A new task"
+                            readonly>
+                    </div>
+                    <div class="actions">
+                        <button class="edit">Edit</button>
+                        <button class="delete">Delete</button>
+                    </div>
                 </div>
-                <div class="actions">
-                    <button class="edit">Edit</button>
-                    <button class="delete">Delete</button>
-                </div>
+
             </div>
+        </section>
+    </main>
 
-        </div>
-    </section>
-</main>
 </body>
 
 {% endblock %}
