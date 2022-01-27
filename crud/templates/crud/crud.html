@@ -5,7 +5,7 @@
 
 <!-- CONTENT (in <head>), content for this page -->
 {% block head %}
-    <title>CRUD page</title>
+    <title>CRUD Pets page</title>
     <script src={{  url_for("crud.static", filename="javascript/validation.js", version='101') }}></script>
     <script src={{  url_for("crud.static", filename="javascript/reload_page.js", version='101') }}></script>
 {% endblock %}
@@ -14,7 +14,7 @@
 {% block body %}
     <div class="container py-4">
         <header class="pb-3 mb-4 border-bottom border-primary text-dark">
-            <span class="fs-4">SQL CRUD Admin Page</span>
+            <span class="fs-4">SQL CRUD Pets Admin Page</span>
         </header>
     </div>
     <div class="container py-4 text-light bg-success">
@@ -40,10 +40,10 @@
                             <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Name</th>
-                                <th>Email</th>
-                                <th>Password</th>
-                                <th>Phone</th>
+                                <th>Animal</th>
+                                <th>Diet</th>
+                                <th>Habitat</th>
+                                <th>Family</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -53,14 +53,12 @@
                                 Prepare table for display
                                     caution: phone number needs "~" format step to force type to string
                                 -->
-                                {% set pn = "" ~ row['phone'] %}
-                                {% set pnf = "(" ~ pn[0:3] ~ ")" ~ pn[3:6] ~ "-" ~ pn[6:10] %}
                                 <tr>
                                     <td>{{ row['userID'] }}</td>
                                     <td>{{ row['name'] }}</td>
                                     <td>{{ row['email'] }}</td>
                                     <td>{{ row['password'] }}</td>
-                                    <td>{{ pnf }}</td>
+                                    <td>{{ row['phone'] }}</td>
                                 </tr>
                             {% endfor %}
                             </tbody>
@@ -79,18 +77,18 @@
                     <table class="table">
                         <thead>
                         <tr>
-                            <th><label for="name">Name</label></th>
-                            <th><label for="email">Email</label></th>
-                            <th><label for="password">Password</label></th>
-                            <th><label for="phone">Phone</label></th>
+                            <th><label for="name">Animal</label></th>
+                            <th><label for="email">Diet</label></th>
+                            <th><label for="password">Habitat</label></th>
+                            <th><label for="phone">Family</label></th>
                         </tr>
                         </thead>
                         <tbody>
                         <tr>
-                            <td><input type="text" name="name" id="name" required></td>
-                            <td><input type="email" name="email" id="email" placeholder="abc@xyz.org" required></td>
-                            <td><input type="password" name="password" id="password" required></td>
-                            <td><input type="tel" name="phone" id="phone" pattern="[0-9]{10}" placeholder="1234567890" required></td>
+                            <td><input type="text" name="name" id="name" placeholder="House Cat" required></td>
+                            <td><input type="text" name="email" id="email" placeholder="carnivore" required></td>
+                            <td><input type="text" name="password" id="password" placeholder="Household" required></td>
+                            <td><input type="text" name="phone" id="phone" placeholder="Feline" required></td>
                             <td><input type="submit" value="Create"></td>
                         </tr>
                         </tbody>
@@ -137,7 +135,7 @@
                             <table id="update_table">
                                 <tr>
                                     <th><label for="update_userid">ID</label></th>
-                                    <th><label for="update_name">Name</label></th>
+                                    <th><label for="update_name">Animal</label></th>
                                 </tr>
                                 <tr>
                                     <td>

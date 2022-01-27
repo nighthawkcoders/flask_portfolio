@@ -34,23 +34,24 @@ inspiration from https://www.youtube.com/watch?v=QKcVjdLEX_s
 
 
     <!-- result of search -->
-    <div class="container py-4" style="background-color:black; color:white">
-        <div class="row">
-            <div class="col-sm">
-                Name
+    <div class="container py-4" style="background-color:black; color:white; border-color:white;">
+        <div class="row"></div>
+            <div class="row">
+                <div class="col-sm" style="font-weight: bold; font-size: large">
+                    Animal
+                </div>
+                <div class="col-sm" style="font-weight: bold; font-size: large">
+                    Diet
+                </div>
+                <div class="col-sm" style="font-weight: bold; font-size: large">
+                    Habitat
+                </div>
+                <div class="col-sm" style="font-weight: bold; font-size: large">
+                    Family
+                </div>
+                <div id="result">
+                </div>
             </div>
-            <div class="col-sm">
-                Email
-            </div>
-            <div class="col-sm">
-                Phone Number
-            </div>
-            <div class="col-sm">
-                Feedback
-            </div>
-            <div id="result">
-            </div>
-        </div>
     </div>
 
     <script>
@@ -96,7 +97,7 @@ inspiration from https://www.youtube.com/watch?v=QKcVjdLEX_s
                         // add all rows to grid with loop
                         let grid = ""
                         for (let i = 0; i < data.length; i++) {
-                            grid += "<div class='row'>" + "<div class='col'>" + data[i].name + "</div><div class='col'>" + data[i].email + "</div><div class='col'>" + data[i].phone + "</div><div class='col'>" + data[i].feedback + "</div></div>";
+                            grid += "<div class='row'>" + "<div class='col'>" + data[i].name + "</div><div class='col'>" + data[i].email + "</div><div class='col'>" + data[i].password + "</div><div class = 'col'>" + data[i].phone + "</div><div>";
                         }
                         // update HTML with table
                         div.innerHTML = grid;
