@@ -12,9 +12,15 @@ from __init__ import db
 # -- c.) SQLAlchemy ORM is layer on top of SQLAlchemy Core, then SQLAlchemy engine, SQL
 class Users(db.Model):
     # define the Users schema
+
+    # Don't know how wto change everything, so the Users and attributes wil all be the same, but with values for Pets
+    # name = animal name
+    # email = diet
+    # password = habitat
+    # phone = animal family
     userID = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(255), unique=False, nullable=False)
-    email = db.Column(db.String(255), unique=True, nullable=False)
+    name = db.Column(db.String(255), unique=True, nullable=False)
+    email = db.Column(db.String(255), unique=False, nullable=False)
     password = db.Column(db.String(255), unique=False, nullable=False)
     phone = db.Column(db.String(255), unique=False, nullable=False)
 
@@ -79,22 +85,20 @@ def model_tester():
     print("--------------------------")
     db.create_all()
     """Tester data for table"""
-    u1 = Users(name='Thomas Edison', email='tedison@example.com', password='123toby', phone="1111111111")
-    u2 = Users(name='Nicholas Tesla', email='ntesla@example.com', password='123niko', phone="1111112222")
-    u3 = Users(name='Alexander Graham Bell', email='agbell@example.com', password='123lex', phone="1111113333")
-    u4 = Users(name='Eli Whitney', email='eliw@example.com', password='123whit', phone="1111114444")
-    u5 = Users(name='John Mortensen', email='jmort1021@gmail.com', password='123qwerty', phone="8587754956")
-    u6 = Users(name='John Mortensen', email='jmort1021@yahoo.com', password='123qwerty', phone="8587754956")
-    # U7 intended to fail as duplicate key
-    u7 = Users(name='John Mortensen', email='jmort1021@yahoo.com', password='123qwerty', phone="8586791294")
-    table = [u1, u2, u3, u4, u5, u6, u7]
+    u1 = Users(name='House Cat', email='Carnivore', password='Household', phone="Feline")
+    u2 = Users(name='Dog', email='Omnivore', password='Household', phone="Canine")
+    u3 = Users(name='Cockatiel', email='Herbivore', password='Cage', phone="Avian")
+    u4 = Users(name='Hamster', email='Omnivore', password='Cage', phone="Rodent")
+    u5 = Users(name='Chameleon', email='Insectivore', password='Terrarium', phone="Reptile")
+    u6 = Users(name='Chicken', email='Omnivore', password='Yard', phone="Avian")
+    table = [u1, u2, u3, u4, u5, u6, u6]
     for row in table:
         try:
             db.session.add(row)
             db.session.commit()
         except IntegrityError:
             db.session.remove()
-            print(f"Records exist, duplicate email, or error: {row.email}")
+            print(f"Records exist or duplicate animal")
 
 
 def model_printer():

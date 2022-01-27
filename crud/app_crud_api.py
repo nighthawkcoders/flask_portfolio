@@ -35,7 +35,7 @@ class UsersAPI:
             person = po.create()
             if person:
                 return person.read()
-            return {'message': f'Processed {name}, either a format error or {email} is duplicate'}, 210
+            return {'message': f'Processed {name}, either a format error or {name} is duplicate'}, 210
 
     # class for read/get
     class _Read(Resource):
@@ -61,7 +61,7 @@ class UsersAPI:
         def put(self, email, name):
             po = user_by_email(email)
             if po is None:
-                return {'message': f"{email} is not found"}, 210
+                return {'message': f"{name} is not found"}, 210
             po.update(name)
             return po.read()
 
@@ -78,7 +78,7 @@ class UsersAPI:
         def put(self, email, name, password, phone):
             po = user_by_email(email)
             if po is None:
-                return {'message': f"{email} is not found"}, 210
+                return {'message': f"{name} is not found"}, 210
             po.update(name, password, phone)
             return po.read()
 
