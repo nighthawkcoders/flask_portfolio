@@ -23,3 +23,8 @@ def enclosures():
 @bchase.route('/H2C4P/')
 def h2():
     return render_template('H2C4P.html')
+
+
+@bchase.route('/Pet Quiz 2/')
+def Pquiz2():
+    return render_template('PetQuiz2.html')
