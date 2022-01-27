@@ -8,6 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Calculator</title>
+  <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 <h1 style="text-align:center; font-family:Times New Roman">Calculator</h1>
@@ -35,8 +36,10 @@
   <button data-number>0</button>
   <button data-equals class="span-two">=</button>
 </div>
+<div class="curosr"></div>
 
 <style>
+
   *, *::before, *::after {
     box-sizing: border-box;
     font-family: Times New Roman, sans-serif;
@@ -46,7 +49,17 @@
   body {
     padding: 0;
     margin: 0;
-    background: none;
+    background-image: url("/static/assets/petfinances.jpeg");
+    background-size: cover;
+    cursor: url("pawscursor.png");
+  }
+
+  .cursor {
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    border-radius: 50%;
+    position: absolute;
   }
 
   .calculator-grid {
@@ -59,7 +72,6 @@
   }
 
   .calculator-grid > button {
-    cursor: pointer;
     font-size: 2rem;
     border: 1px solid white;
     outline: 7.5px solid black;
@@ -223,6 +235,15 @@
   deleteButton.addEventListener('click', button => {
     calculator.delete()
     calculator.updateDisplay()
+  })
+
+</script>
+
+<script>
+  const cursor = document.querySelector('.cursor');
+
+  document.addEventListener('mousemove', e => {
+    cursor.setAttribute("style", "top: "+e.pageY+"px; left: "+e.pageX+"px;")
   })
 </script>
 
