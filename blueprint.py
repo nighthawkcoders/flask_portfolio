@@ -2,10 +2,10 @@
 from flask import Blueprint, render_template
 import requests
 import json
+import random
 
 # create a Flask instance
 blueprint = Blueprint('blueprint', __name__)
-import random
 
 # connects default URL to render index.html
 @blueprint.route('/LucasAboutMe/')
