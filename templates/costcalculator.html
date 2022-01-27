@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+{% extends "layouts/base.html" %}
+
+{%  block body %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<h1 style="text-align:center; font-family:Times New Roman">Calculator</h1>
+<div class="calculator-grid">
+  <div class="output">
+    <div data-previous-operand class="previous-operand"></div>
+    <div data-current-operand class="current-operand"></div>
+  </div>
+  <button data-all-clear class="span-two">Clear</button>
+  <button data-delete>Delete</button>
+  <button data-operation>÷</button>
+  <button data-number>1</button>
+  <button data-number>2</button>
+  <button data-number>3</button>
+  <button data-operation>*</button>
+  <button data-number>4</button>
+  <button data-number>5</button>
+  <button data-number>6</button>
+  <button data-operation>+</button>
+  <button data-number>7</button>
+  <button data-number>8</button>
+  <button data-number>9</button>
+  <button data-operation>-</button>
+  <button data-number>.</button>
+  <button data-number>0</button>
+  <button data-equals class="span-two">=</button>
+</div>
+<div class="curosr"></div>
+
+<style>
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Times New Roman, sans-serif;
+    font-weight: normal;
+  }
+
+  body {
+    padding: 0;
+    margin: 0;
+    background-image: url("/static/assets/petfinances.jpeg");
+    background-size: cover;
+    cursor: url("pawscursor.png");
+  }
+
+  .cursor {
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    border-radius: 50%;
+    position: absolute;
+  }
+
+  .calculator-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 50vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+  }
+
+  .calculator-grid > button {
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: 7.5px solid black;
+    background-color: rgba(255, 255, 255, .75);
+  }
+
+  .calculator-grid > button:hover {
+    background-color: rgba(290, 255, 255, .9);
+  }
+
+  .span-two {
+    grid-column: span 4;
+  }
+
+  .output {
+    grid-column: 1 / -1;
+    background-color: black;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+  }
+
+  .output .previous-operand {
+    color: green;
+    font-size: 1.5rem;
+  }
+
+  .output .current-operand {
+    color: green;
+    font-size: 2.5rem;
+  }
+</style>
+
+<script>
+  class Calculator {
+    constructor(previousOperandTextElement, currentOperandTextElement) {
+      this.previousOperandTextElement = previousOperandTextElement
+      this.currentOperandTextElement = currentOperandTextElement
+      this.clear()
+    }
+
+    clear() {
+      this.currentOperand = ''
+      this.previousOperand = ''
+      this.operation = undefined
+    }
+
+    delete() {
+      this.currentOperand = this.currentOperand.toString().slice(0, -1)
+    }
+
+    appendNumber(number) {
+      if (number === '.' && this.currentOperand.includes('.')) return
+      this.currentOperand = this.currentOperand.toString() + number.toString()
+    }
+
+    chooseOperation(operation) {
+      if (this.currentOperand === '') return
+      if (this.previousOperand !== '') {
+        this.compute()
+      }
+      this.operation = operation
+      this.previousOperand = this.currentOperand
+      this.currentOperand = ''
+    }
+
+    compute() {
+      let computation
+      const prev = parseFloat(this.previousOperand)
+      const current = parseFloat(this.currentOperand)
+      if (isNaN(prev) || isNaN(current)) return
+      switch (this.operation) {
+        case '+':
+          computation = prev + current
+          break
+        case '-':
+          computation = prev - current
+          break
+        case '*':
+          computation = prev * current
+          break
+        case '÷':
+          computation = prev / current
+          break
+        default:
+          return
+      }
+      this.currentOperand = computation
+      this.operation = undefined
+      this.previousOperand = ''
+    }
+
+    getDisplayNumber(number) {
+      const stringNumber = number.toString()
+      const integerDigits = parseFloat(stringNumber.split('.')[0])
+      const decimalDigits = stringNumber.split('.')[1]
+      let integerDisplay
+      if (isNaN(integerDigits)) {
+        integerDisplay = ''
+      } else {
+        integerDisplay = integerDigits.toLocaleString('en', { maximumFractionDigits: 0 })
+      }
+      if (decimalDigits != null) {
+        return `${integerDisplay}.${decimalDigits}`
+      } else {
+        return integerDisplay
+      }
+    }
+
+    updateDisplay() {
+      this.currentOperandTextElement.innerText =
+              this.getDisplayNumber(this.currentOperand)
+      if (this.operation != null) {
+        this.previousOperandTextElement.innerText =
+                `${this.getDisplayNumber(this.previousOperand)} ${this.operation}`
+      } else {
+        this.previousOperandTextElement.innerText = ''
+      }
+    }
+  }
+
+
+  const numberButtons = document.querySelectorAll('[data-number]')
+  const operationButtons = document.querySelectorAll('[data-operation]')
+  const equalsButton = document.querySelector('[data-equals]')
+  const deleteButton = document.querySelector('[data-delete]')
+  const allClearButton = document.querySelector('[data-all-clear]')
+  const previousOperandTextElement = document.querySelector('[data-previous-operand]')
+  const currentOperandTextElement = document.querySelector('[data-current-operand]')
+
+  const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement)
+
+  numberButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      calculator.appendNumber(button.innerText)
+      calculator.updateDisplay()
+    })
+  })
+
+  operationButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      calculator.chooseOperation(button.innerText)
+      calculator.updateDisplay()
+    })
+  })
+
+  equalsButton.addEventListener('click', button => {
+    calculator.compute()
+    calculator.updateDisplay()
+  })
+
+  allClearButton.addEventListener('click', button => {
+    calculator.clear()
+    calculator.updateDisplay()
+  })
+
+  deleteButton.addEventListener('click', button => {
+    calculator.delete()
+    calculator.updateDisplay()
+  })
+
+</script>
+
+<script>
+  const cursor = document.querySelector('.cursor');
+
+  document.addEventListener('mousemove', e => {
+    cursor.setAttribute("style", "top: "+e.pageY+"px; left: "+e.pageX+"px;")
+  })
+</script>
+
+</body>
+</html>
+{% endblock %}
