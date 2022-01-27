@@ -22,3 +22,7 @@ def petpoll():
 @btanay.route('/costcalculator/')
 def costcalculator():
     return render_template('costcalculator.html')
+
+@btanay.route('/todo/')
+def todo():
+    return render_template('todo.html')
