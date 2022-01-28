@@ -3,50 +3,48 @@ from blueprint import blueprint
 import requests
 import json
 
+# create a Flask instance
 app = Flask(__name__)
-
 app.register_blueprint(blueprint)
 
-
+# connects default URL to render index.html
 @app.route('/')
 def index():
     return render_template("index.html")
+
+
+@app.route('/searchbar/')
+def search():
+    return render_template("search.html")
 
 
 @app.route('/F1Schedule/')
 def F1Schedule():
     return render_template("F1Schedule.html")
 
-
 @app.route('/FPCStarWars/')
 def FPCStarWars():
     return render_template("FPCStarWars.html")
-
 
 @app.route('/FPCToyStory/')
 def FPCToyStory():
     return render_template("FPCToyStory.html")
 
-
 @app.route('/FPCPokemon/')
 def FPCPokemon():
     return render_template("FPCPokemon.html")
-
 
 @app.route('/CollectablesGame/')
 def CollectablesGame():
     return render_template("CollectablesGame.html")
 
-
 @app.route('/Pokedex/')
 def Pokedex():
     return render_template("Pokedex.html")
 
-
 @app.route('/PokemonBattle/')
 def PokemonBattle():
     return render_template("PokemonBattle.html")
-
 
 @app.route('/Random/')
 def Random():
@@ -62,8 +60,7 @@ def funko_pop():
 def pokemon_cards():
     url = "https://pokemon-tcg-card-prices.p.rapidapi.com/card"
 
-    querystring = {"setId": "33ee55f4-30d0-4900-850f-36a351fb9719", "set": "vivid-voltage",
-                   "series": "sword-and-shield"}
+    querystring = {"setId":"33ee55f4-30d0-4900-850f-36a351fb9719","set":"vivid-voltage","series":"sword-and-shield"}
 
     headers = {
         'x-rapidapi-host': "pokemon-tcg-card-prices.p.rapidapi.com",
@@ -93,4 +90,4 @@ def page_not_found(e):
 
 # runs the application on the development server
 if __name__ == "__main__":
-    app.run(debug=True, port=8000)
+    app.run(debug=True)
