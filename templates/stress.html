@@ -1,6 +1,6 @@
 {% include "layouts/navbar.html" %}
 <title>Stress Relief</title>
-<script>
+<script>     <!-- Code from Punnu -->
     function changeVisible(id) {
 
         var element = document.getElementById(id);
@@ -31,6 +31,17 @@
   margin: 4px 2px;
   cursor: pointer;
 }
+.column {
+    float: right;
+    width: 33.33%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
 .button1 {background-color: #F5B7B1;} /* Green */
 </style>
 {%  block body %} <!-- Code from Punnu -->
@@ -57,31 +68,30 @@
                 <img src="/static/assets/colorpage.jpg" width=70%">
             </a>
         </p>
-            <div class="col-sm-6">
-                <p>
-                <p style="font-size: x-large">
-                    <button class="button button1">How are you feeling today?</button>
-                    <br>
+        </div>
+        <button class="button button1">How are you feeling today?</button>
+            <div class="column">
+                <div class="row-cols-1">
+                    <p>
                     <div class="col-sm-7">
                         <p>
-                        <p style="font size: medium">
+                        <p style="fontsize: medium">
                             <button class="button button2" onclick="changeVisible(document.getElementById('smile').id)">Calm</button>
                             <br>
                             <img id="smile" style="display:none" src="/static/assets/smileface.jpg" width=70%">
-                        <p style="font size: medium">
+                        <p style="fontsize: medium">
                             <br>
                             <button class="button button3" onclick="changeVisible(document.getElementById('sad').id)" >Sad</button>
                             <img id="sad" style="display:none" src="/static/assets/Sad_Face_Emoji_large.png" width=70%">
-                        <p style="font size: medium">
+                        <p style="fontsize: medium">
                             <br>
                             <button onclick="changeVisible(document.getElementById('smile2').id)">Happy</button>
                             <img id="smile2" style="display:none" src="/static/assets/smileface.jpg" width=70%">
                         </p>
                     </div>
-
-            </div>
-                    </a>
-                </p>
+                </div>
+                </a>
+                    </p>
             </div>
     </div>
 </div>

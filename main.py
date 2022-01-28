@@ -53,14 +53,9 @@ def search():
 def crud():
     return render_template("crud.html")
 
-@app.route('/chat')
-def chat():
-    return render_template("chat.html")
-
-
-@app.route('/async')
-def crud_async ():
-    return render_template("crud_async.html")
+@app.route('/fibonacci')
+def fibonacci():
+    return render_template("fibonacci.html")
 
 @app.route('/sonakshi', methods=['GET', 'POST'])
 def sonakshi():
