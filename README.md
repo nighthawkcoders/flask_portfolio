@@ -85,11 +85,12 @@ Our website is a website full of helpful resources for students. It will help st
 <br>
 
 ## Week 7: Due 1/28
+### <a href="https://github.com/sonakshibhalla/tri2_turtles.github.io/issues/147">Review Ticket</a>
 | Name | Requirement | Evidence |  Total Score |
 | ---  | ---         | ---      | --- |
 | Sonakshi Bhalla | PBL Feature<br>Blueprint Operations<br>Collegeboard Notes| <a href="https://github.com/sonakshibhalla/tri2_turtles.github.io/commits?author=sonakshibhalla">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2_turtles.github.io/issues/140">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2_turtles.github.io/issues/141">Ticket</a>|  /5
 | Shreya Ahuja |Trivia API<br>CRUD Database<br>Collegeboard Notes| <a href="https://github.com/sonakshibhalla/tri2_turtles.github.io/issues/131">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2_turtles.github.io/issues/139">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2_turtles.github.io/issues/141">Ticket</a>| /5
-| Punarvasu Sangam | FILL WITH PBL<br>FILL WITH PBL<br>Collegeboard Notes| <a href="">Ticket</a><br><a href="">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2_turtles.github.io/issues/142">Ticket</a>|  /5
+| Punarvasu Sangam | Carousel Images<br>Guessing Game<br>Collegeboard Notes| <a href="https://github.com/sonakshibhalla/tri2_turtles.github.io/issues/143">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2_turtles.github.io/issues/143">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2_turtles.github.io/issues/142">Ticket</a>|  /5
 | Khushi Bagri | Background Color Changer<br>Mood of the Day<br>Collegeboard Notes| <a href="https://github.com/sonakshibhalla/tri2_turtles.github.io/issues/131">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2_turtles.github.io/issues/136">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2_turtles.github.io/issues/142">Ticket</a>|  /5
 
 
