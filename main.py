@@ -53,6 +53,9 @@ def search():
 def crud():
     return render_template("crud.html")
 
+@app.route('/fibonacci')
+def fibonacci():
+    return render_template("fibonacci.html")
 
 @app.route('/sonakshi', methods=['GET', 'POST'])
 def sonakshi():

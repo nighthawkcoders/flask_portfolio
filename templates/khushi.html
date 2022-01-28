@@ -34,14 +34,17 @@
             image.src = "/static/assets/khushiimages/Khushi.jpg";
         }
     }
-    colors = ["Red", "Blue", "Green", "Yellow"];
-      //colors = ["#ff3399", "#e6001a", "#5900a6", "#9ec200","#34cfeb"];
+    colors = ["Red", "Blue", "Green", "Yellow", "Pink"];
+      //colors = ["#ff3399", "#e6001a", "#5900a6", "#9ec200","#34cfeb", "#FFC0CB"];
 
       alert("Call alert function and change window colors");
+      setBackgroundColor();
+
       /*
-      setInterval(function () {
-        alert("Hello");
-      }, 3000); //3000 milliseconds=3secs
+      setInterval(() => {
+        setBackgroundColor();
+      }, 2000);
+
       */
        var timer = window.setInterval(changeColor, 1000); //1000 milliseconds=1sec
 
