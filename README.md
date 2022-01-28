@@ -93,11 +93,11 @@
 ### Week 7 PBL Showing the How, Theme Technicals - Crossover
 |Member| PBL|
 |:-----|:----------------------|
-|Connor| [Quiz]()
-|Tanay| []()
+|Connor| [Quiz](https://github.com/connorw72/food/blob/main/templates/PetQuiz.html)
+|Tanay| [ToDo](https://github.com/connorw72/food/blob/main/templates/todo.html)
 |Pranav|[]()
-|Colin| []()
-|Chase| []()
+|Colin| [Async](https://github.com/connorw72/food/blob/main/crud/templates/crud/crud_async.html)
+|Chase| [Quiz](https://github.com/connorw72/food/blob/main/templates/PetQuiz2.html)
 
 
 
