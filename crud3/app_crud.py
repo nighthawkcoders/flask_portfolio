@@ -68,7 +68,8 @@ def create():
             request.form.get("name"),
             request.form.get("email"),
             request.form.get("password"),
-            request.form.get("phone")
+            request.form.get("phone"),
+            request.form.get("gender")
         )
         po.create()
     return redirect(url_for('crud.crud'))
@@ -135,8 +136,8 @@ def search_term():
 class UsersAPI:
     # class for create/post
     class _Create(Resource):
-        def post(self, name, email, password, phone):
-            po = Users(name, email, password, phone)
+        def post(self, name, email, password, phone, gender):
+            po = Users(name, email, password, phone, gender)
             person = po.create()
             if person:
                 return person.read()
@@ -180,11 +181,11 @@ class UsersAPI:
             return data
 
     # building RESTapi resource
-    api.add_resource(_Create, '/create/<string:name>/<string:email>/<string:password>/<string:phone>')
+    api.add_resource(_Create, '/create/<string:name>/<string:email>/<string:password>/<string:phone>/<string:gender>')
     api.add_resource(_Read, '/read/')
     api.add_resource(_ReadILike, '/read/ilike/<string:term>')
     api.add_resource(_Update, '/update/<string:email>/<string:name>')
-    api.add_resource(_UpdateAll, '/update/<string:email>/<string:name>/<string:password>/<string:phone>')
+    api.add_resource(_UpdateAll, '/update/<string:email>/<string:name>/<string:password>/<string:phone>/<string:gender>')
     api.add_resource(_Delete, '/delete/<int:userid>')
 
 

@@ -75,6 +75,8 @@
                                 <th>Tutor</th>
                                 <th>Tutors Email</th>
                                 <th>Tutor's Phone Number</th>
+                                <th>Gender</th>
+
                             </tr>
                             </thead>
                             <tbody>
@@ -91,6 +93,7 @@
                                     <td>{{ row['name'] }}</td>
                                     <td>{{ row['email'] }}</td>
                                     <td>{{ pnf }}</td>
+                                    <td>{{ row['gender'] }}</td>
                                 </tr>
                             {% endfor %}
                             </tbody>
@@ -112,6 +115,8 @@
                             <th><label for="name">Name</label></th>
                             <th><label for="email">Email</label></th>
                             <th><label for="phone">Phone</label></th>
+                            <th><label for="gender">Gender</label></th>
+
                         </tr>
                         </thead>
                         <tbody>
@@ -119,6 +124,7 @@
                             <td><input type="text" name="name" id="name" required></td>
                             <td><input type="email" name="email" id="email" placeholder="abc@xyz.org" required></td>
                             <td><input type="tel" name="phone" id="phone" pattern="[0-9]{10}" placeholder="1234567890" required></td>
+                            <td><input type="text" name="gender" id="gender" required></td>
                             <td><input type="submit" value="Create"></td>
                         </tr>
                         </tbody>
