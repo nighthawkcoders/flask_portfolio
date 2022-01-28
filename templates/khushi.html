@@ -38,14 +38,12 @@
       //colors = ["#ff3399", "#e6001a", "#5900a6", "#9ec200","#34cfeb", "#FFC0CB"];
 
       alert("Call alert function and change window colors");
-      setBackgroundColor();
-
       /*
-      setInterval(() => {
-        setBackgroundColor();
-      }, 2000);
-
+     setInterval(function () {
+        alert("Hello");
+      }, 3000); //3000 milliseconds=3secs
       */
+
        var timer = window.setInterval(changeColor, 1000); //1000 milliseconds=1sec
 
       function changeColor() {
