@@ -141,7 +141,15 @@
             </div>
         </li>
     </div>
-    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    <div class="container">
+        <div class="row">
+            <div>
+            <input type="text" class="form-control" id="term" placeholder="Search">
+            </div>
+            <button onclick="search_data();">Search</button>
+        </div>
+    </div>
+    </div> <button onclick="toggleDarkMode()">Dark Mode</button>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -164,5 +172,59 @@
         };
         xhttp.open('POST',"/darkmode",true);
         xhttp.send();
+    }
+    function search() {
+        window.location = "http://localhost:8081/searchresults/";
+    }
+
+    function search_data() {
+        window.location = "http://localhost:8081/searchresults/";
+        // fetch standard requires data set to a name-value pair
+        const term = document.getElementById("term");
+        const body = {
+            term: term.value
+        };
+
+        // fetch call with header options
+        fetch('/page/search/term/', {
+            method: "POST",
+            credentials: "include",
+            body: JSON.stringify(body),
+            cache: "no-cache",
+            headers: new Headers({
+                "content-type": "application/json"
+            })
+        })
+            // async then replies with response header
+            .then(function (response) {
+                // prepare HTML search result container for new output
+                const resultContainer = document.getElementById("result");
+                // clean up from previous search
+                while (resultContainer.firstChild) {
+                    resultContainer.removeChild(resultContainer.firstChild);
+                }
+                // trap error response from Web API
+                if (response.status !== 200) {
+                    const errorMsg = 'Database response error: ' + response.status;
+                    console.log(errorMsg);
+                    const div = document.createElement("div");
+                    div.innerHTML = errorMsg;
+                    resultContainer.appendChild(div);
+                    return;
+                }
+                // response contains valid result
+
+
+                response.json().then(function(data) {
+                    // loop through JSON and build HTML output
+                    const div = document.createElement("div");
+                    let table = "<table>"
+                    for (let i = 0; i < data.length; i++) {
+                        table += "<tr><td>" + data[i].name + "</td><td>" + data[i].display + "</td></tr>"
+                        div.innerHTML = table
+                        resultContainer.appendChild(div);
+                    }
+                })
+            })
     }
 </script>

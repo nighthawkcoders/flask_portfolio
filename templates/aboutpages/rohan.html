@@ -1,7 +1,8 @@
 {% extends "layouts/base.html" %}
 {% set project = "Rohan is so Cool" %}
 {% block body %}
-<script>
+    <script>
+    // Beanie toggle function
     beanienumber=0;
     function BeanieToggle() {
         const images = ["/static/rohanblackbeanie.jpg",
@@ -15,17 +16,36 @@
             beanienumber = 0;
         }
     }
+    // Guess Random Number Function
+    let x = Math.floor(Math.random() * 101);
     function LuckyNumber() {
         let value1 = parseInt(document.getElementById('value1').value);
-        if (value1 === 22) {
+        if (value1 === x) {
             document.getElementById('result').innerHTML = "Well Done!"
         }
-            else if (value1 > 22 ) {
+            else if (value1 > x ) {
                 document.getElementById('result').innerHTML = "Too High!"
         }
-                else if (value1 < 22) {
+                else if (value1 < x) {
                     document.getElementById('result').innerHTML = "Too Low!"
         }
+    }
+    // Show and Hide Function
+    function ShowAndHide() {
+        let x = document.getElementById('hiddentext');
+        if (x.style.display == 'none') {
+            x.style.display = 'block';
+        } else {
+            x.style.display = 'none';
+        }
+    }
+    // Answer Function
+    function AnswerFunction() {
+        let answer = document.getElementById('answer');
+        if (answer .equals("Santiago")) {
+            document.getElementById('answer1').innerHTML = "Well Done!"
+        }
+        document.getElementById('answer1').innerHTML = "Not Right!"
     }
 </script>
 <body style="background-color:orangered; height: fit-content">
@@ -53,6 +73,21 @@
         <input type="submit" onclick="LuckyNumber();">
         </br>
         <p id="result"> </p>
+
+    <button onclick="ShowAndHide()">$100</button>
+    <div class="container" id="hiddentext" style="display:none">This is the capital city of Chile
+    <br>
+    <label for="answer">What is the answer?</label>
+    <input id="answer" type="text" />
+    <input type="submit" onclick="AnswerFunction();">
+    <p id="answer1"> </p>
+    </div>
+    </br>
+{#    <input  id="answer" type="text" />#}
+{#    <input type="submit" onclick="AnswerFunction();">#}
+{#    </br>#}
+{#    <p id="answer1"> </p>#}
+{#    </br>#}
     </div>
     <style>
     table, td, th {
@@ -75,25 +110,25 @@
     </div>
 
     {% set players = data.data%}
-    <div class="col-12 mainbox center-block">
-        <table style="margin: 2%">
-            <tr>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Position</th>
-            </tr>
-
-        {% for player in players %}
-            <tr>
-                <td>{{player.first_name}}</td>
-                <td>{{player.last_name}}</td>
-                <td>{{player.position}}</td>
-            </tr>
-
-        {% endfor %}
-        </table>
-
-    </div>
+{#    <div class="col-12 mainbox center-block">#}
+{#        <table style="margin: 2%">#}
+{#            <tr>#}
+{#                <th>First Name</th>#}
+{#                <th>Last Name</th>#}
+{#                <th>Position</th>#}
+{#            </tr>#}
+{##}
+{#        {% for player in players %}#}
+{#            <tr>#}
+{#                <td>{{player.first_name}}</td>#}
+{#                <td>{{player.last_name}}</td>#}
+{#                <td>{{player.position}}</td>#}
+{#            </tr>#}
+{##}
+{#        {% endfor %}#}
+{#        </table>#}
+{##}
+{#    </div>#}
 
 </div>
 {% endblock %}

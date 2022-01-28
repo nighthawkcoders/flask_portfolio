@@ -1,0 +1,43 @@
+{% extends "layouts/base.html" %}
+{% block body %}
+    <script>
+        function search_page() {
+            let input = document.getElementById('searchbar').value
+            input=input.toLowerCase();
+            let x = document.getElementsByClassName('pages');
+
+            for (i = 0; i < x.length; i++) {
+                if (!x[i].innerHTML.toLowerCase().includes(input)) {
+                    x[i].style.display="none";
+                }
+                else {
+                    x[i].style.display="list-item";
+                }
+            }
+        }
+    </script>
+    <body>
+    <h1 style="text-align: center">Search Test</h1>
+    <div class="container">
+    <input id="searchbar" onkeyup="search_page()" type="text"
+           name="search" placeholder="Search Pages">
+
+    <!-- ordered list -->
+    <ol id='list'>
+        <li class="pages">Rohan About</li>
+        <li class="pages">Adi About</li>
+        <li class="pages">Elephant</li>
+        <li class="pages">Fish</li>
+        <li class="pages">Gorilla</li>
+        <li class="pages">Monkey</li>
+        <li class="pages">Turtle</li>
+        <li class="pages">Whale</li>
+        <li class="pages">Alligator</li>
+        <li class="pages">Donkey</li>
+        <li class="pages">Horse</li>
+    </ol>
+    </div>
+    </body>
+{% endblock %}
+
+

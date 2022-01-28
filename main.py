@@ -41,10 +41,13 @@ tictactoearray=[["","",""],["","",""],["","",""]]
 def index():
     return render_template("index.html", darkmode=darkmode)
 
-@app.route('/places/')
-def places():
-    return render_template("places.html", darkmode=darkmode)
+@app.route('/searchresults/')
+def searchresults():
+    return render_template("searchresults.html", darkmode=darkmode)
 
+@app.route('/searchtest/')
+def searchtest():
+    return render_template("searchtest.html", darkmode=darkmode)
 
 @app.route('/photogallery', methods=['GET', 'POST'])
 def photogallery():

@@ -15,6 +15,8 @@ darkmode="darkmode"
 def places():
     return render_template("places.html", darkmode=darkmode)
 
+
+
 @travel_pg.route('/weather/', methods=['GET','POST'])
 def weather():
     try:
