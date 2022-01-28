@@ -1,6 +1,6 @@
-from flask import Blueprint
+from flask import Blueprint, render_template
 
-blueprint = Blueprint('example_blueprint', __name__)
+blueprint = Blueprint('blueprint', __name__)
 
 @blueprint.route('/sonakshi')
 def sonakshi():
