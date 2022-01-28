@@ -45,6 +45,13 @@
         </tr>
     </table>
     <div id="message">Player x's turn.</div>
+
+    <form action="/minigames" method="POST" class="form">
+        <input type="text" placeholder="Enter a word" name='word1'>
+        <input type="text" placeholder="Enter a word" name='word2'>
+        <button type="submit">Get the number of letter differences</button>
+    </form>
+    <div>{{result}}</div>
 </body>
 <style>
     td{

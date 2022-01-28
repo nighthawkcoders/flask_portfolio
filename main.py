@@ -72,6 +72,19 @@ def fetchdemo():
 
 @app.route('/minigames', methods=['GET', 'POST'])
 def minigames():
+    if request.form:
+        word1 = request.form.get("word1")
+        word2 = request.form.get("word2")
+        if len(word1) < len(word2):
+            shorterlen = len(word1)
+            difference = len(word2) - len(word1)
+        else:
+            shorterlen = len(word2)
+            difference = len(word1) - len(word2)
+        for x in range(0, shorterlen):
+            if word1[x] != word2[x]:
+                difference += 1
+        return render_template("pbl/minigames.html", result=difference, darkmode=darkmode)
     return render_template("pbl/minigames.html", darkmode=darkmode)
 
 @app.route('/darkmode', methods=['GET', 'POST'])
