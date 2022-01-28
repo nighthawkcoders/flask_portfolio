@@ -26,6 +26,9 @@ app.register_blueprint(app_database)
 from flight.app_flight import app_flight
 app.register_blueprint(app_flight)
 
+from page.app_page import app_page
+app.register_blueprint(app_page)
+
 from crud.app_crud_api import app_crud_api
 app.register_blueprint(app_crud_api)
 
