@@ -2,11 +2,14 @@
 from flask import Flask, render_template
 from flask import request
 from __init__ import app
-from crud.app_crud import app_crud
 import requests, random
+
+from crud.app_crud_api import app_crud_api
+app.register_blueprint(app_crud_api)
 
 # create a Flask instance
 # app = Flask(__name__)
+from crud.app_crud import app_crud
 app.register_blueprint(app_crud)
 
 
@@ -78,11 +81,15 @@ def translator():
         print(response.text)
         dictionary = [response.json().get('responseData')]
         master_list = master_list + dictionary
-    return render_template("layouts/translator.html", dictionary=master_list, original=original)
+    return render_template("translator.html", dictionary=master_list, original=original)
 
 @app.route('/crud')
 def crud():
     return render_template("crud.html")
+
+@app.route('/crud_api')
+def crud_async():
+    return render_template("crud_async.html")
 
 @app.route('/search')
 def search():
@@ -107,7 +114,7 @@ def weather():
         dictionarymasterlist = dictionarymasterlist + list_of_dictionaries2
     print('WEATHER INFO')
     print(dictionarymasterlist)
-    return render_template("layouts/weather.html", weather=dictionarymasterlist)
+    return render_template("weather.html", weather=dictionarymasterlist)
 fivestars_list = []
 fourstars_list = []
 threestars_list = []
