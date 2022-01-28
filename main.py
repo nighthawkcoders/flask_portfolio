@@ -81,7 +81,7 @@ def translator():
         print(response.text)
         dictionary = [response.json().get('responseData')]
         master_list = master_list + dictionary
-    return render_template("translator.html", dictionary=master_list, original=original)
+    return render_template("layouts/translator.html", dictionary=master_list, original=original)
 
 @app.route('/crud')
 def crud():
@@ -114,7 +114,7 @@ def weather():
         dictionarymasterlist = dictionarymasterlist + list_of_dictionaries2
     print('WEATHER INFO')
     print(dictionarymasterlist)
-    return render_template("weather.html", weather=dictionarymasterlist)
+    return render_template("layouts/weather.html", weather=dictionarymasterlist)
 fivestars_list = []
 fourstars_list = []
 threestars_list = []
@@ -260,8 +260,8 @@ def graph():
 def projectgreen():
     return render_template("projectgreen.html")
 
-@app.route('/countryinfo')
-def countryinfo():
+@app.route('/faq')
+def faq():
     return render_template("faq.html")
 
 # runs the application on the development server
