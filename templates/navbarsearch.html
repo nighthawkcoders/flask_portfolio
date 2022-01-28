@@ -1,0 +1,86 @@
+{% extends "layouts/base.html" %}
+
+{% set project = "Search Results" %}
+{% block head %}
+    <title>Search Results</title>
+{% endblock %}
+{% block body %}
+    <style>
+        table, td, th {
+            border: 10px solid rgb(100, 0, 255);
+            padding: 50px;
+        }
+        td, th {
+            text-align:center;
+            color: #000000;
+            font-weight: bolder;
+            text-decoration-line: underline;
+        }
+        table{
+            width: 300%;
+            margin: auto;
+        }
+        body, html {
+            height: 2000px;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+    <body onload="search_navbar('{{navbarsearch}}')" style="background-color: aquamarine"></body>
+    <h1 style="text-align: center; color: black;" >Search Results</h1>
+    <div class="container">
+        <div class="row" id="result">
+        </div>
+    </div>
+
+    <script>
+        function search_navbar(navbarsearch) {
+            // fetch standard requires data set to a name-value pair
+            const body = {
+                term: navbarsearch
+            };
+
+            // fetch call with header options
+            fetch('/page/search/term/', {
+                method: "POST",
+                body: JSON.stringify(body),
+                cache: "no-cache",
+                headers: new Headers({
+                    "content-type": "application/json"
+                })
+            })
+                // async then replies with response header
+                .then(function (response) {
+                    // prepare HTML search result container for new output
+                    const resultContainer = document.getElementById("result");
+                    // clean up from previous search
+                    while (resultContainer.firstChild) {
+                        resultContainer.removeChild(resultContainer.firstChild);
+                    }
+                    // trap error response from Web API
+                    if (response.status !== 200) {
+                        const errorMsg = 'Database response error: ' + response.status;
+                        console.log(errorMsg);
+                        const div = document.createElement("div");
+                        div.innerHTML = errorMsg;
+                        resultContainer.appendChild(div);
+                        return;
+                    }
+                    // response contains valid result
+
+
+                    response.json().then(function(data) {
+                        // loop through JSON and build HTML output
+                        const div = document.createElement("div");
+                        let table = "<table>"
+                        for (let i = 0; i < data.length; i++) {
+                            table += "<tr><td>" + data[i].name + "</td><td>" + data[i].display + "</td></tr>"
+                            div.innerHTML = table
+                            resultContainer.appendChild(div);
+                        }
+                    })
+                })
+        }
+    </script>
+
+{% endblock %}

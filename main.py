@@ -41,9 +41,12 @@ tictactoearray=[["","",""],["","",""],["","",""]]
 def index():
     return render_template("index.html", darkmode=darkmode)
 
-@app.route('/searchresults/')
-def searchresults():
-    return render_template("searchresults.html", darkmode=darkmode)
+@app.route('/navbarsearch', methods=['GET', 'POST'])
+def navbarsearch():
+    if request.form:
+        term = request.form.get("term")
+        if len(term) != 0:
+            return render_template("navbarsearch.html", navbarsearch=term, darkmode=darkmode)
 
 @app.route('/searchtest/')
 def searchtest():
@@ -61,17 +64,17 @@ def photogallery():
 def location():
     url = "http://127.0.0.1:8081/api/location"
     response = requests.request("GET", url)
-    return render_template("location.html", location=response.json(), darkmode=darkmode)
+    return render_template("pbl/location.html", location=response.json(), darkmode=darkmode)
 
 @app.route('/locations', methods=['GET', 'POST'])
 def locations():
     url = "http://127.0.0.1:8081/api/locations"
     response = requests.request("GET", url)
-    return render_template("locations.html", locations=response.json(), darkmode=darkmode)
+    return render_template("pbl/locations.html", locations=response.json(), darkmode=darkmode)
 
 @app.route('/fetchdemo', methods=['GET', 'POST'])
 def fetchdemo():
-    return render_template("fetchdemo.html", darkmode=darkmode)
+    return render_template("pbl/fetchdemo.html", darkmode=darkmode)
 
 @app.route('/minigames', methods=['GET', 'POST'])
 def minigames():

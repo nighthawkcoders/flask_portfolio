@@ -13,7 +13,7 @@ darkmode="darkmode"
 
 @travel_pg.route('/places/')
 def places():
-    return render_template("places.html", darkmode=darkmode)
+    return render_template("pbl/places.html", darkmode=darkmode)
 
 
 
