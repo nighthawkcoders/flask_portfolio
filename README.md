@@ -79,8 +79,19 @@ Our website is a website full of helpful resources for students. It will help st
 - <a href="https://github.com/sonakshibhalla/tri2turtles/blob/main/README.md#week-3-due-1216">Week 3</a>
 - <a href = "https://github.com/sonakshibhalla/tri2turtles/blob/main/README.md#week-4-due-17">Week 4</a>
 - <a href = "https://github.com/sonakshibhalla/tri2turtles/blob/main/README.md#week-5-due-114">Week 5</a>
+- <a href = "https://github.com/sonakshibhalla/tri2turtles/blob/main/README.md#week-7-due-128">Week 7</a>
+
 
 <br>
+
+## Week 7: Due 1/28
+| Name | Requirement | Evidence |  Total Score |
+| ---  | ---         | ---      | --- |
+| Sonakshi Bhalla | PBL Feature<br>Blueprint Operations<br>Collegeboard Notes| <a href="">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2_turtles.github.io/issues/140">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2_turtles.github.io/issues/141">Ticket</a>|  /5
+| Shreya Ahuja |Trivia API<br>CRUD Database<br>Collegeboard Notes| <a href="https://github.com/sonakshibhalla/tri2_turtles.github.io/issues/131">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2_turtles.github.io/issues/139">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2_turtles.github.io/issues/141">Ticket</a>| /5
+| Punarvasu Sangam | FILL WITH PBL<br>FILL WITH PBL<br>Collegeboard Notes| <a href="">Ticket</a><br><a href="">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2_turtles.github.io/issues/142">Ticket</a>|  /5
+| Khushi Bagri | FILL WITH PBL<br>FILL WITH PBL<br>Collegeboard Notes| <a href="https://github.com/sonakshibhalla/tri2_turtles.github.io/issues/131">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2_turtles.github.io/issues/136">Ticket</a><br><a href="https://github.com/sonakshibhalla/tri2_turtles.github.io/issues/142">Ticket</a>|  /5
+
 
 ## Week 5: Due 1/14
 | Name | Requirement | Evidence |  Total Score |
