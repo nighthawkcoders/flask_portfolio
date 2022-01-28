@@ -1,0 +1,95 @@
+{% extends "layouts/base.html" %}
+
+{% block body %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table id="tictactoe">
+        <tr>
+            <td onclick="move(0, 0)">
+
+            </td>
+            <td onclick="move(0, 1)">
+
+            </td>
+            <td onclick="move(0, 2)">
+
+            </td>
+        </tr>
+        <tr>
+            <td onclick="move(1, 0)">
+
+            </td>
+            <td onclick="move(1, 1)">
+
+            </td>
+            <td onclick="move(1, 2)">
+
+            </td>
+        </tr>
+        <tr>
+            <td onclick="move(2, 0)">
+
+            </td>
+            <td onclick="move(2, 1)">
+
+            </td>
+            <td onclick="move(2, 2)">
+
+            </td>
+        </tr>
+    </table>
+    <div id="message">Player x's turn.</div>
+</body>
+<style>
+    td{
+        border-style: solid;
+        height:100px;
+        width:100px
+    }
+</style>
+</html>
+
+<script>
+    var player = "x";
+    var grid = [["","",""],["","",""],["","",""]];
+    function move(x, y) {
+        if (grid[x][y] == "") {
+            grid[x][y] = player;
+            document.getElementById("tictactoe").rows[x].cells[y].innerText = player;
+        }
+        let row1 = grid[0][0] == grid[0][1] && grid[0][0] == grid[0][2] && grid[0][0] != "";
+        let row2 = grid[1][0] == grid[1][1] && grid[1][0] == grid[1][2] && grid[1][0] != "";
+        let row3 = grid[2][0] == grid[2][1] && grid[2][0] == grid[2][2] && grid[2][0] != "";
+        let column1 = grid[0][0] == grid[1][0] && grid[1][0] == grid[2][0] && grid[0][0] != "";
+        let column2 = grid[0][1] == grid[1][1] && grid[1][1] == grid[2][1] && grid[0][1] != "";
+        let column3 = grid[0][2] == grid[1][2] && grid[1][2] == grid[2][2] && grid[0][2] != "";
+        let diagonal1 = grid[0][0] == grid[1][1] && grid[1][1] == grid[2][2] && grid[0][0] != "";
+        let diagonal2 = grid[0][2] == grid[1][1] && grid[1][1] == grid[2][0] && grid[0][2] != "";
+        if (row1 || row2 || row3 || column1 || column2 || column3 || diagonal1 || diagonal2) {
+            document.getElementById("message").innerText = "Player " + player + " wins!";
+        } else {
+            if (player == "x") {
+                player = "o";
+            } else {
+                player = "x";
+            }
+            document.getElementById("message").innerText = "Player " + player + "'s turn.";
+        }
+        for (let i = 0; i < 3; i++) {
+            for (let j = 0; j < 3; j++) {
+                if (grid[i][j] == "") {
+                    return;
+                }
+            }
+        }
+        document.getElementById("message").innerText = "Tie game!";
+    }
+</script>
+
+{% endblock %}

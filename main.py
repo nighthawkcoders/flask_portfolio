@@ -30,6 +30,8 @@ from crud.app_crud_api import app_crud_api
 app.register_blueprint(app_crud_api)
 
 darkmode="darkmode"
+
+tictactoearray=[["","",""],["","",""],["","",""]]
 # connects default URL to render index.html
 
 @app.route('/')
@@ -64,6 +66,10 @@ def locations():
 @app.route('/fetchdemo', methods=['GET', 'POST'])
 def fetchdemo():
     return render_template("fetchdemo.html", darkmode=darkmode)
+
+@app.route('/minigames', methods=['GET', 'POST'])
+def minigames():
+    return render_template("pbl/minigames.html", darkmode=darkmode)
 
 @app.route('/darkmode', methods=['GET', 'POST'])
 def toggleDarkMode():
