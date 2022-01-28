@@ -25,6 +25,7 @@
                     <a class="dropdown-item" href="/mainabout">Rankings</a>
                     <a class="dropdown-item" href="/mainabout">Activities</a>
                     <a class="dropdown-item" href="/weather">Weather</a>
+                    <a class="dropdown-item" href="crud_api">Crud async</a>
                     <a class="dropdown-item" href="/crud">Crud</a>
                     <a class="dropdown-item" href="/search">Search</a>
                     <a class="dropdown-item" href="/ratingtest">Rating</a>
@@ -39,21 +40,104 @@
         </ul>
 
     </div>
-<div class="float-right m-2">
-    <div class="btn-group">
-        <!-- Clock display -->
-        <div class="px-3 text-dark">
-            <span id="clock"></span>
+    <div class="float-right m-2">
+        <div class="form-group">
+            <input type="text" class="form-control" id="term" placeholder="enter search term">
+            <label></label> <!-- used for spacer -->
         </div>
-        <!-- Dark mode action -->
-        <div class="form-check form-switch">
-            <input type="checkbox" onclick="darkFunction()" class="form-check-input" id="darkSwitch">
-            <label class="custom-control-label" for="darkSwitch" style="color: black;">Dark Mode</label>
+        <button class="btn btn-primary bg-secondary" onclick="search_data();">Search</button>
+        <div class="btn-group">
+            <!-- Clock display -->
+            <div class="px-3 text-dark">
+                <span id="clock"></span>
+            </div>
+            <!-- Dark mode action -->
+            <div class="form-check form-switch">
+                <input type="checkbox" onclick="darkFunction()" class="form-check-input" id="darkSwitch">
+                <label class="custom-control-label" for="darkSwitch" style="color: black;">Dark Mode</label>
+            </div>
         </div>
+        {% block navbar_script %}
+            <!-- Navigation bar JavaScript support -->
+            <script src={{  url_for("static", filename="/navbar.js", version='140') }}></script>
+        {% endblock %}
     </div>
-    {% block navbar_script %}
-        <!-- Navigation bar JavaScript support -->
-        <script src={{  url_for("static", filename="/navbar.js", version='140') }}></script>
-    {% endblock %}
-</div>
 </nav>
+<script>
+    function search_data() {
+        // fetch standard requires data set to a name-value pair
+        const term = document.getElementById("term");
+        const body = {
+            term: term.value
+        };
+
+        // fetch call with header options
+        fetch('/crud/search/term/', {
+            method: "POST",
+            credentials: "include",
+            body: JSON.stringify(body),
+            cache: "no-cache",
+            headers: new Headers({
+                "content-type": "application/json"
+            })
+        })
+            // async then replies with response header
+            .then(function (response) {
+                // prepare HTML search result container for new output
+                const resultContainer = document.getElementById("result");
+                // clean up from previous search
+                while (resultContainer.firstChild) {
+                    resultContainer.removeChild(resultContainer.firstChild);
+                }
+                // trap error response from Web API
+                if (response.status !== 200) {
+                    const errorMsg = 'Database response error: ' + response.status;
+                    console.log(errorMsg);
+                    const div = document.createElement("div");
+                    div.className = "row";
+                    div.innerHTML = errorMsg;
+                    resultContainer.appendChild(div);
+                    return;
+                }
+                // response contains valid result
+                response.json().then(function (data) {
+                    // LOGIC
+                    var i, switching, shouldSwitch;
+                    switching = true;
+                    /* Make a loop that will continue until
+                    no switching has been done: */
+                    while (switching) {
+                        // Start by saying: no switching is done:
+                        switching = false;
+                        // Loop through all list items:
+                        for (i = 0; i < (data.length - 1); i++) {
+                            // Start by saying there should be no switching:
+                            shouldSwitch = false;
+                            /* Check if the next item should
+                            switch place with the current item: */
+                            if (data[i].name.innerHTML > data[i + 1].name.innerHTML) {
+                                /* If next item is alphabetically lower than current item,
+                                mark as a switch and break the loop: */
+                                shouldSwitch = true;
+                                break;
+                            }
+                        }
+                        if (shouldSwitch) {
+                            /* If a switch has been marked, make the switch
+                            and mark the switch as done: */
+                            data[i].parentNode.insertBefore(data[i + 1], data[i]);
+                            switching = true;
+                        }
+                    }
+                    // loop through JSON and build HTML output
+                    for (let i = 0; i < data.length; i++) {
+                        const div = document.createElement("div");
+                        div.className = "row";
+                        div.innerHTML = data[i].name + ' ' + data[i].email;
+                        div.id = data[i].name;
+                        resultContainer.appendChild(div);
+                    }
+                })
+            })
+    }
+</script>
