@@ -12,17 +12,22 @@ inspiration from https://www.youtube.com/watch?v=QKcVjdLEX_s
 {% block body %}
     <style>
         table, td, th {
-            border: 10px solid #dc704b;
+            border: 10px solid rgb(176, 224, 230);
             padding: 50px;
         }
         td, th {
             text-align:center;
-            color: #dc704b;
+            color: #000000;
+            font-weight: bolder;
+            text-decoration-line: underline;
         }
         table{
-            width: 100%;
+            width: 300%;
             margin: auto;
         }
+        {#tr:nth-child(even) {#}
+        {#    background-color: #f2f2f2;#}
+        {#}#}
     </style>
     <body style="background-color:powderblue; height: 2000px">
     <div class="container py-4 bg-primary">
@@ -62,7 +67,7 @@ inspiration from https://www.youtube.com/watch?v=QKcVjdLEX_s
             };
 
             // fetch call with header options
-            fetch('/crud/search/term/', {
+            fetch('/page/search/term/', {
                 method: "POST",
                 credentials: "include",
                 body: JSON.stringify(body),
@@ -96,7 +101,7 @@ inspiration from https://www.youtube.com/watch?v=QKcVjdLEX_s
                         const div = document.createElement("div");
                         let table = "<table>"
                         for (let i = 0; i < data.length; i++) {
-                            table += "<tr><td>"+data[i].name+"</td><td>"+data[i].email+"</td><td>"+data[i].password+"</td></tr>"
+                            table += "<tr><td>" + data[i].name + "</td><td>" + data[i].display + "</td></tr>"
                             div.innerHTML = table
                             resultContainer.appendChild(div);
                         }
