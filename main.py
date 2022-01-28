@@ -245,6 +245,17 @@ def numberguess():
 def games():
     return render_template("games.html")
 
+@app.route('/graph')
+def graph():
+    return render_template("graph.html")
+
+@app.route('/projectgreen')
+def projectgreen():
+    return render_template("projectgreen.html")
+
+@app.route('/countryinfo')
+def countryinfo():
+    return render_template("faq.html")
 
 # runs the application on the development server
 if __name__ == "__main__":
