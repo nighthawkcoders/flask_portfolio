@@ -70,7 +70,7 @@ def translator():
         text = request.form.get("tester2")
         original = text
     for item in pairs:
-        querystring = {"langpair":item,"q":text,"mt":"1","onlyprivate":"0","de":"a@b.c"}
+        querystring = {"langpair":item,"q":text , "mt":"1","onlyprivate":"0","de":"a@b.c"}
 
         headers = {
             'x-rapidapi-host': "translated-mymemory---translation-memory.p.rapidapi.com",
@@ -86,6 +86,67 @@ def translator():
 @app.route('/crud')
 def crud():
     return render_template("crud.html")
+
+@app.route('/population', methods=['GET', 'POST'])
+def population():
+    CountryList = [
+        'China',
+        'India',
+        'United States',
+        'Indonesia',
+        'Pakistan',
+        'Brazil',
+        'Nigeria',
+        'Bangladesh',
+        'Russia',
+        'Mexico',
+        'Japan',
+        'Ethiopia',
+        'Philippines',
+        'Egypt',
+        'Vietnam',
+        'DR Congo',
+        'Turkey',
+        'Iran',
+        'Germany',
+        'Thailand',
+        'United Kingdom',
+        'France',
+        'Italy',
+        'Tanzania',
+        'South Africa'
+    ]  # this creates an empty list of all the country names
+    top10 = [
+        'China',
+        'India',
+        'United States',
+        'Indonesia',
+        'Pakistan',
+        'Brazil',
+        'Nigeria',
+        'Bangladesh',
+        'Russia',
+        'Mexico']
+
+    headers = {
+        'x-rapidapi-host': 'world-population.p.rapidapi.com',
+        'x-rapidapi-key': 'f4480562c7mshcfebe0975d4fd48p16ab77jsnae6575329780'
+    }
+
+    # get all the data for each country
+    dictionarymasterlist = []  # this creates an empty list that all the dictionaries go into
+    url = "https://world-population.p.rapidapi.com/population"
+
+    CountryList = top10
+    for item in CountryList:
+        querystring = {"country_name": item}
+        response = requests.request("GET", url, headers=headers, params=querystring)
+
+        list_of_dictionaries2 = response.json().get('body')
+        dictionarymasterlist = dictionarymasterlist + [list_of_dictionaries2]
+
+
+    return render_template("layouts/population.html", people=dictionarymasterlist)
 
 @app.route('/crud_api')
 def crud_async():

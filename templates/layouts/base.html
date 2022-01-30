@@ -85,7 +85,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
         <div class="row" style="padding: 10%; padding-top: 0%; padding-bottom: 5%;">
 
             <div class="col-8" >
-                <p style="font-size: 20px; ">Welcome to Global Networking! Have you ever wanted to learn more about a certain country by exploring their diverse cultures, traditions, or maybe find fun things to do when you book your next vacation trip? How about having the convenience of using our language translator to help you communicate with others in a foreign country? Here you will find recent information about several countries around the world. Learn about us, new languages, different cultures, interesting facts about the environment, and recent statistics in the form of API databases on our virtual site. If you would like to begin, you could start by exploring our dropdown menus or by clicking a country down below, which will direct you to a separate page. </p>
+                <p style= "font-size: 20px; margin-left: 0px ; ">Welcome to Global Networking! Have you ever wanted to learn more about a certain country by exploring their diverse cultures, traditions, or maybe find fun things to do when you book your next vacation trip? How about having the convenience of using our language translator to help you communicate with others in a foreign country? Here you can Learn about us, new languages, different cultures, interesting facts about the environment, and recent statistics in the form of API databases on our virtual site. If you would like to begin, you could start by viewing our dropdown menus or by clicking a country down below, which will direct you to a separate page.</p>
             </div>
 
         </div>
@@ -104,11 +104,11 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 
     </div>
 </div>
-    <body style= "background-image: url('/static/assets/city.jpg'); background-repeat: no-repeat; background-size: cover;">
-{% endblock %}
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
 </body>
 
+<body style= "background-image: url('/static/assets/city.jpg'); background-repeat: no-repeat; background-size: cover;">
+       {% endblock %}
+       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
 
 </html>

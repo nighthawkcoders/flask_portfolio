@@ -6,9 +6,32 @@
     <meta charset="UTF-8">
     <title>Project Green</title>
 </head>
-{%  block body %}
-    <body style= "background-image: url('/static/assets/mapp.png'); background-repeat: no-repeat; background-size: cover;">
 
+{% block body %}
+    <style>
+
+        .world {
+            background-image: url('/static/assets/mapp.png') ;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            width: 1150px;
+            height: 570px;
+        }
+        .aboutGlobal{
+            cursor:pointer;
+            width: 1440px;
+            height: 714px;
+        }
+
+    </style>
+
+    <body>
+    <div class = "col-12">
+            <h1>Interactive Map</h1>
+            <div class="fa aboutGlobal world">
+            </div>
+    </div>
     </body>
 {% endblock %}
 </html>
