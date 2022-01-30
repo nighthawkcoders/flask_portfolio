@@ -1,6 +1,5 @@
 # import "packages" from flask
 
-from pathlib import Path
 
 from flask import Flask, render_template, request
 import requests
