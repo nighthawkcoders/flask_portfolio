@@ -119,7 +119,7 @@
         }
     </style>
 </head>
-<form action="/hotels/" method="POST" class="form">
+<form action="/travel/hotels/" method="POST" class="form">
     <input type="text" placeholder="Enter location" name='keyword'>
     <button type="submit">Get Hotels</button>
 </form>
@@ -131,17 +131,23 @@
     </tr>
     {% for suggestion in results.suggestions %}
         {% for entities in suggestion.entities %}
-            <tr class="list-group-item list-group-item-action d-flex gap-3 py-3">
-                <td onclick="window.open('http://maps.google.com/maps?q={{entities.latitude}},{{entities.longitude}}')">
+            <tr class="list-group-item list-group-item-action d-flex gap-3 py-3" onclick="changeIframeSource('https://www.google.com/maps/embed/v1/place?key=AIzaSyAc03w7gE3UjhFJyRGoCVvD6xbQzOKMyEI&q={{entities.latitude}},{{entities.longitude}}')">
+                <td>
                     {{entities.name}}
                 </td>
             </tr>
         {% endfor %}
     {% endfor %}
 </table>
-<!--<iframe id="hotelLocation">-->
-
-<!--</iframe>-->
+<iframe
+        id="hotelLocation"
+        width="600"
+        height="450"
+        style="border:0"
+        loading="lazy"
+        allowfullscreen
+        src="">
+</iframe>
 </body>
 </html>
 
@@ -165,7 +171,7 @@
     //
     // function darkModeOff() {
     //     document.body.classList.remove("dark-mode");
-    }
+    // }
     function changeIframeSource(newurl) {
         document.getElementById("hotelLocation").src=newurl;
     }
