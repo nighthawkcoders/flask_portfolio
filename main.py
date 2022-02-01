@@ -317,9 +317,9 @@ def games():
 def graph():
     return render_template("graph.html")
 
-@app.route('/projectgreen')
-def projectgreen():
-    return render_template("projectgreen.html")
+@app.route('/countries')
+def countries():
+    return render_template("countries.html")
 
 @app.route('/faq')
 def faq():

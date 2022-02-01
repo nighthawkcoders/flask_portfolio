@@ -319,7 +319,7 @@ def graph():
 
 @app.route('/projectgreen')
 def projectgreen():
-    return render_template("projectgreen.html")
+    return render_template("countries.html")
 
 @app.route('/faq')
 def faq():
