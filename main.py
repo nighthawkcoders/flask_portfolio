@@ -1,11 +1,16 @@
 from flask import Flask, render_template
 from blueprint import blueprint
+from __init__ import app
 import requests
 import json
 
+# import app_crud (database stuff)
+from crud.app_crud import app_crud
+
 # create a Flask instance
-app = Flask(__name__)
+
 app.register_blueprint(blueprint)
+app.register_blueprint(app_crud)
 
 # connects default URL to render index.html
 @app.route('/')

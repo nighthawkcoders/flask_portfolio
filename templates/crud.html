@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 
 <!-- EXTEND (layout.html), this is a template for all rendered pages in the project -->
-{% extends "layout.html" %}
+{% extends "layouts/base.html" %}
 
 <!-- CONTENT (in <head>), content for this page -->
-{% block meta %}
+{% block body %}
 <title>CRUD page</title>
 <script src={{  url_for("crud.static", filename="javascript/validation.js", version='101') }}></script>
 <script src={{  url_for("crud.static", filename="javascript/reload_page.js", version='101') }}></script>
-{% endblock %}
 
-<!-- CONTENT (in <body>), content for this page -->
-{% block content %}
 <div class="container py-4 text-light bg-success">
   <header class="pb-3 mb-4 border-bottom">
     <div class="d-flex align-items-center text-light text-decoration-none">

@@ -1,7 +1,7 @@
 """control dependencies to support CRUD app routes and APIs"""
 from flask import Blueprint, render_template, request, url_for, redirect, jsonify, make_response
 
-from crud.sql import *
+from model import Users
 
 # blueprint defaults https://flask.palletsprojects.com/en/2.0.x/api/#blueprint-objects
 app_crud = Blueprint('crud', __name__,
@@ -15,6 +15,28 @@ app_crud = Blueprint('crud', __name__,
     2.) app routes for CRUD (Blueprint)
 """
 
+''' Users table queries '''
+
+# User/Users extraction from SQL
+def users_all():
+    """converts Users table into JSON list """
+    return [peep.read() for peep in Users.query.all()]
+
+
+def users_ilike(term):
+    """filter Users table by term into JSON list """
+    term = "%{}%".format(term)  # "ilike" is case insensitive and requires wrapped  %term%
+    table = Users.query.filter((Users.name.ilike(term)) | (Users.userID.ilike(term)))
+    return [peep.read() for peep in table]
+
+
+# User extraction from SQL
+def user_by_id(userid):
+    """finds User in table matching userid """
+    return Users.query.filter_by(userID=userid).first()
+
+
+'''app route section'''
 
 # Default URL
 @app_crud.route('/')
