@@ -4,4 +4,4 @@ blueprint = Blueprint('blueprint', __name__)
 
 @blueprint.route('/sonakshi')
 def sonakshi():
-    return render_template("sonakshi.html")
+    return render_template("team/sonakshi.html")
