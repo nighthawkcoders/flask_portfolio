@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% block head %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pet API</title>
+</head>
+{& endblock %}
+{% block body %}
+<body>
+<div class="row justify-content-md-center">
+    <table class="table">
+        <tr class="image">
+            <th> Pets </th>
+        </tr>
+        {% for item in data2 %}
+        <tr class="image">
+            <td>{{ item.total_pets }}</td>
+        </tr>
+        {% endfor %}
+        </td>
+    </table>
+</div>
+</body>
+</html>
+{% endblock %}
