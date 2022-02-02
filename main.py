@@ -62,10 +62,6 @@ def crud():
 def fibonacci():
     return render_template("fibonacci.html")
 
-@app.route('/feedback')
-def feedback():
-    return render_template("feedback.html")
-
 @app.route('/sonakshi', methods=['GET', 'POST'])
 def sonakshi():
     # submit button has been pushed
