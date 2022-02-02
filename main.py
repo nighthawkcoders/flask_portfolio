@@ -21,6 +21,13 @@ app.register_blueprint(app_crud)
 def home():
     return render_template("home.html")
 
+@app.route('/anikaCraft')
+def anikaCraft():
+    return render_template("crossTeam/anikaCraft.html")
+
+@app.route('/nehaAPI')
+def nehaAPI():
+    return render_template("crossTeam/nehaAPI.html")
 
 @app.route('/dark')
 def dark():
@@ -65,9 +72,9 @@ def sonakshi():
     if request.form:
         name = request.form.get("name")
         if len(name) != 0:  # input field has content
-            return render_template("sonakshi.html", name=name)
+            return render_template("team/sonakshi.html", name=name)
     # starting and empty input default
-    return render_template("sonakshi.html", name="World")
+    return render_template("team/sonakshi.html", name="World")
 
 
 @app.route('/forum', methods=['GET', 'POST'])
@@ -87,18 +94,18 @@ def shreya():
     if request.form:
         name = request.form.get("name")
         if len(name) != 0:  # input field has content
-            return render_template("shreya.html", name=name)
+            return render_template("team/shreya.html", name=name)
     # starting and empty input default
-    return render_template("shreya.html", name="World")
+    return render_template("team/shreya.html", name="World")
 
 
-@app.route('/linda', methods=['GET', 'POST'])
-def linda():
+@app.route('/punnu', methods=['GET', 'POST'])
+def punnu():
     if request.form:
         name = request.form.get("name")
         if len(name) != 0:  # input field has content
-            return render_template("linda.html", name=name)
-    return render_template("linda.html")
+            return render_template("team/punnu.html", name=name)
+    return render_template("team/punnu.html")
 
 
 @app.route('/khushi', methods=['GET', 'POST'])
@@ -107,9 +114,9 @@ def khushi():
     if request.form:
         name = request.form.get("name")
         if len(name) != 0:  # input field has content
-            return render_template("khushi.html", name=name)
+            return render_template("team/khushi.html", name=name)
     # starting and empty input default
-    return render_template("khushi.html", name="World")
+    return render_template("team/khushi.html", name="World")
 
 
 @app.route('/newapi', methods=['GET', 'POST'])
@@ -189,7 +196,7 @@ def punnuapitest():
     url = "https://api.kuroganehammer.com/api/characters"
     response = requests.request("GET", url)
     text = response.json()
-    return render_template("punnuapitest.html", text=text)
+    return render_template("team/punnuapitest.html", text=text)
 
 @app.route('/stressCrafts')
 def stressCrafts():
