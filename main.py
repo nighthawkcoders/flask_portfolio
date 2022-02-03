@@ -194,6 +194,9 @@ def punnuapitest():
     text = response.json()
     return render_template("team/punnuapitest.html", text=text)
 
+@app.route('/stressCrafts')
+def stressCrafts():
+    return render_template("stressCrafts.html")
 
 # runs the application on the development server
 if __name__ == "__main__":
