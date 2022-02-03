@@ -66,6 +66,36 @@ def hotels():
     return render_template("pbl/hotels.html", results=results, darkmode=darkmode)
 
 
+@travel_pg.route('/currency/', methods=['GET','POST'])
+def currency():
+    url = "https://currency-converter5.p.rapidapi.com/currency/convert"
+    try:
+        currency1type = request.form['currency1type']
+        currency2type = request.form['currency2type']
+        currencyamount = request.form['currencyamount']
+    except:
+        currency1type = "AUD"
+        currency2type = "CAD"
+        currencyamount = "1.0000"
+
+    querystring = {"format":"json","from":currency1type,"to":currency2type,"amount":currencyamount}
+
+    headers = {
+    'x-rapidapi-host': "currency-converter5.p.rapidapi.com",
+    'x-rapidapi-key': "2deba3c7c5msh59e591f91803406p14659ajsn14474595701e"
+}
+
+    response = requests.request("GET", url, headers=headers, params=querystring)
+
+    results = json.loads(response.content.decode("utf-8"))
+    print(results["amount"])
+    rates=results["rates"]
+    ctype=rates[currency2type]
+
+    print(response.text)
+    return render_template("pbl/currency.html", results=results, darkmode=darkmode, ctype=ctype)
+
+
 
 
 @travel_pg.route('/carrental', methods=['GET', 'POST'])

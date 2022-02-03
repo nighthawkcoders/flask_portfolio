@@ -1,0 +1,59 @@
+<!-- Extending the predefined project layout -->
+{% extends "layouts/base.html" %}
+
+<!- This variable sets name of browser tab  -->
+{% set project = "Adi is so Cool" %}
+
+<!- This is a replacement block for Body in base.html -->
+{% block body %}
+    <style>
+        table, td, th {
+            border: 10px solid rgb(176, 224, 230);
+            padding: 50px;
+        }
+        td, th {
+            text-align:center;
+            color: #000000;
+            font-weight: bolder;
+        }
+        table{
+            width: 300%;
+            margin: auto;
+        }
+        {#tr:nth-child(even) {#}
+        {#    background-color: #f2f2f2;#}
+        {#}#}
+    </style>
+    <body style="background-color:powderblue; height: 2000px">
+
+<h1>Currency Converter</h1>
+    <form action="/travel/currency/" method="POST" class="form">
+        <input type="text" placeholder="Currency 1" name='currency1type'>
+        <input type="text" placeholder="Amount" name='currencyamount'>
+        <input type="text" placeholder="Currency 2" name='currency2type'>
+        <button type="submit">Convert</button>
+    </form>
+
+    <table class="list-group">
+        <tr>
+            <th>Currency Converting From</th>
+            <th>Amount</th>
+            <th>Currency Converting To</th>
+            <th>Rate</th>
+            <th>Converted Amount</th>
+        </tr>
+                <tr>
+                <td>{{results.base_currency_name}}</td>
+                <td>{{results.amount}}</td>
+                    <td>{{ctype.currency_name}}</td>
+                    <td>{{ctype.rate}}</td>
+                    <td>{{ctype.rate_for_amount}}</td>
+                </tr>
+
+
+    </table>
+
+{% endblock %}
+
+
+
