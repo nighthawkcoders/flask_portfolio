@@ -68,7 +68,7 @@ inspiration from https://www.youtube.com/watch?v=QKcVjdLEX_s
                     <div class="col">
                         <div class="mb-3">
                             <div class="form-group">
-                                <input type="text" class="form-control" id="term" placeholder="Search By Airlines, Times, or Airports">
+                                <input type="text" class="form-control" id="flightterm" placeholder="Search By Airlines, Times, or Airports">
                                 <label></label> <!-- used for spacer -->
                             </div>
                                 <div align="center">
@@ -89,7 +89,7 @@ inspiration from https://www.youtube.com/watch?v=QKcVjdLEX_s
     <script>
         function search_data() {
             // fetch standard requires data set to a name-value pair
-            const term = document.getElementById("term");
+            const term = document.getElementById("flightterm");
             const body = {
                 term: term.value
             };

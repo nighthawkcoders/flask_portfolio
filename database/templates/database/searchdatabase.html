@@ -39,7 +39,7 @@ inspiration from https://www.youtube.com/watch?v=QKcVjdLEX_s
                 <div class="col">
                     <div class="mb-3">
                         <div class="form-group">
-                            <input type="text" class="form-control" id="term" placeholder="enter search term">
+                            <input type="text" class="form-control" id="databaseterm" placeholder="enter search term">
                             <label></label> <!-- used for spacer -->
                         </div>
                         <button class="btn btn-primary bg-secondary" onclick="search_data();">Search</button>
@@ -57,7 +57,7 @@ inspiration from https://www.youtube.com/watch?v=QKcVjdLEX_s
     <script>
         function search_data() {
             // fetch standard requires data set to a name-value pair
-            const term = document.getElementById("term");
+            const term = document.getElementById("databaseterm");
             const body = {
                 term: term.value
             };
