@@ -1,4 +1,8 @@
+
 <!DOCTYPE html>
+<script>
+    import(search_data())
+</script>
 <html>
 <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" >
@@ -83,6 +87,13 @@
                     <a class="nav-link" href="{{ url_for('crud_api.crud_api') }}">SQL Async</a>
                 </div>
             </li>
+            <div class="search-container" style="width:200px">
+                <form action="{{ url_for('index') }} method="POST"></form>
+                    <input type="text" class="form-control" id="term" placeholder="enter search term">
+            </div>
+            <div
+                    class="btn btn-primary" onclick="search_data();">Search
+            </div>
 
         </div>
         <div>
