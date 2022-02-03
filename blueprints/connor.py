@@ -20,6 +20,21 @@ def connor():
     print(data)
     return render_template('connor.html', data=data)
 
+@bconnor.route('/petapi/')
+def petapi():
+    url = "https://api.adoptapet.com/search/pets_at_shelter"
+
+    headers = {
+        'host': "api.adoptapet.com",
+        'key': "A34F48&v"
+    }
+
+    response = requests.request("GET", url, headers=headers)
+    data2 = response.json()['shelter_id']
+
+    print(data2)
+    return render_template('petapi.html', data2=data2)
+
 
 @bconnor.route('/PetInfo/')
 def PetInfo():
@@ -29,4 +44,8 @@ def PetInfo():
 @bconnor.route('/PetQuiz/')
 def PetQuiz():
     return render_template('PetQuiz.html')
+
+@bconnor.route('/google/')
+def google():
+    return render_template('google.html')
 

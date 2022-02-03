@@ -6,7 +6,8 @@
     <meta charset="UTF-8">
     <title>Quiz</title>
     <style>
-
+        p.solid {border-style: solid;}
+        p.outline {outline-style: solid;}
     </style>
     <script>
         function check(){
@@ -17,9 +18,9 @@
             if (q1=="Rhino") {c++}
             if (q2=="Snake") {c++}
             if (q3=="Dog") {c++}
-            alert(c);
+            document.getElementById("score").innerHTML = c;
+            document.getElementById("outof").innerHTML = "out of 3 correct";
         }
-
     </script>
 
 </head>
@@ -28,28 +29,30 @@
 {% block body %}
 <body>
 <form name="quiz" id="quiz">
-    <div>
-        <p>1. Which of these is not a common pet?</p>
+    <div style="background-color:dodgerblue">
+        <p class="outline" >1. Which of these is not a common pet?</p>
         <p><input type = "radio" name="question1" value="Rhino">A. Rhino</p>
         <p><input type = "radio" name="question1" value="Dog">B. Dog</p>
         <p><input type = "radio" name="question1" value="Cat">C. Cat</p>
         <p><input type = "radio" name="question1" value="Bird">D. Bird</p>
     </div>
-    <div>
-        <p>2. Which pet is slick and menacing?</p>
+    <div style="background-color:dodgerblue">
+        <p class="outline">2. Which pet is slick and menacing?</p>
         <p><input type = "radio" name="question2" value="Dog">A. Dog</p>
         <p><input type = "radio" name="question2" value="Snake">B. Snake</p>
         <p><input type = "radio" name="question2" value="Fish">C. Fish</p>
         <p><input type = "radio" name="question2" value="Mice">D. Mice</p>
     </div>
-    <div>
-        <p>3. Which pet is known as man's best friend?</p>
+    <div style="background-color:dodgerblue">
+        <p class="outline">3. Which pet is known as man's best friend?</p>
         <p><input type = "radio" name="question3" value="Lizard">A. Lizard</p>
         <p><input type = "radio" name="question3" value="Frog">B. Frog</p>
         <p><input type = "radio" name="question3" value="Cat">C. Cat</p>
         <p><input type = "radio" name="question3" value="Dog">D. Dog</p>
     </div>
     <input type="button" name="" value="Submit" onclick="check()">
+    <div id="score"></div>
+    <div id="outof"></div>
 </form>
 </body>
 </html>

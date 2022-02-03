@@ -40,7 +40,13 @@
                     <a class="dropdown-item" href="{{ url_for('bchase.chase')}}">Chase</a>
                 </div>
             </li>
-
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarStarters" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Adoptable Pets
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="{{ url_for('bconnor.google') }}">Search for Adoptable pets!</a>
+                </div>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarStarters" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     PBL Pages
@@ -64,7 +70,6 @@
                     <a class="dropdown-item" href="{{ url_for('bchase.h2') }}">How To Care For Abandoned Pets</a>
                     <a class="dropdown-item" href="{{ url_for('btanay.costcalculator') }}">Manage Finances</a>
                     <a class="dropdown-item" href="{{ url_for('btanay.todo') }}">To-Do List</a>
-
                 </div>
         </li>
             <li class="nav-item dropdown">
@@ -73,8 +78,9 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="{{ url_for('bconnor.PetQuiz') }}">Pet Quiz</a>
-                    <a class="dropdown-item" href="{{ url_for('bchase.Pquiz2') }}">Pet Quiz 2</a>
+                    <a class="dropdown-item" href="{{ url_for('bchase.Pquiz2') }}">Fun Quiz about Pets and Website</a>
                     <a class="dropdown-item" href="{{ url_for('btanay.hangman') }}">Hangman</a>
+                    <a class="dropdown-item" href="{{ url_for('bconnor.petapi') }}">api pets</a>
                 </div>
             </li>
             <li class="nav-item dropdown">
@@ -128,4 +134,5 @@
     }
 
     setInterval(clock, 1000);
+
 </script>
