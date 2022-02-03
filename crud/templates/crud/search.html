@@ -4,11 +4,27 @@ inspiration from https://www.youtube.com/watch?v=QKcVjdLEX_s
 -->
 {% extends "layouts/base.html" %}
 
+{% set project = "Database Search" %}
 {% block head %}
     <title>SQL search</title>
 {% endblock %}
 
 {% block body %}
+    <style>
+        table, td, th {
+            border: 10px solid #dc704b;
+            padding: 50px;
+        }
+        td, th {
+            text-align:center;
+            color: #dc704b;
+        }
+        table{
+            width: 100%;
+            margin: auto;
+        }
+    </style>
+    <body style="background-color:powderblue; height: 2000px">
     <div class="container py-4 bg-primary">
         <!-- heading -->
         <header class="pb-3 mb-4 border-bottom">
@@ -22,7 +38,7 @@ inspiration from https://www.youtube.com/watch?v=QKcVjdLEX_s
                 <div class="col">
                     <div class="mb-3">
                         <div class="form-group">
-                            <input type="text" class="form-control" id="searched" placeholder="enter search term">
+                            <input type="text" class="form-control" id="crudterm" placeholder="enter search term">
                             <label></label> <!-- used for spacer -->
                         </div>
                         <button class="btn btn-primary bg-secondary" onclick="search_data();">Search</button>
@@ -40,8 +56,7 @@ inspiration from https://www.youtube.com/watch?v=QKcVjdLEX_s
     <script>
         function search_data() {
             // fetch standard requires data set to a name-value pair
-            const term = document.getElementById("searched");
-
+            const term = document.getElementById("crudterm");
             const body = {
                 term: term.value
             };
@@ -74,11 +89,15 @@ inspiration from https://www.youtube.com/watch?v=QKcVjdLEX_s
                         return;
                     }
                     // response contains valid result
+
+
                     response.json().then(function(data) {
                         // loop through JSON and build HTML output
+                        const div = document.createElement("div");
+                        let table = "<table>"
                         for (let i = 0; i < data.length; i++) {
-                            const div = document.createElement("div");
-                            div.innerHTML = data[i].name + ' ' + data[i].email;
+                            table += "<tr><td>"+data[i].name+"</td><td>"+data[i].email+"</td><td>"+data[i].password+"</td></tr>"
+                            div.innerHTML = table
                             resultContainer.appendChild(div);
                         }
                     })

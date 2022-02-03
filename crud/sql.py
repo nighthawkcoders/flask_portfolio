@@ -30,7 +30,10 @@ def users_all_sql():
 def users_ilike(term):
     """filter Users table by term into JSON list (ordered by User.name)"""
     term = "%{}%".format(term)  # "ilike" is case insensitive and requires wrapped  %term%
+    print(term)
     table = Users.query.order_by(Users.name).filter((Users.name.ilike(term)) | (Users.email.ilike(term)))
+    for p in table:
+        print(p.read())
     return [peep.read() for peep in table]
 
 
