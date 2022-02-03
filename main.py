@@ -1,7 +1,7 @@
 # import "packages" from flask
 from flask import Flask, render_template, request
-from crud.app_crud import app_crud
-from crud.app_crud_api import app_crud_api
+from crud2.app_crud import app_crud
+from crud2.app_crud_api import app_crud_api
 from __init__ import app
 from flask import Blueprint
 import requests
