@@ -49,3 +49,8 @@ def PetQuiz():
 def google():
     return render_template('google.html')
 
+@bconnor.route('/map/')
+def map():
+    return render_template('map.html')
+
+
