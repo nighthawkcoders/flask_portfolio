@@ -48,6 +48,10 @@ def stress():
 def volunteer():
     return render_template("volunteer.html")
 
+@app.route('/eduvidDina')
+def eduvidDina():
+    return render_template("crossTeam/tinahtmlFolder/eduvidDina.html")
+
 
 @app.route('/crud/search')
 def search():
