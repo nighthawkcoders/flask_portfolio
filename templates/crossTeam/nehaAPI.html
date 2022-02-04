@@ -4,7 +4,15 @@
 {%endblock%}
 
 {%block body%}
+    <body style="background-color:#E37383;">
+    <h2>Motivational Quotes</h2>
 
-    <h2>⭐Recent Articles on Mental Health by Neha️⭐️</h2>
+    <form action={{url_for('nehaAPI')}}>
+        <button class="button button2">Click For New Quote</button>
+    </form>
+    <br>
+    <p><strong>Quote: </strong>{{ Y.quote }}</p>
+    <p><strong>Author: </strong>{{ Y.author }}</p>
+    <p><strong>Category: </strong>{{ Y.category }}</p>
 
 {%endblock%}
