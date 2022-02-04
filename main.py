@@ -2,14 +2,15 @@
 
 from flask import Flask, render_template, request
 import requests
-import http.client
 
 # create a Flask instance
 app = Flask(__name__)
 
 
 from crud3.app_crud import app_crud
-import http.client
+
+#from gigiChat import app_gigiChat
+#app.register_blueprint(app_gigiChat)
 
 # create a Flask instance
 
@@ -28,6 +29,19 @@ def anikaCraft():
 @app.route('/nehaAPI')
 def nehaAPI():
     return render_template("crossTeam/nehaAPI.html")
+
+@app.route('/gigiTitle')
+def gigiTitle():
+    return render_template("crossTeam/gigiTitle.html")
+
+@app.route('/gigiChat')
+def gigiChat():
+    return render_template("crossTeam/gigiChat.html")
+
+@app.route('/gigiSnake')
+def gigiSnake():
+    return render_template("crossTeam/gigiSnake.html")
+
 
 @app.route('/dark')
 def dark():
