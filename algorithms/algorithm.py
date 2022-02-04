@@ -11,5 +11,5 @@ app_algorithm = Blueprint('algorithm', __name__,
 @app_algorithm.route('/fibonacci/', methods=["GET", "POST"])
 def fibonacci():
     if request.form:
-        return render_template("fibonacci.html", fibonacci=Fibonacci(int(request.form.get("series"))))
-    return render_template("fibonacci.html", fibonacci=Fibonacci(2))
+        return render_template("api/Used/fibonacci.html", fibonacci=Fibonacci(int(request.form.get("series"))))
+    return render_template("api/Used/fibonacci.html", fibonacci=Fibonacci(2))

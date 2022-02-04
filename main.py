@@ -19,7 +19,7 @@ app.register_blueprint(app_crud)
 # connects default URL to render index.html
 @app.route('/')
 def home():
-    return render_template("home.html")
+    return render_template("api/unUsed/home.html")
 
 @app.route('/anikaCraft')
 def anikaCraft():
@@ -31,22 +31,22 @@ def nehaAPI():
 
 @app.route('/dark')
 def dark():
-    return render_template("dark.html")
+    return render_template("keyFeatures/dark.html")
 
 
 @app.route('/study')
 def study():
-    return render_template("study.html")
+    return render_template("keyFeatures/study.html")
 
 
 @app.route('/stress')
 def stress():
-    return render_template("stress.html")
+    return render_template("keyFeatures/stress.html")
 
 
 @app.route('/volunteer')
 def volunteer():
-    return render_template("volunteer.html")
+    return render_template("keyFeatures/volunteer.html")
 
 @app.route('/eduvidDina')
 def eduvidDina():
@@ -64,7 +64,7 @@ def crud():
 
 @app.route('/fibonacci')
 def fibonacci():
-    return render_template("fibonacci.html")
+    return render_template("api/Used/fibonacci.html")
 
 @app.route('/sonakshi', methods=['GET', 'POST'])
 def sonakshi():
@@ -83,9 +83,9 @@ def forum():
     if request.form:
         name = request.form.get("name")
         if len(name) != 0:  # input field has content
-            return render_template("forum.html", name=name)
+            return render_template("keyFeatures/forum.html", name=name)
     # starting and empty input default
-    return render_template("forum.html", name="Advice Here")
+    return render_template("keyFeatures/forum.html", name="Advice Here")
 
 
 @app.route('/shreya', methods=['GET', 'POST'])
@@ -157,7 +157,7 @@ def trivia():
         'x-rapidapi-key': "69b86a4f86msh0f84d36c298ca22p15693fjsne0d137318725"
     }
     response = requests.request("GET", url, headers=headers, params=querystring)
-    return render_template("trivia.html", numbers=response.json())
+    return render_template("keyFeatures/trivia.html", numbers=response.json())
     print(response.text)
 
 
@@ -176,7 +176,7 @@ def listmovie():
     response = requests.request("GET", url, headers=headers, params=querystring)
     response = response.json().get("titles")
 
-    return render_template("listmovieapi.html", response=response)
+    return render_template("api/unUsed/listmovieapi.html", response=response)
 
 
 @app.route('/dictionary', methods=['GET', 'POST'])
@@ -189,7 +189,7 @@ def dictionary():
         'x-rapidapi-key': "69b86a4f86msh0f84d36c298ca22p15693fjsne0d137318725"
     }
     response = requests.request("GET", url, headers=headers, params=querystring)
-    return render_template("dictionary.html", word=word, stats=response.json())
+    return render_template("api/unUsed/dictionary.html", word=word, stats=response.json())
 
 @app.route('/punnuapitest', methods=['GET', 'POST'])
 def punnuapitest():
