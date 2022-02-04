@@ -18,7 +18,22 @@
 {%endblock%}
 {% block body %}
     <body>
+    <div id="google_translate_element"></div>
 
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                {pageLanguage: 'en'},
+                'google_translate_element'
+            );
+        }
+    </script>
+
+    <script type="text/javascript" src=
+            "https://translate.google.com/translate_a/element.js?
+        cb=googleTranslateElementInit">
+    </script>
+    <button onclick="googleTranslateElementInit();">Translate this page to a language of your choosing!</button>
     <div class="p-5 bg-primary text-white text-center">
         <h1>How To Care For an Abandoned Pet</h1>
     </div>
