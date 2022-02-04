@@ -53,4 +53,8 @@ def google():
 def map():
     return render_template('map.html')
 
+@bconnor.route('/testquiz/')
+def testquiz():
+    return render_template('testquiz.html')
+
 
