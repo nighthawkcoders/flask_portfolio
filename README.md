@@ -102,7 +102,7 @@
 ### Week 8 Crossover Switch
 |Member| PBL|
 |:-----|:----------------------|
-|Connor| [Google Search](https://github.com/connorw72/food/blob/main/templates/google.html), [Google Map]()
+|Connor| [Google Search](https://github.com/connorw72/food/blob/main/templates/google.html), [Google Map](https://github.com/connorw72/food/blob/main/templates/map.html),[Translate](https://github.com/connorw72/food/blob/main/templates/Enclosures.html)
 |Crossover Team Nasty| [ToDo](https://github.com/connorw72/food/blob/main/templates/todo.html)
 
 
