@@ -1,0 +1,191 @@
+<form action="http://127.0.0.1:8081/">
+    <input type="submit" value="Go Home" />
+</form>
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Travel Checklist</title>
+</head>
+
+<body>
+    <div class="container">
+        <input type="text" class="addText" placeholder="Task...">
+        <button class="addBtn" onclick="addElement()">
+            <img src="data:image/png;base64,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">
+        </button>
+        <div class="list"></div>
+    </div>
+</body>
+
+<script>
+    var elements = [];
+    window.onload = function() {
+        if (JSON.parse(localStorage.getItem("todo-elements")) != null) {
+            elements = JSON.parse(localStorage.getItem("todo-elements"));
+            console.log(elements);
+            document.querySelector(".addText").value = "";
+            display();}
+        }
+
+        function addElement() {
+            if (document.querySelector(".addText").value.trim() != "") {
+                elements.push(document.querySelector(".addText").value.trim());
+                if (localStorage.getItem("todo-elements") == null) {
+                    localStorage.setItem("todo-elements", JSON.stringify(elements));
+                } else {
+                    localStorage.setItem("todo-elements", JSON.stringify(elements));
+                }
+                document.querySelector(".addText").value = "";
+                display();
+            }
+        }
+
+        function display() {
+            document.querySelector(".list").innerHTML = "";
+            for (var i = 0; i < elements.length; i++)
+                document.querySelector(".list").innerHTML +=
+                    "<center><div class='element'>" +
+                    elements[i] +
+                    "<img class='tick' src='https://cdn-icons-png.flaticon.com/512/60/60516.png' onclick='strike(" +
+                    i +
+                    ")'><img class='dustbin' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyK2Duwj2go4QjNvNO_zLONf075Qu9CxsbezDan98tCRPRHy4aD-n632-6TsubFpmcPwg&usqp=CAU' onclick='del(" +
+                    i +
+                    ")'></div></center>";
+        }
+
+        function del(index) {
+            elements.splice(index, 1);
+            if (localStorage.getItem("todo-elements") == null) {
+                localStorage.setItem("todo-elements", JSON.stringify(elements));
+            } else {
+                localStorage.setItem("todo-elements", JSON.stringify(elements));
+            }
+            display();
+        }
+
+        function strike(index) {
+            if (elements[index].includes("<strike>")) {
+                elements[index] = elements[index].replace("<strike>", "")
+                elements[index] = elements[index].replace("</strike>", "");
+            } else elements[index] = "<strike>" + elements[index] + "</stikes>"
+            if (localStorage.getItem("todo-elements") == null) {
+                localStorage.setItem("todo-elements", JSON.stringify(elements));
+            } else {
+                localStorage.setItem("todo-elements", JSON.stringify(elements));
+            }
+            display();
+        }
+</script>
+
+<style>
+    body{
+        background: url("https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F28%2F2021%2F09%2F21%2Figuazu-falls-argentina-brazil-MOSTBEAUTIFUL0921.jpg");
+    }
+    .container{
+        position: absolute;
+        height: 25pc;
+        width: 20pc;
+        margin: auto;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        backdrop-filter: blur(5px);
+        /*background: gray;*/
+        box-shadow: 0 0 55px black;
+    }
+    .addText{
+        position: absolute;
+        height: 5px;
+        width: 60%;
+        margin: auto;
+        top: 25px;
+        right: 0;
+        left: 0;
+        outline: none;
+        border: none;
+        padding: 20px;
+        padding-right: 50px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI Ubuntu, Cantarell", "Open Sans", "Helvetica Neue", sans-serif;
+    }
+    .addBtn{
+        position: absolute;
+        height: 40px;
+        width: 40px;
+        margin: auto;
+        top: 15px;
+        right: 35px;
+        cursor: pointer;
+        background: transparent;
+        outline: none;
+        border: 0;
+    }
+    .addBtn img{
+        position: absolute;
+        height: 40px;
+        margin: auto;
+        top: 25px;
+        right: 0;
+        left: 0;
+        bottom: 0;
+    }
+    .list{
+        position: absolute;
+        height: 75%;
+        width: 100%;
+        margin: auto;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+    .list::-webkit-scrollbar{
+        -webkit-appearance: none;
+        appearance: none;
+    }
+    .element{
+        position: relative;
+        height: fit-content;
+        width: 55%;
+        right: 0;
+        margin: 15px;
+        text-align: left;
+        transition: .2s;
+        padding: 10px;
+        background: #fff;
+        cursor: pointer;
+        border-radius: 2px;
+        padding-right: 80px;
+        word-wrap: break-word;
+        word-wrap: break-word;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI Ubuntu, Cantarell", "Open Sans", "Helvetica Neue", sans-serif;
+    }
+    .element:hover{
+        transform: scale(1.1);
+    }
+    .tick{
+        position: absolute;
+        margin: auto;
+        height: 20px;
+        top: 0;
+        bottom: 0;
+        right: 50px;
+    }
+    .dustbin{
+        position: absolute;
+        margin: auto;
+        height: 30px;
+        top: 0;
+        bottom: 0;
+        right: 10px;
+        filter: grayscale(1);
+    }
+    .navbar{
+        margin-bottom:100px;
+    }
+</style>
+
+{% endblock %}
