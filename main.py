@@ -145,8 +145,40 @@ def population():
         list_of_dictionaries2 = response.json().get('body')
         dictionarymasterlist = dictionarymasterlist + [list_of_dictionaries2]
 
-
     return render_template("layouts/population.html", people=dictionarymasterlist)
+
+@app.route('/environmental/', methods=['GET', 'POST'])
+def environmental():
+    headers = {
+        'x-rapidapi-host': 'environment-news-live.p.rapidapi.com',
+        'x-rapidapi-key': 'f4480562c7mshcfebe0975d4fd48p16ab77jsnae6575329780'
+    }
+
+    # get list of newspapers
+    querystring = {}
+    urlNewsList = "https://environment-news-live.p.rapidapi.com/newspapers"
+    response = requests.request("GET", urlNewsList, headers=headers, params=querystring)
+
+    list_of_papers = []
+    list_of_papers = response.json()  # get('body').get('countries')
+
+    # get all the articles of each source
+    dictionarymasterlist = []  # this creates an empty list that all the dictionaries go into
+
+    for item in list_of_papers:
+      print(item)
+      PaperName = item.get('newspaperID')
+      if (PaperName != 'latimes' and PaperName != 'telegraph') : continue
+
+      urlPaper= 'https://environment-news-live.p.rapidapi.com/news/%s' % PaperName
+      querystring = {"newspaperID": PaperName}
+      response = requests.request("GET", urlPaper, headers=headers, params=querystring)
+
+      list_of_articles = response.json()  # get('body').get('countries')
+      dictionarymasterlist = dictionarymasterlist + list_of_articles
+
+    print(dictionarymasterlist)
+    return render_template("layouts/environmental.html", news=dictionarymasterlist)
 
 @app.route('/crud_api')
 def crud_async():
