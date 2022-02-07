@@ -225,6 +225,10 @@ def faq():
 def currency():
     return render_template("layouts/currency.html")
 
+@app.route('/world_instruments', methods=['GET', 'POST'])
+def world_instruments():
+    return render_template("layouts/world_instruments.html")
+
 @app.route('/quiz')
 def quiz():
     return render_template("quiz.html")
