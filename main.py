@@ -2,7 +2,7 @@
 
 from flask import Flask, render_template, request
 import requests
-
+import json
 # create a Flask instance
 app = Flask(__name__)
 
@@ -28,7 +28,18 @@ def anikaCraft():
 
 @app.route('/nehaAPI')
 def nehaAPI():
-    return render_template("crossTeam/nehaAPI.html")
+    url = "https://metaapi-mindfulness-quotes.p.rapidapi.com/v1/mindfulness"
+
+    headers = {
+        'x-rapidapi-host': "metaapi-mindfulness-quotes.p.rapidapi.com",
+        'x-rapidapi-key': "2f4fb94902msh2ed8a6c271d64d9p1535e1jsn91c7cb7b9d1c"
+    }
+
+    response = requests.request("GET", url, headers=headers)
+
+    output = json.loads(response.text)
+    print(response.text)
+    return render_template("crossTeam/nehaAPI.html", Y=output)
 
 @app.route('/gigiTitle')
 def gigiTitle():
