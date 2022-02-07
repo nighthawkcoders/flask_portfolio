@@ -47,7 +47,7 @@
                     })
                     console.log(response);
                     const covidarr = await response.json();
-                    console.log(covidarr);
+                    alert(covidarr);
                     const covidstats = covidarr["weapons"][0];
                     document.getElementById("damage").textContent = covidstats["fire_type"];
                     document.getElementById("name").textContent = covidstats["name"];
