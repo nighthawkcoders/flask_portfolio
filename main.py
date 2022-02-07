@@ -361,6 +361,16 @@ def faq():
 def currency():
     return render_template("layouts/currency.html")
 
+@app.route('/snake')
+def snake():
+    return render_template("snake.html")
+
+@app.route('/world_instruments')
+def world_instruments():
+    return render_template("layouts/world_instruments.html")
+
+
+
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(host="127.0.0.1", port=8000)
