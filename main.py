@@ -80,6 +80,7 @@ def crud():
 def fibonacci():
     return render_template("api/Used/fibonacci.html")
 
+
 @app.route('/sonakshi', methods=['GET', 'POST'])
 def sonakshi():
     # submit button has been pushed
@@ -100,6 +101,17 @@ def forum():
             return render_template("keyFeatures/forum.html", name=name)
     # starting and empty input default
     return render_template("keyFeatures/forum.html", name="Advice Here")
+
+
+@app.route('/journal', methods=['GET', 'POST'])
+def journal():
+    # submit button has been pushed
+    if request.form:
+        name = request.form.get("name")
+        if len(name) != 0:  # input field has content
+            return render_template("keyFeatures/journal.html", name=name)
+    # starting and empty input default
+    return render_template("keyFeatures/journal.html", name="Feel Free to Write")
 
 
 @app.route('/shreya', methods=['GET', 'POST'])
@@ -191,6 +203,7 @@ def listmovie():
     response = response.json().get("titles")
 
     return render_template("api/unUsed/listmovieapi.html", response=response)
+
 
 
 @app.route('/dictionary', methods=['GET', 'POST'])
