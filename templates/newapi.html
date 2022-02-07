@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+{% extends "layouts/base.html" %}
+
+{% block body %}
+    {% set data = stats.list %}
+
+    <head>
+        <style>
+            body, html {
+                background-color: lightskyblue;
+            }
+        </style>
+    </head>
+    <body onload="myFunction()">
+    <div class="center-block animate-bottom" style="margin: 2% 5% 5%; font-family: gilroy,serif; display:none; color:black;" id="myDiv" >
+        <!-- Title -->
+        <div class="col-12" style="text-align: center;">
+            <h1><strong>Weather Data From San Diego</strong></h1>
+        </div>
+
+
+        <div class="col-20" style="text-align: left; ">
+            <table class="table" style="background-color: #BABABA">
+                <tbody>
+                <thead>
+                <tr>
+                    <th>dt</th>
+                    <th>Temperature</th>
+                    <th>Pressure</th>
+                    <th>Wind Speed</th>
+            </thead>
+                <tbody>
+                <tr>
+                    <div class="col-12" style="text-align: left; ">
+                        {% for info in data %}
+                            </div>
+                            <tr>
+                                <td> {{info.dt}} </td>
+                                <td> {{info.temp}} </td>
+                                <td> {{info.pressure}} </td>
+                                <td> {{info.wind_speed}} </td>
+                            </tr>
+                            </tbody>
+                            </table>
+                    </div>
+                </tr>
+                </tbody>
+                        {% endfor %}
+            </table>
+        </div>
+    </body>
+    </div>
+    <style>
+        table, td, th {
+        }
+        td, th {
+            text-align:left;
+        }
+    </style>
+    </div>
+
+{% endblock %}

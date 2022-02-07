@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+{% include "layouts/navbar.html" %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Study Hall</title>
+</head>
+{%  block body %}
+<body onload="myFunction()">
+
+<div class="container-fluid animate-bottom">
+    <h1 style="text-align: center">Study Hall</h1>
+    <div class="row">
+        <div class="col-sm-6">
+            <p style="font-size: x-large">
+                Here are some websites:
+                <br>
+                <a href="https://www.khanacademy.org/">
+                    <img src="/static/assets/khan%20academy.png" width="50%">
+                </a>
+                <br>
+                <a href="https://studyhall.org/">
+                    <img src="/static/assets/study%20hall.png" width=50%">
+                </a>
+            </p>
+        </div>
+        <div class="col-sm-6">
+            <p>
+                Here are some study techniques:
+                <br>
+                <a href="https://www.usa.edu/blog/study-techniques/">
+                    <img src="/static/assets/10-effective-study-methods.jpg" width="50%">
+                </a>
+            </p>
+        </div>
+    </div>
+</div>
+
+</body>
+{% endblock %}
+</html>

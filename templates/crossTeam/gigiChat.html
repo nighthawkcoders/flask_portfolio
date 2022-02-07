@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<body>
+{% include "layouts/navbar.html" %}
+<title>Discussion Forum</title>
+
+<!- This is a replacement block for Body in base.html -->
+{% block body %}
+
+    <body style="font-family: Baskerville"> </body>
+
+    <!-- Password verification and error message -->
+    <script>
+        //adding dom event listener to allow the verifyPassword funtion to be attached to the form. This is so we can keep our JS separate from our html and not have onsubmit in the form.
+
+        'use strict' //ensures best environment to prevent JS programmer error and tells browser to use most modern version of JS interpreter it has.
+
+        document.addEventListener("DOMContentLoaded", function(){
+            // event listener fires when the DOM is fully loaded. This way you can write scripts that are before the elements are loaded into the dom, but waits to be added to the page until the dom is fully loaded.
+
+            //querySelector selects elements with CSS selectors. id="create" gets selected with the code above.
+
+            // pulled this function in here to keep it private from the window object/global scope. This is one way to protect your variables and functions from being hijacked by xss. Declared function names do act like variables in a way.
+
+            /*
+            because this is being called by an event, the event object is automatically
+            passed and captured as seen above. We are capturing it with the 'event' parameter in this function.
+            This is frequently represented in the following ways in JS: e, evt and event.
+            As a variable, it could be called anything - but it makes more sense to call it event rather than banana... etc.
+            Name your variables well, my friends.
+            */
+
+
+            //prevents submission of form when password length is not valid.
+        }
+
+        } //this function could be expanded upon, where we use JS to completely validate the form and have HTML5 as a fallback. Let me know if you want to have me expand this. - T
+
+        //additional listeners and functions could/should be put in here.
+
+        }); //end DOMContentLoaded listener
+
+    </script>
+
+    <!-- CONTENT (in <body>), content for this page -->
+
+    <div class="container py-4 text-light bg-dark" >
+        <header class="pb-3 mb-4 border-bottom">
+            <div class="d-flex align-items-center text-light text-decoration-none">
+                <span class="fs-4">Scroll down to leave a message :)</span>
+            </div>
+        </header>
+
+        <div class="container py-4">
+            <div class="p-5 mb-4 m-5 bg-light text-dark rounded-3">
+                <h2>Discussion Forum</h2>
+                <div class="row align-items-md-stretch">
+                    <table class="table">
+                        <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="row align-items-md-stretch">
+                    <div class="container-fluid py-5">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Message</th>
+
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <!-- Loop through rows in table -->
+                            {% for row in table %}
+                                <!--
+                                Prepare table for display
+                                    caution: phone number needs "~" format step to force type to string
+                                -->
+
+                                <tr>
+                                    <td>{{ row['userID'] }}</td>
+                                    <td>{{ row['name'] }}</td>
+                                    <td>{{ row['email'] }}</td>
+                                    <td>{{ row['message'] }}</td>
+                                    <td>{{ pnf }}</td>
+
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="container py-4">
+            <div class="p-5 mb-4 m-5 bg-light text-dark rounded-3">
+                <h2>Leave a Message :)</h2>
+                <form method="POST" ID="create" action={{url_for('crud.crud')}} >
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th><label for="name">Name</label></th>
+                            <th><label for="name">Email</label></th>
+                            <th><label for="message">Message</label></th>
+
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><input type="text" name="name" id="name" required></td>
+                            <td><input type="email" name="email" id="email" placeholder="abc@xyz.org"></td>
+                            <td><input type="text" name="message" id="message" required></td>
+                            <td><input type="submit" value="Create"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <p id="pswError"></p>
+                </form>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+{% endblock %}

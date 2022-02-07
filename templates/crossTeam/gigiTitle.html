@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+
+{% include "layouts/navbar.html" %}
+<title>Animations</title>
+
+<html>
+
+{%block body%}
+    <!-- Title #1 -->
+    <div class="wrap">
+        <div class="line">
+            <div class="left">
+                <div class="content">
+                    <span class="spanSlow">Student Resources</span>
+                </div>
+            </div><!--
+      --><div class="right">
+            <div class="content">
+                <span class="spanSlow">Student Resources</span>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+        .line {
+            width: 100vw;
+        }
+        .left, .right {
+            width: 50vw;
+            overflow: hidden;
+            display: inline-block;
+        }
+        .left {
+            color: #7cacc7;
+        }
+        .right {
+            color: black;
+        }
+        .left .content {
+            width: 100vw;
+            text-align: center;
+        }
+        .right .content {
+            width: 100vw;
+            text-align: center;
+            transform: translate(-50vw);
+        }
+        span {
+            display: inline-block;
+            font-family: 'Baskerville';
+            font-size: 5vw;
+            line-height: .8;
+            transition: ease-out .6s;
+        }
+    </style>
+
+    <script>window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('resize', handleWindowResize);
+
+    const spansSlow = document.querySelectorAll('.spanSlow');
+    const spansFast = document.querySelectorAll('.spanFast');
+
+    let width = window.innerWidth;
+
+    function handleMouseMove(e) {
+        let normalizedPosition = e.pageX / (width/2) - 1;
+        let speedSlow = 100 * normalizedPosition;
+        let speedFast = 200 * normalizedPosition;
+        spansSlow.forEach((span) => {
+            span.style.transform = `translate(${speedSlow}px)`;
+        });
+        spansFast.forEach((span) => {
+            span.style.transform = `translate(${speedFast}px)`
+        })
+    }
+    //we need to recalculate width when the window is resized
+    function handleWindowResize() {
+        width = window.innerWidth;
+    }</script>
+
+
+    <!-- Title #2 -->
+    <body>
+    <div class="sign">
+        <span class="fast-flicker">S</span>tudent<span class="flicker"> R</span>esources
+    </div>
+    </body>
+
+    <style>@font-face {
+    font-family: Clip;
+    src: url("https://acupoftee.github.io/fonts/Clip.ttf");
+}
+
+
+
+    .sign {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        height: 50%;
+        background-image: radial-gradient(
+                ellipse 50% 35% at 50% 50%,
+                #2c5b75,
+                transparent
+        );
+        transform: translate(-50%, -50%);
+        letter-spacing: 2;
+        left: 50%;
+        top: 50%;
+        font-family: "Clip";
+        font-size: 4em;
+        color: #c7e5f5;
+        text-shadow: 0 0 0.6rem #a3c9de, 0 0 1.5rem #85b7d3,
+        -0.2rem 0.1rem 1rem #73aac9, 0.2rem 0.1rem 1rem #61a2c7,
+        0 -0.5rem 2rem #397ba1, 0 0.5rem 3rem #397ba1;
+        animation: shine 2s forwards, flicker 3s infinite;
+    }
+
+    @keyframes blink {
+        0%,
+        22%,
+        36%,
+        75% {
+            color: #c7e5f5;
+            text-shadow: 0 0 0.6rem #a3c9de, 0 0 1.5rem #85b7d3,
+            -0.2rem 0.1rem 1rem #73aac9, 0.2rem 0.1rem 1rem #61a2c7,
+            0 -0.5rem 2rem #397ba1, 0 0.5rem 3rem #397ba1;
+        }
+        28%,
+        33% {
+            color: #61a2c7;
+            text-shadow: none;
+        }
+        82%,
+        97% {
+            color: #397ba1;
+            text-shadow: none;
+        }
+    }
+
+    .flicker {
+        animation: shine 2s forwards, blink 3s 2s infinite;
+    }
+
+    .fast-flicker {
+        animation: shine 2s forwards, blink 10s 1s infinite;
+    }
+
+    @keyframes shine {
+        0% {
+            color: #2c5b75;
+            text-shadow: none;
+        }
+        100% {
+            color: #c7e5f5;
+            text-shadow: 0 0 0.6rem #a3c9de, 0 0 1.5rem #85b7d3,
+            -0.2rem 0.1rem 1rem #73aac9, 0.2rem 0.1rem 1rem #61a2c7,
+            0 -0.5rem 2rem #397ba1, 0 0.5rem 3rem #397ba1;
+        }
+    }
+
+    @keyframes flicker {
+        from {
+            opacity: 1;
+        }
+
+        4% {
+            opacity: 0.9;
+        }
+
+        6% {
+            opacity: 0.85;
+        }
+
+        8% {
+            opacity: 0.95;
+        }
+
+        10% {
+            opacity: 0.9;
+        }
+
+        11% {
+            opacity: 0.922;
+        }
+
+        12% {
+            opacity: 0.9;
+        }
+
+        14% {
+            opacity: 0.95;
+        }
+
+        16% {
+            opacity: 0.98;
+        }
+
+        17% {
+            opacity: 0.9;
+        }
+
+        19% {
+            opacity: 0.93;
+        }
+
+        20% {
+            opacity: 0.99;
+        }
+
+        24% {
+            opacity: 1;
+        }
+
+        26% {
+            opacity: 0.94;
+        }
+
+        28% {
+            opacity: 0.98;
+        }
+
+        37% {
+            opacity: 0.93;
+        }
+
+        38% {
+            opacity: 0.5;
+        }
+
+        39% {
+            opacity: 0.96;
+        }
+
+        42% {
+            opacity: 1;
+        }
+
+        44% {
+            opacity: 0.97;
+        }
+
+        46% {
+            opacity: 0.94;
+        }
+
+        56% {
+            opacity: 0.9;
+        }
+
+        58% {
+            opacity: 0.9;
+        }
+
+        60% {
+            opacity: 0.99;
+        }
+
+        68% {
+            opacity: 1;
+        }
+
+        70% {
+            opacity: 0.9;
+        }
+
+        72% {
+            opacity: 0.95;
+        }
+
+        93% {
+            opacity: 0.93;
+        }
+
+        95% {
+            opacity: 0.95;
+        }
+
+        97% {
+            opacity: 0.93;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }</style>
+
+
+{%endblock%}
+</html>

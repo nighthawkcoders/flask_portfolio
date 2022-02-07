@@ -1,0 +1,55 @@
+{% extends "layouts/base.html" %}
+
+<!- This variable sets name of browser tab  -->
+{% set project = "punnuapitest" %}
+
+<!- This is a replacement block for Body in base.html -->
+{% block body %}
+<head>
+    <title>Smash Character API</title>
+</head>
+<html>
+    <body onload="myFunction()";>
+        <div style="display:none; color:black;" id="myDiv" class="animate-bottom"; >
+
+        <table class="tableCenter" style="border-collapse: 1px; background-color: #BABABA">
+            <tr>
+                <th style="height:30px;width:200px;text-align:center;">
+                    Character Name
+                </th>
+                <th style="height:30px;width:200px;text-align:center;">
+                    Character ID
+                </th>
+                <th style="height:30px;width:200px;text-align:center;">
+                    Color Theme (hexcode)
+                </th>
+                <th style="height:30px;width:200px;text-align:center;">
+                    Image + Link
+                </th>
+            </tr>
+            {% for i in range(10) %}
+            <tr>
+                <td style="height:30px;width:30px;text-align:center;">
+                    <a target="_blank" href="{{ text[i].FullUrl }}">
+                        {{ text[i].Name }}
+                    </a>
+                </td>
+                <td style="text-align:center;">
+                    {{ text[i].OwnerId }}
+                </td>
+                <td style="text-align:center;">
+                    {{ text[i].ColorTheme }}
+                </td>
+                <td style="text-align:center; horiz-align: center;">
+                    <a target="_blank" href="{{ text[i].FullUrl }}">
+                        <img src ="{{ text[i].ThumbnailUrl }}" height="80" >
+                    </a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}
+
+    </body>
+</html>

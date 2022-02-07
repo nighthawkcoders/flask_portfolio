@@ -1,0 +1,65 @@
+{% include "layouts/navbar.html" %}
+<title>Forum</title>
+<body style="font-family: Baskerville"></body>
+
+
+<body style="background-color: #EBF7FA;">
+
+<style>
+    .button1 {
+        background-color: white;
+        color: grey;
+        border: 3px solid #9CD8EC;
+        text-decoration: none;
+        margin: 4px 2px;
+        padding: 3px 4px;
+    }
+
+    .button1:hover {
+        background-color: whitesmoke;
+        color: black;
+    }
+</style>
+
+
+
+<div>
+    <form action="/forum" id="forum" method="POST" >
+        <label for="name">Enter your advice or tips/tricks for younger students!</label>
+        <input name="name" id="name">
+        <input type="submit" class="button1" value="Submit!">
+    </form>
+</div>
+
+<div style="margin: 2% 5% 5%; text-align:left; font-family: 'Hannotate SC'; font-size: large">
+    <div>
+        <p style="font-size: x-large"id="wave"><strong> {{name}}</strong></p>
+    </div>
+
+    <h1 style="text-align: left">Other Support and Advice</h1>
+    <p style="color: black">
+        <br>
+        <a href="https://ratemyteachers.com/us/california/san-diego/del-norte-high-school">Rate My Teachers San Diego</a>
+        <br>
+        <br>
+        <a href="https://www.powayusd.com/en-US/Schools/HS/DNHS/Contacts/Staff-Directory">Del Norte Staff Directory</a>
+        <br>
+        1. Utilize your accesses, sources, and opportunities.
+        <br>
+
+        2. Participate in a sport or activity and commit to it.
+        <br>
+        3. Your GPA and test scores are not everything.
+        <br>
+        4. Find experience as soon as possible.
+        <br>
+        5. Be yourself. Have fun and enjoy it while it lasts.
+
+        <br>
+
+    </p>
+
+</div>
+</body>
+
+</html>

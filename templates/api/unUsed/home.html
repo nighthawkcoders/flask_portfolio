@@ -1,0 +1,92 @@
+{% include "layouts/navbar.html" %}
+
+{% block body %}
+
+<html>
+<head>
+    <title>Resources</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            background-image: url('/static/assets/background.jpeg');
+        }
+
+        h1 {
+            color: black;
+            text-align: center;
+            font-family: "Baskerville";
+            font-size: 70px;
+        }
+
+    </style>
+</head>
+<br>
+
+
+</head>
+<br>
+<body style="background-image: url('/static/assets/background.jpeg');" onload="myFunction()">
+<h1>Student Resources</h1>
+<br>
+<br>
+<div style="display:none;" id="myDiv" class="container animate-bottom">
+    <div class="jumbotron">
+        <h1>Other Sites & Info </h1>
+        <p> There are many other sites full of info about stress relief, relaxation, and other resources. We've organized them into neat categories for you! </p>
+    </div>
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="/static/assets/stress.jfif" class="d-block w-100">
+                <div class="carousel-caption">
+                    <h5>Stress Relief</h5>
+                    <p>Ways to Wind Down</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="/static/assets/study%20hall.png" class="d-block w-100">
+                <div class="carousel-caption">
+                    <h5>Study Hall</h5>
+                    <p>Resources to Study Better</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="/static/assets/volunteer.jpg" class="d-block w-100">
+                <div class="carousel-caption">
+                    <h5>Volunteer Opportunities</h5>
+                    <p>Help Your Community!</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <div style="font-size: xx-large; text-align: center; font-family: Baskerville">
+        <p> <a href="/stress">Stress Relief</a> </p>
+        <p> <a href="/study">Study Hall</a> </p>
+        <p> <a href="/volunteer">Volunteer!</a> </p>
+    </div>
+</div>
+</body>
+</html>
+
+{% endblock %}
+
+{% block background %}
+
+{% endblock %}

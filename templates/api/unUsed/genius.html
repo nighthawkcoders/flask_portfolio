@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+{% extends "layouts/base.html" %}
+
+{% block body %}
+
+{% set data = stats.data %}
+
+    <head>
+        <style>
+            body, html {
+                background-color: rosybrown;
+            }
+        </style>
+    </head>
+    <div class="center-block" style="margin: 2% 5% 5%; font-family: gilroy,serif;">
+        <!-- Title -->
+        <div class="col-12" style="text-align: center;">
+            <h1><strong>Flight RESTapi from rapidapi.com</strong></h1>
+            <form action={{url_for('genius')}}>
+                <button>Refresh!</button>
+            </form>
+        </div>
+
+        <div class="col-12">
+            {#            <p>Hello, {{places}}!</p>#}
+        </div>
+{#        <div class="col-12">#}
+{#            <p>Hello, {{name}}!</p>#}
+{#        </div>#}
+{##}
+{#        <div class="col-12">#}
+{#            <form action="/flightapi" id="greet" method="POST" >#}
+{#                <label for="name">Type a greeting name?</label>#}
+{#                <input name="name" id="name">#}
+{#                <input type="submit" value="Greetings!">#}
+{#            </form>#}
+{#        </div>#}
+
+        {#        <p>{{ stats.Places }}</p>#}
+        <!-- Sequence -->
+        <div class="col-12" style="text-align: left; ">
+            <table style="margin: 2%">
+                    <tr>
+                        <th>Song Lyrics</th>
+
+                    </tr>
+        <div class="col-12" style="text-align: left; ">
+              <table style="margin: 2%">
+                    {% for song in data %}
+
+                      <tr>
+                        <td> {{song.lyrics}} </td>
+
+
+                    </tr>
+                   {% endfor %}
+            </table>
+{#        table, td, th {#}
+        {#border: 1px solid var(--dblue);#}
+{#        }#}
+{#        td, th {#}
+{#            text-align:left;#}
+{#        }#}
+    </style>
+    </div>
+
+{% endblock %}

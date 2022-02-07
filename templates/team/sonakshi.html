@@ -1,0 +1,92 @@
+<!-- Extending the predefined project layout -->
+
+{% extends "layouts/base.html" %}
+
+<!- This variable sets name of browser tab  -->
+{% set project = "Stubby" %}
+
+<!- This is a replacement block for Body in base.html -->
+{% block body %}
+
+
+    <title>Sonakshi</title>
+    <body style="background-color: #EBF7FA;">
+    <style>
+        .button1 {
+            background-color: white;
+            color: grey;
+            border: 3px solid #9CD8EC;
+            text-decoration: none;
+            margin: 4px 2px;
+            padding: 3px 4px;
+        }
+
+        .button1:hover {
+            background-color: whitesmoke;
+            color: black;
+        }
+    </style>
+
+    <div style="margin: 2% 5% 5%; text-align:center; font-family: Baskerville; font-size: larger">
+        <div>
+            <p style="font-size: x-large"id="wave"><strong>Hello, {{name}}!</strong></p>
+            <script>
+                var targetForWave = document.getElementById("wave");
+                targetForWave.textContent += String.fromCodePoint(0x1F44B);
+            </script>
+        </div>
+
+        <div>
+            <form action="/sonakshi" id="sonakshi" method="POST" >
+                <label for="name">Enter a greeting name!</label>
+                <input name="name" id="name">
+                <input type="submit" class="button1" value="Greetings!">
+            </form>
+        </div>
+
+        <br>
+
+        <p style="font-size: large; font-family: Baskerville; text-align: center"><i>Click Me</i></p>
+
+
+        <img id="myImage" onclick="changeImage()" src="/static/assets/sonakshi.png" width="250" height="250">
+
+        <script>
+            function changeImage() {
+                var image = document.getElementById('myImage');
+                if (image.src.match("/static/assets/sonakshi.png")) {
+                    image.src = "/static/mask.JPG";
+                } else {
+                    image.src = "/static/assets/sonakshi.png";
+                }
+            }
+        </script>
+
+        <script>
+            // Function to change webpage background color
+            function changeBack(color){
+                document.body.style.background = color;
+            }
+
+            // Function to change heading background color
+
+        </script>
+        <div>
+            <label>Change Background:</label>
+            <button type="button" onclick="changeBack('lightgreen');">Green</button>
+            <button type="button" onclick="changeBack('lavender');">Lavender</button>
+            <button type="button" onclick="changeBack('teal');">Teal</button>
+        </div>
+
+        <br>
+        <a href="{{url_for('newapi')}}" class="button1">Here is The API</a>
+        <br>
+        <a href="https://docs.google.com/document/d/1tzKxrktNmIau5yW4qIBZ5nULiQ-DUNyJaQTLDgQ4XXU/edit">My Journal</a>
+        <br>
+        <a href="https://docs.google.com/document/d/19XB2QXhh55YSZJ4m368AKi0JUGVT9s94BOA-rs2YWdQ/edit?usp=sharing">Pair-Share Journal</a>
+        <br>
+        <a href="https://github.com/sonakshibhalla">My GitHub Profile</a>
+    </div>
+    </body>
+
+{% endblock %}

@@ -1,1 +1,14 @@
+flask
+requests
+SQLAlchemy
+Werkzeug
+flask_login
 Flask
+numpy
+flask-sqlalchemy
+flask_migrate
+flask_restful
+numpy
+
+pathlib
+palindrome

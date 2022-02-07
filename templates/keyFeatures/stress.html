@@ -1,0 +1,150 @@
+{% include "layouts/navbar.html" %}
+<title>Stress Relief</title>
+<script>     <!-- Code from Punnu -->
+    function changeVisible(id) {
+
+        var element = document.getElementById(id);
+
+        if (element.style.display == "none") {
+            element.style.display = "initial"
+        }
+        else {
+            element.style.display = "none"
+        }
+        return element
+    }
+</script>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<style> <!-- Code from w3schools -->
+.button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button1 {background-color: #F5B7B1;} /* Green */
+* {
+    box-sizing: border-box;
+}
+
+
+button {
+    background-color: rebeccapurple;
+    border-radius: 5px;
+    box-shadow: 4px 4px 5px rgba(255, 255, 255, 0.15);
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    position: relative;
+    transition: transform 0.1s linear, box-shadow 0.1s linear;
+    z-index: 10;
+}
+
+button:active {
+    transform: translate(4px, 4px);
+    box-shadow: 0 0 0 rebeccapurple;
+}
+
+button:focus {
+    outline: none;
+}
+
+.particle {
+    --x: 0;
+    --y: 0;
+    background-color: rebeccapurple;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 5px;
+    width: 5px;
+    z-index: -1;
+}
+
+.particle.move {
+    animation: move 1000ms linear forwards;
+}
+
+@keyframes move {
+    to {
+        transform: translate(var(--x), var(--y));
+    }
+
+    95% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+</style>
+{%  block body %} <!-- Code from Punnu -->
+<body onload="myFunction()">
+<div class="container-fluid animate-bottom">
+    <h1 style="text-align: center">Stress Relief & Relaxation</h1>
+    <div class="row">
+        <div class="col-sm-6">
+            <p style="font-size: x-large">
+                <button class="button button1">Relaxing Video</button>
+                <br>
+                <a href="https://www.youtube.com/watch?v=4ROrW727q_s">
+                    <img src="/static/assets/Bluelantern.jpg" width="50%">
+                </a>
+                <br>
+            </p>
+        </div>
+        <div class="col-sm-6">
+        <p>
+            <p style="font-size: x-large">
+                <button class="button button1">Coloring Book</button>
+                <br>
+            <a href="https://coloringbook.pics/">
+                <img src="/static/assets/colorpage.jpg" width=70%">
+            </a>
+        </p>
+        </div>
+        <button class="button button1">How are you feeling today?</button>
+            <div class="column">
+                <div class="row-cols-1">
+                    <p>
+                    <div class="col-sm-7">
+                        <p>
+                        <p style="fontsize: medium">
+                            <button class="button button2" onclick="changeVisible('smile')">Calm</button>
+                            <br>
+                            <img id="smile" style="display:none" src="/static/assets/smileface.jpg" width=70%">
+                        <p style="fontsize: medium">
+                            <br>
+                            <button class="button button3" onclick="changeVisible('sad')" >Sad</button>
+                            <img id="sad" style="display:none" src="/static/assets/Sad_Face_Emoji_large.png" width=70%">
+                        <p style="fontsize: medium">
+                            <br>
+                            <button onclick="changeVisible('smile2')">Happy</button>
+                            <img id="smile2" style="display:none" src="/static/assets/smileface.jpg" width=70%">
+                        </p>
+                    </div>
+                </div>
+                </a>
+                    </p>
+            </div>
+    </div>
+</div>
+
+</div>
+
+</body>
+{% endblock %}
+</html>

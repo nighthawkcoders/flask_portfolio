@@ -1,0 +1,77 @@
+{% include "layouts/navbar.html" %}
+<title>Journal</title>
+
+
+<!- This is a replacement block for Body in base.html -->
+{% block body %}
+    <head>
+        <title>Journal</title>
+        <style>
+
+
+        </style>
+        <script>
+            function enter() {
+                const x = document.getElementById("stuffed").value;
+                document.getElementById("paragraph").innerHTML += "<br>&lt;me&gt; " + x;
+                document.getElementById("stuffed").value = ''
+            }
+            function func()
+            {
+                document.getElementById('text').style.fontSize='50px';
+                document.getElementById('text').style.color='blue';
+            }
+
+        </script>
+
+    </head>
+    <body onload="myFunction()"; style="background-color: #EBF7FA; text-align:center">
+    <div style="display:none;" id="myDiv" class="animate-bottom"; style="margin: 2% 5% 5%; text-align:center; font-family: Baskerville; font-size: larger">
+
+        <form action="#" id="journal" method="POST" >
+            <h1 style="text-align: center">Journal Here</h1>
+            <label for="idea">If you need, you can brainstorm! </label>
+            <input idea="idea" id="idea">
+            <input type="submit" value="Go!" onclick="(function (){document.getElementById('myThoughts').innerText=document.getElementById('idea').value})();return false;">
+            <p>&#8595;</p>
+        </form>
+        <div class="row">
+        <div class="col-sm-6">
+            <p style="font-size: x-large">
+            <p>Dear Diary, <span id="myThoughts">{{idea}}</span>.</p>
+                <h1 style="text-align: center">Write-Up 1</h1>
+                <input type="text" aria-label="Comments" placeholder="Comments" value="" style="padding:10px 50px 10px 5px" id="stuffed"></input><button onclick="enter()" style="text-decoration: none; color: #ffffff; background-color: #5dbbd4; padding: 12px 10px 12px 10px; border-width: 0px;">Enter</button>
+                </a>
+                <img src="/static/assets/khushiimages/blank_journal.jpg" width="50%">
+                <br>
+            </p>
+        </div>
+        <div class="col-sm-6">
+            <p style="font-size: x-large">
+            <p>Dear Diary, <span id="myThoughts">{{idea}}</span>.</p>
+            <h1 style="text-align: center">Write-Up 2</h1>
+            <input type="text" aria-label="Comments" placeholder="Comments" value="" style="padding:10px 50px 10px 5px" id="stuffed"></input><button onclick="enter()" style="text-decoration: none; color: #ffffff; background-color: #5dbbd4; padding: 12px 10px 12px 10px; border-width: 0px;">Enter</button>
+            </a>
+            <img src="/static/assets/khushiimages/journal2.jpg" width="50%">
+            <br>
+            </p>
+        </div>
+        </div>
+
+        <br>
+
+        <img src="/static/assets/khushiimages/journal4.jpg" width="50%">
+        <p id="text" onclick="func()">Break Time</p>
+        <p>&#8595;</p>
+        <button type="button" onclick="func()">Click here!</button>
+        <br>
+        <a style="font-size: large; font-family: Baskerville;text-align: center" href="http://127.0.0.1:5001/eduvidDina">Videos</a>
+    </div>
+
+
+    </body>
+
+{% endblock %}
+
+{% block background %}
+{% endblock %}

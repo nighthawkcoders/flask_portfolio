@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+{% include "layouts/navbar.html" %}
+<body>
+<html>
+<title>Trivia API</title>
+<style>
+    .button1 {
+        background-color: white;
+        color: grey;
+        border: 3px solid #EBF7FA;
+        padding: 15px 32px;
+        margin: 4px 2px;
+        font-size: larger;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    .button1:hover {
+        background-color: #EBF7FA;
+        color: black;
+    }
+</style>
+<div class="container">
+    <div class="center-block" style="margin: 2% 5% 5%;">
+        <div class="col-12" style="text-align: center;">
+            <br>
+            <p style="color: gray; font-size: xxx-large; font-family: Baskerville"> Random Trivia</p>
+            <br>
+            <a href="{{url_for('trivia')}}" class="button1">Refresh!</a>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="jumbotron text-left row">
+            <div class="col-md">
+                <p class="setup" style="color: gray; font-size: x-large; text-align: center"><strong>{{numbers.text}}</strong></p>
+            </div>
+        </div>
+
+    </div>
+
+    <table style="margin: 2%">
+        <tr>
+            <p style="color: gray; font-size: xx-large; font-family: Baskerville; text-align: center" id="answer" onclick="myFunction()">reveal answer</p>
+
+            <script>
+                function myFunction() {
+                    document.getElementById("answer").innerHTML = "{{numbers.number}}";
+                }
+            </script>
+        </tr>
+        <tr>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <th>
+                <p style="font-family: Baskerville; color: gray; font-size: x-large">JSON Data</p>
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <p style="font-family: Baskerville; color: gray; font-size: x-large" id="jsondata" onclick="myF()">reveal JSON</p>
+
+                <script>
+                    function myF() {
+                        document.getElementById("jsondata").innerHTML = "{{numbers}}";
+                    }
+                </script>
+            </td>
+        </tr>
+    </table>
+</div>
+
+{% block background %}
+    <script src="{{ url_for('static', filename='three.r119.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vanta.fog.min.js') }}"></script>
+    <script>
+        VANTA.FOG({
+            el: "body",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 850.00,
+            minWidth: 200.00,
+            highlightColor: 0x44e3ed,
+            midtoneColor: 0xc0bbe8,
+            lowlightColor: 0x6d9fe6,
+            baseColor: 0xffffff,
+            speed: 2.50,
+            zoom: 0.80
+        })
+    </script>
+{% endblock %}
+</html>
+</body>

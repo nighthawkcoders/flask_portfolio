@@ -1,0 +1,91 @@
+
+{% include "layouts/navbar.html" %}
+
+
+<!- This is a replacement block for Body in base.html -->
+{% block body %}
+<head>
+    <title>Khushi</title>
+    <p>Screen Color Changer</p>
+
+    <p id="demo">Color:</p>
+<style>
+   .button1 {
+       background-color: white;
+       color: grey;
+       border: 3px solid #9CD8EC;
+       text-decoration: none;
+       margin: 4px 2px;
+       padding: 3px 4px;
+   }
+
+   .button1:hover {
+       background-color: whitesmoke;
+       color: black;
+   }
+
+</style>
+<script>
+    function changeImage() {
+        var image = document.getElementById('myImage');
+        if (image.src.match("/static/assets/khushiimages/Khushi.jpg")) {
+            image.src = "/static/assets/khushiimages/Khushi2.jpg";
+        } else {
+            image.src = "/static/assets/khushiimages/Khushi.jpg";
+        }
+    }
+    colors = ["Red", "Blue", "Green", "Yellow", "Pink"];
+      //colors = ["#ff3399", "#e6001a", "#5900a6", "#9ec200","#34cfeb", "#FFC0CB"];
+
+      alert("Call alert function and change window colors");
+      /*
+     setInterval(function () {
+        alert("Hello");
+      }, 3000); //3000 milliseconds=3secs
+      */
+
+       var timer = window.setInterval(changeColor, 1000); //1000 milliseconds=1sec
+
+      function changeColor() {
+        var n = Math.round(Math.random() * 3);
+        document.body.style.backgroundColor = colors[n];
+        document.getElementById("demo").innerHTML = "Color: " + colors[n];
+      }
+</script>
+
+</head>
+<body onload="myFunction()"; style="background-color: #EBF7FA; text-align:center">
+<div style="display:none;" id="myDiv" class="animate-bottom"; style="margin: 2% 5% 5%; text-align:center; font-family: Baskerville; font-size: larger">
+    <p>Hello <span id="myName">{{name}}</span>, Greetings!</p>
+
+<form action="#" id="khushi" method="POST" >
+    <label for="name">Enter Your Name </label>
+    <input name="name" id="name">
+    <input type="submit" value="Go!" onclick="(function (){document.getElementById('myName').innerText=document.getElementById('name').value})();return false;">
+</form>
+
+
+
+
+<br>
+
+<p style="font-size: large; font-family: Baskerville; text-align: center"><i>Click Me</i></p>
+
+<img id="myImage" onclick="changeImage()" src="/static/assets/khushiimages/Khushi.jpg" width="auto" height="300px">
+
+<p style="font-size: large; font-family: Baskerville; text-align: center"><i><a href="listmovie">Movie List API</a></i></p>
+<br>
+<a style="font-family: Baskerville" href="https://docs.google.com/document/d/1F7jZ8Qvhu4UHAMA8RKTd8uXNWJdfZppVzL78_epN8UY/edit?usp=sharing">My Journal</a>
+<br>
+<a style="font-family: Baskerville" href="https://docs.google.com/document/d/1ADyls7G7nSNeCyXoheMb-1PMnYpm7z96dyg9RLofUFo/edit?usp=sharing">Pair-Share Journal</a>
+<br>
+<a style="font-family: Baskerville" href="https://github.com/KhushiB24">My GitHub Profile</a>
+</div>
+
+
+</body>
+
+{% endblock %}
+
+{% block background %}
+{% endblock %}

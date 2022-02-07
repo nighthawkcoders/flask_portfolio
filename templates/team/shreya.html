@@ -1,0 +1,87 @@
+
+{% include "layouts/navbar.html" %}
+<title>Shreya</title>
+
+<!- This is a replacement block for Body in base.html -->
+{% block body %}
+
+
+    <style>
+        .button1 {
+            background-color: white;
+            color: grey;
+            border: 3px solid #9CD8EC;
+            text-decoration: none;
+            margin: 4px 2px;
+            padding: 3px 4px;
+        }
+
+        .button1:hover {
+            background-color: whitesmoke;
+            color: black;
+        }
+    </style>
+<body onload="myFunction()" style="background-color: #EBF7FA;">
+    <div style="display:none;" id="myDiv" class="animate-bottom";>
+    <div style="margin: 2% 5% 5%; text-align:center; font-family: Baskerville; font-size: larger">
+        <div>
+            <p style="font-size: x-large"id="wave"><strong>Hello, {{name}}!</strong></p>
+            <script>
+                var targetForWave = document.getElementById("wave");
+                targetForWave.textContent += String.fromCodePoint(0x1F44B);
+            </script>
+        </div>
+
+        <div>
+            <form action="/shreya" id="shreya" method="POST" >
+                <label for="name">Enter a greeting name!</label>
+                <input name="name" id="name">
+                <input type="submit" class="button1" value="Greetings!">
+            </form>
+        </div>
+        <script>
+            // Function to change webpage background color
+            function changeBack(color){
+                document.body.style.background = color;
+            }
+        </script>
+        <div>
+            <label>Change Background:</label>
+            <button type="button" onclick="changeBack('seashell');">Pink</button>
+            <button type="button" onclick="changeBack('ivory');">Yellow</button>
+            <button type="button" onclick="changeBack('honeydew');">Mint</button>
+        </div>
+        <p>
+        </p>
+        <p style="font-size: large; font-family: Baskerville; text-align: center"><i>Click Me</i></p>
+
+        <img id="myImage" onclick="changeImage()" src="/static/assets/shreyaimages/shreya.png" width="285" height="400">
+
+        <script>
+            function changeImage() {
+                var image = document.getElementById('myImage');
+                if (image.src.match("/static/assets/shreyaimages/shreya.png")) {
+                    image.src = "/static/assets/shreyaimages/shreyamaskk.png";
+                } else {
+                    image.src = "/static/assets/shreyaimages/shreya.png";
+                }
+            }
+        </script>
+    </div>
+    <a href="{{url_for('dictionary')}}" class="button1" style="font-family: Baskerville;font-size: large; margin-left: 0%">Here is The API</a>
+    <div style="text-align: center">
+
+        <br>
+        <a style="font-family: 'Baskerville'" href="https://docs.google.com/document/d/1kiNPT2VoJIwpsf-8tR-1t58_ihXYbHytcyO2m-8JxU0/edit?usp=sharing">My Journal</a>
+        <br>
+        <a style="font-family: 'Baskerville'" href="https://docs.google.com/document/d/19XB2QXhh55YSZJ4m368AKi0JUGVT9s94BOA-rs2YWdQ/edit?usp=sharing">Pair-Share Journal</a>
+        <br>
+        <a style="font-family: 'Baskerville'" href="https://github.com/shreya-ahujaa">My GitHub Profile</a>
+    </div>
+    </div>
+    </body>
+
+{% endblock %}
+
+{% block background %}
+{% endblock %}
