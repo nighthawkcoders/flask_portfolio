@@ -76,6 +76,19 @@ def search():
 def crud():
     return render_template("crud.html")
 
+@app.route('/goalsCl')
+def goalsCl():
+    return render_template("crossTeam/tinahtmlFolder/imbedHtml/goalsCl.html")
+
+@app.route('/organIm')
+def organIm():
+    return render_template("crossTeam/tinahtmlFolder/imbedHtml/organIm.html")
+
+
+@app.route('/loveO')
+def loveO():
+    return render_template("crossTeam/tinahtmlFolder/imbedHtml/loveO.html")
+
 @app.route('/fibonacci')
 def fibonacci():
     return render_template("api/Used/fibonacci.html")
