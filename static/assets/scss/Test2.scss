@@ -1,0 +1,28 @@
+$bgcolor: #2b425b;
+
+$fontsize: 69px;
+$margin-size: 20px;
+$text-align: center;
+$font-family-base: Roboto Condensed;
+$font-family-base2: Cutive Mono;
+$font-family-base3: Poppins;
+$width: auto;
+$border: 3px solid black;
+$Hcolor: black;
+$fontsize2: small;
+
+p {
+  font-family: $font-family-base3;
+}
+table {
+  font-family: $font-family-base3;
+  font-size: $fontsize2;
+}
+h1 {
+  font-family: $font-family-base;
+  font-size: $fontsize;
+
+}
+h2 {
+  font-family: $font-family-base
+}
