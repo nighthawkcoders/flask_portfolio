@@ -229,6 +229,10 @@ def infopage():
 def currency():
     return render_template("layouts/currency.html")
 
+@app.route('/world_instruments', methods=['GET', 'POST'])
+def world_instruments():
+    return render_template("layouts/world_instruments.html")
+
 @app.route('/quiz')
 def quiz():
     return render_template("quiz.html")
@@ -236,3 +240,132 @@ def quiz():
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(host="127.0.0.1", port=8000)
+
+@app.route('/translator/', methods=['GET', 'POST'])
+def translator():
+    url = "https://translated-mymemory---translation-memory.p.rapidapi.com/api/get"
+    pairs = ["en|es", "en|it", "en|zh", "en|de", "en|he"]
+    text = "Translated text will show here"
+    original = text
+    master_list = []
+    if request.form:
+        text = request.form.get("tester2")
+        original = text
+    for item in pairs:
+        querystring = {"langpair":item,"q":text , "mt":"1","onlyprivate":"0","de":"a@b.c"}
+
+        headers = {
+            'x-rapidapi-host': "translated-mymemory---translation-memory.p.rapidapi.com",
+            'x-rapidapi-key': "00a6319afcmshb59ecb31e0a9dbap1c6de4jsn4b86a9198483"
+        }
+
+        response = requests.request("GET", url, headers=headers, params=querystring)
+        print(response.text)
+        dictionary = [response.json().get('responseData')]
+        master_list = master_list + dictionary
+    return render_template("layouts/translator.html", dictionary=master_list, original=original)
+
+@app.route('/population', methods=['GET', 'POST'])
+def population():
+    CountryList = [
+        'China',
+        'India',
+        'United States',
+        'Indonesia',
+        'Pakistan',
+        'Brazil',
+        'Nigeria',
+        'Bangladesh',
+        'Russia',
+        'Mexico',
+        'Japan',
+        'Ethiopia',
+        'Philippines',
+        'Egypt',
+        'Vietnam',
+        'DR Congo',
+        'Turkey',
+        'Iran',
+        'Germany',
+        'Thailand',
+        'United Kingdom',
+        'France',
+        'Italy',
+        'Tanzania',
+        'South Africa'
+    ]  # this creates an empty list of all the country names
+    top10 = [
+        'China',
+        'India',
+        'United States',
+        'Indonesia',
+        'Pakistan',
+        'Brazil',
+        'Nigeria',
+        'Bangladesh',
+        'Russia',
+        'Mexico']
+
+    headers = {
+        'x-rapidapi-host': 'world-population.p.rapidapi.com',
+        'x-rapidapi-key': 'f4480562c7mshcfebe0975d4fd48p16ab77jsnae6575329780'
+    }
+
+    # get all the data for each country
+    dictionarymasterlist = []  # this creates an empty list that all the dictionaries go into
+    url = "https://world-population.p.rapidapi.com/population"
+
+    CountryList = top10
+    for item in CountryList:
+        querystring = {"country_name": item}
+        response = requests.request("GET", url, headers=headers, params=querystring)
+
+        list_of_dictionaries2 = response.json().get('body')
+        dictionarymasterlist = dictionarymasterlist + [list_of_dictionaries2]
+
+
+    return render_template("layouts/population.html", people=dictionarymasterlist)
+
+@app.route('/environmental/', methods=['GET', 'POST'])
+def environmental():
+    headers = {
+        'x-rapidapi-host': 'environment-news-live.p.rapidapi.com',
+        'x-rapidapi-key': 'f4480562c7mshcfebe0975d4fd48p16ab77jsnae6575329780'
+    }
+
+    # get list of newspapers
+    querystring = {}
+    urlNewsList = "https://environment-news-live.p.rapidapi.com/newspapers"
+    response = requests.request("GET", urlNewsList, headers=headers, params=querystring)
+
+    list_of_papers = []
+    list_of_papers = response.json()  # get('body').get('countries')
+
+    # get all the articles of each source
+    dictionarymasterlist = []  # this creates an empty list that all the dictionaries go into
+
+    for item in list_of_papers:
+        print(item)
+        PaperName = item.get('newspaperID')
+        if (PaperName != 'latimes' and PaperName != 'telegraph') : continue
+
+        urlPaper= 'https://environment-news-live.p.rapidapi.com/news/%s' % PaperName
+        querystring = {"newspaperID": PaperName}
+        response = requests.request("GET", urlPaper, headers=headers, params=querystring)
+
+        list_of_articles = response.json()  # get('body').get('countries')
+        dictionarymasterlist = dictionarymasterlist + list_of_articles
+
+    print(dictionarymasterlist)
+    return render_template("layouts/environmental.html", news=dictionarymasterlist)
+
+
+
+
+
+
+
+
+
+
+
