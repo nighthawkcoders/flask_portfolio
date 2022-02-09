@@ -1,0 +1,60 @@
+{% extends "layouts/base.html" %}
+
+{% block body %}
+    {% set news = news %}
+
+    <div class="container">
+        <div class = "row" style="padding-bottom:5%;">
+            <div class="col-12" style="text-align: center;font-size:15px">
+                <h1><strong>Environmental News</strong></h1>
+                <form action={{url_for('environmental')}}> <!--the form reloads the page with the newest info by re-rendering the page and recalling the api -->
+                    <button>Refresh News!</button>
+                </form>
+            </div>
+        </div>
+        <div class = "row" style="padding-bottom:5%;">
+            <div class = "col-1"></div>
+            <div class = "col-10">
+                <table class="table text-light">
+                    <thead>
+                    <tr>
+                        <th>Source</th>
+                        <th>Title</th>
+                        <th>url</th>
+                    </tr>
+                    </thead>
+
+                    {% for dictionary in news %} <!--we want to get different values for each dictionary in the list of dictionaries so we do a for loop -->
+                        <tr>
+                            {% set source = dictionary['source'] %}
+                            <td>{{ source }}</td>
+                            {% set title = dictionary['title'] %} <!-- set a variable to dictionary key -->
+                            <td>{{ title }}</td>                         <!-- put the variable in the table column-->
+                            {% set url = dictionary['url'] %}
+                            <td>{{ url }}</td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+            <div class = "col-1"></div>
+        </div>
+        <div class="row" style="padding-bottom:5%;">
+            <div class = "col-2"></div>
+            <div class="col-10">
+                <table>
+                    <tr>
+                        <th>News</th>
+                        <th>Python Dictionary from API</th>
+                    </tr>
+                    {% for dictionary in news %}
+                        <tr>
+                            {% set url = dictionary['url'] %} <!-- set a variable to current dictionary key -->
+                            <td>{{ url }}</td> <!-- put the variable in the table column-->
+                            <td>{{ dictionary }}</td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}
