@@ -26,3 +26,7 @@ def costcalculator():
 @btanay.route('/todo/')
 def todo():
     return render_template('todo.html')
+
+@btanay.route('/stopwatch/')
+def stopwatch():
+    return render_template('stopwatch.html')
