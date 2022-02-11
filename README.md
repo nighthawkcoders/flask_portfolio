@@ -14,6 +14,11 @@
 4. [Innovation sprint 1,2 Week 2](https://github.com/connorw72/food#innovation-sprint-12-week-2)
 5. [Database intro sprint 3 week 3](https://github.com/connorw72/food#database-intro-sprint-3-week-3)
 6. [Python Database Modeling Sprint 4,5 week 4](https://github.com/connorw72/food#python-database-modeling-sprint-45-week-4)
+7. [Week 5](https://github.com/connorw72/food#python-database-modeling-sprint-45-week-5)
+8. [Week 6](https://github.com/connorw72/food#week-6-mid-term-and-vocab-competency)
+9. [Week 7](https://github.com/connorw72/food#week-7-pbl-showing-the-how-theme-technicals---crossover)
+10. [Week 8](https://github.com/connorw72/food#week-8-crossover-switch)
+11. [Week 9]
 
 ## Contributors
 
@@ -105,6 +110,13 @@
 |Connor| [Google Search](https://github.com/connorw72/food/blob/main/templates/google.html), [Google Map](https://github.com/connorw72/food/blob/main/templates/map.html),[Translate](https://github.com/connorw72/food/blob/main/templates/Enclosures.html)
 |Anirudh| [Main Pet Page](https://github.com/connorw72/food/blob/nasty/templates/petpage.html), [Pet Draw](https://github.com/connorw72/food/blob/nasty/templates/petdraw.html),[Quiz Timer Function](https://github.com/connorw72/food/blob/nasty/templates/PetQuiz.html)
 
+### Week 9 Create Task Check
+|Member| Wiki|
+|:-----|:----------------------|
+|Connor and Tanay| [Wiki](https://github.com/connorw72/food/wiki/Create-Task-Tanay-and-Connor)
+|Pranav| [Wiki](https://github.com/connorw72/food/wiki/Create-Task-Tanay-and-Connor)
+|Colin| [Wiki](https://github.com/connorw72/food/wiki/Create-Task-Tanay-and-Connor)
+|Chase| [Wiki](https://github.com/connorw72/food/wiki/Create-Task-Tanay-and-Connor)
 
 
 
