@@ -4,9 +4,9 @@ from __init__ import app
 import json
 
 about_pages = Blueprint('aboutpages', __name__,
-                        url_prefix='/ap',
-                        template_folder='templates',
-                        static_folder='static', static_url_path='static/aboutpages')
+                      url_prefix='/ap',
+                      template_folder='templates',
+                      static_folder='static', static_url_path='static/aboutpages')
 
 @about_pages.route('/aboutnathan')
 def aboutnathan():
