@@ -18,7 +18,7 @@
 8. [Week 6](https://github.com/connorw72/food#week-6-mid-term-and-vocab-competency)
 9. [Week 7](https://github.com/connorw72/food#week-7-pbl-showing-the-how-theme-technicals---crossover)
 10. [Week 8](https://github.com/connorw72/food#week-8-crossover-switch)
-11. [Week 9]
+11. [Week 9](https://github.com/connorw72/food#week-9-create-task-check)
 
 ## Contributors
 
@@ -114,9 +114,9 @@
 |Member| Wiki|
 |:-----|:----------------------|
 |Connor and Tanay| [Wiki](https://github.com/connorw72/food/wiki/Create-Task-Tanay-and-Connor)
-|Pranav| [Wiki](https://github.com/connorw72/food/wiki/Create-Task-Tanay-and-Connor)
-|Colin| [Wiki](https://github.com/connorw72/food/wiki/Create-Task-Tanay-and-Connor)
-|Chase| [Wiki](https://github.com/connorw72/food/wiki/Create-Task-Tanay-and-Connor)
+|Pranav| [Wiki]()
+|Colin| [Wiki]()
+|Chase| [Wiki]()
 
 
 
