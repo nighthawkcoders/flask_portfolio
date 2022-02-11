@@ -221,6 +221,10 @@ def countries():
 def faq():
     return render_template("faq.html")
 
+@app.route('/infopage')
+def infopage():
+    return render_template("infopage.html")
+
 @app.route('/currency', methods=['GET', 'POST'])
 def currency():
     return render_template("layouts/currency.html")
