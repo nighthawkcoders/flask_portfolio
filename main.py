@@ -2,7 +2,7 @@
 from flask import Flask, render_template
 from flask import request
 from __init__ import app
-import requests, random
+import requests
 
 from crud.app_crud_api import app_crud_api
 app.register_blueprint(app_crud_api)
@@ -341,13 +341,14 @@ def onestar():
     return render_template("ratingtest.html", fivestarsreview=fivestars_list, fourstarsreview=fourstars_list, threestarsreview=threestars_list, twostarsreview=twostars_list, onestarreview=onestar_list, average=average)
 
 
-@app.route('/numberguess', methods=['GET', 'POST'])
-def numberguess():
-    return render_template("numberguess.html")
 
-@app.route('/games')
-def games():
-    return render_template("games.html")
+if __name__ == "__main__":
+    app.run(
+        debug=True,
+        # host="0.0.0.0",
+        # port=8000
+    ),
+
 
 @app.route('/graph')
 def graph():
