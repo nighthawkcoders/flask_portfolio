@@ -188,6 +188,10 @@ def crud_async():
 def search():
     return render_template("search.html")
 
+@app.route('/gallery')
+def gallery():
+    return render_template("gallery.html")
+
 @app.route('/weather/', methods=['GET', 'POST'])
 def weather():
     countrycode = ['105391811', '105368361', '105359777', '105341704', '105393052', '105392171']
