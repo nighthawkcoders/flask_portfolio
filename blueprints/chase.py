@@ -28,3 +28,8 @@ def h2():
 @bchase.route('/Pet Quiz 2/')
 def Pquiz2():
     return render_template('PetQuiz2.html')
+
+
+@bchase.route('/RPC/')
+def RPC():
+    return render_template('RPC.html')

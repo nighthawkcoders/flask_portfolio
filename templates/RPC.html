@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+{% extends "layouts/base.html" %}
+{% block head %}
+    <html lang="en">
+    <link rel="stylesheet" type="text/css" href="/static/assets/scss/Test2.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cutive Mono">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Robot Condensed">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<body>
+<style>
+    html, body {
+        margin: 0;
+        height: 100%;
+      }
+
+    body {
+        text-align: center;
+    }
+    .action {
+        max-width: 800px;
+        padding: 40px 0;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+        border-radius: 20px;
+    }
+    .options {
+        flex: 1 1 30%;
+        border-radius: 50%;
+        border-width: 4px;
+        border-style: solid;
+        border-color: rgba(0, 0, 0, 0.7);
+        padding: 10px;
+        animation-name: anim-fade;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        width: 100%;
+        max-width: 120px;
+        max-height: 120px;
+        min-height: 120px;
+    }
+    .Players {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .move {
+        border-radius: 50%;
+        border-width: 4px;
+        border-style: solid;
+        border-color: rgba(0, 0, 0, 0.7);
+    }
+    .separator {
+        font-size: 5em;
+    }
+</style>
+{% endblock %}
+{% block body %}
+<div class="container">
+    <h1>The Animal Rock Paper and Scissor Game</h1>
+    <h2>The three images below represent rock, paper, and scissors respectively.</h2>
+    <h2> Dog beats Cat. Cat beats Mouse. Mouse beats Dog</h2>
+    <h2>First to 5 wins!</h2>
+    <h2>
+        Player <span id="p-score">0</span> - <span id="c-score">0</span> Animals
+    </h2>
+    <div class="Players">
+        <div class="move">
+            <img style="width: 150px; height: 150px" src="/static/assets/Player.png">
+        </div>
+        <div class="separator">VS</div>
+        <div class="move">
+            <img style="width: 150px; height: 150px" src="/static/assets/Opp.png">
+        </div>
+    </div>
+    <h2>Click on the image below to select your move:<h2>
+        <div class="action">
+            <input class="options" type="image" src="/static/assets/DOG.png" value="Dog" />
+            <input class="options" type="image" src="/static/assets/Cat.png" value="Cat" />
+            <input class="options" type="image" src="/static/assets/MOUSE.png" value="Mouse" />
+        </div>
+</div>
+<script>
+    const options = document.querySelectorAll(".options");
+    let pScore = 0;
+    let cScore = 0;
+
+    options.forEach((option) => {
+        option.addEventListener("click", function () {
+            const pInput = this.value;
+
+            const cOptions = ["Dog", "Cat", "Mouse"];
+            const cInput = cOptions[Math.floor(Math.random() * 3)];
+
+
+            compareInputs(pInput, cInput);
+            updateScore();
+            if(checkWinner()){
+                pScore = cScore= 0;
+                updateScore();
+            }
+        });
+    });
+
+
+
+    function compareInputs(pInput, cInput) {
+        const currentMatch = `${pInput} vs ${cInput}`;
+        if (pInput === cInput) {
+            alert(`${currentMatch} is a Tie`);
+            return;
+        }
+
+        if (pInput === "Mouse") {
+            if (cInput === "Dog") {
+                alert(`${currentMatch} = You Win`);
+                pScore++;
+            } else {
+                alert(`${currentMatch} = Animals Wins`);
+                cScore++;
+            }
+        }
+
+        else if (pInput === "Cat") {
+            if (cInput === "Mouse") {
+                alert(`${currentMatch} = You Win`);
+                pScore++;
+            } else {
+                alert(`${currentMatch} = Animals Wins`);
+                cScore++;
+            }
+        }
+
+        else {
+            if (cInput === "Cat") {
+                alert(`${currentMatch} = You Win`);
+                pScore++;
+            } else {
+                alert(`${currentMatch} = Animals Wins`);
+                cScore++;
+            }
+        }
+    }
+
+    function updateScore() {
+        document.getElementById("p-score").textContent = pScore;
+        document.getElementById("c-score").textContent = cScore;
+    }
+
+    function checkWinner() {
+        if (pScore === 5 || cScore === 5) {
+            const winner =
+                pScore === 5
+                    ? "You win the game! Congratulations!"
+                    : "Animals wins the game! Try again next time L!";
+            alert(winner);
+            return true;
+        }
+        return false;
+    }
+</script>
+</body>
+{% endblock %}
