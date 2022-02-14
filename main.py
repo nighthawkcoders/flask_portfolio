@@ -2,7 +2,7 @@
 from flask import Flask, render_template
 from flask import request
 from __init__ import app
-import requests
+import requests, random
 
 from crud.app_crud_api import app_crud_api
 app.register_blueprint(app_crud_api)
@@ -188,10 +188,6 @@ def crud_async():
 def search():
     return render_template("search.html")
 
-@app.route('/gallery')
-def gallery():
-    return render_template("gallery.html")
-
 @app.route('/weather/', methods=['GET', 'POST'])
 def weather():
     countrycode = ['105391811', '105368361', '105359777', '105341704', '105393052', '105392171']
@@ -341,14 +337,13 @@ def onestar():
     return render_template("ratingtest.html", fivestarsreview=fivestars_list, fourstarsreview=fourstars_list, threestarsreview=threestars_list, twostarsreview=twostars_list, onestarreview=onestar_list, average=average)
 
 
+@app.route('/numberguess', methods=['GET', 'POST'])
+def numberguess():
+    return render_template("numberguess.html")
 
-if __name__ == "__main__":
-    app.run(
-        debug=True,
-        # host="0.0.0.0",
-        # port=8000
-    ),
-
+@app.route('/games')
+def games():
+    return render_template("games.html")
 
 @app.route('/graph')
 def graph():
