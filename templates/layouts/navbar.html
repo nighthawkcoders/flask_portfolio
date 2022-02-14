@@ -14,7 +14,7 @@
             <li class="nav-item active">
                 <a class="nav-link" href="/">Home</a>
             </li>
-            <a class="nav-link" href="/mainabout">About Us</a>
+            <a class="nav-link" href="/ap/mainabout">About Us</a>
             <li class="nav-item dropdown">
 
             <li class="nav-item dropdown">
@@ -36,8 +36,8 @@
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
                     <a class="dropdown-item" href="/countries">Countries</a>
                     <a class="dropdown-item" href="/weather">Weather</a>
+                    <a class="dropdown-item" href="/infopage">Info About Countries</a>
                     <a class="dropdown-item" href="/environmental">Environmental News</a>
-                    <a class="dropdown-item" href="/gallery">Country Gallery</a>
                 </div>
             </li>
             <li class="nav-item dropdown">
@@ -49,6 +49,7 @@
                     <a class="dropdown-item" href="/currency">Currency Conversion</a>
                     <a class="dropdown-item" href="/Tdb-2">Tbd-2</a>
                 </div>
+            </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="dropdownMenuButton2" type="button" aria-expanded="false">
                     Activities
@@ -56,10 +57,18 @@
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
                     <a class="dropdown-item" href="/games">Games</a>
                     <a class="dropdown-item" href="/quiz">Quizzes</a>
-                    <a class="dropdown-item" href="/Tbd-1">Tbd-1</a>
-
+                    <a class="dropdown-item" href="/world_instruments">World Instruments!</a>
                 </div>
-                    </li>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="dropdownMenuButton2" type="button" aria-expanded="false">
+                    Creat Task
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                    <a class="dropdown-item" href="/NathanReem">Nathan + Reem</a>
+                    <a class="dropdown-item" href="/quiz">Jacob + James + Daniel</a>
+                </div>
+            </li>
                 <a class="nav-link" href="/feedback">Give Us Feedback!</a>
                  </li>
              <a class="nav-link" href="/ratingtest">Rating</a>
@@ -68,11 +77,10 @@
         </ul>
 
     </div>
-    <div class="float-right m-2">
+    <div class="float-right">
         <div class="form-group">
-            <input type="text" class="form-control" id="term" placeholder="enter search term">
+            <input type="text" class="form-control" id="search" placeholder="Search Bar">
             <label></label> <!-- used for spacer -->
-        <button class="btn btn-primary bg-secondary" onclick="search_data();">Search</button>
         </div>
         <div class="btn-group">
             <!-- Clock display -->
@@ -83,6 +91,10 @@
             <div class="form-check form-switch">
                 <input type="checkbox" onclick="darkFunction()" class="form-check-input" id="darkSwitch">
                 <label class="custom-control-label" for="darkSwitch" style="color: black;">Dark Mode</label>
+            </div>
+            <div class="float-right m-2">
+                <div id="google_translate_element"></div>
+
             </div>
         </div>
         {% block navbar_script %}
@@ -168,4 +180,17 @@
                 })
             })
     }
+</script>
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+            {pageLanguage: 'en'},
+            'google_translate_element'
+        );
+    }
+</script>
+
+<script type="text/javascript" src=
+        "https://translate.google.com/translate_a/element.js?
+        cb=googleTranslateElementInit">
 </script>
