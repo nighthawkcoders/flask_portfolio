@@ -22,7 +22,7 @@ api = Api(app_crud)
     4.) API testing
 """
 
-""" Users table queries"""
+"""   table queries"""
 
 
 # User/Users extraction from SQL
