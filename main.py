@@ -354,6 +354,10 @@ if __name__ == "__main__":
 def graph():
     return render_template("graph.html")
 
+@app.route('/gallery')
+def gallery():
+    return render_template("gallery.html")
+
 @app.route('/countries')
 def countries():
     return render_template("countries.html")
