@@ -2,8 +2,7 @@
 from flask import Flask, render_template
 from flask import request
 from __init__ import app
-import requests, random
-import json
+import requests
 
 from crud.app_crud_api import app_crud_api
 app.register_blueprint(app_crud_api)
@@ -13,14 +12,6 @@ app.register_blueprint(app_crud_api)
 from crud.app_crud import app_crud
 app.register_blueprint(app_crud)
 
-from aboutme import about_pages
-app.register_blueprint(about_pages)
-
-from api import app_api
-app.register_blueprint(app_api)
-
-from games import app_games
-app.register_blueprint(app_games)
 
 # connects default URL to render index.html
 @app.route('/')
@@ -67,34 +58,6 @@ def feedback():
         if len(input) != 0:  # input field has content
             return render_template("layouts/feedback.html", input=input, name=name)
     return render_template("layouts/feedback.html")
-
-@app.route('/countries')
-def countries():
-    return render_template("countries.html")
-
-@app.route('/faq')
-def faq():
-    return render_template("faq.html")
-
-@app.route('/infopage')
-def infopage():
-    return render_template("infopage.html")
-
-@app.route('/currency', methods=['GET', 'POST'])
-def currency():
-    return render_template("layouts/currency.html")
-
-@app.route('/world_instruments', methods=['GET', 'POST'])
-def world_instruments():
-    return render_template("layouts/world_instruments.html")
-
-@app.route('/quiz')
-def quiz():
-    return render_template("quiz.html")
-
-# runs the application on the development server
-if __name__ == "__main__":
-    app.run(host="127.0.0.1", port=8000)
 
 @app.route('/translator/', methods=['GET', 'POST'])
 def translator():
@@ -217,9 +180,26 @@ def environmental():
     print(dictionarymasterlist)
     return render_template("layouts/environmental.html", news=dictionarymasterlist)
 
-@app.route('/NathanReem')
-def NathanReem():
-    return render_template("NathanReem.html")
+@app.route('/crud_api')
+def crud_async():
+    return render_template("crud_async.html")
+
+@app.route('/search')
+def search():
+    return render_template("search.html")
+
+@app.route('/gallery')
+def gallery():
+    return render_template("gallery.html")
+
+@app.route('/weather/', methods=['GET', 'POST'])
+def weather():
+    countrycode = ['105391811', '105368361', '105359777', '105341704', '105393052', '105392171']
+    dictionarymasterlist = []  # this creates an empty list that all the dictionaries go into
+    for item in countrycode:  # this is a for loop for all the country codes so that each one gets a response
+        url = "https://foreca-weather.p.rapidapi.com/observation/latest/" + item
+
+        querystring = {"lang": "en"}
 
         headers = {
             'x-rapidapi-host': "foreca-weather.p.rapidapi.com",
@@ -361,13 +341,14 @@ def onestar():
     return render_template("ratingtest.html", fivestarsreview=fivestars_list, fourstarsreview=fourstars_list, threestarsreview=threestars_list, twostarsreview=twostars_list, onestarreview=onestar_list, average=average)
 
 
-@app.route('/numberguess', methods=['GET', 'POST'])
-def numberguess():
-    return render_template("numberguess.html")
 
-@app.route('/games')
-def games():
-    return render_template("games.html")
+if __name__ == "__main__":
+    app.run(
+        debug=True,
+        # host="0.0.0.0",
+        # port=8000
+    ),
+
 
 @app.route('/graph')
 def graph():
@@ -387,13 +368,4 @@ def currency():
 
 # runs the application on the development server
 if __name__ == "__main__":
-    app.run(debug=True, port=8000)
-
-
-
-
-
-
-
-
-
+    app.run(host="127.0.0.1", port=8000)
