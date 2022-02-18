@@ -118,6 +118,17 @@
 |Colin| [Wiki]()
 |Chase| [Wiki]()
 
+### Week 9 Create Task Check
+|Member| Journal (with quiz and MCQ test)|
+|:-----|:----------------------|
+|Connor| [Journal](https://docs.google.com/document/d/1yMnRk0cY8TWYl3YKTgz0OKkrI5Gac4pEyoyiffEeUoE/edit?usp=sharing)
+|Tanay| [Journal](https://docs.google.com/document/d/1yMnRk0cY8TWYl3YKTgz0OKkrI5Gac4pEyoyiffEeUoE/edit?usp=sharing)
+|Pranav| [Journal](https://docs.google.com/document/d/1iU4SOdLDTyFTuoI4yuBxjvRjvVHq53I5JZgaCRP8Ah4/edit?usp=sharing)
+|Colin| [Journal](https://docs.google.com/document/d/1iU4SOdLDTyFTuoI4yuBxjvRjvVHq53I5JZgaCRP8Ah4/edit?usp=sharing)
+|Chase| [Journal](https://docs.google.com/document/d/1iU4SOdLDTyFTuoI4yuBxjvRjvVHq53I5JZgaCRP8Ah4/edit?usp=sharing)
+
+
+
 
 
 
