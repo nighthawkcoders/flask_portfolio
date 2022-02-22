@@ -87,58 +87,29 @@ def translator():
 def crud():
     return render_template("crud.html")
 
+
 @app.route('/population', methods=['GET', 'POST'])
 def population():
-    CountryList = [
-        'China',
-        'India',
-        'United States',
-        'Indonesia',
-        'Pakistan',
-        'Brazil',
-        'Nigeria',
-        'Bangladesh',
-        'Russia',
-        'Mexico',
-        'Japan',
-        'Ethiopia',
-        'Philippines',
-        'Egypt',
-        'Vietnam',
-        'DR Congo',
-        'Turkey',
-        'Iran',
-        'Germany',
-        'Thailand',
-        'United Kingdom',
-        'France',
-        'Italy',
-        'Tanzania',
-        'South Africa'
-    ]  # this creates an empty list of all the country names
-    top10 = [
-        'China',
-        'India',
-        'United States',
-        'Indonesia',
-        'Pakistan',
-        'Brazil',
-        'Nigeria',
-        'Bangladesh',
-        'Russia',
-        'Mexico']
+    urlnm = "https://world-population.p.rapidapi.com/allcountriesname"
 
     headers = {
         'x-rapidapi-host': 'world-population.p.rapidapi.com',
         'x-rapidapi-key': 'f4480562c7mshcfebe0975d4fd48p16ab77jsnae6575329780'
     }
 
+    # get list of countries
+    querystring = {}
+    response = requests.request("GET", urlnm, headers=headers, params=querystring)
+    list_of_names = response.json().get('body').get('countries')
+
+    # build short list of countries
+    short_list = list_of_names[0:10]
+
     # get all the data for each country
     dictionarymasterlist = []  # this creates an empty list that all the dictionaries go into
     url = "https://world-population.p.rapidapi.com/population"
 
-    CountryList = top10
-    for item in CountryList:
+    for item in short_list:
         querystring = {"country_name": item}
         response = requests.request("GET", url, headers=headers, params=querystring)
 
@@ -146,6 +117,7 @@ def population():
         dictionarymasterlist = dictionarymasterlist + [list_of_dictionaries2]
 
     return render_template("layouts/population.html", people=dictionarymasterlist)
+
 
 @app.route('/environmental/', methods=['GET', 'POST'])
 def environmental():
@@ -340,6 +312,9 @@ def onestar():
             return render_template("ratingtest.html", fivestarsreview=fivestars_list, fourstarsreview=fourstars_list, threestarsreview=threestars_list, twostarsreview=twostars_list, onestarreview=onestar_list, average=average)
     return render_template("ratingtest.html", fivestarsreview=fivestars_list, fourstarsreview=fourstars_list, threestarsreview=threestars_list, twostarsreview=twostars_list, onestarreview=onestar_list, average=average)
 
+# runs the application on the development server
+if __name__ == "__main__":
+    app.run(host="127.0.0.1", port=8000)
 
 
 if __name__ == "__main__":
