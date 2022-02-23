@@ -5,7 +5,7 @@ from __init__ import app
 import requests
 
 from crud.app_crud_api import app_crud_api
-from templates.random2 import comparisonInput
+from templates.danielcreate import comparisonInput
 
 app.register_blueprint(app_crud_api)
 
@@ -174,8 +174,8 @@ def gallery():
     return render_template("gallery.html")
 
 
-@app.route('/danielcreate/', methods=['GET', 'POST'])
-def danielcreate():
+@app.route('/seniortask/', methods=['GET', 'POST'])
+def seniortask():
 
     name = "answers "
     input = request.form.get("input")
@@ -186,7 +186,7 @@ def danielcreate():
     # convert list to string
     attempts = ' '.join(tries)
 
-    return render_template("layouts/danielcreate.html", input=attempts, name=name)
+    return render_template("layouts/seniortask.html", input=attempts, name=name)
 
 
 @app.route('/weather/', methods=['GET', 'POST'])
