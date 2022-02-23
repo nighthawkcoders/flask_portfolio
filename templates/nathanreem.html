@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+{%  extends "layouts/base.html" %}
 {%  set project = "Create Task" %}
 <head>
     <meta charset="UTF-8">
     <title>Create Task</title>
 </head>
+{% block body %}
 <script>
     var numbers = [];
 
     function userinput(){
-        numbers.push(document.getElementById("numbers").value);
+        numbers.push(document.getElementById("numbers").value)
         window.alert(numbers);
     }
     function Min(){
@@ -34,4 +36,5 @@
     <button onclick="Ave">Average</button>
 </div>
 </body>
+{% endblock %}
 </html>

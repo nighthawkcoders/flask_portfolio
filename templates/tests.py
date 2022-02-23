@@ -34,27 +34,34 @@ for i in number1:
 average1 = sum1/total_num1
 print(average1)
 
-age1 = 21
-age2 = 16
-if age1 > age2:
-    age3 = age2
-    age2 = age1
-    age1 = age3
 
-matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
-# write a function to output the formatted matrix :
+def func(age1,age2):
+    if age1 > age2:
+        age3 = age2
+        age2 = age1
+        age1 = age3
+        print(age1, age2)
+    else:
+        print(age1, age2)
+
+
+def func2():
+    matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+    # write a function to output the formatted matrix :
 # 1 2 3
 # 4 5 6
 # 7 8 9
 
-for i in range(len(matrix)):
-    for j in range(3):
-        print(matrix[i][j], "", end="")
-    print()
-
+    for i in range(len(matrix)):
+        for j in range(3):
+            print(matrix[i][j], "", end="")
+        print()
 
 
 if __name__ == "__main__":
-    print("Age1 =", age1,"Age2 =", age2)
+    age1 = int(input("Give a number"))
+    age2 = int(input("Give a second number"))
+    func2()
+    func(age1, age2)
 
 
