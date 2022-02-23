@@ -309,17 +309,21 @@ def onestar():
 def numberguess():
     return render_template("numberguess.html")
 
+
 @app.route('/games')
 def games():
-    return render_template("games.html")
+    return render_template("layouts/templates/games.html")
+
 
 @app.route('/graph')
 def graph():
     return render_template("graph.html")
 
-@app.route('/projectgreen')
-def projectgreen():
+
+@app.route('/countries')
+def countries():
     return render_template("countries.html")
+
 
 @app.route('/faq')
 def faq():

@@ -6,6 +6,8 @@ import requests, random
 import json
 
 from crud.app_crud_api import app_crud_api
+from templates.danielcreate import comparisonInput
+
 app.register_blueprint(app_crud_api)
 
 # create a Flask instance
@@ -63,11 +65,9 @@ def fiveStars():
     if request.form:
         review = request.form.get("review")
         if len(review) != 0:
-            fiveStars_list.append(review)
-            total = len(oneStar_list) + len(twoStarts_list) + len(threeStars_list) + len(fourStars_list) + len(
-                fiveStars_list)
-            sum = len(oneStar_list) + len(twoStarts_list) * 2 + len(threeStars_list) * 3 + len(fourStars_list) * 4 + len(
-                fiveStars_list) * 5
+            fivestars_list.append(review)
+            total = len(onestar_list) + len(twostars_list) + len(threestars_list) + len(fourstars_list) + len(fivestars_list)
+            sum = len(onestar_list) + len(twostars_list) * 2 + len(threestars_list) * 3 + len(fourstars_list) * 4 + len(fivestars_list) * 5
             if total != 0:
                 average = sum / total
             else:
