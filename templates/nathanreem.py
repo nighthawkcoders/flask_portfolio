@@ -9,10 +9,6 @@ nathanreem = Blueprint('nathanreem', __name__,
                      static_folder='static',
                      static_url_path='assets')
 
-numbers = []
-avg = 0
-
-
-@nathanreem.route('/nathanreem', methods=['GET', 'POST'])
+@nathanreem.route('/nathanreem')
 def number():
     return render_template("nathanreem.html")

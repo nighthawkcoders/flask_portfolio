@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-{%  extends "layouts/base.html" %}
 {%  set project = "Create Task" %}
 <head>
     <meta charset="UTF-8">
@@ -11,7 +10,7 @@
 
     function userinput(){
         numbers.push(document.getElementById("numbers").value);
-        console.log(numbers);
+        window.alert(numbers);
     }
     function Min(){
 
@@ -23,10 +22,9 @@
 
     }
 </script>
-{% block body %}
 <body>
 <div class="col-12">
-    <form id="numbers" method="POST" >
+    <form>
         <label for="numbers">Type in an integer</label>
         <input id="numbers">
         <input type="submit" value="submit" onclick="userinput()">
@@ -36,5 +34,4 @@
     <button onclick="Ave">Average</button>
 </div>
 </body>
-{% endblock %}
 </html>
