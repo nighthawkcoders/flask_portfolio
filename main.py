@@ -22,6 +22,9 @@ app.register_blueprint(app_api)
 from games import app_games
 app.register_blueprint(app_games)
 
+from templates.nathanreem import nathanreem
+app.register_blueprint(nathanreem)
+
 # connects default URL to render index.html
 @app.route('/')
 def index():
@@ -225,10 +228,6 @@ def world_instruments():
 def quiz():
     return render_template("quiz.html")
 
-# runs the application on the development server
-if __name__ == "__main__":
-    app.run(host="127.0.0.1", port=8000)
-
 @app.route('/translator/', methods=['GET', 'POST'])
 def translator():
     url = "https://translated-mymemory---translation-memory.p.rapidapi.com/api/get"
@@ -252,6 +251,7 @@ def translator():
         dictionary = [response.json().get('responseData')]
         master_list = master_list + dictionary
     return render_template("layouts/translator.html", dictionary=master_list, original=original)
+
 
 @app.route('/population', methods=['GET', 'POST'])
 def population():
@@ -314,6 +314,7 @@ def population():
 
     return render_template("layouts/population.html", people=dictionarymasterlist)
 
+
 @app.route('/environmental/', methods=['GET', 'POST'])
 def environmental():
     headers = {
@@ -347,13 +348,9 @@ def environmental():
     print(dictionarymasterlist)
     return render_template("layouts/environmental.html", news=dictionarymasterlist)
 
-@app.route('/NathanReem')
-def NathanReem():
-    return render_template("NathanReem.html")
-
+# runs the application on the development server
 if __name__ == "__main__":
-    app.run(debug=True, port=8000)
-
+    app.run(host="127.0.0.1", port=8000)
 
 
 

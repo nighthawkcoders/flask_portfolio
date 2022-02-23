@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+{%  extends "layouts/base.html" %}
+{%  set project = "Create Task" %}
+<head>
+    <meta charset="UTF-8">
+    <title>Create Task</title>
+</head>
+<script>
+    function Min(){
+
+    }
+    function Max(){
+
+    }
+    function Ave(){
+
+    }
+</script>
+{% block body %}
+<body>
+<div class="col-12">
+    <form id="number" method="POST" >
+        <label for="number">Type in an integer</label>
+        <input id="number">
+        <input type="submit" value="submit">
+    </form>
+    <button onclick="Min">Minimum</button>
+    <button onclick="Max">Maximum</button>
+    <button onclick="Ave">Average</button>
+</div>
+</body>
+{% endblock %}
+</html>

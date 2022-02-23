@@ -3,7 +3,7 @@ from flask import request, Blueprint
 from __init__ import app
 import requests, random
 
-NathanReem = Blueprint('NathanReem', __name__,
+nathanreem = Blueprint('nathanreem', __name__,
                      url_prefix='/NR',
                      template_folder='templates/',
                      static_folder='static',
@@ -15,10 +15,11 @@ maxlist = []
 avg = 0
 
 
-@NathanReem.route('/NathanReem', methods=['GET', 'POST'])
+@nathanreem.route('/nathanreem', methods=['GET', 'POST'])
 def number():
     for i in range(5):
         if request.form:
             numinput = int(request.form.get("number"))
             if int(number) != 0 and number >= 100:
                 numbers.append(numinput)
+    return render_template("nathanreem.html")
