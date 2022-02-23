@@ -5,6 +5,8 @@ from __init__ import app
 import requests
 
 from crud.app_crud_api import app_crud_api
+from templates.random2 import comparisonInput
+
 app.register_blueprint(app_crud_api)
 
 # create a Flask instance
@@ -42,13 +44,16 @@ def aboutjames():
 def aboutdaniel():
     return render_template("aboutdaniel.html")
 
+
 @app.route('/mainabout/')
 def mainabout():
     return render_template("mainabout.html")
 
+
 @app.route('/worldclock/')
 def worldclock():
     return render_template("worldclock.html")
+
 
 @app.route('/feedback/', methods=['GET', 'POST'])
 def feedback():
@@ -58,6 +63,7 @@ def feedback():
         if len(input) != 0:  # input field has content
             return render_template("layouts/feedback.html", input=input, name=name)
     return render_template("layouts/feedback.html")
+
 
 @app.route('/translator/', methods=['GET', 'POST'])
 def translator():
@@ -152,17 +158,36 @@ def environmental():
     print(dictionarymasterlist)
     return render_template("layouts/environmental.html", news=dictionarymasterlist)
 
+
 @app.route('/crud_api')
 def crud_async():
     return render_template("crud_async.html")
+
 
 @app.route('/search')
 def search():
     return render_template("search.html")
 
+
 @app.route('/gallery')
 def gallery():
     return render_template("gallery.html")
+
+
+@app.route('/danielcreate/', methods=['GET', 'POST'])
+def danielcreate():
+
+    name = "answers "
+    input = request.form.get("input")
+
+    # get the list of tries
+    tries = comparisonInput(input)
+
+    # convert list to string
+    attempts = ' '.join(tries)
+
+    return render_template("layouts/danielcreate.html", input=attempts, name=name)
+
 
 @app.route('/weather/', methods=['GET', 'POST'])
 def weather():
@@ -189,7 +214,6 @@ fourstars_list = []
 threestars_list = []
 twostars_list = []
 onestar_list = []
-
 
 
 @app.route('/ratingtest/')
@@ -312,38 +336,44 @@ def onestar():
             return render_template("ratingtest.html", fivestarsreview=fivestars_list, fourstarsreview=fourstars_list, threestarsreview=threestars_list, twostarsreview=twostars_list, onestarreview=onestar_list, average=average)
     return render_template("ratingtest.html", fivestarsreview=fivestars_list, fourstarsreview=fourstars_list, threestarsreview=threestars_list, twostarsreview=twostars_list, onestarreview=onestar_list, average=average)
 
+
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(host="127.0.0.1", port=8000)
 
 
-if __name__ == "__main__":
-    app.run(
-        debug=True,
-        # host="0.0.0.0",
-        # port=8000
-    ),
+# if __name__ == "__main__":
+#     app.run(
+#         debug=True,
+#         # host="0.0.0.0",
+#         # port=8000
+#     ),
 
 
 @app.route('/graph')
 def graph():
     return render_template("graph.html")
 
+
 @app.route('/gallery')
 def gallery():
     return render_template("gallery.html")
+
 
 @app.route('/countries')
 def countries():
     return render_template("countries.html")
 
+
 @app.route('/faq')
 def faq():
     return render_template("faq.html")
 
+
 @app.route('/currency', methods=['GET', 'POST'])
 def currency():
     return render_template("layouts/currency.html")
+
 
 # runs the application on the development server
 if __name__ == "__main__":

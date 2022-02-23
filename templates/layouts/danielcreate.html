@@ -1,0 +1,42 @@
+{% extends "layouts/base.html" %}
+
+{% block body %}
+    <body>
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="row" style="padding-left:0%; padding-top:5%; justify-content: center">
+                <div class="col-12">
+                    <h1>Senior's Create Task</h1>
+                    <form action="/danielcreate/" name="createTask" method="POST" >
+                        <div>
+                            <h2>Game Rules:</h2>
+                            <p>1. &nbsp;&nbsp; Think any number between 1 and 100, and press start</p>
+                            <p>2. &nbsp;&nbsp; The computer will try to guess that number</p>
+                            <p>3. &nbsp;&nbsp; Following the computer guess, select one of the options: (correct=if computer guessed right; more=if the computer underestimated; less=if the computer overestimated)</p>
+                            <p>4. &nbsp;&nbsp; If the computer can't correctly guess your number in 5 tries you win ! </p>
+                            <br>
+                            <br>
+                        </div>
+
+
+                        <h2>Select an option:</h2>
+                        <input type="radio" name="input" id="Correct" value="Correct"/>
+                        <label for="Correct">Correct</label>
+
+                        <input type="radio" name="input" id="Less" value="Less"/>
+                        <label for="Less">Less</label>
+
+                        <input type="radio" name="input" id="More" value="More"/>
+                        <label for="More">More</label><br><br>
+
+                        <input type="submit" name="status" id="Status" value="Play">
+                        <br><br>
+
+                    </form>
+                    <p id="response" style="color:white";>{% if input %} {{ name }} : {{ input }} {% endif %}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+{% endblock %}
