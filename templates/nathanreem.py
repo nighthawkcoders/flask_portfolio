@@ -10,16 +10,9 @@ nathanreem = Blueprint('nathanreem', __name__,
                      static_url_path='assets')
 
 numbers = []
-minlist = []
-maxlist = []
 avg = 0
 
 
 @nathanreem.route('/nathanreem', methods=['GET', 'POST'])
 def number():
-    for i in range(5):
-        if request.form:
-            numinput = int(request.form.get("number"))
-            if int(number) != 0 and number >= 100:
-                numbers.append(numinput)
     return render_template("nathanreem.html")

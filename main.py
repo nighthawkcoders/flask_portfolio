@@ -15,15 +15,6 @@ app.register_blueprint(app_crud_api)
 from crud.app_crud import app_crud
 app.register_blueprint(app_crud)
 
-from aboutme import about_pages
-app.register_blueprint(about_pages)
-
-from api import app_api
-app.register_blueprint(app_api)
-
-from games import app_games
-app.register_blueprint(app_games)
-
 from templates.nathanreem import nathanreem
 app.register_blueprint(nathanreem)
 

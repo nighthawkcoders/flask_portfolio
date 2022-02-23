@@ -7,6 +7,12 @@
     <title>Create Task</title>
 </head>
 <script>
+    var numbers = [];
+
+    function userinput(){
+        numbers.push(document.getElementById("numbers").value);
+        console.log(numbers);
+    }
     function Min(){
 
     }
@@ -20,10 +26,10 @@
 {% block body %}
 <body>
 <div class="col-12">
-    <form id="number" method="POST" >
-        <label for="number">Type in an integer</label>
-        <input id="number">
-        <input type="submit" value="submit">
+    <form id="numbers" method="POST" >
+        <label for="numbers">Type in an integer</label>
+        <input id="numbers">
+        <input type="submit" value="submit" onclick="userinput()">
     </form>
     <button onclick="Min">Minimum</button>
     <button onclick="Max">Maximum</button>
