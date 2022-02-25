@@ -11,7 +11,10 @@
     var numbers = [];
 
     function userinput(){
-        numbers.push(document.getElementById("numbers").value)
+        numbers.push(document.getElementById("numbers1").value)
+        numbers.push(document.getElementById("numbers2").value)
+        numbers.push(document.getElementById("numbers3").value)
+        numbers.push(document.getElementById("numbers4").value)
         window.alert(numbers);
     }
     function Min(){
@@ -27,9 +30,15 @@
 <body>
 <div class="col-12">
     <form>
-        <label for="numbers">Type in an integer</label>
-        <input id="numbers">
-        <input type="submit" value="submit" onclick="userinput()">
+        <label for="numbers1">Type in an integer</label>
+        <input id="numbers1">
+        <label for="numbers2">Type in an integer</label>
+        <input id="numbers2">
+        <label for="numbers3">Type in an integer</label>
+        <input id="numbers3">
+        <label for="numbers4">Type in an integer</label>
+        <input id="numbers4">
+        <input multiple="multiple" type="submit" value="submit" onclick="userinput()">
     </form>
     <button onclick="Min">Minimum</button>
     <button onclick="Max">Maximum</button>
