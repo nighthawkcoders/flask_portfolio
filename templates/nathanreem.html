@@ -8,23 +8,25 @@
 </head>
 {% block body %}
 <script>
-    var numbers = [];
+    const numbers = [];
 
     function userinput(){
         numbers.push(document.getElementById("numbers1").value)
         numbers.push(document.getElementById("numbers2").value)
         numbers.push(document.getElementById("numbers3").value)
-        numbers.push(document.getElementById("numbers4").value)
-        window.alert(numbers);
+        numbers.push(document.getElementById("numbers4").value);
     }
-    function Min(){
-
+    function Min(min){
+        return Math.min(...min);
     }
-    function Max(){
 
+    function Max(max){
+        return Math.max(...max);
     }
-    function Ave(){
-
+    function Ave(ave){
+        return ave.reduce(function(a,b){
+            return a + b
+        }, 0);;
     }
 </script>
 <body>
@@ -40,9 +42,9 @@
         <input id="numbers4">
         <input multiple="multiple" type="submit" value="submit" onclick="userinput()">
     </form>
-    <button onclick="Min">Minimum</button>
-    <button onclick="Max">Maximum</button>
-    <button onclick="Ave">Average</button>
+    <button onclick="Min()">Minimum</button>
+    <button onclick="Max()">Maximum</button>
+    <button onclick="Ave()">Average</button>
 </div>
 </body>
 {% endblock %}
