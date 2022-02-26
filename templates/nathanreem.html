@@ -7,44 +7,90 @@
     <title>Create Task</title>
 </head>
 {% block body %}
-<script>
-    const numbers = [];
-
-    function userinput(){
-        numbers.push(document.getElementById("numbers1").value)
-        numbers.push(document.getElementById("numbers2").value)
-        numbers.push(document.getElementById("numbers3").value)
-        numbers.push(document.getElementById("numbers4").value);
-    }
-    function Min(min){
-        return Math.min(...min);
-    }
-
-    function Max(max){
-        return Math.max(...max);
-    }
-    function Ave(ave){
-        return ave.reduce(function(a,b){
-            return a + b
-        }, 0);;
-    }
-</script>
 <body>
 <div class="col-12">
-    <form>
-        <label for="numbers1">Type in an integer</label>
-        <input id="numbers1">
-        <label for="numbers2">Type in an integer</label>
-        <input id="numbers2">
-        <label for="numbers3">Type in an integer</label>
-        <input id="numbers3">
-        <label for="numbers4">Type in an integer</label>
-        <input id="numbers4">
-        <input multiple="multiple" type="submit" value="submit" onclick="userinput()">
-    </form>
-    <button onclick="Min()">Minimum</button>
-    <button onclick="Max()">Maximum</button>
-    <button onclick="Ave()">Average</button>
+    <!--- This only allows the user to input numbers --->
+
+    <input type='number' id='input'>
+
+    <!--- This is the button that adds the number to the list --->
+
+    <input type='button' value='add to list' id='add' disabled="disabled">
+
+    <!--- This will list all of the numbers in the list --->
+
+    <div class="title">Numbers</div>
+    <ul id='list'></ul>
+    <button id="min">Click Here To See The Minimum Value</button>
+    <button id="max">Click Here To See The Maximum Value</button>
+    <button id="ave">Click Here To See The Average</button>
+    <script>
+        let list = document.getElementById("list");
+        let btn1 = document.getElementById("min");
+        let btn2 = document.getElementById("max");
+        let btn3 = document.getElementById("ave");
+        let input = document.getElementById("input");
+        let add = document.getElementById("add");
+        var firstLoad = 1;
+        var sum = 0;
+        var avg = 0;
+        var min = 0;
+        var max = 0;
+        var count = 0;
+        input.addEventListener("input", enableDisable);
+        btn1.addEventListener("click", minvar);
+        btn2.addEventListener("click", maxvar);
+        btn3.addEventListener("click", avevar);
+
+        add.addEventListener("click", function()
+        {
+            var li = document.createElement("li");
+            li.textContent = input.value;
+            sum += +input.value;
+            count=count+1;
+
+            if(firstLoad===1) {
+                min = input.value; //set min and max first time
+                max = input.value;
+                firstLoad = 0; //clear the firstload marker
+            }
+            else
+            {
+
+                if(min > input.value) { //compare input to min
+                    min = input.value;
+                }
+                if(max < input.value) { //compare input to max
+                    max = input.value; //enteredNumber;
+                }
+            }
+            avg = sum/count; //calculate average
+            list.appendChild(li);
+            input.value = "";
+            add.disabled = "disabled";
+        });
+
+        function enableDisable() {
+            if(this.value === ""){
+                add.disabled = "disabled";
+            } else {
+                add.removeAttribute("disabled");
+            }
+        }
+
+        // This function will alert the user of the sum of their numbers
+
+        function minvar() {
+            alert("Min:" + min);
+        }
+        function maxvar() {
+            alert("Max:" + max);
+        }
+        function avevar() {
+            alert("Avg:" + avg);
+        }
+
+    </script>
 </div>
 </body>
 {% endblock %}
