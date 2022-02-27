@@ -11,3 +11,6 @@ def colin():
 def imageCarousel():
     return render_template('PBL Pages/imageCarousel.html')
 
+@bcolin.route('/noseQuiz2/')
+def noseQuiz2():
+    return render_template('PBL Pages/noseQuiz2.html')

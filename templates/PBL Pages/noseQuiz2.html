@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animal Trivia</title>
+    <style>
+        /* hue code and ideas thanks to https://www.w3schools.com/css/css_colors_hsl.asp */
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        :root {
+            --hue-neutral: 200;
+            --hue-wrong: 0;
+            --hue-correct: 145;
+        }
+
+        body {
+            --hue: var(--hue-neutral);
+            padding: 0;
+            margin: 0;
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background-color: hsl(var(--hue), 100%, 35%);
+        }
+
+        body.correct {
+            --hue: var(--hue-correct);
+        }
+
+        body.wrong {
+            --hue: var(--hue-wrong);
+        }
+
+        .container {
+            font-size: 1.25rem;
+            width: 1400px;
+            max-width: 80%;
+            background-color: whitesmoke;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 0 10px 2px;
+        }
+
+        .btn-grid {
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .btn {
+            font-size: 1.5rem;
+            --hue: var(--hue-neutral);
+            border: 1px solid hsl(var(--hue), 80%, 30%);
+            background-color: hsl(var(--hue), 80%, 50%);
+            border-radius: 5px;
+            padding: 5px 10px;
+            color: whitesmoke;
+            outline: none;
+        }
+
+        .btn:hover {
+            border-color: black;
+        }
+
+        .btn.correct {
+            --hue: var(--hue-correct);
+            color: black;
+        }
+
+        .btn.wrong {
+            --hue: var(--hue-wrong);
+        }
+
+        .startButton, .nextButton {
+            font-size: 1.5rem;
+            font-weight: bold;
+            padding: 10px 20px;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        html {
+            width: 100%;
+            height: 100%;
+            font-size: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #DFDFDF;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div id="questionContainer" class="hide">
+        <div id="question">Question</div>
+        <div id="answerButtons" class="btn-grid">
+            <button class="btn">Answer 1</button>
+            <button class="btn">Answer 2</button>
+            <button class="btn">Answer 3</button>
+            <button class="btn">Answer 4</button>
+        </div>
+    </div>
+    <div class="controls">
+        <button id="startButton" class="startButton btn">Click to Play!</button>
+        <button id="nextButton" class="nextButton btn hide">Next</button>
+    </div>
+</div>
+
+</body>
+</html>
+
+<script>
+
+
+    const startButton = document.getElementById('startButton')
+    const nextButton = document.getElementById('nextButton')
+    const questionContainerElement = document.getElementById('questionContainer')
+    const questionElement = document.getElementById('question')
+    const answerButtonsElement = document.getElementById('answerButtons')
+
+    let questionList, currentQuestion
+
+    startButton.addEventListener('click', startGame)
+    nextButton.addEventListener('click', () => {
+        currentQuestion++
+        setNextQuestion()
+    })
+
+    function startGame() {
+        startButton.classList.add('hide')
+        questionList = questions.sort(() => Math.random() - .5)
+        currentQuestion = 0
+        questionContainerElement.classList.remove('hide')
+        setNextQuestion()
+    }
+
+    function setNextQuestion() {
+        reset()
+        showQuestion(questionList[currentQuestion])
+    }
+
+    function showQuestion(question) {
+        questionElement.innerText = question.question
+        question.answers.forEach(answer => {
+            const button = document.createElement('button')
+            button.innerText = answer.text
+            button.classList.add('btn')
+            if (answer.correct) {
+                button.dataset.correct = answer.correct
+            }
+            button.addEventListener('click', selectAnswer)
+            answerButtonsElement.appendChild(button)
+        })
+    }
+
+    function reset() {
+        clearStatus(document.body)
+        nextButton.classList.add('hide')
+        while (answerButtonsElement.firstChild) {
+            answerButtonsElement.removeChild(answerButtonsElement.firstChild)
+        }
+    }
+
+    function selectAnswer(e) {
+        const selectedButton = e.target
+        const correct = selectedButton.dataset.correct
+        setStatus(document.body, correct)
+        Array.from(answerButtonsElement.children).forEach(button => {
+            setStatus(button, button.dataset.correct)
+        })
+        if (questionList.length > currentQuestion + 1) {
+            nextButton.classList.remove('hide')
+        } else {
+            startButton.innerText = 'Click to play again'
+            startButton.classList.remove('hide')
+        }
+    }
+
+    function setStatus(element, correct) {
+        clearStatus(element)
+        if (correct) {
+            element.classList.add('correct')
+        } else {
+            element.classList.add('wrong')
+        }
+    }
+
+    function clearStatus(element) {
+        element.classList.remove('correct')
+        element.classList.remove('wrong')
+    }
+
+
+    //trivia questions thanks to https://www.usefultrivia.com/science_trivia/animal_trivia_index.html
+    const questions = [
+        {
+            question: 'What animal has the longest lifespan?',
+            answers: [
+                { text: 'Giant Tortoise', correct: true },
+                { text: 'Elephant', correct: false },
+                { text: 'Blue Whale', correct: false},
+                { text: 'Locust', correct: false}
+            ]
+        },
+        {
+            question: 'What is the only mammal capable of true flight?',
+            answers: [
+                { text: 'Hummingbird', correct: false },
+                { text: 'Ocelot', correct: false },
+                { text: 'Bat', correct: true },
+                { text: 'Flying Squirrel', correct: false }
+            ]
+        },
+        {
+            question: 'What is the fastest flying bird in the world?',
+            answers: [
+                { text: 'Spine-Tailed Swift', correct: false },
+                { text: 'Peregrine Falcon', correct: true },
+                { text: 'Harpy Eagle', correct: false },
+                { text: 'Horned Sungem', correct: false }
+            ]
+        },
+        {
+            question: 'A newborn kangaroo is about the size of a...?',
+            answers: [
+                { text: 'Grapefruit', correct: false },
+                { text: 'Watermelon', correct: false },
+                { text: 'Plum', correct: false},
+                { text: 'Lima Bean', correct: true}
+            ]
+        },
+        {
+            question: 'What is the gestation period of a Blue Whale?',
+            answers: [
+                { text: '2 years', correct: false },
+                { text: '4 - 6 months', correct: false },
+                { text: '10 - 12 months', correct: true },
+                { text: '16 - 18 months', correct: false }
+            ]
+        },
+        {
+            question: 'What is the smallest mammal in the world?',
+            answers: [
+                { text: 'Pygmy Marmoset', correct: false },
+                { text: 'Bumblebee Bat', correct: true },
+                { text: 'Western Harvest Mouse', correct: false },
+                { text: 'Numbat', correct: false}
+            ]
+        }
+    ]
+</script>
