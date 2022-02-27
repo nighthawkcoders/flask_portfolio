@@ -15,8 +15,14 @@ app.register_blueprint(app_crud_api)
 from crud.app_crud import app_crud
 app.register_blueprint(app_crud)
 
+
+
 from templates.nathanreem import nathanreem
 app.register_blueprint(nathanreem)
+
+from templates.jacob import jacob
+app.register_blueprint(jacob)
+
 
 # connects default URL to render index.html
 @app.route('/')
