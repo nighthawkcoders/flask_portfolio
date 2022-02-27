@@ -10,7 +10,7 @@
         }
 
         :root {
-            --hue-neutral: 200;
+            --hue-neutral: 215;
             --hue-wrong: 0;
             --hue-correct: 145;
         }
@@ -20,8 +20,8 @@
             padding: 0;
             margin: 0;
             display: flex;
-            width: 100vw;
-            height: 100vh;
+            width: 120vw;
+            height: 120vh;
             justify-content: center;
             align-items: center;
             background-color: hsl(var(--hue), 100%, 35%);
@@ -42,23 +42,23 @@
             background-color: whitesmoke;
             border-radius: 16px;
             padding: 30px;
-            box-shadow: 0 0 10px 2px;
+            box-shadow: 0 0 15px 8px;
         }
 
         .btn-grid {
             display: grid;
             grid-template-columns: repeat(2, auto);
-            gap: 10px;
+            gap: 12px;
             margin: 20px 0;
         }
 
         .btn {
             font-size: 1.5rem;
             --hue: var(--hue-neutral);
-            border: 1px solid hsl(var(--hue), 80%, 30%);
+            border: 4px solid hsl(var(--hue), 80%, 30%);
             background-color: hsl(var(--hue), 80%, 50%);
-            border-radius: 5px;
-            padding: 5px 10px;
+            border-radius: 10px;
+            padding: 10px 15px;
             color: whitesmoke;
             outline: none;
         }
@@ -79,7 +79,7 @@
         .startButton, .nextButton {
             font-size: 1.5rem;
             font-weight: bold;
-            padding: 10px 20px;
+            padding: 20px 35px;
         }
 
         .controls {
@@ -99,7 +99,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #DFDFDF;
+            background-color: whitesmoke;
         }
     </style>
 {% endblock %}
@@ -108,15 +108,15 @@
     <div id="questionContainer" class="hide">
         <div id="question">Question</div>
         <div id="answerButtons" class="btn-grid">
-            <button class="btn">Answer 1</button>
-            <button class="btn">Answer 2</button>
-            <button class="btn">Answer 3</button>
-            <button class="btn">Answer 4</button>
+            <button class="btn">Answer1</button>
+            <button class="btn">Answer2</button>
+            <button class="btn">Answer3</button>
+            <button class="btn">Answer4</button>
         </div>
     </div>
     <div class="controls">
         <button id="startButton" class="startButton btn">Click to Play!</button>
-        <button id="nextButton" class="nextButton btn hide">Next</button>
+        <button id="nextButton" class="nextButton btn hide">Next question</button>
     </div>
 </div>
 
@@ -125,7 +125,7 @@
 
 <script>
 
-
+//Javascript created with help from WebDevSimplified courses
     const startButton = document.getElementById('startButton')
     const nextButton = document.getElementById('nextButton')
     const questionContainerElement = document.getElementById('questionContainer')
