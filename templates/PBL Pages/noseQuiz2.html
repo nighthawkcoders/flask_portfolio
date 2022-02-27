@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+{% block head %}
     <meta charset="UTF-8">
     <title>Animal Trivia</title>
     <style>
@@ -102,8 +102,8 @@
             background-color: #DFDFDF;
         }
     </style>
-</head>
-<body>
+{% endblock %}
+{% block body %}
 <div class="container">
     <div id="questionContainer" class="hide">
         <div id="question">Question</div>
@@ -120,7 +120,7 @@
     </div>
 </div>
 
-</body>
+{% endblock %}
 </html>
 
 <script>
@@ -137,7 +137,7 @@
     startButton.addEventListener('click', startGame)
     nextButton.addEventListener('click', () => {
         currentQuestion++
-        setNextQuestion()
+        nextQuestion()
     })
 
     function startGame() {
@@ -145,10 +145,10 @@
         questionList = questions.sort(() => Math.random() - .5)
         currentQuestion = 0
         questionContainerElement.classList.remove('hide')
-        setNextQuestion()
+        nextQuestion()
     }
 
-    function setNextQuestion() {
+    function nextQuestion() {
         reset()
         showQuestion(questionList[currentQuestion])
     }
