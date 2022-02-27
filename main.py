@@ -15,6 +15,11 @@ from crud.app_crud import app_crud
 app.register_blueprint(app_crud)
 
 
+# runs the application on the development server
+if __name__ == "__main__":
+    app.run(host="127.0.0.1", port=8000)
+
+
 # connects default URL to render index.html
 @app.route('/')
 def index():
@@ -24,6 +29,7 @@ def index():
 @app.route('/aboutnathan')
 def aboutnathan():
     return render_template("aboutnathan.html")
+
 
 @app.route('/aboutreem')
 def aboutreem():
@@ -355,11 +361,6 @@ def graph():
     return render_template("graph.html")
 
 
-@app.route('/gallery')
-def gallery():
-    return render_template("gallery.html")
-
-
 @app.route('/countries')
 def countries():
     return render_template("countries.html")
@@ -373,8 +374,3 @@ def faq():
 @app.route('/currency', methods=['GET', 'POST'])
 def currency():
     return render_template("layouts/currency.html")
-
-
-# runs the application on the development server
-if __name__ == "__main__":
-    app.run(host="127.0.0.1", port=8000)
