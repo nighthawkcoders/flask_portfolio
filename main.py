@@ -23,12 +23,13 @@ app.register_blueprint(nathanreem)
 from templates.jacob import jacob
 app.register_blueprint(jacob)
 
+from templates.james import james
+app.register_blueprint(james)
 
 # connects default URL to render index.html
 @app.route('/')
 def index():
     return render_template("index.html")
-
 
 fiveStars_list = []
 fourStars_list = []
@@ -395,6 +396,10 @@ def countries():
 def faq():
     return render_template("faq.html")
 
+@app.route('/james')
+def james():
+    return render_template("james.html")
+
 @app.route('/infopage')
 def infopage():
     return render_template("infopage.html")
@@ -414,7 +419,7 @@ def quiz():
 
 # runs the application on the development server
 if __name__ == "__main__":
-    app.run(host="127.0.0.1", port=5000)
+    app.run(host="127.0.0.1", port=8000)
 
 
 
