@@ -6,9 +6,9 @@ import requests, random
 import json
 
 from crud.app_crud_api import app_crud_api
-from templates.danielcreate import comparisonInput
-
 app.register_blueprint(app_crud_api)
+
+from templates.danielcreate import comparisonInput
 
 # create a Flask instance
 # app = Flask(__name__)
@@ -23,6 +23,8 @@ app.register_blueprint(nathanreem)
 from templates.jacob import jacob
 app.register_blueprint(jacob)
 
+from templates.jacobgame import jacobgame
+app.register_blueprint(jacobgame)
 
 # connects default URL to render index.html
 @app.route('/')
@@ -177,6 +179,8 @@ def environmental():
 @app.route('/crud_api')
 def crud_async():
     return render_template("crud_async.html")
+
+
 
 
 @app.route('/search')

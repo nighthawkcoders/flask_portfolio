@@ -37,6 +37,66 @@
                 </div>
             </div>
         </div>
+    <script>
+        let btn1 = document.getElementById("correct");
+        let btn2 = document.getElementById("less");
+        let btn3 = document.getElementById("more");
+        var counter = 0;
+        var min = 1;
+        var max = 100;
+        var guess = 1;
+        tries = []
+        btn1.addEventListener("click", minvar);
+        btn2.addEventListener("click", maxvar);
+        btn3.addEventListener("click", avevar);
+
+        add.addEventListener("click", function()
+        {
+            var li = document.createElement("li");
+            sum += +input.value;
+            counter = counter+1;
+
+            if(firstLoad===1) {
+                min = input.value; //set min and max first time
+                max = input.value;
+                firstLoad = 0; //clear the firstload marker
+            }
+            else
+            {
+
+                if(min > input.value) { //compare input to min
+                    min = input.value;
+                }
+                if(max < input.value) { //compare input to max
+                    max = input.value; //enteredNumber;
+                }
+            }
+            avg = sum/count; //calculate average
+            list.appendChild(li);
+            input.value = "";
+            add.disabled = "disabled";
+        });
+
+        function enableDisable() {
+            if(this.value === ""){
+                add.disabled = "disabled";
+            } else {
+                add.removeAttribute("disabled");
+            }
+        }
+
+        // This function will alert the user of the sum of their numbers
+
+        function minvar() {
+            alert("Min:" + min);
+        }
+        function maxvar() {
+            alert("Max:" + max);
+        }
+        function avevar() {
+            alert("Avg:" + avg);
+        }
+    </script>
     </div>
     </body>
 {% endblock %}
