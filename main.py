@@ -20,6 +20,10 @@ app.register_blueprint(app_crud)
 from templates.nathanreem import nathanreem
 app.register_blueprint(nathanreem)
 
+from templates.snakegame import snakegame
+app.register_blueprint(snakegame)
+
+
 from templates.jacob import jacob
 app.register_blueprint(jacob)
 
@@ -45,6 +49,7 @@ def aboutnathan():
 @app.route('/aboutreem')
 def aboutreem():
     return render_template("aboutreem.html")
+
 
 
 @app.route('/aboutjacob')
