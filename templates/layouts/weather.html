@@ -4,15 +4,7 @@
     {% set weather = weather %}
     {% set cityList = ["San Diego", "San Diego", "San Diego", "LA", "LA", "LA", "Irvine", "Irvine", "Irvine", "Davis", "Davis", "Davis", "Santa Cruz", "Santa Cruz", "Santa Cruz", "San Jose", "San Jose", "San Jose"] %}
 
-    <div class="container">
-        <div class = "row" style="padding-bottom:5%;">
-            <div class="col-12" style="text-align: center;">
-                <h1><strong>Foreca Weather API</strong></h1>
-                <form action={{url_for('weather')}}> <!--the form reloads the page with the newest info by rerendering the page and recalling the api -->
-                    <button>Refresh!</button>
-                </form>
-            </div>
-        </div>
+    
         <div class = "row" style="padding-bottom:5%;">
             <div class = "col-12">
                 <table>
