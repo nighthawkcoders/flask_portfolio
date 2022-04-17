@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+{% extends "layouts/base.html" %}
+
+{% block meta %}
+    <title>Graph</title>
+{% endblock %}
+
+{% block body %}
+    <div class="container py-4">
+        <header class="pb-3 mb-4 border-bottom border-primary text-dark">
+            <span class="fs-4" style="color:white">JavaScript - Draw on Canvas</span>
+        </header>
+
+        <div class="container py-4 bg-primary" style="text-align:center;">
+            <canvas id="canvas" width="512" height="384" ></canvas>
+        </div>
+    </div>
+
+    <script>
+        // https://www.w3schools.com/graphics/canvas_intro.asp
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        const WIDTH = canvas.width;
+        const HEIGHT = canvas.height;
+        const CELL_SIZE = 16;   // CELL_SIZE block size
+
+        // grid based off of width, HEIGHT
+        function grid(){
+            // color and pen width
+            ctx.strokeStyle = 'white';
+            ctx.lineWidth = 1;
+            // make graph paper look
+            for (let col = 0; col < WIDTH; col += CELL_SIZE) {
+                for (let row = 0; row < HEIGHT; row += CELL_SIZE) {
+                    ctx.strokeRect(col, row, CELL_SIZE, CELL_SIZE);
+                }
+            }
+        }
+
+        // axis lines
+        function axis() {
+            // color and pen width
+            ctx.strokeStyle = 'red';
+            ctx.lineWIDTH = 3;
+            // x & y zero midpoints of grid
+            const x0 = WIDTH*.5;
+            const y0 = HEIGHT*.5;
+            // x-axis
+            ctx.moveTo(0, y0);
+            ctx.lineTo(WIDTH, y0);
+            ctx.stroke();
+            // y-axis
+            ctx.moveTo(x0, 0);
+            ctx.lineTo(x0, HEIGHT);
+            ctx.stroke();
+        }
+
+        // square using lines
+        function square(x0, y0, len) {
+            ctx.strokeStyle = 'black';
+            ctx.lineWidth = 5;
+            // NOTE canvas 0,0 is upper left corner, grid 0,0 is in middle of canvas
+            let x = x0*CELL_SIZE + (WIDTH/2);
+            let y = -y0*CELL_SIZE + (HEIGHT/2);
+            let l = len*CELL_SIZE;
+            // draw a square
+            ctx.beginPath();
+            ctx.moveTo(x, y);
+            ctx.lineTo(x+l, y);
+            ctx.lineTo(x+l, y-l);
+            ctx.lineTo(x, y-l);   // positive y is negative orientation in grid
+            ctx.lineTo(x, y);
+            ctx.stroke();
+        }
+
+        // randomly find
+        function randomPlusMinus(range) {
+            let pluMinusSeed =  (Math.random() - 0.499) * 2; // from -.998 to .998
+            return Math.round(pluMinusSeed * range);  // convert to rounded integer
+        }
+
+        // randomly draw squares
+        function randomDraw(i) {
+            // recursion base case
+            if ( i <= 0) {
+                return;
+            }
+            // obtain x, y coordinates on canvas per quadrant
+            let x = randomPlusMinus(WIDTH/CELL_SIZE/2);
+            let y = randomPlusMinus(HEIGHT/CELL_SIZE/2);
+            // obtain random length between 1 and 5
+            let l = Math.floor((Math.random()) * 5) + 1;
+            // draw square
+            square(x, y, l);
+            // timeout allows user to enjoy drawing effect
+            // this function calls itself, but decrements counter before call
+            setTimeout(() => { randomDraw(--i); }, 150);
+        }
+
+        function userinput(){
+            const input = window.prompt("How many squares do you desire?");
+            const num = parseInt(input);
+            const nummy = Number.isInteger(num);
+            if (input === null){
+                randomDraw(0);
+            }
+            else {
+                if (nummy === false){
+                    window.alert("That is not a valid input")
+                    return userinput();
+                }
+                else{
+                    randomDraw(num)
+                }
+            }
+        }
+
+        function color(){
+
+        }
+        // establish grid and axis
+        grid();
+        axis();
+
+        // Sample squares
+        // center square
+        //square(12, 8, 4);    // quadrant 1 extents
+        //square(-16, 8, 4);   // quadrant 2 extents
+        //square(-16, -12, 4); // quadrant 3 extents
+        //square(12, -12, 4);  // quadrant 4 extents
+
+        // Random squares
+        userinput();
+
+    </script>
+{% endblock %}

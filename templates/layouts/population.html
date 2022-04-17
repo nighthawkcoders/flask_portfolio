@@ -1,0 +1,60 @@
+{% extends "layouts/base.html" %}
+
+{% block body %}
+    {% set people = people %}
+
+    <div class="container">
+        <div class = "row" style="padding-bottom:5%;">
+            <div class="col-12" style="text-align: center;font-size:15px">
+                <h1><strong>Population Ranking</strong></h1>
+                <form action={{url_for('population')}}> <!--the form reloads the page with the newest info by re-rendering the page and recalling the api -->
+                    <button>Refresh rankings !</button>
+                </form>
+            </div>
+        </div>
+        <div class = "row" style="padding-bottom:5%;">
+            <div class = "col-3"></div>
+            <div class = "col-6">
+                <table class="table text-light">
+                    <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Country</th>
+                        <th style="text-align:right">Population</th>
+                    </tr>
+                    </thead>
+
+                    {% for dictionary in people %} <!--we want to get different values for each dictionary in the list of dictionaries so we do a for loop -->
+                        <tr>
+                            {% set ranking = dictionary['ranking'] %}
+                            <td>{{ ranking }}</td>
+                            {% set country_name = dictionary['country_name'] %} <!-- set a variable to dictionary key -->
+                            <td>{{ country_name }}</td>                         <!-- put the variable in the table column-->
+                            {% set population = dictionary['population'] %}
+                            <td style="text-align:right">{{ population }}</td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+            <div class = "col-3"></div>
+        </div>
+        <div class="row" style="padding-bottom:5%;">
+            <div class = "col-3"></div>
+            <div class="col-9">
+                <table>
+                    <tr>
+                        <th>Country</th>
+                        <th>Python Dictionary from API</th>
+                    </tr>
+                    {% for dictionary in people %}
+                        <tr>
+                            {% set country_name = dictionary['country_name'] %} <!-- set a variable to current dictionary key -->
+                            <td>{{ country_name }}</td> <!-- put the variable in the table column-->
+                            <td>{{ dictionary }}</td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}

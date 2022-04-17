@@ -1,0 +1,76 @@
+
+{% extends "layouts/base.html" %}
+
+{% block body %}
+
+    <html>
+
+    <br>
+    <br>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+       {display:none;}
+    </style>
+
+
+    <body>
+    <br>
+
+    <p style="font-size: xxx-large; font-family: 'BM Hanna 11yrs Old'" class="w3-center">Country Gallery </p>
+    <p style="font-size: xx-large; font-family: 'BM Hanna 11yrs Old'" class="w3-center">Which country do you want to go next?</p>
+    <br>
+    <div class="container" style="background-color: whitesmoke; width:540px; height: 420px; padding: 17px">
+        <div class="w3-content w3-section" style="max-width:490px; align-content: center">
+            <img class="Pics" src="/static/assets/Canada.jpg" style="width:100%" alt="canada">
+            <img class="Pics" src="/static/assets/England.jpg" style="width:100%" alt="england">
+            <img class="Pics" src="/static/assets/Germany.jpg" style="width:100%" alt="germany">
+            <img class="Pics" src="/static/assets/Switzerland.jpg" style="width:100%" alt="switzerland">
+            <img class="Pics" src="/static/assets/United States.jpg" style="width:100%" alt="united states">
+
+        </div>
+    </div>
+    <script>
+        var myIndex = 0;
+        controller(); // takes the pictures and puts them through the slideshow
+        function controller(x=document.getElementsByClassName("Pics")) {
+            view(x);
+            myIndex++;
+            if (myIndex > x.length) {
+                myIndex = 1
+            }
+            x[myIndex-1].style.display = "block";
+            setTimeout(controller, 3000); // Change image every 3 seconds
+        }
+
+        function view(x){
+            var i;
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+        }
+
+
+    </script>
+    {% block background %}
+        <script src="{{ url_for('static', filename='three.r119.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='vanta.fog.min.js') }}"></script>
+        <script>
+            VANTA.FOG({
+                el: "body",
+                mouseControls: true,
+                touchControls: true,
+                gyroControls: false,
+                minHeight: 840.00,
+                minWidth: 190.00,
+                highlightColor: 0xfaaaaa,
+                midtoneColor: 0xfaaaaa,
+                lowlightColor: 0xfad5ba,
+                baseColor: 0xffffff,
+                speed: 6.00,
+                zoom: 0.90
+            })
+        </script>
+    {% endblock %}
+    </body>
+{% endblock %}

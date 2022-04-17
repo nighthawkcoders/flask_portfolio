@@ -1,25 +1,442 @@
-## [Flask Portfolio Starter](https://nighthawkcodingsociety.com/projectsearch/details/Flask%20Portfolio%20Starter)
-Runtime link: https://portfolio.nighthawkcodingsociety.com/
-### Idea
-Starter code should be fun and practical.
-### Visual thoughts
-#### Organize with Bootstrap menu 
-#### Add some color and fun through VANTA Visuals (birds, halo, solar, net)
-#### Show some practical and fun links (hrefs) like Twitter, Git, Youtube
-#### Show project specific links (hrefs) per page
+<h1> Team Milkshake </h1>
 
-### Implementation progress (August 13th, 2021)
-#### Project entry point is main.py, this enables Flask Web App and provides capability to renders templates (HTML files)
-#### The main.py is the  Web Server Gateway Interface, essentially it contains a HTTP route and HTML file relationship.  The Python code constructs WSGI relationships for index, kangaroos, walruses, and hawkers.
-#### The project structure contains many directories and files.  The template directory (containing html files) and static directory (containing js files) are common standards for HTML coding.  Static files can be pictures and videos, in this project they are mostly javascript backgrounds.
-#### WSGI templates: index.html, kangaroos.html, ... are aligned with routes in main.py.
-#### Other templates support WSGI templates.  The base.html template contains common Head, Style, Body, Script definitions.  WSGI templates often "include" or "extend" these templates.  This is a way to reuse code.
-#### The VANTA javascript statics (backgrounds) are shown and defaulted in base.html (birds), but are block replaced as needed in other templates (solar, net, ...)
-#### The Bootstrap Navbar code is in navbar.html. The base.html code includes navbar.html.  The WSGI html files extend base.html files.  This is a process of management and correlation to optimize code management.  For instance, if the menu changes discovery of navbar.html is easy, one change reflects on all WSGI html files. 
-#### Jinja2 variables usage is to isolate data and allow redefinitions of attributes in templates.  Observe "{% set variable = %}" syntax for definition and "{{ variable }}" for reference.
-#### The base.html uses combination of Bootstrap grid styling and custom CSS styling.  Grid styling in observe with the "<Col-3>" markers.  A Bootstrap Grid has a width of 12, thus four "Col-3" markers could fit on a Grid row.
-#### A key purpose of this project is to embed links to other content.  The "href=" definition embeds hyperlinks into the rendered HTML.  The base.html file shows usage of "href={{github}}", the "{{github}}" is a Jinja2 variable.  Jinja2 variables are pre-processed by Python, a variable swap with value, before being sent to the browser.
+<h2> Purpose of Project </h2>
+This is a world interactive website that our scrum team developed to help others learn about different countries and their diverse cultures. On this website, our team included many dropdown menus containing information about each country. Learn about us, new languages, best travel destinations, traditions, and interesting statistics in the form of api databases to stay informed about our world.
 
-### IDE management (things that happened beyond plan)
-#### Recall on ".gitignore" solution to the pains of temporary files.  Start a ".gitignore" and avoid promoting temporary files to Git, for instance IDE xml files.
-#### A project needs to establish a "requirements.txt" to keep track of Python packages used by the project.  This help in other IDEs and Deployment.  IntelliJ has menu Tool -> Sync Python Requirements to start file. 
+<h2> Purpose of README </h2>
+ To organize and highlight our projects through weekly sprints that connect to our PBL. This is shown through commits, tangibles and videos which are organized by the week to showcase work.
+
+<h2> Table of Contents </h2>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Wiki</td>
+      <td href="https://github.com/Reem57/flask_portfolio/wiki">https://github.com/Reem57/flask_portfolio/wiki</td>
+    </tr>
+    <tr>
+      <td>Contributors</td>
+      <td href="https://github.com/Reem57/flask_portfolio#contributors">https://github.com/Reem57/flask_portfolio#contributors</td>
+    </tr>
+    <tr>
+      <td>Sprint Overview</td>
+      <td href="https://github.com/Reem57/flask_portfolio#sprint-overview">https://github.com/Reem57/flask_portfolio#sprint-overview</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2> Contributors </h2>
+
+Contributors: Daniel, Nathan, Reem, James, & Jacob
+
+Scrum Board: https://github.com/Reem57/flask_portfolio/projects/1
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Project</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Nathan</td>
+      <td>https://docs.google.com/document/d/12rQvrhtsNnlDFDhkCI9sT8w7fTD3y-4FW6W8LPLuf9w/edit?usp=sharing</td>
+    </tr>
+    <tr>
+      <td>Reem</td>
+      <td>https://docs.google.com/document/d/12rQvrhtsNnlDFDhkCI9sT8w7fTD3y-4FW6W8LPLuf9w/edit?usp=sharing</td>
+    </tr><tr>
+      <td>James</td>
+      <td>https://docs.google.com/document/d/1iWY0JFOhnv8dLGOX7WXPdvvbnUYI_WglTmJvhG3r4QQ/edit</td>
+    </tr>
+    <tr>
+      <td>Jacob</td>
+      <td>https://docs.google.com/document/d/1iWY0JFOhnv8dLGOX7WXPdvvbnUYI_WglTmJvhG3r4QQ/edit</td>
+    </tr>
+    <tr>
+      <td>Daniel</td>
+      <td>https://docs.google.com/document/d/12rQvrhtsNnlDFDhkCI9sT8w7fTD3y-4FW6W8LPLuf9w/edit?usp=sharing</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2> Teammates </h2>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Project</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Nathan</td>
+      <td>https://github.com/jar04/flask_portfolio/projects/1</td>
+    </tr>
+    <tr>
+      <td>Reem</td>
+      <td>https://github.com/jar04/flask_portfolio/projects/1</td>
+    </tr><tr>
+      <td>James</td>
+      <td>https://github.com/jar04/flask_portfolio/projects/1</td>
+    </tr>
+    <tr>
+      <td>Jacob</td>
+      <td>https://github.com/jar04/flask_portfolio/projects/1</td>
+    </tr>
+    <tr>
+      <td>Daniel</td>
+      <td>https://github.com/jar04/flask_portfolio/projects/1</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2> Current Functions </h2>
+<table>
+  <thead>
+    <tr>
+      <th>Function</th>
+      <th>Contributors</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>About Page</td>
+      <td>Everybody</td>
+    </tr>
+    <tr>
+      <td>Search Bar + Crud</td>
+      <td>Reem</td>
+    </tr>
+    <tr>
+      <td>Translator</td>
+      <td>Daniel</td>
+    </tr>
+    <tr>
+      <td>Feedback</td>
+      <td>Daniel</td>
+    </tr>
+    <tr>
+      <td>Weather</td>
+      <td>Daniel</td>
+    </tr>
+    <tr>
+      <td>World Clock</td>
+      <td>Nathan</td>
+    </tr>
+    <tr>
+      <td>Weather</td>
+      <td>Daniel</td>
+    </tr>
+    <tr>
+      <td>Ratings</td>
+      <td>James</td>
+    </tr>
+    <tr>
+      <td>Games</td>
+      <td>Nathan + Jacob</td>
+    </tr>
+  </tbody>
+  
+</table>
+
+<h2> Sprint Overview </h2>
+<table>
+  <thead>
+    <tr>
+      <th>Week Number</th>
+      <th>Issue List</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Week 6</td>
+      <td>https://github.com/jar04/flask_portfolio/issues?q=is%3Aissue+is%3Aopen+label%3A%22Week+6%22</td>
+    </tr>
+    <tr>
+      <td>Week 5</td>
+      <td>https://github.com/Reem57/flask_portfolio/issues?q=is%3Aopen+is%3Aissue+label%3A%22Week+5%22</td>
+    </tr>
+    <tr>
+      <td>Week 4</td>
+      <td>https://github.com/Reem57/flask_portfolio/issues?q=is%3Aopen+is%3Aissue+label%3A%22Week+4%22</td>
+    </tr><tr>
+      <td>Week 3</td>
+      <td>https://github.com/Reem57/flask_portfolio/issues?q=is%3Aopen+is%3Aissue+label%3A%22Week+3%22</td>
+    </tr>
+    <tr>
+      <td>Week 2</td>
+      <td>https://github.com/Reem57/flask_portfolio/issues?q=is%3Aopen+is%3Aissue+label%3A%22Week+2%22</td>
+    </tr>
+    <tr>
+      <td>Week 1</td>
+      <td>https://github.com/Reem57/flask_portfolio/issues?q=is%3Aopen+is%3Aissue+label%3A%22Week+1%22</td>
+    </tr>
+    <tr>
+      <td>Week 0</td>
+      <td>https://github.com/Reem57/flask_portfolio/issues?q=is%3Aopen+is%3Aissue+label%3A%22Week+0%22</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3> Week 7 </h3>
+<table>
+  <thead>
+    <tr>
+      <th>Members</th>
+      <th>Ticket</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Nathan</td>
+      <td>TBD</td>
+    </tr>
+    <tr>
+      <td>Reem</td>
+      <td>TBD</td>
+    </tr><tr>
+      <td>Daniel</td>
+      <td>TBD</td>
+    </tr>
+    <tr>
+      <td>Jacob</td>
+      <td>TBD</td>
+    </tr>
+    <tr>
+      <td>James</td>
+      <td>TBD</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3> Week 6 </h3>
+<table>
+  <thead>
+    <tr>
+      <th>Members</th>
+      <th>Ticket</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Nathan</td>
+      <td>https://github.com/jar04/flask_portfolio/wiki/Vocab</td>
+    </tr>
+    <tr>
+      <td>Reem</td>
+      <td>https://github.com/jar04/flask_portfolio/wiki/Vocab</td>
+    </tr><tr>
+      <td>Daniel</td>
+      <td>https://github.com/jar04/flask_portfolio/wiki/Danny,-James-&-Jacob-Vocab-Terms</td>
+    </tr>
+    <tr>
+      <td>Jacob</td>
+      <td>https://github.com/jar04/flask_portfolio/wiki/Danny,-James-&-Jacob-Vocab-Terms</td>
+    </tr>
+    <tr>
+      <td>James</td>
+      <td>https://github.com/jar04/flask_portfolio/wiki/Danny,-James-&-Jacob-Vocab-Terms</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3> Week 5 </h3>
+<table>
+  <thead>
+    <tr>
+      <th>Members</th>
+      <th>Ticket</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Nathan</td>
+      <td>https://github.com/jar04/flask_portfolio/commit/2b7cf2d5b4ce2084364c643bd5a3a2ee6a20e226</td>
+    </tr>
+    <tr>
+      <td>Reem</td>
+      <td>https://github.com/jar04/flask_portfolio/commit/12f175843e74baf71c56d66df912bb86d1ca839d</td>
+    </tr><tr>
+      <td>Daniel</td>
+      <td>https://github.com/jar04/flask_portfolio/commit/d15ca0846b091e55cc93d03b11aedc5a227d3f04</td>
+    </tr>
+    <tr>
+      <td>Jacob</td>
+      <td>https://github.com/jar04/flask_portfolio/commit/99ba93937d3e5bf80482de9651e1cf21784444c7</td>
+    </tr>
+    <tr>
+      <td>James</td>
+      <td>https://github.com/jar04/flask_portfolio/commit/b1a4f3504eb37604e6441d3cab369d91cc82f2d8</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3> Week 4 </h3>
+<table>
+  <thead>
+    <tr>
+      <th>Members</th>
+      <th>Ticket</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Nathan</td>
+      <td>https://github.com/jar04/flask_portfolio/commit/5970e13e12068b20d9ea0acc7e1f89f8e534ac0c</td>
+    </tr>
+    <tr>
+      <td>Reem</td>
+      <td>https://github.com/jar04/flask_portfolio/commit/2a1557d64aad18f57dcc0601a714da95c959b6cc</td>
+    </tr><tr>
+      <td>Daniel</td>
+      <td>https://github.com/jar04/flask_portfolio/commit/d15ca0846b091e55cc93d03b11aedc5a227d3f04</td>
+    </tr>
+    <tr>
+      <td>Jacob</td>
+      <td>https://github.com/jar04/flask_portfolio/commit/99ba93937d3e5bf80482de9651e1cf21784444c7</td>
+    </tr>
+    <tr>
+      <td>James</td>
+      <td>https://github.com/jar04/flask_portfolio/commit/b1a4f3504eb37604e6441d3cab369d91cc82f2d8</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3> Week 3 </h3>
+<table>
+  <thead>
+    <tr>
+      <th>Members</th>
+      <th>Ticket</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Nathan</td>
+      <td>https://github.com/jar04/flask_portfolio/issues</td>
+    </tr>
+    <tr>
+      <td>Reem</td>
+      <td>https://github.com/jar04/flask_portfolio/issues/27</td>
+    </tr><tr>
+      <td>Daniel</td>
+      <td>https://github.com/jar04/flask_portfolio/issues/20</td>
+    </tr>
+    <tr>
+      <td>Jacob</td>
+      <td>http://dnhs-flask-portfolio.online/</td>
+    </tr>
+    <tr>
+      <td>James</td>
+      <td>https://github.com/jar04/flask_portfolio/issues/26</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3> Week 2 </h3>
+<table>
+  <thead>
+    <tr>
+      <th>Members</th>
+      <th>Ticket</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Nathan</td>
+      <td>https://github.com/Reem57/flask_portfolio/issues/11</td>
+    </tr>
+    <tr>
+      <td>Reem</td>
+      <td>https://github.com/Reem57/flask_portfolio/issues/11</td>
+    </tr><tr>
+      <td>Daniel</td>
+      <td>https://github.com/Reem57/flask_portfolio/issues/11</td>
+    </tr>
+    <tr>
+      <td>Jacob</td>
+      <td>https://github.com/Reem57/flask_portfolio/issues/11</td>
+    </tr>
+    <tr>
+      <td>James</td>
+      <td>https://github.com/Reem57/flask_portfolio/issues/11</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3> Week 1 </h3>
+<table>
+  <thead>
+    <tr>
+      <th>Members</th>
+      <th>Ticket</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Nathan</td>
+      <td>https://github.com/Reem57/flask_portfolio/wiki/Policies</td>
+    </tr>
+    <tr>
+      <td>Reem</td>
+      <td>https://github.com/Reem57/flask_portfolio/issues/7</td>
+    </tr><tr>
+      <td>Daniel</td>
+      <td>https://github.com/Reem57/flask_portfolio/wiki/Theme</td>
+    </tr>
+    <tr>
+      <td>Jacob</td>
+      <td>https://github.com/Reem57/flask_portfolio/wiki/Deployment</td>
+    </tr>
+    <tr>
+      <td>James</td>
+      <td>https://github.com/Reem57/flask_portfolio/wiki/Contribution-Guidelines</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<h3> Week 0 </h3>
+<table>
+  <thead>
+    <tr>
+      <th>Members</th>
+      <th>Jobs</th>
+      <th>Ticket</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Nathan</td>
+      <td>Scrum Master</td>
+      <td>https://github.com/Reem57/flask_portfolio/projects/1</td>
+    </tr>
+    <tr>
+      <td>Reem</td>
+      <td>TO</td>
+      <td>https://github.com/Reem57/flask_portfolio/issues/7</td>
+    </tr>
+    <tr>
+      <td>Daniel</td>
+      <td>Primary Manager</td>
+      <td>https://github.com/Reem57/flask_portfolio/issues/3</td>
+    </tr>
+    <tr>
+      <td>Jacob</td>
+      <td>Deployment Manager</td>
+      <td>https://github.com/Reem57/flask_portfolio/issues/11</td>
+    </tr>
+    <tr>
+      <td>James</td>
+      <td>Github Admin</td>
+      <td>https://github.com/Reem57/flask_portfolio/issues/1</td>
+    </tr>
+  </tbody>
+</table>

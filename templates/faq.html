@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends "layouts/base.html" %}
+<head>
+    <title>FAQ</title>
+</head>
+{% block body %}
+<body>
+<style>
+    .layout{
+        width: 600px;
+        margin: auto;
+    }
+    .accordion{
+        padding: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        background: rgb(105, 206, 105);
+        border-radius: 10px;
+    }
+    .accordion__question p{
+        margin: 5px;
+        padding: 0;
+        font-family: Verdana;
+        font-size: 20px;
+    }
+    .accordion__answer p{
+        margin: 5px;
+        padding: 10px;
+        font-size: large;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: rgb(255, 255, 255);
+        background: rgb(50, 70, 119);
+        border-radius: 10px;
+    }
+    .accordion:hover{
+        cursor: pointer;
+    }
+    .accordion__answer {
+        display: none;
+    }
+    .accordion.active .accordion__answer {
+        display: block;
+    }
+</style>
+<h2 style="color:rgb(105, 206, 105); text-align:center">FAQ</h2>
+<div class="layout">
+    <div class="accordion">
+        <div class="accordion__question">
+            <p>What is the purpose of our site?</p>
+
+        </div>
+        <div class="accordion__answer">
+            <p>Our site is an informational site to show you the diverse cultures and traditions around the world!</p>
+
+        </div>
+    </div>
+    <div class="accordion">
+        <div class="accordion__question">
+            <p>Who are we?</p>
+        </div>
+        <div class="accordion__answer">
+            <p>
+                We are a Team MILKSHAKE, which consists of Nathan, Reem, Daniel, Jacob, and James.
+            </p>
+        </div>
+    </div>
+    <div class="accordion">
+    <div class="accordion__question">
+        <p>Who are we?</p>
+    </div>
+    <div class="accordion__answer">
+        <p>
+            We are a Team MILKSHAKE, which consists of Nathan, Reem, Daniel, Jacob, and James.
+        </p>
+    </div>
+</div>
+    <div class="accordion">
+        <div class="accordion__question">
+            <p>Who are we?</p>
+        </div>
+        <div class="accordion__answer">
+            <p>
+                We are a Team MILKSHAKE, which consists of Nathan, Reem, Daniel, Jacob, and James.
+            </p>
+        </div>
+    </div>
+    <div class="accordion">
+        <div class="accordion__question">
+            <p>Who are we?</p>
+        </div>
+        <div class="accordion__answer">
+            <p>
+                We are a Team MILKSHAKE, which consists of Nathan, Reem, Daniel, Jacob, and James.
+            </p>
+        </div>
+    </div>
+    <div class="accordion">
+        <div class="accordion__question">
+            <p>Who are we?</p>
+        </div>
+        <div class="accordion__answer">
+            <p>
+                We are a Team MILKSHAKE, which consists of Nathan, Reem, Daniel, Jacob, and James.
+            </p>
+        </div>
+    </div>
+    <div class="accordion">
+        <div class="accordion__question">
+            <p>Who are we?</p>
+        </div>
+        <div class="accordion__answer">
+            <p>
+                We are a Team MILKSHAKE, which consists of Nathan, Reem, Daniel, Jacob, and James.
+            </p>
+        </div>
+    </div>
+</div>
+
+<script>
+    let answers=document.querySelectorAll(".accordion");
+    answers.forEach((event)=>{
+        event.addEventListener('click',()=>{
+            if(event.classList.contains("active")){
+                event.classList.remove("active");
+            }
+            else{
+                event.classList.add("active");
+            }
+        })
+    })
+</script>
+</body>
+{% endblock %}
+</html>

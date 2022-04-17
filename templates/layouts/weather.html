@@ -1,0 +1,67 @@
+{% extends "layouts/base.html" %}
+
+{% block body %}
+    {% set weather = weather %}
+    {% set cityList = ["San Diego", "San Diego", "San Diego", "LA", "LA", "LA", "Irvine", "Irvine", "Irvine", "Davis", "Davis", "Davis", "Santa Cruz", "Santa Cruz", "Santa Cruz", "San Jose", "San Jose", "San Jose"] %}
+
+    <div class="container">
+        <div class = "row" style="padding-bottom:5%;">
+            <div class="col-12" style="text-align: center;">
+                <h1><strong>Foreca Weather API</strong></h1>
+                <form action={{url_for('weather')}}> <!--the form reloads the page with the newest info by rerendering the page and recalling the api -->
+                    <button>Refresh!</button>
+                </form>
+            </div>
+        </div>
+        <div class = "row" style="padding-bottom:5%;">
+            <div class = "col-12">
+                <table>
+                    <tr>
+                        <th style="font-size:30px">Location</th> <!--these create table headers with the name of the keys-->
+                        <th style="font-size:30px">Time</th>
+                        <th style="font-size:30px">Temperature(F)</th>
+                        <th style="font-size:30px">Wind Direction</th>
+                        <th style="font-size:30px">Wind Speed</th>
+                        <th style="font-size:30px">Pressure</th>
+                        <th style="font-size:30px">Humidity</th>
+                    </tr>
+                    {% for dictionary in weather %} <!--we want to get different values for each dictionary in the list of dictionaries so we do a for loop -->
+                        <tr>
+                            {% set location = dictionary['station'] %} <!--we set a variable to be what the current value of dictionary key is depending on what dictionary it is -->
+                            <td>{{ location }}</td> <!--we put the variable we created in the table colum-->
+                            {% set time = dictionary['time'] %}
+                            <td>{{ time }}</td>
+                            {% set temp = dictionary['temperature'] %}
+                            {% set tempf = temp*2 + 30 %} {# convert celcius to farenheit #}
+                            <td>{{ tempf }}</td>
+                            {% set windD = dictionary['windDirString'] %}
+                            <td>{{ windD }}</td>
+                            {% set windS = dictionary['windSpeed'] %}
+                            <td>{{ windS }}</td>
+                            {% set pressure = dictionary['pressure'] %}
+                            <td>{{ pressure }}</td>
+                            {% set humidity = dictionary['relHumidity'] %}
+                            <td>{{ humidity }}</td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+        <div class="row" style="padding-bottom:5%;">
+            <div class="col-12">
+                <table>
+                    <tr>
+                        <th>City</th>
+                        <th>Python Dictionary from API</th>
+                    </tr>
+                    {% for dictionary in weather %}
+                        <tr>
+                            <td>{{ cityList[loop.index0] }}</td>
+                            <td>{{ dictionary }}</td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}
