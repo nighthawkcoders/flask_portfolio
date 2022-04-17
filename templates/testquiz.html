@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+{% extends "layouts/base.html" %}
+
+{% block head %}
+<html>
+<head>
+    <title>Food Pets Quiz</title>
+    <style>
+        body {
+            background-color: midnightblue;
+            font-family: Helvetica;
+        }
+
+        #main {
+            width: 80%;
+            max-width: 950px;
+            border: 1px gray solid;
+            margin: auto;
+            padding: 10px;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        #header {
+            margin-top: 0;
+            border: 2px solid black;
+            padding: 5px;
+            height: 250px;
+            background: lightgreen;
+            background-image: url("football.jpg");
+            color: white;
+        }
+
+        label {
+            display: block;
+        }
+
+        input {
+            width: 30px;
+            margin-left: 20px;
+        }
+
+        h2 {
+            clear: both;
+            padding-top: 20px;
+        }
+
+        button {
+            width: 100px;
+            margin-top: 20px;
+        }
+
+    </style>
+    {% endblock %}
+
+    {% block body %}
+</head>
+<body>
+<div id="main">
+    <div id="header">
+        <h1>Pets Quiz</h1>
+    </div>
+    <form id="form1">
+
+        <h2>Which of these is a common pet? </h2>
+        <label for="var_string"><input type="radio" name="variable" value="0" id="var_string" />Rhino</label>
+        <label for="var_join"><input type="radio" name="variable" value="0" id="var_join" />Elephant</label>
+        <label for="var_info"><input type="radio" name="variable" value="25" id="var_info" />Dog</label>
+        <label for="var_condition"><input type="radio" name="variable" value="0" id="var_condition"/>tiger</label>
+
+        <h2>Which pet is described as slick and menacing?</h2>
+        <label for="sub_string"><input type="radio" name="sub" value="25" id="sub_string"/>Snake</label>
+        <label for="sub_join"><input type="radio" name="sub" value="0" id="sub_join"/>Mice</label>
+        <label for="sub_info"><input type="radio" name="sub" value="0" id="sub_info" />Bird</label>
+        <label for="sub_condition"><input type="radio" name="sub" value="0" id="sub_condition" />Cat</label>
+
+        <button type="submit" value="Submit">Submit</button>
+
+    </form>
+
+    <p>Your grade is: <span id="grade">__</span></p>
+    <p id="grade2"></p>
+    {% endblock %}
+
+    {% block meta %}
+    <script>
+        document.getElementById("form1").onsubmit=function() {
+            variable = parseInt(document.querySelector('input[name = "variable"]:checked').value);
+            sub = parseInt(document.querySelector('input[name = "sub"]:checked').value);
+            con = parseInt(document.querySelector('input[name = "con"]:checked').value);
+            ifstate = parseInt(document.querySelector('input[name = "ifstate"]:checked').value);
+
+
+            result = variable + sub + con + ifstate;
+
+            document.getElementById("grade").innerHTML = result;
+
+            grading = [
+                {score:0,feedback:"Fat Rat", image: "none.jpg"},
+                {score:25,feedback:"You need to spend more time. Try again", image: "poor.jpg"},
+                {score:50,feedback:"I think you could do better. Try again.", image: "avg.jpg"},
+                {score:75,feedback:"So close. Try again.", image: "above.jpg"},
+                {score:100,feedback:"Excellent! You're a pet lover!", image: "ncs_logo.png"}
+            ];
+
+            for(i=0; i<grading.length; i++) {
+                if(result == grading[i].score) {
+                    result2 = grading[i].feedback + "<br /><img src='" + grading[i].image + "' width='300'  />";
+                }
+            }
+
+
+            document.getElementById("grade2").innerHTML = result2;
+
+            return false; // required to not refresh the page; just leave this here
+        } //this ends the submit function
+
+    </script>
+
+
+</div>
+</body>
+</html>
+{% endblock %}
+

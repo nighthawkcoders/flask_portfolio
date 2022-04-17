@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% extends "layouts/base.html" %}
+{% block head %}
+<html>
+<style>
+    table, th, td {
+        border: 1px solid white;
+        border-collapse: collapse;
+    }
+</style>
+{%endblock%}
+{% block body %}
+<body>
+
+<table style="width:100%">
+    <tr>
+            <th class="p-5 bg-primary text-white text-center">Pet</th>
+            <th class="p-5 bg-primary text-white text-center">Pet Description</th>
+            <th class="p-5 bg-primary text-white text-center">Pet Image</th>
+        </div>
+    </tr>
+    <tr>
+        <td>
+            {% for image in pimage %}
+            <tr>
+    <td>
+        <div class="p-5 bg-dark text-white text-center">{{image.animal}}</div>
+    </td>
+    <td>
+        <div class="p-5 bg-dark text-white text-center">Habitat/Enclosure: {{image.habitat}}</div>
+        <div class="p-5 bg-dark text-white text-center">Quick Description: {{image.Slogan}}</div>
+    </td>
+    <td>
+        <img class="img-responsive py-3" id=img{{loop.index}} alt="" width="300" height="Auto" src="{{image.base64}}" >
+    </td>
+</tr>
+{% endfor %}
+</table>
+
+
+</body>
+{%endblock%}
+</html>
+
