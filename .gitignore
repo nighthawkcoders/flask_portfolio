@@ -1,6 +1,10 @@
-/.idea/.gitignore
-/.idea/aws.xml
-/.idea/flask_portfolio.iml
-/.idea/misc.xml
-/.idea/modules.xml
-/.idea/vcs.xml
+.idea
+*.iws
+*.iml
+*.ipr
+*.xml
+node_modules
+/node_modules/.package-lock.json
+/static/scss/custom.css.map
+/package.json
+/package-lock.json

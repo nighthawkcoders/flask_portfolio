@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+{% extends "layouts/base.html" %}
+{% block head %}
+<html>
+<head>
+<link rel="stylesheet" href="test.css">
+    <script>
+        var maskon = true;
+        function togglemask() {
+            if(maskon) {
+                maskon = false;
+                document.getElementById('place').src="/static/assets/pranavnomask.jpg";
+                document.getElementById("togglemask-btn").innerText = "Put mask on";
+            } else{
+                maskon = true;
+                document.getElementById('place').src="/static/assets/pranavmask.jpg";
+                document.getElementById("togglemask-btn").innerText = "Take mask off";
+            }
+        }
+        // togglemask()
+        // togglemask()
+    </script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial;
+            padding: 10px;
+            background: #f1f1f1;
+        }
+
+        /* Header/Blog Title */
+        .header {
+            padding: 30px;
+            text-align: center;
+            background: red;
+        }
+
+        .header h1 {
+            font-size: 50px;
+        }
+
+        /* Style the top navigation bar */
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        /* Style the topnav links */
+        .topnav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        /* Change color on hover */
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* Create two unequal columns that floats next to each other */
+        /* Left column */
+        .leftcolumn {
+            float: left;
+            width: 75%;
+        }
+
+        /* Right column */
+        .rightcolumn {
+            float: left;
+            width: 25%;
+            background-color: #f1f1f1;
+            padding-left: 20px;
+        }
+
+        /* Fake image */
+        .fakeimg {
+            background-color: #aaa;
+            width: 100%;
+            padding: 20px;
+        }
+
+        /* Add a card effect for articles */
+        .card {
+            background-color: white;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 20px;
+            text-align: center;
+            background: #ddd;
+            margin-top: 20px;
+        }
+
+        /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 800px) {
+            .leftcolumn, .rightcolumn {
+                width: 100%;
+                padding: 0;
+            }
+        }
+
+        /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+        @media screen and (max-width: 400px) {
+            .topnav a {
+                float: none;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+{%endblock%}
+{% block body %}
+<body>
+
+<div class="header">
+    <h1>Pranav About Me</h1>
+</div>
+
+<div class="topnav">
+    <a href="https://www.sandiegosoccerclub.org/">Pranav Soccer Team</a>
+    <a href="https://www.powayusd.com/en-US/Schools/HS/DNHS/Home">Pranav High School</a>
+    <a href="https://www.fcbarcelona.com/en/">Pranav Favorite Sports Team</a>
+    <a href="https://www.visitlondon.com/" style="float:right">Pranav's Favorite City</a>
+</div>
+
+<div class="row">
+    <div class="leftcolumn">
+        <div class="card">
+            <h2>About Me</h2>
+            <h5>Created: November 17, 2021</h5>
+            <p>Pranav Interesting Facts</p>
+            <p>Hi, my name is Pranav. I am a Junior that goes to Del Norte High School. I am currently taking Ap Computer Science Principles with Mrs. Naidu. I am very excited for taking this class as there are many importances to understanding computer programming in life. I am a student athlete that does both soccer and track. I also liek playing other sports in my free time like Basketball, Football, and Cricket. I have lived in three different locations in my life which are: Geneva, San Diego, and Milwaukee.  </p>
+        </div>
+        <div class="card">
+            <h2>Sports Live Highlights</h2>
+            <div class="container">
+                <div class="row justify-content-md-center" style="align:center">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th style="text-align:center">Pranav</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                <img id="place" class="img-responsive py-3" alt="" width="256" src="/static/assets/pranavmask.jpg" >
+                                <div>
+                                    <button onclick="togglemask()" id="togglemask-btn">Take mask off</button>
+                                </div>
+                            </td>
+                        </tr>
+        </div>
+    </div>
+            <div>
+                {% for item in data %}
+                    <p> {{ item.embed|safe }} </p>
+                {% endfor %}
+            </div>
+</div>
+        <p><a href="https://docs.google.com/document/d/1iU4SOdLDTyFTuoI4yuBxjvRjvVHq53I5JZgaCRP8Ah4/edit?usp=sharing">Pranav, Chase, and Colin Journal</a></p>
+
+
+</body>
+{% endblock %}
+</html>
+
+

@@ -1,0 +1,65 @@
+p {
+    font-family: Poppins;
+}
+
+table {
+    font-family: Poppins;
+    font-size: small;
+}
+
+h1 {
+    font-family: Roboto Condensed;
+    font-size: 69px;
+}
+
+h2 {
+    font-family: Roboto Condensed;
+}
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    text-align: center;
+}
+.action {
+    max-width: 800px;
+    padding: 40px 0;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 20px;
+}
+.options {
+    flex: 1 1 30%;
+    border-radius: 50%;
+    border-width: 4px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    animation-name: anim-fade;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    width: 100%;
+    max-width: 120px;
+    max-height: 120px;
+    min-height: 120px;
+}
+.Players {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.move {
+    border-radius: 50%;
+    border-width: 4px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.7);
+}
+.separator {
+    font-size: 5em;
+}

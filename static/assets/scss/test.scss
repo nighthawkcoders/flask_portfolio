@@ -1,0 +1,33 @@
+body {
+  background-image: url("/static/assets/pranavpets2.jpeg");
+}
+.container {
+  width: 360px;
+}
+#inputField {
+  width: 300px;
+  height: 46px;
+  border-width: 0;
+  border: 1px solid black;
+  outline: none;
+  font-size: 25px;
+  vertical-align: middle;
+}
+#addToDo {
+  height: 50px;
+  width: 50px;
+  border: 1px solid black;
+  vertical-align: middle;
+  font-size: 30px;
+}
+.paragraph-styling {
+  margin: 0;
+  cursor: pointer;
+  font-size: 25px;
+}
+.to-dos {
+  margin-top: 25px;
+}
+p {
+  font-size: 25px;
+}
