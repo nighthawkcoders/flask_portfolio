@@ -1,0 +1,41 @@
+{% extends "layouts/base.html" %}
+
+{% set project = "Bria" %}
+
+{% block body %}
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+</head>
+
+<body>
+<h1>Hi my name is Bria!</h1>
+<h2>I love photography! Here are some of my favorite photos I've taken</h2>
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSv5vT8ZANkAq1nN0ydXo0CYxnQkXmUBkPaaUM-CeQ7eJszcade1E1bK551qSmTmgxUfABwpmymlO5X/embed?start=false&loop=true&delayms=30000" frameborder="0" width="1200" height="699" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<h3>I also love yearbook and graphic design<br>
+    I also love hanging out with my friends Aleezay, Ella, and Riya.
+
+</h3>
+<img id="myImage" src="/static/assets/briafriends.png" width="430">
+<img id="friends" src="/static/assets/briapic2.png" width="430">
+<img id="friends" src="/static/assets/briaimage.png" width="430">
+
+
+</body>
+
+    <style>
+    h1,h3,h2,title{
+        font-family: "Baskerville Old Face";
+        color: antiquewhite;
+    }
+
+    h3,h2,h1{
+        text-align: center;
+
+    }
+
+    </style>
+{% endblock %}
+
+{% block background %}
+{% endblock %}

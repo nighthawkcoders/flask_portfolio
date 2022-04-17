@@ -1,0 +1,133 @@
+<!-- Custom file for standardizing Project Data
+This HTML is setup as as a Jinja2 layout, coders use layouts for:
+ ... standardization of style
+ ... setting expectations for data
+ ... code reuse
+-->
+<!DOCTYPE HTML>
+<div lang="en">
+
+    {% set basename = "Guess the Song" %}
+    {% set github = "https://github.com/nighthawkcoders" %}
+    {% set twitter = "https://twitter.com/NighthawkCoding" %}
+    {% set youtube = "https://www.youtube.com/channel/UClIKOsDS5dsfzFA3zveDT3Q?view_as=subscriber" %}
+
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            :root{
+                --white: whitesmoke;
+                --black: black;
+                --grey: grey;
+            }
+            html, body{
+                margin: 0;
+                height: 100%;
+                animation: fadein 2s;
+                -moz-animation: fadein 2s; /* Firefox */
+                -webkit-animation: fadein 2s; /* Safari and Chrome */
+                -o-animation: fadein 2s; /* Opera */
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+                color: var(--white);
+             }
+
+            .dark-mode {
+                background-color: var(--white);
+                color: var(--black);
+            }
+
+            h1{
+                font-size: 5em;
+            }
+
+            a {
+                color: midnightblue;
+            }
+
+            .fa{
+                font-size: 3em;
+                letter-spacing: 1em;
+                transition: all .2s;
+                color: white;
+            }
+
+            .fa:hover{
+                transform: translateY(10px);
+            }
+
+            .fa-youtube-play:hover{
+                color: #cc0000;
+            }
+
+            .fa-twitter:hover{
+                color: #1da1f2;
+            }
+
+            .fa-github:hover{
+                color: #000000;
+            }
+
+            .btn:link,
+            .btn:visited {
+                text-transform: uppercase;
+                text-decoration: none;
+                padding: 15px 40px;
+                display: inline-block;
+                border-radius: 100px;
+                transition: all .2s;
+                position: absolute;
+                color: white;
+                font-size: 2.5em;
+            }
+
+            .btn:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 20px 40px rgba(255, 255, 255, 0.2);
+            }
+
+            .btn:active {
+                transform: translateY(-1px);
+                box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2);
+            }
+
+            .row{
+                margin: auto;
+            }
+        </style>
+
+        <title>{{ basename }} | {{ project }} </title>
+        {% block meta %}
+
+        {% endblock %}
+
+    </head>
+
+    <body>
+    {% include "layouts/navbar.html" %}
+
+    {% block body %}
+        <div class="container-fluid">
+            <div class="row justify-content-end" style="padding: 2%;">
+                <div class="col-2" style="text-align: right;">
+                    {% block info %}
+                        <!-- notice jinja style variables used in href's -->
+                        <a><h5>{{basename}}</h5></a>
+                        <a href={{github}} target="_blank"><i class="fa fa-github"></i></a>
+                        <a href={{youtube}} target="_blank"><i class="fa fa-youtube-play"></i></a>
+                        <a href={{twitter}} target="_blank"><i class="fa fa-twitter"></i></a>
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+    {% endblock %}
+
+    </body>
+
+    {% block background %}
+
+    {% endblock %}
+
+    </html>

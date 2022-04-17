@@ -1,0 +1,70 @@
+{% extends "layouts/base.html" %}
+
+{% set project = "Valerie" %}
+
+{% block body %}
+<head>
+    <meta charset="UTF-8">
+    <title>Valerie Zone</title>
+</head>
+<body onload="randAdj()">
+
+<div class="w3-container w3-sand">
+    <style>
+        h2 {text-align: center;}
+        h3 {text-align: center;}
+        ul {text-align: center;}
+        p {text-align: center;}
+        div {text-align: center;}
+    </style>
+    <h2 style="color: #cc0000">
+        <img src="/static/assets/fire.gif" height="40" width="200"/>
+        ATTENTION: NOW ENTERING <b>THE VALERIE ZONE!!!!!</b>
+        <img src="/static/assets/fire.gif" height="40" width="200"/></h2>
+    <img src="/static/assets/valerie.png" height="500" width="200"/>
+    <img src="/static/assets/valerie.png" height="500" width="200"/>
+    <img src="/static/assets/valerie.png" height="500" width="200"/>
+    <img src="/static/assets/valerie.png" height="500" width="200"/>
+    <img src="/static/assets/valerie.png" height="500" width="200"/>
+    <img src="/static/assets/valerie.png" height="500" width="200"/>
+    <img src="/static/assets/valerie.png" height="500" width="200"/>
+    <img src="/static/assets/valerie.png" height="500" width="200"/>
+    <img src="/static/assets/valerie.png" height="500" width="200"/>
+
+    <p style="font-family:Arial">haha yeah i know how to use copy and paste Im so cool</p>
+    <p style="font-family:Arial">hello my name is valerie but you can call me val</p>
+    <p id="adj"></p>
+    <script>
+        const dict = ["a hard worker", "really funny", "an avid computer user", "wanted by the IRS", "outside your house", "currently in a foreign country", "feeling like a bored god lately", "almost six feet tall", "the joker, baby!"];
+        function randAdj() {
+            document.getElementById("adj").innerHTML = "I am " + dict[Math.floor(Math.random() * 10)] + " (you should refresh this page btw)";
+        }
+    </script>
+    <p style="font-family:Arial">as you can see by my copious overuse of it above, i have exactly <b>one</b> photo of me i actually like</p>
+    <style>
+        div {text-align: left;}
+    </style>
+    <h1 style="color: blue">check out this big cat <img src="/static/assets/fire.gif" height="100" width="300"/></h1>
+    <img src="/static/assets/floppa.jpeg" height="400" width="1000">
+
+    <h3><b>about me:</b> </h3>
+    <ul>
+        <li>i am 15 years old</li>
+        <li>i use she/they but if youre upset at me they/them is fine</li>
+        <li>EECS at uc berkeley sounds cool</li>
+        <li>i want to do computer engineering for a living</li>
+        <li>i am  politically engaged :)</li>
+        <li>i have gazed into the void for so long that its abyssal image is permanently etched into my retinas</li>
+        <li>i love chocolate milk</li>
+        <li>can you remind me to buy some chocolate milk later thanks</li>
+        <li>i also love caracal cats</li>
+        <li>you dont need to remind me that caracals are illegal to own in america</li>
+    </ul>
+</div>
+
+
+</body>
+{% endblock %}
+
+{% block background %}
+{% endblock %}
