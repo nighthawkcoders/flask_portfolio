@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+{% extends "layouts/base.html" %}
+<html lang="en">
+{% block head %}
+<style>
+  #map {
+    border: solid #2f3d50 10px;
+    color: black;
+  }
+</style>
+<style>
+  table, td, th {
+    border: 1px solid whitesmoke;
+  }
+  table {
+    border-collapse: collapse;
+    width: 80%;
+  }
+  th {
+    height: 70px;
+  }
+  .center {
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration-color: #111111;
+  }
+
+  .center {
+    text-align: center;
+    text-decoration-color: #111111;
+  }
+
+  body {
+    background: skyblue;
+  }
+  body {
+    color: #ffffff;
+  }
+</style>
+{% endblock %}
+{% block body %}
+<body>
+
+<div class="center">
+  <h2 style="color:black;">Map of local animal shelters</h2>
+</div>
+
+<br>
+<body class="center">
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-pase5AparMC_AsscX5GaFIff1TJtYvI&callback=initMap"
+        type="text/javascript"></script>
+
+<div align="center">
+  <div id="map" style="width: 700px; height: 500px;"></div>
+</div>
+
+<script type="text/javascript">
+  let locations = [
+    ['Helen Woodward', 32.998470306396484, -117.1975326538086, 1],
+    ['Humane Society', 32.7654411, -117.193309, 2],
+    ['The Dog Rescue', 33.0140216, -117.1224627, 3],
+    ['Rancho Coastal Humane Society', 33.0434095, -117.2839903, 4],
+    ['Escondido Humane Society', 33.1538548, -117.03822, 5],
+    ['County of San Diego Department of Animal Services', 33.1288014,-117.2690988, 6],
+    ['Forgotten Paws Animal Rescue', 33.1273112, -117.2535725, 7],
+    ['ACES Foundation', 32.8163561, -116.9756411, 8],
+    ['ResQue Ranch', 33.066394, -117.011153, 9],
+    ['K9 Connection Pet Rehoming and Adoption', 33.065128, -117.266596, 10],
+  ];
+  let map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 9,
+    center: new google.maps.LatLng(33.0140216,-117.1224627),
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  });
+  let infowindow = new google.maps.InfoWindow();
+
+  let marker, i;
+  for (i = 0; i < locations.length; i++) {
+    marker = new google.maps.Marker({
+      position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+      map: map
+    });
+    google.maps.event.addListener(marker, 'click', (function(marker, i) {
+      return function() {
+        infowindow.setContent(locations[i][0]);
+        infowindow.open(map, marker);
+      }
+    })(marker, i));
+  }
+</script>
+<style>
+  body {
+    background: skyblue;
+</style>
+</body>
+{% endblock %}
+</html>

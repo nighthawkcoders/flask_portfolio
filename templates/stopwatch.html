@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Stopwatch</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <script type="text/javascript" src="script.js"></script>
+
+    <style>
+
+        .container{
+            height: 300px;
+            width: 100%;
+        }
+
+        #display{
+            width: 100%;
+            font-size: 72px;
+            text-align: center;
+            margin: 0px auto;
+        }
+
+        .buttons{
+            text-align: center;
+        }
+
+    </style>
+
+    <script>
+        //Define variables to hold time values
+        let seconds = 0;
+        let minutes = 0;
+        let hours = 0;
+
+        //Define variables to hold "display" value
+        let displaySeconds = 0;
+        let displayMinutes = 0;
+        let displayHours = 0;
+
+        //Define variable to hold setInterval() function
+        let interval = null;
+
+        //Define variable to hold stopwatch status
+        let status = "stopped";
+
+        //Stopwatch function which helps us to determine when to increment each time value
+        function stopWatch(){
+
+            seconds++;
+
+            //Logic to determine when to increment the next value: "minutes"
+            if(seconds / 60 === 1){
+                seconds = 0;
+                minutes++;
+
+                if(minutes / 60 === 1){
+                    minutes = 0;
+                    hours++;
+                }
+
+            }
+
+            //If seconds/minutes/hours are only one digit, add a leading 0 to the value
+            if(seconds < 10){
+                displaySeconds = "0" + seconds.toString();
+            }
+            else{
+                displaySeconds = seconds;
+            }
+
+            if(minutes < 10){
+                displayMinutes = "0" + minutes.toString();
+            }
+            else{
+                displayMinutes = minutes;
+            }
+
+            if(hours < 10){
+                displayHours = "0" + hours.toString();
+            }
+            else{
+                displayHours = hours;
+            }
+
+            //Display updated time values to user
+            document.getElementById("display").innerHTML = displayHours + ":" + displayMinutes + ":" + displaySeconds;
+
+        }
+
+
+
+        function startStop(){
+
+            if(status === "stopped"){
+
+                //start the stopwatch (by calling the setInterval() function)
+                interval = window.setInterval(stopWatch, 1000);
+                document.getElementById("startStop").innerHTML = "Stop";
+                status = "started";
+
+            }
+            else{
+
+                window.clearInterval(interval)
+                document.getElementById("startStop").innerHTML = "Start";
+                status = "stopped";
+
+            }
+        }
+
+        //Function to reset stopwatch
+        function reset(){
+
+            window.clearInterval(interval);
+            seconds = 0;
+            minutes = 0;
+            hours = 0;
+            document.getElementById("display").innerHTML = "00:00:00";
+            document.getElementById("startStop").innerHTML = "Start"
+
+        }
+
+    </script>
+
+
+</head>
+<body>
+
+    <div class="container">
+
+        <div id="display">
+            00:00:00
+        </div>
+
+        <div class="buttons">
+            <button id="startStop" onclick="startStop()">Start</button> <button id="reset" onclick="reset()">Reset</button>
+        </div>
+
+    </div>
+
+
+
+
+
+</body>
+</html>
