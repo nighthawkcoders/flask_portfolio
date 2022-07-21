@@ -39,6 +39,8 @@ def joke_random():
         
 
 def jokes():
+    if len(jokes_data) == 0:
+        jokes_init()
     return(jokes_data)
 
 if __name__ == "__main__":
