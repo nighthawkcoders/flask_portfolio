@@ -1,7 +1,7 @@
-<!DOCTYPE html>
-{% extends "layout.html" %}
+{% extends "layouts/base.html" %}
+{% set project = "404" %}
 
-{% block content %}
+{% block body %}
     <div class="index">
         <div class="center-block" style="margin: 2% 10% 10%; font-family: gilroy,serif;">
             <div class="col-12" style="text-align: center;">
@@ -14,4 +14,7 @@
             </div>
         </div>
     </div>
+{% endblock %}
+
+{% block background %}
 {% endblock %}
