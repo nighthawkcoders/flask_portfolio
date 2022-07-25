@@ -74,7 +74,7 @@ if __name__ == "__main__":
     # update likes/dislikes test sequence
     num = str(random.randint(0, count-1)) # test a random record
     responses.append(
-        requests.get(url+num)  # read joke by id
+        requests.get(url+"/"+num)  # read joke by id
         ) 
     responses.append(
         requests.put(url+"/like/"+num) # add to like count
