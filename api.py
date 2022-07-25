@@ -1,6 +1,6 @@
-from flask import Blueprint, jsonify
-from flask_restful import Api, Resource
-import requests
+from flask import Blueprint, jsonify  # jsonify creates an endpoint response object
+from flask_restful import Api, Resource # used for REST API building
+import requests  # used for testing 
 import random
 
 from model_jokes import *
@@ -12,55 +12,67 @@ app_api = Blueprint('api', __name__,
 api = Api(app_api)
 
 class JokesAPI:
-    # class for create/post
+    # not implemented
     class _Create(Resource):
         def post(self, joke):
             pass
             
-    # class for read/get
+    # getJokes()
     class _Read(Resource):
         def get(self):
             return jsonify(getJokes())
 
-    # class for delete
+    # getJoke(id)
     class _ReadID(Resource):
         def get(self, id):
             return jsonify(getJoke(id))
 
-    # class for read/get
+    # getRandomJoke()
     class _ReadRandom(Resource):
         def get(self):
             return jsonify(getRandomJoke())
+    
+    # getRandomJoke()
+    class _ReadCount(Resource):
+        def get(self):
+            count = countJokes()
+            countMsg = {'count': count}
+            return jsonify(countMsg)
 
-    # class for update/put
+    # put method: addJokeHaHa
     class _UpdateLike(Resource):
         def put(self, id):
             addJokeHaHa(id)
             return jsonify(getJoke(id))
 
+    # put method: addJokeBooHoo
     class _UpdateJeer(Resource):
         def put(self, id):
             addJokeBooHoo(id)
             return jsonify(getJoke(id))
 
-    # building RESTapi resource
-    # building RESTapi resource
+    # building RESTapi resources/interfaces, these routes are added to Web Server
     api.add_resource(_Create, '/create/<string:joke>')
     api.add_resource(_Read, '/')
     api.add_resource(_ReadID, '/<int:id>')
     api.add_resource(_ReadRandom, '/random')
+    api.add_resource(_ReadCount, '/count')
     api.add_resource(_UpdateLike, '/like/<int:id>/')
     api.add_resource(_UpdateJeer, '/jeer/<int:id>/')
     
 if __name__ == "__main__": 
-    url = 'http://127.0.0.1:5000/api/jokes/' # run from project to enable
+    # server = "http://127.0.0.1:5000/" # run local
+    server = 'https://flask.nighthawkcodingsociety.com/' # run from web
+    url = server + "api/jokes/"
     responses = []  # responses list
-    
-    # responses.append(requests.get(url)) # read all, verbose so commented out
-    responses.append(requests.get(url+"random")) # read a random joke
-    
+
+    # get count of jokes on server
+    count_response = requests.get(url+"/count")
+    count_json = count_response.json()
+    count = count_json['count']
+
     # update likes/dislikes test sequence
-    num = str(random.randint(0, countJokes()-1)) # test a random record
+    num = str(random.randint(0, count-1)) # test a random record
     responses.append(
         requests.get(url+num)  # read joke by id
         ) 
@@ -69,6 +81,11 @@ if __name__ == "__main__":
         ) 
     responses.append(
         requests.put(url+"jeer/"+num) # add to jeer count
+        ) 
+
+    # obtain a random joke
+    responses.append(
+        requests.get(url+"random")  # read a random joke
         ) 
 
     # cycle through responses
