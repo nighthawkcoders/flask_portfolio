@@ -61,9 +61,9 @@ class JokesAPI:
     api.add_resource(_UpdateJeer, '/jeer/<int:id>/')
     
 if __name__ == "__main__": 
-    # server = "http://127.0.0.1:5000/" # run local
-    server = 'https://flask.nighthawkcodingsociety.com/' # run from web
-    url = server + "api/jokes/"
+    # server = "http://127.0.0.1:5000" # run local
+    server = 'https://flask.nighthawkcodingsociety.com' # run from web
+    url = server + "/api/jokes"
     responses = []  # responses list
 
     # get count of jokes on server
@@ -77,15 +77,15 @@ if __name__ == "__main__":
         requests.get(url+num)  # read joke by id
         ) 
     responses.append(
-        requests.put(url+"like/"+num) # add to like count
+        requests.put(url+"/like/"+num) # add to like count
         ) 
     responses.append(
-        requests.put(url+"jeer/"+num) # add to jeer count
+        requests.put(url+"/jeer/"+num) # add to jeer count
         ) 
 
     # obtain a random joke
     responses.append(
-        requests.get(url+"random")  # read a random joke
+        requests.get(url+"/random")  # read a random joke
         ) 
 
     # cycle through responses
