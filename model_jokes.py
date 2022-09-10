@@ -32,11 +32,11 @@ def initJokes():
         jokes_data.append({"id": item_id, "joke": item, "haha": 0, "boohoo": 0})
         item_id += 1
     # prime some haha responses
-    for i in range(200):
+    for i in range(10):
         id = getRandomJoke()['id']
         addJokeHaHa(id)
     # prime some haha responses
-    for i in range(50):
+    for i in range(5):
         id = getRandomJoke()['id']
         addJokeBooHoo(id)
         

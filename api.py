@@ -57,8 +57,8 @@ class JokesAPI:
     api.add_resource(_ReadID, '/<int:id>')
     api.add_resource(_ReadRandom, '/random')
     api.add_resource(_ReadCount, '/count')
-    api.add_resource(_UpdateLike, '/like/<int:id>/')
-    api.add_resource(_UpdateJeer, '/jeer/<int:id>/')
+    api.add_resource(_UpdateLike, '/like/<int:id>')
+    api.add_resource(_UpdateJeer, '/jeer/<int:id>')
     
 if __name__ == "__main__": 
     # server = "http://127.0.0.1:5000" # run local
