@@ -2,10 +2,14 @@
 from flask import render_template  # import render_template from "public" flask libraries
 # import "packages" from "this" project
 from __init__ import app  # Definitions initialization
-from api import app_api # Blueprint import api definition
+from api.joke import joke_api # Blueprint import api definition
+from api.covid import covid_api # Blueprint import api definition
+
 from bp_projects.projects import app_projects # Blueprint directory import projects definition
 
-app.register_blueprint(app_api) # register api routes
+app.register_blueprint(joke_api) # register api routes
+app.register_blueprint(covid_api) # register api routes
+
 app.register_blueprint(app_projects) # register api routes
 
 @app.errorhandler(404)  # catch for URL not found
