@@ -92,16 +92,23 @@ class CovidAPI:
     class _ReadCountry(Resource):
         def get(self, filter):
             return jsonify(getCountry(filter))
-        
+    
+    # resource is called an endpoint: base usr + prefix + endpoint
     api.add_resource(_Read, '/')
     api.add_resource(_ReadCountry, '/<string:filter>')
 
 
 """Main or Tester Condition 
-  This code only runs when this file is played directly
+  This code only runs when this file is "played" directly
 """        
 if __name__ == "__main__": 
+    """
+    Using this test code is how I built the backend logic around this API.  
+    There were at least 10 debugging session, on handling updateTime.
+    """
     
+    print("-"*30) # cosmetic separator
+
     # This code looks for "world data"
     response = getCovidAPI()
     print("World Totals")
@@ -109,10 +116,12 @@ if __name__ == "__main__":
     for key, value in world.items():  # this finds key, value pairs in country
         print(key, value)
 
-    print()
+    print("-"*30)
 
     # This code looks for USA in "countries_stats"
     country = getCountry("USA")
     print("USA Totals")
     for key, value in country.items():
         print(key, value)
+        
+    print("-"*30)
