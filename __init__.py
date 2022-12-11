@@ -2,7 +2,6 @@ from flask import Flask
 from flask_login import LoginManager
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
-from model_jokes import initJokes
 
 """
 These object can be used throughout project.
@@ -19,7 +18,3 @@ app.config['SQLALCHEMY_DATABASE_URI'] = dbURI
 app.config['SECRET_KEY'] = 'SECRET_KEY'
 db = SQLAlchemy(app)
 Migrate(app, db)
-
-@app.before_first_request
-def activate_job():
-    initJokes()

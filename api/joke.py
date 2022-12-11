@@ -3,7 +3,7 @@ from flask_restful import Api, Resource # used for REST API building
 import requests  # used for testing 
 import random
 
-from model_jokes import *
+from model.jokes import *
 
 joke_api = Blueprint('joke_api', __name__,
                    url_prefix='/api/jokes')
