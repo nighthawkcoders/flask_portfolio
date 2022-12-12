@@ -45,7 +45,12 @@ class Post(db.Model):
     # CRUD read, returns dictionary representation of Notes object
     # returns dictionary
     def read(self):
-        return self.__dict__
+        return {
+            "id": self.id,
+            "userID": self.userID,
+            "note": self.note,
+            "image": self.image
+        }
 
 
 # Define the User class to manage actions in the 'notes' table
@@ -132,7 +137,12 @@ class User(UserMixin, db.Model):
     # CRUD read converts self to dictionary
     # returns dictionary
     def read(self):
-        return self.__dict__
+        return {
+            "id": self.id,
+            "name": self.name,
+            "uid": self.uid,
+            "posts": [post.read() for post in self.posts]
+        }
 
     # CRUD update: updates user name, password, phone
     # returns self
@@ -188,3 +198,4 @@ def initUsers():
             '''fails with bad or duplicate data'''
             db.session.remove()
             print(f"Records exist, duplicate email, or error: {user.uid}")
+            

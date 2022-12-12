@@ -2,17 +2,25 @@ import threading
 
 # import "packages" from flask
 from flask import render_template  # import render_template from "public" flask libraries
+
 # import "packages" from "this" project
 from __init__ import app  # Definitions initialization
-from api.covid import covid_api # Blueprint import api definition
-from api.joke import joke_api # Blueprint import api definition
 from model.jokes import initJokes
 from model.sqliteDB import initUsers
+
+# setup APIs
+from api.covid import covid_api # Blueprint import api definition
+from api.joke import joke_api # Blueprint import api definition
+from api.user import user_api # Blueprint import api definition
+
+# setup App pages
 from projects.projects import app_projects # Blueprint directory import projects definition
 
+# register URIs
 app.register_blueprint(joke_api) # register api routes
 app.register_blueprint(covid_api) # register api routes
-app.register_blueprint(app_projects) # register api routes
+app.register_blueprint(user_api) # register api routes
+app.register_blueprint(app_projects) # register app pages
 
 @app.errorhandler(404)  # catch for URL not found
 def page_not_found(e):
