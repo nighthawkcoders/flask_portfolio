@@ -5,7 +5,6 @@ import os, base64
 from __init__ import app, db
 from sqlalchemy.exc import IntegrityError
 from werkzeug.security import generate_password_hash, check_password_hash
-from flask_login import UserMixin
 
 
 ''' Tutorial: https://www.sqlalchemy.org/library.html#tutorials, try to get into Python shell and follow along '''
@@ -68,7 +67,7 @@ class Post(db.Model):
 # -- a.) db.Model is like an inner layer of the onion in ORM
 # -- b.) User represents data we want to store, something that is built on db.Model
 # -- c.) SQLAlchemy ORM is layer on top of SQLAlchemy Core, then SQLAlchemy engine, SQL
-class User(UserMixin, db.Model):
+class User(db.Model):
     __tablename__ = 'users'  # table name is plural, class name is singular
 
     # Define the User schema
