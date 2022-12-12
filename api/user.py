@@ -11,11 +11,11 @@ user_api = Blueprint('user_api', __name__,
 api = Api(user_api)
 
 class UserAPI:        
-    # getJokes()
+    # GET Method / Read Action
     class _Read(Resource):
         def get(self):
             users = User.query.all()    # read/extract all users from database
-            json_ready = [user.read() for user in users]  # prepare output for json
+            json_ready = [user.read() for user in users]  # prepare output in json
             return jsonify(json_ready)  # jsonify creates response object
         
      # building RESTapi resources/interfaces, these routes are added to Web Server
