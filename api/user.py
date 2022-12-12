@@ -1,4 +1,4 @@
-from flask import Blueprint, jsonify  # jsonify creates an endpoint response object
+from flask import Blueprint, jsonify  
 from flask_restful import Api, Resource # used for REST API building
 import json
 
@@ -14,9 +14,9 @@ class UserAPI:
     # getJokes()
     class _Read(Resource):
         def get(self):
-            users = User.query.all()
-            json_ready = [user.read() for user in users]
-            return jsonify(json_ready)
+            users = User.query.all()    # read/extract all users from database
+            json_ready = [user.read() for user in users]  # prepare output for json
+            return jsonify(json_ready)  # jsonify creates response object
         
      # building RESTapi resources/interfaces, these routes are added to Web Server
     api.add_resource(_Read, '/')
