@@ -1,10 +1,12 @@
 """ database dependencies to support sqliteDB examples """
 from random import randrange
+import os, base64
 
-from __init__ import db
+from __init__ import app, db
 from sqlalchemy.exc import IntegrityError
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import UserMixin
+
 
 ''' Tutorial: https://www.sqlalchemy.org/library.html#tutorials, try to get into Python shell and follow along '''
 
@@ -45,11 +47,19 @@ class Post(db.Model):
     # CRUD read, returns dictionary representation of Notes object
     # returns dictionary
     def read(self):
+        # encode image
+        path = app.config['UPLOAD_FOLDER']
+        file = os.path.join(path, self.image)
+        file_text = open(file, 'rb')
+        file_read = file_text.read()
+        file_encode = base64.encodebytes(file_read)
+        
         return {
             "id": self.id,
             "userID": self.userID,
             "note": self.note,
-            "image": self.image
+            "image": self.image,
+            "base64": str(file_encode)
         }
 
 
