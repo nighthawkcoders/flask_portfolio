@@ -1,6 +1,8 @@
 """ database dependencies to support sqliteDB examples """
 from random import randrange
+from datetime import date
 import os, base64
+import json
 
 from __init__ import app, db
 from sqlalchemy.exc import IntegrityError
@@ -75,14 +77,17 @@ class User(db.Model):
     _name = db.Column(db.String(255), unique=False, nullable=False)
     _uid = db.Column(db.String(255), unique=True, nullable=False)
     _password = db.Column(db.String(255), unique=False, nullable=False)
+    _dob = db.Column(db.Date)
+
     # Defines a relationship between User record and Notes table, one-to-many (one user to many notes)
     posts = db.relationship("Post", cascade='all, delete', backref='users', lazy=True)
 
     # constructor of a User object, initializes the instance variables within object (self)
-    def __init__(self, name, uid, password):
+    def __init__(self, name, uid, password="123qwerty", dob=date.today()):
         self._name = name    # variables with self prefix become part of the object, 
         self._uid = uid
         self.set_password(password)
+        self._dob = dob
 
     # a name getter method, extracts name from object
     @property
@@ -123,13 +128,26 @@ class User(db.Model):
         result = check_password_hash(self._password, password)
         return result
     
+    # dob property is returned as string, to avoid unfriendly outcomes
+    @property
+    def dob(self):
+        dob_string = self._dob.strftime('%m-%d-%Y')
+        return dob_string
+    
+    # dob should be have verification for type date
+    @dob.setter
+    def dob(self, dob):
+        self._dob = dob
+    
+    @property
+    def age(self):
+        today = date.today()
+        return today.year - self._dob.year - ((today.month, today.day) < (self._dob.month, self._dob.day))
+    
     # output content using str(object) in human readable form, uses getter
+    # output content using json dumps, this is ready for API response
     def __str__(self):
-        return f'name: "{self.name}", id: "{self.uid}", psw: "{self.password}"'
-
-    # output command to recreate the object, uses attribute directly
-    def __repr__(self):
-        return f'User(name={self._name}, uid={self._uid}, password={self._password})'
+        return json.dumps(self.read())
 
     # CRUD create/add a new record to the table
     # returns self or None on error
@@ -150,6 +168,8 @@ class User(db.Model):
             "id": self.id,
             "name": self.name,
             "uid": self.uid,
+            "dob": self.dob,
+            "age": self.age,
             "posts": [post.read() for post in self.posts]
         }
 
@@ -182,17 +202,13 @@ def initUsers():
     """Create database and tables"""
     db.create_all()
     """Tester data for table"""
-    u1 = User(name='Thomas Edison', uid='toby', password='123toby')
+    u1 = User(name='Thomas Edison', uid='toby', password='123toby', dob=date(1847, 2, 11))
     u2 = User(name='Nicholas Tesla', uid='niko', password='123niko')
     u3 = User(name='Alexander Graham Bell', uid='lex', password='123lex')
     u4 = User(name='Eli Whitney', uid='whit', password='123whit')
-    u5 = User(name='John Mortensen', uid='jm1021', password='123qwerty')
-    # u6 intends to succeed with a unique uid
-    u6 = User(name='John Mortensen', uid='jmort1021@yahoo.com', password='123qwerty')
-    # U7 intended to fail as duplicate key
-    u7 = User(name='John Mortensen', uid='jm1021', password='123qwerty')
+    u5 = User(name='John Mortensen', uid='jm1021', dob=date(1959, 10, 21))
 
-    users = [u1, u2, u3, u4, u5, u6, u7]
+    users = [u1, u2, u3, u4, u5]
 
     """Builds sample user/note(s) data"""
     for user in users:
