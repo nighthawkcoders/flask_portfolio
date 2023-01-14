@@ -72,7 +72,7 @@ class Post(db.Model):
 class User(db.Model):
     __tablename__ = 'users'  # table name is plural, class name is singular
 
-    # Define the User schema
+    # Define the User schema with "vars" from object
     id = db.Column(db.Integer, primary_key=True)
     _name = db.Column(db.String(255), unique=False, nullable=False)
     _uid = db.Column(db.String(255), unique=True, nullable=False)

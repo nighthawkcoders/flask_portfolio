@@ -2,7 +2,7 @@ from flask import Blueprint, jsonify
 from flask_restful import Api, Resource # used for REST API building
 import json
 
-from model.sqliteDB import *
+from model.users import *
 
 user_api = Blueprint('user_api', __name__,
                    url_prefix='/api/users')
