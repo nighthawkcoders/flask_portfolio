@@ -1,4 +1,4 @@
-FROM docker.io/python:3.9
+FROM docker.io/python:3.10
 
 WORKDIR /app
 
@@ -8,7 +8,7 @@ RUN apt-get update && apt-get upgrade -y && \
 COPY . /app
 
 RUN pip install --no-cache-dir -r requirements.txt
-RUN pip3 install gunicorn
+RUN pip install gunicorn
 
 ENV GUNICORN_CMD_ARGS="--workers=1 --bind=0.0.0.0:8080"
 
