@@ -64,7 +64,7 @@ class Post(db.Model):
         }
 
 
-# Define the User class to manage actions in the 'notes' table
+# Define the User class to manage actions in the 'users' table
 # -- Object Relational Mapping (ORM) is the key concept of SQLAlchemy
 # -- a.) db.Model is like an inner layer of the onion in ORM
 # -- b.) User represents data we want to store, something that is built on db.Model
