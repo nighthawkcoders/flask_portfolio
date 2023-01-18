@@ -2,19 +2,29 @@
 Runtime link: https://flask.nighthawkcodingsociety.com/
 ### Quick way to get started
 > Quick steps with MacOS or WSL ...
+
 - Open a Terminal, install nix which requires admin password: 
 `sh <(curl -L https://nixos.org/nix/install)`
+
 - Open a Terminal, cd to project area 
 `cd ~/vscode`
+
 `git clone https://github.com/nighthawkcoders/flask_portfolio.git`
+
 `cd flask_portfolio`
+
 - Run nix for virtual environment
 `nix-shell`
+
 - Open Editor and Run
     - Ensure VSCode installed
+
     `code .`
+
     - Select main.py and Play project
+
 - Run from Terminal
+
     - python main.py
 
 ### Idea
