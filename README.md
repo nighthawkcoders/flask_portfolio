@@ -21,7 +21,7 @@ nix-env -if https://github.com/DavHau/mach-nix/tarball/3.5.0 -A mach-nix
 - Open a Terminal, cd to project area
 
 ```bash
-cd ~/vscode
+mkdir ~/vscode; cd ~/vscode
 
 git clone https://github.com/nighthawkcoders/flask_portfolio.git
 
@@ -34,8 +34,14 @@ cd flask_portfolio
 mach-nix env ./env -r requirements.txt
 ```
 
+- End of nix shell setup, exit shell
+```
+exit
+```
 
-- Run nix for nix shell (virtual environment)
+### Run Server or run VSCode
+
+- Run nix shell (virtual environment)
 
 ```bash
 nix-shell ./env
@@ -48,7 +54,10 @@ nix-shell ./env
     code .
     ```
 
-    - Select main.py and then press Play button and check server
+    - Run python from Terminal
+    ```bash
+    python main.py
+    ```
 
 
 - Run from Terminal without VSCode
