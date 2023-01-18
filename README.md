@@ -35,7 +35,7 @@ Starter code should be fun and practical.
 #### Show some practical and fun links (hrefs) like Twitter, Git, Youtube
 #### Show project specific links (hrefs) per page
 
-### Implementation progress (August 13th, 2021)
+### Implementation Summary
 #### Project entry point is main.py, this enables Flask Web App and provides capability to renders templates (HTML files)
 #### The main.py is the  Web Server Gateway Interface, essentially it contains a HTTP route and HTML file relationship.  The Python code constructs WSGI relationships for index, kangaroos, walruses, and hawkers.
 #### The project structure contains many directories and files.  The template directory (containing html files) and static directory (containing js files) are common standards for HTML coding.  Static files can be pictures and videos, in this project they are mostly javascript backgrounds.
@@ -49,4 +49,4 @@ Starter code should be fun and practical.
 
 ### IDE management (things that happened beyond plan)
 #### Recall on ".gitignore" solution to the pains of temporary files.  Start a ".gitignore" and avoid promoting temporary files to Git, for instance IDE xml files.
-#### A project needs to establish a "requirements.txt" to keep track of Python packages used by the project.  This help in other IDEs and Deployment.  IntelliJ has menu Tool -> Sync Python Requirements to start file. 
+#### A project needs to establish a "requirements.txt" to keep track of Python packages used by the project.  This help in other IDEs and Deployment. 
