@@ -3,29 +3,60 @@ Runtime link: https://flask.nighthawkcodingsociety.com/
 ### Quick way to get started
 > Quick steps with MacOS or WSL; this uses Nix for programmatic way to build tools and dependencies.
 
+
 - Open a Terminal, install nix which requires admin password: 
-`sh <(curl -L https://nixos.org/nix/install)`
+```bash
+sh <(curl -L https://nixos.org/nix/install)
+```
 
-- Open a Terminal, cd to project area 
-`cd ~/vscode`
+- ***Restart Terminal***
 
-`git clone https://github.com/nighthawkcoders/flask_portfolio.git`
+- Install Python Package helper
 
-`cd flask_portfolio`
+```bash
+nix-env -if https://github.com/DavHau/mach-nix/tarball/3.5.0 -A mach-nix
+```
+
+
+- Open a Terminal, cd to project area
+
+```bash
+cd ~/vscode
+
+git clone https://github.com/nighthawkcoders/flask_portfolio.git
+
+cd flask_portfolio
+```
+
+- Build nix packages from requirements.txt
+
+```bash
+mach-nix env ./env -r requirements.txt
+```
+
 
 - Run nix for nix shell (virtual environment)
-`nix-shell`
 
-- Open Editor and Run
+```bash
+nix-shell ./env
+```
+
+- Open Editor or Run from command line
     - Ensure VSCode installed
 
-    `code .`
+    ```bash
+    code .
+    ```
 
-    - Select main.py and then press Play button to run project
+    - Select main.py and then press Play button and check server
+
 
 - Run from Terminal without VSCode
 
-    - python main.py
+    - Run python from command line and check server
+    ```bash
+    python main.py
+    ```
 
 ### Idea
 > The purpose of project is to serve API.  It is the  backend piece of a Full-Stack project.  Review API folder for endpoints.
