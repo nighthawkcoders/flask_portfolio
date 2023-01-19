@@ -47,25 +47,30 @@ exit
 nix-shell ./env
 ```
 
-- Open Editor or Run from command line
-    - Ensure VSCode installed
-
-    ```bash
-    code .
-    ```
-
-    - Run python from Terminal
-    ```bash
-    python main.py
-    ```
-
-
 - Run from Terminal without VSCode
 
     - Run python from command line and check server
     ```bash
     python main.py
     ```
+
+- Prepare VSCode and run
+    
+    - From Terminal run VSCode
+    ```bash
+    code .
+    ```
+
+    - In VSCode open Terminal, verify Nix python
+    ```bash
+    which python
+    ```
+    - Open Setting: Ctl-Shift P or Cmd-Shift
+        - Search Python: Select Interpreter
+        - Match interpreter to `which output` above
+
+    - Try Play button and try to Debug
+    
 
 ### Idea
 > The purpose of project is to serve API.  It is the  backend piece of a Full-Stack project.  Review API folder for endpoints.
