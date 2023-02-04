@@ -40,7 +40,7 @@ class UserAPI:
             # convert to date type
             if dob is not None:
                 try:
-                    uo.dob = datetime.strptime(dob, '%m-%d-%Y').date()
+                    uo.dob = datetime.strptime(dob, '%Y-%m-%d').date()
                 except:
                     return {'message': f'Date of birth format error {dob}, must be mm-dd-yyyy'}, 210
             
