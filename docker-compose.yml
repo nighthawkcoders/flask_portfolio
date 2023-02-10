@@ -7,4 +7,5 @@ services:
                         - "8086:8086"
                 volumes:
                         - ./volumes:/volumes
+                        - ./instance:/instance
                 restart: unless-stopped

@@ -12,11 +12,11 @@ These object can be used throughout project.
 # Setup of key Flask object (app)
 app = Flask(__name__)
 # Setup SQLAlchemy object and properties for the database (db)
-dbURI = 'sqlite:////volumes/flask_portfolio.db'
+dbURI = 'sqlite:///volumes/sqlite.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SQLALCHEMY_DATABASE_URI'] = dbURI
 app.config['SECRET_KEY'] = 'SECRET_KEY'
-db = SQLAlchemy(app)
+db = SQLAlchemy()
 Migrate(app, db)
 
 # Images storage
