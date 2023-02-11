@@ -1,3 +1,4 @@
+import json
 from flask import Blueprint, request, jsonify
 from flask_restful import Api, Resource # used for REST API building
 from datetime import datetime
@@ -20,11 +21,11 @@ class UserAPI:
             # validate name
             name = body.get('name')
             if name is None or len(name) < 2:
-                return {'message': f'Name is missing, or is less than 2 characters'}, 210
+                return {'message': f'Name is missing, or is less than 2 characters'}, 400
             # validate uid
             uid = body.get('uid')
             if uid is None or len(uid) < 2:
-                return {'message': f'User ID is missing, or is less than 2 characters'}, 210
+                return {'message': f'User ID is missing, or is less than 2 characters'}, 400
             # look for password and dob
             password = body.get('password')
             dob = body.get('dob')
@@ -42,7 +43,7 @@ class UserAPI:
                 try:
                     uo.dob = datetime.strptime(dob, '%Y-%m-%d').date()
                 except:
-                    return {'message': f'Date of birth format error {dob}, must be mm-dd-yyyy'}, 210
+                    return {'message': f'Date of birth format error {dob}, must be mm-dd-yyyy'}, 400
             
             ''' #2: Key Code block to add user to database '''
             # create user in database
@@ -51,7 +52,7 @@ class UserAPI:
             if user:
                 return jsonify(user.read())
             # failure returns error
-            return {'message': f'Processed {name}, either a format error or User ID {uid} is duplicate'}, 210
+            return {'message': f'Processed {name}, either a format error or User ID {uid} is duplicate'}, 400
 
     class _Read(Resource):
         def get(self):
@@ -68,13 +69,13 @@ class UserAPI:
             ''' Get Data '''
             uid = body.get('uid')
             if uid is None or len(uid) < 2:
-                return {'message': f'User ID is missing, or is less than 2 characters'}, 210
+                return {'message': f'User ID is missing, or is less than 2 characters'}, 400
             password = body.get('password')
             
             ''' Find user '''
             user = User.query.filter_by(_uid=uid).first()
             if user is None or not user.is_password(password):
-                return {'message': f'Invalid user id or password'}, 210
+                return {'message': f"Invalid user id or password"}, 400
             
             ''' authenticated user '''
             return jsonify(user.read())
