@@ -58,7 +58,31 @@ class UserAPI:
             users = User.query.all()    # read/extract all users from database
             json_ready = [user.read() for user in users]  # prepare output in json
             return jsonify(json_ready)  # jsonify creates Flask response object, more specific to APIs than json.dumps
+    
+    class _Security(Resource):
+
+        def post(self):
+            ''' Read data for json body '''
+            body = request.get_json()
+            
+            ''' Get Data '''
+            uid = body.get('uid')
+            if uid is None or len(uid) < 2:
+                return {'message': f'User ID is missing, or is less than 2 characters'}, 210
+            password = body.get('password')
+            
+            ''' Find user '''
+            user = User.query.filter_by(_uid=uid).first()
+            if user is None or not user.is_password(password):
+                return {'message': f'Invalid user id or password'}, 210
+            
+            ''' authenticated user '''
+            return jsonify(user.read())
+
+            
 
     # building RESTapi endpoint
     api.add_resource(_Create, '/create')
     api.add_resource(_Read, '/')
+    api.add_resource(_Security, '/authenticate')
+    
