@@ -15,9 +15,9 @@ class Player(db.Model):
     __tablename__ = 'players'  # table name is plural, class name is singular
 
     # Define the Player schema with "vars" from object
-    id = db.Column(db.Integer)
+    id = db.Column(db.Integer, primary_key=True)
     _name = db.Column(db.String(255), unique=False, nullable=False)
-    _uid = db.Column(db.String(255), unique=True, nullable=False, primary_key=True)
+    _uid = db.Column(db.String(255), unique=True, nullable=False)
     _password = db.Column(db.String(255), unique=False, nullable=False)
     _tokens = db.Column(db.Integer)    
 
