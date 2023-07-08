@@ -1,8 +1,41 @@
 ## [Flask Portfolio Starter](https://github.com/nighthawkcoders/flask_portfolio)
 Runtime link: https://flask.nighthawkcodingsociety.com/
-### Quick way to get started
-> Quick steps with MacOS or WSL; this uses Nix for programmatic way to build tools and dependencies.
 
+### Primary way to get started
+> Quick steps that can be used with MacOS or WSL; this uses Python 3.9 or later as a prerequisite.
+
+- Open a Terminal, clone project and cd to project area
+
+```bash
+mkdir ~/vscode; cd ~/vscode
+
+git clone https://github.com/nighthawkcoders/flask_portfolio.git
+
+cd flask_portfolio
+```
+
+- Install python dependencies for Flask, etc.
+
+```bash
+pip install -r requirements.txt
+```
+
+- Run from Terminal without VSCode
+
+    - Run python from command line and check server
+    ```bash
+    python main.py
+    ```
+
+- Prepare VSCode and run
+    
+    - From Terminal run VSCode
+    ```bash
+    code .
+    ```
+
+### Alternate way to get started
+> Quick steps with MacOS or WSL; this uses Nix for programmatic way to build tools and dependencies.  This is only recommended if you are having problems with you desktop MacOS or WSL.
 
 - Open a Terminal, install nix which requires admin password: 
 ```bash
@@ -73,7 +106,7 @@ nix-shell ./env
     
 
 ### Idea
-> The purpose of project is to serve API.  It is the  backend piece of a Full-Stack project.  Review API folder for endpoints.
+> The purpose of project is to serve APIs.  It is the backend piece of a Full-Stack project.  Review API folder for endpoints.
 
 ### Visual thoughts
 > The Starter code should be fun and practical.
@@ -83,8 +116,10 @@ nix-shell ./env
 - Show project specific links (hrefs) per page
 
 ### Implementation Summary
+#### July 2023
+> Updates for 2023 to 2024 school year.
 #### January 2023.
-> This project started backend server.  Intentions are to add some Administrative UIs.
+> This project focuses on being a Python backend server.  Intentions are to only have simple UIs an perhaps some Administrative UIs.
 #### September 2021.
 > Basic UI elements were implemented showing server side Flask with Jinja 2 capabilities.
 - Project entry point is main.py, this enables Flask Web App and provides capability to renders templates (HTML files)
