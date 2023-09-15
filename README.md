@@ -132,13 +132,40 @@ nix-shell ./env
 - Organize with Bootstrap menu
 - Add some color and fun through VANTA Visuals (birds, halo, solar, net)
 - Show some practical and fun links (hrefs) like Twitter, Git, Youtube
+- Build a Sample Page (Table)
 - Show project specific links (hrefs) per page
+
+### Files and Directories in this Project
+
+These are some of the key files and directories in this project
+
+README.md: This file contains instructions for setting up the necessary tools and cloning the project. A README file is a standard component of all properly set up GitHub projects.
+
+requirements.txt: This file lists the dependencies required to turn this Python project into a Flask/Python project. It may also include other backend dependencies, such as dependencies for working with a database.
+
+main.py: This Python source file is used to run the project. Running this file starts a Flask web server locally on localhost. During development, this is the file you use to run, test, and debug the project.
+
+Dockerfile and docker-compose.yml: These files are used to run and test the project in a Docker container. They allow you to simulate the project’s deployment on a server, such as an AWS EC2 instance. Running these files helps ensure that your tools and dependencies work correctly on different machines.
+
+instances: This directory is the standard location for storing data files that you want to remain on the server. For example, SQLite database files can be stored in this directory. Files stored in this location will persist after web application restart, everyting outside of instances will be recreated at restart.
+
+static: This directory is the standard location for files that you want to be cached by the web server. It is typically used for image files (JPEG, PNG, etc.) or JavaScript files that remain constant during the execution of the web server.
+
+api: This directory contains code that receives and responds to requests from external servers. It serves as the interface between the external world and the logic and code in the rest of the project.
+
+model: This directory contains files that implement the backend functionality for many of the files in the api directory. For example, there may be files in the model directory that directly interact with the database.
+
+templates: This directory contains files and subdirectories used to support the home and error pages of the website.
+
+.gitignore: This file specifies elements to be excluded from version control. Files are excluded when they are derived and not considered part of the project’s original source. In the VSCode Explorer, you may notice some files appearing dimmed, indicating that they are intentionally excluded from version control based on the rules defined in .gitignore.
 
 ### Implementation Summary
 
 #### July 2023
 
 > Updates for 2023 to 2024 school year.
+
+- Update README with File Descriptions
 
 #### January 2023
 
