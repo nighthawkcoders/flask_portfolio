@@ -44,11 +44,11 @@ def index():
 def table():
     return render_template("table.html")
 
-@app.before_first_request
-def activate_job():  # activate these items 
-    initJokes()
-    initUsers()
-    initPlayers()
+# @app.before_first_request
+# def activate_job():  # activate these items 
+#     initJokes()
+#     initUsers()
+#     initPlayers()
 
 # this runs the application on the development server
 if __name__ == "__main__":
