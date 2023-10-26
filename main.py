@@ -5,9 +5,6 @@ from flask import render_template  # import render_template from "public" flask 
 
 # import "packages" from "this" project
 from __init__ import app,db  # Definitions initialization
-from model.jokes import initJokes
-from model.users import initUsers
-from model.players import initPlayers
 
 
 # setup APIs
@@ -43,12 +40,6 @@ def index():
 @app.route('/table/')  # connects /stub/ URL to stub() function
 def table():
     return render_template("table.html")
-
-# @app.before_first_request
-# def activate_job():  # activate these items 
-#     initJokes()
-#     initUsers()
-#     initPlayers()
 
 # this runs the application on the development server
 if __name__ == "__main__":
