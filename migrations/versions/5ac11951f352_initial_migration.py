@@ -8,6 +8,7 @@ Create Date: 2023-10-26 04:42:24.337737
 from alembic import op
 import sqlalchemy as sa
 from datetime import date
+from werkzeug.security import generate_password_hash
 
 
 # revision identifiers, used by Alembic.
@@ -50,22 +51,22 @@ def upgrade():
         {'id': 1,
         '_name': "Azeem Khan",
         '_uid': "azeemK",
-        '_password': "123qwerty",
+        '_password': generate_password_hash("123qwerty", "pbkdf2:sha256", salt_length=10),
         "_tokens": 45},
         {'id': 2,
         '_name': "Ahad Biabani",
         '_uid': "ahadB",
-        '_password': "123qwerty",
+        '_password': generate_password_hash("123qwerty", "pbkdf2:sha256", salt_length=10),
         "_tokens": 41},
         {'id': 3,
         '_name': "Akshat Parikh",
         '_uid': "akshatP",
-        '_password': "123qwerty",
+        '_password': generate_password_hash("123qwerty", "pbkdf2:sha256", salt_length=10),
         "_tokens": 40},
         {'id': 4,
         '_name': "Josh Williams",
         '_uid': "joshW",
-        '_password': "123qwerty",
+        '_password': generate_password_hash("123qwerty", "pbkdf2:sha256", salt_length=10),
         "_tokens": 38},
     ]
     )
@@ -74,22 +75,22 @@ def upgrade():
         {'id': 1,
         '_name': "Thomas Edison",
         '_uid': "toby",
-        '_password': "123toby",
+        '_password': generate_password_hash("123toby", "pbkdf2:sha256", salt_length=10),
         "_dob": date(1847, 2, 11)},
         {'id': 2,
         '_name': "Nicholas Tesla",
         '_uid': "niko",
-        '_password': "123niko",
+        '_password': generate_password_hash("123niko", "pbkdf2:sha256", salt_length=10),
         "_dob": date(1856, 7, 10)},
         {'id': 3,
         '_name': "Alexander Graham Bell",
         '_uid': "lex",
-        '_password': "123qwerty",
+        '_password': generate_password_hash("123qwerty", "pbkdf2:sha256", salt_length=10),
         "_dob": date.today()},
         {'id': 4,
         '_name': "Grace Hopper",
         '_uid': "hop",
-        '_password': "123hop",
+        '_password': generate_password_hash("123hop", "pbkdf2:sha256", salt_length=10),
         "_dob": date(1906, 12, 9)},
     ]
     )
