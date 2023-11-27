@@ -8,7 +8,6 @@ def token_required(f):
     @wraps(f)
     def decorated(*args, **kwargs):
         token = request.cookies.get("jwt")
-        print(token)
         if not token:
             return {
                 "message": "Authentication Token is missing!",
@@ -17,7 +16,6 @@ def token_required(f):
             }, 401
         try:
             data=jwt.decode(token, current_app.config["SECRET_KEY"], algorithms=["HS256"])
-            print(data["_uid"])
             current_user=User.query.filter_by(_uid=data["_uid"]).first()
             if current_user is None:
                 return {
