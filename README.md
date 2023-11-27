@@ -27,6 +27,12 @@ pip install -r requirements.txt
 
 - Run from Terminal without VSCode
 
+  - Migrate database and init data
+  
+  ```bash
+    ./migrate.sh init
+    ```
+
   - Run python from command line and check server
 
     ```bash
