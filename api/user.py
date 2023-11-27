@@ -80,7 +80,6 @@ class UserAPI:
                 
                 ''' Find user '''
                 user = User.query.filter_by(_uid=uid).first()
-                print(user._uid,user._password)
                 if user is None or not user.is_password(password):
                     return {'message': f"Invalid user id or password"}, 400
                 if user:
