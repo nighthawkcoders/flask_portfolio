@@ -104,10 +104,10 @@ class UserAPI:
                             "message": str(e)
                         }, 500
                 return {
-                    "message": "Error fetching auth token!, invalid email or password",
+                    "message": "Error fetching auth token!",
                     "data": None,
                     "error": "Unauthorized"
-                },
+                }, 404
             except Exception as e:
                 return {
                         "message": "Something went wrong!",
