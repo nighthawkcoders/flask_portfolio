@@ -1,10 +1,10 @@
 import threading
 
 # import "packages" from flask
-from flask import render_template  # import render_template from "public" flask libraries
+from flask import render_template,request  # import render_template from "public" flask libraries
 
 # import "packages" from "this" project
-from __init__ import app,db  # Definitions initialization
+from __init__ import app,db,cors  # Definitions initialization
 
 
 # setup APIs
@@ -41,9 +41,14 @@ def index():
 def table():
     return render_template("table.html")
 
+@app.before_request
+def before_request():
+    # Check if the request came from a specific origin
+    allowed_origin = request.headers.get('Origin')
+    if allowed_origin in ['http://localhost:4100', 'https://nighthawkcoders.github.io']:
+        cors._origins = allowed_origin
+        
 # this runs the application on the development server
 if __name__ == "__main__":
     # change name for testing
-    from flask_cors import CORS
-    cors = CORS(app, resources={r"/api/*": {"origins": "http://localhost:4100"}}, supports_credentials=True)
     app.run(debug=True, host="0.0.0.0", port="8086")
