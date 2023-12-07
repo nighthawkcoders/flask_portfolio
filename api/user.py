@@ -94,7 +94,9 @@ class UserAPI:
                                 max_age=3600,
                                 secure=True,
                                 httponly=True,
-                                path='/'
+                                path='/',
+                                samesite='None'  # This is the key part for cross-site requests
+
                                 # domain="frontend.com"
                                 )
                         return resp
