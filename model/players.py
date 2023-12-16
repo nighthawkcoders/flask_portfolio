@@ -59,8 +59,8 @@ class Player(db.Model):
     # update password, this is conventional setter
     def set_password(self, password):
         """Create a hashed password."""
-        self._password = generate_password_hash(password, method='sha256')
-
+        self._password = generate_password_hash(password, "pbkdf2:sha256", salt_length=10)
+        
     # check password parameter versus stored/encrypted password
     def is_password(self, password):
         """Check against hashed password."""
@@ -144,7 +144,8 @@ def initPlayers():
             Player(name='Azeem Khan', uid='azeemK', tokens=45),
             Player(name='Ahad Biabani', uid='ahadB', tokens=41),
             Player(name='Akshat Parikh', uid='akshatP', tokens=40),
-            Player(name='Josh Williams', uid='joshW', tokens=38)
+            Player(name='Josh Williams', uid='joshW', tokens=38),
+            Player(name='John Mortensen', uid='johnM', tokens=35)
         ]
 
         """Builds sample user/note(s) data"""
