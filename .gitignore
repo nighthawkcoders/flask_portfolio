@@ -15,4 +15,4 @@ venv.bak/
 # instance data, databases
 volumes/sqlite.db
 instance/volumes/sqlite.db
-
+migrations/

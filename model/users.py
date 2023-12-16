@@ -78,7 +78,8 @@ class User(db.Model):
     _uid = db.Column(db.String(255), unique=True, nullable=False)
     _password = db.Column(db.String(255), unique=False, nullable=False)
     _dob = db.Column(db.Date)
-
+    _xyz = db.Column(db.Date)
+    
     # Defines a relationship between User record and Notes table, one-to-many (one user to many notes)
     posts = db.relationship("Post", cascade='all, delete', backref='users', lazy=True)
 
@@ -88,6 +89,7 @@ class User(db.Model):
         self._uid = uid
         self.set_password(password)
         self._dob = dob
+        self._xyz = date.today()
 
     # a name getter method, extracts name from object
     @property

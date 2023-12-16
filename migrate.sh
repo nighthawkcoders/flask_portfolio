@@ -1,48 +1,58 @@
 #!/bin/bash
 
+# Set environment variables
+export FLASK_APP=main
+export PYTHONPATH=.:$PYTHONPATH
+
 # Check if sqlite3 is installed
-if ! command -v sqlite3 &> /dev/null
-then
+if ! command -v sqlite3 &> /dev/null; then
     echo "Error: sqlite3 is not installed. Please install it before running this script."
     exit 1
 fi
 
 # Check if python3 is installed
-if ! command -v python3 &> /dev/null
-then
+if ! command -v python3 &> /dev/null; then
     echo "Error: python3 is not installed. Please install it before running this script."
     exit 1
 fi
 
 # Check if Flask is installed
-if ! python3 -m flask --version &> /dev/null
-then
+if ! python3 -m flask --version &> /dev/null; then
     echo "Error: Flask is not installed. Please install it before running this script."
     exit 1
 fi
 
-# Backup SQLite database
-sqlite3 instance/volumes/sqlite.db ".backup instance/volumes/sqlite-backup-1.db"
-
-# Set environment variables
-export FLASK_APP=main
-export PYTHONPATH=.:$PYTHONPATH
-
-# Check arguments and perform migrations
-if [ "$1" == "" ]; then
-    python3 -m flask db migrate
-elif [ "$1" != "init" ]; then
-    echo 'Not a valid argument:
-    Run "./migrate.sh init" the first time to build using an existing migration script
-    Run "./migrate.sh" other times when the DB schema is changed'
-    exit 127
+# Check if the migration directory exists
+if [ ! -d "migrations" ]; then
+    echo "Initializing migration for the first time..."
+    python3 -m flask db init
 fi
 
-# Perform database upgrade
-python3 -m flask db upgrade
+# Check if sqlite.db exists
+if [ ! -e "instance/volumes/sqlite.db" ] && [ -e "instance/volumes/sqlite-backup-1.db" ]; then
+    echo "No sqlite.db found, using sqlite-backup-1.db to generate the file."
+    
+    # Copy backup file to primary (sqlite.db)
+    cp "instance/volumes/sqlite-backup-1.db" "instance/volumes/sqlite.db"
 
-# Run a custom command to generate data (replace 'generate_data' with your actual command)
-# ... (existing script logic)
+    # Extract the new Alembic version from the backup database
+    backup_version=$(sqlite3 instance/volumes/sqlite.db "SELECT version_num FROM alembic_version;")
+    echo "Version ${backup_version} detected"
+
+    python3 -m flask db stamp "${backup_version}"
+
+elif [ -e "instance/volumes/sqlite.db" ]; then
+    # Create a timestamp for the backup file
+    timestamp=$(date "+%Y%m%d%H%M%S")
+    backup_file="instance/volumes/sqlite-backup-${timestamp}.db"
+
+    # Backup SQLite database
+    sqlite3 instance/volumes/sqlite.db ".backup ${backup_file}"
+fi
+
+
+# Perform database migrations
+python3 -m flask db migrate
 
 # Perform database upgrade
 python3 -m flask db upgrade
