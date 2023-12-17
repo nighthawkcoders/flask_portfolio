@@ -28,7 +28,8 @@ if [ ! -d "migrations" ]; then
     python3 -m flask db init
 fi
 
-# Check if sqlite.db exists
+# Check if sqlite.db does not exists and there is a sqlite-backup.db file
+# . restore from backup before migration
 if [ ! -e "instance/volumes/sqlite.db" ] && [ -e "instance/volumes/sqlite-backup.db" ]; then
     echo "No sqlite.db found, using sqlite-backup.db to generate the file."
     
@@ -41,6 +42,8 @@ if [ ! -e "instance/volumes/sqlite.db" ] && [ -e "instance/volumes/sqlite-backup
 
     python3 -m flask db stamp "${backup_version}"
 
+# Check if sqlite.db exists
+# . backup before migration
 elif [ -e "instance/volumes/sqlite.db" ]; then
     # Create a timestamp for the backup file
     timestamp=$(date "+%Y%m%d%H%M%S")
