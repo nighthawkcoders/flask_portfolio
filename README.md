@@ -27,13 +27,13 @@ pip install -r requirements.txt
 
 - Run from Terminal without VSCode
 
-  - Migrate database and init data
+  - Setup database and init data
   
   ```bash
-    ./migrate.sh init
+    ./migrate.sh
     ```
 
-  - Run python from command line and check server
+  - Run python server from command line without VSCode
 
     ```bash
     python main.py
@@ -49,87 +49,16 @@ pip install -r requirements.txt
     code .
     ```
 
-    Select main.py and play
-
-## Alternate way, Nix way to get started
-
-> Quick steps with MacOS, WSL Ubuntu, or Ubuntu; this uses Nix for programmatic way to build tools and dependencies.  This is only recommended if you are having problems with you desktop MacOS, WSL Ubuntu, or Ubuntu.
-
-- Open a Terminal, install nix which requires admin password:
-
-```bash
-sh <(curl -L https://nixos.org/nix/install)
-```
-
-- ***Restart Terminal***
-
-- Install Python Package helper
-
-```bash
-nix-env -if https://github.com/DavHau/mach-nix/tarball/3.5.0 -A mach-nix
-```
-
-- Open a Terminal, cd to project area
-
-```bash
-mkdir ~/vscode; cd ~/vscode
-
-git clone https://github.com/nighthawkcoders/flask_portfolio.git
-
-cd flask_portfolio
-```
-
-- Build nix packages from requirements.txt
-
-```bash
-mach-nix env ./env -r requirements.txt
-```
-
-- End of nix shell setup, exit shell
-
-```
-exit
-```
-
-### Run Server or run VSCode
-
-- Run nix shell (virtual environment)
-
-```bash
-nix-shell ./env
-```
-
-- Run from Terminal without VSCode
-
-  - Run python from command line and check server
-
-    ```bash
-    python main.py
-    ```
-
-- Prepare VSCode and run
-
-  - From Terminal run VSCode
-
-    ```bash
-    code .
-    ```
-
-  - In VSCode open Terminal, verify Nix python
-
-    ```bash
-    which python
-    ```
-
   - Open Setting: Ctl-Shift P or Cmd-Shift
     - Search Python: Select Interpreter
-    - Match interpreter to `which output` above
+    - Match interpreter to `which python` from terminal
 
+  - Select main.py and Play button
   - Try Play button and try to Debug
 
 ## Idea
 
-> The purpose of project is to serve APIs.  It is the backend piece of a Full-Stack project.  Review API folder for endpoints.
+> The purpose of project is to serve APIs.  It is the backend piece of a Full-Stack project.  Review `api` folder in project for endpoints.
 
 ### Visual thoughts
 
@@ -171,7 +100,9 @@ templates: This directory contains files and subdirectories used to support the 
 
 > Updates for 2023 to 2024 school year.
 
-- Update README with File Descriptions
+- Update README with File Descriptions (anatomy)
+- Add JWT and add security features to data
+- Add migrate.sh to support sqlite schema and data upgrade
 
 #### January 2023
 
