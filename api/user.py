@@ -14,8 +14,7 @@ api = Api(user_api)
 
 class UserAPI:        
     class _CRUD(Resource):  # User API operation for Create, Read.  THe Update, Delete methods need to be implemeented
-        @token_required
-        def post(self, current_user): # Create method
+        def post(self): # Create method
             ''' Read data for json body '''
             body = request.get_json()
             
@@ -57,7 +56,7 @@ class UserAPI:
             return {'message': f'Processed {name}, either a format error or User ID {uid} is duplicate'}, 400
 
         @token_required
-        def get(self, current_user): # Read Method
+        def get(self, _): # Read Method, the _ indicates current_user is not used
             users = User.query.all()    # read/extract all users from database
             json_ready = [user.read() for user in users]  # prepare output in json
             return jsonify(json_ready)  # jsonify creates Flask response object, more specific to APIs than json.dumps
