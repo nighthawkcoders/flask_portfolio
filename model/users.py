@@ -195,7 +195,7 @@ class User(db.Model):
             "dob": self.dob,
             "age": self.age,
             "hashmap": self._hashmap,
-            "posts": [post.read() for post in self.posts]
+            # "posts": [post.read() for post in self.posts]
         }
 
     # CRUD update: updates user name, password, phone
