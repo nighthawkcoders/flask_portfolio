@@ -86,13 +86,13 @@ class UserAPI:
                 ''' Get Data '''
                 uid = body.get('uid')
                 if uid is None:
-                    return {'message': f'User ID is missing'}, 400
+                    return {'message': f'User ID is missing'}, 401
                 password = body.get('password')
                 
                 ''' Find user '''
                 user = User.query.filter_by(_uid=uid).first()
                 if user is None or not user.is_password(password):
-                    return {'message': f"Invalid user id or password"}, 400
+                    return {'message': f"Invalid user id or password"}, 401
                 if user:
                     try:
                         token = jwt.encode(
