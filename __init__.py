@@ -12,18 +12,23 @@ These object can be used throughout project.
 
 # Setup of key Flask object (app)
 app = Flask(__name__)
-cors = CORS(app, supports_credentials=True, origins=['http://localhost:4100', 'http://127.0.0.1:4100', 'https://nighthawkcoders.github.io'])
+# Allowed servers for cross-origin resource sharing (CORS)
+cors = CORS(app, supports_credentials=True, origins=['http://localhost:4100', 'http://127.0.0.1:4100', 'http://127.0.0.1:8086', 'https://nighthawkcoders.github.io'])
+
+# Secret key for session handling and CSRF protection
+SECRET_KEY = os.environ.get('SECRET_KEY') or 'SECRET_KEY'
+app.config['SECRET_KEY'] = SECRET_KEY
 
 # Setup SQLAlchemy object and properties for the database (db)
+# Local SQLite database within the instance folder
 dbURI = 'sqlite:///volumes/sqlite.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SQLALCHEMY_DATABASE_URI'] = dbURI
-SECRET_KEY = os.environ.get('SECRET_KEY') or 'SECRET_KEY'
-app.config['SECRET_KEY'] = SECRET_KEY
 db = SQLAlchemy()
 Migrate(app, db)
 
-# Images storage
+# Images storage settings and location
 app.config['MAX_CONTENT_LENGTH'] = 5 * 1024 * 1024  # maximum size of uploaded content
 app.config['UPLOAD_EXTENSIONS'] = ['.jpg', '.png', '.gif']  # supported file types
-app.config['UPLOAD_FOLDER'] = 'volumes/uploads/'  # location of user uploaded content
+app.config['UPLOAD_FOLDER'] = os.path.join(app.instance_path, 'uploads')
+os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
