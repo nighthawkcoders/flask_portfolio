@@ -1,15 +1,27 @@
-# Flask Portfolio Starter
+#  README
 
-Use this project to create a Flask Servr.
+> This is a project to support AP Computer Science Principles (CSP) as well as a UC articulated Data Structures course. It was crafted iteratively starting in 2020 to the present time.  The primary purposes are ...
+
+- Used as starter code for student projects for AP CSP and Data Structures curriculum.
+- Used to teach key principles in learning the Python Flask programming environment.
+- Used as a backend server to service API's in a frontend-to-backend pipeline. Review the `api` folder in the project for endpoints.
+- Contains a minimal frontend, mostly to support Administrative functionality in the `templates` folder.
+- Contains SQL database code in the `model` folder to introduce concepts of persistent data and storage.
+- Contains capabilities for deployment and has been used with AWS, Ubuntu, Docker, docker-compose, and Nginx to deploy a WSGI server.
+- Contains APIs to support user authentication and cookies, a great deal of which was contributed by Aiden Wu a former student in CSP.  
+
+## Flask Portfolio Starter
+
+Use this project to create a Flask Server.
 
 Runtime link: <https://flask.nighthawkcodingsociety.com/>
 GitHub link: https://github.com/nighthawkcoders/flask_portfolio
 
-## Conventional way to get started
+## The conventional way to get started
 
 > Quick steps that can be used with MacOS, WSL Ubuntu, or Ubuntu; this uses Python 3.9 or later as a prerequisite.
 
-- Open a Terminal, clone project and cd to project area
+- Open a Terminal, clone a project and cd to the project area
 
 ```bash
 mkdir ~/vscode; cd ~/vscode
@@ -33,7 +45,7 @@ pip install -r requirements.txt
     ./migrate.sh
     ```
 
-  - Run python server from command line without VSCode
+  - Run Python server from the command line without VSCode
 
     ```bash
     python main.py
@@ -54,11 +66,9 @@ pip install -r requirements.txt
     - Match interpreter to `which python` from terminal
 
   - Select main.py and Play button
-  - Try Play button and try to Debug
+  - Try the Play button and try to Debug
 
 ## Idea
-
-> The purpose of project is to serve APIs.  It is the backend piece of a Full-Stack project.  Review `api` folder in project for endpoints.
 
 ### Visual thoughts
 
@@ -66,15 +76,15 @@ pip install -r requirements.txt
 
 - Organize with Bootstrap menu
 - Add some color and fun through VANTA Visuals (birds, halo, solar, net)
-- Show some practical and fun links (hrefs) like Twitter, Git, Youtube
+- Show some practical and fun links (HREFs) like Twitter, Git, Youtube
 - Build a Sample Page (Table)
-- Show project specific links (hrefs) per page
+- Show the project-specific links (HREFs) per page
 
 ### Files and Directories in this Project
 
 These are some of the key files and directories in this project
 
-README.md: This file contains instructions for setting up the necessary tools and cloning the project. A README file is a standard component of all properly set up GitHub projects.
+README.md: This file contains instructions for setting up the necessary tools and cloning the project. A README file is a standard component of all properly set-up GitHub projects.
 
 requirements.txt: This file lists the dependencies required to turn this Python project into a Flask/Python project. It may also include other backend dependencies, such as dependencies for working with a database.
 
@@ -101,7 +111,7 @@ templates: This directory contains files and subdirectories used to support the 
 > Updates for 2023 to 2024 school year.
 
 - Update README with File Descriptions (anatomy)
-- Add JWT and add security features to data
+- Add JWT and add security features using a SQLite user database
 - Add migrate.sh to support sqlite schema and data upgrade
 
 #### January 2023
@@ -112,13 +122,13 @@ templates: This directory contains files and subdirectories used to support the 
 
 > Basic UI elements were implemented showing server side Flask with Jinja 2 capabilities.
 
-- Project entry point is main.py, this enables Flask Web App and provides capability to renders templates (HTML files)
-- The main.py is the  Web Server Gateway Interface, essentially it contains a HTTP route and HTML file relationship.  The Python code constructs WSGI relationships for index, kangaroos, walruses, and hawkers.
-- The project structure contains many directories and files.  The template directory (containing html files) and static directory (containing js files) are common standards for HTML coding.  Static files can be pictures and videos, in this project they are mostly javascript backgrounds.
+- The Project entry point is main.py, this enables the Flask Web App and provides the capability to render templates (HTML files)
+- The main.py is the  Web Server Gateway Interface, essentially it contains an HTTP route and HTML file relationship.  The Python code constructs WSGI relationships for index, kangaroos, walruses, and hawkers.
+- The project structure contains many directories and files.  The template directory (containing HTML files) and static directory (containing JS files) are common standards for HTML coding.  Static files can be pictures and videos, in this project they are mostly javascript backgrounds.
 - WSGI templates: index.html, kangaroos.html, ... are aligned with routes in main.py.
-- Other templates support WSGI templates.  The base.html template contains common Head, Style, Body, Script definitions.  WSGI templates often "include" or "extend" these templates.  This is a way to reuse code.
-- The VANTA javascript statics (backgrounds) are shown and defaulted in base.html (birds), but are block replaced as needed in other templates (solar, net, ...)
+- Other templates support WSGI templates.  The base.html template contains common Head, Style, Body, and Script definitions.  WSGI templates often "include" or "extend" these templates.  This is a way to reuse code.
+- The VANTA javascript statics (backgrounds) are shown and defaulted in base.html (birds) but are block-replaced as needed in other templates (solar, net, ...)
 - The Bootstrap Navbar code is in navbar.html. The base.html code includes navbar.html.  The WSGI html files extend base.html files.  This is a process of management and correlation to optimize code management.  For instance, if the menu changes discovery of navbar.html is easy, one change reflects on all WSGI html files.
 - Jinja2 variables usage is to isolate data and allow redefinitions of attributes in templates.  Observe "{% set variable = %}" syntax for definition and "{{ variable }}" for reference.
-- The base.html uses combination of Bootstrap grid styling and custom CSS styling.  Grid styling in observe with the "<Col-3>" markers.  A Bootstrap Grid has a width of 12, thus four "Col-3" markers could fit on a Grid row.
+- The base.html uses a combination of Bootstrap grid styling and custom CSS styling.  Grid styling in observation with the "<Col-3>" markers.  A Bootstrap Grid has a width of 12, thus four "Col-3" markers could fit on a Grid row.
 - A key purpose of this project is to embed links to other content.  The "href=" definition embeds hyperlinks into the rendered HTML.  The base.html file shows usage of "href={{github}}", the "{{github}}" is a Jinja2 variable.  Jinja2 variables are pre-processed by Python, a variable swap with value, before being sent to the browser.
