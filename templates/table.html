@@ -1,14 +1,15 @@
 <!-- Extending the predefined project layout -->
 {% extends "layouts/base.html" %}
 
-<!- This variable sets name of browser tab  -->
-{% set project = "Stubby" %}
-
 <!- This is a replacement block for Body in base.html -->
 {% block body %}
     <!- Try building a new body here, bootstrap is a wise choice ->
-    <div class="px-5 py-5 mx-auto">
-        <table id="demo" class="table">
+<div class="container py-4">
+    <header class="pb-3 mb-4 border-bottom border-primary text-light">
+        <span class="fs-4">Cars Table</span>
+    </header>
+    <div class="row mx-3 mb-4 bg-primary rounded-3 align-items-md-stretch">
+        <table id="demo" class="table mx-3" text-light>
             <thead>
                 <tr>
                     <th>Make</th>
@@ -102,8 +103,5 @@
             $("#demo").DataTable();
         </script>
     </div>
-{% endblock %}
-
-<!- This is turning off birds background from base.html -->
-{% block background %}
+</div>
 {% endblock %}

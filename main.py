@@ -19,21 +19,25 @@ from api.titanic import titanic_api
 from model.users import initUsers
 from model.players import initPlayers
 from model.titanicML import initTitanic
-
-# setup App pages
-from projects.projects import app_projects # Blueprint directory import projects definition
+# setup blueprints for server only
+from server.algorithm.algorithm import app_algorithm 
+from server.recipes.recipe import recipe_bp 
+from server.projects.projects import app_projects # Blueprint directory import projects definition
 
 
 # Initialize the SQLAlchemy object to work with the Flask app instance
 db.init_app(app)
 
-# register URIs
-app.register_blueprint(joke_api) # register api routes
-app.register_blueprint(covid_api) # register api routes
-app.register_blueprint(user_api) # register api routes
+# register URIs fro api endpoints
+app.register_blueprint(joke_api) 
+app.register_blueprint(covid_api) 
+app.register_blueprint(user_api) 
 app.register_blueprint(player_api)
-app.register_blueprint(titanic_api) # register api routes
-app.register_blueprint(app_projects) # register app pages
+app.register_blueprint(titanic_api)
+# regster URIs for server app pages
+app.register_blueprint(app_algorithm) 
+app.register_blueprint(recipe_bp) 
+app.register_blueprint(app_projects) 
 
 @app.errorhandler(404)  # catch for URL not found
 def page_not_found(e):

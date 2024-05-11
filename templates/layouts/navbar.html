@@ -11,7 +11,17 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
         <div class="navbar-nav">
             <!-- url_for is a Jinja2 pre-processor that finds route from function name (def) -->
             <a class="nav-link" href={{ url_for('index') }}>Home</a>
-            <a class="nav-link" href={{ url_for('table') }}>Table</a>
+            <div class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                   Samples 
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                    <li><a class="dropdown-item" href={{ url_for('table') }}>Cars Table</a></li>
+                    <li><a class="dropdown-item" href={{ url_for('algorithm.fibonacci') }}>Fibonacci</a></li>
+                    <li><a class="dropdown-item" href={{ url_for('algorithm.palindrome') }}>Palindrome</a></li>
+                    <li><a class="dropdown-item" href={{ url_for('recipe.viewer') }}>Recipes</a></li>
+                </ul>
+            </div>
             <div class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Projects

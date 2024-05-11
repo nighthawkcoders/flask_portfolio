@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+{% extends "layouts/base.html" %}
+
+{% block body %}
+    <div class="container py-4">
+        <header class="pb-3 mb-4 border-bottom border-primary text-light">
+            <img src="{{ url_for('algorithm.static', filename='palindrome.jpeg') }}" height="60px" class="d-inline-block align-center" alt="">
+            <span class="fs-4">Palindrome Algorithm</span>
+        </header>
+        <div class="row mx-3 mb-4 bg-primary rounded-3 align-items-md-stretch">
+            <h3>Enter a string:</h3>
+            <form id="paliForm" action="{{ url_for('algorithm.palindrome') }}" method="POST" >
+                <label for="candidate"></label>
+                <input name="candidate" id="candidate" type="text" placeholder="{{palindrome.candidate}}">
+                <button>Test!</button>
+            </form>
+
+            <h3></h3>
+            <!-- Number, List table -->
+            <table class="table mx-3">
+                <thead>
+                <tr>
+                    <th scope="col">Tests</th>
+                    <th scope="col">Result</th>
+                </tr>
+                </thead>
+                <tbody class="text-light">
+                <tr>
+                    <td>{{palindrome.tests}}</td>
+                    <td>{{palindrome.isPalindrome}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="row mx-3 mb-4 bg-primary rounded-3 align-items-md-stretch">
+            <!-- Series -->
+            <table class="table mx-3">
+                <thead>
+                <tr>
+                    <th scope="col">The Palindrome testing series for: "{{palindrome.candidate}}".</th>
+                </tr>
+                </thead>
+                <tbody class="text-light">
+                {% for test in palindrome.analysis %}
+                    <tr>
+                        <td>{Test#={{test.test}} Front={{test.front}} Back={{test.back}} Result={{test.result}}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+{% endblock %}
