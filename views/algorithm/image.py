@@ -39,7 +39,7 @@ def image_data(path=Path("static/"), images=None):  # path of static images is d
 
         # Hacks here for images https://www.tutorialspoint.com/python_pillow/index.htm
         # use the open img_object!!!
-        img_object = img_object.filter(ImageFilter.GaussianBlur)
+        # img_object = img_object.filter(ImageFilter.GaussianBlur)
 
         # Conversion of original Image to Base64, a string format that serves HTML nicely
         image['base64'] = image_formatter(img_object, image['format'])
