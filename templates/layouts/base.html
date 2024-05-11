@@ -31,9 +31,17 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
      <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
       
     <style>
-    .navbar {
-        position: static;
-        z-index: 9999;
+        .navbar {
+            position: static;
+            z-index: 9999;
+        }
+        #xbody {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
         }
     {% block style %}
     {% endblock %}
@@ -44,6 +52,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 </head>
 
 <body>
+    <div id="xbody"></div>
     {% include "layouts/navbar.html" %}
 
     {% block body %}
@@ -56,7 +65,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
     <script src="{{ url_for('static', filename='js/vanta.birds.min.js') }}"></script>
     <script>
         VANTA.BIRDS({
-            el: "body",
+            el: "#xbody",
             mouseControls: true,
             touchControls: true,
             gyroControls: false,
