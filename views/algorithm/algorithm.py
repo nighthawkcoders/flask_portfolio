@@ -1,6 +1,8 @@
+from pathlib import Path
 from flask import Blueprint, render_template, request
 from .fibonacci import Fibonacci
 from .palindrome import Palindrome
+from .image import image_data
 
 algorithm_views = Blueprint('algorithm', __name__,
                           url_prefix='/algorithm',
@@ -21,3 +23,8 @@ def palindrome():
     if request.form:
         return render_template("palindrome.html", palindrome=Palindrome(request.form.get("candidate")))
     return render_template("palindrome.html", palindrome=Palindrome("a toyota"))
+
+@algorithm_views.route('/rgb/')
+def rgb():
+    path = Path(algorithm_views.root_path) / "static"
+    return render_template('rgb.html', images=image_data(path))

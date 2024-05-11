@@ -18,7 +18,7 @@ def image_formatter(img, img_type):
 
 
 # color_data prepares a series of images for data analysis
-def image_data(path=Path("static/img/"), images=None):  # path of static images is defaulted
+def image_data(path=Path("static/"), images=None):  # path of static images is defaulted
     if images is None:  # color_dict is defined with defaults
         images = [
             {'source': "Peter Carolin", 'label': "Lassen Volcano", 'file': "lassen-volcano-256.jpg"},

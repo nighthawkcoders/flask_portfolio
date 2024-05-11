@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+{% extends "layouts/base.html" %}
+
+{% block body  %}
+    <script>
+    // Hack: add java script function to toggle image from original to gray and back (toggle)
+    //  document.getElementById("img<n>").src
+    //  document.getElementID("img_gray<n>").innerHTML
+    //  help: https://www.geeksforgeeks.org/how-to-change-the-src-attribute-of-an-img-element-in-javascript-jquery/
+    function imgToggle(ndx) {
+        // add button and rotate image from original to gray and back (toggle)
+        // document.getElementById(img). = base64;  //change img src to inner html on <p> tag
+        if (document.getElementById("btn" + ndx).value == "Gray Scale") {
+            document.getElementById("img" + ndx).src = document.getElementById("img_gray" + ndx).innerHTML;
+            document.getElementById("btn" + ndx).value = "Original";
+        } else {
+            document.getElementById("img" + ndx).src = document.getElementById("img_orig" + ndx).innerHTML;
+            document.getElementById("btn" + ndx).value = "Gray Scale";
+        }
+    }
+    </script>
+
+    <title>RGB starter</title>
+    <div class="container py-4">
+        <header class="pb-3 mb-4 border-bottom border-primary text-light">
+            <span class="fs-4">RGB values within an Image</span>
+        </header>
+
+        <div class="row mx-3 bg-primary rounded-3">
+            <table class="table text-light">
+                <thead>
+                <tr>
+                    <th>Meta Data</th>
+                    <th>Image</th>
+                    <th>Data</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for image in images %}
+                    <tr>
+                        <td>
+                            <div>{{image.label}}</div>
+                            <div>{{image.source}}</div>
+                            <div>{{image.file}}</div>
+                            <div>{{image.format}}</div>
+                            <div>{{image.size}}</div>
+                        </td>
+                        <td>
+                            <img class="img-responsive py-3" id=img{{loop.index}} alt="" width="256" height="Auto" src="{{image.base64}}" >
+                            <!-- Hack: create button (btn{{loop.index}} to  call java script function
+                               pass index to allow you to toggle images with hidden id's
+                               {{image.base64}}  original image
+                               {{image.base64_GRAY}}  gray scale image
+                            -->
+                            <input type="button" value="Gray Scale" id=btn{{loop.index}} onclick="imgToggle('{{loop.index}}')">
+                            <p hidden id="img_orig{{loop.index}}">{{image.base64}}</p>
+                            <p hidden id="img_gray{{loop.index}}">{{image.base64_GRAY}}</p>
+                        </td>
+                        <td>
+                            <div class="overflow-auto" style="height: 256px">
+                                <table class="table text-light">
+                                    <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>{{image.mode}}</th>
+                                        <th>Hex Code</th>
+                                        <th>Binary</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for row in image.data[:256 + 1] %}
+                                    <tr>
+                                        <td>{{loop.index}}</td>
+                                        <td>{{row}}</td>
+                                        <td>{{image.hex_array[loop.index - 1]}}</td>
+                                        <td>{{image.binary_array[loop.index - 1]}}
+                                    </tr>
+                                    {% if loop.index > 256 %}
+                                    <tr><td>...</td><td>truncated</td><td>...</td><td>...</td></tr>
+                                    {% endif %}
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+{% endblock %}
