@@ -65,50 +65,7 @@
         letter-spacing: 8px;
     }
 
-    /* navigation effect */
-    header nav {
-        float:right;
-        line-height:45px;
-        text-transform:lowercase;
-        font:normal 12px "B612 Mono",consolas,monospace;
-    }
-
-    /* navigation effect */
-    header nav a {
-        position:relative;
-        display:inline-block;
-        margin:0 5px;
-        line-height:100%;
-        padding:5px 4px 5px 0;
-        color:var(--text);
-    }
-
-    /* navigation effect */
-    header nav a::after {
-        content:"";
-        display:block;
-        position:absolute;
-        width:3px;
-        height:3px;
-        bottom:6px;
-        right:0px;
-        transition:
-                width 0.5s ease-in-out,
-                padding 0.5s ease-in-out,
-                bottom 0.3s ease-in-out 0.5s;
-        background:var(--accent);
-        border-radius:3px;
-    }
-
-    /* navigation effect */
-    header nav a:hover {color:var(--accent-text);}
-
-    /* navigation effect */
-    header nav a:hover::after {
-        width:100%;
-        bottom:0px;
-        padding:0 2px 0 0;
-    }
+    
 
     /* language toggle */
     .toggle {
