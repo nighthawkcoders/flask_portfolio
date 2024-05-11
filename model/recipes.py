@@ -1,4 +1,8 @@
-from .recipedata import recipe_data
+import sys
+from os import path
+sys.path.append(path.dirname(path.abspath(__file__)))
+
+from recipedata import recipe_data
 
 class Recipes:
     def __init__(self):
@@ -31,9 +35,10 @@ if __name__ == '__main__':
 
     print("Filters")
     for filter_tag in recipes_object.filters:
-        print(filter_tag)
-
-    print("Recipe data")
-    for recipe in recipes_object.list:
-        if "MONSTER" in recipe['keys']:     # test any key
-            print(recipe)
+        print(filter_tag['data'])
+        for key in filter_tag['data']:
+            print(key)
+            for recipe in recipes_object.list:
+                if key in recipe['keys']:
+                    print(recipe)
+            print()
