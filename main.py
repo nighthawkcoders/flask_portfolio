@@ -20,9 +20,9 @@ from model.users import initUsers
 from model.players import initPlayers
 from model.titanicML import initTitanic
 # setup blueprints for server only
-from server.algorithm.algorithm import app_algorithm 
-from server.recipes.recipe import recipe_bp 
-from server.projects.projects import app_projects # Blueprint directory import projects definition
+from views.algorithm.algorithm import app_algorithm 
+from views.recipes.recipe import recipe_bp 
+from views.projects.projects import app_projects # Blueprint directory import projects definition
 
 
 # Initialize the SQLAlchemy object to work with the Flask app instance
