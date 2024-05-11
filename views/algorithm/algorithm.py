@@ -24,7 +24,7 @@ def palindrome():
         return render_template("palindrome.html", palindrome=Palindrome(request.form.get("candidate")))
     return render_template("palindrome.html", palindrome=Palindrome("a toyota"))
 
-@algorithm_views.route('/rgb/')
-def rgb():
+@algorithm_views.route('/image/')
+def image():
     path = Path(algorithm_views.root_path) / "static"
-    return render_template('rgb.html', images=image_data(path))
+    return render_template('image.html', images=image_data(path))
