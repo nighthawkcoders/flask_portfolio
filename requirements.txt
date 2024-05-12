@@ -8,4 +8,8 @@ Flask_Migrate
 Flask_Restful
 Flask_Cors
 PyJWT
+pandas
+numpy
+matplotlib
+seaborn
 scikit-learn
