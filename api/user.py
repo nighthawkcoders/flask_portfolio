@@ -101,7 +101,8 @@ class UserAPI:
                             algorithm="HS256"
                         )
                         resp = Response("Authentication for %s successful" % (user._uid))
-                        resp.set_cookie("jwt", token,
+                        resp.set_cookie(current_app.config["JWT_TOKEN_NAME"], 
+                                token,
                                 max_age=3600,
                                 secure=True,
                                 httponly=True,
