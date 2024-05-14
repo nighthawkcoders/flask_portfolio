@@ -1,0 +1,40 @@
+{% extends "layouts/base.html" %}
+{% set project = "Login" %}
+
+{% block body %}
+    <!-- Start of body content specific to page -->
+    <div class="px-5 py-5 mx-auto">
+        <div class="container py-4">
+            <header class="pb-3 mb-4 border-bottom border-primary text-dark">
+                <span class="fs-4">Login Page</span>
+            </header>
+        </div>
+    
+        <div class="container py-4 text-light bg-success">
+    
+            <div class="container bg-secondary py-4">
+                <div class="p-5 mb-4 bg-light text-dark rounded-3">
+                    <form name="f" action="{{ url_for('login') }}" method="POST">
+                        <table>
+                            {% if error %}
+                                <tr class="alert alert-error">
+                                    Invalid username and password.
+                                </tr>
+                            {% endif %}
+                            {% if logout %}
+                                <tr class="alert alert-success">
+                                    You have been logged out.
+                                </tr>
+                            {% endif %}
+                            <tr><th><label for="username">User ID</label></th></tr>
+                            <tr><td><input id='username' name="username" size="20" required></td></tr>
+                            <tr><th><label for="password">Password</label></th></tr>
+                            <tr><td><input type="password" id="password" name="password" size="20" required></td></tr>
+                            <tr><th><input type="submit" value="Submit"></th></tr>
+                        </table>
+                    </form>
+                </div>
+
+        </div>
+    </div>
+{% endblock %}

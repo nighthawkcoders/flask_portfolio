@@ -1,39 +1,145 @@
 <!-- Navigation Bar from bootstrap
 This HTML is setup as a fragment allowing it to be "included" by other HTML files via Jinja2
 -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <img src="{{ url_for('static', filename='assets/ncs_logo.png') }}" width="50" height="50" class="d-inline-block align-center" alt="">
-    <a class="navbar-brand" href="https://csp.nighthawkcodingsociety.com/">{{basename}}</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-            <!-- url_for is a Jinja2 pre-processor that finds route from function name (def) -->
-            <a class="nav-link" href={{ url_for('index') }}>Home</a>
-            <div class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                   Samples 
-                </a>
-                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                    <li><a class="dropdown-item" href={{ url_for('table') }}>Cars Table</a></li>
-                    <li><a class="dropdown-item" href={{ url_for('algorithm.fibonacci') }}>Fibonacci</a></li>
-                    <li><a class="dropdown-item" href={{ url_for('algorithm.palindrome') }}>Palindrome</a></li>
-                    <li><a class="dropdown-item" href={{ url_for('algorithm.image') }}>Image</a></li>
-                    <li><a class="dropdown-item" href={{ url_for('recipe.viewer') }}>Recipes</a></li>
-                </ul>
+    <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+        <div class="container-fluid">
+            <div class="btn-group">
+                <img src="{{ url_for('static', filename='assets/ncs_logo.png') }}" width="50" height="50" class="d-inline-block align-center" alt="">
+                <a class="navbar-brand" href="https://csp.nighthawkcodingsociety.com/">{{basename}}</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="navbar-nav">
+                    <!-- url_for is a Jinja2 pre-processor that finds route from function name (def) -->
+                    <a class="nav-link" href={{ url_for('index') }}>Home</a>
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                           Samples 
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                            <li><a class="dropdown-item" href={{ url_for('table') }}>Cars Table</a></li>
+                            <li><a class="dropdown-item" href={{ url_for('algorithm.fibonacci') }}>Fibonacci</a></li>
+                            <li><a class="dropdown-item" href={{ url_for('algorithm.palindrome') }}>Palindrome</a></li>
+                            <li><a class="dropdown-item" href={{ url_for('algorithm.image') }}>Image</a></li>
+                            <li><a class="dropdown-item" href={{ url_for('recipe.viewer') }}>Recipes</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Projects
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                            <li><a class="dropdown-item" href={{ url_for('projects.portfolio') }}>Portfolio</a></li>
+                            <li><a class="dropdown-item" href={{ url_for('projects.kangaroos') }}>Kangaroos</a></li>
+                            <li><a class="dropdown-item" href={{ url_for('projects.walruses') }}>Walruses</a></li>
+                            <li><a class="dropdown-item" href={{ url_for('projects.hawkers') }}>Hawkers</a></li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
-            <div class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Projects
-                </a>
-                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                    <li><a class="dropdown-item" href={{ url_for('projects.portfolio') }}>Portfolio</a></li>
-                    <li><a class="dropdown-item" href={{ url_for('projects.kangaroos') }}>Kangaroos</a></li>
-                    <li><a class="dropdown-item" href={{ url_for('projects.walruses') }}>Walruses</a></li>
-                    <li><a class="dropdown-item" href={{ url_for('projects.hawkers') }}>Hawkers</a></li>
-                </ul>
+
+            <div class="btn-group">
+                <!-- Search Box -->
+                <div class="px-3" style="height:30px;">
+                    <input id="search" type="search" placeholder="Search" aria-label="Search">
+                </div>
+                
+                {% if current_user.is_authenticated %}
+                    <div class="dropdown px-3">
+                        <span class="dropdown-toggle link-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            {{ current_user.name }}
+                        </span>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li>
+                                <div class="dropdown-item">
+                                    <p style="margin-bottom:2px"><strong>ROLES:</strong></p>
+                                    {% if 'ADMIN' in current_user.roles %}
+                                        <p style="font-size:0.75em;margin:1px">ADMIN</p>
+                                    {% endif %}
+                                    {% if 'USER' in current_user.roles %}
+                                        <p style="font-size:0.75em;margin:1px">USER</p>
+                                    {% endif %}
+                                    {% if 'TESTER' in current_user.roles %}
+                                        <p style="font-size:0.75em;margin:1px">TESTER</p>
+                                    {% endif %}
+                                </div>
+                            </li>
+                            <li><a class="dropdown-item active" href="{{ url_for('logout') }}">Logout</a></li>
+                        </ul>
+                    </div>
+                {% else %}
+                    <a href="{{ url_for('login') }}" class="px-3 link-dark">Login</a>
+                {% endif %}
+                
+
+                <!-- Dark mode action -->
+                <div class="form-check form-switch">
+                    <label class="custom-control-label" for="darkSwitch"></label>
+                    <input type="checkbox" onclick="darkFunction()" class="form-check-input link-dark" id="darkSwitch">
+                </div>
             </div>
+
+            <!-- Navigation bar JavaScript support -->
+            <script>
+                const search = document.getElementById('search');
+                const google = 'https://www.google.com/search?q=site%3A+';
+                const site = 'https://nighthawkcodingsociety.com';
+
+                function submitted(event) {
+                    if (event.key === 'Enter') {
+                        // calculations to determine new window size at 66% of existing
+                        const reduction = 0.66;  // reduce by 66%
+                        const w = Math.trunc(window.innerWidth*reduction);
+                        const h = Math.trunc(window.outerHeight*reduction);
+                        const l = Math.trunc(window.top.screenX + ((window.innerWidth - w)/2));
+                        const t = Math.trunc(window.top.screenY + ((window.outerHeight - h)/2));
+                        const left = "left=" + l;
+                        const top = "top=" + t;
+                        const width = "width=" + w;
+                        const height = "height=" + h;
+                        const location = left + ", " + top + ", " + width + ", " + height
+
+                        // setup and display window
+                        event.preventDefault();
+                        const url = google
+                            + site
+                            + '+'
+                            + search.value;
+                        const win = window.open(url, "CompSci A Search", location);
+                        win.focus();
+                    }
+                }
+                search.addEventListener('keypress', submitted);
+
+                // Dark Mode Control
+                // darkSwitch global element is set for convenience
+                const darkSwitch=document.getElementById("darkSwitch");
+                // establishes the initial state of darkSwitch on page load
+                if(darkSwitch) {
+                    // obtains the value of darkSwitch from localStorage
+                    const darkSwitchSelected =
+                        localStorage.getItem("darkSwitch") !== null &&
+                        localStorage.getItem("darkSwitch") === "dark";
+                    // sets the value of darkSwitch.checked to the global darkSwitch
+                    darkSwitch.checked=darkSwitchSelected;
+                    // if dark-mode, toggle the switch to dark-mode position
+                    if (darkSwitchSelected)
+                        document.body.classList.toggle("dark-mode");
+                }
+                // executes on each "dark mode" UI toggle
+                function darkFunction() {
+                    // toggles between off (standard CSS) and dark-mode (.dark-mode CSS)
+                    document.body.classList.toggle("dark-mode");
+                    // localStorage is used to manage darkSwitch status
+                    darkSwitch.checked
+                        ? localStorage.setItem("darkSwitch","dark")
+                        : localStorage.removeItem("darkSwitch");
+                }
+                // End Dark Mode Control
+
+            </script>
+
         </div>
-    </div>
-</nav>
+    </nav>

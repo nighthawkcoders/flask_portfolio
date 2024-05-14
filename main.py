@@ -1,9 +1,10 @@
 # imports from flask
-from flask import render_template  # import render_template from "public" flask libraries
+from flask import redirect, render_template, request, url_for  # import render_template from "public" flask libraries
+from flask_login import login_user, logout_user
 from flask.cli import AppGroup
 
 # import "objects" from "this" project
-from __init__ import app, db  # Flask app object and SQLAlchemy database db object 
+from __init__ import app, db, login_manager  # Key Flask objects 
 
 # API endpoints
 from api.covid import covid_api 
@@ -12,7 +13,7 @@ from api.user import user_api
 from api.player import player_api
 from api.titanic import titanic_api
 # database Initialization functions
-from model.users import initUsers 
+from model.users import User, initUsers 
 from model.players import initPlayers
 from model.titanicML import initTitanic
 # server only Views
@@ -34,6 +35,10 @@ app.register_blueprint(algorithm_views)
 app.register_blueprint(recipe_views) 
 app.register_blueprint(project_views) 
 
+@login_manager.user_loader
+def load_user(user_id):
+    return User.query.filter_by(_uid=user_id).first()
+
 @app.errorhandler(404)  # catch for URL not found
 def page_not_found(e):
     # note that we set the 404 status explicitly
@@ -46,6 +51,25 @@ def index():
 @app.route('/table/')  # connects /table/ URL
 def table():
     return render_template("table.html")
+
+@app.route('/login/')  # connects /table/ URL
+def login_page():
+    return render_template("login.html")
+
+@app.route('/login', methods=['POST'])
+def login():
+    # authenticate user
+    user = User.query.filter_by(username=request.form['username']).first()
+    if user and user.check_password(request.form['password']):
+        login_user(user)
+        return redirect(url_for('index'))
+    else:
+        return 'Invalid username or password'
+    
+@app.route('/logout')
+def logout():
+    logout_user()
+    return redirect(url_for('index'))
 
 # Create an AppGroup for custom commands
 custom_cli = AppGroup('custom', help='Custom commands')
