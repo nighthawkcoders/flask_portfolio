@@ -95,6 +95,26 @@ class User(db.Model, UserMixin):
         self._hashmap = hashmap
         self._role = role
 
+    # UserMixin/Flask-Login require a get_id method to return the id as a string
+    def get_id(self): 
+        '''Used by Flask-Login to store user id in session cookie as unicode string'''
+        return str(self.id)
+    
+    # UserMixin/Flask-Login requires is_authenticated to be defined
+    @property
+    def is_authenticated(self):
+        return True
+
+    # UserMixin/Flask-Login requires is_active to be defined
+    @property
+    def is_active(self):
+        return True
+
+    # UserMixin/Flask-Login requires is_anonymous to be defined
+    @property
+    def is_anonymous(self):
+        return False
+
     # a name getter method, extracts name from object
     @property
     def name(self):
@@ -133,7 +153,7 @@ class User(db.Model, UserMixin):
         """Check against hashed password."""
         result = check_password_hash(self._password, password)
         return result
-    
+  
     # dob property is returned as string, to avoid unfriendly outcomes
     @property
     def dob(self):

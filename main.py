@@ -1,6 +1,6 @@
 # imports from flask
 from flask import redirect, render_template, request, url_for  # import render_template from "public" flask libraries
-from flask_login import login_user, logout_user
+from flask_login import current_user, login_user, logout_user
 from flask.cli import AppGroup
 
 # import "objects" from "this" project
@@ -37,7 +37,11 @@ app.register_blueprint(project_views)
 
 @login_manager.user_loader
 def load_user(user_id):
-    return User.query.filter_by(_uid=user_id).first()
+    return User.query.get(int(user_id))
+
+@app.context_processor
+def inject_user():
+    return dict(current_user=current_user)
 
 @app.errorhandler(404)  # catch for URL not found
 def page_not_found(e):
@@ -46,6 +50,7 @@ def page_not_found(e):
 
 @app.route('/')  # connects default URL to index() function
 def index():
+    print("Home:", current_user)
     return render_template("index.html")
 
 @app.route('/table/')  # connects /table/ URL
@@ -59,9 +64,10 @@ def login_page():
 @app.route('/login', methods=['POST'])
 def login():
     # authenticate user
-    user = User.query.filter_by(username=request.form['username']).first()
-    if user and user.check_password(request.form['password']):
+    user = User.query.filter_by(_uid=request.form['username']).first()
+    if user and user.is_password(request.form['password']):
         login_user(user)
+        print("Logged in:", current_user)
         return redirect(url_for('index'))
     else:
         return 'Invalid username or password'
