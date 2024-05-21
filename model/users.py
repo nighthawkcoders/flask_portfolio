@@ -217,6 +217,7 @@ class User(db.Model, UserMixin):
             "dob": self.dob,
             "age": self.age,
             "hashmap": self._hashmap,
+            "role": self._role,
             # "posts": [post.read() for post in self.posts]
         }
 

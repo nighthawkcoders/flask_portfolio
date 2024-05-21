@@ -1,7 +1,7 @@
 from functools import wraps
 import jwt
 from flask import request, abort
-from flask import current_app
+from flask import current_app, g
 from model.users import User
 
 def token_required(roles=None):
@@ -24,6 +24,7 @@ def token_required(roles=None):
                         "data": None,
                         "error": "Unauthorized"
                     }, 401
+                g.current_user = current_user
 
                 # Check if roles are provided and user has the required role
                 if roles and current_user.role not in roles:
@@ -40,7 +41,7 @@ def token_required(roles=None):
                     "error": str(e)
                 }, 500
 
-            return f(current_user, *args, **kwargs)
+            return f(*args, **kwargs)
 
         return decorated
 

@@ -1,5 +1,5 @@
 import json, jwt
-from flask import Blueprint, request, jsonify, current_app, Response
+from flask import Blueprint, request, jsonify, current_app, Response, g
 from flask_restful import Api, Resource # used for REST API building
 from datetime import datetime
 from auth_middleware import token_required
@@ -56,11 +56,22 @@ class UserAPI:
             return {'message': f'Processed {name}, either a format error or User ID {uid} is duplicate'}, 400
 
         @token_required()
-        def get(self, _): # Read Method, the _ indicates current_user is not used
-            users = User.query.all()    # read/extract all users from database
-            json_ready = [user.read() for user in users]  # prepare output in json
-            return jsonify(json_ready)  # jsonify creates Flask response object, more specific to APIs than json.dumps
-   
+        def get(self):  
+            current_user = g.current_user
+            # current_user extracted from the token using token_required decorator
+            users = User.query.all() # extract all users from the database
+             
+            # prepare a json list of user dictionaries
+            json_ready = []  
+            for user in users:
+                user_data = user.read()
+                if current_user.role == 'Admin' or current_user.id == user.id:
+                    user_data['actions'] = ['rw'] # read-write actions
+                else:
+                    user_data['actions'] = ['ro'] # read-only actions
+                json_ready.append(user_data)
+            return jsonify(json_ready)
+        
         @token_required("Admin")
         def delete(self, _): # Delete Method
             body = request.get_json()
