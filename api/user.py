@@ -56,7 +56,8 @@ class UserAPI:
             return {'message': f'Processed {name}, either a format error or User ID {uid} is duplicate'}, 400
 
         @token_required()
-        def get(self):  
+        def get(self):
+            # retrieve the current user from the token_required authenication check  
             current_user = g.current_user
             # current_user extracted from the token using token_required decorator
             users = User.query.all() # extract all users from the database
@@ -66,14 +67,16 @@ class UserAPI:
             for user in users:
                 user_data = user.read()
                 if current_user.role == 'Admin' or current_user.id == user.id:
-                    user_data['actions'] = ['rw'] # read-write actions
+                    user_data['access'] = ['rw'] # read-write access control 
                 else:
-                    user_data['actions'] = ['ro'] # read-only actions
+                    user_data['access'] = ['ro'] # read-only access control 
                 json_ready.append(user_data)
+            
+            # return response, a json list of user dictionaries
             return jsonify(json_ready)
         
         @token_required("Admin")
-        def delete(self, _): # Delete Method
+        def delete(self): # Delete Method
             body = request.get_json()
             uid = body.get('uid')
             user = User.query.filter_by(_uid=uid).first()
@@ -83,6 +86,62 @@ class UserAPI:
             user.delete() 
             # 204 is the status code for delete with no json response
             return f"Deleted user: {json}", 204 # use 200 to test with Postman
+        
+        @token_required() 
+        def put(self):  # Update method
+            # retrieve the current user from the token_required authenication check  
+            current_user = g.current_user
+            
+            ''' Read data for json body '''
+            body = request.get_json()
+           
+            ''' Find user '''
+            id = body.get('id')
+            if id is None:  # if id is not provided
+                return {
+                    "message": "User ID is required",
+                    "data": None,
+                    "error": "Bad request"
+                }, 400
+            ''' Get requested user from the database '''    
+            user = User.query.get(id)
+            if user is None:    # if user is not found
+                return {
+                    "message": f"User {id} not found",
+                    "data": None,
+                    "error": "Not found"
+                }, 404
+            ''' Check if user is owner or admin ''' 
+            if not (current_user.role == 'Admin' or current_user.id == user.id):
+                return {
+                        "message": "Insufficient permissions, user is not owner or admin.",
+                        "data": None,
+                        "error": "Unauthorized"
+                    }, 403
+             
+            ''' Update any fields that have data '''
+            name = body.get('name')
+            if name is not None and name != '':
+                user.name = name
+                
+            uid = body.get('uid')
+            if uid is not None and uid != '':  
+                user.uid = uid
+                
+            dob = body.get('dob')   
+            if dob is not None and dob != '':
+                try:
+                    user.dob = datetime.strptime(dob, '%Y-%m-%d').date()
+                except:
+                    return {
+                        "message": f"Date of birth format error {dob}, must be yyyy-mm-dd",
+                        "data": None,
+                        "error": "Bad request",
+                    }, 400
+
+            ''' Commit changes to the database '''
+            user.update()
+            return jsonify(user.read())
          
     class _Security(Resource):
         def post(self):
