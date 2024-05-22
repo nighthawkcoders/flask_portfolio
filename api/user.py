@@ -13,7 +13,7 @@ user_api = Blueprint('user_api', __name__,
 api = Api(user_api)
 
 class UserAPI:        
-    class _CRUD(Resource):  # User API operation for Create, Read.  THe Update, Delete methods need to be implemeented
+    class _CRUD(Resource):  # User API operation for Create, Read, Update, Delete 
         def post(self): # Create method
             ''' Read data for json body '''
             body = request.get_json()
@@ -75,18 +75,6 @@ class UserAPI:
             # return response, a json list of user dictionaries
             return jsonify(json_ready)
         
-        @token_required("Admin")
-        def delete(self): # Delete Method
-            body = request.get_json()
-            uid = body.get('uid')
-            user = User.query.filter_by(_uid=uid).first()
-            if user is None:
-                return {'message': f'User {uid} not found'}, 404
-            json = user.read()
-            user.delete() 
-            # 204 is the status code for delete with no json response
-            return f"Deleted user: {json}", 204 # use 200 to test with Postman
-        
         @token_required() 
         def put(self):  # Update method
             # retrieve the current user from the token_required authenication check  
@@ -142,6 +130,18 @@ class UserAPI:
             ''' Commit changes to the database '''
             user.update()
             return jsonify(user.read())
+        
+        @token_required("Admin")
+        def delete(self): # Delete Method
+            body = request.get_json()
+            uid = body.get('uid')
+            user = User.query.filter_by(_uid=uid).first()
+            if user is None:
+                return {'message': f'User {uid} not found'}, 404
+            json = user.read()
+            user.delete() 
+            # 204 is the status code for delete with no json response
+            return f"Deleted user: {json}", 204 # use 200 to test with Postman
          
     class _Security(Resource):
         def post(self):
