@@ -13,7 +13,15 @@ user_api = Blueprint('user_api', __name__,
 api = Api(user_api)
 
 class UserAPI:        
-    class _CRUD(Resource):  # User API operation for Create, Read, Update, Delete 
+    class _ID(Resource):  # Individual identification API operation
+        @token_required()
+        def get(self):
+            ''' Retrieve the current user from the token_required authenication check '''
+            current_user = g.current_user
+            ''' Return the current user as a json object '''
+            return jsonify(current_user.read())
+         
+    class _CRUD(Resource):  # Users API operation for Create, Read, Update, Delete 
         def post(self): # Create method
             ''' Read data for json body '''
             body = request.get_json()
@@ -201,6 +209,7 @@ class UserAPI:
 
             
     # building RESTapi endpoint
+    api.add_resource(_ID, '/id')
     api.add_resource(_CRUD, '/users')
     api.add_resource(_Security, '/authenticate')
     
