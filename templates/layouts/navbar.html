@@ -54,16 +54,8 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                         <ul class="dropdown-menu dropdown-menu-dark">
                             <li>
                                 <div class="dropdown-item">
-                                    <p style="margin-bottom:2px"><strong>ROLES:</strong></p>
-                                    {% if 'ADMIN' in current_user.roles %}
-                                        <p style="font-size:0.75em;margin:1px">ADMIN</p>
-                                    {% endif %}
-                                    {% if 'USER' in current_user.roles %}
-                                        <p style="font-size:0.75em;margin:1px">USER</p>
-                                    {% endif %}
-                                    {% if 'TESTER' in current_user.roles %}
-                                        <p style="font-size:0.75em;margin:1px">TESTER</p>
-                                    {% endif %}
+                                    <p style="margin-bottom:2px"><strong>ROLE:</strong></p>
+                                    <p style="font-size:0.75em;margin:1px">{{current_user.role}}</p>
                                 </div>
                             </li>
                             <li><a class="dropdown-item active" href="{{ url_for('logout') }}">Logout</a></li>
